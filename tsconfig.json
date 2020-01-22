@@ -2,7 +2,7 @@
     "compilerOptions": {
         "target": "es2019",
         "module": "esnext",
-        "sourceMap": true,
+        "sourceMap": false,
         "allowJs": true,
         "outDir": "dist",
         "declaration": false

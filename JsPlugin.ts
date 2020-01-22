@@ -3,6 +3,8 @@ import { Server } from "./lib/org/bukkit/Server.js";
 import { ScriptablePluginContext } from "./lib/com/pixlfox/scriptableplugin/core/ScriptablePluginContext.js";
 import { PluginCommand } from "./lib/org/bukkit/command/PluginCommand.js";
 import { ScriptablePluginEngine } from "./lib/com/pixlfox/scriptableplugin/core/ScriptablePluginEngine.js";
+import { Player } from "./lib/org/bukkit/entity/Player.js";
+import { PluginMessageListenerRegistration } from "./lib/org/bukkit/plugin/messaging/PluginMessageListenerRegistration.js";
 
 declare const engine: ScriptablePluginEngine;
 
@@ -13,11 +15,11 @@ export class JsPlugin {
         return this.constructor.name;
     }
 
-    get bukkitServer(): Server {
+    get server(): Server {
         return this.context.getServer();
     }
 
-    registerEvent<T extends Event>(eventClass: TypeOf<T>, callback: (listener: any, event: T) => void) {
+    registerEvent<T extends Event>(eventClass: Newable<T>, callback: (listener: any, event: T) => void) {
         this.context.registerEvent(eventClass['$javaClass'], callback.bind(this));
     }
 
@@ -25,12 +27,28 @@ export class JsPlugin {
         return this.context.newCommand(name);
     }
 
-    registerCommand(command: PluginCommand) {
-        this.context.registerCommand(command);
+    registerIncomingPluginChannel(channel: string, callback: (channel: string, player: Player, message: number[]) => void): PluginMessageListenerRegistration {
+        return this.context.registerIncomingPluginChannel(channel, callback.bind(this));
+    }
+
+    unregisterIncomingPluginChannel(messageListenerRegistration: PluginMessageListenerRegistration) {
+        this.context.unregisterIncomingPluginChannel(messageListenerRegistration);
+    }
+
+    registerOutgoingPluginChannel(channel: string) {
+        this.context.registerOutgoingPluginChannel(channel);
+    }
+
+    unregisterOutgoingPluginChannel(channel: string) {
+        this.context.unregisterOutgoingPluginChannel(channel);
     }
 
     unregisterCommand(command: PluginCommand) {
         this.context.unregisterCommand(command);
+    }
+
+    registerCommand(command: PluginCommand) {
+        this.context.registerCommand(command);
     }
 
     onLoad(): void { console.log("[" + this.pluginName + "] onLoad()"); }
@@ -38,4 +56,4 @@ export class JsPlugin {
     onDisable(): void { console.log("[" + this.pluginName + "] onDisable()"); }
 }
 
-type TypeOf<T> = { new (...args: any[]): T; };
+export type Newable<T> = { new (...args: any[]): T; };
