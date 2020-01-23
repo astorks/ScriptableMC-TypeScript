@@ -77,7 +77,7 @@ export class TestPlugin extends JsPlugin {
         let inventory = SmartInventory.builder()
             .id("hellojs")
             .provider(SmartInventory.provider({
-                onInit(player: Player, contents: InventoryContents): void {
+                init(player: Player, contents: InventoryContents): void {
                     if(contents) {
                         contents.fillBorders(
                             SmartInventory.clickableItem(
