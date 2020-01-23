@@ -72,6 +72,7 @@ export class TestPlugin extends JsPlugin {
 
     onHelloWorldCmdExecute(sender: (CommandSender | Player), command: Command, label: string, args: Array<string>) {
         const SmartInventory = this.context.smartInventory();
+        const plugin = this;
         
         let inventory = SmartInventory.builder()
             .id("hellojs")
@@ -99,6 +100,7 @@ export class TestPlugin extends JsPlugin {
                                     .build(),
                             () => {
                                 if(player != null) {
+                                    plugin.bungeeGetServer(player);
                                     player.sendMessage("Hello from javascript!!!");
                                     inventory.close(sender as Player);
                                 }

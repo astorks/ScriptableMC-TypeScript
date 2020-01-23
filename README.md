@@ -1,6 +1,6 @@
 # ScriptableMC-TypeScript Example & Libraries
-[![docs](https://img.shields.io/badge/ScriptableMC-v1.0.4-blue?style=for-the-badge)](https://github.com/astorks/ScriptableMC)
-[![docs](https://img.shields.io/badge/Docs-v1.0.4-blue?style=for-the-badge)](https://astorks.github.io/ScriptableMC_TypeScript)
+[![docs](https://img.shields.io/badge/ScriptableMC-v1.0.4-blue?style=for-the-badge)](https://github.com/astorks/ScriptableMC-Engine)
+[![docs](https://img.shields.io/badge/Docs-v1.0.4-blue?style=for-the-badge)](https://astorks.github.io/ScriptableMC-TypeScript)
 ## Getting Started
 - Install [NodeJS/NPM](https://nodejs.org/en/download/) or if you're on linux/macos you can install [GraalVM-CE](https://github.com/graalvm/graalvm-ce-builds/releases/latest) which includes a NodeJS runtime
 - Clone or download and extract this repo `git clone https://github.com/astorks/ScriptableMC-TypeScript.git` and open the folder `cd ScriptableMC-TypeScript`
