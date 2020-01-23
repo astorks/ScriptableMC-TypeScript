@@ -1,4 +1,4 @@
-# Scriptable Minecraft - TypeScript
+# ScriptableMC-TypeScript Example & Libraries
 [![docs](https://img.shields.io/badge/ScriptableMC-v1.0.3-blue?style=for-the-badge)](https://github.com/astorks/ScriptableMC)
 [![docs](https://img.shields.io/badge/Docs-v1.0.3-blue?style=for-the-badge)](https://astorks.github.io/ScriptableMC_TypeScript)
 ## Getting Started
