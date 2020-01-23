@@ -5,8 +5,8 @@ import {Conversation} from '../../../org/bukkit/conversations/Conversation.js'
 
 export interface ConversationAbandonedEvent {
 	getContext(): ConversationContext;
-	gracefulExit(): boolean;
 	getCanceller(): ConversationCanceller;
+	gracefulExit(): boolean;
 	getSource(): any;
 }
 

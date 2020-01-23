@@ -6,13 +6,13 @@ import {Cancellable} from '../../../../org/bukkit/event/Cancellable.js'
 import {PlayerEvent} from '../../../../org/bukkit/event/player/PlayerEvent.js'
 
 export interface PlayerAnimationEvent extends PlayerEvent, Cancellable {
-	isCancelled(): boolean;
 	getHandlers(): HandlerList;
 	setCancelled(cancel: boolean): void;
+	isCancelled(): boolean;
 	getAnimationType(): PlayerAnimationType;
 	getPlayer(): Player;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class PlayerAnimationEvent {

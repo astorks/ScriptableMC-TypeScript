@@ -12,14 +12,14 @@ export interface PlayerArmorStandManipulateEvent extends PlayerInteractEntityEve
 	getHandlers(): HandlerList;
 	getRightClicked(): Entity;
 	getRightClicked(): ArmorStand;
-	getArmorStandItem(): ItemStack;
 	getPlayerItem(): ItemStack;
-	isCancelled(): boolean;
+	getArmorStandItem(): ItemStack;
 	setCancelled(cancel: boolean): void;
+	isCancelled(): boolean;
 	getHand(): EquipmentSlot;
 	getPlayer(): Player;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class PlayerArmorStandManipulateEvent {

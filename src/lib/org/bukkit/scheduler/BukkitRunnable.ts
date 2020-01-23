@@ -3,15 +3,15 @@ import {BukkitTask} from '../../../org/bukkit/scheduler/BukkitTask.js'
 import {Plugin} from '../../../org/bukkit/plugin/Plugin.js'
 
 export interface BukkitRunnable {
-	runTask(plugin: Plugin): BukkitTask;
-	runTaskTimer(plugin: Plugin, delay: number, period: number): BukkitTask;
-	runTaskLater(plugin: Plugin, delay: number): BukkitTask;
-	isCancelled(): boolean;
-	cancel(): void;
-	getTaskId(): number;
+	runTaskTimerAsynchronously(plugin: Plugin, delay: number, period: number): BukkitTask;
 	runTaskAsynchronously(plugin: Plugin): BukkitTask;
 	runTaskLaterAsynchronously(plugin: Plugin, delay: number): BukkitTask;
-	runTaskTimerAsynchronously(plugin: Plugin, delay: number, period: number): BukkitTask;
+	cancel(): void;
+	isCancelled(): boolean;
+	runTaskTimer(plugin: Plugin, delay: number, period: number): BukkitTask;
+	runTaskLater(plugin: Plugin, delay: number): BukkitTask;
+	runTask(plugin: Plugin): BukkitTask;
+	getTaskId(): number;
 	run(): void;
 }
 

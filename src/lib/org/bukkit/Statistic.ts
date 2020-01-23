@@ -6,8 +6,8 @@ import {Keyed} from '../../org/bukkit/Keyed.js'
 export interface Statistic extends Keyed {
 	getKey(): NamespacedKey;
 	getType(): Statistic$Type;
-	isSubstatistic(): boolean;
 	isBlock(): boolean;
+	isSubstatistic(): boolean;
 	name(): string;
 	compareTo(arg0: any): number;
 	compareTo(arg0: any): number;

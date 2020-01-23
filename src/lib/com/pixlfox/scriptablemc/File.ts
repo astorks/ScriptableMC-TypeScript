@@ -7,15 +7,15 @@ export interface File {
 	createNewFile(): boolean;
 	mkdir(): boolean;
 	mkdirs(): boolean;
-	parentFile(): File;
-	writeText(text: string): void;
 	readText(): string;
 	readLines(): Array<string>;
+	writeText(text: string): void;
+	parentFile(): File;
 }
 
 export class File {
 	public static get $javaClass(): any {
-		return Java.type('com.pixlfox.scriptableplugin.File');
+		return Java.type('com.pixlfox.scriptablemc.File');
 	}
 	constructor(pathName: string);
 	constructor(...args: any[]) {

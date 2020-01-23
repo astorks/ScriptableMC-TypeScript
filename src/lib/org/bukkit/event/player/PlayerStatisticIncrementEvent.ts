@@ -1,24 +1,24 @@
 declare var Java: any;
-import {Material} from '../../../../org/bukkit/Material.js'
-import {Statistic} from '../../../../org/bukkit/Statistic.js'
 import {HandlerList} from '../../../../org/bukkit/event/HandlerList.js'
+import {Material} from '../../../../org/bukkit/Material.js'
 import {EntityType} from '../../../../org/bukkit/entity/EntityType.js'
+import {Statistic} from '../../../../org/bukkit/Statistic.js'
 import {Player} from '../../../../org/bukkit/entity/Player.js'
 import {Cancellable} from '../../../../org/bukkit/event/Cancellable.js'
 import {PlayerEvent} from '../../../../org/bukkit/event/player/PlayerEvent.js'
 
 export interface PlayerStatisticIncrementEvent extends PlayerEvent, Cancellable {
-	getMaterial(): Material;
-	getStatistic(): Statistic;
-	isCancelled(): boolean;
 	getHandlers(): HandlerList;
+	getMaterial(): Material;
 	setCancelled(cancel: boolean): void;
+	isCancelled(): boolean;
 	getEntityType(): EntityType;
+	getStatistic(): Statistic;
 	getPreviousValue(): number;
 	getNewValue(): number;
 	getPlayer(): Player;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class PlayerStatisticIncrementEvent {

@@ -8,15 +8,15 @@ import {ConfigurationSerializable} from '../../org/bukkit/configuration/serializ
 export interface OfflinePlayer extends ServerOperator, AnimalTamer, ConfigurationSerializable {
 	getName(): string;
 	getPlayer(): Player;
-	getUniqueId(): string;
-	setWhitelisted(value: boolean): void;
-	getLastPlayed(): number;
-	isOnline(): boolean;
-	getFirstPlayed(): number;
-	hasPlayedBefore(): boolean;
-	isBanned(): boolean;
-	isWhitelisted(): boolean;
 	getBedSpawnLocation(): Location;
+	isBanned(): boolean;
+	isOnline(): boolean;
+	setWhitelisted(value: boolean): void;
+	getFirstPlayed(): number;
+	getLastPlayed(): number;
+	isWhitelisted(): boolean;
+	hasPlayedBefore(): boolean;
+	getUniqueId(): string;
 	isOp(): boolean;
 	setOp(value: boolean): void;
 	serialize(): any;

@@ -7,13 +7,13 @@ import {Keyed} from '../../../org/bukkit/Keyed.js'
 export interface Enchantment extends Keyed {
 	getName(): string;
 	getKey(): NamespacedKey;
-	canEnchantItem(item: ItemStack): boolean;
-	getMaxLevel(): number;
 	getStartLevel(): number;
+	getMaxLevel(): number;
+	canEnchantItem(item: ItemStack): boolean;
 	isCursed(): boolean;
 	getItemTarget(): EnchantmentTarget;
-	conflictsWith(other: Enchantment): boolean;
 	isTreasure(): boolean;
+	conflictsWith(other: Enchantment): boolean;
 }
 
 export class Enchantment {

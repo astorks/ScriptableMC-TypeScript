@@ -11,18 +11,18 @@ export interface PluginDescriptionFile {
 	getDescription(): string;
 	getFullName(): string;
 	getPermissionDefault(): PermissionDefault;
-	getAwareness(): any;
-	getSoftDepend(): any;
-	getLoad(): PluginLoadOrder;
-	getMain(): string;
 	getAuthors(): any;
 	getWebsite(): string;
-	getLoadBefore(): any;
 	getDepend(): any;
+	getLoad(): PluginLoadOrder;
+	getSoftDepend(): any;
+	getLoadBefore(): any;
 	getCommands(): any;
-	getClassLoaderOf(): string;
-	getAPIVersion(): string;
+	getMain(): string;
+	getAwareness(): any;
 	getRawName(): string;
+	getAPIVersion(): string;
+	getClassLoaderOf(): string;
 }
 
 export class PluginDescriptionFile {

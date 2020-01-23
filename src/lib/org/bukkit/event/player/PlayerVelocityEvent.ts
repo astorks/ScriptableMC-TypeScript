@@ -1,19 +1,19 @@
 declare var Java: any;
-import {Vector} from '../../../../org/bukkit/util/Vector.js'
 import {HandlerList} from '../../../../org/bukkit/event/HandlerList.js'
+import {Vector} from '../../../../org/bukkit/util/Vector.js'
 import {Player} from '../../../../org/bukkit/entity/Player.js'
 import {Cancellable} from '../../../../org/bukkit/event/Cancellable.js'
 import {PlayerEvent} from '../../../../org/bukkit/event/player/PlayerEvent.js'
 
 export interface PlayerVelocityEvent extends PlayerEvent, Cancellable {
-	setVelocity(velocity: Vector): void;
-	getVelocity(): Vector;
-	isCancelled(): boolean;
 	getHandlers(): HandlerList;
 	setCancelled(cancel: boolean): void;
+	isCancelled(): boolean;
+	getVelocity(): Vector;
+	setVelocity(velocity: Vector): void;
 	getPlayer(): Player;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class PlayerVelocityEvent {

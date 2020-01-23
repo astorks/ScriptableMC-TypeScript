@@ -1,25 +1,25 @@
 declare var Java: any;
-import {InventoryManager} from '../../../../fr/minuskube/inv/InventoryManager.js'
 import {JavaPlugin} from '../../../../org/bukkit/plugin/java/JavaPlugin.js'
-import {ScriptablePluginContext} from '../../../../com/pixlfox/scriptableplugin/core/ScriptablePluginContext.js'
+import {ScriptablePluginContext} from '../../../../com/pixlfox/scriptablemc/core/ScriptablePluginContext.js'
+import {InventoryManager} from '../../../../fr/minuskube/inv/InventoryManager.js'
 import {Listener} from '../../../../org/bukkit/event/Listener.js'
 
 export interface ScriptablePluginEngine extends Listener {
-	getRootServerFolder(): string;
 	getBootstrapPlugin(): JavaPlugin;
-	eval(source: any): any;
-	evalJs(source: string): any;
-	setDebugEnabled(value: boolean): void;
 	getDebugEnabled(): boolean;
+	loadPlugin(scriptableClass: any): ScriptablePluginContext;
+	setDebugEnabled(value: boolean): void;
 	enableAllPlugins(): void;
 	enablePlugin(pluginContext: ScriptablePluginContext): void;
+	eval(source: any): any;
+	evalJs(source: string): any;
 	disablePlugin(pluginContext: ScriptablePluginContext): void;
-	loadPlugin(scriptableClass: any): ScriptablePluginContext;
+	getRootServerFolder(): string;
 }
 
 export class ScriptablePluginEngine {
 	public static get $javaClass(): any {
-		return Java.type('com.pixlfox.scriptableplugin.core.ScriptablePluginEngine');
+		return Java.type('com.pixlfox.scriptablemc.core.ScriptablePluginEngine');
 	}
 	constructor(bootstrapPlugin: JavaPlugin, rootServerFolder: string);
 	constructor(arg0: JavaPlugin, arg1: string, arg2: number, arg3: any);

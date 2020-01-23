@@ -4,9 +4,9 @@ import {PotionEffectType} from '../../../org/bukkit/potion/PotionEffectType.js'
 export interface PotionType {
 	isInstant(): boolean;
 	getMaxLevel(): number;
-	getEffectType(): PotionEffectType;
-	isUpgradeable(): boolean;
 	isExtendable(): boolean;
+	isUpgradeable(): boolean;
+	getEffectType(): PotionEffectType;
 	name(): string;
 	compareTo(arg0: any): number;
 	compareTo(arg0: any): number;

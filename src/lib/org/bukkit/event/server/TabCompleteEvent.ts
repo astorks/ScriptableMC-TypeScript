@@ -5,15 +5,15 @@ import {Cancellable} from '../../../../org/bukkit/event/Cancellable.js'
 import {Event} from '../../../../org/bukkit/event/Event.js'
 
 export interface TabCompleteEvent extends Event, Cancellable {
-	isCancelled(): boolean;
 	getHandlers(): HandlerList;
 	setCancelled(cancelled: boolean): void;
-	getCompletions(): any;
-	getSender(): CommandSender;
-	setCompletions(completions: any): void;
+	isCancelled(): boolean;
 	getBuffer(): string;
-	getEventName(): string;
+	getCompletions(): any;
+	setCompletions(completions: any): void;
+	getSender(): CommandSender;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class TabCompleteEvent {

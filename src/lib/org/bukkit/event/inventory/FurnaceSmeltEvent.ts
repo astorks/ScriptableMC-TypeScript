@@ -1,19 +1,19 @@
 declare var Java: any;
-import {ItemStack} from '../../../../org/bukkit/inventory/ItemStack.js'
 import {HandlerList} from '../../../../org/bukkit/event/HandlerList.js'
+import {ItemStack} from '../../../../org/bukkit/inventory/ItemStack.js'
 import {Block} from '../../../../org/bukkit/block/Block.js'
 import {BlockCookEvent} from '../../../../org/bukkit/event/block/BlockCookEvent.js'
 
 export interface FurnaceSmeltEvent extends BlockCookEvent {
-	setResult(result: ItemStack): void;
-	getResult(): ItemStack;
-	getSource(): ItemStack;
-	isCancelled(): boolean;
 	getHandlers(): HandlerList;
+	getSource(): ItemStack;
+	getResult(): ItemStack;
+	setResult(result: ItemStack): void;
 	setCancelled(cancel: boolean): void;
+	isCancelled(): boolean;
 	getBlock(): Block;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class FurnaceSmeltEvent {

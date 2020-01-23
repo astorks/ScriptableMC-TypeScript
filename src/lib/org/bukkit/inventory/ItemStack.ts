@@ -1,35 +1,35 @@
 declare var Java: any;
 import {Material} from '../../../org/bukkit/Material.js'
-import {Enchantment} from '../../../org/bukkit/enchantments/Enchantment.js'
 import {MaterialData} from '../../../org/bukkit/material/MaterialData.js'
 import {ItemMeta} from '../../../org/bukkit/inventory/meta/ItemMeta.js'
+import {Enchantment} from '../../../org/bukkit/enchantments/Enchantment.js'
 import {ConfigurationSerializable} from '../../../org/bukkit/configuration/serialization/ConfigurationSerializable.js'
 
 export interface ItemStack extends ConfigurationSerializable {
-	clone(): ItemStack;
 	clone(): any;
+	clone(): ItemStack;
 	getType(): Material;
-	containsEnchantment(ench: Enchantment): boolean;
-	addUnsafeEnchantment(ench: Enchantment, level: number): void;
-	addUnsafeEnchantments(enchantments: any): void;
-	getEnchantmentLevel(ench: Enchantment): number;
-	getAmount(): number;
-	getData(): MaterialData;
+	getDurability(): number;
+	setData(data: MaterialData): void;
 	hasItemMeta(): boolean;
 	getItemMeta(): ItemMeta;
 	setType(type: Material): void;
-	setDurability(durability: number): void;
-	getDurability(): number;
-	setItemMeta(itemMeta: ItemMeta): boolean;
-	isSimilar(stack: ItemStack): boolean;
-	serialize(): any;
-	setData(data: MaterialData): void;
 	setAmount(amount: number): void;
+	setDurability(durability: number): void;
+	getAmount(): number;
+	getData(): MaterialData;
+	getEnchantmentLevel(ench: Enchantment): number;
+	addUnsafeEnchantment(ench: Enchantment, level: number): void;
+	addUnsafeEnchantments(enchantments: any): void;
+	containsEnchantment(ench: Enchantment): boolean;
+	serialize(): any;
 	removeEnchantment(ench: Enchantment): number;
 	getEnchantments(): any;
-	addEnchantment(ench: Enchantment, level: number): void;
 	addEnchantments(enchantments: any): void;
+	setItemMeta(itemMeta: ItemMeta): boolean;
 	getMaxStackSize(): number;
+	isSimilar(stack: ItemStack): boolean;
+	addEnchantment(ench: Enchantment, level: number): void;
 }
 
 export class ItemStack {

@@ -8,10 +8,10 @@ export interface ItemFactory {
 	getItemMeta(material: Material): ItemMeta;
 	asMetaFor(meta: ItemMeta, material: Material): ItemMeta;
 	asMetaFor(meta: ItemMeta, stack: ItemStack): ItemMeta;
-	updateMaterial(meta: ItemMeta, material: Material): Material;
-	isApplicable(meta: ItemMeta, material: Material): boolean;
-	isApplicable(meta: ItemMeta, stack: ItemStack): boolean;
 	getDefaultLeatherColor(): Color;
+	updateMaterial(meta: ItemMeta, material: Material): Material;
+	isApplicable(meta: ItemMeta, stack: ItemStack): boolean;
+	isApplicable(meta: ItemMeta, material: Material): boolean;
 }
 
 export class ItemFactory {

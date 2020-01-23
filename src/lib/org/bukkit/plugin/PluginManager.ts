@@ -4,39 +4,39 @@ import {Listener} from '../../../org/bukkit/event/Listener.js'
 import {EventPriority} from '../../../org/bukkit/event/EventPriority.js'
 import {EventExecutor} from '../../../org/bukkit/plugin/EventExecutor.js'
 import {Plugin} from '../../../org/bukkit/plugin/Plugin.js'
-import {Event} from '../../../org/bukkit/event/Event.js'
 import {Permissible} from '../../../org/bukkit/permissions/Permissible.js'
+import {Event} from '../../../org/bukkit/event/Event.js'
 
 export interface PluginManager {
 	getPermissions(): any;
 	getPermission(_name: string): Permission;
-	getPermissionSubscriptions(permission: string): any;
 	registerEvent(event: any, listener: Listener, priority: EventPriority, executor: EventExecutor, plugin: Plugin): void;
 	registerEvent(event: any, listener: Listener, priority: EventPriority, executor: EventExecutor, plugin: Plugin, ignoreCancelled: boolean): void;
+	loadPlugin(file: any): Plugin;
 	enablePlugin(plugin: Plugin): void;
 	disablePlugin(plugin: Plugin): void;
-	loadPlugin(file: any): Plugin;
 	getPlugin(_name: string): Plugin;
-	useTimings(): boolean;
+	getPermissionSubscriptions(permission: string): any;
+	subscribeToDefaultPerms(op: boolean, permissible: Permissible): void;
+	subscribeToPermission(permission: string, permissible: Permissible): void;
+	unsubscribeFromDefaultPerms(op: boolean, permissible: Permissible): void;
+	unsubscribeFromPermission(permission: string, permissible: Permissible): void;
+	recalculatePermissionDefaults(perm: Permission): void;
+	getDefaultPermSubscriptions(op: boolean): any;
+	getDefaultPermissions(op: boolean): any;
+	registerEvents(listener: Listener, plugin: Plugin): void;
 	disablePlugins(): void;
-	loadPlugins(directory: any): Array<Plugin>;
+	useTimings(): boolean;
+	getPlugins(): Array<Plugin>;
+	callEvent(event: Event): void;
+	removePermission(_name: string): void;
+	removePermission(perm: Permission): void;
+	addPermission(perm: Permission): void;
 	isPluginEnabled(plugin: Plugin): boolean;
 	isPluginEnabled(_name: string): boolean;
-	clearPlugins(): void;
-	removePermission(perm: Permission): void;
-	removePermission(_name: string): void;
-	registerEvents(listener: Listener, plugin: Plugin): void;
-	callEvent(event: Event): void;
-	addPermission(perm: Permission): void;
-	recalculatePermissionDefaults(perm: Permission): void;
 	registerInterface(loader: any): void;
-	getPlugins(): Array<Plugin>;
-	unsubscribeFromPermission(permission: string, permissible: Permissible): void;
-	subscribeToDefaultPerms(op: boolean, permissible: Permissible): void;
-	getDefaultPermissions(op: boolean): any;
-	getDefaultPermSubscriptions(op: boolean): any;
-	unsubscribeFromDefaultPerms(op: boolean, permissible: Permissible): void;
-	subscribeToPermission(permission: string, permissible: Permissible): void;
+	clearPlugins(): void;
+	loadPlugins(directory: any): Array<Plugin>;
 }
 
 export class PluginManager {

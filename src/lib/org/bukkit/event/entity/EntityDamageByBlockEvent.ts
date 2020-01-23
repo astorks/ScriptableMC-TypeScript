@@ -1,8 +1,8 @@
 declare var Java: any;
 import {Block} from '../../../../org/bukkit/block/Block.js'
 import {EntityDamageEvent$DamageCause} from '../../../../org/bukkit/event/entity/EntityDamageEvent$DamageCause.js'
-import {EntityDamageEvent$DamageModifier} from '../../../../org/bukkit/event/entity/EntityDamageEvent$DamageModifier.js'
 import {HandlerList} from '../../../../org/bukkit/event/HandlerList.js'
+import {EntityDamageEvent$DamageModifier} from '../../../../org/bukkit/event/entity/EntityDamageEvent$DamageModifier.js'
 import {Entity} from '../../../../org/bukkit/entity/Entity.js'
 import {EntityType} from '../../../../org/bukkit/entity/EntityType.js'
 import {EntityDamageEvent} from '../../../../org/bukkit/event/entity/EntityDamageEvent.js'
@@ -10,20 +10,20 @@ import {EntityDamageEvent} from '../../../../org/bukkit/event/entity/EntityDamag
 export interface EntityDamageByBlockEvent extends EntityDamageEvent {
 	getDamager(): Block;
 	getCause(): EntityDamageEvent$DamageCause;
+	getHandlers(): HandlerList;
 	getDamage(type: EntityDamageEvent$DamageModifier): number;
 	getDamage(): number;
-	isApplicable(type: EntityDamageEvent$DamageModifier): boolean;
 	setDamage(damage: number): void;
 	setDamage(type: EntityDamageEvent$DamageModifier, damage: number): void;
-	isCancelled(): boolean;
-	getHandlers(): HandlerList;
-	getFinalDamage(): number;
+	isApplicable(type: EntityDamageEvent$DamageModifier): boolean;
 	setCancelled(cancel: boolean): void;
+	isCancelled(): boolean;
 	getOriginalDamage(type: EntityDamageEvent$DamageModifier): number;
+	getFinalDamage(): number;
 	getEntity(): Entity;
 	getEntityType(): EntityType;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class EntityDamageByBlockEvent {

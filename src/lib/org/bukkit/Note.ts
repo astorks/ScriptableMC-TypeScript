@@ -3,10 +3,10 @@ import {Note$Tone} from '../../org/bukkit/Note$Tone.js'
 
 export interface Note {
 	getId(): number;
-	getTone(): Note$Tone;
 	sharped(): Note;
 	flattened(): Note;
 	getOctave(): number;
+	getTone(): Note$Tone;
 	isSharped(): boolean;
 }
 

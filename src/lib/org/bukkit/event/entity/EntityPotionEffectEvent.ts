@@ -12,19 +12,19 @@ import {EntityEvent} from '../../../../org/bukkit/event/entity/EntityEvent.js'
 
 export interface EntityPotionEffectEvent extends EntityEvent, Cancellable {
 	getCause(): EntityPotionEffectEvent$Cause;
-	isCancelled(): boolean;
 	getHandlers(): HandlerList;
 	setCancelled(cancel: boolean): void;
+	isCancelled(): boolean;
 	getAction(): EntityPotionEffectEvent$Action;
-	getOldEffect(): PotionEffect;
 	getNewEffect(): PotionEffect;
 	getModifiedType(): PotionEffectType;
-	isOverride(): boolean;
 	setOverride(override: boolean): void;
+	isOverride(): boolean;
+	getOldEffect(): PotionEffect;
 	getEntity(): Entity;
 	getEntityType(): EntityType;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class EntityPotionEffectEvent {

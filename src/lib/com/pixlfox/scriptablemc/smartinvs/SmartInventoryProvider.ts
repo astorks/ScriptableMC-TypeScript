@@ -10,7 +10,7 @@ export interface SmartInventoryProvider {
 
 export class SmartInventoryProvider {
 	public static get $javaClass(): any {
-		return Java.type('com.pixlfox.scriptableplugin.smartinvs.SmartInventoryProvider');
+		return Java.type('com.pixlfox.scriptablemc.smartinvs.SmartInventoryProvider');
 	}
 	constructor(scriptableObject: any);
 	constructor(...args: any[]) {

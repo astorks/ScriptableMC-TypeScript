@@ -1,21 +1,21 @@
 declare var Java: any;
 import {Item} from '../../../../org/bukkit/entity/Item.js'
-import {Entity} from '../../../../org/bukkit/entity/Entity.js'
 import {HandlerList} from '../../../../org/bukkit/event/HandlerList.js'
+import {Entity} from '../../../../org/bukkit/entity/Entity.js'
 import {EntityType} from '../../../../org/bukkit/entity/EntityType.js'
 import {Cancellable} from '../../../../org/bukkit/event/Cancellable.js'
 import {EntityEvent} from '../../../../org/bukkit/event/entity/EntityEvent.js'
 
 export interface ItemMergeEvent extends EntityEvent, Cancellable {
 	getTarget(): Item;
-	getEntity(): Entity;
-	getEntity(): Item;
-	isCancelled(): boolean;
 	getHandlers(): HandlerList;
+	getEntity(): Item;
+	getEntity(): Entity;
 	setCancelled(cancelled: boolean): void;
+	isCancelled(): boolean;
 	getEntityType(): EntityType;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class ItemMergeEvent {

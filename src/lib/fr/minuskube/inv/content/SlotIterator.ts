@@ -10,11 +10,11 @@ export interface SlotIterator {
 	previous(): SlotIterator;
 	row(arg0: number): SlotIterator;
 	row(): number;
+	blacklist(arg0: number, arg1: number): SlotIterator;
+	blacklist(arg0: SlotPos): SlotIterator;
 	ended(): boolean;
 	doesAllowOverride(): boolean;
 	allowOverride(arg0: boolean): SlotIterator;
-	blacklist(arg0: SlotPos): SlotIterator;
-	blacklist(arg0: number, arg1: number): SlotIterator;
 	column(arg0: number): SlotIterator;
 	column(): number;
 }

@@ -9,8 +9,8 @@ export interface VehicleMoveEvent extends VehicleEvent {
 	getTo(): Location;
 	getFrom(): Location;
 	getVehicle(): Vehicle;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class VehicleMoveEvent {

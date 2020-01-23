@@ -1,23 +1,23 @@
 declare var Java: any;
 import {Entity} from '../../../../org/bukkit/entity/Entity.js'
-import {PigZombie} from '../../../../org/bukkit/entity/PigZombie.js'
 import {HandlerList} from '../../../../org/bukkit/event/HandlerList.js'
+import {PigZombie} from '../../../../org/bukkit/entity/PigZombie.js'
 import {EntityType} from '../../../../org/bukkit/entity/EntityType.js'
 import {Cancellable} from '../../../../org/bukkit/event/Cancellable.js'
 import {EntityEvent} from '../../../../org/bukkit/event/entity/EntityEvent.js'
 
 export interface PigZombieAngerEvent extends EntityEvent, Cancellable {
 	getTarget(): Entity;
-	getEntity(): Entity;
-	getEntity(): PigZombie;
-	isCancelled(): boolean;
 	getHandlers(): HandlerList;
+	getEntity(): PigZombie;
+	getEntity(): Entity;
 	setCancelled(cancel: boolean): void;
-	setNewAnger(newAnger: number): void;
+	isCancelled(): boolean;
 	getNewAnger(): number;
+	setNewAnger(newAnger: number): void;
 	getEntityType(): EntityType;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class PigZombieAngerEvent {

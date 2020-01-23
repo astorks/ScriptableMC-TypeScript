@@ -1,7 +1,7 @@
 declare var Java: any;
 import {SmartInventory$Builder} from '../../../../fr/minuskube/inv/SmartInventory$Builder.js'
-import {SmartInventoryProvider} from '../../../../com/pixlfox/scriptableplugin/smartinvs/SmartInventoryProvider.js'
-import {SmartItemBuilder} from '../../../../com/pixlfox/scriptableplugin/smartinvs/SmartItemBuilder.js'
+import {SmartInventoryProvider} from '../../../../com/pixlfox/scriptablemc/smartinvs/SmartInventoryProvider.js'
+import {SmartItemBuilder} from '../../../../com/pixlfox/scriptablemc/smartinvs/SmartItemBuilder.js'
 import {ItemStack} from '../../../../org/bukkit/inventory/ItemStack.js'
 import {ClickableItem} from '../../../../fr/minuskube/inv/ClickableItem.js'
 
@@ -15,7 +15,7 @@ export interface SmartInventoryInterface {
 
 export class SmartInventoryInterface {
 	public static get $javaClass(): any {
-		return Java.type('com.pixlfox.scriptableplugin.smartinvs.SmartInventoryInterface');
+		return Java.type('com.pixlfox.scriptablemc.smartinvs.SmartInventoryInterface');
 	}
 	constructor();
 	constructor(...args: any[]) {

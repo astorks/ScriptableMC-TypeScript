@@ -7,17 +7,17 @@ import {Cancellable} from '../../../../org/bukkit/event/Cancellable.js'
 import {EntityEvent} from '../../../../org/bukkit/event/entity/EntityEvent.js'
 
 export interface EntityTeleportEvent extends EntityEvent, Cancellable {
-	isCancelled(): boolean;
 	getHandlers(): HandlerList;
 	setCancelled(cancel: boolean): void;
+	isCancelled(): boolean;
 	getTo(): Location;
-	setTo(to: Location): void;
-	getFrom(): Location;
 	setFrom(from: Location): void;
+	getFrom(): Location;
+	setTo(to: Location): void;
 	getEntity(): Entity;
 	getEntityType(): EntityType;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class EntityTeleportEvent {

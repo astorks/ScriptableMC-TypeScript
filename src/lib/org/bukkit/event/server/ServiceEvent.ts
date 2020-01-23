@@ -6,8 +6,8 @@ import {ServerEvent} from '../../../../org/bukkit/event/server/ServerEvent.js'
 export interface ServiceEvent extends ServerEvent {
 	getProvider(): RegisteredServiceProvider;
 	getHandlers(): HandlerList;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class ServiceEvent {

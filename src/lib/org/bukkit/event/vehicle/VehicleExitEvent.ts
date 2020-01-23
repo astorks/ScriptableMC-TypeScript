@@ -6,13 +6,13 @@ import {Cancellable} from '../../../../org/bukkit/event/Cancellable.js'
 import {VehicleEvent} from '../../../../org/bukkit/event/vehicle/VehicleEvent.js'
 
 export interface VehicleExitEvent extends VehicleEvent, Cancellable {
-	isCancelled(): boolean;
 	getHandlers(): HandlerList;
 	setCancelled(cancel: boolean): void;
+	isCancelled(): boolean;
 	getExited(): LivingEntity;
 	getVehicle(): Vehicle;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class VehicleExitEvent {

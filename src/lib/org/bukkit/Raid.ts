@@ -4,17 +4,17 @@ import {Raid$RaidStatus} from '../../org/bukkit/Raid$RaidStatus.js'
 
 export interface Raid {
 	getLocation(): Location;
-	getSpawnedGroups(): number;
-	getTotalGroups(): number;
-	isStarted(): boolean;
+	setBadOmenLevel(badOmenLevel: number): void;
+	getActiveTicks(): number;
 	getBadOmenLevel(): number;
 	getStatus(): Raid$RaidStatus;
-	getTotalWaves(): number;
-	getTotalHealth(): number;
-	getActiveTicks(): number;
-	setBadOmenLevel(badOmenLevel: number): void;
-	getHeroes(): any;
+	getTotalGroups(): number;
 	getRaiders(): any;
+	isStarted(): boolean;
+	getTotalHealth(): number;
+	getSpawnedGroups(): number;
+	getHeroes(): any;
+	getTotalWaves(): number;
 }
 
 export class Raid {

@@ -11,9 +11,9 @@ export interface BrewerInventory extends Inventory {
 	getHolder(): InventoryHolder;
 	getHolder(): BrewingStand;
 	getFuel(): ItemStack;
+	setFuel(fuel: ItemStack): void;
 	getIngredient(): ItemStack;
 	setIngredient(ingredient: ItemStack): void;
-	setFuel(fuel: ItemStack): void;
 	remove(material: Material): void;
 	remove(item: ItemStack): void;
 	clear(): void;
@@ -34,17 +34,17 @@ export interface BrewerInventory extends Inventory {
 	all(item: ItemStack): any;
 	setContents(items: Array<ItemStack>): void;
 	getMaxStackSize(): number;
-	getContents(): Array<ItemStack>;
+	setItem(index: number, item: ItemStack): void;
+	addItem(items: Array<ItemStack>): any;
 	removeItem(items: Array<ItemStack>): any;
 	firstEmpty(): number;
 	getItem(index: number): ItemStack;
-	setItem(index: number, item: ItemStack): void;
-	getStorageContents(): Array<ItemStack>;
-	containsAtLeast(item: ItemStack, amount: number): boolean;
 	setMaxStackSize(size: number): void;
-	getViewers(): any;
+	getStorageContents(): Array<ItemStack>;
+	getContents(): Array<ItemStack>;
 	setStorageContents(items: Array<ItemStack>): void;
-	addItem(items: Array<ItemStack>): any;
+	containsAtLeast(item: ItemStack, amount: number): boolean;
+	getViewers(): any;
 	spliterator(): any;
 	forEach(arg0: any): void;
 }

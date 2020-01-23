@@ -10,10 +10,10 @@ export interface PotionEffect extends ConfigurationSerializable {
 	serialize(): any;
 	getColor(): Color;
 	getDuration(): number;
+	hasIcon(): boolean;
 	isAmbient(): boolean;
 	getAmplifier(): number;
 	hasParticles(): boolean;
-	hasIcon(): boolean;
 }
 
 export class PotionEffect {

@@ -8,21 +8,21 @@ export interface MapView {
 	isLocked(): boolean;
 	isVirtual(): boolean;
 	getWorld(): World;
-	setWorld(world: World): void;
-	getScale(): MapView$Scale;
-	getCenterX(): number;
-	getCenterZ(): number;
-	setCenterZ(z: number): void;
-	addRenderer(renderer: MapRenderer): void;
-	setCenterX(x: number): void;
-	getRenderers(): any;
-	setLocked(locked: boolean): void;
-	isTrackingPosition(): boolean;
-	setScale(scale: MapView$Scale): void;
-	removeRenderer(renderer: MapRenderer): boolean;
-	isUnlimitedTracking(): boolean;
 	setTrackingPosition(trackingPosition: boolean): void;
 	setUnlimitedTracking(unlimited: boolean): void;
+	isUnlimitedTracking(): boolean;
+	setScale(scale: MapView$Scale): void;
+	getRenderers(): any;
+	getCenterX(): number;
+	setCenterZ(z: number): void;
+	setLocked(locked: boolean): void;
+	getScale(): MapView$Scale;
+	getCenterZ(): number;
+	setWorld(world: World): void;
+	isTrackingPosition(): boolean;
+	removeRenderer(renderer: MapRenderer): boolean;
+	setCenterX(x: number): void;
+	addRenderer(renderer: MapRenderer): void;
 }
 
 export class MapView {

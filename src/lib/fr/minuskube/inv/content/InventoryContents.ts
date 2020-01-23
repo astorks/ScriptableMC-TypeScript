@@ -15,20 +15,20 @@ export interface InventoryContents {
 	set(arg0: number, arg1: number, arg2: ClickableItem): InventoryContents;
 	set(arg0: SlotPos, arg1: ClickableItem): InventoryContents;
 	setProperty(arg0: string, arg1: any): InventoryContents;
+	all(): Array<Array<ClickableItem>>;
 	property(arg0: string, arg1: any): any;
 	property(arg0: string): any;
-	all(): Array<Array<ClickableItem>>;
 	pagination(): Pagination;
-	inventory(): SmartInventory;
 	firstEmpty(): any;
+	inventory(): SmartInventory;
 	fillRow(arg0: number, arg1: ClickableItem): InventoryContents;
-	fillRect(arg0: SlotPos, arg1: SlotPos, arg2: ClickableItem): InventoryContents;
-	fillRect(arg0: number, arg1: number, arg2: number, arg3: number, arg4: ClickableItem): InventoryContents;
-	newIterator(arg0: SlotIterator$Type, arg1: SlotPos): SlotIterator;
 	newIterator(arg0: string, arg1: SlotIterator$Type, arg2: number, arg3: number): SlotIterator;
-	newIterator(arg0: SlotIterator$Type, arg1: number, arg2: number): SlotIterator;
 	newIterator(arg0: string, arg1: SlotIterator$Type, arg2: SlotPos): SlotIterator;
+	newIterator(arg0: SlotIterator$Type, arg1: SlotPos): SlotIterator;
+	newIterator(arg0: SlotIterator$Type, arg1: number, arg2: number): SlotIterator;
 	fillBorders(arg0: ClickableItem): InventoryContents;
+	fillRect(arg0: number, arg1: number, arg2: number, arg3: number, arg4: ClickableItem): InventoryContents;
+	fillRect(arg0: SlotPos, arg1: SlotPos, arg2: ClickableItem): InventoryContents;
 	fillColumn(arg0: number, arg1: ClickableItem): InventoryContents;
 }
 

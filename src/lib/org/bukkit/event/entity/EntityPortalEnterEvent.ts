@@ -10,8 +10,8 @@ export interface EntityPortalEnterEvent extends EntityEvent {
 	getHandlers(): HandlerList;
 	getEntity(): Entity;
 	getEntityType(): EntityType;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class EntityPortalEnterEvent {

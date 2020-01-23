@@ -9,16 +9,16 @@ export interface EntityPortalEvent extends EntityTeleportEvent {
 	getHandlers(): HandlerList;
 	getSearchRadius(): number;
 	setSearchRadius(searchRadius: number): void;
-	isCancelled(): boolean;
 	setCancelled(cancel: boolean): void;
+	isCancelled(): boolean;
 	getTo(): Location;
-	setTo(to: Location): void;
-	getFrom(): Location;
 	setFrom(from: Location): void;
+	getFrom(): Location;
+	setTo(to: Location): void;
 	getEntity(): Entity;
 	getEntityType(): EntityType;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class EntityPortalEvent {

@@ -1,6 +1,6 @@
 {
-  "name": "ScriptablePluginSourceTS",
-  "version": "1.0.3",
+  "name": "scriptablemc-typescript",
+  "version": "1.0.4",
   "description": "Typescript plugin example and libraries for Minecraft 1.15",
   "main": "src/main.js",
   "directories": {

@@ -8,12 +8,12 @@ import {BlockFormEvent} from '../../../../org/bukkit/event/block/BlockFormEvent.
 export interface EntityBlockFormEvent extends BlockFormEvent {
 	getEntity(): Entity;
 	getHandlers(): HandlerList;
-	isCancelled(): boolean;
 	setCancelled(cancel: boolean): void;
+	isCancelled(): boolean;
 	getNewState(): BlockState;
 	getBlock(): Block;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class EntityBlockFormEvent {

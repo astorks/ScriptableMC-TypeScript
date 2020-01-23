@@ -9,8 +9,8 @@ export interface Score {
 	getScoreboard(): Scoreboard;
 	getObjective(): Objective;
 	getScore(): number;
-	isScoreSet(): boolean;
 	setScore(score: number): void;
+	isScoreSet(): boolean;
 }
 
 export class Score {

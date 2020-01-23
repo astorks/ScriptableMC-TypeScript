@@ -10,15 +10,15 @@ export interface SmartInventory {
 	getParent(): any;
 	getId(): string;
 	close(arg0: Player): void;
-	open(arg0: Player, arg1: number): Inventory;
 	open(arg0: Player): Inventory;
+	open(arg0: Player, arg1: number): Inventory;
 	getType(): InventoryType;
 	getProvider(): InventoryProvider;
-	getRows(): number;
-	isCloseable(): boolean;
-	setCloseable(arg0: boolean): void;
 	getTitle(): string;
+	isCloseable(): boolean;
+	getRows(): number;
 	getManager(): InventoryManager;
+	setCloseable(arg0: boolean): void;
 	getColumns(): number;
 }
 

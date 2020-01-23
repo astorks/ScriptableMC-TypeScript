@@ -5,6 +5,8 @@ export interface ByteArrayDataInput {
 	readInt(): number;
 	readUTF(): string;
 	readFloat(): number;
+	readFully(arg0: Array<number>): void;
+	readFully(arg0: Array<number>, arg1: number, arg2: number): void;
 	readChar(): string;
 	skipBytes(arg0: number): number;
 	readBoolean(): boolean;
@@ -14,8 +16,6 @@ export interface ByteArrayDataInput {
 	readUnsignedShort(): number;
 	readLong(): number;
 	readDouble(): number;
-	readFully(arg0: Array<number>, arg1: number, arg2: number): void;
-	readFully(arg0: Array<number>): void;
 }
 
 export class ByteArrayDataInput {

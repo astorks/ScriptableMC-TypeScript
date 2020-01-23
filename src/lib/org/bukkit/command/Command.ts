@@ -12,20 +12,20 @@ export interface Command {
 	getPermission(): string;
 	setPermission(permission: string): void;
 	unregister(commandMap: CommandMap): boolean;
-	testPermissionSilent(target: CommandSender): boolean;
-	setPermissionMessage(permissionMessage: string): Command;
-	getPermissionMessage(): string;
 	getDescription(): string;
-	getUsage(): string;
-	getLabel(): string;
-	setUsage(usage: string): Command;
-	setLabel(_name: string): boolean;
-	testPermission(target: CommandSender): boolean;
 	tabComplete(sender: CommandSender, alias: string, args: Array<string>): any;
 	tabComplete(sender: CommandSender, alias: string, args: Array<string>, location: Location): any;
+	testPermission(target: CommandSender): boolean;
+	getUsage(): string;
+	getLabel(): string;
+	setLabel(_name: string): boolean;
+	setDescription(description: string): Command;
 	setAliases(aliases: any): Command;
 	getAliases(): any;
-	setDescription(description: string): Command;
+	setUsage(usage: string): Command;
+	testPermissionSilent(target: CommandSender): boolean;
+	getPermissionMessage(): string;
+	setPermissionMessage(permissionMessage: string): Command;
 }
 
 export class Command {

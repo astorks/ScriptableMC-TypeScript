@@ -1,9 +1,9 @@
 declare var Java: any;
 
 export interface InventoryType {
+	getDefaultSize(): number;
 	getDefaultTitle(): string;
 	isCreatable(): boolean;
-	getDefaultSize(): number;
 	name(): string;
 	compareTo(arg0: any): number;
 	compareTo(arg0: any): number;

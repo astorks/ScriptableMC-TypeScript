@@ -1,20 +1,20 @@
 declare var Java: any;
 import {HandlerList} from '../../../../org/bukkit/event/HandlerList.js'
-import {Block} from '../../../../org/bukkit/block/Block.js'
 import {Material} from '../../../../org/bukkit/Material.js'
+import {Block} from '../../../../org/bukkit/block/Block.js'
 import {BlockData} from '../../../../org/bukkit/block/data/BlockData.js'
 import {Cancellable} from '../../../../org/bukkit/event/Cancellable.js'
 import {BlockEvent} from '../../../../org/bukkit/event/block/BlockEvent.js'
 
 export interface BlockPhysicsEvent extends BlockEvent, Cancellable {
-	isCancelled(): boolean;
 	getHandlers(): HandlerList;
 	setCancelled(cancel: boolean): void;
-	getSourceBlock(): Block;
+	isCancelled(): boolean;
 	getChangedType(): Material;
+	getSourceBlock(): Block;
 	getBlock(): Block;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class BlockPhysicsEvent {

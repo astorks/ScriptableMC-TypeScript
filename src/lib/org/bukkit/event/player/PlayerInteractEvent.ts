@@ -1,36 +1,36 @@
 declare var Java: any;
+import {HandlerList} from '../../../../org/bukkit/event/HandlerList.js'
 import {Material} from '../../../../org/bukkit/Material.js'
 import {ItemStack} from '../../../../org/bukkit/inventory/ItemStack.js'
-import {HandlerList} from '../../../../org/bukkit/event/HandlerList.js'
-import {BlockFace} from '../../../../org/bukkit/block/BlockFace.js'
+import {EquipmentSlot} from '../../../../org/bukkit/inventory/EquipmentSlot.js'
 import {Event$Result} from '../../../../org/bukkit/event/Event$Result.js'
 import {Block} from '../../../../org/bukkit/block/Block.js'
 import {Action} from '../../../../org/bukkit/event/block/Action.js'
-import {EquipmentSlot} from '../../../../org/bukkit/inventory/EquipmentSlot.js'
+import {BlockFace} from '../../../../org/bukkit/block/BlockFace.js'
 import {Player} from '../../../../org/bukkit/entity/Player.js'
 import {Cancellable} from '../../../../org/bukkit/event/Cancellable.js'
 import {PlayerEvent} from '../../../../org/bukkit/event/player/PlayerEvent.js'
 
 export interface PlayerInteractEvent extends PlayerEvent, Cancellable {
+	getHandlers(): HandlerList;
 	getMaterial(): Material;
 	getItem(): ItemStack;
-	isCancelled(): boolean;
-	getHandlers(): HandlerList;
 	setCancelled(cancel: boolean): void;
-	getBlockFace(): BlockFace;
-	useItemInHand(): Event$Result;
-	useInteractedBlock(): Event$Result;
+	isCancelled(): boolean;
+	getHand(): EquipmentSlot;
+	setUseInteractedBlock(useInteractedBlock: Event$Result): void;
 	setUseItemInHand(useItemInHand: Event$Result): void;
+	useItemInHand(): Event$Result;
 	hasItem(): boolean;
 	isBlockInHand(): boolean;
 	getClickedBlock(): Block;
 	hasBlock(): boolean;
+	useInteractedBlock(): Event$Result;
 	getAction(): Action;
-	getHand(): EquipmentSlot;
-	setUseInteractedBlock(useInteractedBlock: Event$Result): void;
+	getBlockFace(): BlockFace;
 	getPlayer(): Player;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class PlayerInteractEvent {

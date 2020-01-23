@@ -8,8 +8,8 @@ export interface EntityEvent extends Event {
 	getEntity(): Entity;
 	getEntityType(): EntityType;
 	getHandlers(): HandlerList;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class EntityEvent {

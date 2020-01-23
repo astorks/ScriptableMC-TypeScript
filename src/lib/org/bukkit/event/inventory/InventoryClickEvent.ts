@@ -1,10 +1,10 @@
 declare var Java: any;
 import {HandlerList} from '../../../../org/bukkit/event/HandlerList.js'
-import {ItemStack} from '../../../../org/bukkit/inventory/ItemStack.js'
-import {InventoryType$SlotType} from '../../../../org/bukkit/event/inventory/InventoryType$SlotType.js'
-import {InventoryAction} from '../../../../org/bukkit/event/inventory/InventoryAction.js'
-import {ClickType} from '../../../../org/bukkit/event/inventory/ClickType.js'
 import {Inventory} from '../../../../org/bukkit/inventory/Inventory.js'
+import {InventoryType$SlotType} from '../../../../org/bukkit/event/inventory/InventoryType$SlotType.js'
+import {ItemStack} from '../../../../org/bukkit/inventory/ItemStack.js'
+import {ClickType} from '../../../../org/bukkit/event/inventory/ClickType.js'
+import {InventoryAction} from '../../../../org/bukkit/event/inventory/InventoryAction.js'
 import {Event$Result} from '../../../../org/bukkit/event/Event$Result.js'
 import {HumanEntity} from '../../../../org/bukkit/entity/HumanEntity.js'
 import {InventoryView} from '../../../../org/bukkit/inventory/InventoryView.js'
@@ -13,29 +13,29 @@ import {InventoryInteractEvent} from '../../../../org/bukkit/event/inventory/Inv
 export interface InventoryClickEvent extends InventoryInteractEvent {
 	getSlot(): number;
 	getHandlers(): HandlerList;
+	getClickedInventory(): Inventory;
+	getSlotType(): InventoryType$SlotType;
 	getCursor(): ItemStack;
 	setCursor(stack: ItemStack): void;
-	getSlotType(): InventoryType$SlotType;
-	isLeftClick(): boolean;
-	getHotbarButton(): number;
-	getAction(): InventoryAction;
 	setCurrentItem(stack: ItemStack): void;
-	isRightClick(): boolean;
-	getCurrentItem(): ItemStack;
-	isShiftClick(): boolean;
-	getRawSlot(): number;
+	getHotbarButton(): number;
 	getClick(): ClickType;
-	getClickedInventory(): Inventory;
-	setResult(newResult: Event$Result): void;
+	isLeftClick(): boolean;
+	isRightClick(): boolean;
+	isShiftClick(): boolean;
+	getAction(): InventoryAction;
+	getRawSlot(): number;
+	getCurrentItem(): ItemStack;
 	getResult(): Event$Result;
-	isCancelled(): boolean;
+	setResult(newResult: Event$Result): void;
 	setCancelled(toCancel: boolean): void;
+	isCancelled(): boolean;
 	getWhoClicked(): HumanEntity;
 	getInventory(): Inventory;
 	getViewers(): any;
 	getView(): InventoryView;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class InventoryClickEvent {

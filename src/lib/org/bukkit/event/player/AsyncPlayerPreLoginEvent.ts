@@ -1,25 +1,25 @@
 declare var Java: any;
-import {PlayerPreLoginEvent$Result} from '../../../../org/bukkit/event/player/PlayerPreLoginEvent$Result.js'
 import {HandlerList} from '../../../../org/bukkit/event/HandlerList.js'
+import {PlayerPreLoginEvent$Result} from '../../../../org/bukkit/event/player/PlayerPreLoginEvent$Result.js'
 import {AsyncPlayerPreLoginEvent$Result} from '../../../../org/bukkit/event/player/AsyncPlayerPreLoginEvent$Result.js'
 import {Event} from '../../../../org/bukkit/event/Event.js'
 
 export interface AsyncPlayerPreLoginEvent extends Event {
 	getName(): string;
 	getAddress(): any;
-	setResult(result: PlayerPreLoginEvent$Result): void;
-	getResult(): PlayerPreLoginEvent$Result;
-	getUniqueId(): string;
 	getHandlers(): HandlerList;
-	setKickMessage(message: string): void;
-	getLoginResult(): AsyncPlayerPreLoginEvent$Result;
-	setLoginResult(result: AsyncPlayerPreLoginEvent$Result): void;
-	allow(): void;
-	disallow(result: PlayerPreLoginEvent$Result, message: string): void;
-	disallow(result: AsyncPlayerPreLoginEvent$Result, message: string): void;
+	getResult(): PlayerPreLoginEvent$Result;
+	setResult(result: PlayerPreLoginEvent$Result): void;
+	getUniqueId(): string;
 	getKickMessage(): string;
-	getEventName(): string;
+	allow(): void;
+	setKickMessage(message: string): void;
+	disallow(result: AsyncPlayerPreLoginEvent$Result, message: string): void;
+	disallow(result: PlayerPreLoginEvent$Result, message: string): void;
+	setLoginResult(result: AsyncPlayerPreLoginEvent$Result): void;
+	getLoginResult(): AsyncPlayerPreLoginEvent$Result;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class AsyncPlayerPreLoginEvent {

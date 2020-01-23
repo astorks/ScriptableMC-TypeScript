@@ -1,7 +1,7 @@
 declare var Java: any;
 import {Location} from '../../../../org/bukkit/Location.js'
-import {Player} from '../../../../org/bukkit/entity/Player.js'
 import {HandlerList} from '../../../../org/bukkit/event/HandlerList.js'
+import {Player} from '../../../../org/bukkit/entity/Player.js'
 import {TreeType} from '../../../../org/bukkit/TreeType.js'
 import {World} from '../../../../org/bukkit/World.js'
 import {Cancellable} from '../../../../org/bukkit/event/Cancellable.js'
@@ -9,16 +9,16 @@ import {WorldEvent} from '../../../../org/bukkit/event/world/WorldEvent.js'
 
 export interface StructureGrowEvent extends WorldEvent, Cancellable {
 	getLocation(): Location;
-	getPlayer(): Player;
-	isCancelled(): boolean;
 	getHandlers(): HandlerList;
+	getPlayer(): Player;
 	setCancelled(cancel: boolean): void;
-	getSpecies(): TreeType;
-	isFromBonemeal(): boolean;
+	isCancelled(): boolean;
 	getBlocks(): any;
+	isFromBonemeal(): boolean;
+	getSpecies(): TreeType;
 	getWorld(): World;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class StructureGrowEvent {

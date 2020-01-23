@@ -8,19 +8,19 @@ import {EntityTeleportEvent} from '../../../../org/bukkit/event/entity/EntityTel
 
 export interface EntityPortalExitEvent extends EntityTeleportEvent {
 	getHandlers(): HandlerList;
+	getBefore(): Vector;
 	getAfter(): Vector;
 	setAfter(after: Vector): void;
-	getBefore(): Vector;
-	isCancelled(): boolean;
 	setCancelled(cancel: boolean): void;
+	isCancelled(): boolean;
 	getTo(): Location;
-	setTo(to: Location): void;
-	getFrom(): Location;
 	setFrom(from: Location): void;
+	getFrom(): Location;
+	setTo(to: Location): void;
 	getEntity(): Entity;
 	getEntityType(): EntityType;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class EntityPortalExitEvent {

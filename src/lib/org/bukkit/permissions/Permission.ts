@@ -8,9 +8,9 @@ export interface Permission {
 	getDescription(): string;
 	setDescription(value: string): void;
 	getPermissibles(): any;
-	getChildren(): any;
 	addParent(perm: Permission, value: boolean): void;
 	addParent(_name: string, value: boolean): Permission;
+	getChildren(): any;
 	recalculatePermissibles(): void;
 }
 

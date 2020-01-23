@@ -7,12 +7,12 @@ import {HangingEvent} from '../../../../org/bukkit/event/hanging/HangingEvent.js
 
 export interface HangingBreakEvent extends HangingEvent, Cancellable {
 	getCause(): HangingBreakEvent$RemoveCause;
-	isCancelled(): boolean;
 	getHandlers(): HandlerList;
 	setCancelled(cancel: boolean): void;
+	isCancelled(): boolean;
 	getEntity(): Hanging;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class HangingBreakEvent {

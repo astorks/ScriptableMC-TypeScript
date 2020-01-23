@@ -6,8 +6,8 @@ export interface ConversationContext {
 	getPlugin(): Plugin;
 	getForWhom(): Conversable;
 	getAllSessionData(): any;
-	getSessionData(key: any): any;
 	setSessionData(key: any, value: any): void;
+	getSessionData(key: any): any;
 }
 
 export class ConversationContext {

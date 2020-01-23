@@ -8,13 +8,13 @@ import {WeatherEvent} from '../../../../org/bukkit/event/weather/WeatherEvent.js
 
 export interface LightningStrikeEvent extends WeatherEvent, Cancellable {
 	getCause(): LightningStrikeEvent$Cause;
-	isCancelled(): boolean;
 	getHandlers(): HandlerList;
 	setCancelled(cancel: boolean): void;
+	isCancelled(): boolean;
 	getLightning(): LightningStrike;
 	getWorld(): World;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class LightningStrikeEvent {

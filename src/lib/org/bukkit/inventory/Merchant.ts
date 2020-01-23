@@ -5,11 +5,11 @@ import {HumanEntity} from '../../../org/bukkit/entity/HumanEntity.js'
 export interface Merchant {
 	getRecipes(): any;
 	getRecipe(i: number): MerchantRecipe;
-	setRecipe(i: number, recipe: MerchantRecipe): void;
+	getTrader(): HumanEntity;
+	getRecipeCount(): number;
 	isTrading(): boolean;
 	setRecipes(recipes: any): void;
-	getRecipeCount(): number;
-	getTrader(): HumanEntity;
+	setRecipe(i: number, recipe: MerchantRecipe): void;
 }
 
 export class Merchant {

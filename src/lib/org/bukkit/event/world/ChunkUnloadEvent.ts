@@ -10,8 +10,8 @@ export interface ChunkUnloadEvent extends ChunkEvent {
 	setSaveChunk(saveChunk: boolean): void;
 	getChunk(): Chunk;
 	getWorld(): World;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class ChunkUnloadEvent {

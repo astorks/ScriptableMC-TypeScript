@@ -1,7 +1,7 @@
 declare var Java: any;
-import {MerchantInventory} from '../../../../org/bukkit/inventory/MerchantInventory.js'
-import {Inventory} from '../../../../org/bukkit/inventory/Inventory.js'
 import {HandlerList} from '../../../../org/bukkit/event/HandlerList.js'
+import {Inventory} from '../../../../org/bukkit/inventory/Inventory.js'
+import {MerchantInventory} from '../../../../org/bukkit/inventory/MerchantInventory.js'
 import {Merchant} from '../../../../org/bukkit/inventory/Merchant.js'
 import {Event$Result} from '../../../../org/bukkit/event/Event$Result.js'
 import {HumanEntity} from '../../../../org/bukkit/entity/HumanEntity.js'
@@ -10,19 +10,19 @@ import {InventoryInteractEvent} from '../../../../org/bukkit/event/inventory/Inv
 
 export interface TradeSelectEvent extends InventoryInteractEvent {
 	getIndex(): number;
-	getInventory(): MerchantInventory;
-	getInventory(): Inventory;
 	getHandlers(): HandlerList;
+	getInventory(): Inventory;
+	getInventory(): MerchantInventory;
 	getMerchant(): Merchant;
-	setResult(newResult: Event$Result): void;
 	getResult(): Event$Result;
-	isCancelled(): boolean;
+	setResult(newResult: Event$Result): void;
 	setCancelled(toCancel: boolean): void;
+	isCancelled(): boolean;
 	getWhoClicked(): HumanEntity;
 	getViewers(): any;
 	getView(): InventoryView;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class TradeSelectEvent {

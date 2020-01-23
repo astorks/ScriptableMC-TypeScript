@@ -6,8 +6,8 @@ import {Entity} from '../../../org/bukkit/entity/Entity.js'
 export interface LootContext {
 	getLocation(): Location;
 	getKiller(): HumanEntity;
-	getLuck(): number;
 	getLootedEntity(): Entity;
+	getLuck(): number;
 	getLootingModifier(): number;
 }
 

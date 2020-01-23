@@ -8,16 +8,16 @@ import {EntityEvent} from '../../../../org/bukkit/event/entity/EntityEvent.js'
 
 export interface EntityExplodeEvent extends EntityEvent, Cancellable {
 	getLocation(): Location;
-	isCancelled(): boolean;
 	getHandlers(): HandlerList;
 	setCancelled(cancel: boolean): void;
+	isCancelled(): boolean;
+	setYield(_yield: number): void;
 	blockList(): any;
 	getYield(): number;
-	setYield(_yield: number): void;
 	getEntity(): Entity;
 	getEntityType(): EntityType;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class EntityExplodeEvent {

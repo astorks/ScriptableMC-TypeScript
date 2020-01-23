@@ -6,8 +6,8 @@ export interface PotionEffectType {
 	getName(): string;
 	getId(): number;
 	isInstant(): boolean;
-	getDurationModifier(): number;
 	getColor(): Color;
+	getDurationModifier(): number;
 	createEffect(duration: number, amplifier: number): PotionEffect;
 }
 

@@ -5,17 +5,17 @@ import {Enchantment} from '../../../../org/bukkit/enchantments/Enchantment.js'
 export interface SmartItemBuilder {
 	build(): ItemStack;
 	getDisplayName(): string;
-	addEnchant(enchantment: Enchantment, level: number, ignoreLevelRestriction: boolean): SmartItemBuilder;
-	setLore(lore: Array<string>): SmartItemBuilder;
-	getLore(): Array<string>;
+	isUnbreakable(isUnbreakable: boolean): SmartItemBuilder;
 	removeEnchantment(enchantment: Enchantment): SmartItemBuilder;
 	setDisplayName(displayName: string): SmartItemBuilder;
-	isUnbreakable(isUnbreakable: boolean): SmartItemBuilder;
+	setLore(lore: Array<string>): SmartItemBuilder;
+	addEnchant(enchantment: Enchantment, level: number, ignoreLevelRestriction: boolean): SmartItemBuilder;
+	getLore(): Array<string>;
 }
 
 export class SmartItemBuilder {
 	public static get $javaClass(): any {
-		return Java.type('com.pixlfox.scriptableplugin.smartinvs.SmartItemBuilder');
+		return Java.type('com.pixlfox.scriptablemc.smartinvs.SmartItemBuilder');
 	}
 	constructor(itemStack: ItemStack);
 	constructor(...args: any[]) {

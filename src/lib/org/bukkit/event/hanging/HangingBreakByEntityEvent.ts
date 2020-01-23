@@ -8,12 +8,12 @@ import {HangingBreakEvent} from '../../../../org/bukkit/event/hanging/HangingBre
 export interface HangingBreakByEntityEvent extends HangingBreakEvent {
 	getRemover(): Entity;
 	getCause(): HangingBreakEvent$RemoveCause;
-	isCancelled(): boolean;
 	getHandlers(): HandlerList;
 	setCancelled(cancel: boolean): void;
+	isCancelled(): boolean;
 	getEntity(): Hanging;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class HangingBreakByEntityEvent {

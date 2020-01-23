@@ -6,18 +6,18 @@ export interface WorldBorder {
 	reset(): void;
 	setSize(newSize: number, seconds: number): void;
 	setSize(newSize: number): void;
-	getCenter(): Location;
-	getWarningDistance(): number;
-	setDamageBuffer(blocks: number): void;
-	isInside(location: Location): boolean;
-	setWarningDistance(distance: number): void;
+	setWarningTime(seconds: number): void;
 	setCenter(x: number, z: number): void;
 	setCenter(location: Location): void;
-	setWarningTime(seconds: number): void;
-	getDamageAmount(): number;
+	setDamageBuffer(blocks: number): void;
 	getWarningTime(): number;
-	setDamageAmount(damage: number): void;
+	getDamageAmount(): number;
 	getDamageBuffer(): number;
+	setDamageAmount(damage: number): void;
+	isInside(location: Location): boolean;
+	setWarningDistance(distance: number): void;
+	getWarningDistance(): number;
+	getCenter(): Location;
 }
 
 export class WorldBorder {

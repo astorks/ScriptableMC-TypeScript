@@ -8,8 +8,8 @@ export interface AttributeModifier extends ConfigurationSerializable {
 	getSlot(): EquipmentSlot;
 	getAmount(): number;
 	serialize(): any;
-	getUniqueId(): string;
 	getOperation(): AttributeModifier$Operation;
+	getUniqueId(): string;
 }
 
 export class AttributeModifier {

@@ -15,23 +15,23 @@ export interface ConsoleCommandSender extends CommandSender, Conversable {
 	sendMessage(message: string): void;
 	hasPermission(_name: string): boolean;
 	hasPermission(perm: Permission): boolean;
+	recalculatePermissions(): void;
+	getEffectivePermissions(): any;
 	removeAttachment(attachment: PermissionAttachment): void;
-	isPermissionSet(_name: string): boolean;
-	isPermissionSet(perm: Permission): boolean;
 	addAttachment(plugin: Plugin, ticks: number): PermissionAttachment;
 	addAttachment(plugin: Plugin, _name: string, value: boolean, ticks: number): PermissionAttachment;
 	addAttachment(plugin: Plugin): PermissionAttachment;
 	addAttachment(plugin: Plugin, _name: string, value: boolean): PermissionAttachment;
-	recalculatePermissions(): void;
-	getEffectivePermissions(): any;
+	isPermissionSet(_name: string): boolean;
+	isPermissionSet(perm: Permission): boolean;
 	isOp(): boolean;
 	setOp(value: boolean): void;
+	abandonConversation(conversation: Conversation, details: ConversationAbandonedEvent): void;
+	abandonConversation(conversation: Conversation): void;
+	acceptConversationInput(input: string): void;
+	beginConversation(conversation: Conversation): boolean;
 	sendRawMessage(message: string): void;
 	isConversing(): boolean;
-	beginConversation(conversation: Conversation): boolean;
-	abandonConversation(conversation: Conversation): void;
-	abandonConversation(conversation: Conversation, details: ConversationAbandonedEvent): void;
-	acceptConversationInput(input: string): void;
 }
 
 export class ConsoleCommandSender {

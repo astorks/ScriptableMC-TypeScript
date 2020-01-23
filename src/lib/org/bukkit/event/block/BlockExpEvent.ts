@@ -5,11 +5,11 @@ import {BlockEvent} from '../../../../org/bukkit/event/block/BlockEvent.js'
 
 export interface BlockExpEvent extends BlockEvent {
 	getHandlers(): HandlerList;
-	getExpToDrop(): number;
 	setExpToDrop(exp: number): void;
+	getExpToDrop(): number;
 	getBlock(): Block;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class BlockExpEvent {

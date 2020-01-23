@@ -8,8 +8,8 @@ export interface PlayerItemBreakEvent extends PlayerEvent {
 	getHandlers(): HandlerList;
 	getBrokenItem(): ItemStack;
 	getPlayer(): Player;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class PlayerItemBreakEvent {

@@ -1,28 +1,28 @@
 declare var Java: any;
+import {HandlerList} from '../../../../org/bukkit/event/HandlerList.js'
 import {Player} from '../../../../org/bukkit/entity/Player.js'
 import {ItemStack} from '../../../../org/bukkit/inventory/ItemStack.js'
-import {HandlerList} from '../../../../org/bukkit/event/HandlerList.js'
-import {BlockState} from '../../../../org/bukkit/block/BlockState.js'
-import {Block} from '../../../../org/bukkit/block/Block.js'
 import {EquipmentSlot} from '../../../../org/bukkit/inventory/EquipmentSlot.js'
+import {Block} from '../../../../org/bukkit/block/Block.js'
+import {BlockState} from '../../../../org/bukkit/block/BlockState.js'
 import {Cancellable} from '../../../../org/bukkit/event/Cancellable.js'
 import {BlockEvent} from '../../../../org/bukkit/event/block/BlockEvent.js'
 
 export interface BlockPlaceEvent extends BlockEvent, Cancellable {
-	getPlayer(): Player;
-	getItemInHand(): ItemStack;
-	isCancelled(): boolean;
 	getHandlers(): HandlerList;
+	getPlayer(): Player;
 	setCancelled(cancel: boolean): void;
+	isCancelled(): boolean;
+	getItemInHand(): ItemStack;
+	getHand(): EquipmentSlot;
+	getBlockAgainst(): Block;
+	getBlockPlaced(): Block;
+	setBuild(canBuild: boolean): void;
 	getBlockReplacedState(): BlockState;
 	canBuild(): boolean;
-	getBlockPlaced(): Block;
-	getBlockAgainst(): Block;
-	setBuild(canBuild: boolean): void;
-	getHand(): EquipmentSlot;
 	getBlock(): Block;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class BlockPlaceEvent {

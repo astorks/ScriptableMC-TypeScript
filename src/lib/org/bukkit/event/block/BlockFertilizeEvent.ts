@@ -1,19 +1,19 @@
 declare var Java: any;
-import {Player} from '../../../../org/bukkit/entity/Player.js'
 import {HandlerList} from '../../../../org/bukkit/event/HandlerList.js'
+import {Player} from '../../../../org/bukkit/entity/Player.js'
 import {Block} from '../../../../org/bukkit/block/Block.js'
 import {Cancellable} from '../../../../org/bukkit/event/Cancellable.js'
 import {BlockEvent} from '../../../../org/bukkit/event/block/BlockEvent.js'
 
 export interface BlockFertilizeEvent extends BlockEvent, Cancellable {
-	getPlayer(): Player;
-	isCancelled(): boolean;
 	getHandlers(): HandlerList;
+	getPlayer(): Player;
 	setCancelled(cancelled: boolean): void;
+	isCancelled(): boolean;
 	getBlocks(): any;
 	getBlock(): Block;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class BlockFertilizeEvent {

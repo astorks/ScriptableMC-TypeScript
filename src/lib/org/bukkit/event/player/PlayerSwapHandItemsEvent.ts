@@ -6,16 +6,16 @@ import {Cancellable} from '../../../../org/bukkit/event/Cancellable.js'
 import {PlayerEvent} from '../../../../org/bukkit/event/player/PlayerEvent.js'
 
 export interface PlayerSwapHandItemsEvent extends PlayerEvent, Cancellable {
-	isCancelled(): boolean;
 	getHandlers(): HandlerList;
 	setCancelled(cancel: boolean): void;
-	setMainHandItem(mainHandItem: ItemStack): void;
+	isCancelled(): boolean;
+	getMainHandItem(): ItemStack;
 	getOffHandItem(): ItemStack;
 	setOffHandItem(offHandItem: ItemStack): void;
-	getMainHandItem(): ItemStack;
+	setMainHandItem(mainHandItem: ItemStack): void;
 	getPlayer(): Player;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class PlayerSwapHandItemsEvent {

@@ -3,8 +3,8 @@ import {Plugin} from '../../../org/bukkit/plugin/Plugin.js'
 
 export interface BukkitTask {
 	getOwner(): Plugin;
-	isCancelled(): boolean;
 	cancel(): void;
+	isCancelled(): boolean;
 	getTaskId(): number;
 	isSync(): boolean;
 }

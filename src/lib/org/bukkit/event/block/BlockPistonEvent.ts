@@ -7,13 +7,13 @@ import {BlockEvent} from '../../../../org/bukkit/event/block/BlockEvent.js'
 
 export interface BlockPistonEvent extends BlockEvent, Cancellable {
 	getDirection(): BlockFace;
-	isCancelled(): boolean;
 	setCancelled(cancelled: boolean): void;
+	isCancelled(): boolean;
 	isSticky(): boolean;
 	getBlock(): Block;
 	getHandlers(): HandlerList;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class BlockPistonEvent {

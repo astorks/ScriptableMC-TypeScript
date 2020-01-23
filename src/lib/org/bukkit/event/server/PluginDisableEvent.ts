@@ -6,8 +6,8 @@ import {PluginEvent} from '../../../../org/bukkit/event/server/PluginEvent.js'
 export interface PluginDisableEvent extends PluginEvent {
 	getHandlers(): HandlerList;
 	getPlugin(): Plugin;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class PluginDisableEvent {

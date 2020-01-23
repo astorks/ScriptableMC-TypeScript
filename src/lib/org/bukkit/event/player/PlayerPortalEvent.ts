@@ -7,22 +7,22 @@ import {PlayerTeleportEvent} from '../../../../org/bukkit/event/player/PlayerTel
 
 export interface PlayerPortalEvent extends PlayerTeleportEvent {
 	getHandlers(): HandlerList;
-	setCreationRadius(creationRadius: number): void;
-	getCreationRadius(): number;
-	setCanCreatePortal(canCreatePortal: boolean): void;
 	getCanCreatePortal(): boolean;
+	setCanCreatePortal(canCreatePortal: boolean): void;
+	getCreationRadius(): number;
+	setCreationRadius(creationRadius: number): void;
 	getSearchRadius(): number;
 	setSearchRadius(searchRadius: number): void;
 	getCause(): PlayerTeleportEvent$TeleportCause;
-	isCancelled(): boolean;
 	setCancelled(cancel: boolean): void;
+	isCancelled(): boolean;
 	getTo(): Location;
-	setTo(to: Location): void;
-	getFrom(): Location;
 	setFrom(from: Location): void;
+	getFrom(): Location;
+	setTo(to: Location): void;
 	getPlayer(): Player;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class PlayerPortalEvent {

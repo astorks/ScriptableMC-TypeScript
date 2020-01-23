@@ -3,9 +3,9 @@ import {Plugin} from '../../../org/bukkit/plugin/Plugin.js'
 import {MetadataValue} from '../../../org/bukkit/metadata/MetadataValue.js'
 
 export interface Metadatable {
-	hasMetadata(metadataKey: string): boolean;
 	removeMetadata(metadataKey: string, owningPlugin: Plugin): void;
 	getMetadata(metadataKey: string): any;
+	hasMetadata(metadataKey: string): boolean;
 	setMetadata(metadataKey: string, newMetadataValue: MetadataValue): void;
 }
 

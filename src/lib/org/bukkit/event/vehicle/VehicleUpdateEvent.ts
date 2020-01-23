@@ -6,8 +6,8 @@ import {VehicleEvent} from '../../../../org/bukkit/event/vehicle/VehicleEvent.js
 export interface VehicleUpdateEvent extends VehicleEvent {
 	getHandlers(): HandlerList;
 	getVehicle(): Vehicle;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class VehicleUpdateEvent {

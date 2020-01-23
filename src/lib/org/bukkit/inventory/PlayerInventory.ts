@@ -1,36 +1,36 @@
 declare var Java: any;
 import {ItemStack} from '../../../org/bukkit/inventory/ItemStack.js'
-import {HumanEntity} from '../../../org/bukkit/entity/HumanEntity.js'
 import {InventoryHolder} from '../../../org/bukkit/inventory/InventoryHolder.js'
+import {HumanEntity} from '../../../org/bukkit/entity/HumanEntity.js'
 import {Material} from '../../../org/bukkit/Material.js'
 import {Location} from '../../../org/bukkit/Location.js'
 import {InventoryType} from '../../../org/bukkit/event/inventory/InventoryType.js'
 import {Inventory} from '../../../org/bukkit/inventory/Inventory.js'
 
 export interface PlayerInventory extends Inventory {
-	getItemInHand(): ItemStack;
-	setItemInHand(stack: ItemStack): void;
-	getHolder(): HumanEntity;
-	getHolder(): InventoryHolder;
 	setItem(index: number, item: ItemStack): void;
-	getLeggings(): ItemStack;
-	getHeldItemSlot(): number;
-	setArmorContents(items: Array<ItemStack>): void;
-	setBoots(boots: ItemStack): void;
-	setHelmet(helmet: ItemStack): void;
+	getHolder(): InventoryHolder;
+	getHolder(): HumanEntity;
+	setItemInHand(stack: ItemStack): void;
+	getItemInHand(): ItemStack;
 	getItemInMainHand(): ItemStack;
-	getItemInOffHand(): ItemStack;
-	setItemInOffHand(item: ItemStack): void;
-	setHeldItemSlot(slot: number): void;
-	setChestplate(chestplate: ItemStack): void;
-	setLeggings(leggings: ItemStack): void;
-	getExtraContents(): Array<ItemStack>;
-	getArmorContents(): Array<ItemStack>;
-	getBoots(): ItemStack;
-	setExtraContents(items: Array<ItemStack>): void;
 	setItemInMainHand(item: ItemStack): void;
-	getHelmet(): ItemStack;
+	setItemInOffHand(item: ItemStack): void;
+	setHelmet(helmet: ItemStack): void;
 	getChestplate(): ItemStack;
+	setChestplate(chestplate: ItemStack): void;
+	getHelmet(): ItemStack;
+	setLeggings(leggings: ItemStack): void;
+	getLeggings(): ItemStack;
+	getItemInOffHand(): ItemStack;
+	getBoots(): ItemStack;
+	setBoots(boots: ItemStack): void;
+	getArmorContents(): Array<ItemStack>;
+	setArmorContents(items: Array<ItemStack>): void;
+	setExtraContents(items: Array<ItemStack>): void;
+	getExtraContents(): Array<ItemStack>;
+	getHeldItemSlot(): number;
+	setHeldItemSlot(slot: number): void;
 	remove(material: Material): void;
 	remove(item: ItemStack): void;
 	clear(): void;
@@ -51,16 +51,16 @@ export interface PlayerInventory extends Inventory {
 	all(item: ItemStack): any;
 	setContents(items: Array<ItemStack>): void;
 	getMaxStackSize(): number;
-	getContents(): Array<ItemStack>;
+	addItem(items: Array<ItemStack>): any;
 	removeItem(items: Array<ItemStack>): any;
 	firstEmpty(): number;
 	getItem(index: number): ItemStack;
-	getStorageContents(): Array<ItemStack>;
-	containsAtLeast(item: ItemStack, amount: number): boolean;
 	setMaxStackSize(size: number): void;
-	getViewers(): any;
+	getStorageContents(): Array<ItemStack>;
+	getContents(): Array<ItemStack>;
 	setStorageContents(items: Array<ItemStack>): void;
-	addItem(items: Array<ItemStack>): any;
+	containsAtLeast(item: ItemStack, amount: number): boolean;
+	getViewers(): any;
 	spliterator(): any;
 	forEach(arg0: any): void;
 }

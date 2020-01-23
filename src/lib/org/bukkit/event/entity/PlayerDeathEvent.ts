@@ -1,34 +1,34 @@
 declare var Java: any;
-import {LivingEntity} from '../../../../org/bukkit/entity/LivingEntity.js'
 import {Entity} from '../../../../org/bukkit/entity/Entity.js'
+import {LivingEntity} from '../../../../org/bukkit/entity/LivingEntity.js'
 import {Player} from '../../../../org/bukkit/entity/Player.js'
 import {HandlerList} from '../../../../org/bukkit/event/HandlerList.js'
 import {EntityType} from '../../../../org/bukkit/entity/EntityType.js'
 import {EntityDeathEvent} from '../../../../org/bukkit/event/entity/EntityDeathEvent.js'
 
 export interface PlayerDeathEvent extends EntityDeathEvent {
-	getEntity(): LivingEntity;
 	getEntity(): Entity;
+	getEntity(): LivingEntity;
 	getEntity(): Player;
-	setNewExp(exp: number): void;
+	setNewLevel(level: number): void;
+	getNewLevel(): number;
 	getDeathMessage(): string;
-	setDeathMessage(deathMessage: string): void;
+	setKeepInventory(keepInventory: boolean): void;
 	getNewExp(): number;
+	setNewExp(exp: number): void;
+	setNewTotalExp(totalExp: number): void;
 	getKeepInventory(): boolean;
 	getNewTotalExp(): number;
-	setKeepInventory(keepInventory: boolean): void;
-	setNewTotalExp(totalExp: number): void;
 	getKeepLevel(): boolean;
 	setKeepLevel(keepLevel: boolean): void;
-	getNewLevel(): number;
-	setNewLevel(level: number): void;
+	setDeathMessage(deathMessage: string): void;
 	getHandlers(): HandlerList;
 	getDrops(): any;
-	getDroppedExp(): number;
 	setDroppedExp(exp: number): void;
+	getDroppedExp(): number;
 	getEntityType(): EntityType;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class PlayerDeathEvent {

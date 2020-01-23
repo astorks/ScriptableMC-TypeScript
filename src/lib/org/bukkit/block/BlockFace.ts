@@ -3,10 +3,10 @@ import {Vector} from '../../../org/bukkit/util/Vector.js'
 
 export interface BlockFace {
 	getDirection(): Vector;
-	getModX(): number;
 	getModY(): number;
-	getOppositeFace(): BlockFace;
 	getModZ(): number;
+	getModX(): number;
+	getOppositeFace(): BlockFace;
 	name(): string;
 	compareTo(arg0: any): number;
 	compareTo(arg0: any): number;

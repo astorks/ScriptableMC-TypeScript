@@ -13,15 +13,15 @@ export interface InventoryView {
 	getInventory(rawSlot: number): Inventory;
 	getTitle(): string;
 	getPlayer(): HumanEntity;
-	getItem(slot: number): ItemStack;
 	setItem(slot: number, item: ItemStack): void;
-	getCursor(): ItemStack;
-	countSlots(): number;
-	getTopInventory(): Inventory;
+	getItem(slot: number): ItemStack;
 	getBottomInventory(): Inventory;
-	setCursor(item: ItemStack): void;
+	getTopInventory(): Inventory;
 	convertSlot(rawSlot: number): number;
 	getSlotType(slot: number): InventoryType$SlotType;
+	countSlots(): number;
+	getCursor(): ItemStack;
+	setCursor(item: ItemStack): void;
 }
 
 export class InventoryView {

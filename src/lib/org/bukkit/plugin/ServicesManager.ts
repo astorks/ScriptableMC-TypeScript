@@ -10,10 +10,10 @@ export interface ServicesManager {
 	unregister(service: any, provider: any): void;
 	unregisterAll(plugin: Plugin): void;
 	getRegistration(service: any): RegisteredServiceProvider;
+	isProvidedFor(service: any): boolean;
 	getRegistrations(plugin: Plugin): any;
 	getRegistrations(service: any): any;
 	getKnownServices(): any;
-	isProvidedFor(service: any): boolean;
 }
 
 export class ServicesManager {

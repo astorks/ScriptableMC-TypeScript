@@ -8,8 +8,8 @@ export interface PlayerChangedWorldEvent extends PlayerEvent {
 	getHandlers(): HandlerList;
 	getFrom(): World;
 	getPlayer(): Player;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class PlayerChangedWorldEvent {

@@ -2,8 +2,8 @@ declare var Java: any;
 
 export interface Lockable {
 	isLocked(): boolean;
-	setLock(key: string): void;
 	getLock(): string;
+	setLock(key: string): void;
 }
 
 export class Lockable {

@@ -10,11 +10,11 @@ export interface FurnaceExtractEvent extends BlockExpEvent {
 	getItemType(): Material;
 	getItemAmount(): number;
 	getHandlers(): HandlerList;
-	getExpToDrop(): number;
 	setExpToDrop(exp: number): void;
+	getExpToDrop(): number;
 	getBlock(): Block;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class FurnaceExtractEvent {

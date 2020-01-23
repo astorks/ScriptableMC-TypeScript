@@ -13,9 +13,9 @@ export interface SmartInventory$Builder {
 	provider(arg0: InventoryProvider): SmartInventory$Builder;
 	build(): SmartInventory;
 	listener(arg0: InventoryListener): SmartInventory$Builder;
+	manager(arg0: InventoryManager): SmartInventory$Builder;
 	closeable(arg0: boolean): SmartInventory$Builder;
 	title(arg0: string): SmartInventory$Builder;
-	manager(arg0: InventoryManager): SmartInventory$Builder;
 }
 
 export class SmartInventory$Builder {

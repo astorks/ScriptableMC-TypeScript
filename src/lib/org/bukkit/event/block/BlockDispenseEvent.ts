@@ -1,22 +1,22 @@
 declare var Java: any;
-import {Vector} from '../../../../org/bukkit/util/Vector.js'
-import {ItemStack} from '../../../../org/bukkit/inventory/ItemStack.js'
 import {HandlerList} from '../../../../org/bukkit/event/HandlerList.js'
+import {ItemStack} from '../../../../org/bukkit/inventory/ItemStack.js'
+import {Vector} from '../../../../org/bukkit/util/Vector.js'
 import {Block} from '../../../../org/bukkit/block/Block.js'
 import {Cancellable} from '../../../../org/bukkit/event/Cancellable.js'
 import {BlockEvent} from '../../../../org/bukkit/event/block/BlockEvent.js'
 
 export interface BlockDispenseEvent extends BlockEvent, Cancellable {
-	setVelocity(vel: Vector): void;
-	getVelocity(): Vector;
-	getItem(): ItemStack;
-	setItem(item: ItemStack): void;
-	isCancelled(): boolean;
 	getHandlers(): HandlerList;
+	setItem(item: ItemStack): void;
+	getItem(): ItemStack;
 	setCancelled(cancel: boolean): void;
+	isCancelled(): boolean;
+	getVelocity(): Vector;
+	setVelocity(vel: Vector): void;
 	getBlock(): Block;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class BlockDispenseEvent {

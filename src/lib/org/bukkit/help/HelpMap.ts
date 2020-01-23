@@ -5,10 +5,10 @@ import {HelpTopic} from '../../../org/bukkit/help/HelpTopic.js'
 export interface HelpMap {
 	clear(): void;
 	registerHelpTopicFactory(commandClass: any, factory: HelpTopicFactory): void;
-	addTopic(topic: HelpTopic): void;
-	getHelpTopic(topicName: string): HelpTopic;
-	getIgnoredPlugins(): any;
 	getHelpTopics(): any;
+	getHelpTopic(topicName: string): HelpTopic;
+	addTopic(topic: HelpTopic): void;
+	getIgnoredPlugins(): any;
 }
 
 export class HelpMap {

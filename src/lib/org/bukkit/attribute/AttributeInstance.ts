@@ -7,10 +7,10 @@ export interface AttributeInstance {
 	getValue(): number;
 	getDefaultValue(): number;
 	getAttribute(): Attribute;
-	setBaseValue(value: number): void;
-	getBaseValue(): number;
 	removeModifier(modifier: AttributeModifier): void;
+	setBaseValue(value: number): void;
 	addModifier(modifier: AttributeModifier): void;
+	getBaseValue(): number;
 }
 
 export class AttributeInstance {

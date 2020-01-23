@@ -6,12 +6,12 @@ import {ServerCommandEvent} from '../../../../org/bukkit/event/server/ServerComm
 export interface RemoteServerCommandEvent extends ServerCommandEvent {
 	getHandlers(): HandlerList;
 	getCommand(): string;
-	isCancelled(): boolean;
 	setCancelled(cancel: boolean): void;
+	isCancelled(): boolean;
 	setCommand(message: string): void;
 	getSender(): CommandSender;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class RemoteServerCommandEvent {

@@ -20,12 +20,12 @@ export interface WorldCreator {
 	seed(): number;
 	seed(seed: number): WorldCreator;
 	createWorld(): World;
-	generatorSettings(generatorSettings: string): WorldCreator;
-	generatorSettings(): string;
-	generateStructures(generate: boolean): WorldCreator;
-	generateStructures(): boolean;
 	hardcore(): boolean;
 	hardcore(hardcore: boolean): WorldCreator;
+	generatorSettings(generatorSettings: string): WorldCreator;
+	generatorSettings(): string;
+	generateStructures(): boolean;
+	generateStructures(generate: boolean): WorldCreator;
 }
 
 export class WorldCreator {

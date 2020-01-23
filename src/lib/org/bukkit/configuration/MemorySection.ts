@@ -3,10 +3,10 @@ import {ConfigurationSection} from '../../../org/bukkit/configuration/Configurat
 import {Location} from '../../../org/bukkit/Location.js'
 import {Configuration} from '../../../org/bukkit/configuration/Configuration.js'
 import {OfflinePlayer} from '../../../org/bukkit/OfflinePlayer.js'
-import {ItemStack} from '../../../org/bukkit/inventory/ItemStack.js'
-import {Color} from '../../../org/bukkit/Color.js'
 import {ConfigurationSerializable} from '../../../org/bukkit/configuration/serialization/ConfigurationSerializable.js'
 import {Vector} from '../../../org/bukkit/util/Vector.js'
+import {ItemStack} from '../../../org/bukkit/inventory/ItemStack.js'
+import {Color} from '../../../org/bukkit/Color.js'
 
 export interface MemorySection extends ConfigurationSection {
 	get(path: string): any;
@@ -35,45 +35,45 @@ export interface MemorySection extends ConfigurationSection {
 	getString(path: string, def: string): string;
 	getOfflinePlayer(path: string, def: OfflinePlayer): OfflinePlayer;
 	getOfflinePlayer(path: string): OfflinePlayer;
-	isString(path: string): boolean;
 	isBoolean(path: string): boolean;
-	getItemStack(path: string): ItemStack;
-	getItemStack(path: string, def: ItemStack): ItemStack;
-	getCurrentPath(): string;
-	getValues(deep: boolean): any;
-	isInt(path: string): boolean;
-	isDouble(path: string): boolean;
-	createSection(path: string, map: any): ConfigurationSection;
-	createSection(path: string): ConfigurationSection;
-	isLong(path: string): boolean;
-	getList(path: string): any;
-	getList(path: string, def: any): any;
-	addDefault(path: string, value: any): void;
-	getColor(path: string): Color;
-	getColor(path: string, def: Color): Color;
+	isString(path: string): boolean;
 	getConfigurationSection(path: string): ConfigurationSection;
 	isConfigurationSection(path: string): boolean;
-	getDoubleList(path: string): any;
 	getCharacterList(path: string): any;
-	getDefaultSection(): ConfigurationSection;
 	isList(path: string): boolean;
-	getShortList(path: string): any;
 	getSerializable(path: string, clazz: any, def: ConfigurationSerializable): ConfigurationSerializable;
 	getSerializable(path: string, clazz: any): ConfigurationSerializable;
 	isVector(path: string): boolean;
-	isOfflinePlayer(path: string): boolean;
-	getLongList(path: string): any;
-	getStringList(path: string): any;
-	getFloatList(path: string): any;
-	getBooleanList(path: string): any;
-	getIntegerList(path: string): any;
-	getByteList(path: string): any;
-	isColor(path: string): boolean;
+	getDefaultSection(): ConfigurationSection;
+	createSection(path: string, map: any): ConfigurationSection;
+	createSection(path: string): ConfigurationSection;
 	isLocation(path: string): boolean;
+	isDouble(path: string): boolean;
+	getDoubleList(path: string): any;
+	getCurrentPath(): string;
+	getValues(deep: boolean): any;
+	getByteList(path: string): any;
+	getFloatList(path: string): any;
 	getVector(path: string, def: Vector): Vector;
 	getVector(path: string): Vector;
-	getMapList(path: string): any;
+	getItemStack(path: string): ItemStack;
+	getItemStack(path: string, def: ItemStack): ItemStack;
+	getColor(path: string): Color;
+	getColor(path: string, def: Color): Color;
+	getBooleanList(path: string): any;
+	getStringList(path: string): any;
 	isItemStack(path: string): boolean;
+	getLongList(path: string): any;
+	isColor(path: string): boolean;
+	getIntegerList(path: string): any;
+	isOfflinePlayer(path: string): boolean;
+	addDefault(path: string, value: any): void;
+	getShortList(path: string): any;
+	getList(path: string, def: any): any;
+	getList(path: string): any;
+	isLong(path: string): boolean;
+	getMapList(path: string): any;
+	isInt(path: string): boolean;
 }
 
 export class MemorySection {

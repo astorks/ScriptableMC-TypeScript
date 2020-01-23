@@ -2,8 +2,8 @@ declare var Java: any;
 
 export interface ChatColor {
 	getChar(): string;
-	isFormat(): boolean;
 	isColor(): boolean;
+	isFormat(): boolean;
 	name(): string;
 	compareTo(arg0: any): number;
 	compareTo(arg0: any): number;

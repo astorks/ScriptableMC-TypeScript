@@ -3,8 +3,8 @@ import {Keyed} from '../../org/bukkit/Keyed.js'
 import {NamespacedKey} from '../../org/bukkit/NamespacedKey.js'
 
 export interface Tag extends Keyed {
-	getValues(): any;
 	isTagged(item: Keyed): boolean;
+	getValues(): any;
 	getKey(): NamespacedKey;
 }
 

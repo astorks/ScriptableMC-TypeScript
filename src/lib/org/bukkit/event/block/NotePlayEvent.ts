@@ -7,16 +7,16 @@ import {Cancellable} from '../../../../org/bukkit/event/Cancellable.js'
 import {BlockEvent} from '../../../../org/bukkit/event/block/BlockEvent.js'
 
 export interface NotePlayEvent extends BlockEvent, Cancellable {
-	isCancelled(): boolean;
 	getHandlers(): HandlerList;
 	setCancelled(cancel: boolean): void;
+	isCancelled(): boolean;
 	getNote(): Note;
+	setNote(note: Note): void;
 	setInstrument(instrument: Instrument): void;
 	getInstrument(): Instrument;
-	setNote(note: Note): void;
 	getBlock(): Block;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class NotePlayEvent {

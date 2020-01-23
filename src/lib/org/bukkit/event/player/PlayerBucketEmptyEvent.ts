@@ -2,24 +2,24 @@ declare var Java: any;
 import {HandlerList} from '../../../../org/bukkit/event/HandlerList.js'
 import {Block} from '../../../../org/bukkit/block/Block.js'
 import {ItemStack} from '../../../../org/bukkit/inventory/ItemStack.js'
-import {BlockFace} from '../../../../org/bukkit/block/BlockFace.js'
 import {Material} from '../../../../org/bukkit/Material.js'
+import {BlockFace} from '../../../../org/bukkit/block/BlockFace.js'
 import {Player} from '../../../../org/bukkit/entity/Player.js'
 import {PlayerBucketEvent} from '../../../../org/bukkit/event/player/PlayerBucketEvent.js'
 
 export interface PlayerBucketEmptyEvent extends PlayerBucketEvent {
 	getHandlers(): HandlerList;
 	getBlock(): Block;
-	isCancelled(): boolean;
-	setCancelled(cancel: boolean): void;
-	setItemStack(itemStack: ItemStack): void;
 	getItemStack(): ItemStack;
-	getBlockFace(): BlockFace;
-	getBucket(): Material;
+	setCancelled(cancel: boolean): void;
+	isCancelled(): boolean;
+	setItemStack(itemStack: ItemStack): void;
 	getBlockClicked(): Block;
+	getBucket(): Material;
+	getBlockFace(): BlockFace;
 	getPlayer(): Player;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class PlayerBucketEmptyEvent {

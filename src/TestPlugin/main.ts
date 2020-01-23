@@ -1,4 +1,4 @@
-import { JsPlugin } from '../lib/JsPlugin.js';
+import { JsPlugin } from '../JsPlugin.js';
 import { ChatColor } from '../lib/org/bukkit/ChatColor.js';
 import { CommandSender } from '../lib/org/bukkit/command/CommandSender.js';
 import { Command } from '../lib/org/bukkit/command/Command.js';
@@ -14,13 +14,17 @@ import { BlockPlaceEvent } from '../lib/org/bukkit/event/block/BlockPlaceEvent.j
 import { EntityDamageEvent } from '../lib/org/bukkit/event/entity/EntityDamageEvent.js';
 import { PlayerInteractAtEntityEvent } from '../lib/org/bukkit/event/player/PlayerInteractAtEntityEvent.js';
 import { PlayerInteractEntityEvent } from '../lib/org/bukkit/event/player/PlayerInteractEntityEvent.js';
+import { ByteStreams } from '../lib/com/google/common/io/ByteStreams.js';
 
 export class TestPlugin extends JsPlugin {
 
     onEnable() {
-        window.location.href = "";
-
         console.log("[" + this.pluginName + "] onEnable()");
+
+        // register outgoing bungee message channel
+        this.registerOutgoingPluginChannel('BungeeCord');
+        // Register incoming bungee message channel
+        this.registerIncomingPluginChannel('BungeeCord', this.onBungeeMessageReceived);
 
         // no-op event handler, this will cancel any event that is registered to it.
         let noop = (l: any, e: any) => e.setCancelled(true);
@@ -44,6 +48,11 @@ export class TestPlugin extends JsPlugin {
         cmd.setExecutor(this.onHelloWorldCmdExecute.bind(this));
         // Register the command with the server
         this.registerCommand(cmd);
+    }
+
+    onDisable() {
+        this.unregisterOutgoingPluginChannel('BungeeCord');
+        this.unregisterIncomingPluginChannel('BungeeCord');
     }
 
     onPlayerJoin(listener: any, event: PlayerJoinEvent) {
@@ -105,5 +114,34 @@ export class TestPlugin extends JsPlugin {
 
         inventory.open(sender as Player);
         return false;
+    }
+
+    private onBungeeMessageReceived(channel: string, player: Player, message: number[]) {
+        if(channel != "BungeeCord") return;
+
+        let messageReader = ByteStreams.newDataInput(message);
+        let subchannel = messageReader.readUTF();
+
+        if(subchannel == "GetServer") {
+            let serverName = messageReader.readUTF();
+            console.log("RECEIVED BUNGEE MESSAGE, player: " + player.getName() +  ", subchannel: " + subchannel + ", server: " + serverName);
+        }
+        else {
+            console.log("RECEIVED BUNGEE MESSAGE, subchannel: " + subchannel + ", length: " + message.length);
+        }
+    }
+
+    public bungeeConnect(player: Player, server: string): void {
+        console.log("[" + this.pluginName + "] Sending " + player.getName() + " to " + server + " server...");
+        let connectMessage = ByteStreams.newDataOutput();
+        connectMessage.writeUTF("Connect");
+        connectMessage.writeUTF(server);
+        player.sendPluginMessage(this.context.getJavaPlugin(), "BungeeCord", connectMessage.toByteArray())
+    }
+
+    public bungeeGetServer(player: Player): void {
+        let getServerMessage = ByteStreams.newDataOutput();
+        getServerMessage.writeUTF("GetServer");
+        player.sendPluginMessage(this.context.getJavaPlugin(), "BungeeCord", getServerMessage.toByteArray());
     }
 }

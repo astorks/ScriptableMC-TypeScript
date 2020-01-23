@@ -6,9 +6,9 @@ import {ItemTagType} from '../../../../../org/bukkit/inventory/meta/tags/ItemTag
 export interface CustomItemTagContainer {
 	isEmpty(): boolean;
 	getAdapterContext(): ItemTagAdapterContext;
-	setCustomTag(key: NamespacedKey, type: ItemTagType, value: any): void;
-	hasCustomTag(key: NamespacedKey, type: ItemTagType): boolean;
 	getCustomTag(key: NamespacedKey, type: ItemTagType): any;
+	hasCustomTag(key: NamespacedKey, type: ItemTagType): boolean;
+	setCustomTag(key: NamespacedKey, type: ItemTagType, value: any): void;
 	removeCustomTag(key: NamespacedKey): void;
 }
 

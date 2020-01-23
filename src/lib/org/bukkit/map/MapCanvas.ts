@@ -6,12 +6,12 @@ import {MapFont} from '../../../org/bukkit/map/MapFont.js'
 export interface MapCanvas {
 	getMapView(): MapView;
 	getCursors(): MapCursorCollection;
-	setCursors(cursors: MapCursorCollection): void;
-	getPixel(x: number, y: number): number;
-	getBasePixel(x: number, y: number): number;
-	drawImage(x: number, y: number, image: any): void;
-	drawText(x: number, y: number, font: MapFont, text: string): void;
 	setPixel(x: number, y: number, color: number): void;
+	getBasePixel(x: number, y: number): number;
+	getPixel(x: number, y: number): number;
+	drawImage(x: number, y: number, image: any): void;
+	setCursors(cursors: MapCursorCollection): void;
+	drawText(x: number, y: number, font: MapFont, text: string): void;
 }
 
 export class MapCanvas {

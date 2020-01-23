@@ -1,22 +1,22 @@
 declare var Java: any;
-import {Entity} from '../../../../org/bukkit/entity/Entity.js'
 import {HandlerList} from '../../../../org/bukkit/event/HandlerList.js'
+import {Entity} from '../../../../org/bukkit/entity/Entity.js'
 import {Vehicle} from '../../../../org/bukkit/entity/Vehicle.js'
 import {Cancellable} from '../../../../org/bukkit/event/Cancellable.js'
 import {VehicleCollisionEvent} from '../../../../org/bukkit/event/vehicle/VehicleCollisionEvent.js'
 
 export interface VehicleEntityCollisionEvent extends VehicleCollisionEvent, Cancellable {
-	getEntity(): Entity;
-	isCancelled(): boolean;
 	getHandlers(): HandlerList;
+	getEntity(): Entity;
 	setCancelled(cancel: boolean): void;
-	isPickupCancelled(): boolean;
-	setPickupCancelled(cancel: boolean): void;
+	isCancelled(): boolean;
 	setCollisionCancelled(cancel: boolean): void;
 	isCollisionCancelled(): boolean;
+	isPickupCancelled(): boolean;
+	setPickupCancelled(cancel: boolean): void;
 	getVehicle(): Vehicle;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class VehicleEntityCollisionEvent {

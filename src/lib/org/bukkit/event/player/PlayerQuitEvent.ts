@@ -5,11 +5,11 @@ import {PlayerEvent} from '../../../../org/bukkit/event/player/PlayerEvent.js'
 
 export interface PlayerQuitEvent extends PlayerEvent {
 	getHandlers(): HandlerList;
-	getQuitMessage(): string;
 	setQuitMessage(quitMessage: string): void;
+	getQuitMessage(): string;
 	getPlayer(): Player;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class PlayerQuitEvent {

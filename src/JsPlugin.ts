@@ -1,12 +1,13 @@
-import { Event } from "./org/bukkit/event/Event.js";
-import { Server } from "./org/bukkit/Server.js";
-import { ScriptablePluginContext } from "./com/pixlfox/scriptableplugin/core/ScriptablePluginContext.js";
-import { PluginCommand } from "./org/bukkit/command/PluginCommand.js";
-import { ScriptablePluginEngine } from "./com/pixlfox/scriptableplugin/core/ScriptablePluginEngine.js";
-import { Player } from "./org/bukkit/entity/Player.js";
-import { PluginMessageListenerRegistration } from "./org/bukkit/plugin/messaging/PluginMessageListenerRegistration.js";
+import { Event } from "./lib/org/bukkit/event/Event.js";
+import { Server } from "./lib/org/bukkit/Server.js";
+import { ScriptablePluginContext } from "./lib/com/pixlfox/scriptablemc/core/ScriptablePluginContext.js";
+import { ScriptablePluginEngine } from "./lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.js";
+import { PluginCommand } from "./lib/org/bukkit/command/PluginCommand.js";
+import { Player } from "./lib/org/bukkit/entity/Player.js";
+import { PluginMessageListenerRegistration } from "./lib/org/bukkit/plugin/messaging/PluginMessageListenerRegistration.js";
 
 declare const engine: ScriptablePluginEngine;
+declare type Type<T> = { new (...args: any[]): T; };
 
 export class JsPlugin {
     public context: ScriptablePluginContext;
@@ -19,7 +20,7 @@ export class JsPlugin {
         return this.context.getServer();
     }
 
-    registerEvent<T extends Event>(eventClass: Newable<T>, callback: (listener: any, event: T) => void) {
+    registerEvent<T extends Event>(eventClass: Type<T>, callback: (listener: any, event: T) => void) {
         this.context.registerEvent(eventClass['$javaClass'], callback.bind(this));
     }
 
@@ -31,8 +32,8 @@ export class JsPlugin {
         return this.context.registerIncomingPluginChannel(channel, callback.bind(this));
     }
 
-    unregisterIncomingPluginChannel(messageListenerRegistration: PluginMessageListenerRegistration) {
-        this.context.unregisterIncomingPluginChannel(messageListenerRegistration);
+    unregisterIncomingPluginChannel(channel: string) {
+        this.context.unregisterIncomingPluginChannel(channel);
     }
 
     registerOutgoingPluginChannel(channel: string) {
@@ -55,5 +56,3 @@ export class JsPlugin {
     onEnable(): void { console.log("[" + this.pluginName + "] onEnable()"); }
     onDisable(): void { console.log("[" + this.pluginName + "] onDisable()"); }
 }
-
-export type Newable<T> = { new (...args: any[]): T; };

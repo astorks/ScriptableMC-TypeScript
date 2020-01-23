@@ -1,22 +1,22 @@
 declare var Java: any;
-import {ItemStack} from '../../../../org/bukkit/inventory/ItemStack.js'
 import {HandlerList} from '../../../../org/bukkit/event/HandlerList.js'
+import {ItemStack} from '../../../../org/bukkit/inventory/ItemStack.js'
 import {ExperienceOrb} from '../../../../org/bukkit/entity/ExperienceOrb.js'
 import {Player} from '../../../../org/bukkit/entity/Player.js'
 import {Cancellable} from '../../../../org/bukkit/event/Cancellable.js'
 import {PlayerEvent} from '../../../../org/bukkit/event/player/PlayerEvent.js'
 
 export interface PlayerItemMendEvent extends PlayerEvent, Cancellable {
-	getItem(): ItemStack;
-	isCancelled(): boolean;
 	getHandlers(): HandlerList;
+	getItem(): ItemStack;
 	setCancelled(cancelled: boolean): void;
+	isCancelled(): boolean;
 	getExperienceOrb(): ExperienceOrb;
-	getRepairAmount(): number;
 	setRepairAmount(amount: number): void;
+	getRepairAmount(): number;
 	getPlayer(): Player;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class PlayerItemMendEvent {

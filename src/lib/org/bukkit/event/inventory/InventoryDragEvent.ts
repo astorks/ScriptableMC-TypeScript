@@ -14,19 +14,19 @@ export interface InventoryDragEvent extends InventoryInteractEvent {
 	getCursor(): ItemStack;
 	setCursor(newCursor: ItemStack): void;
 	getNewItems(): any;
+	getRawSlots(): any;
 	getInventorySlots(): any;
 	getOldCursor(): ItemStack;
-	getRawSlots(): any;
-	setResult(newResult: Event$Result): void;
 	getResult(): Event$Result;
-	isCancelled(): boolean;
+	setResult(newResult: Event$Result): void;
 	setCancelled(toCancel: boolean): void;
+	isCancelled(): boolean;
 	getWhoClicked(): HumanEntity;
 	getInventory(): Inventory;
 	getViewers(): any;
 	getView(): InventoryView;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	getEventName(): string;
 }
 
 export class InventoryDragEvent {

@@ -1,40 +1,40 @@
 declare var Java: any;
 import {Team$Option} from '../../../org/bukkit/scoreboard/Team$Option.js'
 import {Team$OptionStatus} from '../../../org/bukkit/scoreboard/Team$OptionStatus.js'
-import {Scoreboard} from '../../../org/bukkit/scoreboard/Scoreboard.js'
-import {OfflinePlayer} from '../../../org/bukkit/OfflinePlayer.js'
 import {ChatColor} from '../../../org/bukkit/ChatColor.js'
+import {OfflinePlayer} from '../../../org/bukkit/OfflinePlayer.js'
 import {NameTagVisibility} from '../../../org/bukkit/scoreboard/NameTagVisibility.js'
+import {Scoreboard} from '../../../org/bukkit/scoreboard/Scoreboard.js'
 
 export interface Team {
 	getName(): string;
 	addEntry(entry: string): void;
 	getSize(): number;
 	getEntries(): any;
-	unregister(): void;
 	setPrefix(prefix: string): void;
 	getPrefix(): string;
 	getDisplayName(): string;
+	unregister(): void;
 	setOption(option: Team$Option, status: Team$OptionStatus): void;
 	getOption(option: Team$Option): Team$OptionStatus;
 	setDisplayName(displayName: string): void;
-	getScoreboard(): Scoreboard;
+	setColor(color: ChatColor): void;
 	addPlayer(player: OfflinePlayer): void;
 	removePlayer(player: OfflinePlayer): boolean;
-	setColor(color: ChatColor): void;
-	getColor(): ChatColor;
 	getPlayers(): any;
+	getColor(): ChatColor;
+	setNameTagVisibility(visibility: NameTagVisibility): void;
+	getNameTagVisibility(): NameTagVisibility;
+	setCanSeeFriendlyInvisibles(enabled: boolean): void;
+	canSeeFriendlyInvisibles(): boolean;
+	setAllowFriendlyFire(enabled: boolean): void;
+	getScoreboard(): Scoreboard;
+	getSuffix(): string;
 	hasEntry(entry: string): boolean;
 	setSuffix(suffix: string): void;
+	hasPlayer(player: OfflinePlayer): boolean;
 	allowFriendlyFire(): boolean;
 	removeEntry(entry: string): boolean;
-	getSuffix(): string;
-	hasPlayer(player: OfflinePlayer): boolean;
-	getNameTagVisibility(): NameTagVisibility;
-	canSeeFriendlyInvisibles(): boolean;
-	setNameTagVisibility(visibility: NameTagVisibility): void;
-	setAllowFriendlyFire(enabled: boolean): void;
-	setCanSeeFriendlyInvisibles(enabled: boolean): void;
 }
 
 export class Team {
