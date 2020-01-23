@@ -1,4 +1,4 @@
-import { JsPlugin } from '../JsPlugin.js';
+import { JsPlugin } from '../lib/JsPlugin.js';
 import { ChatColor } from '../lib/org/bukkit/ChatColor.js';
 import { CommandSender } from '../lib/org/bukkit/command/CommandSender.js';
 import { Command } from '../lib/org/bukkit/command/Command.js';
@@ -18,6 +18,8 @@ import { PlayerInteractEntityEvent } from '../lib/org/bukkit/event/player/Player
 export class TestPlugin extends JsPlugin {
 
     onEnable() {
+        window.location.href = "";
+
         console.log("[" + this.pluginName + "] onEnable()");
 
         // no-op event handler, this will cancel any event that is registered to it.

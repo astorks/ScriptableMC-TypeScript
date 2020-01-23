@@ -1,10 +1,10 @@
-import { Event } from "./lib/org/bukkit/event/Event.js";
-import { Server } from "./lib/org/bukkit/Server.js";
-import { ScriptablePluginContext } from "./lib/com/pixlfox/scriptableplugin/core/ScriptablePluginContext.js";
-import { PluginCommand } from "./lib/org/bukkit/command/PluginCommand.js";
-import { ScriptablePluginEngine } from "./lib/com/pixlfox/scriptableplugin/core/ScriptablePluginEngine.js";
-import { Player } from "./lib/org/bukkit/entity/Player.js";
-import { PluginMessageListenerRegistration } from "./lib/org/bukkit/plugin/messaging/PluginMessageListenerRegistration.js";
+import { Event } from "./org/bukkit/event/Event.js";
+import { Server } from "./org/bukkit/Server.js";
+import { ScriptablePluginContext } from "./com/pixlfox/scriptableplugin/core/ScriptablePluginContext.js";
+import { PluginCommand } from "./org/bukkit/command/PluginCommand.js";
+import { ScriptablePluginEngine } from "./com/pixlfox/scriptableplugin/core/ScriptablePluginEngine.js";
+import { Player } from "./org/bukkit/entity/Player.js";
+import { PluginMessageListenerRegistration } from "./org/bukkit/plugin/messaging/PluginMessageListenerRegistration.js";
 
 declare const engine: ScriptablePluginEngine;
 

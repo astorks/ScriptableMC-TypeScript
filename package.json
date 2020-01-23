@@ -1,0 +1,32 @@
+{
+  "name": "ScriptablePluginSourceTS",
+  "version": "1.0.3",
+  "description": "Typescript plugin example and libraries for Minecraft 1.15",
+  "main": "src/main.js",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib",
+    "bin": "dist"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs": "npx typedoc --out docs src",
+    "compile": "npx tsc",
+    "watch": "npx tsc --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/astorks/ScriptablePluginSourceTS.git"
+  },
+  "author": "Ashton Storks",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/astorks/ScriptablePluginSourceTS/issues"
+  },
+  "homepage": "https://github.com/astorks/ScriptablePluginSourceTS#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "typedoc": "^0.16.8",
+    "typescript": "^3.7.5"
+  }
+}

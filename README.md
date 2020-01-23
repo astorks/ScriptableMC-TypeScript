@@ -2,13 +2,17 @@
 [![docs](https://img.shields.io/badge/ScriptablePluginEngine-v1.0.3-blue?style=for-the-badge)](https://github.com/astorks/ScriptablePluginEngine)
 [![docs](https://img.shields.io/badge/Docs-v1.0.3-blue?style=for-the-badge)](https://astorks.github.io/ScriptablePluginSourceTS)
 ## Getting Started
-- Clone or download and extract this repo `git clone https://github.com/astorks/ScriptablePluginSourceTS.git`
 - Install [NodeJS/NPM](https://nodejs.org/en/download/) or if you're on linux/macos you can install [GraalVM-CE](https://github.com/graalvm/graalvm-ce-builds/releases/latest) which includes a NodeJS runtime
-- Install the Typescript NPM package globally `npm install -g typescript`
+- Clone or download and extract this repo `git clone https://github.com/astorks/ScriptablePluginSourceTS.git` and open the folder `cd ScriptablePluginSourceTS`
+- Install the required NPM packages `npm install`
 
 
-## How To Compile
-- Open the cloned repo folder
-- Run the typescript compiler `tsc` or `tsc --watch`
+## How To Compile The Source
+- Run the TypeScript compiler script `npm run compile` or `npm run watch`
 - The compiled scripts will be placed in the `dist` folder
 - Upload the compiled scripts to your minecraft server `scripts` folder and execute the `/jsrl` command ingame or restart the server to load the new scripts
+  
+  
+## How To Generate Documentation
+- Run the TypeDoc generator script `npm run docs`
+- The generated documentation will be placed in the `docs` folder
