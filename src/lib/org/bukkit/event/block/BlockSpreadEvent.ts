@@ -7,12 +7,12 @@ import {BlockFormEvent} from '../../../../org/bukkit/event/block/BlockFormEvent.
 export interface BlockSpreadEvent extends BlockFormEvent {
 	getHandlers(): HandlerList;
 	getSource(): Block;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 	getNewState(): BlockState;
 	getBlock(): Block;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class BlockSpreadEvent {

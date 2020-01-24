@@ -12,13 +12,13 @@ export interface FileConfigurationOptions extends MemoryConfigurationOptions {
 	pathSeparator(arg0: string): MemoryConfigurationOptions;
 	pathSeparator(value: string): FileConfigurationOptions;
 	pathSeparator(arg0: string): ConfigurationOptions;
+	header(): string;
+	header(value: string): FileConfigurationOptions;
 	copyDefaults(value: boolean): FileConfigurationOptions;
 	copyDefaults(arg0: boolean): MemoryConfigurationOptions;
 	copyDefaults(arg0: boolean): ConfigurationOptions;
 	copyHeader(value: boolean): FileConfigurationOptions;
 	copyHeader(): boolean;
-	header(): string;
-	header(value: string): FileConfigurationOptions;
 	pathSeparator(): string;
 	copyDefaults(): boolean;
 }

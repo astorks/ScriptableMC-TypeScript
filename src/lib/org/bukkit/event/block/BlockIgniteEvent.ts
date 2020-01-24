@@ -2,8 +2,8 @@ declare var Java: any;
 import {BlockIgniteEvent$IgniteCause} from '../../../../org/bukkit/event/block/BlockIgniteEvent$IgniteCause.js'
 import {HandlerList} from '../../../../org/bukkit/event/HandlerList.js'
 import {Player} from '../../../../org/bukkit/entity/Player.js'
-import {Entity} from '../../../../org/bukkit/entity/Entity.js'
 import {Block} from '../../../../org/bukkit/block/Block.js'
+import {Entity} from '../../../../org/bukkit/entity/Entity.js'
 import {Cancellable} from '../../../../org/bukkit/event/Cancellable.js'
 import {BlockEvent} from '../../../../org/bukkit/event/block/BlockEvent.js'
 
@@ -11,13 +11,13 @@ export interface BlockIgniteEvent extends BlockEvent, Cancellable {
 	getCause(): BlockIgniteEvent$IgniteCause;
 	getHandlers(): HandlerList;
 	getPlayer(): Player;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
-	getIgnitingEntity(): Entity;
+	setCancelled(cancel: boolean): void;
 	getIgnitingBlock(): Block;
+	getIgnitingEntity(): Entity;
 	getBlock(): Block;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class BlockIgniteEvent {

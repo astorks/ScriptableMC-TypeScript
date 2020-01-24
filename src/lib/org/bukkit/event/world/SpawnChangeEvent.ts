@@ -8,8 +8,8 @@ export interface SpawnChangeEvent extends WorldEvent {
 	getHandlers(): HandlerList;
 	getPreviousLocation(): Location;
 	getWorld(): World;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class SpawnChangeEvent {

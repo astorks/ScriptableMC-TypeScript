@@ -22,8 +22,8 @@ export interface WorldCreator {
 	createWorld(): World;
 	hardcore(): boolean;
 	hardcore(hardcore: boolean): WorldCreator;
-	generatorSettings(generatorSettings: string): WorldCreator;
 	generatorSettings(): string;
+	generatorSettings(generatorSettings: string): WorldCreator;
 	generateStructures(): boolean;
 	generateStructures(generate: boolean): WorldCreator;
 }

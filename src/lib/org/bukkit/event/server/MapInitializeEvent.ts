@@ -6,8 +6,8 @@ import {ServerEvent} from '../../../../org/bukkit/event/server/ServerEvent.js'
 export interface MapInitializeEvent extends ServerEvent {
 	getMap(): MapView;
 	getHandlers(): HandlerList;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class MapInitializeEvent {

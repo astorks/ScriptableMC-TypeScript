@@ -9,12 +9,12 @@ export interface PlayerItemDamageEvent extends PlayerEvent, Cancellable {
 	getHandlers(): HandlerList;
 	getDamage(): number;
 	setDamage(damage: number): void;
-	getItem(): ItemStack;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
+	getItem(): ItemStack;
 	getPlayer(): Player;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class PlayerItemDamageEvent {

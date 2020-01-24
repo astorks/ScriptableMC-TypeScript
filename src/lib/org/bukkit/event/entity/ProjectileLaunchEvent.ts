@@ -10,13 +10,13 @@ import {EntitySpawnEvent} from '../../../../org/bukkit/event/entity/EntitySpawnE
 export interface ProjectileLaunchEvent extends EntitySpawnEvent, Cancellable {
 	getEntity(): Projectile;
 	getEntity(): Entity;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 	getLocation(): Location;
 	getHandlers(): HandlerList;
 	getEntityType(): EntityType;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class ProjectileLaunchEvent {

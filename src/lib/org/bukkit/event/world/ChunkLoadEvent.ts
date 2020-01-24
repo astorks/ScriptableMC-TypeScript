@@ -9,8 +9,8 @@ export interface ChunkLoadEvent extends ChunkEvent {
 	isNewChunk(): boolean;
 	getChunk(): Chunk;
 	getWorld(): World;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class ChunkLoadEvent {

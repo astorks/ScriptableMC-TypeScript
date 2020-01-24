@@ -1,9 +1,9 @@
 declare var Java: any;
 import {HandlerList} from '../../../../org/bukkit/event/HandlerList.js'
 import {ItemStack} from '../../../../org/bukkit/inventory/ItemStack.js'
-import {Player} from '../../../../org/bukkit/entity/Player.js'
-import {Block} from '../../../../org/bukkit/block/Block.js'
 import {EnchantmentOffer} from '../../../../org/bukkit/enchantments/EnchantmentOffer.js'
+import {Block} from '../../../../org/bukkit/block/Block.js'
+import {Player} from '../../../../org/bukkit/entity/Player.js'
 import {Inventory} from '../../../../org/bukkit/inventory/Inventory.js'
 import {InventoryView} from '../../../../org/bukkit/inventory/InventoryView.js'
 import {Cancellable} from '../../../../org/bukkit/event/Cancellable.js'
@@ -11,19 +11,19 @@ import {InventoryEvent} from '../../../../org/bukkit/event/inventory/InventoryEv
 
 export interface PrepareItemEnchantEvent extends InventoryEvent, Cancellable {
 	getHandlers(): HandlerList;
-	getItem(): ItemStack;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
-	getEnchanter(): Player;
+	setCancelled(cancel: boolean): void;
+	getItem(): ItemStack;
+	getOffers(): Array<EnchantmentOffer>;
 	getEnchantBlock(): Block;
+	getEnchanter(): Player;
 	getEnchantmentBonus(): number;
 	getExpLevelCostsOffered(): Array<number>;
-	getOffers(): Array<EnchantmentOffer>;
 	getInventory(): Inventory;
 	getViewers(): any;
 	getView(): InventoryView;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class PrepareItemEnchantEvent {

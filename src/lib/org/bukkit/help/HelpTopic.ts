@@ -5,8 +5,8 @@ export interface HelpTopic {
 	getName(): string;
 	canSee(player: CommandSender): boolean;
 	amendCanSee(amendedPermission: string): void;
-	getShortText(): string;
 	getFullText(forWho: CommandSender): string;
+	getShortText(): string;
 	amendTopic(amendedShortText: string, amendedFullText: string): void;
 }
 

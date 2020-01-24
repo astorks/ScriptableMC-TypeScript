@@ -10,15 +10,15 @@ import {InventoryEvent} from '../../../../org/bukkit/event/inventory/InventoryEv
 export interface InventoryInteractEvent extends InventoryEvent, Cancellable {
 	getResult(): Event$Result;
 	setResult(newResult: Event$Result): void;
-	setCancelled(toCancel: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(toCancel: boolean): void;
 	getWhoClicked(): HumanEntity;
 	getHandlers(): HandlerList;
 	getInventory(): Inventory;
 	getViewers(): any;
 	getView(): InventoryView;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class InventoryInteractEvent {

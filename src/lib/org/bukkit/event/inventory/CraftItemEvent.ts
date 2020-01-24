@@ -3,10 +3,10 @@ import {CraftingInventory} from '../../../../org/bukkit/inventory/CraftingInvent
 import {Inventory} from '../../../../org/bukkit/inventory/Inventory.js'
 import {Recipe} from '../../../../org/bukkit/inventory/Recipe.js'
 import {HandlerList} from '../../../../org/bukkit/event/HandlerList.js'
-import {InventoryType$SlotType} from '../../../../org/bukkit/event/inventory/InventoryType$SlotType.js'
 import {ItemStack} from '../../../../org/bukkit/inventory/ItemStack.js'
 import {ClickType} from '../../../../org/bukkit/event/inventory/ClickType.js'
 import {InventoryAction} from '../../../../org/bukkit/event/inventory/InventoryAction.js'
+import {InventoryType$SlotType} from '../../../../org/bukkit/event/inventory/InventoryType$SlotType.js'
 import {Event$Result} from '../../../../org/bukkit/event/Event$Result.js'
 import {HumanEntity} from '../../../../org/bukkit/entity/HumanEntity.js'
 import {InventoryView} from '../../../../org/bukkit/inventory/InventoryView.js'
@@ -18,28 +18,28 @@ export interface CraftItemEvent extends InventoryClickEvent {
 	getRecipe(): Recipe;
 	getSlot(): number;
 	getHandlers(): HandlerList;
-	getClickedInventory(): Inventory;
-	getSlotType(): InventoryType$SlotType;
-	getCursor(): ItemStack;
-	setCursor(stack: ItemStack): void;
-	setCurrentItem(stack: ItemStack): void;
-	getHotbarButton(): number;
-	getClick(): ClickType;
-	isLeftClick(): boolean;
+	getRawSlot(): number;
 	isRightClick(): boolean;
 	isShiftClick(): boolean;
-	getAction(): InventoryAction;
-	getRawSlot(): number;
 	getCurrentItem(): ItemStack;
+	getHotbarButton(): number;
+	setCurrentItem(stack: ItemStack): void;
+	getClick(): ClickType;
+	getAction(): InventoryAction;
+	isLeftClick(): boolean;
+	getCursor(): ItemStack;
+	getClickedInventory(): Inventory;
+	setCursor(stack: ItemStack): void;
+	getSlotType(): InventoryType$SlotType;
 	getResult(): Event$Result;
 	setResult(newResult: Event$Result): void;
-	setCancelled(toCancel: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(toCancel: boolean): void;
 	getWhoClicked(): HumanEntity;
 	getViewers(): any;
 	getView(): InventoryView;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class CraftItemEvent {

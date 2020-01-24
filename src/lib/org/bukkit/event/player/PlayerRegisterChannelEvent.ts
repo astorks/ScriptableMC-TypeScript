@@ -7,8 +7,8 @@ export interface PlayerRegisterChannelEvent extends PlayerChannelEvent {
 	getChannel(): string;
 	getHandlers(): HandlerList;
 	getPlayer(): Player;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class PlayerRegisterChannelEvent {

@@ -6,8 +6,8 @@ import {Event} from '../../../../org/bukkit/event/Event.js'
 export interface WorldEvent extends Event {
 	getWorld(): World;
 	getHandlers(): HandlerList;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class WorldEvent {

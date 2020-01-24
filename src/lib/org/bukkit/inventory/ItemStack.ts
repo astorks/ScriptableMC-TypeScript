@@ -1,35 +1,35 @@
 declare var Java: any;
 import {Material} from '../../../org/bukkit/Material.js'
-import {MaterialData} from '../../../org/bukkit/material/MaterialData.js'
-import {ItemMeta} from '../../../org/bukkit/inventory/meta/ItemMeta.js'
 import {Enchantment} from '../../../org/bukkit/enchantments/Enchantment.js'
+import {ItemMeta} from '../../../org/bukkit/inventory/meta/ItemMeta.js'
+import {MaterialData} from '../../../org/bukkit/material/MaterialData.js'
 import {ConfigurationSerializable} from '../../../org/bukkit/configuration/serialization/ConfigurationSerializable.js'
 
 export interface ItemStack extends ConfigurationSerializable {
 	clone(): any;
 	clone(): ItemStack;
 	getType(): Material;
-	getDurability(): number;
-	setData(data: MaterialData): void;
+	getEnchantmentLevel(ench: Enchantment): number;
+	containsEnchantment(ench: Enchantment): boolean;
+	addUnsafeEnchantment(ench: Enchantment, level: number): void;
+	addUnsafeEnchantments(enchantments: any): void;
+	serialize(): any;
+	setDurability(durability: number): void;
+	getAmount(): number;
 	hasItemMeta(): boolean;
 	getItemMeta(): ItemMeta;
 	setType(type: Material): void;
 	setAmount(amount: number): void;
-	setDurability(durability: number): void;
-	getAmount(): number;
+	getDurability(): number;
 	getData(): MaterialData;
-	getEnchantmentLevel(ench: Enchantment): number;
-	addUnsafeEnchantment(ench: Enchantment, level: number): void;
-	addUnsafeEnchantments(enchantments: any): void;
-	containsEnchantment(ench: Enchantment): boolean;
-	serialize(): any;
-	removeEnchantment(ench: Enchantment): number;
-	getEnchantments(): any;
-	addEnchantments(enchantments: any): void;
-	setItemMeta(itemMeta: ItemMeta): boolean;
 	getMaxStackSize(): number;
+	setItemMeta(itemMeta: ItemMeta): boolean;
+	setData(data: MaterialData): void;
 	isSimilar(stack: ItemStack): boolean;
+	addEnchantments(enchantments: any): void;
+	getEnchantments(): any;
 	addEnchantment(ench: Enchantment, level: number): void;
+	removeEnchantment(ench: Enchantment): number;
 }
 
 export class ItemStack {

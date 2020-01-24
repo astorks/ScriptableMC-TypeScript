@@ -7,11 +7,11 @@ import {PlayerEvent} from '../../../../org/bukkit/event/player/PlayerEvent.js'
 export interface PlayerRespawnEvent extends PlayerEvent {
 	getHandlers(): HandlerList;
 	isBedSpawn(): boolean;
-	setRespawnLocation(respawnLocation: Location): void;
 	getRespawnLocation(): Location;
+	setRespawnLocation(respawnLocation: Location): void;
 	getPlayer(): Player;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class PlayerRespawnEvent {

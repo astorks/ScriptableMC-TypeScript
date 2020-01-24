@@ -11,8 +11,8 @@ export interface InventoryCloseEvent extends InventoryEvent {
 	getInventory(): Inventory;
 	getViewers(): any;
 	getView(): InventoryView;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class InventoryCloseEvent {

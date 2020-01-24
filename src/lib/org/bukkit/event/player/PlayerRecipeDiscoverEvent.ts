@@ -7,12 +7,12 @@ import {PlayerEvent} from '../../../../org/bukkit/event/player/PlayerEvent.js'
 
 export interface PlayerRecipeDiscoverEvent extends PlayerEvent, Cancellable {
 	getHandlers(): HandlerList;
-	getRecipe(): NamespacedKey;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
+	getRecipe(): NamespacedKey;
 	getPlayer(): Player;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class PlayerRecipeDiscoverEvent {

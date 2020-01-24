@@ -8,8 +8,8 @@ export interface PlayerChangedMainHandEvent extends PlayerEvent {
 	getHandlers(): HandlerList;
 	getMainHand(): MainHand;
 	getPlayer(): Player;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class PlayerChangedMainHandEvent {

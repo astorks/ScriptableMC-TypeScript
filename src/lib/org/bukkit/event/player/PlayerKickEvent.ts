@@ -6,15 +6,15 @@ import {PlayerEvent} from '../../../../org/bukkit/event/player/PlayerEvent.js'
 
 export interface PlayerKickEvent extends PlayerEvent, Cancellable {
 	getHandlers(): HandlerList;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
-	setReason(kickReason: string): void;
+	setCancelled(cancel: boolean): void;
 	getReason(): string;
-	getLeaveMessage(): string;
+	setReason(kickReason: string): void;
 	setLeaveMessage(leaveMessage: string): void;
+	getLeaveMessage(): string;
 	getPlayer(): Player;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class PlayerKickEvent {

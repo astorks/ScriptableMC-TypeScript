@@ -10,8 +10,8 @@ export interface EntityUnleashEvent extends EntityEvent {
 	getReason(): EntityUnleashEvent$UnleashReason;
 	getEntity(): Entity;
 	getEntityType(): EntityType;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class EntityUnleashEvent {

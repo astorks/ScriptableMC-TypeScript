@@ -9,8 +9,8 @@ export interface InventoryEvent extends Event {
 	getInventory(): Inventory;
 	getViewers(): any;
 	getView(): InventoryView;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class InventoryEvent {

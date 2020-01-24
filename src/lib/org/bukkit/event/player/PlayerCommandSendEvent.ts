@@ -7,8 +7,8 @@ export interface PlayerCommandSendEvent extends PlayerEvent {
 	getHandlers(): HandlerList;
 	getCommands(): any;
 	getPlayer(): Player;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class PlayerCommandSendEvent {

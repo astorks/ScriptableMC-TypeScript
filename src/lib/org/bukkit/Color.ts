@@ -3,17 +3,17 @@ import {DyeColor} from '../../org/bukkit/DyeColor.js'
 import {ConfigurationSerializable} from '../../org/bukkit/configuration/serialization/ConfigurationSerializable.js'
 
 export interface Color extends ConfigurationSerializable {
-	setBlue(blue: number): Color;
 	serialize(): any;
-	getGreen(): number;
-	getRed(): number;
-	setRed(red: number): Color;
-	getBlue(): number;
-	setGreen(green: number): Color;
 	mixDyes(colors: Array<DyeColor>): Color;
+	getBlue(): number;
 	asBGR(): number;
-	mixColors(colors: Array<Color>): Color;
+	setRed(red: number): Color;
 	asRGB(): number;
+	getRed(): number;
+	mixColors(colors: Array<Color>): Color;
+	getGreen(): number;
+	setGreen(green: number): Color;
+	setBlue(blue: number): Color;
 }
 
 export class Color {

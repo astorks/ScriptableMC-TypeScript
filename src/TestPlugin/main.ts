@@ -58,7 +58,8 @@ export class TestPlugin extends JsPlugin {
     onPlayerJoin(listener: any, event: PlayerJoinEvent) {
         let player = event.getPlayer();
 
-        player.sendMessage(ChatColor.DARK_AQUA.toString() + ChatColor.BOLD.toString() + "UUID: " + player.getUniqueId());
+        player.sendMessage(this.setPlaceholders(player, ChatColor.DARK_AQUA.toString() + ChatColor.BOLD.toString() + "UUID: %player_uuid%"));
+        player.sendMessage(this.setPlaceholders(player, ChatColor.DARK_AQUA.toString() + "World: %player_world%, Rank: %uperms_rank%"));
         player.sendMessage(ChatColor.GRAY.toString() + JSON.stringify({
             health: player.getHealth(),
             hunger: player.getFoodLevel(),
@@ -102,6 +103,31 @@ export class TestPlugin extends JsPlugin {
                                 if(player != null) {
                                     plugin.bungeeGetServer(player);
                                     player.sendMessage("Hello from javascript!!!");
+                                    inventory.close(sender as Player);
+                                }
+                            }
+                        ));
+
+                        contents.set(1, 2, SmartInventory.clickableItem(
+                            SmartInventory.itemBuilder(new ItemStack(Material.DIAMOND))
+                                    .setDisplayName(ChatColor.GREEN + "Hub Server")
+                                    .setLore(["Connect to the hub server"])
+                                    .build(),
+                            () => {
+                                if(player != null) {
+                                    plugin.bungeeConnect(player, "hub");
+                                    inventory.close(sender as Player);
+                                }
+                            }
+                        ));
+
+                        contents.set(1, 3, SmartInventory.clickableItem(
+                            SmartInventory.itemBuilder(new ItemStack(Material.DIAMOND))
+                                    .setDisplayName(plugin.setPlaceholders(player, "%animations_Fadein_TEST%"))
+                                    .build(),
+                            () => {
+                                if(player != null) {
+                                    player.sendMessage(plugin.setPlaceholders(player, "%server_name%"));
                                     inventory.close(sender as Player);
                                 }
                             }

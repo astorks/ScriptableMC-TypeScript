@@ -6,12 +6,12 @@ import {WeatherEvent} from '../../../../org/bukkit/event/weather/WeatherEvent.js
 
 export interface WeatherChangeEvent extends WeatherEvent, Cancellable {
 	getHandlers(): HandlerList;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 	toWeatherState(): boolean;
 	getWorld(): World;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class WeatherChangeEvent {

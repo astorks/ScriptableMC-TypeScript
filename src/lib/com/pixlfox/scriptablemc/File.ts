@@ -7,8 +7,8 @@ export interface File {
 	createNewFile(): boolean;
 	mkdir(): boolean;
 	mkdirs(): boolean;
-	readText(): string;
 	readLines(): Array<string>;
+	readText(): string;
 	writeText(text: string): void;
 	parentFile(): File;
 }

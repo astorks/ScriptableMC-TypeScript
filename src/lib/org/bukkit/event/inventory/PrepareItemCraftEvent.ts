@@ -10,12 +10,12 @@ export interface PrepareItemCraftEvent extends InventoryEvent {
 	getHandlers(): HandlerList;
 	getInventory(): CraftingInventory;
 	getInventory(): Inventory;
-	getRecipe(): Recipe;
 	isRepair(): boolean;
+	getRecipe(): Recipe;
 	getViewers(): any;
 	getView(): InventoryView;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class PrepareItemCraftEvent {

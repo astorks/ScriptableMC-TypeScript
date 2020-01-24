@@ -6,12 +6,12 @@ import {PlayerEvent} from '../../../../org/bukkit/event/player/PlayerEvent.js'
 
 export interface PlayerToggleSprintEvent extends PlayerEvent, Cancellable {
 	getHandlers(): HandlerList;
-	setCancelled(cancel: boolean): void;
-	isCancelled(): boolean;
 	isSprinting(): boolean;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 	getPlayer(): Player;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class PlayerToggleSprintEvent {

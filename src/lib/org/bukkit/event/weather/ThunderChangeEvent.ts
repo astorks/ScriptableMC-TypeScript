@@ -6,12 +6,12 @@ import {WeatherEvent} from '../../../../org/bukkit/event/weather/WeatherEvent.js
 
 export interface ThunderChangeEvent extends WeatherEvent, Cancellable {
 	getHandlers(): HandlerList;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 	toThunderState(): boolean;
 	getWorld(): World;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class ThunderChangeEvent {

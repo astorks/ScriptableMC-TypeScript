@@ -6,13 +6,13 @@ export interface MetadataValue {
 	asString(): string;
 	asInt(): number;
 	asBoolean(): boolean;
+	asFloat(): number;
 	asLong(): number;
 	asDouble(): number;
-	asShort(): number;
-	asFloat(): number;
 	asByte(): number;
-	getOwningPlugin(): Plugin;
+	asShort(): number;
 	invalidate(): void;
+	getOwningPlugin(): Plugin;
 }
 
 export class MetadataValue {

@@ -6,10 +6,10 @@ import {ConfigurationSerializable} from '../../../org/bukkit/configuration/seria
 export interface AttributeModifier extends ConfigurationSerializable {
 	getName(): string;
 	getSlot(): EquipmentSlot;
-	getAmount(): number;
 	serialize(): any;
-	getOperation(): AttributeModifier$Operation;
 	getUniqueId(): string;
+	getAmount(): number;
+	getOperation(): AttributeModifier$Operation;
 }
 
 export class AttributeModifier {

@@ -9,12 +9,12 @@ export interface ServerListPingEvent extends ServerEvent {
 	getHandlers(): HandlerList;
 	getMaxPlayers(): number;
 	getMotd(): string;
-	setMotd(motd: string): void;
 	getNumPlayers(): number;
 	setMaxPlayers(maxPlayers: number): void;
 	setServerIcon(icon: CachedServerIcon): void;
-	isAsynchronous(): boolean;
+	setMotd(motd: string): void;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 	spliterator(): any;
 	forEach(arg0: any): void;
 }

@@ -8,8 +8,8 @@ export interface ChunkEvent extends WorldEvent {
 	getChunk(): Chunk;
 	getWorld(): World;
 	getHandlers(): HandlerList;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class ChunkEvent {

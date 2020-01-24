@@ -1,8 +1,8 @@
 declare var Java: any;
 
 export interface SlotPos {
-	getRow(): number;
 	getColumn(): number;
+	getRow(): number;
 }
 
 export class SlotPos {

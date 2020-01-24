@@ -2,9 +2,9 @@ declare var Java: any;
 import {ItemTagAdapterContext} from '../../../../../org/bukkit/inventory/meta/tags/ItemTagAdapterContext.js'
 
 export interface ItemTagType {
+	fromPrimitive(primitive: any, context: ItemTagAdapterContext): any;
 	getPrimitiveType(): any;
 	getComplexType(): any;
-	fromPrimitive(primitive: any, context: ItemTagAdapterContext): any;
 	toPrimitive(complex: any, context: ItemTagAdapterContext): any;
 }
 

@@ -7,8 +7,8 @@ export interface PotionEffectType {
 	getId(): number;
 	isInstant(): boolean;
 	getColor(): Color;
-	getDurationModifier(): number;
 	createEffect(duration: number, amplifier: number): PotionEffect;
+	getDurationModifier(): number;
 }
 
 export class PotionEffectType {

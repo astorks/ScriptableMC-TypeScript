@@ -3,10 +3,10 @@ import {ConfigurationSection} from '../../../org/bukkit/configuration/Configurat
 import {Location} from '../../../org/bukkit/Location.js'
 import {Configuration} from '../../../org/bukkit/configuration/Configuration.js'
 import {OfflinePlayer} from '../../../org/bukkit/OfflinePlayer.js'
+import {Color} from '../../../org/bukkit/Color.js'
 import {ConfigurationSerializable} from '../../../org/bukkit/configuration/serialization/ConfigurationSerializable.js'
 import {Vector} from '../../../org/bukkit/util/Vector.js'
 import {ItemStack} from '../../../org/bukkit/inventory/ItemStack.js'
-import {Color} from '../../../org/bukkit/Color.js'
 
 export interface MemorySection extends ConfigurationSection {
 	get(path: string): any;
@@ -30,50 +30,50 @@ export interface MemorySection extends ConfigurationSection {
 	getLocation(path: string, def: Location): Location;
 	isSet(path: string): boolean;
 	getRoot(): Configuration;
-	getKeys(deep: boolean): any;
-	getString(path: string): string;
 	getString(path: string, def: string): string;
+	getString(path: string): string;
+	getKeys(deep: boolean): any;
 	getOfflinePlayer(path: string, def: OfflinePlayer): OfflinePlayer;
 	getOfflinePlayer(path: string): OfflinePlayer;
-	isBoolean(path: string): boolean;
 	isString(path: string): boolean;
-	getConfigurationSection(path: string): ConfigurationSection;
+	isBoolean(path: string): boolean;
 	isConfigurationSection(path: string): boolean;
-	getCharacterList(path: string): any;
-	isList(path: string): boolean;
-	getSerializable(path: string, clazz: any, def: ConfigurationSerializable): ConfigurationSerializable;
-	getSerializable(path: string, clazz: any): ConfigurationSerializable;
-	isVector(path: string): boolean;
-	getDefaultSection(): ConfigurationSection;
-	createSection(path: string, map: any): ConfigurationSection;
-	createSection(path: string): ConfigurationSection;
-	isLocation(path: string): boolean;
-	isDouble(path: string): boolean;
-	getDoubleList(path: string): any;
-	getCurrentPath(): string;
+	getConfigurationSection(path: string): ConfigurationSection;
+	addDefault(path: string, value: any): void;
 	getValues(deep: boolean): any;
-	getByteList(path: string): any;
-	getFloatList(path: string): any;
-	getVector(path: string, def: Vector): Vector;
-	getVector(path: string): Vector;
-	getItemStack(path: string): ItemStack;
-	getItemStack(path: string, def: ItemStack): ItemStack;
 	getColor(path: string): Color;
 	getColor(path: string, def: Color): Color;
-	getBooleanList(path: string): any;
-	getStringList(path: string): any;
-	isItemStack(path: string): boolean;
-	getLongList(path: string): any;
-	isColor(path: string): boolean;
+	createSection(path: string, map: any): ConfigurationSection;
+	createSection(path: string): ConfigurationSection;
 	getIntegerList(path: string): any;
-	isOfflinePlayer(path: string): boolean;
-	addDefault(path: string, value: any): void;
+	getDoubleList(path: string): any;
 	getShortList(path: string): any;
+	isColor(path: string): boolean;
+	isList(path: string): boolean;
+	getSerializable(path: string, clazz: any): ConfigurationSerializable;
+	getSerializable(path: string, clazz: any, def: ConfigurationSerializable): ConfigurationSerializable;
+	getFloatList(path: string): any;
+	getLongList(path: string): any;
+	isDouble(path: string): boolean;
+	getByteList(path: string): any;
+	isLocation(path: string): boolean;
 	getList(path: string, def: any): any;
 	getList(path: string): any;
+	getBooleanList(path: string): any;
+	getCharacterList(path: string): any;
+	isInt(path: string): boolean;
+	isVector(path: string): boolean;
+	getDefaultSection(): ConfigurationSection;
+	isOfflinePlayer(path: string): boolean;
+	getStringList(path: string): any;
+	getVector(path: string, def: Vector): Vector;
+	getVector(path: string): Vector;
+	getItemStack(path: string, def: ItemStack): ItemStack;
+	getItemStack(path: string): ItemStack;
+	getCurrentPath(): string;
+	isItemStack(path: string): boolean;
 	isLong(path: string): boolean;
 	getMapList(path: string): any;
-	isInt(path: string): boolean;
 }
 
 export class MemorySection {

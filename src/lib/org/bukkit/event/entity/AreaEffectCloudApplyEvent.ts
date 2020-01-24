@@ -10,12 +10,12 @@ export interface AreaEffectCloudApplyEvent extends EntityEvent, Cancellable {
 	getHandlers(): HandlerList;
 	getEntity(): Entity;
 	getEntity(): AreaEffectCloud;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 	getAffectedEntities(): any;
 	getEntityType(): EntityType;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class AreaEffectCloudApplyEvent {

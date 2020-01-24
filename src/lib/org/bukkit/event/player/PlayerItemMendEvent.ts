@@ -8,15 +8,15 @@ import {PlayerEvent} from '../../../../org/bukkit/event/player/PlayerEvent.js'
 
 export interface PlayerItemMendEvent extends PlayerEvent, Cancellable {
 	getHandlers(): HandlerList;
-	getItem(): ItemStack;
-	setCancelled(cancelled: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(cancelled: boolean): void;
+	getItem(): ItemStack;
 	getExperienceOrb(): ExperienceOrb;
-	setRepairAmount(amount: number): void;
 	getRepairAmount(): number;
+	setRepairAmount(amount: number): void;
 	getPlayer(): Player;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class PlayerItemMendEvent {

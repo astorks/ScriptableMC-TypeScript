@@ -12,12 +12,12 @@ export interface EntityPickupItemEvent extends EntityEvent, Cancellable {
 	getRemaining(): number;
 	getEntity(): Entity;
 	getEntity(): LivingEntity;
-	getItem(): Item;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
+	getItem(): Item;
 	getEntityType(): EntityType;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class EntityPickupItemEvent {

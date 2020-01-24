@@ -1,22 +1,22 @@
 declare var Java: any;
 import {HandlerList} from '../../../../org/bukkit/event/HandlerList.js'
-import {Note} from '../../../../org/bukkit/Note.js'
 import {Instrument} from '../../../../org/bukkit/Instrument.js'
+import {Note} from '../../../../org/bukkit/Note.js'
 import {Block} from '../../../../org/bukkit/block/Block.js'
 import {Cancellable} from '../../../../org/bukkit/event/Cancellable.js'
 import {BlockEvent} from '../../../../org/bukkit/event/block/BlockEvent.js'
 
 export interface NotePlayEvent extends BlockEvent, Cancellable {
 	getHandlers(): HandlerList;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
+	getInstrument(): Instrument;
+	setInstrument(instrument: Instrument): void;
 	getNote(): Note;
 	setNote(note: Note): void;
-	setInstrument(instrument: Instrument): void;
-	getInstrument(): Instrument;
 	getBlock(): Block;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class NotePlayEvent {

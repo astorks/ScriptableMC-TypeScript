@@ -11,14 +11,14 @@ export interface StructureGrowEvent extends WorldEvent, Cancellable {
 	getLocation(): Location;
 	getHandlers(): HandlerList;
 	getPlayer(): Player;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 	getBlocks(): any;
-	isFromBonemeal(): boolean;
 	getSpecies(): TreeType;
+	isFromBonemeal(): boolean;
 	getWorld(): World;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class StructureGrowEvent {

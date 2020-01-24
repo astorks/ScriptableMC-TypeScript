@@ -2,9 +2,9 @@ declare var Java: any;
 import {PersistentDataAdapterContext} from '../../../org/bukkit/persistence/PersistentDataAdapterContext.js'
 
 export interface PersistentDataType {
+	fromPrimitive(primitive: any, context: PersistentDataAdapterContext): any;
 	getPrimitiveType(): any;
 	getComplexType(): any;
-	fromPrimitive(primitive: any, context: PersistentDataAdapterContext): any;
 	toPrimitive(complex: any, context: PersistentDataAdapterContext): any;
 }
 

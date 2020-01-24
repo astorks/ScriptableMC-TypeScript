@@ -8,15 +8,15 @@ import {EntityEvent} from '../../../../org/bukkit/event/entity/EntityEvent.js'
 
 export interface EntityRegainHealthEvent extends EntityEvent, Cancellable {
 	getHandlers(): HandlerList;
-	setAmount(amount: number): void;
 	getAmount(): number;
-	setCancelled(cancel: boolean): void;
+	setAmount(amount: number): void;
 	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 	getRegainReason(): EntityRegainHealthEvent$RegainReason;
 	getEntity(): Entity;
 	getEntityType(): EntityType;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class EntityRegainHealthEvent {

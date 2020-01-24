@@ -9,11 +9,11 @@ export interface PlayerLeashEntityEvent extends Event, Cancellable {
 	getHandlers(): HandlerList;
 	getPlayer(): Player;
 	getEntity(): Entity;
-	setCancelled(cancel: boolean): void;
-	isCancelled(): boolean;
 	getLeashHolder(): Entity;
-	isAsynchronous(): boolean;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class PlayerLeashEntityEvent {

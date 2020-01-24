@@ -8,11 +8,11 @@ import {Event} from '../../../../org/bukkit/event/Event.js'
 export interface InventoryPickupItemEvent extends Event, Cancellable {
 	getHandlers(): HandlerList;
 	getInventory(): Inventory;
-	getItem(): Item;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
-	isAsynchronous(): boolean;
+	setCancelled(cancel: boolean): void;
+	getItem(): Item;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class InventoryPickupItemEvent {

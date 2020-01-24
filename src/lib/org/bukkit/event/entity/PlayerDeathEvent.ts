@@ -10,25 +10,25 @@ export interface PlayerDeathEvent extends EntityDeathEvent {
 	getEntity(): Entity;
 	getEntity(): LivingEntity;
 	getEntity(): Player;
-	setNewLevel(level: number): void;
 	getNewLevel(): number;
-	getDeathMessage(): string;
-	setKeepInventory(keepInventory: boolean): void;
-	getNewExp(): number;
+	setNewLevel(level: number): void;
 	setNewExp(exp: number): void;
-	setNewTotalExp(totalExp: number): void;
-	getKeepInventory(): boolean;
-	getNewTotalExp(): number;
-	getKeepLevel(): boolean;
+	getDeathMessage(): string;
+	getNewExp(): number;
 	setKeepLevel(keepLevel: boolean): void;
 	setDeathMessage(deathMessage: string): void;
+	getNewTotalExp(): number;
+	setNewTotalExp(totalExp: number): void;
+	getKeepLevel(): boolean;
+	setKeepInventory(keepInventory: boolean): void;
+	getKeepInventory(): boolean;
 	getHandlers(): HandlerList;
 	getDrops(): any;
 	setDroppedExp(exp: number): void;
 	getDroppedExp(): number;
 	getEntityType(): EntityType;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class PlayerDeathEvent {

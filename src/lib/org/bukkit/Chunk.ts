@@ -1,11 +1,11 @@
 declare var Java: any;
 import {BlockData} from '../../org/bukkit/block/data/BlockData.js'
-import {World} from '../../org/bukkit/World.js'
 import {Block} from '../../org/bukkit/block/Block.js'
+import {World} from '../../org/bukkit/World.js'
 import {Plugin} from '../../org/bukkit/plugin/Plugin.js'
 import {Entity} from '../../org/bukkit/entity/Entity.js'
-import {ChunkSnapshot} from '../../org/bukkit/ChunkSnapshot.js'
 import {BlockState} from '../../org/bukkit/block/BlockState.js'
+import {ChunkSnapshot} from '../../org/bukkit/ChunkSnapshot.js'
 
 export interface Chunk {
 	contains(block: BlockData): boolean;
@@ -14,22 +14,22 @@ export interface Chunk {
 	isLoaded(): boolean;
 	unload(): boolean;
 	unload(save: boolean): boolean;
-	getWorld(): World;
 	getBlock(x: number, y: number, z: number): Block;
-	getPluginChunkTickets(): any;
-	removePluginChunkTicket(plugin: Plugin): boolean;
+	getWorld(): World;
 	addPluginChunkTicket(plugin: Plugin): boolean;
+	removePluginChunkTicket(plugin: Plugin): boolean;
+	getPluginChunkTickets(): any;
+	getEntities(): Array<Entity>;
 	getZ(): number;
 	getX(): number;
-	getEntities(): Array<Entity>;
-	getInhabitedTime(): number;
 	isForceLoaded(): boolean;
+	setInhabitedTime(ticks: number): void;
+	getTileEntities(): Array<BlockState>;
 	isSlimeChunk(): boolean;
 	getChunkSnapshot(includeMaxblocky: boolean, includeBiome: boolean, includeBiomeTempRain: boolean): ChunkSnapshot;
 	getChunkSnapshot(): ChunkSnapshot;
-	getTileEntities(): Array<BlockState>;
 	setForceLoaded(forced: boolean): void;
-	setInhabitedTime(ticks: number): void;
+	getInhabitedTime(): number;
 }
 
 export class Chunk {

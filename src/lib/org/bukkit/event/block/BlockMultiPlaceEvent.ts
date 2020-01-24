@@ -2,8 +2,8 @@ declare var Java: any;
 import {HandlerList} from '../../../../org/bukkit/event/HandlerList.js'
 import {Player} from '../../../../org/bukkit/entity/Player.js'
 import {ItemStack} from '../../../../org/bukkit/inventory/ItemStack.js'
-import {EquipmentSlot} from '../../../../org/bukkit/inventory/EquipmentSlot.js'
 import {Block} from '../../../../org/bukkit/block/Block.js'
+import {EquipmentSlot} from '../../../../org/bukkit/inventory/EquipmentSlot.js'
 import {BlockState} from '../../../../org/bukkit/block/BlockState.js'
 import {BlockPlaceEvent} from '../../../../org/bukkit/event/block/BlockPlaceEvent.js'
 
@@ -11,18 +11,18 @@ export interface BlockMultiPlaceEvent extends BlockPlaceEvent {
 	getReplacedBlockStates(): any;
 	getHandlers(): HandlerList;
 	getPlayer(): Player;
-	setCancelled(cancel: boolean): void;
-	isCancelled(): boolean;
 	getItemInHand(): ItemStack;
-	getHand(): EquipmentSlot;
-	getBlockAgainst(): Block;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
+	canBuild(): boolean;
 	getBlockPlaced(): Block;
 	setBuild(canBuild: boolean): void;
+	getHand(): EquipmentSlot;
+	getBlockAgainst(): Block;
 	getBlockReplacedState(): BlockState;
-	canBuild(): boolean;
 	getBlock(): Block;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class BlockMultiPlaceEvent {

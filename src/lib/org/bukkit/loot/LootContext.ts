@@ -7,8 +7,8 @@ export interface LootContext {
 	getLocation(): Location;
 	getKiller(): HumanEntity;
 	getLootedEntity(): Entity;
-	getLuck(): number;
 	getLootingModifier(): number;
+	getLuck(): number;
 }
 
 export class LootContext {

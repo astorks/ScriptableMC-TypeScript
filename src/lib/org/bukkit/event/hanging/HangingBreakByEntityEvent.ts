@@ -9,11 +9,11 @@ export interface HangingBreakByEntityEvent extends HangingBreakEvent {
 	getRemover(): Entity;
 	getCause(): HangingBreakEvent$RemoveCause;
 	getHandlers(): HandlerList;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 	getEntity(): Hanging;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class HangingBreakByEntityEvent {

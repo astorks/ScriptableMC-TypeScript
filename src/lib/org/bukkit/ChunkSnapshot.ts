@@ -5,21 +5,21 @@ import {Material} from '../../org/bukkit/Material.js'
 
 export interface ChunkSnapshot {
 	contains(block: BlockData): boolean;
-	getData(x: number, y: number, z: number): number;
-	getBlockData(x: number, y: number, z: number): BlockData;
-	getZ(): number;
-	getX(): number;
-	getBiome(x: number, y: number, z: number): Biome;
-	getBiome(x: number, z: number): Biome;
-	getHighestBlockYAt(x: number, z: number): number;
 	getBlockEmittedLight(x: number, y: number, z: number): number;
 	getRawBiomeTemperature(x: number, y: number, z: number): number;
 	getRawBiomeTemperature(x: number, z: number): number;
-	getBlockSkyLight(x: number, y: number, z: number): number;
-	getWorldName(): string;
+	getHighestBlockYAt(x: number, z: number): number;
+	getData(x: number, y: number, z: number): number;
+	getZ(): number;
+	getBiome(x: number, z: number): Biome;
+	getBiome(x: number, y: number, z: number): Biome;
+	getX(): number;
+	getBlockData(x: number, y: number, z: number): BlockData;
 	isSectionEmpty(sy: number): boolean;
 	getBlockType(x: number, y: number, z: number): Material;
 	getCaptureFullTime(): number;
+	getWorldName(): string;
+	getBlockSkyLight(x: number, y: number, z: number): number;
 }
 
 export class ChunkSnapshot {

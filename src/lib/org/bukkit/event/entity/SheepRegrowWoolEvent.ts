@@ -10,11 +10,11 @@ export interface SheepRegrowWoolEvent extends EntityEvent, Cancellable {
 	getHandlers(): HandlerList;
 	getEntity(): Sheep;
 	getEntity(): Entity;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 	getEntityType(): EntityType;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class SheepRegrowWoolEvent {

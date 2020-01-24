@@ -6,14 +6,14 @@ import {Event} from '../../../../org/bukkit/event/Event.js'
 
 export interface TabCompleteEvent extends Event, Cancellable {
 	getHandlers(): HandlerList;
-	setCancelled(cancelled: boolean): void;
 	isCancelled(): boolean;
-	getBuffer(): string;
+	setCancelled(cancelled: boolean): void;
+	getSender(): CommandSender;
 	getCompletions(): any;
 	setCompletions(completions: any): void;
-	getSender(): CommandSender;
-	isAsynchronous(): boolean;
+	getBuffer(): string;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class TabCompleteEvent {

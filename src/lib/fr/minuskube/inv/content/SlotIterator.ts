@@ -8,15 +8,15 @@ export interface SlotIterator {
 	set(arg0: ClickableItem): SlotIterator;
 	started(): boolean;
 	previous(): SlotIterator;
-	row(arg0: number): SlotIterator;
-	row(): number;
-	blacklist(arg0: number, arg1: number): SlotIterator;
-	blacklist(arg0: SlotPos): SlotIterator;
-	ended(): boolean;
-	doesAllowOverride(): boolean;
-	allowOverride(arg0: boolean): SlotIterator;
 	column(arg0: number): SlotIterator;
 	column(): number;
+	blacklist(arg0: SlotPos): SlotIterator;
+	blacklist(arg0: number, arg1: number): SlotIterator;
+	allowOverride(arg0: boolean): SlotIterator;
+	doesAllowOverride(): boolean;
+	ended(): boolean;
+	row(): number;
+	row(arg0: number): SlotIterator;
 }
 
 export class SlotIterator {

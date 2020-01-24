@@ -11,22 +11,22 @@ import {InventoryInteractEvent} from '../../../../org/bukkit/event/inventory/Inv
 export interface InventoryDragEvent extends InventoryInteractEvent {
 	getType(): DragType;
 	getHandlers(): HandlerList;
-	getCursor(): ItemStack;
-	setCursor(newCursor: ItemStack): void;
 	getNewItems(): any;
+	getOldCursor(): ItemStack;
 	getRawSlots(): any;
 	getInventorySlots(): any;
-	getOldCursor(): ItemStack;
+	getCursor(): ItemStack;
+	setCursor(newCursor: ItemStack): void;
 	getResult(): Event$Result;
 	setResult(newResult: Event$Result): void;
-	setCancelled(toCancel: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(toCancel: boolean): void;
 	getWhoClicked(): HumanEntity;
 	getInventory(): Inventory;
 	getViewers(): any;
 	getView(): InventoryView;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class InventoryDragEvent {

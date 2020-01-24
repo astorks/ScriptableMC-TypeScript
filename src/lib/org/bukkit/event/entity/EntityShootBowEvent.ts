@@ -11,15 +11,15 @@ export interface EntityShootBowEvent extends EntityEvent, Cancellable {
 	getHandlers(): HandlerList;
 	getEntity(): LivingEntity;
 	getEntity(): Entity;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
-	getForce(): number;
+	setCancelled(cancel: boolean): void;
 	getBow(): ItemStack;
-	getProjectile(): Entity;
+	getForce(): number;
 	setProjectile(projectile: Entity): void;
+	getProjectile(): Entity;
 	getEntityType(): EntityType;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class EntityShootBowEvent {

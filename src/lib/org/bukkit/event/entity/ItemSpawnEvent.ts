@@ -11,11 +11,11 @@ export interface ItemSpawnEvent extends EntitySpawnEvent {
 	getEntity(): Item;
 	getLocation(): Location;
 	getHandlers(): HandlerList;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 	getEntityType(): EntityType;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class ItemSpawnEvent {

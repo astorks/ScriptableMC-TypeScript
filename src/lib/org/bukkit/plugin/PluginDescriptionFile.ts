@@ -8,21 +8,21 @@ export interface PluginDescriptionFile {
 	save(writer: any): void;
 	getVersion(): string;
 	getPrefix(): string;
-	getDescription(): string;
 	getFullName(): string;
+	getDescription(): string;
 	getPermissionDefault(): PermissionDefault;
-	getAuthors(): any;
-	getWebsite(): string;
 	getDepend(): any;
-	getLoad(): PluginLoadOrder;
-	getSoftDepend(): any;
-	getLoadBefore(): any;
-	getCommands(): any;
-	getMain(): string;
-	getAwareness(): any;
-	getRawName(): string;
 	getAPIVersion(): string;
 	getClassLoaderOf(): string;
+	getSoftDepend(): any;
+	getCommands(): any;
+	getRawName(): string;
+	getAwareness(): any;
+	getMain(): string;
+	getAuthors(): any;
+	getLoad(): PluginLoadOrder;
+	getWebsite(): string;
+	getLoadBefore(): any;
 }
 
 export class PluginDescriptionFile {

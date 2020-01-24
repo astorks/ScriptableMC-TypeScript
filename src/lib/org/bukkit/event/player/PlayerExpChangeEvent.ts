@@ -5,11 +5,11 @@ import {PlayerEvent} from '../../../../org/bukkit/event/player/PlayerEvent.js'
 
 export interface PlayerExpChangeEvent extends PlayerEvent {
 	getHandlers(): HandlerList;
-	setAmount(amount: number): void;
 	getAmount(): number;
+	setAmount(amount: number): void;
 	getPlayer(): Player;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class PlayerExpChangeEvent {

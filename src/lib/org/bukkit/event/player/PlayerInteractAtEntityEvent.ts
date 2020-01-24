@@ -9,13 +9,13 @@ import {PlayerInteractEntityEvent} from '../../../../org/bukkit/event/player/Pla
 export interface PlayerInteractAtEntityEvent extends PlayerInteractEntityEvent {
 	getHandlers(): HandlerList;
 	getClickedPosition(): Vector;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 	getHand(): EquipmentSlot;
 	getRightClicked(): Entity;
 	getPlayer(): Player;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class PlayerInteractAtEntityEvent {

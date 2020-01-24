@@ -7,13 +7,13 @@ import {BlockEvent} from '../../../../org/bukkit/event/block/BlockEvent.js'
 
 export interface BrewEvent extends BlockEvent, Cancellable {
 	getHandlers(): HandlerList;
-	getContents(): BrewerInventory;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
+	getContents(): BrewerInventory;
 	getFuelLevel(): number;
 	getBlock(): Block;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class BrewEvent {

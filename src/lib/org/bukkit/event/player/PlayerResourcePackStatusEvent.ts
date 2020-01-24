@@ -8,8 +8,8 @@ export interface PlayerResourcePackStatusEvent extends PlayerEvent {
 	getHandlers(): HandlerList;
 	getStatus(): PlayerResourcePackStatusEvent$Status;
 	getPlayer(): Player;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class PlayerResourcePackStatusEvent {

@@ -2,109 +2,109 @@ declare var Java: any;
 import {ProjectileSource} from '../../../org/bukkit/projectiles/ProjectileSource.js'
 import {Location} from '../../../org/bukkit/Location.js'
 import {EntityType} from '../../../org/bukkit/entity/EntityType.js'
-import {Entity} from '../../../org/bukkit/entity/Entity.js'
 import {Server} from '../../../org/bukkit/Server.js'
 import {World} from '../../../org/bukkit/World.js'
-import {PistonMoveReaction} from '../../../org/bukkit/block/PistonMoveReaction.js'
-import {EntityEffect} from '../../../org/bukkit/EntityEffect.js'
-import {PlayerTeleportEvent$TeleportCause} from '../../../org/bukkit/event/player/PlayerTeleportEvent$TeleportCause.js'
-import {Vector} from '../../../org/bukkit/util/Vector.js'
 import {BoundingBox} from '../../../org/bukkit/util/BoundingBox.js'
-import {EntityDamageEvent} from '../../../org/bukkit/event/entity/EntityDamageEvent.js'
+import {Entity} from '../../../org/bukkit/entity/Entity.js'
 import {BlockFace} from '../../../org/bukkit/block/BlockFace.js'
 import {Pose} from '../../../org/bukkit/entity/Pose.js'
-import {Plugin} from '../../../org/bukkit/plugin/Plugin.js'
+import {EntityDamageEvent} from '../../../org/bukkit/event/entity/EntityDamageEvent.js'
+import {PlayerTeleportEvent$TeleportCause} from '../../../org/bukkit/event/player/PlayerTeleportEvent$TeleportCause.js'
+import {Vector} from '../../../org/bukkit/util/Vector.js'
+import {PistonMoveReaction} from '../../../org/bukkit/block/PistonMoveReaction.js'
+import {EntityEffect} from '../../../org/bukkit/EntityEffect.js'
 import {MetadataValue} from '../../../org/bukkit/metadata/MetadataValue.js'
+import {Plugin} from '../../../org/bukkit/plugin/Plugin.js'
 import {Permission} from '../../../org/bukkit/permissions/Permission.js'
 import {PermissionAttachment} from '../../../org/bukkit/permissions/PermissionAttachment.js'
 import {PersistentDataContainer} from '../../../org/bukkit/persistence/PersistentDataContainer.js'
 import {Projectile} from '../../../org/bukkit/entity/Projectile.js'
 
 export interface ThrownExpBottle extends Projectile {
-	getShooter(): ProjectileSource;
-	doesBounce(): boolean;
 	setShooter(source: ProjectileSource): void;
+	doesBounce(): boolean;
 	setBounce(doesBounce: boolean): void;
+	getShooter(): ProjectileSource;
 	remove(): void;
 	isEmpty(): boolean;
 	getLocation(): Location;
 	getLocation(loc: Location): Location;
 	getType(): EntityType;
-	addPassenger(passenger: Entity): boolean;
-	getPassengers(): any;
 	getServer(): Server;
-	getWorld(): World;
 	isValid(): boolean;
-	setCustomNameVisible(flag: boolean): void;
-	removeScoreboardTag(tag: string): boolean;
-	isCustomNameVisible(): boolean;
-	getPistonMoveReaction(): PistonMoveReaction;
-	getNearbyEntities(x: number, y: number, z: number): any;
-	playEffect(type: EntityEffect): void;
+	getWorld(): World;
+	getEntityId(): number;
+	isInsideVehicle(): boolean;
+	setGlowing(flag: boolean): void;
+	isGlowing(): boolean;
+	leaveVehicle(): boolean;
+	getBoundingBox(): BoundingBox;
+	isInvulnerable(): boolean;
+	isSilent(): boolean;
+	getPortalCooldown(): number;
+	getVehicle(): Entity;
+	getFacing(): BlockFace;
+	addPassenger(passenger: Entity): boolean;
+	setSilent(flag: boolean): void;
+	getPose(): Pose;
+	getFallDistance(): number;
+	setRotation(yaw: number, pitch: number): void;
+	getLastDamageCause(): EntityDamageEvent;
+	setInvulnerable(flag: boolean): void;
+	setPersistent(persistent: boolean): void;
+	getMaxFireTicks(): number;
+	isPersistent(): boolean;
+	getPassenger(): Entity;
+	setGravity(gravity: boolean): void;
 	teleport(location: Location, cause: PlayerTeleportEvent$TeleportCause): boolean;
+	teleport(destination: Entity, cause: PlayerTeleportEvent$TeleportCause): boolean;
 	teleport(location: Location): boolean;
 	teleport(destination: Entity): boolean;
-	teleport(destination: Entity, cause: PlayerTeleportEvent$TeleportCause): boolean;
-	getMaxFireTicks(): number;
-	isDead(): boolean;
-	isPersistent(): boolean;
-	getEntityId(): number;
-	setFireTicks(ticks: number): void;
-	setPersistent(persistent: boolean): void;
-	getWidth(): number;
-	getPassenger(): Entity;
-	setRotation(yaw: number, pitch: number): void;
-	getFireTicks(): number;
-	setPassenger(passenger: Entity): boolean;
 	getHeight(): number;
-	getVelocity(): Vector;
-	setVelocity(velocity: Vector): void;
-	getBoundingBox(): BoundingBox;
-	isOnGround(): boolean;
-	getLastDamageCause(): EntityDamageEvent;
-	leaveVehicle(): boolean;
-	setGlowing(flag: boolean): void;
-	isInsideVehicle(): boolean;
-	setFallDistance(distance: number): void;
-	setSilent(flag: boolean): void;
-	setGravity(gravity: boolean): void;
-	setLastDamageCause(event: EntityDamageEvent): void;
-	getPortalCooldown(): number;
-	getFacing(): BlockFace;
-	isSilent(): boolean;
-	getFallDistance(): number;
-	isInvulnerable(): boolean;
-	getScoreboardTags(): any;
-	hasGravity(): boolean;
-	getVehicle(): Entity;
 	setPortalCooldown(cooldown: number): void;
-	setTicksLived(value: number): void;
+	isDead(): boolean;
+	getNearbyEntities(x: number, y: number, z: number): any;
+	getScoreboardTags(): any;
+	setVelocity(velocity: Vector): void;
+	addScoreboardTag(tag: string): boolean;
+	setPassenger(passenger: Entity): boolean;
+	hasGravity(): boolean;
+	isOnGround(): boolean;
 	getTicksLived(): number;
-	isGlowing(): boolean;
+	setTicksLived(value: number): void;
+	setFallDistance(distance: number): void;
+	getPassengers(): any;
+	getFireTicks(): number;
+	setFireTicks(ticks: number): void;
 	removePassenger(passenger: Entity): boolean;
 	eject(): boolean;
+	setLastDamageCause(event: EntityDamageEvent): void;
+	getVelocity(): Vector;
+	getWidth(): number;
+	getPistonMoveReaction(): PistonMoveReaction;
+	setCustomNameVisible(flag: boolean): void;
+	isCustomNameVisible(): boolean;
+	removeScoreboardTag(tag: string): boolean;
+	playEffect(type: EntityEffect): void;
 	getUniqueId(): string;
-	addScoreboardTag(tag: string): boolean;
-	setInvulnerable(flag: boolean): void;
-	getPose(): Pose;
-	removeMetadata(metadataKey: string, owningPlugin: Plugin): void;
-	getMetadata(metadataKey: string): any;
 	hasMetadata(metadataKey: string): boolean;
 	setMetadata(metadataKey: string, newMetadataValue: MetadataValue): void;
+	removeMetadata(metadataKey: string, owningPlugin: Plugin): void;
+	getMetadata(metadataKey: string): any;
 	getName(): string;
 	sendMessage(messages: Array<string>): void;
 	sendMessage(message: string): void;
-	hasPermission(_name: string): boolean;
 	hasPermission(perm: Permission): boolean;
-	recalculatePermissions(): void;
+	hasPermission(_name: string): boolean;
 	getEffectivePermissions(): any;
-	removeAttachment(attachment: PermissionAttachment): void;
+	recalculatePermissions(): void;
 	addAttachment(plugin: Plugin, ticks: number): PermissionAttachment;
 	addAttachment(plugin: Plugin, _name: string, value: boolean, ticks: number): PermissionAttachment;
 	addAttachment(plugin: Plugin): PermissionAttachment;
 	addAttachment(plugin: Plugin, _name: string, value: boolean): PermissionAttachment;
-	isPermissionSet(_name: string): boolean;
+	removeAttachment(attachment: PermissionAttachment): void;
 	isPermissionSet(perm: Permission): boolean;
+	isPermissionSet(_name: string): boolean;
 	isOp(): boolean;
 	setOp(value: boolean): void;
 	getCustomName(): string;

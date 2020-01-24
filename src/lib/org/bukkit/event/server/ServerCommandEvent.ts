@@ -7,12 +7,12 @@ import {ServerEvent} from '../../../../org/bukkit/event/server/ServerEvent.js'
 export interface ServerCommandEvent extends ServerEvent, Cancellable {
 	getHandlers(): HandlerList;
 	getCommand(): string;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
-	setCommand(message: string): void;
+	setCancelled(cancel: boolean): void;
 	getSender(): CommandSender;
-	isAsynchronous(): boolean;
+	setCommand(message: string): void;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class ServerCommandEvent {

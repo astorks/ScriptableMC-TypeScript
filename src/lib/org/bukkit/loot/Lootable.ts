@@ -2,9 +2,9 @@ declare var Java: any;
 import {LootTable} from '../../../org/bukkit/loot/LootTable.js'
 
 export interface Lootable {
+	setSeed(seed: number): void;
 	getLootTable(): LootTable;
 	getSeed(): number;
-	setSeed(seed: number): void;
 	setLootTable(table: LootTable): void;
 }
 

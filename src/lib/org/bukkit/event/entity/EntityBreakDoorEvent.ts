@@ -14,12 +14,12 @@ export interface EntityBreakDoorEvent extends EntityChangeBlockEvent {
 	getHandlers(): HandlerList;
 	getBlock(): Block;
 	getBlockData(): BlockData;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 	getTo(): Material;
 	getEntityType(): EntityType;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class EntityBreakDoorEvent {

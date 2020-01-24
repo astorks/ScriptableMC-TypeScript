@@ -4,20 +4,20 @@ import {Recipe} from '../../../org/bukkit/inventory/Recipe.js'
 
 export interface MerchantRecipe extends Recipe {
 	getResult(): ItemStack;
-	getVillagerExperience(): number;
-	setVillagerExperience(villagerExperience: number): void;
-	hasExperienceReward(): boolean;
-	setExperienceReward(flag: boolean): void;
-	getIngredients(): any;
-	getPriceMultiplier(): number;
+	setPriceMultiplier(priceMultiplier: number): void;
 	setUses(uses: number): void;
+	getIngredients(): any;
+	addIngredient(item: ItemStack): void;
+	getPriceMultiplier(): number;
+	setIngredients(ingredients: any): void;
 	getMaxUses(): number;
 	getUses(): number;
-	setPriceMultiplier(priceMultiplier: number): void;
-	setMaxUses(maxUses: number): void;
-	addIngredient(item: ItemStack): void;
 	removeIngredient(index: number): void;
-	setIngredients(ingredients: any): void;
+	setMaxUses(maxUses: number): void;
+	getVillagerExperience(): number;
+	setVillagerExperience(villagerExperience: number): void;
+	setExperienceReward(flag: boolean): void;
+	hasExperienceReward(): boolean;
 }
 
 export class MerchantRecipe {

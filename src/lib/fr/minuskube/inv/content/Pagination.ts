@@ -8,11 +8,11 @@ export interface Pagination {
 	first(): Pagination;
 	previous(): Pagination;
 	page(arg0: number): Pagination;
-	isFirst(): boolean;
-	getPage(): number;
-	isLast(): boolean;
 	setItems(arg0: Array<ClickableItem>): Pagination;
 	setItemsPerPage(arg0: number): Pagination;
+	getPage(): number;
+	isFirst(): boolean;
+	isLast(): boolean;
 	getPageItems(): Array<ClickableItem>;
 	addToIterator(arg0: SlotIterator): Pagination;
 }

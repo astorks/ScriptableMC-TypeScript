@@ -8,8 +8,8 @@ export interface PlayerJoinEvent extends PlayerEvent {
 	getJoinMessage(): string;
 	setJoinMessage(joinMessage: string): void;
 	getPlayer(): Player;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class PlayerJoinEvent {

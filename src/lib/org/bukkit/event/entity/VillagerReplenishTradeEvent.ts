@@ -11,15 +11,15 @@ export interface VillagerReplenishTradeEvent extends EntityEvent, Cancellable {
 	getHandlers(): HandlerList;
 	getEntity(): AbstractVillager;
 	getEntity(): Entity;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
+	setBonus(bonus: number): void;
+	getBonus(): number;
 	getRecipe(): MerchantRecipe;
 	setRecipe(recipe: MerchantRecipe): void;
-	setCancelled(cancel: boolean): void;
-	isCancelled(): boolean;
-	getBonus(): number;
-	setBonus(bonus: number): void;
 	getEntityType(): EntityType;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class VillagerReplenishTradeEvent {

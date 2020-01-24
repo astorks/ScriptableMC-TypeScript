@@ -9,15 +9,15 @@ import {BlockEvent} from '../../../../org/bukkit/event/block/BlockEvent.js'
 export interface CauldronLevelChangeEvent extends BlockEvent, Cancellable {
 	getHandlers(): HandlerList;
 	getEntity(): Entity;
-	setCancelled(cancelled: boolean): void;
 	isCancelled(): boolean;
-	setNewLevel(newLevel: number): void;
-	getNewLevel(): number;
-	getOldLevel(): number;
+	setCancelled(cancelled: boolean): void;
 	getReason(): CauldronLevelChangeEvent$ChangeReason;
+	getOldLevel(): number;
+	getNewLevel(): number;
+	setNewLevel(newLevel: number): void;
 	getBlock(): Block;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class CauldronLevelChangeEvent {

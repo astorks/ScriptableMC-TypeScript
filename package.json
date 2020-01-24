@@ -1,6 +1,6 @@
 {
   "name": "scriptablemc-typescript",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Typescript plugin example and libraries for Minecraft 1.15",
   "main": "src/main.js",
   "directories": {
@@ -16,14 +16,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/astorks/ScriptablePluginSourceTS.git"
+    "url": "git+https://github.com/astorks/ScriptableMC-TypeScript.git"
   },
   "author": "Ashton Storks",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/astorks/ScriptablePluginSourceTS/issues"
+    "url": "https://github.com/astorks/ScriptableMC-TypeScript/issues"
   },
-  "homepage": "https://github.com/astorks/ScriptablePluginSourceTS#readme",
+  "homepage": "https://github.com/astorks/ScriptableMC-TypeScript#readme",
   "dependencies": {},
   "devDependencies": {
     "typedoc": "^0.16.8",

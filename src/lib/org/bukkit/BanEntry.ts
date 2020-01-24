@@ -4,13 +4,13 @@ export interface BanEntry {
 	save(): void;
 	getTarget(): string;
 	getSource(): string;
-	getExpiration(): any;
 	setCreated(created: any): void;
+	getExpiration(): any;
 	getCreated(): any;
-	setReason(reason: string): void;
 	setSource(source: string): void;
 	setExpiration(expiration: any): void;
 	getReason(): string;
+	setReason(reason: string): void;
 }
 
 export class BanEntry {

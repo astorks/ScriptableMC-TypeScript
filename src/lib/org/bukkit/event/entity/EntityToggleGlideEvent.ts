@@ -8,13 +8,13 @@ import {EntityEvent} from '../../../../org/bukkit/event/entity/EntityEvent.js'
 
 export interface EntityToggleGlideEvent extends EntityEvent, Cancellable {
 	getHandlers(): HandlerList;
-	setCancelled(cancel: boolean): void;
-	isCancelled(): boolean;
 	isGliding(): boolean;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 	getEntity(): Entity;
 	getEntityType(): EntityType;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class EntityToggleGlideEvent {

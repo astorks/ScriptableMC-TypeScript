@@ -5,6 +5,7 @@ import { ScriptablePluginEngine } from "./lib/com/pixlfox/scriptablemc/core/Scri
 import { PluginCommand } from "./lib/org/bukkit/command/PluginCommand.js";
 import { Player } from "./lib/org/bukkit/entity/Player.js";
 import { PluginMessageListenerRegistration } from "./lib/org/bukkit/plugin/messaging/PluginMessageListenerRegistration.js";
+import { OfflinePlayer } from "./lib/org/bukkit/OfflinePlayer.js";
 
 declare const engine: ScriptablePluginEngine;
 declare type Type<T> = { new (...args: any[]): T; };
@@ -50,6 +51,10 @@ export class JsPlugin {
 
     registerCommand(command: PluginCommand) {
         this.context.registerCommand(command);
+    }
+
+    setPlaceholders(player: (Player | OfflinePlayer), placeholderText: string): string {
+        return this.context.setPlaceholders(player, placeholderText);
     }
 
     onLoad(): void { console.log("[" + this.pluginName + "] onLoad()"); }

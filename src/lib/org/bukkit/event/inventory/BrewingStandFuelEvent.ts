@@ -7,16 +7,16 @@ import {BlockEvent} from '../../../../org/bukkit/event/block/BlockEvent.js'
 
 export interface BrewingStandFuelEvent extends BlockEvent, Cancellable {
 	getHandlers(): HandlerList;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
-	setConsuming(consuming: boolean): void;
+	setCancelled(cancel: boolean): void;
 	getFuelPower(): number;
-	setFuelPower(fuelPower: number): void;
-	isConsuming(): boolean;
 	getFuel(): ItemStack;
+	isConsuming(): boolean;
+	setConsuming(consuming: boolean): void;
+	setFuelPower(fuelPower: number): void;
 	getBlock(): Block;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class BrewingStandFuelEvent {

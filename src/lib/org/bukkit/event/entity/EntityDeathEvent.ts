@@ -13,8 +13,8 @@ export interface EntityDeathEvent extends EntityEvent {
 	setDroppedExp(exp: number): void;
 	getDroppedExp(): number;
 	getEntityType(): EntityType;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class EntityDeathEvent {

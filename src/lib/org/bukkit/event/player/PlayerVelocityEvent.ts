@@ -7,13 +7,13 @@ import {PlayerEvent} from '../../../../org/bukkit/event/player/PlayerEvent.js'
 
 export interface PlayerVelocityEvent extends PlayerEvent, Cancellable {
 	getHandlers(): HandlerList;
-	setCancelled(cancel: boolean): void;
-	isCancelled(): boolean;
-	getVelocity(): Vector;
 	setVelocity(velocity: Vector): void;
+	getVelocity(): Vector;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 	getPlayer(): Player;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class PlayerVelocityEvent {

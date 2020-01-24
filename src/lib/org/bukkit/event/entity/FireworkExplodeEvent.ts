@@ -10,11 +10,11 @@ export interface FireworkExplodeEvent extends EntityEvent, Cancellable {
 	getHandlers(): HandlerList;
 	getEntity(): Firework;
 	getEntity(): Entity;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 	getEntityType(): EntityType;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class FireworkExplodeEvent {

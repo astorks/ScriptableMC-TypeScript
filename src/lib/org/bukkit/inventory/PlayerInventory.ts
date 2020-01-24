@@ -8,28 +8,28 @@ import {InventoryType} from '../../../org/bukkit/event/inventory/InventoryType.j
 import {Inventory} from '../../../org/bukkit/inventory/Inventory.js'
 
 export interface PlayerInventory extends Inventory {
+	getItemInHand(): ItemStack;
+	setItemInHand(stack: ItemStack): void;
 	setItem(index: number, item: ItemStack): void;
 	getHolder(): InventoryHolder;
 	getHolder(): HumanEntity;
-	setItemInHand(stack: ItemStack): void;
-	getItemInHand(): ItemStack;
-	getItemInMainHand(): ItemStack;
-	setItemInMainHand(item: ItemStack): void;
-	setItemInOffHand(item: ItemStack): void;
-	setHelmet(helmet: ItemStack): void;
 	getChestplate(): ItemStack;
-	setChestplate(chestplate: ItemStack): void;
-	getHelmet(): ItemStack;
-	setLeggings(leggings: ItemStack): void;
-	getLeggings(): ItemStack;
-	getItemInOffHand(): ItemStack;
-	getBoots(): ItemStack;
-	setBoots(boots: ItemStack): void;
 	getArmorContents(): Array<ItemStack>;
+	setChestplate(chestplate: ItemStack): void;
 	setArmorContents(items: Array<ItemStack>): void;
-	setExtraContents(items: Array<ItemStack>): void;
-	getExtraContents(): Array<ItemStack>;
+	setLeggings(leggings: ItemStack): void;
 	getHeldItemSlot(): number;
+	getItemInMainHand(): ItemStack;
+	getItemInOffHand(): ItemStack;
+	setBoots(boots: ItemStack): void;
+	getLeggings(): ItemStack;
+	setItemInMainHand(item: ItemStack): void;
+	getExtraContents(): Array<ItemStack>;
+	getHelmet(): ItemStack;
+	setHelmet(helmet: ItemStack): void;
+	setItemInOffHand(item: ItemStack): void;
+	getBoots(): ItemStack;
+	setExtraContents(items: Array<ItemStack>): void;
 	setHeldItemSlot(slot: number): void;
 	remove(material: Material): void;
 	remove(item: ItemStack): void;
@@ -51,16 +51,16 @@ export interface PlayerInventory extends Inventory {
 	all(item: ItemStack): any;
 	setContents(items: Array<ItemStack>): void;
 	getMaxStackSize(): number;
-	addItem(items: Array<ItemStack>): any;
-	removeItem(items: Array<ItemStack>): any;
-	firstEmpty(): number;
 	getItem(index: number): ItemStack;
-	setMaxStackSize(size: number): void;
+	removeItem(items: Array<ItemStack>): any;
+	containsAtLeast(item: ItemStack, amount: number): boolean;
+	firstEmpty(): number;
+	getViewers(): any;
 	getStorageContents(): Array<ItemStack>;
+	setMaxStackSize(size: number): void;
+	addItem(items: Array<ItemStack>): any;
 	getContents(): Array<ItemStack>;
 	setStorageContents(items: Array<ItemStack>): void;
-	containsAtLeast(item: ItemStack, amount: number): boolean;
-	getViewers(): any;
 	spliterator(): any;
 	forEach(arg0: any): void;
 }

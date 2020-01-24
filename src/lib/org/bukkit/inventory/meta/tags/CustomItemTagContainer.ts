@@ -1,15 +1,15 @@
 declare var Java: any;
-import {ItemTagAdapterContext} from '../../../../../org/bukkit/inventory/meta/tags/ItemTagAdapterContext.js'
 import {NamespacedKey} from '../../../../../org/bukkit/NamespacedKey.js'
 import {ItemTagType} from '../../../../../org/bukkit/inventory/meta/tags/ItemTagType.js'
+import {ItemTagAdapterContext} from '../../../../../org/bukkit/inventory/meta/tags/ItemTagAdapterContext.js'
 
 export interface CustomItemTagContainer {
 	isEmpty(): boolean;
-	getAdapterContext(): ItemTagAdapterContext;
-	getCustomTag(key: NamespacedKey, type: ItemTagType): any;
-	hasCustomTag(key: NamespacedKey, type: ItemTagType): boolean;
 	setCustomTag(key: NamespacedKey, type: ItemTagType, value: any): void;
+	getCustomTag(key: NamespacedKey, type: ItemTagType): any;
+	getAdapterContext(): ItemTagAdapterContext;
 	removeCustomTag(key: NamespacedKey): void;
+	hasCustomTag(key: NamespacedKey, type: ItemTagType): boolean;
 }
 
 export class CustomItemTagContainer {

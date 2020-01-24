@@ -16,14 +16,14 @@ export interface EntityDamageByBlockEvent extends EntityDamageEvent {
 	setDamage(damage: number): void;
 	setDamage(type: EntityDamageEvent$DamageModifier, damage: number): void;
 	isApplicable(type: EntityDamageEvent$DamageModifier): boolean;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
-	getOriginalDamage(type: EntityDamageEvent$DamageModifier): number;
+	setCancelled(cancel: boolean): void;
 	getFinalDamage(): number;
+	getOriginalDamage(type: EntityDamageEvent$DamageModifier): number;
 	getEntity(): Entity;
 	getEntityType(): EntityType;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class EntityDamageByBlockEvent {

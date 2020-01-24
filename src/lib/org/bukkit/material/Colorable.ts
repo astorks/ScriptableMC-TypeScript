@@ -2,8 +2,8 @@ declare var Java: any;
 import {DyeColor} from '../../../org/bukkit/DyeColor.js'
 
 export interface Colorable {
-	setColor(color: DyeColor): void;
 	getColor(): DyeColor;
+	setColor(color: DyeColor): void;
 }
 
 export class Colorable {

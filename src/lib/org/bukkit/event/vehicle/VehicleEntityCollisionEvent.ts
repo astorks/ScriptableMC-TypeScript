@@ -8,15 +8,15 @@ import {VehicleCollisionEvent} from '../../../../org/bukkit/event/vehicle/Vehicl
 export interface VehicleEntityCollisionEvent extends VehicleCollisionEvent, Cancellable {
 	getHandlers(): HandlerList;
 	getEntity(): Entity;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
-	setCollisionCancelled(cancel: boolean): void;
-	isCollisionCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 	isPickupCancelled(): boolean;
 	setPickupCancelled(cancel: boolean): void;
+	setCollisionCancelled(cancel: boolean): void;
+	isCollisionCancelled(): boolean;
 	getVehicle(): Vehicle;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class VehicleEntityCollisionEvent {

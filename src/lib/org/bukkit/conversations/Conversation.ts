@@ -3,8 +3,8 @@ import {ConversationContext} from '../../../org/bukkit/conversations/Conversatio
 import {Conversation$ConversationState} from '../../../org/bukkit/conversations/Conversation$ConversationState.js'
 import {ConversationPrefix} from '../../../org/bukkit/conversations/ConversationPrefix.js'
 import {ConversationAbandonedListener} from '../../../org/bukkit/conversations/ConversationAbandonedListener.js'
-import {Conversable} from '../../../org/bukkit/conversations/Conversable.js'
 import {ConversationAbandonedEvent} from '../../../org/bukkit/conversations/ConversationAbandonedEvent.js'
+import {Conversable} from '../../../org/bukkit/conversations/Conversable.js'
 import {Plugin} from '../../../org/bukkit/plugin/Plugin.js'
 import {Prompt} from '../../../org/bukkit/conversations/Prompt.js'
 
@@ -14,16 +14,16 @@ export interface Conversation {
 	getState(): Conversation$ConversationState;
 	getPrefix(): ConversationPrefix;
 	removeConversationAbandonedListener(listener: ConversationAbandonedListener): void;
-	setLocalEchoEnabled(localEchoEnabled: boolean): void;
-	addConversationAbandonedListener(listener: ConversationAbandonedListener): void;
-	isLocalEchoEnabled(): boolean;
-	getForWhom(): Conversable;
+	acceptInput(input: string): void;
 	abandon(): void;
 	abandon(details: ConversationAbandonedEvent): void;
-	acceptInput(input: string): void;
 	outputNextPrompt(): void;
+	isLocalEchoEnabled(): boolean;
+	getForWhom(): Conversable;
 	isModal(): boolean;
 	getCancellers(): any;
+	addConversationAbandonedListener(listener: ConversationAbandonedListener): void;
+	setLocalEchoEnabled(localEchoEnabled: boolean): void;
 }
 
 export class Conversation {

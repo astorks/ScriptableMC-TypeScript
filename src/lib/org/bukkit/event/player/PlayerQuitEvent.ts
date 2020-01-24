@@ -8,8 +8,8 @@ export interface PlayerQuitEvent extends PlayerEvent {
 	setQuitMessage(quitMessage: string): void;
 	getQuitMessage(): string;
 	getPlayer(): Player;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class PlayerQuitEvent {

@@ -2,8 +2,8 @@ declare var Java: any;
 
 export interface MapFont$CharacterSprite {
 	get(row: number, col: number): boolean;
-	getWidth(): number;
 	getHeight(): number;
+	getWidth(): number;
 }
 
 export class MapFont$CharacterSprite {

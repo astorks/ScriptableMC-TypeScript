@@ -7,10 +7,10 @@ export interface Score {
 	getEntry(): string;
 	getPlayer(): OfflinePlayer;
 	getScoreboard(): Scoreboard;
-	getObjective(): Objective;
-	getScore(): number;
 	setScore(score: number): void;
 	isScoreSet(): boolean;
+	getScore(): number;
+	getObjective(): Objective;
 }
 
 export class Score {

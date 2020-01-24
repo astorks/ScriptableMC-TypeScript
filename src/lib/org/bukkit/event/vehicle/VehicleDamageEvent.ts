@@ -9,12 +9,12 @@ export interface VehicleDamageEvent extends VehicleEvent, Cancellable {
 	getHandlers(): HandlerList;
 	getDamage(): number;
 	setDamage(damage: number): void;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 	getAttacker(): Entity;
 	getVehicle(): Vehicle;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class VehicleDamageEvent {

@@ -9,14 +9,14 @@ import {BlockEvent} from '../../../../org/bukkit/event/block/BlockEvent.js'
 export interface BlockDamageEvent extends BlockEvent, Cancellable {
 	getHandlers(): HandlerList;
 	getPlayer(): Player;
-	setCancelled(cancel: boolean): void;
-	isCancelled(): boolean;
 	getItemInHand(): ItemStack;
-	getInstaBreak(): boolean;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 	setInstaBreak(bool: boolean): void;
+	getInstaBreak(): boolean;
 	getBlock(): Block;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class BlockDamageEvent {

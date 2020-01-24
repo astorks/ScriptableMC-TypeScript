@@ -7,13 +7,13 @@ import {PlayerEvent} from '../../../../org/bukkit/event/player/PlayerEvent.js'
 
 export interface PlayerItemConsumeEvent extends PlayerEvent, Cancellable {
 	getHandlers(): HandlerList;
-	setItem(item: ItemStack): void;
-	getItem(): ItemStack;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
+	getItem(): ItemStack;
+	setItem(item: ItemStack): void;
 	getPlayer(): Player;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class PlayerItemConsumeEvent {

@@ -16,13 +16,13 @@ export interface TradeSelectEvent extends InventoryInteractEvent {
 	getMerchant(): Merchant;
 	getResult(): Event$Result;
 	setResult(newResult: Event$Result): void;
-	setCancelled(toCancel: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(toCancel: boolean): void;
 	getWhoClicked(): HumanEntity;
 	getViewers(): any;
 	getView(): InventoryView;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class TradeSelectEvent {

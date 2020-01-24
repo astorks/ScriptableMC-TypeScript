@@ -26,18 +26,18 @@ export interface Inventory {
 	all(item: ItemStack): any;
 	setContents(items: Array<ItemStack>): void;
 	getMaxStackSize(): number;
-	setItem(index: number, item: ItemStack): void;
-	addItem(items: Array<ItemStack>): any;
-	removeItem(items: Array<ItemStack>): any;
-	firstEmpty(): number;
 	getItem(index: number): ItemStack;
+	setItem(index: number, item: ItemStack): void;
+	removeItem(items: Array<ItemStack>): any;
+	containsAtLeast(item: ItemStack, amount: number): boolean;
+	firstEmpty(): number;
 	getHolder(): InventoryHolder;
-	setMaxStackSize(size: number): void;
+	getViewers(): any;
 	getStorageContents(): Array<ItemStack>;
+	setMaxStackSize(size: number): void;
+	addItem(items: Array<ItemStack>): any;
 	getContents(): Array<ItemStack>;
 	setStorageContents(items: Array<ItemStack>): void;
-	containsAtLeast(item: ItemStack, amount: number): boolean;
-	getViewers(): any;
 	spliterator(): any;
 	forEach(arg0: any): void;
 }

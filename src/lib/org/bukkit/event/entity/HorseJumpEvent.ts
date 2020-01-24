@@ -1,22 +1,22 @@
 declare var Java: any;
 import {HandlerList} from '../../../../org/bukkit/event/HandlerList.js'
-import {Entity} from '../../../../org/bukkit/entity/Entity.js'
 import {AbstractHorse} from '../../../../org/bukkit/entity/AbstractHorse.js'
+import {Entity} from '../../../../org/bukkit/entity/Entity.js'
 import {EntityType} from '../../../../org/bukkit/entity/EntityType.js'
 import {Cancellable} from '../../../../org/bukkit/event/Cancellable.js'
 import {EntityEvent} from '../../../../org/bukkit/event/entity/EntityEvent.js'
 
 export interface HorseJumpEvent extends EntityEvent, Cancellable {
 	getHandlers(): HandlerList;
-	getEntity(): Entity;
 	getEntity(): AbstractHorse;
-	setCancelled(cancel: boolean): void;
+	getEntity(): Entity;
 	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 	getPower(): number;
 	setPower(power: number): void;
 	getEntityType(): EntityType;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class HorseJumpEvent {

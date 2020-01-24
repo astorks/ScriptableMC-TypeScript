@@ -8,14 +8,14 @@ import {BlockEvent} from '../../../../org/bukkit/event/block/BlockEvent.js'
 export interface SignChangeEvent extends BlockEvent, Cancellable {
 	getHandlers(): HandlerList;
 	getPlayer(): Player;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 	getLines(): Array<string>;
 	setLine(index: number, line: string): void;
 	getLine(index: number): string;
 	getBlock(): Block;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class SignChangeEvent {

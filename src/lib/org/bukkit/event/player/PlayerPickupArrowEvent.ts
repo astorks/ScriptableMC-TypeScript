@@ -9,12 +9,12 @@ export interface PlayerPickupArrowEvent extends PlayerPickupItemEvent {
 	getArrow(): AbstractArrow;
 	getHandlers(): HandlerList;
 	getRemaining(): number;
-	getItem(): Item;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
+	getItem(): Item;
 	getPlayer(): Player;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class PlayerPickupArrowEvent {

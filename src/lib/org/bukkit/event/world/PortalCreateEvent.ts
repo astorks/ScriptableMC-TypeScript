@@ -9,13 +9,13 @@ import {WorldEvent} from '../../../../org/bukkit/event/world/WorldEvent.js'
 export interface PortalCreateEvent extends WorldEvent, Cancellable {
 	getHandlers(): HandlerList;
 	getEntity(): Entity;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
-	getBlocks(): any;
+	setCancelled(cancel: boolean): void;
 	getReason(): PortalCreateEvent$CreateReason;
+	getBlocks(): any;
 	getWorld(): World;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class PortalCreateEvent {

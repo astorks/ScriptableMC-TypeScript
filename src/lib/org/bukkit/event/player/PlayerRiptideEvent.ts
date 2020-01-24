@@ -8,8 +8,8 @@ export interface PlayerRiptideEvent extends PlayerEvent {
 	getHandlers(): HandlerList;
 	getItem(): ItemStack;
 	getPlayer(): Player;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class PlayerRiptideEvent {

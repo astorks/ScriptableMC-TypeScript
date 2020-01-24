@@ -11,11 +11,11 @@ export interface ItemMergeEvent extends EntityEvent, Cancellable {
 	getHandlers(): HandlerList;
 	getEntity(): Item;
 	getEntity(): Entity;
-	setCancelled(cancelled: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(cancelled: boolean): void;
 	getEntityType(): EntityType;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class ItemMergeEvent {

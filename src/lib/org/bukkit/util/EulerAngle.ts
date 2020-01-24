@@ -2,13 +2,13 @@ declare var Java: any;
 
 export interface EulerAngle {
 	add(x: number, y: number, z: number): EulerAngle;
-	setY(y: number): EulerAngle;
-	subtract(x: number, y: number, z: number): EulerAngle;
-	setX(x: number): EulerAngle;
-	getZ(): number;
-	getX(): number;
 	setZ(z: number): EulerAngle;
 	getY(): number;
+	setX(x: number): EulerAngle;
+	setY(y: number): EulerAngle;
+	getZ(): number;
+	getX(): number;
+	subtract(x: number, y: number, z: number): EulerAngle;
 }
 
 export class EulerAngle {

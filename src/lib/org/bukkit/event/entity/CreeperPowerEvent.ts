@@ -13,12 +13,12 @@ export interface CreeperPowerEvent extends EntityEvent, Cancellable {
 	getHandlers(): HandlerList;
 	getEntity(): Entity;
 	getEntity(): Creeper;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 	getLightning(): LightningStrike;
 	getEntityType(): EntityType;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class CreeperPowerEvent {

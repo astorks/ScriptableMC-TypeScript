@@ -11,13 +11,13 @@ export interface PigZombieAngerEvent extends EntityEvent, Cancellable {
 	getHandlers(): HandlerList;
 	getEntity(): PigZombie;
 	getEntity(): Entity;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 	getNewAnger(): number;
 	setNewAnger(newAnger: number): void;
 	getEntityType(): EntityType;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class PigZombieAngerEvent {

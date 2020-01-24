@@ -6,8 +6,8 @@ import {Event} from '../../../../org/bukkit/event/Event.js'
 export interface HangingEvent extends Event {
 	getEntity(): Hanging;
 	getHandlers(): HandlerList;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class HangingEvent {

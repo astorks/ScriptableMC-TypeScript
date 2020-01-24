@@ -3,8 +3,8 @@ import {HandlerList} from '../../../org/bukkit/event/HandlerList.js'
 
 export interface Event {
 	getHandlers(): HandlerList;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class Event {

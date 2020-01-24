@@ -11,11 +11,11 @@ export interface BlockCanBuildEvent extends BlockEvent {
 	getPlayer(): Player;
 	getMaterial(): Material;
 	getBlockData(): BlockData;
-	isBuildable(): boolean;
 	setBuildable(cancel: boolean): void;
+	isBuildable(): boolean;
 	getBlock(): Block;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class BlockCanBuildEvent {

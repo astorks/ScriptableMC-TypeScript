@@ -5,17 +5,17 @@ export interface MapCursor {
 	getType(): MapCursor$Type;
 	getRawType(): number;
 	setType(type: MapCursor$Type): void;
+	getY(): number;
+	setX(x: number): void;
+	setY(y: number): void;
+	getX(): number;
+	setDirection(direction: number): void;
+	getDirection(): number;
 	setVisible(visible: boolean): void;
 	isVisible(): boolean;
-	setDirection(direction: number): void;
-	setY(y: number): void;
-	setX(x: number): void;
-	getX(): number;
-	getDirection(): number;
-	getY(): number;
-	setRawType(type: number): void;
 	getCaption(): string;
 	setCaption(caption: string): void;
+	setRawType(type: number): void;
 }
 
 export class MapCursor {

@@ -6,11 +6,11 @@ import {WorldEvent} from '../../../../org/bukkit/event/world/WorldEvent.js'
 
 export interface WorldUnloadEvent extends WorldEvent, Cancellable {
 	getHandlers(): HandlerList;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 	getWorld(): World;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class WorldUnloadEvent {

@@ -1,22 +1,22 @@
 declare var Java: any;
-import {HandlerList} from '../../../../org/bukkit/event/HandlerList.js'
 import {PlayerLoginEvent$Result} from '../../../../org/bukkit/event/player/PlayerLoginEvent$Result.js'
+import {HandlerList} from '../../../../org/bukkit/event/HandlerList.js'
 import {Player} from '../../../../org/bukkit/entity/Player.js'
 import {PlayerEvent} from '../../../../org/bukkit/event/player/PlayerEvent.js'
 
 export interface PlayerLoginEvent extends PlayerEvent {
 	getAddress(): any;
-	getHandlers(): HandlerList;
 	getResult(): PlayerLoginEvent$Result;
 	setResult(result: PlayerLoginEvent$Result): void;
-	getHostname(): string;
-	getKickMessage(): string;
+	getHandlers(): HandlerList;
 	allow(): void;
-	setKickMessage(message: string): void;
+	getKickMessage(): string;
 	disallow(result: PlayerLoginEvent$Result, message: string): void;
+	setKickMessage(message: string): void;
+	getHostname(): string;
 	getPlayer(): Player;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class PlayerLoginEvent {

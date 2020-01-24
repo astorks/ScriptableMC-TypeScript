@@ -6,12 +6,12 @@ import {BlockGrowEvent} from '../../../../org/bukkit/event/block/BlockGrowEvent.
 
 export interface BlockFormEvent extends BlockGrowEvent {
 	getHandlers(): HandlerList;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 	getNewState(): BlockState;
 	getBlock(): Block;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class BlockFormEvent {

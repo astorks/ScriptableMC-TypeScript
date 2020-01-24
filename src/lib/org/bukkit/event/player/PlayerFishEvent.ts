@@ -10,15 +10,15 @@ import {PlayerEvent} from '../../../../org/bukkit/event/player/PlayerEvent.js'
 export interface PlayerFishEvent extends PlayerEvent, Cancellable {
 	getState(): PlayerFishEvent$State;
 	getHandlers(): HandlerList;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
-	getCaught(): Entity;
-	getHook(): FishHook;
+	setCancelled(cancel: boolean): void;
 	setExpToDrop(amount: number): void;
 	getExpToDrop(): number;
+	getCaught(): Entity;
+	getHook(): FishHook;
 	getPlayer(): Player;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class PlayerFishEvent {

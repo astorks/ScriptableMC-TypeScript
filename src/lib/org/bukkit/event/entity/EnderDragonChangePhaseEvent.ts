@@ -11,14 +11,14 @@ export interface EnderDragonChangePhaseEvent extends EntityEvent, Cancellable {
 	getHandlers(): HandlerList;
 	getEntity(): EnderDragon;
 	getEntity(): Entity;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 	setNewPhase(newPhase: EnderDragon$Phase): void;
-	getNewPhase(): EnderDragon$Phase;
 	getCurrentPhase(): EnderDragon$Phase;
+	getNewPhase(): EnderDragon$Phase;
 	getEntityType(): EntityType;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class EnderDragonChangePhaseEvent {

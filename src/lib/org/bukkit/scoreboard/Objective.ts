@@ -7,18 +7,18 @@ import {OfflinePlayer} from '../../../org/bukkit/OfflinePlayer.js'
 
 export interface Objective {
 	getName(): string;
-	getDisplayName(): string;
 	unregister(): void;
-	setDisplayName(displayName: string): void;
-	getCriteria(): string;
+	getDisplayName(): string;
 	getScoreboard(): Scoreboard;
+	setDisplayName(displayName: string): void;
 	getRenderType(): RenderType;
-	setRenderType(renderType: RenderType): void;
 	setDisplaySlot(slot: DisplaySlot): void;
-	getDisplaySlot(): DisplaySlot;
 	isModifiable(): boolean;
-	getScore(entry: string): Score;
+	setRenderType(renderType: RenderType): void;
+	getDisplaySlot(): DisplaySlot;
 	getScore(player: OfflinePlayer): Score;
+	getScore(entry: string): Score;
+	getCriteria(): string;
 }
 
 export class Objective {

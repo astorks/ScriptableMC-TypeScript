@@ -7,8 +7,8 @@ export interface PluginLoader {
 	loadPlugin(file: any): Plugin;
 	enablePlugin(plugin: Plugin): void;
 	disablePlugin(plugin: Plugin): void;
-	getPluginFileFilters(): Array<any>;
 	getPluginDescription(file: any): PluginDescriptionFile;
+	getPluginFileFilters(): Array<any>;
 	createRegisteredListeners(listener: Listener, plugin: Plugin): any;
 }
 

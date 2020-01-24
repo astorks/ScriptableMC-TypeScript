@@ -3,8 +3,8 @@ declare var Java: any;
 export interface Note$Tone {
 	getId(sharped: boolean): number;
 	getId(): number;
-	isSharpable(): boolean;
 	isSharped(id: number): boolean;
+	isSharpable(): boolean;
 	name(): string;
 	compareTo(arg0: any): number;
 	compareTo(arg0: any): number;

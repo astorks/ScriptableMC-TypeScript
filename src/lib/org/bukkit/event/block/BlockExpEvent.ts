@@ -8,8 +8,8 @@ export interface BlockExpEvent extends BlockEvent {
 	setExpToDrop(exp: number): void;
 	getExpToDrop(): number;
 	getBlock(): Block;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class BlockExpEvent {

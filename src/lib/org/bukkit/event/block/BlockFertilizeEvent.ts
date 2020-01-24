@@ -8,12 +8,12 @@ import {BlockEvent} from '../../../../org/bukkit/event/block/BlockEvent.js'
 export interface BlockFertilizeEvent extends BlockEvent, Cancellable {
 	getHandlers(): HandlerList;
 	getPlayer(): Player;
-	setCancelled(cancelled: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(cancelled: boolean): void;
 	getBlocks(): any;
 	getBlock(): Block;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class BlockFertilizeEvent {

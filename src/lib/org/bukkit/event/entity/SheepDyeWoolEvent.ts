@@ -11,13 +11,13 @@ export interface SheepDyeWoolEvent extends EntityEvent, Cancellable {
 	getHandlers(): HandlerList;
 	getEntity(): Sheep;
 	getEntity(): Entity;
-	setColor(color: DyeColor): void;
 	getColor(): DyeColor;
-	setCancelled(cancel: boolean): void;
+	setColor(color: DyeColor): void;
 	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 	getEntityType(): EntityType;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class SheepDyeWoolEvent {

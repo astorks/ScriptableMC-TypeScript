@@ -6,9 +6,9 @@ export interface Conversable {
 	abandonConversation(conversation: Conversation, details: ConversationAbandonedEvent): void;
 	abandonConversation(conversation: Conversation): void;
 	acceptConversationInput(input: string): void;
-	beginConversation(conversation: Conversation): boolean;
 	sendRawMessage(message: string): void;
 	isConversing(): boolean;
+	beginConversation(conversation: Conversation): boolean;
 }
 
 export class Conversable {

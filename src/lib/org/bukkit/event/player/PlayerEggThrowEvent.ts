@@ -1,22 +1,22 @@
 declare var Java: any;
 import {HandlerList} from '../../../../org/bukkit/event/HandlerList.js'
-import {Egg} from '../../../../org/bukkit/entity/Egg.js'
 import {EntityType} from '../../../../org/bukkit/entity/EntityType.js'
+import {Egg} from '../../../../org/bukkit/entity/Egg.js'
 import {Player} from '../../../../org/bukkit/entity/Player.js'
 import {PlayerEvent} from '../../../../org/bukkit/event/player/PlayerEvent.js'
 
 export interface PlayerEggThrowEvent extends PlayerEvent {
 	getHandlers(): HandlerList;
-	getEgg(): Egg;
 	setHatching(hatching: boolean): void;
-	setHatchingType(hatchType: EntityType): void;
-	getNumHatches(): number;
 	setNumHatches(numHatches: number): void;
+	getNumHatches(): number;
+	setHatchingType(hatchType: EntityType): void;
 	isHatching(): boolean;
 	getHatchingType(): EntityType;
+	getEgg(): Egg;
 	getPlayer(): Player;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class PlayerEggThrowEvent {

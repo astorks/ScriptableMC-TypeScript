@@ -12,13 +12,13 @@ export interface EntityChangeBlockEvent extends EntityEvent, Cancellable {
 	getHandlers(): HandlerList;
 	getBlock(): Block;
 	getBlockData(): BlockData;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 	getTo(): Material;
 	getEntity(): Entity;
 	getEntityType(): EntityType;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class EntityChangeBlockEvent {

@@ -9,13 +9,13 @@ import {InventoryEvent} from '../../../../org/bukkit/event/inventory/InventoryEv
 export interface InventoryOpenEvent extends InventoryEvent, Cancellable {
 	getHandlers(): HandlerList;
 	getPlayer(): HumanEntity;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 	getInventory(): Inventory;
 	getViewers(): any;
 	getView(): InventoryView;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class InventoryOpenEvent {

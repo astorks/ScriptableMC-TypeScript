@@ -11,17 +11,17 @@ export interface EntityBreedEvent extends EntityEvent, Cancellable {
 	getHandlers(): HandlerList;
 	getEntity(): LivingEntity;
 	getEntity(): Entity;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
-	setExperience(experience: number): void;
-	getExperience(): number;
+	setCancelled(cancel: boolean): void;
 	getBredWith(): ItemStack;
-	getBreeder(): LivingEntity;
-	getMother(): LivingEntity;
+	setExperience(experience: number): void;
 	getFather(): LivingEntity;
+	getMother(): LivingEntity;
+	getBreeder(): LivingEntity;
+	getExperience(): number;
 	getEntityType(): EntityType;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class EntityBreedEvent {

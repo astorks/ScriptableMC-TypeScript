@@ -10,8 +10,8 @@ export interface EntityPoseChangeEvent extends EntityEvent {
 	getPose(): Pose;
 	getEntity(): Entity;
 	getEntityType(): EntityType;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class EntityPoseChangeEvent {

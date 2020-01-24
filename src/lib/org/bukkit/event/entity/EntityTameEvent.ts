@@ -12,11 +12,11 @@ export interface EntityTameEvent extends EntityEvent, Cancellable {
 	getHandlers(): HandlerList;
 	getEntity(): LivingEntity;
 	getEntity(): Entity;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 	getEntityType(): EntityType;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class EntityTameEvent {

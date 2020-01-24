@@ -8,12 +8,12 @@ import {PlayerEvent} from '../../../../org/bukkit/event/player/PlayerEvent.js'
 export interface PlayerPickupItemEvent extends PlayerEvent, Cancellable {
 	getHandlers(): HandlerList;
 	getRemaining(): number;
-	getItem(): Item;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
+	getItem(): Item;
 	getPlayer(): Player;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class PlayerPickupItemEvent {

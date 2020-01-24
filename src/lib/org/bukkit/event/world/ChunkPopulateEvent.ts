@@ -8,8 +8,8 @@ export interface ChunkPopulateEvent extends ChunkEvent {
 	getHandlers(): HandlerList;
 	getChunk(): Chunk;
 	getWorld(): World;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class ChunkPopulateEvent {

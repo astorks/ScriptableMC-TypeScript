@@ -6,8 +6,8 @@ import {ServerEvent} from '../../../../org/bukkit/event/server/ServerEvent.js'
 export interface PluginEvent extends ServerEvent {
 	getPlugin(): Plugin;
 	getHandlers(): HandlerList;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class PluginEvent {

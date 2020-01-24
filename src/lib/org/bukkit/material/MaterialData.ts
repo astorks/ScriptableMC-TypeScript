@@ -5,11 +5,11 @@ import {ItemStack} from '../../../org/bukkit/inventory/ItemStack.js'
 export interface MaterialData {
 	clone(): any;
 	clone(): MaterialData;
-	setData(data: number): void;
-	getData(): number;
 	getItemType(): Material;
 	toItemStack(amount: number): ItemStack;
 	toItemStack(): ItemStack;
+	getData(): number;
+	setData(data: number): void;
 }
 
 export class MaterialData {

@@ -4,8 +4,8 @@ import {Event} from '../../../../org/bukkit/event/Event.js'
 
 export interface ServerEvent extends Event {
 	getHandlers(): HandlerList;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class ServerEvent {

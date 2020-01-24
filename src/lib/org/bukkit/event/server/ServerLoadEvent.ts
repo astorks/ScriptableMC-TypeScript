@@ -6,8 +6,8 @@ import {ServerEvent} from '../../../../org/bukkit/event/server/ServerEvent.js'
 export interface ServerLoadEvent extends ServerEvent {
 	getType(): ServerLoadEvent$LoadType;
 	getHandlers(): HandlerList;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class ServerLoadEvent {

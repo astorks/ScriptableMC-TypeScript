@@ -7,8 +7,8 @@ export interface PlayerLocaleChangeEvent extends PlayerEvent {
 	getHandlers(): HandlerList;
 	getLocale(): string;
 	getPlayer(): Player;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class PlayerLocaleChangeEvent {

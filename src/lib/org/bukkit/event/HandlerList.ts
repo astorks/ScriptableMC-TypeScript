@@ -8,9 +8,9 @@ export interface HandlerList {
 	unregister(listener: RegisteredListener): void;
 	unregister(plugin: Plugin): void;
 	unregister(listener: Listener): void;
-	getRegisteredListeners(): Array<RegisteredListener>;
-	registerAll(listeners: any): void;
 	bake(): void;
+	registerAll(listeners: any): void;
+	getRegisteredListeners(): Array<RegisteredListener>;
 }
 
 export class HandlerList {

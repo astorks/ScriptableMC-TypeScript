@@ -8,14 +8,14 @@ import {Event} from '../../../../org/bukkit/event/Event.js'
 export interface InventoryMoveItemEvent extends Event, Cancellable {
 	getHandlers(): HandlerList;
 	getSource(): Inventory;
-	setItem(itemStack: ItemStack): void;
-	getItem(): ItemStack;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
-	getDestination(): Inventory;
+	setCancelled(cancel: boolean): void;
+	getItem(): ItemStack;
+	setItem(itemStack: ItemStack): void;
 	getInitiator(): Inventory;
-	isAsynchronous(): boolean;
+	getDestination(): Inventory;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class InventoryMoveItemEvent {

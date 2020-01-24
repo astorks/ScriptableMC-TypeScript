@@ -6,12 +6,12 @@ import {ServerEvent} from '../../../../org/bukkit/event/server/ServerEvent.js'
 export interface BroadcastMessageEvent extends ServerEvent, Cancellable {
 	getMessage(): string;
 	getHandlers(): HandlerList;
-	setMessage(message: string): void;
-	setCancelled(cancelled: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(cancelled: boolean): void;
+	setMessage(message: string): void;
 	getRecipients(): any;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class BroadcastMessageEvent {

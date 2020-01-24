@@ -9,12 +9,12 @@ import {BlockEvent} from '../../../../org/bukkit/event/block/BlockEvent.js'
 export interface BlockShearEntityEvent extends BlockEvent, Cancellable {
 	getHandlers(): HandlerList;
 	getEntity(): Entity;
-	setCancelled(cancelled: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(cancelled: boolean): void;
 	getTool(): ItemStack;
 	getBlock(): Block;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class BlockShearEntityEvent {

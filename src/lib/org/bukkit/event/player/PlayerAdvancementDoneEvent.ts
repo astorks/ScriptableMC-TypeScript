@@ -8,8 +8,8 @@ export interface PlayerAdvancementDoneEvent extends PlayerEvent {
 	getHandlers(): HandlerList;
 	getAdvancement(): Advancement;
 	getPlayer(): Player;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class PlayerAdvancementDoneEvent {

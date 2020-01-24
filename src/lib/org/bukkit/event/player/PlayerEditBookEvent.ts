@@ -8,16 +8,16 @@ import {PlayerEvent} from '../../../../org/bukkit/event/player/PlayerEvent.js'
 export interface PlayerEditBookEvent extends PlayerEvent, Cancellable {
 	getSlot(): number;
 	getHandlers(): HandlerList;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
-	getPreviousBookMeta(): BookMeta;
-	setNewBookMeta(newBookMeta: BookMeta): void;
+	setCancelled(cancel: boolean): void;
 	setSigning(signing: boolean): void;
+	getPreviousBookMeta(): BookMeta;
 	isSigning(): boolean;
 	getNewBookMeta(): BookMeta;
+	setNewBookMeta(newBookMeta: BookMeta): void;
 	getPlayer(): Player;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class PlayerEditBookEvent {

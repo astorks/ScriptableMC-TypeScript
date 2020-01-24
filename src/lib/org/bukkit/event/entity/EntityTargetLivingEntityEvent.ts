@@ -11,13 +11,13 @@ export interface EntityTargetLivingEntityEvent extends EntityTargetEvent {
 	getTarget(): Entity;
 	setTarget(target: Entity): void;
 	getHandlers(): HandlerList;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 	getReason(): EntityTargetEvent$TargetReason;
 	getEntity(): Entity;
 	getEntityType(): EntityType;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class EntityTargetLivingEntityEvent {

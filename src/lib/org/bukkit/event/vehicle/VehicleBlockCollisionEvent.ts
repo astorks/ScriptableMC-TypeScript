@@ -8,8 +8,8 @@ export interface VehicleBlockCollisionEvent extends VehicleCollisionEvent {
 	getHandlers(): HandlerList;
 	getBlock(): Block;
 	getVehicle(): Vehicle;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class VehicleBlockCollisionEvent {

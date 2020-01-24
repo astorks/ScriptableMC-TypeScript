@@ -6,14 +6,14 @@ import {BlockEvent} from '../../../../org/bukkit/event/block/BlockEvent.js'
 
 export interface BlockExplodeEvent extends BlockEvent, Cancellable {
 	getHandlers(): HandlerList;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
-	setYield(_yield: number): void;
+	setCancelled(cancel: boolean): void;
 	blockList(): any;
+	setYield(_yield: number): void;
 	getYield(): number;
 	getBlock(): Block;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class BlockExplodeEvent {

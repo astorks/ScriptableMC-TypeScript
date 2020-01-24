@@ -7,14 +7,14 @@ import {EntityEvent} from '../../../../org/bukkit/event/entity/EntityEvent.js'
 
 export interface EntityCombustEvent extends EntityEvent, Cancellable {
 	getHandlers(): HandlerList;
-	setCancelled(cancel: boolean): void;
 	isCancelled(): boolean;
-	getDuration(): number;
+	setCancelled(cancel: boolean): void;
 	setDuration(duration: number): void;
+	getDuration(): number;
 	getEntity(): Entity;
 	getEntityType(): EntityType;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class EntityCombustEvent {

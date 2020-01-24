@@ -1,20 +1,20 @@
 declare var Java: any;
-import {Player} from '../../../../org/bukkit/entity/Player.js'
 import {Material} from '../../../../org/bukkit/Material.js'
+import {Player} from '../../../../org/bukkit/entity/Player.js'
 import {HandlerList} from '../../../../org/bukkit/event/HandlerList.js'
 import {Block} from '../../../../org/bukkit/block/Block.js'
 import {BlockExpEvent} from '../../../../org/bukkit/event/block/BlockExpEvent.js'
 
 export interface FurnaceExtractEvent extends BlockExpEvent {
-	getPlayer(): Player;
 	getItemType(): Material;
+	getPlayer(): Player;
 	getItemAmount(): number;
 	getHandlers(): HandlerList;
 	setExpToDrop(exp: number): void;
 	getExpToDrop(): number;
 	getBlock(): Block;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class FurnaceExtractEvent {

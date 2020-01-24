@@ -6,11 +6,11 @@ import {VehicleEvent} from '../../../../org/bukkit/event/vehicle/VehicleEvent.js
 
 export interface VehicleCreateEvent extends VehicleEvent, Cancellable {
 	getHandlers(): HandlerList;
-	setCancelled(cancelled: boolean): void;
 	isCancelled(): boolean;
+	setCancelled(cancelled: boolean): void;
 	getVehicle(): Vehicle;
-	isAsynchronous(): boolean;
 	getEventName(): string;
+	isAsynchronous(): boolean;
 }
 
 export class VehicleCreateEvent {
