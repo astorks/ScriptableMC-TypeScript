@@ -20,11 +20,9 @@ jobs:
         npm run docs
       env:
         CI: true
-    - name: Add .nojkelly
+    - name: Add .nojekyll
       run: |
         touch ./docs/.nojekyll
-      env:
-        CI: true
     - name: Build and Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
