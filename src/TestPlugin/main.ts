@@ -123,7 +123,7 @@ export class TestPlugin extends JsPlugin {
 
                         contents.set(1, 3, SmartInventory.clickableItem(
                             SmartInventory.itemBuilder(new ItemStack(Material.DIAMOND))
-                                    .setDisplayName(plugin.setPlaceholders(player, "%animations_Fadein_TEST%"))
+                                    .setDisplayName("Print Server Name")
                                     .build(),
                             () => {
                                 if(player != null) {
