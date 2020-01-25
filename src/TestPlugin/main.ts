@@ -15,11 +15,20 @@ import { EntityDamageEvent } from '../lib/org/bukkit/event/entity/EntityDamageEv
 import { PlayerInteractAtEntityEvent } from '../lib/org/bukkit/event/player/PlayerInteractAtEntityEvent.js';
 import { PlayerInteractEntityEvent } from '../lib/org/bukkit/event/player/PlayerInteractEntityEvent.js';
 import { ByteStreams } from '../lib/com/google/common/io/ByteStreams.js';
+import CONFIG from './config.js'
 
 export class TestPlugin extends JsPlugin {
 
+    onLoad() {
+        if(CONFIG.debug) {
+            console.log("[" + this.pluginName + "] onLoad()");
+        }
+    }
+
     onEnable() {
-        console.log("[" + this.pluginName + "] onEnable()");
+        if(CONFIG.debug) {
+            console.log("[" + this.pluginName + "] onEnable()");
+        }
 
         // register outgoing bungee message channel
         this.registerOutgoingPluginChannel('BungeeCord');
@@ -51,6 +60,10 @@ export class TestPlugin extends JsPlugin {
     }
 
     onDisable() {
+        if(CONFIG.debug) {
+            console.log("[" + this.pluginName + "] onDisable()");
+        }
+
         this.unregisterOutgoingPluginChannel('BungeeCord');
         this.unregisterIncomingPluginChannel('BungeeCord');
     }
