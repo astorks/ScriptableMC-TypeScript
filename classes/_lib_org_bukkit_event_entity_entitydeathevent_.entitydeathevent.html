@@ -114,6 +114,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="_lib_org_bukkit_event_entity_entitydeathevent_.entitydeathevent.html#gethandlers" class="tsd-kind-icon">get<wbr>Handlers</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="_lib_org_bukkit_event_entity_entitydeathevent_.entitydeathevent.html#isasynchronous" class="tsd-kind-icon">is<wbr>Asynchronous</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_org_bukkit_event_entity_entitydeathevent_.entitydeathevent.html#setdroppedexp" class="tsd-kind-icon">set<wbr>Dropped<wbr>Exp</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_lib_org_bukkit_event_entity_entitydeathevent_.entitydeathevent.html#gethandlerlist" class="tsd-kind-icon">get<wbr>Handler<wbr>List</a></li>
 							</ul>
 						</section>
 					</div>
@@ -126,15 +127,15 @@
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">new <wbr>Entity<wbr>Death<wbr>Event<span class="tsd-signature-symbol">(</span>what<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_entity_entity_.entity.html" class="tsd-signature-type">Entity</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_event_entity_entitydeathevent_.entitydeathevent.html" class="tsd-signature-type">EntityDeathEvent</a></li>
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Entity<wbr>Death<wbr>Event<span class="tsd-signature-symbol">(</span>what<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_entity_livingentity_.livingentity.html" class="tsd-signature-type">LivingEntity</a>, drops<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, droppedExp<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_event_entity_entitydeathevent_.entitydeathevent.html" class="tsd-signature-type">EntityDeathEvent</a></li>
 						<li class="tsd-signature tsd-kind-icon">new <wbr>Entity<wbr>Death<wbr>Event<span class="tsd-signature-symbol">(</span>entity<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_entity_livingentity_.livingentity.html" class="tsd-signature-type">LivingEntity</a>, drops<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_event_entity_entitydeathevent_.entitydeathevent.html" class="tsd-signature-type">EntityDeathEvent</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Entity<wbr>Death<wbr>Event<span class="tsd-signature-symbol">(</span>what<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_entity_livingentity_.livingentity.html" class="tsd-signature-type">LivingEntity</a>, drops<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, droppedExp<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_event_entity_entitydeathevent_.entitydeathevent.html" class="tsd-signature-type">EntityDeathEvent</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html">EntityDamageEvent</a>.<a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/event/entity/EntityEvent.ts#L18">lib/org/bukkit/event/entity/EntityEvent.ts:18</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/event/entity/EntityEvent.ts#L18">lib/org/bukkit/event/entity/EntityEvent.ts:18</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -149,7 +150,25 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html">EntityDamageEvent</a>.<a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/event/entity/EntityDeathEvent.ts#L23">lib/org/bukkit/event/entity/EntityDeathEvent.ts:23</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/event/entity/EntityDeathEvent.ts#L23">lib/org/bukkit/event/entity/EntityDeathEvent.ts:23</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>entity: <a href="_lib_org_bukkit_entity_livingentity_.livingentity.html" class="tsd-signature-type">LivingEntity</a></h5>
+								</li>
+								<li>
+									<h5>drops: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_event_entity_entitydeathevent_.entitydeathevent.html" class="tsd-signature-type">EntityDeathEvent</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html">EntityDamageEvent</a>.<a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html#constructor">constructor</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/event/entity/EntityDeathEvent.ts#L24">lib/org/bukkit/event/entity/EntityDeathEvent.ts:24</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -162,24 +181,6 @@
 								</li>
 								<li>
 									<h5>droppedExp: <span class="tsd-signature-type">number</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_event_entity_entitydeathevent_.entitydeathevent.html" class="tsd-signature-type">EntityDeathEvent</a></h4>
-						</li>
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Inherited from <a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html">EntityDamageEvent</a>.<a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html#constructor">constructor</a></p>
-								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/event/entity/EntityDeathEvent.ts#L24">lib/org/bukkit/event/entity/EntityDeathEvent.ts:24</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>entity: <a href="_lib_org_bukkit_entity_livingentity_.livingentity.html" class="tsd-signature-type">LivingEntity</a></h5>
-								</li>
-								<li>
-									<h5>drops: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_event_entity_entitydeathevent_.entitydeathevent.html" class="tsd-signature-type">EntityDeathEvent</a></h4>
@@ -200,7 +201,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html">EntityDamageEvent</a>.<a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html#_javaclass">$javaClass</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/event/entity/EntityDeathEvent.ts#L21">lib/org/bukkit/event/entity/EntityDeathEvent.ts:21</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/event/entity/EntityDeathEvent.ts#L21">lib/org/bukkit/event/entity/EntityDeathEvent.ts:21</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -220,7 +221,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/event/entity/EntityDeathEvent.ts#L14">lib/org/bukkit/event/entity/EntityDeathEvent.ts:14</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/event/entity/EntityDeathEvent.ts#L13">lib/org/bukkit/event/entity/EntityDeathEvent.ts:13</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -237,7 +238,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/event/entity/EntityDeathEvent.ts#L12">lib/org/bukkit/event/entity/EntityDeathEvent.ts:12</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/event/entity/EntityDeathEvent.ts#L12">lib/org/bukkit/event/entity/EntityDeathEvent.ts:12</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -248,27 +249,27 @@
 					<a name="getentity" class="tsd-anchor"></a>
 					<h3>get<wbr>Entity</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Entity<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_entity_entity_.entity.html" class="tsd-signature-type">Entity</a></li>
 						<li class="tsd-signature tsd-kind-icon">get<wbr>Entity<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_entity_livingentity_.livingentity.html" class="tsd-signature-type">LivingEntity</a></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Entity<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_entity_entity_.entity.html" class="tsd-signature-type">Entity</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_lib_org_bukkit_event_entity_entityevent_.entityevent.html">EntityEvent</a>.<a href="_lib_org_bukkit_event_entity_entityevent_.entityevent.html#getentity">getEntity</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/event/entity/EntityDeathEvent.ts#L10">lib/org/bukkit/event/entity/EntityDeathEvent.ts:10</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/event/entity/EntityDeathEvent.ts#L10">lib/org/bukkit/event/entity/EntityDeathEvent.ts:10</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_entity_entity_.entity.html" class="tsd-signature-type">Entity</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_entity_livingentity_.livingentity.html" class="tsd-signature-type">LivingEntity</a></h4>
 						</li>
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_lib_org_bukkit_event_entity_entityevent_.entityevent.html">EntityEvent</a>.<a href="_lib_org_bukkit_event_entity_entityevent_.entityevent.html#getentity">getEntity</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/event/entity/EntityDeathEvent.ts#L11">lib/org/bukkit/event/entity/EntityDeathEvent.ts:11</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/event/entity/EntityDeathEvent.ts#L11">lib/org/bukkit/event/entity/EntityDeathEvent.ts:11</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_entity_livingentity_.livingentity.html" class="tsd-signature-type">LivingEntity</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_entity_entity_.entity.html" class="tsd-signature-type">Entity</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -283,7 +284,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_lib_org_bukkit_event_entity_entityevent_.entityevent.html">EntityEvent</a>.<a href="_lib_org_bukkit_event_entity_entityevent_.entityevent.html#getentitytype">getEntityType</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/event/entity/EntityDeathEvent.ts#L15">lib/org/bukkit/event/entity/EntityDeathEvent.ts:15</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/event/entity/EntityDeathEvent.ts#L15">lib/org/bukkit/event/entity/EntityDeathEvent.ts:15</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_entity_entitytype_.entitytype.html" class="tsd-signature-type">EntityType</a></h4>
@@ -301,7 +302,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_lib_org_bukkit_event_entity_entityevent_.entityevent.html">EntityEvent</a>.<a href="_lib_org_bukkit_event_entity_entityevent_.entityevent.html#geteventname">getEventName</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/event/entity/EntityDeathEvent.ts#L16">lib/org/bukkit/event/entity/EntityDeathEvent.ts:16</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/event/entity/EntityDeathEvent.ts#L16">lib/org/bukkit/event/entity/EntityDeathEvent.ts:16</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -319,7 +320,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_lib_org_bukkit_event_entity_entityevent_.entityevent.html">EntityEvent</a>.<a href="_lib_org_bukkit_event_entity_entityevent_.entityevent.html#gethandlers">getHandlers</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/event/entity/EntityDeathEvent.ts#L9">lib/org/bukkit/event/entity/EntityDeathEvent.ts:9</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/event/entity/EntityDeathEvent.ts#L9">lib/org/bukkit/event/entity/EntityDeathEvent.ts:9</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_event_handlerlist_.handlerlist.html" class="tsd-signature-type">HandlerList</a></h4>
@@ -337,7 +338,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_lib_org_bukkit_event_entity_entityevent_.entityevent.html">EntityEvent</a>.<a href="_lib_org_bukkit_event_entity_entityevent_.entityevent.html#isasynchronous">isAsynchronous</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/event/entity/EntityDeathEvent.ts#L17">lib/org/bukkit/event/entity/EntityDeathEvent.ts:17</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/event/entity/EntityDeathEvent.ts#L17">lib/org/bukkit/event/entity/EntityDeathEvent.ts:17</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -354,7 +355,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/event/entity/EntityDeathEvent.ts#L13">lib/org/bukkit/event/entity/EntityDeathEvent.ts:13</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/event/entity/EntityDeathEvent.ts#L14">lib/org/bukkit/event/entity/EntityDeathEvent.ts:14</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -364,6 +365,23 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="gethandlerlist" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> get<wbr>Handler<wbr>List</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Handler<wbr>List<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_event_handlerlist_.handlerlist.html" class="tsd-signature-type">HandlerList</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/event/entity/EntityDeathEvent.ts#L29">lib/org/bukkit/event/entity/EntityDeathEvent.ts:29</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_event_handlerlist_.handlerlist.html" class="tsd-signature-type">HandlerList</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -416,6 +434,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_lib_org_bukkit_event_entity_entitydeathevent_.entitydeathevent.html#setdroppedexp" class="tsd-kind-icon">set<wbr>Dropped<wbr>Exp</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_lib_org_bukkit_event_entity_entitydeathevent_.entitydeathevent.html#gethandlerlist" class="tsd-kind-icon">get<wbr>Handler<wbr>List</a>
 							</li>
 						</ul>
 					</li>

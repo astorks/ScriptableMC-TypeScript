@@ -115,6 +115,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="_lib_org_bukkit_event_entity_entitydamagebyblockevent_.entitydamagebyblockevent.html#iscancelled" class="tsd-kind-icon">is<wbr>Cancelled</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="_lib_org_bukkit_event_entity_entitydamagebyblockevent_.entitydamagebyblockevent.html#setcancelled" class="tsd-kind-icon">set<wbr>Cancelled</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="_lib_org_bukkit_event_entity_entitydamagebyblockevent_.entitydamagebyblockevent.html#setdamage" class="tsd-kind-icon">set<wbr>Damage</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_lib_org_bukkit_event_entity_entitydamagebyblockevent_.entitydamagebyblockevent.html#gethandlerlist" class="tsd-kind-icon">get<wbr>Handler<wbr>List</a></li>
 							</ul>
 						</section>
 					</div>
@@ -128,15 +129,15 @@
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">new <wbr>Entity<wbr>Damage<wbr>ByBlock<wbr>Event<span class="tsd-signature-symbol">(</span>damagee<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_entity_entity_.entity.html" class="tsd-signature-type">Entity</a>, cause<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_event_entity_entitydamageevent_damagecause_.entitydamageevent_damagecause.html" class="tsd-signature-type">EntityDamageEvent$DamageCause</a>, modifiers<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, modifierFunctions<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_event_entity_entitydamagebyblockevent_.entitydamagebyblockevent.html" class="tsd-signature-type">EntityDamageByBlockEvent</a></li>
 						<li class="tsd-signature tsd-kind-icon">new <wbr>Entity<wbr>Damage<wbr>ByBlock<wbr>Event<span class="tsd-signature-symbol">(</span>damagee<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_entity_entity_.entity.html" class="tsd-signature-type">Entity</a>, cause<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_event_entity_entitydamageevent_damagecause_.entitydamageevent_damagecause.html" class="tsd-signature-type">EntityDamageEvent$DamageCause</a>, damage<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_event_entity_entitydamagebyblockevent_.entitydamagebyblockevent.html" class="tsd-signature-type">EntityDamageByBlockEvent</a></li>
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Entity<wbr>Damage<wbr>ByBlock<wbr>Event<span class="tsd-signature-symbol">(</span>damager<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_block_block_.block.html" class="tsd-signature-type">Block</a>, damagee<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_entity_entity_.entity.html" class="tsd-signature-type">Entity</a>, cause<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_event_entity_entitydamageevent_damagecause_.entitydamageevent_damagecause.html" class="tsd-signature-type">EntityDamageEvent$DamageCause</a>, damage<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_event_entity_entitydamagebyblockevent_.entitydamagebyblockevent.html" class="tsd-signature-type">EntityDamageByBlockEvent</a></li>
 						<li class="tsd-signature tsd-kind-icon">new <wbr>Entity<wbr>Damage<wbr>ByBlock<wbr>Event<span class="tsd-signature-symbol">(</span>damager<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_block_block_.block.html" class="tsd-signature-type">Block</a>, damagee<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_entity_entity_.entity.html" class="tsd-signature-type">Entity</a>, cause<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_event_entity_entitydamageevent_damagecause_.entitydamageevent_damagecause.html" class="tsd-signature-type">EntityDamageEvent$DamageCause</a>, modifiers<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, modifierFunctions<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_event_entity_entitydamagebyblockevent_.entitydamagebyblockevent.html" class="tsd-signature-type">EntityDamageByBlockEvent</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Entity<wbr>Damage<wbr>ByBlock<wbr>Event<span class="tsd-signature-symbol">(</span>damager<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_block_block_.block.html" class="tsd-signature-type">Block</a>, damagee<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_entity_entity_.entity.html" class="tsd-signature-type">Entity</a>, cause<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_event_entity_entitydamageevent_damagecause_.entitydamageevent_damagecause.html" class="tsd-signature-type">EntityDamageEvent$DamageCause</a>, damage<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_event_entity_entitydamagebyblockevent_.entitydamagebyblockevent.html" class="tsd-signature-type">EntityDamageByBlockEvent</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_lib_org_bukkit_event_entity_entitydamagebyblockevent_.entitydamagebyblockevent.html">EntityDamageByBlockEvent</a>.<a href="_lib_org_bukkit_event_entity_entitydamagebyblockevent_.entitydamagebyblockevent.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/event/entity/EntityDamageEvent.ts#L31">lib/org/bukkit/event/entity/EntityDamageEvent.ts:31</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/event/entity/EntityDamageEvent.ts#L31">lib/org/bukkit/event/entity/EntityDamageEvent.ts:31</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -160,7 +161,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_lib_org_bukkit_event_entity_entitydamagebyblockevent_.entitydamagebyblockevent.html">EntityDamageByBlockEvent</a>.<a href="_lib_org_bukkit_event_entity_entitydamagebyblockevent_.entitydamagebyblockevent.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/event/entity/EntityDamageEvent.ts#L32">lib/org/bukkit/event/entity/EntityDamageEvent.ts:32</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/event/entity/EntityDamageEvent.ts#L32">lib/org/bukkit/event/entity/EntityDamageEvent.ts:32</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -181,31 +182,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_lib_org_bukkit_event_entity_entitydamagebyblockevent_.entitydamagebyblockevent.html">EntityDamageByBlockEvent</a>.<a href="_lib_org_bukkit_event_entity_entitydamagebyblockevent_.entitydamagebyblockevent.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts#L32">lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts:32</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>damager: <a href="_lib_org_bukkit_block_block_.block.html" class="tsd-signature-type">Block</a></h5>
-								</li>
-								<li>
-									<h5>damagee: <a href="_lib_org_bukkit_entity_entity_.entity.html" class="tsd-signature-type">Entity</a></h5>
-								</li>
-								<li>
-									<h5>cause: <a href="_lib_org_bukkit_event_entity_entitydamageevent_damagecause_.entitydamageevent_damagecause.html" class="tsd-signature-type">EntityDamageEvent$DamageCause</a></h5>
-								</li>
-								<li>
-									<h5>damage: <span class="tsd-signature-type">number</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_event_entity_entitydamagebyblockevent_.entitydamagebyblockevent.html" class="tsd-signature-type">EntityDamageByBlockEvent</a></h4>
-						</li>
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Inherited from <a href="_lib_org_bukkit_event_entity_entitydamagebyblockevent_.entitydamagebyblockevent.html">EntityDamageByBlockEvent</a>.<a href="_lib_org_bukkit_event_entity_entitydamagebyblockevent_.entitydamagebyblockevent.html#constructor">constructor</a></p>
-								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts#L33">lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts:33</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts#L32">lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts:32</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -224,6 +201,30 @@
 								</li>
 								<li>
 									<h5>modifierFunctions: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_event_entity_entitydamagebyblockevent_.entitydamagebyblockevent.html" class="tsd-signature-type">EntityDamageByBlockEvent</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_lib_org_bukkit_event_entity_entitydamagebyblockevent_.entitydamagebyblockevent.html">EntityDamageByBlockEvent</a>.<a href="_lib_org_bukkit_event_entity_entitydamagebyblockevent_.entitydamagebyblockevent.html#constructor">constructor</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts#L33">lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts:33</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>damager: <a href="_lib_org_bukkit_block_block_.block.html" class="tsd-signature-type">Block</a></h5>
+								</li>
+								<li>
+									<h5>damagee: <a href="_lib_org_bukkit_entity_entity_.entity.html" class="tsd-signature-type">Entity</a></h5>
+								</li>
+								<li>
+									<h5>cause: <a href="_lib_org_bukkit_event_entity_entitydamageevent_damagecause_.entitydamageevent_damagecause.html" class="tsd-signature-type">EntityDamageEvent$DamageCause</a></h5>
+								</li>
+								<li>
+									<h5>damage: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_event_entity_entitydamagebyblockevent_.entitydamagebyblockevent.html" class="tsd-signature-type">EntityDamageByBlockEvent</a></h4>
@@ -244,7 +245,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_lib_org_bukkit_event_entity_entitydamagebyblockevent_.entitydamagebyblockevent.html">EntityDamageByBlockEvent</a>.<a href="_lib_org_bukkit_event_entity_entitydamagebyblockevent_.entitydamagebyblockevent.html#_javaclass">$javaClass</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts#L30">lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts:30</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts#L30">lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts:30</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -265,7 +266,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html">EntityDamageEvent</a>.<a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html#getcause">getCause</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts#L12">lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts:12</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts#L22">lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts:22</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_event_entity_entitydamageevent_damagecause_.entitydamageevent_damagecause.html" class="tsd-signature-type">EntityDamageEvent$DamageCause</a></h4>
@@ -276,15 +277,24 @@
 					<a name="getdamage" class="tsd-anchor"></a>
 					<h3>get<wbr>Damage</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Damage<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_event_entity_entitydamageevent_damagemodifier_.entitydamageevent_damagemodifier.html" class="tsd-signature-type">EntityDamageEvent$DamageModifier</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 						<li class="tsd-signature tsd-kind-icon">get<wbr>Damage<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Damage<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_event_entity_entitydamageevent_damagemodifier_.entitydamageevent_damagemodifier.html" class="tsd-signature-type">EntityDamageEvent$DamageModifier</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html">EntityDamageEvent</a>.<a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html#getdamage">getDamage</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts#L14">lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts:14</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts#L15">lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts:15</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html">EntityDamageEvent</a>.<a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html#getdamage">getDamage</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts#L16">lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts:16</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -293,15 +303,6 @@
 									<h5>type: <a href="_lib_org_bukkit_event_entity_entitydamageevent_damagemodifier_.entitydamageevent_damagemodifier.html" class="tsd-signature-type">EntityDamageEvent$DamageModifier</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
-						</li>
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Overrides <a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html">EntityDamageEvent</a>.<a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html#getdamage">getDamage</a></p>
-								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts#L15">lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts:15</a></li>
-								</ul>
-							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 						</li>
 					</ul>
@@ -316,7 +317,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts#L11">lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts:11</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts#L11">lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts:11</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_block_block_.block.html" class="tsd-signature-type">Block</a></h4>
@@ -334,7 +335,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html">EntityDamageEvent</a>.<a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html#getentity">getEntity</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts#L23">lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts:23</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts#L23">lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts:23</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_entity_entity_.entity.html" class="tsd-signature-type">Entity</a></h4>
@@ -352,7 +353,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html">EntityDamageEvent</a>.<a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html#getentitytype">getEntityType</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts#L24">lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts:24</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts#L24">lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts:24</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_entity_entitytype_.entitytype.html" class="tsd-signature-type">EntityType</a></h4>
@@ -370,7 +371,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html">EntityDamageEvent</a>.<a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html#geteventname">getEventName</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts#L25">lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts:25</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts#L25">lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts:25</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -388,7 +389,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html">EntityDamageEvent</a>.<a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html#getfinaldamage">getFinalDamage</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts#L21">lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts:21</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts#L21">lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts:21</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -406,7 +407,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html">EntityDamageEvent</a>.<a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html#gethandlers">getHandlers</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts#L13">lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts:13</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts#L12">lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts:12</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_event_handlerlist_.handlerlist.html" class="tsd-signature-type">HandlerList</a></h4>
@@ -424,7 +425,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html">EntityDamageEvent</a>.<a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html#getoriginaldamage">getOriginalDamage</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts#L22">lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts:22</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts#L20">lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts:20</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -448,7 +449,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html">EntityDamageEvent</a>.<a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html#isapplicable">isApplicable</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts#L18">lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts:18</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts#L17">lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts:17</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -472,7 +473,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html">EntityDamageEvent</a>.<a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html#isasynchronous">isAsynchronous</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts#L26">lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts:26</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts#L26">lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts:26</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -490,7 +491,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html">EntityDamageEvent</a>.<a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html#iscancelled">isCancelled</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts#L19">lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts:19</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts#L18">lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts:18</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -508,7 +509,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html">EntityDamageEvent</a>.<a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html#setcancelled">setCancelled</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts#L20">lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts:20</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts#L19">lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts:19</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -533,7 +534,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html">EntityDamageEvent</a>.<a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html#setdamage">setDamage</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts#L16">lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts:16</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts#L13">lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts:13</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -548,7 +549,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html">EntityDamageEvent</a>.<a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html#setdamage">setDamage</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts#L17">lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts:17</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts#L14">lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts:14</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -561,6 +562,34 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+					<a name="gethandlerlist" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> get<wbr>Handler<wbr>List</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Handler<wbr>List<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_event_handlerlist_.handlerlist.html" class="tsd-signature-type">HandlerList</a></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Handler<wbr>List<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_event_handlerlist_.handlerlist.html" class="tsd-signature-type">HandlerList</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html">EntityDamageEvent</a>.<a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html#gethandlerlist">getHandlerList</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/event/entity/EntityDamageEvent.ts#L37">lib/org/bukkit/event/entity/EntityDamageEvent.ts:37</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_event_handlerlist_.handlerlist.html" class="tsd-signature-type">HandlerList</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html">EntityDamageEvent</a>.<a href="_lib_org_bukkit_event_entity_entitydamageevent_.entitydamageevent.html#gethandlerlist">getHandlerList</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts#L38">lib/org/bukkit/event/entity/EntityDamageByBlockEvent.ts:38</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_event_handlerlist_.handlerlist.html" class="tsd-signature-type">HandlerList</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -631,6 +660,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 								<a href="_lib_org_bukkit_event_entity_entitydamagebyblockevent_.entitydamagebyblockevent.html#setdamage" class="tsd-kind-icon">set<wbr>Damage</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+								<a href="_lib_org_bukkit_event_entity_entitydamagebyblockevent_.entitydamagebyblockevent.html#gethandlerlist" class="tsd-kind-icon">get<wbr>Handler<wbr>List</a>
 							</li>
 						</ul>
 					</li>

@@ -105,12 +105,15 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_com_pixlfox_scriptablemc_core_scriptablepluginengine_.scriptablepluginengine.html#enableallplugins" class="tsd-kind-icon">enable<wbr>All<wbr>Plugins</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_com_pixlfox_scriptablemc_core_scriptablepluginengine_.scriptablepluginengine.html#enableplugin" class="tsd-kind-icon">enable<wbr>Plugin</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_com_pixlfox_scriptablemc_core_scriptablepluginengine_.scriptablepluginengine.html#eval" class="tsd-kind-icon">eval</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_com_pixlfox_scriptablemc_core_scriptablepluginengine_.scriptablepluginengine.html#evalfile" class="tsd-kind-icon">eval<wbr>File</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_com_pixlfox_scriptablemc_core_scriptablepluginengine_.scriptablepluginengine.html#evaljs" class="tsd-kind-icon">eval<wbr>Js</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_com_pixlfox_scriptablemc_core_scriptablepluginengine_.scriptablepluginengine.html#getbootstrapplugin" class="tsd-kind-icon">get<wbr>Bootstrap<wbr>Plugin</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_com_pixlfox_scriptablemc_core_scriptablepluginengine_.scriptablepluginengine.html#getdebugenabled" class="tsd-kind-icon">get<wbr>Debug<wbr>Enabled</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_com_pixlfox_scriptablemc_core_scriptablepluginengine_.scriptablepluginengine.html#getrootserverfolder" class="tsd-kind-icon">get<wbr>Root<wbr>Server<wbr>Folder</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_com_pixlfox_scriptablemc_core_scriptablepluginengine_.scriptablepluginengine.html#loadplugin" class="tsd-kind-icon">load<wbr>Plugin</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_com_pixlfox_scriptablemc_core_scriptablepluginengine_.scriptablepluginengine.html#setdebugenabled" class="tsd-kind-icon">set<wbr>Debug<wbr>Enabled</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_lib_com_pixlfox_scriptablemc_core_scriptablepluginengine_.scriptablepluginengine.html#access_getinst_cp" class="tsd-kind-icon">access$get<wbr>Inst$cp</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_lib_com_pixlfox_scriptablemc_core_scriptablepluginengine_.scriptablepluginengine.html#access_setinst_cp" class="tsd-kind-icon">access$set<wbr>Inst$cp</a></li>
 							</ul>
 						</section>
 					</div>
@@ -122,14 +125,31 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Scriptable<wbr>Plugin<wbr>Engine<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_plugin_java_javaplugin_.javaplugin.html" class="tsd-signature-type">JavaPlugin</a>, arg1<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, arg2<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, arg3<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_com_pixlfox_scriptablemc_core_scriptablepluginengine_.scriptablepluginengine.html" class="tsd-signature-type">ScriptablePluginEngine</a></li>
 						<li class="tsd-signature tsd-kind-icon">new <wbr>Scriptable<wbr>Plugin<wbr>Engine<span class="tsd-signature-symbol">(</span>bootstrapPlugin<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_plugin_java_javaplugin_.javaplugin.html" class="tsd-signature-type">JavaPlugin</a>, rootServerFolder<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_com_pixlfox_scriptablemc_core_scriptablepluginengine_.scriptablepluginengine.html" class="tsd-signature-type">ScriptablePluginEngine</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Scriptable<wbr>Plugin<wbr>Engine<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_plugin_java_javaplugin_.javaplugin.html" class="tsd-signature-type">JavaPlugin</a>, arg1<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, arg2<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, arg3<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_com_pixlfox_scriptablemc_core_scriptablepluginengine_.scriptablepluginengine.html" class="tsd-signature-type">ScriptablePluginEngine</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts#L23">lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts:23</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts#L24">lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts:24</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>bootstrapPlugin: <a href="_lib_org_bukkit_plugin_java_javaplugin_.javaplugin.html" class="tsd-signature-type">JavaPlugin</a></h5>
+								</li>
+								<li>
+									<h5>rootServerFolder: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_lib_com_pixlfox_scriptablemc_core_scriptablepluginengine_.scriptablepluginengine.html" class="tsd-signature-type">ScriptablePluginEngine</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts#L25">lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts:25</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -145,23 +165,6 @@
 								</li>
 								<li>
 									<h5>arg3: <span class="tsd-signature-type">any</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="_lib_com_pixlfox_scriptablemc_core_scriptablepluginengine_.scriptablepluginengine.html" class="tsd-signature-type">ScriptablePluginEngine</a></h4>
-						</li>
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts#L24">lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts:24</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>bootstrapPlugin: <a href="_lib_org_bukkit_plugin_java_javaplugin_.javaplugin.html" class="tsd-signature-type">JavaPlugin</a></h5>
-								</li>
-								<li>
-									<h5>rootServerFolder: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_lib_com_pixlfox_scriptablemc_core_scriptablepluginengine_.scriptablepluginengine.html" class="tsd-signature-type">ScriptablePluginEngine</a></h4>
@@ -182,7 +185,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_lib_org_bukkit_event_listener_.listener.html">Listener</a>.<a href="_lib_org_bukkit_event_listener_.listener.html#_javaclass">$javaClass</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts#L21">lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts:21</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts#L22">lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts:22</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -202,7 +205,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts#L17">lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts:17</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts#L16">lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts:16</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -225,7 +228,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts#L15">lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts:15</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts#L14">lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts:14</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -242,7 +245,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts#L16">lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts:16</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts#L15">lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts:15</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -265,13 +268,36 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts#L12">lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts:12</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts#L10">lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts:10</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>source: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="evalfile" class="tsd-anchor"></a>
+					<h3>eval<wbr>File</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">eval<wbr>File<span class="tsd-signature-symbol">(</span>filePath<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts#L11">lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts:11</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>filePath: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -288,7 +314,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts#L13">lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts:13</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts#L12">lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts:12</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -311,7 +337,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts#L10">lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts:10</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts#L9">lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts:9</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_plugin_java_javaplugin_.javaplugin.html" class="tsd-signature-type">JavaPlugin</a></h4>
@@ -328,7 +354,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts#L9">lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts:9</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts#L8">lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts:8</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -345,7 +371,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts#L8">lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts:8</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts#L17">lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts:17</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -362,7 +388,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts#L14">lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts:14</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts#L13">lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts:13</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -385,13 +411,53 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts#L11">lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts:11</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts#L18">lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts:18</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>value: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="access_getinst_cp" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> access$get<wbr>Inst$cp</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">access$get<wbr>Inst$cp<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_com_pixlfox_scriptablemc_core_scriptablepluginengine_.scriptablepluginengine.html" class="tsd-signature-type">ScriptablePluginEngine</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts#L30">lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts:30</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="_lib_com_pixlfox_scriptablemc_core_scriptablepluginengine_.scriptablepluginengine.html" class="tsd-signature-type">ScriptablePluginEngine</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="access_setinst_cp" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> access$set<wbr>Inst$cp</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">access$set<wbr>Inst$cp<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><a href="_lib_com_pixlfox_scriptablemc_core_scriptablepluginengine_.scriptablepluginengine.html" class="tsd-signature-type">ScriptablePluginEngine</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts#L34">lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.ts:34</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <a href="_lib_com_pixlfox_scriptablemc_core_scriptablepluginengine_.scriptablepluginengine.html" class="tsd-signature-type">ScriptablePluginEngine</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -437,6 +503,9 @@
 								<a href="_lib_com_pixlfox_scriptablemc_core_scriptablepluginengine_.scriptablepluginengine.html#eval" class="tsd-kind-icon">eval</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_lib_com_pixlfox_scriptablemc_core_scriptablepluginengine_.scriptablepluginengine.html#evalfile" class="tsd-kind-icon">eval<wbr>File</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_lib_com_pixlfox_scriptablemc_core_scriptablepluginengine_.scriptablepluginengine.html#evaljs" class="tsd-kind-icon">eval<wbr>Js</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -453,6 +522,12 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_lib_com_pixlfox_scriptablemc_core_scriptablepluginengine_.scriptablepluginengine.html#setdebugenabled" class="tsd-kind-icon">set<wbr>Debug<wbr>Enabled</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_lib_com_pixlfox_scriptablemc_core_scriptablepluginengine_.scriptablepluginengine.html#access_getinst_cp" class="tsd-kind-icon">access$get<wbr>Inst$cp</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_lib_com_pixlfox_scriptablemc_core_scriptablepluginengine_.scriptablepluginengine.html#access_setinst_cp" class="tsd-kind-icon">access$set<wbr>Inst$cp</a>
 							</li>
 						</ul>
 					</li>

@@ -124,6 +124,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_org_bukkit_inventory_itemstack_.itemstack.html#setdurability" class="tsd-kind-icon">set<wbr>Durability</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_org_bukkit_inventory_itemstack_.itemstack.html#setitemmeta" class="tsd-kind-icon">set<wbr>Item<wbr>Meta</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_org_bukkit_inventory_itemstack_.itemstack.html#settype" class="tsd-kind-icon">set<wbr>Type</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_lib_org_bukkit_inventory_itemstack_.itemstack.html#deserialize" class="tsd-kind-icon">deserialize</a></li>
 							</ul>
 						</section>
 					</div>
@@ -135,23 +136,29 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Item<wbr>Stack<span class="tsd-signature-symbol">(</span>stack<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_inventory_itemstack_.itemstack.html" class="tsd-signature-type">ItemStack</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_inventory_itemstack_.itemstack.html" class="tsd-signature-type">ItemStack</a></li>
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Item<wbr>Stack<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_material_.material.html" class="tsd-signature-type">Material</a>, amount<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, damage<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_inventory_itemstack_.itemstack.html" class="tsd-signature-type">ItemStack</a></li>
 						<li class="tsd-signature tsd-kind-icon">new <wbr>Item<wbr>Stack<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_material_.material.html" class="tsd-signature-type">Material</a>, amount<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, damage<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_inventory_itemstack_.itemstack.html" class="tsd-signature-type">ItemStack</a></li>
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Item<wbr>Stack<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_material_.material.html" class="tsd-signature-type">Material</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_inventory_itemstack_.itemstack.html" class="tsd-signature-type">ItemStack</a></li>
 						<li class="tsd-signature tsd-kind-icon">new <wbr>Item<wbr>Stack<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_material_.material.html" class="tsd-signature-type">Material</a>, amount<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_inventory_itemstack_.itemstack.html" class="tsd-signature-type">ItemStack</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Item<wbr>Stack<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_material_.material.html" class="tsd-signature-type">Material</a>, amount<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, damage<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_inventory_itemstack_.itemstack.html" class="tsd-signature-type">ItemStack</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Item<wbr>Stack<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_material_.material.html" class="tsd-signature-type">Material</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_inventory_itemstack_.itemstack.html" class="tsd-signature-type">ItemStack</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Item<wbr>Stack<span class="tsd-signature-symbol">(</span>stack<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_inventory_itemstack_.itemstack.html" class="tsd-signature-type">ItemStack</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_inventory_itemstack_.itemstack.html" class="tsd-signature-type">ItemStack</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/inventory/ItemStack.ts#L38">lib/org/bukkit/inventory/ItemStack.ts:38</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/inventory/ItemStack.ts#L38">lib/org/bukkit/inventory/ItemStack.ts:38</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>stack: <a href="_lib_org_bukkit_inventory_itemstack_.itemstack.html" class="tsd-signature-type">ItemStack</a></h5>
+									<h5>type: <a href="_lib_org_bukkit_material_.material.html" class="tsd-signature-type">Material</a></h5>
+								</li>
+								<li>
+									<h5>amount: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>damage: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_inventory_itemstack_.itemstack.html" class="tsd-signature-type">ItemStack</a></h4>
@@ -159,7 +166,24 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/inventory/ItemStack.ts#L39">lib/org/bukkit/inventory/ItemStack.ts:39</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/inventory/ItemStack.ts#L39">lib/org/bukkit/inventory/ItemStack.ts:39</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>type: <a href="_lib_org_bukkit_material_.material.html" class="tsd-signature-type">Material</a></h5>
+								</li>
+								<li>
+									<h5>amount: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_inventory_itemstack_.itemstack.html" class="tsd-signature-type">ItemStack</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/inventory/ItemStack.ts#L40">lib/org/bukkit/inventory/ItemStack.ts:40</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -182,27 +206,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/inventory/ItemStack.ts#L40">lib/org/bukkit/inventory/ItemStack.ts:40</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>type: <a href="_lib_org_bukkit_material_.material.html" class="tsd-signature-type">Material</a></h5>
-								</li>
-								<li>
-									<h5>amount: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5>damage: <span class="tsd-signature-type">number</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_inventory_itemstack_.itemstack.html" class="tsd-signature-type">ItemStack</a></h4>
-						</li>
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/inventory/ItemStack.ts#L41">lib/org/bukkit/inventory/ItemStack.ts:41</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/inventory/ItemStack.ts#L41">lib/org/bukkit/inventory/ItemStack.ts:41</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -216,16 +220,13 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/inventory/ItemStack.ts#L42">lib/org/bukkit/inventory/ItemStack.ts:42</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/inventory/ItemStack.ts#L42">lib/org/bukkit/inventory/ItemStack.ts:42</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>type: <a href="_lib_org_bukkit_material_.material.html" class="tsd-signature-type">Material</a></h5>
-								</li>
-								<li>
-									<h5>amount: <span class="tsd-signature-type">number</span></h5>
+									<h5>stack: <a href="_lib_org_bukkit_inventory_itemstack_.itemstack.html" class="tsd-signature-type">ItemStack</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_inventory_itemstack_.itemstack.html" class="tsd-signature-type">ItemStack</a></h4>
@@ -246,7 +247,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_lib_org_bukkit_configuration_serialization_configurationserializable_.configurationserializable.html">ConfigurationSerializable</a>.<a href="_lib_org_bukkit_configuration_serialization_configurationserializable_.configurationserializable.html#_javaclass">$javaClass</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/inventory/ItemStack.ts#L36">lib/org/bukkit/inventory/ItemStack.ts:36</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/inventory/ItemStack.ts#L36">lib/org/bukkit/inventory/ItemStack.ts:36</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -266,7 +267,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/inventory/ItemStack.ts#L31">lib/org/bukkit/inventory/ItemStack.ts:31</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/inventory/ItemStack.ts#L17">lib/org/bukkit/inventory/ItemStack.ts:17</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -292,7 +293,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/inventory/ItemStack.ts#L29">lib/org/bukkit/inventory/ItemStack.ts:29</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/inventory/ItemStack.ts#L16">lib/org/bukkit/inventory/ItemStack.ts:16</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -315,7 +316,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/inventory/ItemStack.ts#L14">lib/org/bukkit/inventory/ItemStack.ts:14</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/inventory/ItemStack.ts#L26">lib/org/bukkit/inventory/ItemStack.ts:26</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -341,7 +342,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/inventory/ItemStack.ts#L15">lib/org/bukkit/inventory/ItemStack.ts:15</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/inventory/ItemStack.ts#L27">lib/org/bukkit/inventory/ItemStack.ts:27</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -365,7 +366,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/inventory/ItemStack.ts#L9">lib/org/bukkit/inventory/ItemStack.ts:9</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/inventory/ItemStack.ts#L30">lib/org/bukkit/inventory/ItemStack.ts:30</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -373,7 +374,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/inventory/ItemStack.ts#L10">lib/org/bukkit/inventory/ItemStack.ts:10</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/inventory/ItemStack.ts#L31">lib/org/bukkit/inventory/ItemStack.ts:31</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_inventory_itemstack_.itemstack.html" class="tsd-signature-type">ItemStack</a></h4>
@@ -390,7 +391,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/inventory/ItemStack.ts#L13">lib/org/bukkit/inventory/ItemStack.ts:13</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/inventory/ItemStack.ts#L13">lib/org/bukkit/inventory/ItemStack.ts:13</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -413,7 +414,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/inventory/ItemStack.ts#L18">lib/org/bukkit/inventory/ItemStack.ts:18</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/inventory/ItemStack.ts#L18">lib/org/bukkit/inventory/ItemStack.ts:18</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -430,7 +431,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/inventory/ItemStack.ts#L24">lib/org/bukkit/inventory/ItemStack.ts:24</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/inventory/ItemStack.ts#L19">lib/org/bukkit/inventory/ItemStack.ts:19</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_material_materialdata_.materialdata.html" class="tsd-signature-type">MaterialData</a></h4>
@@ -447,7 +448,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/inventory/ItemStack.ts#L23">lib/org/bukkit/inventory/ItemStack.ts:23</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/inventory/ItemStack.ts#L24">lib/org/bukkit/inventory/ItemStack.ts:24</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -464,7 +465,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/inventory/ItemStack.ts#L12">lib/org/bukkit/inventory/ItemStack.ts:12</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/inventory/ItemStack.ts#L14">lib/org/bukkit/inventory/ItemStack.ts:14</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -487,7 +488,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/inventory/ItemStack.ts#L30">lib/org/bukkit/inventory/ItemStack.ts:30</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/inventory/ItemStack.ts#L15">lib/org/bukkit/inventory/ItemStack.ts:15</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -504,7 +505,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/inventory/ItemStack.ts#L20">lib/org/bukkit/inventory/ItemStack.ts:20</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/inventory/ItemStack.ts#L21">lib/org/bukkit/inventory/ItemStack.ts:21</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_inventory_meta_itemmeta_.itemmeta.html" class="tsd-signature-type">ItemMeta</a></h4>
@@ -521,7 +522,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/inventory/ItemStack.ts#L25">lib/org/bukkit/inventory/ItemStack.ts:25</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/inventory/ItemStack.ts#L11">lib/org/bukkit/inventory/ItemStack.ts:11</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -538,7 +539,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/inventory/ItemStack.ts#L11">lib/org/bukkit/inventory/ItemStack.ts:11</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/inventory/ItemStack.ts#L32">lib/org/bukkit/inventory/ItemStack.ts:32</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_material_.material.html" class="tsd-signature-type">Material</a></h4>
@@ -555,7 +556,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/inventory/ItemStack.ts#L19">lib/org/bukkit/inventory/ItemStack.ts:19</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/inventory/ItemStack.ts#L20">lib/org/bukkit/inventory/ItemStack.ts:20</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -572,7 +573,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/inventory/ItemStack.ts#L28">lib/org/bukkit/inventory/ItemStack.ts:28</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/inventory/ItemStack.ts#L12">lib/org/bukkit/inventory/ItemStack.ts:12</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -595,7 +596,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/inventory/ItemStack.ts#L32">lib/org/bukkit/inventory/ItemStack.ts:32</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/inventory/ItemStack.ts#L28">lib/org/bukkit/inventory/ItemStack.ts:28</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -619,7 +620,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_lib_org_bukkit_configuration_serialization_configurationserializable_.configurationserializable.html">ConfigurationSerializable</a>.<a href="_lib_org_bukkit_configuration_serialization_configurationserializable_.configurationserializable.html#serialize">serialize</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/inventory/ItemStack.ts#L16">lib/org/bukkit/inventory/ItemStack.ts:16</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/inventory/ItemStack.ts#L29">lib/org/bukkit/inventory/ItemStack.ts:29</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -636,7 +637,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/inventory/ItemStack.ts#L22">lib/org/bukkit/inventory/ItemStack.ts:22</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/inventory/ItemStack.ts#L23">lib/org/bukkit/inventory/ItemStack.ts:23</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -659,7 +660,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/inventory/ItemStack.ts#L27">lib/org/bukkit/inventory/ItemStack.ts:27</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/inventory/ItemStack.ts#L9">lib/org/bukkit/inventory/ItemStack.ts:9</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -682,7 +683,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/inventory/ItemStack.ts#L17">lib/org/bukkit/inventory/ItemStack.ts:17</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/inventory/ItemStack.ts#L25">lib/org/bukkit/inventory/ItemStack.ts:25</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -705,7 +706,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/inventory/ItemStack.ts#L26">lib/org/bukkit/inventory/ItemStack.ts:26</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/inventory/ItemStack.ts#L10">lib/org/bukkit/inventory/ItemStack.ts:10</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -728,7 +729,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/org/bukkit/inventory/ItemStack.ts#L21">lib/org/bukkit/inventory/ItemStack.ts:21</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/inventory/ItemStack.ts#L22">lib/org/bukkit/inventory/ItemStack.ts:22</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -738,6 +739,29 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="deserialize" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> deserialize</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">deserialize<span class="tsd-signature-symbol">(</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_inventory_itemstack_.itemstack.html" class="tsd-signature-type">ItemStack</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/org/bukkit/inventory/ItemStack.ts#L47">lib/org/bukkit/inventory/ItemStack.ts:47</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>args: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_inventory_itemstack_.itemstack.html" class="tsd-signature-type">ItemStack</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -835,6 +859,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_lib_org_bukkit_inventory_itemstack_.itemstack.html#settype" class="tsd-kind-icon">set<wbr>Type</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_lib_org_bukkit_inventory_itemstack_.itemstack.html#deserialize" class="tsd-kind-icon">deserialize</a>
 							</li>
 						</ul>
 					</li>

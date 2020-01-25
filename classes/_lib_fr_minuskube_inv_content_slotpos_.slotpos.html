@@ -98,6 +98,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_fr_minuskube_inv_content_slotpos_.slotpos.html#getcolumn" class="tsd-kind-icon">get<wbr>Column</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_fr_minuskube_inv_content_slotpos_.slotpos.html#getrow" class="tsd-kind-icon">get<wbr>Row</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_lib_fr_minuskube_inv_content_slotpos_.slotpos.html#of" class="tsd-kind-icon">of</a></li>
 							</ul>
 						</section>
 					</div>
@@ -109,22 +110,22 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Slot<wbr>Pos<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, arg1<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_fr_minuskube_inv_content_slotpos_.slotpos.html" class="tsd-signature-type">SlotPos</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Slot<wbr>Pos<span class="tsd-signature-symbol">(</span>row<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, column<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_fr_minuskube_inv_content_slotpos_.slotpos.html" class="tsd-signature-type">SlotPos</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/fr/minuskube/inv/content/SlotPos.ts#L11">lib/fr/minuskube/inv/content/SlotPos.ts:11</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/fr/minuskube/inv/content/SlotPos.ts#L11">lib/fr/minuskube/inv/content/SlotPos.ts:11</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">number</span></h5>
+									<h5>row: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>arg1: <span class="tsd-signature-type">number</span></h5>
+									<h5>column: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_lib_fr_minuskube_inv_content_slotpos_.slotpos.html" class="tsd-signature-type">SlotPos</a></h4>
@@ -144,7 +145,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/fr/minuskube/inv/content/SlotPos.ts#L9">lib/fr/minuskube/inv/content/SlotPos.ts:9</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/fr/minuskube/inv/content/SlotPos.ts#L9">lib/fr/minuskube/inv/content/SlotPos.ts:9</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -164,7 +165,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/fr/minuskube/inv/content/SlotPos.ts#L4">lib/fr/minuskube/inv/content/SlotPos.ts:4</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/fr/minuskube/inv/content/SlotPos.ts#L5">lib/fr/minuskube/inv/content/SlotPos.ts:5</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -181,10 +182,36 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/f6e9b41/src/lib/fr/minuskube/inv/content/SlotPos.ts#L5">lib/fr/minuskube/inv/content/SlotPos.ts:5</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/fr/minuskube/inv/content/SlotPos.ts#L4">lib/fr/minuskube/inv/content/SlotPos.ts:4</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="of" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> of</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">of<span class="tsd-signature-symbol">(</span>row<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, column<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_fr_minuskube_inv_content_slotpos_.slotpos.html" class="tsd-signature-type">SlotPos</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/13ef562/src/lib/fr/minuskube/inv/content/SlotPos.ts#L16">lib/fr/minuskube/inv/content/SlotPos.ts:16</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>row: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>column: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_lib_fr_minuskube_inv_content_slotpos_.slotpos.html" class="tsd-signature-type">SlotPos</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -219,6 +246,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_lib_fr_minuskube_inv_content_slotpos_.slotpos.html#getrow" class="tsd-kind-icon">get<wbr>Row</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_lib_fr_minuskube_inv_content_slotpos_.slotpos.html#of" class="tsd-kind-icon">of</a>
 							</li>
 						</ul>
 					</li>
