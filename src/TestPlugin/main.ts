@@ -76,7 +76,7 @@ export class TestPlugin extends JsPlugin {
     onPlayerJoin(listener: any, event: PlayerJoinEvent) {
         let player = event.getPlayer();
 
-        if(CONFIG.fireworkOnJoin) {
+        if(CONFIG.fireworkOnJoin.enabled && player.hasPermission(CONFIG.fireworkOnJoin.requiredPermission)) {
             let fw = player.getWorld().spawnEntity(player.getLocation().add(0, 10, 0), EntityType.FIREWORK) as Firework;
             let fwm = fw.getFireworkMeta();
             fwm.setPower(2);
