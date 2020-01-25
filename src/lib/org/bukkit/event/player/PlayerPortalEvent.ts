@@ -7,11 +7,11 @@ import {PlayerTeleportEvent} from '../../../../org/bukkit/event/player/PlayerTel
 
 export interface PlayerPortalEvent extends PlayerTeleportEvent {
 	getHandlers(): HandlerList;
-	getSearchRadius(): number;
 	setSearchRadius(searchRadius: number): void;
+	getSearchRadius(): number;
+	getCanCreatePortal(): boolean;
 	setCanCreatePortal(canCreatePortal: boolean): void;
 	setCreationRadius(creationRadius: number): void;
-	getCanCreatePortal(): boolean;
 	getCreationRadius(): number;
 	getCause(): PlayerTeleportEvent$TeleportCause;
 	isCancelled(): boolean;
@@ -29,11 +29,15 @@ export class PlayerPortalEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.player.PlayerPortalEvent');
 	}
-	constructor(player: Player, from: Location, to: Location, cause: PlayerTeleportEvent$TeleportCause);
 	constructor(player: Player, from: Location, to: Location);
 	constructor(player: Player, from: Location, to: Location, cause: PlayerTeleportEvent$TeleportCause, getSearchRadius: number, canCreatePortal: boolean, creationRadius: number);
+	constructor(player: Player, from: Location, to: Location, cause: PlayerTeleportEvent$TeleportCause);
 	constructor(...args: any[]) {
 		return new PlayerPortalEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return PlayerPortalEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

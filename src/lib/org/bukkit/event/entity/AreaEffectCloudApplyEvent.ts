@@ -26,5 +26,9 @@ export class AreaEffectCloudApplyEvent {
 	constructor(...args: any[]) {
 		return new AreaEffectCloudApplyEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return AreaEffectCloudApplyEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

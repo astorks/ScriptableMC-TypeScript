@@ -1,21 +1,21 @@
 declare var Java: any;
+import {InventoryListener} from '../../../fr/minuskube/inv/InventoryListener.js'
 import {SmartInventory} from '../../../fr/minuskube/inv/SmartInventory.js'
+import {InventoryManager} from '../../../fr/minuskube/inv/InventoryManager.js'
 import {InventoryType} from '../../../org/bukkit/event/inventory/InventoryType.js'
 import {InventoryProvider} from '../../../fr/minuskube/inv/content/InventoryProvider.js'
-import {InventoryListener} from '../../../fr/minuskube/inv/InventoryListener.js'
-import {InventoryManager} from '../../../fr/minuskube/inv/InventoryManager.js'
 
 export interface SmartInventory$Builder {
-	parent(arg0: SmartInventory): SmartInventory$Builder;
-	type(arg0: InventoryType): SmartInventory$Builder;
-	size(arg0: number, arg1: number): SmartInventory$Builder;
-	id(arg0: string): SmartInventory$Builder;
-	provider(arg0: InventoryProvider): SmartInventory$Builder;
+	listener(listener: InventoryListener): SmartInventory$Builder;
 	build(): SmartInventory;
-	listener(arg0: InventoryListener): SmartInventory$Builder;
-	manager(arg0: InventoryManager): SmartInventory$Builder;
-	closeable(arg0: boolean): SmartInventory$Builder;
-	title(arg0: string): SmartInventory$Builder;
+	title(title: string): SmartInventory$Builder;
+	closeable(closeable: boolean): SmartInventory$Builder;
+	manager(manager: InventoryManager): SmartInventory$Builder;
+	parent(parent: SmartInventory): SmartInventory$Builder;
+	type(type: InventoryType): SmartInventory$Builder;
+	size(rows: number, columns: number): SmartInventory$Builder;
+	provider(provider: InventoryProvider): SmartInventory$Builder;
+	id(id: string): SmartInventory$Builder;
 }
 
 export class SmartInventory$Builder {

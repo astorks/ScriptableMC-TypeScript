@@ -25,5 +25,9 @@ export class EntityToggleGlideEvent {
 	constructor(...args: any[]) {
 		return new EntityToggleGlideEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return EntityToggleGlideEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

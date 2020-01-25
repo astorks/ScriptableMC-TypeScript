@@ -10,10 +10,10 @@ export interface BlockDispenseEvent extends BlockEvent, Cancellable {
 	getHandlers(): HandlerList;
 	setVelocity(vel: Vector): void;
 	getVelocity(): Vector;
-	isCancelled(): boolean;
-	setCancelled(cancel: boolean): void;
 	getItem(): ItemStack;
 	setItem(item: ItemStack): void;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 	getBlock(): Block;
 	getEventName(): string;
 	isAsynchronous(): boolean;
@@ -26,6 +26,10 @@ export class BlockDispenseEvent {
 	constructor(block: Block, dispensed: ItemStack, velocity: Vector);
 	constructor(...args: any[]) {
 		return new BlockDispenseEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return BlockDispenseEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

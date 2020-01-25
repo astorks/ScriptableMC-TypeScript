@@ -11,8 +11,8 @@ export interface NotePlayEvent extends BlockEvent, Cancellable {
 	isCancelled(): boolean;
 	setCancelled(cancel: boolean): void;
 	getInstrument(): Instrument;
-	setInstrument(instrument: Instrument): void;
 	getNote(): Note;
+	setInstrument(instrument: Instrument): void;
 	setNote(note: Note): void;
 	getBlock(): Block;
 	getEventName(): string;
@@ -26,6 +26,10 @@ export class NotePlayEvent {
 	constructor(block: Block, instrument: Instrument, note: Note);
 	constructor(...args: any[]) {
 		return new NotePlayEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return NotePlayEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

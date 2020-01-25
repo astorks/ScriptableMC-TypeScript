@@ -5,8 +5,8 @@ import {NamespacedKey} from '../../../org/bukkit/NamespacedKey.js'
 import {Keyed} from '../../../org/bukkit/Keyed.js'
 
 export interface LootTable extends Keyed {
-	fillInventory(inventory: Inventory, random: any, context: LootContext): void;
-	populateLoot(random: any, context: LootContext): any;
+	fillInventory(arg0: Inventory, arg1: any, arg2: LootContext): void;
+	populateLoot(arg0: any, arg1: LootContext): any;
 	getKey(): NamespacedKey;
 }
 

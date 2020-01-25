@@ -1,8 +1,8 @@
 declare var Java: any;
 
 export interface Warning {
-	value(): boolean;
 	reason(): string;
+	value(): boolean;
 	annotationType(): any;
 }
 

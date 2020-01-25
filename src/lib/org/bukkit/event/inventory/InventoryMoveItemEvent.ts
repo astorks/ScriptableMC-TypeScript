@@ -8,10 +8,10 @@ import {Event} from '../../../../org/bukkit/event/Event.js'
 export interface InventoryMoveItemEvent extends Event, Cancellable {
 	getHandlers(): HandlerList;
 	getSource(): Inventory;
-	isCancelled(): boolean;
-	setCancelled(cancel: boolean): void;
 	getItem(): ItemStack;
 	setItem(itemStack: ItemStack): void;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 	getInitiator(): Inventory;
 	getDestination(): Inventory;
 	getEventName(): string;
@@ -25,6 +25,10 @@ export class InventoryMoveItemEvent {
 	constructor(sourceInventory: Inventory, itemStack: ItemStack, destinationInventory: Inventory, didSourceInitiate: boolean);
 	constructor(...args: any[]) {
 		return new InventoryMoveItemEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return InventoryMoveItemEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

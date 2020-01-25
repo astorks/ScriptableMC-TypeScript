@@ -8,11 +8,11 @@ import {Cancellable} from '../../../../org/bukkit/event/Cancellable.js'
 import {InventoryEvent} from '../../../../org/bukkit/event/inventory/InventoryEvent.js'
 
 export interface InventoryInteractEvent extends InventoryEvent, Cancellable {
-	getResult(): Event$Result;
-	setResult(newResult: Event$Result): void;
 	isCancelled(): boolean;
 	setCancelled(toCancel: boolean): void;
+	setResult(newResult: Event$Result): void;
 	getWhoClicked(): HumanEntity;
+	getResult(): Event$Result;
 	getHandlers(): HandlerList;
 	getInventory(): Inventory;
 	getViewers(): any;
@@ -28,6 +28,10 @@ export class InventoryInteractEvent {
 	constructor(transaction: InventoryView);
 	constructor(...args: any[]) {
 		return new InventoryInteractEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return InventoryInteractEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

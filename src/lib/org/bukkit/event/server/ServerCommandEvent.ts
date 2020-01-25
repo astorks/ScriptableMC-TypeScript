@@ -9,8 +9,8 @@ export interface ServerCommandEvent extends ServerEvent, Cancellable {
 	getCommand(): string;
 	isCancelled(): boolean;
 	setCancelled(cancel: boolean): void;
-	getSender(): CommandSender;
 	setCommand(message: string): void;
+	getSender(): CommandSender;
 	getEventName(): string;
 	isAsynchronous(): boolean;
 }
@@ -22,6 +22,10 @@ export class ServerCommandEvent {
 	constructor(sender: CommandSender, command: string);
 	constructor(...args: any[]) {
 		return new ServerCommandEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return ServerCommandEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

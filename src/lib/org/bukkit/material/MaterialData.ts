@@ -3,13 +3,13 @@ import {Material} from '../../../org/bukkit/Material.js'
 import {ItemStack} from '../../../org/bukkit/inventory/ItemStack.js'
 
 export interface MaterialData {
+	setData(data: number): void;
+	getData(): number;
+	getItemType(): Material;
+	toItemStack(): ItemStack;
+	toItemStack(amount: number): ItemStack;
 	clone(): any;
 	clone(): MaterialData;
-	getItemType(): Material;
-	toItemStack(amount: number): ItemStack;
-	toItemStack(): ItemStack;
-	getData(): number;
-	setData(data: number): void;
 }
 
 export class MaterialData {

@@ -2,17 +2,17 @@ declare var Java: any;
 import {Plugin} from '../../../org/bukkit/plugin/Plugin.js'
 
 export interface MetadataValue {
-	value(): any;
 	asString(): string;
 	asInt(): number;
 	asBoolean(): boolean;
-	asFloat(): number;
 	asLong(): number;
 	asDouble(): number;
+	asFloat(): number;
 	asByte(): number;
 	asShort(): number;
-	invalidate(): void;
 	getOwningPlugin(): Plugin;
+	invalidate(): void;
+	value(): any;
 }
 
 export class MetadataValue {

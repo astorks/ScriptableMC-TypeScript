@@ -8,12 +8,12 @@ import {PlayerEvent} from '../../../../org/bukkit/event/player/PlayerEvent.js'
 
 export interface PlayerItemMendEvent extends PlayerEvent, Cancellable {
 	getHandlers(): HandlerList;
+	getItem(): ItemStack;
 	isCancelled(): boolean;
 	setCancelled(cancelled: boolean): void;
-	getItem(): ItemStack;
-	getExperienceOrb(): ExperienceOrb;
 	getRepairAmount(): number;
 	setRepairAmount(amount: number): void;
+	getExperienceOrb(): ExperienceOrb;
 	getPlayer(): Player;
 	getEventName(): string;
 	isAsynchronous(): boolean;
@@ -26,6 +26,10 @@ export class PlayerItemMendEvent {
 	constructor(who: Player, item: ItemStack, experienceOrb: ExperienceOrb, repairAmount: number);
 	constructor(...args: any[]) {
 		return new PlayerItemMendEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return PlayerItemMendEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

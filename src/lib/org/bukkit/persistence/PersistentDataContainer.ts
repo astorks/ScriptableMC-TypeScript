@@ -4,13 +4,13 @@ import {PersistentDataType} from '../../../org/bukkit/persistence/PersistentData
 import {PersistentDataAdapterContext} from '../../../org/bukkit/persistence/PersistentDataAdapterContext.js'
 
 export interface PersistentDataContainer {
-	remove(key: NamespacedKey): void;
-	get(key: NamespacedKey, type: PersistentDataType): any;
-	isEmpty(): boolean;
-	set(key: NamespacedKey, type: PersistentDataType, value: any): void;
-	getOrDefault(key: NamespacedKey, type: PersistentDataType, defaultValue: any): any;
-	has(key: NamespacedKey, type: PersistentDataType): boolean;
+	has(arg0: NamespacedKey, arg1: PersistentDataType): boolean;
 	getAdapterContext(): PersistentDataAdapterContext;
+	remove(arg0: NamespacedKey): void;
+	get(arg0: NamespacedKey, arg1: PersistentDataType): any;
+	isEmpty(): boolean;
+	getOrDefault(arg0: NamespacedKey, arg1: PersistentDataType, arg2: any): any;
+	set(arg0: NamespacedKey, arg1: PersistentDataType, arg2: any): void;
 }
 
 export class PersistentDataContainer {

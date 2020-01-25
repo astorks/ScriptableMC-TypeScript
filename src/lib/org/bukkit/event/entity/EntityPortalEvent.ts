@@ -7,8 +7,8 @@ import {EntityTeleportEvent} from '../../../../org/bukkit/event/entity/EntityTel
 
 export interface EntityPortalEvent extends EntityTeleportEvent {
 	getHandlers(): HandlerList;
-	getSearchRadius(): number;
 	setSearchRadius(searchRadius: number): void;
+	getSearchRadius(): number;
 	isCancelled(): boolean;
 	setCancelled(cancel: boolean): void;
 	getTo(): Location;
@@ -25,10 +25,14 @@ export class EntityPortalEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.entity.EntityPortalEvent');
 	}
-	constructor(entity: Entity, from: Location, to: Location, searchRadius: number);
 	constructor(entity: Entity, from: Location, to: Location);
+	constructor(entity: Entity, from: Location, to: Location, searchRadius: number);
 	constructor(...args: any[]) {
 		return new EntityPortalEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return EntityPortalEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

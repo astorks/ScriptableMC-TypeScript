@@ -21,10 +21,14 @@ export class PlayerInteractEntityEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.player.PlayerInteractEntityEvent');
 	}
-	constructor(who: Player, clickedEntity: Entity, hand: EquipmentSlot);
 	constructor(who: Player, clickedEntity: Entity);
+	constructor(who: Player, clickedEntity: Entity, hand: EquipmentSlot);
 	constructor(...args: any[]) {
 		return new PlayerInteractEntityEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return PlayerInteractEntityEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

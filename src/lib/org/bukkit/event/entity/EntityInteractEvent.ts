@@ -25,5 +25,9 @@ export class EntityInteractEvent {
 	constructor(...args: any[]) {
 		return new EntityInteractEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return EntityInteractEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

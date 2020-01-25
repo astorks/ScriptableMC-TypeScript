@@ -20,5 +20,9 @@ export class PlayerQuitEvent {
 	constructor(...args: any[]) {
 		return new PlayerQuitEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return PlayerQuitEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

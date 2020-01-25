@@ -22,5 +22,9 @@ export class PlayerToggleSneakEvent {
 	constructor(...args: any[]) {
 		return new PlayerToggleSneakEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return PlayerToggleSneakEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

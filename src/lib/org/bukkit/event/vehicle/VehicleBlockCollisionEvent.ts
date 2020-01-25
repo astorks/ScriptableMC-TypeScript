@@ -20,5 +20,9 @@ export class VehicleBlockCollisionEvent {
 	constructor(...args: any[]) {
 		return new VehicleBlockCollisionEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return VehicleBlockCollisionEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

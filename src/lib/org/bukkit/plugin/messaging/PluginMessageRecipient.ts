@@ -2,7 +2,7 @@ declare var Java: any;
 import {Plugin} from '../../../../org/bukkit/plugin/Plugin.js'
 
 export interface PluginMessageRecipient {
-	sendPluginMessage(source: Plugin, channel: string, message: Array<number>): void;
+	sendPluginMessage(arg0: Plugin, arg1: string, arg2: Array<number>): void;
 	getListeningPluginChannels(): any;
 }
 

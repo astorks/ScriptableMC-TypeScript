@@ -1,25 +1,25 @@
 declare var Java: any;
-import {BlockData} from '../../org/bukkit/block/data/BlockData.js'
 import {Biome} from '../../org/bukkit/block/Biome.js'
+import {BlockData} from '../../org/bukkit/block/data/BlockData.js'
 import {Material} from '../../org/bukkit/Material.js'
 
 export interface ChunkSnapshot {
-	contains(block: BlockData): boolean;
-	getBlockEmittedLight(x: number, y: number, z: number): number;
-	getRawBiomeTemperature(x: number, y: number, z: number): number;
-	getRawBiomeTemperature(x: number, z: number): number;
-	getHighestBlockYAt(x: number, z: number): number;
-	getData(x: number, y: number, z: number): number;
-	getZ(): number;
-	getBiome(x: number, z: number): Biome;
-	getBiome(x: number, y: number, z: number): Biome;
+	getData(arg0: number, arg1: number, arg2: number): number;
+	getHighestBlockYAt(arg0: number, arg1: number): number;
 	getX(): number;
-	getBlockData(x: number, y: number, z: number): BlockData;
-	isSectionEmpty(sy: number): boolean;
-	getBlockType(x: number, y: number, z: number): Material;
+	getZ(): number;
+	getBiome(arg0: number, arg1: number, arg2: number): Biome;
+	getBiome(arg0: number, arg1: number): Biome;
+	getBlockData(arg0: number, arg1: number, arg2: number): BlockData;
+	getBlockEmittedLight(arg0: number, arg1: number, arg2: number): number;
+	getBlockSkyLight(arg0: number, arg1: number, arg2: number): number;
+	getRawBiomeTemperature(arg0: number, arg1: number): number;
+	getRawBiomeTemperature(arg0: number, arg1: number, arg2: number): number;
 	getCaptureFullTime(): number;
+	isSectionEmpty(arg0: number): boolean;
+	getBlockType(arg0: number, arg1: number, arg2: number): Material;
 	getWorldName(): string;
-	getBlockSkyLight(x: number, y: number, z: number): number;
+	contains(arg0: BlockData): boolean;
 }
 
 export class ChunkSnapshot {

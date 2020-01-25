@@ -1,7 +1,8 @@
 declare var Java: any;
-import {FileConfigurationOptions} from '../../../../org/bukkit/configuration/file/FileConfigurationOptions.js'
-import {MemoryConfigurationOptions} from '../../../../org/bukkit/configuration/MemoryConfigurationOptions.js'
 import {ConfigurationOptions} from '../../../../org/bukkit/configuration/ConfigurationOptions.js'
+import {MemoryConfigurationOptions} from '../../../../org/bukkit/configuration/MemoryConfigurationOptions.js'
+import {FileConfigurationOptions} from '../../../../org/bukkit/configuration/file/FileConfigurationOptions.js'
+import {YamlConfigurationOptions} from '../../../../org/bukkit/configuration/file/YamlConfigurationOptions.js'
 import {Configuration} from '../../../../org/bukkit/configuration/Configuration.js'
 import {ConfigurationSection} from '../../../../org/bukkit/configuration/ConfigurationSection.js'
 import {OfflinePlayer} from '../../../../org/bukkit/OfflinePlayer.js'
@@ -10,13 +11,14 @@ import {ConfigurationSerializable} from '../../../../org/bukkit/configuration/se
 import {Vector} from '../../../../org/bukkit/util/Vector.js'
 import {ItemStack} from '../../../../org/bukkit/inventory/ItemStack.js'
 import {Location} from '../../../../org/bukkit/Location.js'
-import {MemoryConfiguration} from '../../../../org/bukkit/configuration/MemoryConfiguration.js'
+import {FileConfiguration} from '../../../../org/bukkit/configuration/file/FileConfiguration.js'
 
-export interface FileConfiguration extends MemoryConfiguration {
-	options(): FileConfigurationOptions;
-	options(): MemoryConfigurationOptions;
+export interface YamlConfiguration extends FileConfiguration {
 	options(): ConfigurationOptions;
-	loadFromString(arg0: string): void;
+	options(): MemoryConfigurationOptions;
+	options(): FileConfigurationOptions;
+	options(): YamlConfigurationOptions;
+	loadFromString(contents: string): void;
 	saveToString(): string;
 	load(reader: any): void;
 	load(file: string): void;
@@ -94,19 +96,23 @@ export interface FileConfiguration extends MemoryConfiguration {
 	getKeys(deep: boolean): any;
 }
 
-export class FileConfiguration {
+export class YamlConfiguration {
 	public static get $javaClass(): any {
-		return Java.type('org.bukkit.configuration.file.FileConfiguration');
+		return Java.type('org.bukkit.configuration.file.YamlConfiguration');
 	}
 	constructor();
-	constructor(defaults: Configuration);
 	constructor(...args: any[]) {
-		return new FileConfiguration.$javaClass(...args);
+		return new YamlConfiguration.$javaClass(...args);
+	}
+	public static loadConfiguration(file: any): YamlConfiguration;
+	public static loadConfiguration(reader: any): YamlConfiguration;
+	public static loadConfiguration(...args: any[]): any {
+		return YamlConfiguration.$javaClass.loadConfiguration(...args);
 	}
 	public static createPath(section: ConfigurationSection, key: string, relativeTo: ConfigurationSection): string;
 	public static createPath(section: ConfigurationSection, key: string): string;
 	public static createPath(...args: any[]): any {
-		return FileConfiguration.$javaClass.createPath(...args);
+		return YamlConfiguration.$javaClass.createPath(...args);
 	}
 }
 

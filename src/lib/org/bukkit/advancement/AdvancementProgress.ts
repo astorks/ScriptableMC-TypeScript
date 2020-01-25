@@ -2,13 +2,13 @@ declare var Java: any;
 import {Advancement} from '../../../org/bukkit/advancement/Advancement.js'
 
 export interface AdvancementProgress {
-	isDone(): boolean;
 	getAdvancement(): Advancement;
-	getDateAwarded(criteria: string): any;
-	getAwardedCriteria(): any;
-	revokeCriteria(criteria: string): boolean;
-	awardCriteria(criteria: string): boolean;
 	getRemainingCriteria(): any;
+	awardCriteria(arg0: string): boolean;
+	isDone(): boolean;
+	getAwardedCriteria(): any;
+	revokeCriteria(arg0: string): boolean;
+	getDateAwarded(arg0: string): any;
 }
 
 export class AdvancementProgress {

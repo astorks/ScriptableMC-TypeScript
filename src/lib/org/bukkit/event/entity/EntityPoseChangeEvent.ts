@@ -22,5 +22,9 @@ export class EntityPoseChangeEvent {
 	constructor(...args: any[]) {
 		return new EntityPoseChangeEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return EntityPoseChangeEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

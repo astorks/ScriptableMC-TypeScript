@@ -25,5 +25,9 @@ export class EntityToggleSwimEvent {
 	constructor(...args: any[]) {
 		return new EntityToggleSwimEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return EntityToggleSwimEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

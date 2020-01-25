@@ -1,19 +1,19 @@
 declare var Java: any;
-import {CommandPermission} from '../../../../../io/github/jorelali/commandapi/api/CommandPermission.js'
 import {ResultingCommandExecutor} from '../../../../../io/github/jorelali/commandapi/api/ResultingCommandExecutor.js'
+import {CommandPermission} from '../../../../../io/github/jorelali/commandapi/api/CommandPermission.js'
 import {CommandExecutor} from '../../../../../io/github/jorelali/commandapi/api/CommandExecutor.js'
 
 export interface CommandAPI {
-	register(arg0: string, arg1: CommandPermission, arg2: any, arg3: ResultingCommandExecutor): void;
-	register(arg0: string, arg1: Array<string>, arg2: any, arg3: ResultingCommandExecutor): void;
-	register(arg0: string, arg1: any, arg2: ResultingCommandExecutor): void;
-	register(arg0: string, arg1: CommandPermission, arg2: Array<string>, arg3: any, arg4: CommandExecutor): void;
-	register(arg0: string, arg1: CommandPermission, arg2: Array<string>, arg3: any, arg4: ResultingCommandExecutor): void;
-	register(arg0: string, arg1: CommandPermission, arg2: any, arg3: CommandExecutor): void;
-	register(arg0: string, arg1: any, arg2: CommandExecutor): void;
-	register(arg0: string, arg1: Array<string>, arg2: any, arg3: CommandExecutor): void;
-	unregister(arg0: string): void;
-	unregister(arg0: string, arg1: boolean): void;
+	unregister(command: string, force: boolean): void;
+	unregister(command: string): void;
+	register(commandName: string, aliases: Array<string>, args: any, executor: ResultingCommandExecutor): void;
+	register(commandName: string, permissions: CommandPermission, args: any, executor: ResultingCommandExecutor): void;
+	register(commandName: string, permissions: CommandPermission, aliases: Array<string>, args: any, executor: ResultingCommandExecutor): void;
+	register(commandName: string, permissions: CommandPermission, args: any, executor: CommandExecutor): void;
+	register(commandName: string, aliases: Array<string>, args: any, executor: CommandExecutor): void;
+	register(commandName: string, args: any, executor: CommandExecutor): void;
+	register(commandName: string, permissions: CommandPermission, aliases: Array<string>, args: any, executor: CommandExecutor): void;
+	register(commandName: string, args: any, executor: ResultingCommandExecutor): void;
 }
 
 export class CommandAPI {
@@ -23,6 +23,10 @@ export class CommandAPI {
 	constructor();
 	constructor(...args: any[]) {
 		return new CommandAPI.$javaClass(...args);
+	}
+	public static fail(message: string): void;
+	public static fail(...args: any[]): any {
+		return CommandAPI.$javaClass.fail(...args);
 	}
 	public static getInstance(): CommandAPI;
 	public static getInstance(...args: any[]): any {

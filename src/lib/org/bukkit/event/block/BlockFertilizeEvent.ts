@@ -24,5 +24,9 @@ export class BlockFertilizeEvent {
 	constructor(...args: any[]) {
 		return new BlockFertilizeEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return BlockFertilizeEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

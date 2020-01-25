@@ -25,5 +25,9 @@ export class EntityResurrectEvent {
 	constructor(...args: any[]) {
 		return new EntityResurrectEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return EntityResurrectEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

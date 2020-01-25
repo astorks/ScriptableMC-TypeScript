@@ -1,8 +1,8 @@
 declare var Java: any;
 
 export interface Nameable {
+	setCustomName(arg0: string): void;
 	getCustomName(): string;
-	setCustomName(_name: string): void;
 }
 
 export class Nameable {

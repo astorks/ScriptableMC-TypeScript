@@ -23,5 +23,9 @@ export class PlayerAnimationEvent {
 	constructor(...args: any[]) {
 		return new PlayerAnimationEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return PlayerAnimationEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

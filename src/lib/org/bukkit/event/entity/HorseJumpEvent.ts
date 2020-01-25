@@ -12,8 +12,8 @@ export interface HorseJumpEvent extends EntityEvent, Cancellable {
 	getEntity(): Entity;
 	isCancelled(): boolean;
 	setCancelled(cancel: boolean): void;
-	getPower(): number;
 	setPower(power: number): void;
+	getPower(): number;
 	getEntityType(): EntityType;
 	getEventName(): string;
 	isAsynchronous(): boolean;
@@ -26,6 +26,10 @@ export class HorseJumpEvent {
 	constructor(horse: AbstractHorse, power: number);
 	constructor(...args: any[]) {
 		return new HorseJumpEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return HorseJumpEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

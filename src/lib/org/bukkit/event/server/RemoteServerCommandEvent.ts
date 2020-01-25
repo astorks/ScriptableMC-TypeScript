@@ -8,8 +8,8 @@ export interface RemoteServerCommandEvent extends ServerCommandEvent {
 	getCommand(): string;
 	isCancelled(): boolean;
 	setCancelled(cancel: boolean): void;
-	getSender(): CommandSender;
 	setCommand(message: string): void;
+	getSender(): CommandSender;
 	getEventName(): string;
 	isAsynchronous(): boolean;
 }
@@ -21,6 +21,10 @@ export class RemoteServerCommandEvent {
 	constructor(sender: CommandSender, command: string);
 	constructor(...args: any[]) {
 		return new RemoteServerCommandEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return RemoteServerCommandEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

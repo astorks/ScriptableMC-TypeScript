@@ -26,5 +26,9 @@ export class InventoryOpenEvent {
 	constructor(...args: any[]) {
 		return new InventoryOpenEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return InventoryOpenEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

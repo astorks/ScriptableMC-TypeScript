@@ -27,5 +27,9 @@ export class PlayerInteractAtEntityEvent {
 	constructor(...args: any[]) {
 		return new PlayerInteractAtEntityEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return PlayerInteractAtEntityEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

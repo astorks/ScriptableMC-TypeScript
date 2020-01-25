@@ -1,8 +1,8 @@
 declare var Java: any;
 import {HandlerList} from '../../../../org/bukkit/event/HandlerList.js'
 import {ItemStack} from '../../../../org/bukkit/inventory/ItemStack.js'
-import {Block} from '../../../../org/bukkit/block/Block.js'
 import {Player} from '../../../../org/bukkit/entity/Player.js'
+import {Block} from '../../../../org/bukkit/block/Block.js'
 import {Inventory} from '../../../../org/bukkit/inventory/Inventory.js'
 import {InventoryView} from '../../../../org/bukkit/inventory/InventoryView.js'
 import {Cancellable} from '../../../../org/bukkit/event/Cancellable.js'
@@ -10,15 +10,15 @@ import {InventoryEvent} from '../../../../org/bukkit/event/inventory/InventoryEv
 
 export interface EnchantItemEvent extends InventoryEvent, Cancellable {
 	getHandlers(): HandlerList;
+	getItem(): ItemStack;
 	isCancelled(): boolean;
 	setCancelled(cancel: boolean): void;
-	getItem(): ItemStack;
-	setExpLevelCost(level: number): void;
-	getEnchantBlock(): Block;
-	whichButton(): number;
-	getEnchantsToAdd(): any;
-	getExpLevelCost(): number;
 	getEnchanter(): Player;
+	getEnchantBlock(): Block;
+	getExpLevelCost(): number;
+	setExpLevelCost(level: number): void;
+	getEnchantsToAdd(): any;
+	whichButton(): number;
 	getInventory(): Inventory;
 	getViewers(): any;
 	getView(): InventoryView;
@@ -33,6 +33,10 @@ export class EnchantItemEvent {
 	constructor(enchanter: Player, view: InventoryView, table: Block, item: ItemStack, level: number, enchants: any, i: number);
 	constructor(...args: any[]) {
 		return new EnchantItemEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return EnchantItemEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

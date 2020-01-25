@@ -26,5 +26,9 @@ export class PlayerMoveEvent {
 	constructor(...args: any[]) {
 		return new PlayerMoveEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return PlayerMoveEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

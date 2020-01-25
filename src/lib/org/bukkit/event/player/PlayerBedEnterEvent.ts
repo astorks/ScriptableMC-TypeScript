@@ -1,8 +1,8 @@
 declare var Java: any;
 import {HandlerList} from '../../../../org/bukkit/event/HandlerList.js'
-import {PlayerBedEnterEvent$BedEnterResult} from '../../../../org/bukkit/event/player/PlayerBedEnterEvent$BedEnterResult.js'
-import {Block} from '../../../../org/bukkit/block/Block.js'
 import {Event$Result} from '../../../../org/bukkit/event/Event$Result.js'
+import {Block} from '../../../../org/bukkit/block/Block.js'
+import {PlayerBedEnterEvent$BedEnterResult} from '../../../../org/bukkit/event/player/PlayerBedEnterEvent$BedEnterResult.js'
 import {Player} from '../../../../org/bukkit/entity/Player.js'
 import {Cancellable} from '../../../../org/bukkit/event/Cancellable.js'
 import {PlayerEvent} from '../../../../org/bukkit/event/player/PlayerEvent.js'
@@ -11,10 +11,10 @@ export interface PlayerBedEnterEvent extends PlayerEvent, Cancellable {
 	getHandlers(): HandlerList;
 	isCancelled(): boolean;
 	setCancelled(cancel: boolean): void;
-	getBedEnterResult(): PlayerBedEnterEvent$BedEnterResult;
-	getBed(): Block;
 	setUseBed(useBed: Event$Result): void;
+	getBed(): Block;
 	useBed(): Event$Result;
+	getBedEnterResult(): PlayerBedEnterEvent$BedEnterResult;
 	getPlayer(): Player;
 	getEventName(): string;
 	isAsynchronous(): boolean;
@@ -24,10 +24,14 @@ export class PlayerBedEnterEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.player.PlayerBedEnterEvent');
 	}
-	constructor(who: Player, bed: Block);
 	constructor(who: Player, bed: Block, bedEnterResult: PlayerBedEnterEvent$BedEnterResult);
+	constructor(who: Player, bed: Block);
 	constructor(...args: any[]) {
 		return new PlayerBedEnterEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return PlayerBedEnterEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

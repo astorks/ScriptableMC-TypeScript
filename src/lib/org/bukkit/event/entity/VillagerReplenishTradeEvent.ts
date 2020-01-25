@@ -11,12 +11,12 @@ export interface VillagerReplenishTradeEvent extends EntityEvent, Cancellable {
 	getHandlers(): HandlerList;
 	getEntity(): AbstractVillager;
 	getEntity(): Entity;
+	getRecipe(): MerchantRecipe;
+	setRecipe(recipe: MerchantRecipe): void;
 	isCancelled(): boolean;
 	setCancelled(cancel: boolean): void;
 	setBonus(bonus: number): void;
 	getBonus(): number;
-	getRecipe(): MerchantRecipe;
-	setRecipe(recipe: MerchantRecipe): void;
 	getEntityType(): EntityType;
 	getEventName(): string;
 	isAsynchronous(): boolean;
@@ -29,6 +29,10 @@ export class VillagerReplenishTradeEvent {
 	constructor(what: AbstractVillager, recipe: MerchantRecipe, bonus: number);
 	constructor(...args: any[]) {
 		return new VillagerReplenishTradeEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return VillagerReplenishTradeEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

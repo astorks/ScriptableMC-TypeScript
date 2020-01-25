@@ -4,16 +4,16 @@ import {ConfigurationSerializable} from '../../org/bukkit/configuration/serializ
 
 export interface Color extends ConfigurationSerializable {
 	serialize(): any;
-	mixDyes(colors: Array<DyeColor>): Color;
-	getBlue(): number;
-	asBGR(): number;
-	setRed(red: number): Color;
-	asRGB(): number;
 	getRed(): number;
-	mixColors(colors: Array<Color>): Color;
+	setRed(red: number): Color;
 	getGreen(): number;
+	getBlue(): number;
 	setGreen(green: number): Color;
 	setBlue(blue: number): Color;
+	asRGB(): number;
+	asBGR(): number;
+	mixDyes(colors: Array<DyeColor>): Color;
+	mixColors(colors: Array<Color>): Color;
 }
 
 export class Color {
@@ -70,6 +70,20 @@ export class Color {
 	}
 	public static get ORANGE(): Color {
 		return Color.$javaClass.ORANGE;
+	}
+	public static fromRGB(rgb: number): Color;
+	public static fromRGB(red: number, green: number, blue: number): Color;
+	public static fromRGB(...args: any[]): any {
+		return Color.$javaClass.fromRGB(...args);
+	}
+	public static deserialize(map: any): Color;
+	public static deserialize(...args: any[]): any {
+		return Color.$javaClass.deserialize(...args);
+	}
+	public static fromBGR(bgr: number): Color;
+	public static fromBGR(blue: number, green: number, red: number): Color;
+	public static fromBGR(...args: any[]): any {
+		return Color.$javaClass.fromBGR(...args);
 	}
 }
 

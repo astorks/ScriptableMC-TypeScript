@@ -10,8 +10,8 @@ export interface PrepareItemCraftEvent extends InventoryEvent {
 	getHandlers(): HandlerList;
 	getInventory(): CraftingInventory;
 	getInventory(): Inventory;
-	isRepair(): boolean;
 	getRecipe(): Recipe;
+	isRepair(): boolean;
 	getViewers(): any;
 	getView(): InventoryView;
 	getEventName(): string;
@@ -25,6 +25,10 @@ export class PrepareItemCraftEvent {
 	constructor(what: CraftingInventory, view: InventoryView, isRepair: boolean);
 	constructor(...args: any[]) {
 		return new PrepareItemCraftEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return PrepareItemCraftEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

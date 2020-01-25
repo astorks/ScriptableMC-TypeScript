@@ -24,5 +24,9 @@ export class PlayerLeashEntityEvent {
 	constructor(...args: any[]) {
 		return new PlayerLeashEntityEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return PlayerLeashEntityEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

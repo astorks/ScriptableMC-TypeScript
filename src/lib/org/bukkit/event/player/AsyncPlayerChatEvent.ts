@@ -5,14 +5,14 @@ import {Cancellable} from '../../../../org/bukkit/event/Cancellable.js'
 import {PlayerEvent} from '../../../../org/bukkit/event/player/PlayerEvent.js'
 
 export interface AsyncPlayerChatEvent extends PlayerEvent, Cancellable {
-	getMessage(): string;
 	getHandlers(): HandlerList;
 	isCancelled(): boolean;
 	setCancelled(cancel: boolean): void;
 	setMessage(message: string): void;
-	getRecipients(): any;
-	setFormat(format: string): void;
 	getFormat(): string;
+	setFormat(format: string): void;
+	getRecipients(): any;
+	getMessage(): string;
 	getPlayer(): Player;
 	getEventName(): string;
 	isAsynchronous(): boolean;
@@ -25,6 +25,10 @@ export class AsyncPlayerChatEvent {
 	constructor(async: boolean, who: Player, message: string, players: any);
 	constructor(...args: any[]) {
 		return new AsyncPlayerChatEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return AsyncPlayerChatEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

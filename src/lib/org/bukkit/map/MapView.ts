@@ -4,25 +4,25 @@ import {MapView$Scale} from '../../../org/bukkit/map/MapView$Scale.js'
 import {MapRenderer} from '../../../org/bukkit/map/MapRenderer.js'
 
 export interface MapView {
-	getId(): number;
 	isLocked(): boolean;
-	isVirtual(): boolean;
 	getWorld(): World;
-	isUnlimitedTracking(): boolean;
-	setUnlimitedTracking(unlimited: boolean): void;
-	setTrackingPosition(trackingPosition: boolean): void;
-	setWorld(world: World): void;
-	getCenterZ(): number;
-	getCenterX(): number;
-	getRenderers(): any;
+	setWorld(arg0: World): void;
 	getScale(): MapView$Scale;
+	setScale(arg0: MapView$Scale): void;
+	getCenterX(): number;
+	getCenterZ(): number;
+	setCenterX(arg0: number): void;
+	setCenterZ(arg0: number): void;
+	getRenderers(): any;
+	addRenderer(arg0: MapRenderer): void;
+	removeRenderer(arg0: MapRenderer): boolean;
 	isTrackingPosition(): boolean;
-	setCenterX(x: number): void;
-	removeRenderer(renderer: MapRenderer): boolean;
-	setLocked(locked: boolean): void;
-	setScale(scale: MapView$Scale): void;
-	setCenterZ(z: number): void;
-	addRenderer(renderer: MapRenderer): void;
+	setTrackingPosition(arg0: boolean): void;
+	isUnlimitedTracking(): boolean;
+	setUnlimitedTracking(arg0: boolean): void;
+	setLocked(arg0: boolean): void;
+	isVirtual(): boolean;
+	getId(): number;
 }
 
 export class MapView {

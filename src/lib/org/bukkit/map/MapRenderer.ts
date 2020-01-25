@@ -4,17 +4,17 @@ import {MapCanvas} from '../../../org/bukkit/map/MapCanvas.js'
 import {Player} from '../../../org/bukkit/entity/Player.js'
 
 export interface MapRenderer {
-	initialize(map: MapView): void;
 	isContextual(): boolean;
-	render(map: MapView, canvas: MapCanvas, player: Player): void;
+	render(arg0: MapView, arg1: MapCanvas, arg2: Player): void;
+	initialize(map: MapView): void;
 }
 
 export class MapRenderer {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.map.MapRenderer');
 	}
-	constructor();
 	constructor(contextual: boolean);
+	constructor();
 	constructor(...args: any[]) {
 		return new MapRenderer.$javaClass(...args);
 	}

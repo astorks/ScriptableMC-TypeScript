@@ -5,7 +5,7 @@ import {Directional} from '../../../org/bukkit/material/Directional.js'
 export interface Attachable extends Directional {
 	getAttachedFace(): BlockFace;
 	getFacing(): BlockFace;
-	setFacingDirection(face: BlockFace): void;
+	setFacingDirection(arg0: BlockFace): void;
 }
 
 export class Attachable {

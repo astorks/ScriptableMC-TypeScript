@@ -1,29 +1,29 @@
 declare var Java: any;
 import {BarFlag} from '../../../org/bukkit/boss/BarFlag.js'
-import {BarColor} from '../../../org/bukkit/boss/BarColor.js'
 import {Player} from '../../../org/bukkit/entity/Player.js'
+import {BarColor} from '../../../org/bukkit/boss/BarColor.js'
 import {BarStyle} from '../../../org/bukkit/boss/BarStyle.js'
 
 export interface BossBar {
-	removeAll(): void;
-	addFlag(flag: BarFlag): void;
+	addFlag(arg0: BarFlag): void;
 	getTitle(): string;
-	getColor(): BarColor;
-	setColor(color: BarColor): void;
 	getPlayers(): any;
-	removeFlag(flag: BarFlag): void;
-	setProgress(progress: number): void;
+	hasFlag(arg0: BarFlag): boolean;
+	setProgress(arg0: number): void;
 	getProgress(): number;
-	show(): void;
-	setTitle(title: string): void;
-	addPlayer(player: Player): void;
-	removePlayer(player: Player): void;
-	getStyle(): BarStyle;
-	hide(): void;
-	hasFlag(flag: BarFlag): boolean;
-	setVisible(visible: boolean): void;
-	setStyle(style: BarStyle): void;
+	addPlayer(arg0: Player): void;
+	removePlayer(arg0: Player): void;
+	setVisible(arg0: boolean): void;
 	isVisible(): boolean;
+	show(): void;
+	hide(): void;
+	setTitle(arg0: string): void;
+	getColor(): BarColor;
+	setColor(arg0: BarColor): void;
+	getStyle(): BarStyle;
+	setStyle(arg0: BarStyle): void;
+	removeFlag(arg0: BarFlag): void;
+	removeAll(): void;
 }
 
 export class BossBar {

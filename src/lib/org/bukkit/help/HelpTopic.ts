@@ -2,12 +2,12 @@ declare var Java: any;
 import {CommandSender} from '../../../org/bukkit/command/CommandSender.js'
 
 export interface HelpTopic {
-	getName(): string;
-	canSee(player: CommandSender): boolean;
+	canSee(arg0: CommandSender): boolean;
 	amendCanSee(amendedPermission: string): void;
-	getFullText(forWho: CommandSender): string;
 	getShortText(): string;
+	getFullText(forWho: CommandSender): string;
 	amendTopic(amendedShortText: string, amendedFullText: string): void;
+	getName(): string;
 }
 
 export class HelpTopic {

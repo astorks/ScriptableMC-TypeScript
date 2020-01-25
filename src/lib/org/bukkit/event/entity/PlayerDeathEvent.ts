@@ -12,20 +12,20 @@ export interface PlayerDeathEvent extends EntityDeathEvent {
 	getEntity(): Player;
 	getNewLevel(): number;
 	setNewLevel(level: number): void;
-	setNewExp(exp: number): void;
+	setDeathMessage(deathMessage: string): void;
 	getDeathMessage(): string;
 	getNewExp(): number;
-	setKeepLevel(keepLevel: boolean): void;
-	setDeathMessage(deathMessage: string): void;
+	setNewExp(exp: number): void;
 	getNewTotalExp(): number;
 	setNewTotalExp(totalExp: number): void;
 	getKeepLevel(): boolean;
+	setKeepLevel(keepLevel: boolean): void;
 	setKeepInventory(keepInventory: boolean): void;
 	getKeepInventory(): boolean;
 	getHandlers(): HandlerList;
 	getDrops(): any;
-	setDroppedExp(exp: number): void;
 	getDroppedExp(): number;
+	setDroppedExp(exp: number): void;
 	getEntityType(): EntityType;
 	getEventName(): string;
 	isAsynchronous(): boolean;
@@ -35,11 +35,15 @@ export class PlayerDeathEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.entity.PlayerDeathEvent');
 	}
-	constructor(player: Player, drops: any, droppedExp: number, newExp: number, newTotalExp: number, newLevel: number, deathMessage: string);
 	constructor(player: Player, drops: any, droppedExp: number, newExp: number, deathMessage: string);
 	constructor(player: Player, drops: any, droppedExp: number, deathMessage: string);
+	constructor(player: Player, drops: any, droppedExp: number, newExp: number, newTotalExp: number, newLevel: number, deathMessage: string);
 	constructor(...args: any[]) {
 		return new PlayerDeathEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return PlayerDeathEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

@@ -1,19 +1,19 @@
 declare var Java: any;
-import {Projectile} from '../../../../org/bukkit/entity/Projectile.js'
 import {Entity} from '../../../../org/bukkit/entity/Entity.js'
-import {Location} from '../../../../org/bukkit/Location.js'
+import {Projectile} from '../../../../org/bukkit/entity/Projectile.js'
 import {HandlerList} from '../../../../org/bukkit/event/HandlerList.js'
+import {Location} from '../../../../org/bukkit/Location.js'
 import {EntityType} from '../../../../org/bukkit/entity/EntityType.js'
 import {Cancellable} from '../../../../org/bukkit/event/Cancellable.js'
 import {EntitySpawnEvent} from '../../../../org/bukkit/event/entity/EntitySpawnEvent.js'
 
 export interface ProjectileLaunchEvent extends EntitySpawnEvent, Cancellable {
-	getEntity(): Projectile;
 	getEntity(): Entity;
+	getEntity(): Projectile;
 	isCancelled(): boolean;
 	setCancelled(cancel: boolean): void;
-	getLocation(): Location;
 	getHandlers(): HandlerList;
+	getLocation(): Location;
 	getEntityType(): EntityType;
 	getEventName(): string;
 	isAsynchronous(): boolean;
@@ -26,6 +26,10 @@ export class ProjectileLaunchEvent {
 	constructor(what: Entity);
 	constructor(...args: any[]) {
 		return new ProjectileLaunchEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return ProjectileLaunchEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

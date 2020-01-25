@@ -11,12 +11,12 @@ export interface PlayerBucketEmptyEvent extends PlayerBucketEvent {
 	getHandlers(): HandlerList;
 	getBlock(): Block;
 	getItemStack(): ItemStack;
-	setItemStack(itemStack: ItemStack): void;
 	isCancelled(): boolean;
 	setCancelled(cancel: boolean): void;
+	setItemStack(itemStack: ItemStack): void;
 	getBlockFace(): BlockFace;
-	getBucket(): Material;
 	getBlockClicked(): Block;
+	getBucket(): Material;
 	getPlayer(): Player;
 	getEventName(): string;
 	isAsynchronous(): boolean;
@@ -30,6 +30,10 @@ export class PlayerBucketEmptyEvent {
 	constructor(who: Player, blockClicked: Block, blockFace: BlockFace, bucket: Material, itemInHand: ItemStack);
 	constructor(...args: any[]) {
 		return new PlayerBucketEmptyEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return PlayerBucketEmptyEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

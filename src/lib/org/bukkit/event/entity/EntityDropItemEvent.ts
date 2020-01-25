@@ -25,5 +25,9 @@ export class EntityDropItemEvent {
 	constructor(...args: any[]) {
 		return new EntityDropItemEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return EntityDropItemEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

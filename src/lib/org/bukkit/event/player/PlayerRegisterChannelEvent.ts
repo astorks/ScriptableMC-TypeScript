@@ -4,8 +4,8 @@ import {Player} from '../../../../org/bukkit/entity/Player.js'
 import {PlayerChannelEvent} from '../../../../org/bukkit/event/player/PlayerChannelEvent.js'
 
 export interface PlayerRegisterChannelEvent extends PlayerChannelEvent {
-	getChannel(): string;
 	getHandlers(): HandlerList;
+	getChannel(): string;
 	getPlayer(): Player;
 	getEventName(): string;
 	isAsynchronous(): boolean;
@@ -18,6 +18,10 @@ export class PlayerRegisterChannelEvent {
 	constructor(player: Player, channel: string);
 	constructor(...args: any[]) {
 		return new PlayerRegisterChannelEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return PlayerRegisterChannelEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

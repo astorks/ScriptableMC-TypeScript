@@ -1,3 +1,5 @@
 export default {
-    debug: true
+    debug: true,
+    printDebugOnJoin: true,
+    fireworkOnJoin: true
 }

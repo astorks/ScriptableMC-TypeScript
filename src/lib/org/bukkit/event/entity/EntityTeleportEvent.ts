@@ -28,5 +28,9 @@ export class EntityTeleportEvent {
 	constructor(...args: any[]) {
 		return new EntityTeleportEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return EntityTeleportEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

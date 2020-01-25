@@ -3,12 +3,12 @@ import {NamespacedKey} from '../../../org/bukkit/NamespacedKey.js'
 import {Keyed} from '../../../org/bukkit/Keyed.js'
 
 export interface EntityType extends Keyed {
+	getEntityClass(): any;
+	getTypeId(): number;
+	isSpawnable(): boolean;
 	getName(): string;
 	getKey(): NamespacedKey;
 	isAlive(): boolean;
-	getTypeId(): number;
-	isSpawnable(): boolean;
-	getEntityClass(): any;
 	name(): string;
 	compareTo(arg0: any): number;
 	compareTo(arg0: any): number;

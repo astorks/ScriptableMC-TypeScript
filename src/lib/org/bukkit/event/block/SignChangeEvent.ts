@@ -26,5 +26,9 @@ export class SignChangeEvent {
 	constructor(...args: any[]) {
 		return new SignChangeEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return SignChangeEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

@@ -1,18 +1,18 @@
 declare var Java: any;
 import {ItemStack} from '../../../org/bukkit/inventory/ItemStack.js'
-import {Location} from '../../../org/bukkit/Location.js'
-import {EntityType} from '../../../org/bukkit/entity/EntityType.js'
 import {Server} from '../../../org/bukkit/Server.js'
 import {World} from '../../../org/bukkit/World.js'
+import {EntityEffect} from '../../../org/bukkit/EntityEffect.js'
+import {Vector} from '../../../org/bukkit/util/Vector.js'
 import {BoundingBox} from '../../../org/bukkit/util/BoundingBox.js'
+import {Location} from '../../../org/bukkit/Location.js'
 import {Entity} from '../../../org/bukkit/entity/Entity.js'
+import {PlayerTeleportEvent$TeleportCause} from '../../../org/bukkit/event/player/PlayerTeleportEvent$TeleportCause.js'
+import {EntityDamageEvent} from '../../../org/bukkit/event/entity/EntityDamageEvent.js'
+import {PistonMoveReaction} from '../../../org/bukkit/block/PistonMoveReaction.js'
 import {BlockFace} from '../../../org/bukkit/block/BlockFace.js'
 import {Pose} from '../../../org/bukkit/entity/Pose.js'
-import {EntityDamageEvent} from '../../../org/bukkit/event/entity/EntityDamageEvent.js'
-import {PlayerTeleportEvent$TeleportCause} from '../../../org/bukkit/event/player/PlayerTeleportEvent$TeleportCause.js'
-import {Vector} from '../../../org/bukkit/util/Vector.js'
-import {PistonMoveReaction} from '../../../org/bukkit/block/PistonMoveReaction.js'
-import {EntityEffect} from '../../../org/bukkit/EntityEffect.js'
+import {EntityType} from '../../../org/bukkit/entity/EntityType.js'
 import {MetadataValue} from '../../../org/bukkit/metadata/MetadataValue.js'
 import {Plugin} from '../../../org/bukkit/plugin/Plugin.js'
 import {Permission} from '../../../org/bukkit/permissions/Permission.js'
@@ -21,93 +21,93 @@ import {PersistentDataContainer} from '../../../org/bukkit/persistence/Persisten
 
 export interface Item extends Entity {
 	getItemStack(): ItemStack;
-	setItemStack(stack: ItemStack): void;
+	setPickupDelay(arg0: number): void;
 	getPickupDelay(): number;
-	setPickupDelay(delay: number): void;
-	remove(): void;
-	isEmpty(): boolean;
-	getLocation(): Location;
-	getLocation(loc: Location): Location;
-	getType(): EntityType;
-	getServer(): Server;
+	setItemStack(arg0: ItemStack): void;
 	isValid(): boolean;
+	getServer(): Server;
 	getWorld(): World;
-	getEntityId(): number;
-	isInsideVehicle(): boolean;
-	setGlowing(flag: boolean): void;
-	isGlowing(): boolean;
-	leaveVehicle(): boolean;
+	playEffect(arg0: EntityEffect): void;
+	getUniqueId(): string;
+	setVelocity(arg0: Vector): void;
+	getVelocity(): Vector;
+	getHeight(): number;
+	getWidth(): number;
 	getBoundingBox(): BoundingBox;
+	isOnGround(): boolean;
+	setRotation(arg0: number, arg1: number): void;
+	teleport(arg0: Location): boolean;
+	teleport(arg0: Entity): boolean;
+	teleport(arg0: Location, arg1: PlayerTeleportEvent$TeleportCause): boolean;
+	teleport(arg0: Entity, arg1: PlayerTeleportEvent$TeleportCause): boolean;
+	getNearbyEntities(arg0: number, arg1: number, arg2: number): any;
+	getEntityId(): number;
+	getFireTicks(): number;
+	getMaxFireTicks(): number;
+	setFireTicks(arg0: number): void;
+	isDead(): boolean;
+	isPersistent(): boolean;
+	setPersistent(arg0: boolean): void;
+	getPassenger(): Entity;
+	setPassenger(arg0: Entity): boolean;
+	getPassengers(): any;
+	addPassenger(arg0: Entity): boolean;
+	removePassenger(arg0: Entity): boolean;
+	eject(): boolean;
+	getFallDistance(): number;
+	setFallDistance(arg0: number): void;
+	setLastDamageCause(arg0: EntityDamageEvent): void;
+	getLastDamageCause(): EntityDamageEvent;
+	getTicksLived(): number;
+	setTicksLived(arg0: number): void;
+	isInsideVehicle(): boolean;
+	leaveVehicle(): boolean;
+	getVehicle(): Entity;
+	setCustomNameVisible(arg0: boolean): void;
+	isCustomNameVisible(): boolean;
+	setGlowing(arg0: boolean): void;
+	isGlowing(): boolean;
+	setInvulnerable(arg0: boolean): void;
 	isInvulnerable(): boolean;
 	isSilent(): boolean;
-	getPortalCooldown(): number;
-	getVehicle(): Entity;
-	getFacing(): BlockFace;
-	addPassenger(passenger: Entity): boolean;
-	setSilent(flag: boolean): void;
-	getPose(): Pose;
-	getFallDistance(): number;
-	setRotation(yaw: number, pitch: number): void;
-	getLastDamageCause(): EntityDamageEvent;
-	setInvulnerable(flag: boolean): void;
-	setPersistent(persistent: boolean): void;
-	getMaxFireTicks(): number;
-	isPersistent(): boolean;
-	getPassenger(): Entity;
-	setGravity(gravity: boolean): void;
-	teleport(location: Location, cause: PlayerTeleportEvent$TeleportCause): boolean;
-	teleport(destination: Entity, cause: PlayerTeleportEvent$TeleportCause): boolean;
-	teleport(location: Location): boolean;
-	teleport(destination: Entity): boolean;
-	getHeight(): number;
-	setPortalCooldown(cooldown: number): void;
-	isDead(): boolean;
-	getNearbyEntities(x: number, y: number, z: number): any;
-	getScoreboardTags(): any;
-	setVelocity(velocity: Vector): void;
-	addScoreboardTag(tag: string): boolean;
-	setPassenger(passenger: Entity): boolean;
+	setSilent(arg0: boolean): void;
 	hasGravity(): boolean;
-	isOnGround(): boolean;
-	getTicksLived(): number;
-	setTicksLived(value: number): void;
-	setFallDistance(distance: number): void;
-	getPassengers(): any;
-	getFireTicks(): number;
-	setFireTicks(ticks: number): void;
-	removePassenger(passenger: Entity): boolean;
-	eject(): boolean;
-	setLastDamageCause(event: EntityDamageEvent): void;
-	getVelocity(): Vector;
-	getWidth(): number;
+	setGravity(arg0: boolean): void;
+	getPortalCooldown(): number;
+	setPortalCooldown(arg0: number): void;
+	getScoreboardTags(): any;
+	addScoreboardTag(arg0: string): boolean;
+	removeScoreboardTag(arg0: string): boolean;
 	getPistonMoveReaction(): PistonMoveReaction;
-	setCustomNameVisible(flag: boolean): void;
-	isCustomNameVisible(): boolean;
-	removeScoreboardTag(tag: string): boolean;
-	playEffect(type: EntityEffect): void;
-	getUniqueId(): string;
-	hasMetadata(metadataKey: string): boolean;
-	setMetadata(metadataKey: string, newMetadataValue: MetadataValue): void;
-	removeMetadata(metadataKey: string, owningPlugin: Plugin): void;
-	getMetadata(metadataKey: string): any;
+	getFacing(): BlockFace;
+	getPose(): Pose;
+	remove(): void;
+	isEmpty(): boolean;
+	getLocation(arg0: Location): Location;
+	getLocation(): Location;
+	getType(): EntityType;
+	setMetadata(arg0: string, arg1: MetadataValue): void;
+	getMetadata(arg0: string): any;
+	hasMetadata(arg0: string): boolean;
+	removeMetadata(arg0: string, arg1: Plugin): void;
+	sendMessage(arg0: string): void;
+	sendMessage(arg0: Array<string>): void;
 	getName(): string;
-	sendMessage(messages: Array<string>): void;
-	sendMessage(message: string): void;
-	hasPermission(perm: Permission): boolean;
-	hasPermission(_name: string): boolean;
-	getEffectivePermissions(): any;
+	hasPermission(arg0: string): boolean;
+	hasPermission(arg0: Permission): boolean;
 	recalculatePermissions(): void;
-	addAttachment(plugin: Plugin, ticks: number): PermissionAttachment;
-	addAttachment(plugin: Plugin, _name: string, value: boolean, ticks: number): PermissionAttachment;
-	addAttachment(plugin: Plugin): PermissionAttachment;
-	addAttachment(plugin: Plugin, _name: string, value: boolean): PermissionAttachment;
-	removeAttachment(attachment: PermissionAttachment): void;
-	isPermissionSet(perm: Permission): boolean;
-	isPermissionSet(_name: string): boolean;
+	isPermissionSet(arg0: string): boolean;
+	isPermissionSet(arg0: Permission): boolean;
+	addAttachment(arg0: Plugin, arg1: number): PermissionAttachment;
+	addAttachment(arg0: Plugin, arg1: string, arg2: boolean, arg3: number): PermissionAttachment;
+	addAttachment(arg0: Plugin, arg1: string, arg2: boolean): PermissionAttachment;
+	addAttachment(arg0: Plugin): PermissionAttachment;
+	removeAttachment(arg0: PermissionAttachment): void;
+	getEffectivePermissions(): any;
 	isOp(): boolean;
-	setOp(value: boolean): void;
+	setOp(arg0: boolean): void;
+	setCustomName(arg0: string): void;
 	getCustomName(): string;
-	setCustomName(_name: string): void;
 	getPersistentDataContainer(): PersistentDataContainer;
 }
 

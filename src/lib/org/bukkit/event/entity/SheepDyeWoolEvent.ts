@@ -28,5 +28,9 @@ export class SheepDyeWoolEvent {
 	constructor(...args: any[]) {
 		return new SheepDyeWoolEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return SheepDyeWoolEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

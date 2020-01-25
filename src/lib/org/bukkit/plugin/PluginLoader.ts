@@ -4,12 +4,12 @@ import {PluginDescriptionFile} from '../../../org/bukkit/plugin/PluginDescriptio
 import {Listener} from '../../../org/bukkit/event/Listener.js'
 
 export interface PluginLoader {
-	loadPlugin(file: any): Plugin;
-	enablePlugin(plugin: Plugin): void;
-	disablePlugin(plugin: Plugin): void;
-	getPluginDescription(file: any): PluginDescriptionFile;
+	loadPlugin(arg0: any): Plugin;
+	enablePlugin(arg0: Plugin): void;
+	disablePlugin(arg0: Plugin): void;
+	getPluginDescription(arg0: any): PluginDescriptionFile;
 	getPluginFileFilters(): Array<any>;
-	createRegisteredListeners(listener: Listener, plugin: Plugin): any;
+	createRegisteredListeners(arg0: Listener, arg1: Plugin): any;
 }
 
 export class PluginLoader {

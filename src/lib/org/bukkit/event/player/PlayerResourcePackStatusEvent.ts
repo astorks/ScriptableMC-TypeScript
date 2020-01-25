@@ -20,5 +20,9 @@ export class PlayerResourcePackStatusEvent {
 	constructor(...args: any[]) {
 		return new PlayerResourcePackStatusEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return PlayerResourcePackStatusEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

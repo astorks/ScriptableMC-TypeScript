@@ -23,5 +23,9 @@ export class PlayerDropItemEvent {
 	constructor(...args: any[]) {
 		return new PlayerDropItemEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return PlayerDropItemEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

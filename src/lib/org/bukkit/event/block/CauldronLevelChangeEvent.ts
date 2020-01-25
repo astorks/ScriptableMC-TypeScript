@@ -12,8 +12,8 @@ export interface CauldronLevelChangeEvent extends BlockEvent, Cancellable {
 	isCancelled(): boolean;
 	setCancelled(cancelled: boolean): void;
 	getReason(): CauldronLevelChangeEvent$ChangeReason;
-	getOldLevel(): number;
 	getNewLevel(): number;
+	getOldLevel(): number;
 	setNewLevel(newLevel: number): void;
 	getBlock(): Block;
 	getEventName(): string;
@@ -27,6 +27,10 @@ export class CauldronLevelChangeEvent {
 	constructor(block: Block, entity: Entity, reason: CauldronLevelChangeEvent$ChangeReason, oldLevel: number, newLevel: number);
 	constructor(...args: any[]) {
 		return new CauldronLevelChangeEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return CauldronLevelChangeEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

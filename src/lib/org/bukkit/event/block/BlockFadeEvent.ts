@@ -23,5 +23,9 @@ export class BlockFadeEvent {
 	constructor(...args: any[]) {
 		return new BlockFadeEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return BlockFadeEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

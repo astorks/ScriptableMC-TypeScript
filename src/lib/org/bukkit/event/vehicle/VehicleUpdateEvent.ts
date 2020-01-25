@@ -18,5 +18,9 @@ export class VehicleUpdateEvent {
 	constructor(...args: any[]) {
 		return new VehicleUpdateEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return VehicleUpdateEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

@@ -8,13 +8,13 @@ import {Cancellable} from '../../../../org/bukkit/event/Cancellable.js'
 import {EntityEvent} from '../../../../org/bukkit/event/entity/EntityEvent.js'
 
 export interface EntityPickupItemEvent extends EntityEvent, Cancellable {
-	getHandlers(): HandlerList;
 	getRemaining(): number;
+	getHandlers(): HandlerList;
 	getEntity(): Entity;
 	getEntity(): LivingEntity;
+	getItem(): Item;
 	isCancelled(): boolean;
 	setCancelled(cancel: boolean): void;
-	getItem(): Item;
 	getEntityType(): EntityType;
 	getEventName(): string;
 	isAsynchronous(): boolean;
@@ -27,6 +27,10 @@ export class EntityPickupItemEvent {
 	constructor(entity: LivingEntity, item: Item, remaining: number);
 	constructor(...args: any[]) {
 		return new EntityPickupItemEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return EntityPickupItemEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

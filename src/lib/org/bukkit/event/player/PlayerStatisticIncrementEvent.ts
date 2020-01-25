@@ -14,8 +14,8 @@ export interface PlayerStatisticIncrementEvent extends PlayerEvent, Cancellable 
 	isCancelled(): boolean;
 	setCancelled(cancel: boolean): void;
 	getEntityType(): EntityType;
-	getPreviousValue(): number;
 	getNewValue(): number;
+	getPreviousValue(): number;
 	getPlayer(): Player;
 	getEventName(): string;
 	isAsynchronous(): boolean;
@@ -30,6 +30,10 @@ export class PlayerStatisticIncrementEvent {
 	constructor(player: Player, statistic: Statistic, initialValue: number, newValue: number, material: Material);
 	constructor(...args: any[]) {
 		return new PlayerStatisticIncrementEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return PlayerStatisticIncrementEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

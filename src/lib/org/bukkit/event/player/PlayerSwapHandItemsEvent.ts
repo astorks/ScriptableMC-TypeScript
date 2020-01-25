@@ -10,9 +10,9 @@ export interface PlayerSwapHandItemsEvent extends PlayerEvent, Cancellable {
 	isCancelled(): boolean;
 	setCancelled(cancel: boolean): void;
 	getOffHandItem(): ItemStack;
+	getMainHandItem(): ItemStack;
 	setOffHandItem(offHandItem: ItemStack): void;
 	setMainHandItem(mainHandItem: ItemStack): void;
-	getMainHandItem(): ItemStack;
 	getPlayer(): Player;
 	getEventName(): string;
 	isAsynchronous(): boolean;
@@ -25,6 +25,10 @@ export class PlayerSwapHandItemsEvent {
 	constructor(player: Player, mainHandItem: ItemStack, offHandItem: ItemStack);
 	constructor(...args: any[]) {
 		return new PlayerSwapHandItemsEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return PlayerSwapHandItemsEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

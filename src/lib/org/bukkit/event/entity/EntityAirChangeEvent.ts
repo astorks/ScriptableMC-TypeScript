@@ -25,5 +25,9 @@ export class EntityAirChangeEvent {
 	constructor(...args: any[]) {
 		return new EntityAirChangeEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return EntityAirChangeEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

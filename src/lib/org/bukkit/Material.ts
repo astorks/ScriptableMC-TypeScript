@@ -1,35 +1,35 @@
 declare var Java: any;
-import {NamespacedKey} from '../../org/bukkit/NamespacedKey.js'
 import {BlockData} from '../../org/bukkit/block/data/BlockData.js'
 import {MaterialData} from '../../org/bukkit/material/MaterialData.js'
+import {NamespacedKey} from '../../org/bukkit/NamespacedKey.js'
 import {Keyed} from '../../org/bukkit/Keyed.js'
 
 export interface Material extends Keyed {
-	getKey(): NamespacedKey;
-	getId(): number;
-	hasGravity(): boolean;
+	createBlockData(consumer: any): BlockData;
 	createBlockData(): BlockData;
 	createBlockData(data: string): BlockData;
-	createBlockData(consumer: any): BlockData;
+	getMaxStackSize(): number;
+	isLegacy(): boolean;
 	getData(): any;
 	getNewData(raw: number): MaterialData;
-	isLegacy(): boolean;
-	getMaxStackSize(): number;
 	getMaxDurability(): number;
-	isFlammable(): boolean;
+	hasGravity(): boolean;
 	isBlock(): boolean;
-	isTransparent(): boolean;
-	isOccluding(): boolean;
+	isEdible(): boolean;
+	isRecord(): boolean;
 	isSolid(): boolean;
 	isAir(): boolean;
-	isRecord(): boolean;
-	isEdible(): boolean;
-	isFuel(): boolean;
-	getBlastResistance(): number;
-	getHardness(): number;
+	isTransparent(): boolean;
+	isFlammable(): boolean;
 	isBurnable(): boolean;
-	isInteractable(): boolean;
+	isFuel(): boolean;
+	isOccluding(): boolean;
 	isItem(): boolean;
+	isInteractable(): boolean;
+	getHardness(): number;
+	getBlastResistance(): number;
+	getKey(): NamespacedKey;
+	getId(): number;
 	name(): string;
 	compareTo(arg0: any): number;
 	compareTo(arg0: any): number;

@@ -3,12 +3,12 @@ import {HelpTopic} from '../../../org/bukkit/help/HelpTopic.js'
 import {HelpTopicFactory} from '../../../org/bukkit/help/HelpTopicFactory.js'
 
 export interface HelpMap {
-	clear(): void;
-	getIgnoredPlugins(): any;
-	addTopic(topic: HelpTopic): void;
-	getHelpTopic(topicName: string): HelpTopic;
 	getHelpTopics(): any;
-	registerHelpTopicFactory(commandClass: any, factory: HelpTopicFactory): void;
+	getHelpTopic(arg0: string): HelpTopic;
+	addTopic(arg0: HelpTopic): void;
+	registerHelpTopicFactory(arg0: any, arg1: HelpTopicFactory): void;
+	getIgnoredPlugins(): any;
+	clear(): void;
 }
 
 export class HelpMap {

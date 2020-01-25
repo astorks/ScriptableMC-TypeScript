@@ -1,28 +1,28 @@
 declare var Java: any;
 import {LivingEntity} from '../../../org/bukkit/entity/LivingEntity.js'
-import {MemoryKey} from '../../../org/bukkit/entity/memory/MemoryKey.js'
+import {Location} from '../../../org/bukkit/Location.js'
 import {Block} from '../../../org/bukkit/block/Block.js'
 import {FluidCollisionMode} from '../../../org/bukkit/FluidCollisionMode.js'
+import {RayTraceResult} from '../../../org/bukkit/util/RayTraceResult.js'
+import {Player} from '../../../org/bukkit/entity/Player.js'
 import {PotionEffect} from '../../../org/bukkit/potion/PotionEffect.js'
 import {PotionEffectType} from '../../../org/bukkit/potion/PotionEffectType.js'
-import {Player} from '../../../org/bukkit/entity/Player.js'
-import {EntityEquipment} from '../../../org/bukkit/inventory/EntityEquipment.js'
-import {RayTraceResult} from '../../../org/bukkit/util/RayTraceResult.js'
-import {Location} from '../../../org/bukkit/Location.js'
 import {Entity} from '../../../org/bukkit/entity/Entity.js'
+import {EntityEquipment} from '../../../org/bukkit/inventory/EntityEquipment.js'
+import {MemoryKey} from '../../../org/bukkit/entity/memory/MemoryKey.js'
 import {AttributeInstance} from '../../../org/bukkit/attribute/AttributeInstance.js'
 import {Attribute} from '../../../org/bukkit/attribute/Attribute.js'
-import {EntityType} from '../../../org/bukkit/entity/EntityType.js'
 import {Server} from '../../../org/bukkit/Server.js'
 import {World} from '../../../org/bukkit/World.js'
+import {EntityEffect} from '../../../org/bukkit/EntityEffect.js'
+import {Vector} from '../../../org/bukkit/util/Vector.js'
 import {BoundingBox} from '../../../org/bukkit/util/BoundingBox.js'
+import {PlayerTeleportEvent$TeleportCause} from '../../../org/bukkit/event/player/PlayerTeleportEvent$TeleportCause.js'
+import {EntityDamageEvent} from '../../../org/bukkit/event/entity/EntityDamageEvent.js'
+import {PistonMoveReaction} from '../../../org/bukkit/block/PistonMoveReaction.js'
 import {BlockFace} from '../../../org/bukkit/block/BlockFace.js'
 import {Pose} from '../../../org/bukkit/entity/Pose.js'
-import {EntityDamageEvent} from '../../../org/bukkit/event/entity/EntityDamageEvent.js'
-import {PlayerTeleportEvent$TeleportCause} from '../../../org/bukkit/event/player/PlayerTeleportEvent$TeleportCause.js'
-import {Vector} from '../../../org/bukkit/util/Vector.js'
-import {PistonMoveReaction} from '../../../org/bukkit/block/PistonMoveReaction.js'
-import {EntityEffect} from '../../../org/bukkit/EntityEffect.js'
+import {EntityType} from '../../../org/bukkit/entity/EntityType.js'
 import {MetadataValue} from '../../../org/bukkit/metadata/MetadataValue.js'
 import {Plugin} from '../../../org/bukkit/plugin/Plugin.js'
 import {Permission} from '../../../org/bukkit/permissions/Permission.js'
@@ -33,172 +33,172 @@ import {LootTable} from '../../../org/bukkit/loot/LootTable.js'
 import {Ageable} from '../../../org/bukkit/entity/Ageable.js'
 
 export interface Animals extends Ageable {
-	isLoveMode(): boolean;
-	setBreedCause(uuid: string): void;
 	getBreedCause(): string;
-	setLoveModeTicks(ticks: number): void;
+	setBreedCause(arg0: string): void;
+	isLoveMode(): boolean;
 	getLoveModeTicks(): number;
-	getAgeLock(): boolean;
-	setAge(age: number): void;
-	setAdult(): void;
-	setAgeLock(lock: boolean): void;
-	setBaby(): void;
+	setLoveModeTicks(arg0: number): void;
 	getAge(): number;
-	canBreed(): boolean;
+	setAge(arg0: number): void;
+	setAgeLock(arg0: boolean): void;
+	getAgeLock(): boolean;
+	setBaby(): void;
+	setAdult(): void;
 	isAdult(): boolean;
-	setBreed(breed: boolean): void;
+	canBreed(): boolean;
+	setBreed(arg0: boolean): void;
 	getTarget(): LivingEntity;
-	setTarget(target: LivingEntity): void;
-	setMemory(memoryKey: MemoryKey, memoryValue: any): void;
-	getLastTwoTargetBlocks(transparent: any, maxDistance: number): any;
-	getRemoveWhenFarAway(): boolean;
-	setRemoveWhenFarAway(remove: boolean): void;
-	getTargetBlockExact(maxDistance: number, fluidCollisionMode: FluidCollisionMode): Block;
-	getTargetBlockExact(maxDistance: number): Block;
-	setMaximumNoDamageTicks(ticks: number): void;
-	getMaximumNoDamageTicks(): number;
-	getActivePotionEffects(): any;
-	getPotionEffect(type: PotionEffectType): PotionEffect;
-	getLineOfSight(transparent: any, maxDistance: number): any;
-	getKiller(): Player;
-	getEquipment(): EntityEquipment;
-	setCanPickupItems(pickup: boolean): void;
-	setRemainingAir(ticks: number): void;
-	getMaximumAir(): number;
-	rayTraceBlocks(maxDistance: number): RayTraceResult;
-	rayTraceBlocks(maxDistance: number, fluidCollisionMode: FluidCollisionMode): RayTraceResult;
-	setNoDamageTicks(ticks: number): void;
-	hasPotionEffect(type: PotionEffectType): boolean;
-	getRemainingAir(): number;
-	getEyeHeight(ignorePose: boolean): number;
+	setTarget(arg0: LivingEntity): void;
 	getEyeHeight(): number;
+	getEyeHeight(arg0: boolean): number;
 	getEyeLocation(): Location;
+	getLineOfSight(arg0: any, arg1: number): any;
+	getTargetBlock(arg0: any, arg1: number): Block;
+	getLastTwoTargetBlocks(arg0: any, arg1: number): any;
+	getTargetBlockExact(arg0: number, arg1: FluidCollisionMode): Block;
+	getTargetBlockExact(arg0: number): Block;
+	rayTraceBlocks(arg0: number, arg1: FluidCollisionMode): RayTraceResult;
+	rayTraceBlocks(arg0: number): RayTraceResult;
+	getRemainingAir(): number;
+	setRemainingAir(arg0: number): void;
+	getMaximumAir(): number;
+	setMaximumAir(arg0: number): void;
+	getMaximumNoDamageTicks(): number;
+	setMaximumNoDamageTicks(arg0: number): void;
 	getLastDamage(): number;
-	addPotionEffect(effect: PotionEffect): boolean;
-	addPotionEffect(effect: PotionEffect, force: boolean): boolean;
-	addPotionEffects(effects: any): boolean;
-	removePotionEffect(type: PotionEffectType): void;
-	setLastDamage(damage: number): void;
-	isLeashed(): boolean;
-	hasLineOfSight(other: Entity): boolean;
-	getLeashHolder(): Entity;
-	setLeashHolder(holder: Entity): boolean;
-	setGliding(gliding: boolean): void;
-	isSwimming(): boolean;
-	getCanPickupItems(): boolean;
-	setSwimming(swimming: boolean): void;
-	isRiptiding(): boolean;
-	setAI(ai: boolean): void;
-	hasAI(): boolean;
-	setCollidable(collidable: boolean): void;
-	isCollidable(): boolean;
-	isGliding(): boolean;
-	setMaximumAir(ticks: number): void;
-	getTargetBlock(transparent: any, maxDistance: number): Block;
-	getMemory(memoryKey: MemoryKey): any;
+	setLastDamage(arg0: number): void;
 	getNoDamageTicks(): number;
+	setNoDamageTicks(arg0: number): void;
+	getKiller(): Player;
+	addPotionEffect(arg0: PotionEffect, arg1: boolean): boolean;
+	addPotionEffect(arg0: PotionEffect): boolean;
+	addPotionEffects(arg0: any): boolean;
+	hasPotionEffect(arg0: PotionEffectType): boolean;
+	getPotionEffect(arg0: PotionEffectType): PotionEffect;
+	removePotionEffect(arg0: PotionEffectType): void;
+	getActivePotionEffects(): any;
+	hasLineOfSight(arg0: Entity): boolean;
+	getRemoveWhenFarAway(): boolean;
+	setRemoveWhenFarAway(arg0: boolean): void;
+	getEquipment(): EntityEquipment;
+	setCanPickupItems(arg0: boolean): void;
+	getCanPickupItems(): boolean;
+	isLeashed(): boolean;
+	getLeashHolder(): Entity;
+	setLeashHolder(arg0: Entity): boolean;
+	isGliding(): boolean;
+	setGliding(arg0: boolean): void;
+	isSwimming(): boolean;
+	setSwimming(arg0: boolean): void;
+	isRiptiding(): boolean;
 	isSleeping(): boolean;
-	getAttribute(attribute: Attribute): AttributeInstance;
+	setAI(arg0: boolean): void;
+	hasAI(): boolean;
+	setCollidable(arg0: boolean): void;
+	isCollidable(): boolean;
+	getMemory(arg0: MemoryKey): any;
+	setMemory(arg0: MemoryKey, arg1: any): void;
+	getAttribute(arg0: Attribute): AttributeInstance;
+	damage(arg0: number): void;
+	damage(arg0: number, arg1: Entity): void;
 	getHealth(): number;
-	setHealth(health: number): void;
-	setMaxHealth(health: number): void;
-	getMaxHealth(): number;
-	resetMaxHealth(): void;
+	setHealth(arg0: number): void;
 	getAbsorptionAmount(): number;
-	setAbsorptionAmount(amount: number): void;
-	damage(amount: number): void;
-	damage(amount: number, source: Entity): void;
-	remove(): void;
-	isEmpty(): boolean;
-	getLocation(): Location;
-	getLocation(loc: Location): Location;
-	getType(): EntityType;
-	getServer(): Server;
+	setAbsorptionAmount(arg0: number): void;
+	getMaxHealth(): number;
+	setMaxHealth(arg0: number): void;
+	resetMaxHealth(): void;
 	isValid(): boolean;
+	getServer(): Server;
 	getWorld(): World;
-	getEntityId(): number;
-	isInsideVehicle(): boolean;
-	setGlowing(flag: boolean): void;
-	isGlowing(): boolean;
-	leaveVehicle(): boolean;
+	playEffect(arg0: EntityEffect): void;
+	getUniqueId(): string;
+	setVelocity(arg0: Vector): void;
+	getVelocity(): Vector;
+	getHeight(): number;
+	getWidth(): number;
 	getBoundingBox(): BoundingBox;
+	isOnGround(): boolean;
+	setRotation(arg0: number, arg1: number): void;
+	teleport(arg0: Location): boolean;
+	teleport(arg0: Entity): boolean;
+	teleport(arg0: Location, arg1: PlayerTeleportEvent$TeleportCause): boolean;
+	teleport(arg0: Entity, arg1: PlayerTeleportEvent$TeleportCause): boolean;
+	getNearbyEntities(arg0: number, arg1: number, arg2: number): any;
+	getEntityId(): number;
+	getFireTicks(): number;
+	getMaxFireTicks(): number;
+	setFireTicks(arg0: number): void;
+	isDead(): boolean;
+	isPersistent(): boolean;
+	setPersistent(arg0: boolean): void;
+	getPassenger(): Entity;
+	setPassenger(arg0: Entity): boolean;
+	getPassengers(): any;
+	addPassenger(arg0: Entity): boolean;
+	removePassenger(arg0: Entity): boolean;
+	eject(): boolean;
+	getFallDistance(): number;
+	setFallDistance(arg0: number): void;
+	setLastDamageCause(arg0: EntityDamageEvent): void;
+	getLastDamageCause(): EntityDamageEvent;
+	getTicksLived(): number;
+	setTicksLived(arg0: number): void;
+	isInsideVehicle(): boolean;
+	leaveVehicle(): boolean;
+	getVehicle(): Entity;
+	setCustomNameVisible(arg0: boolean): void;
+	isCustomNameVisible(): boolean;
+	setGlowing(arg0: boolean): void;
+	isGlowing(): boolean;
+	setInvulnerable(arg0: boolean): void;
 	isInvulnerable(): boolean;
 	isSilent(): boolean;
-	getPortalCooldown(): number;
-	getVehicle(): Entity;
-	getFacing(): BlockFace;
-	addPassenger(passenger: Entity): boolean;
-	setSilent(flag: boolean): void;
-	getPose(): Pose;
-	getFallDistance(): number;
-	setRotation(yaw: number, pitch: number): void;
-	getLastDamageCause(): EntityDamageEvent;
-	setInvulnerable(flag: boolean): void;
-	setPersistent(persistent: boolean): void;
-	getMaxFireTicks(): number;
-	isPersistent(): boolean;
-	getPassenger(): Entity;
-	setGravity(gravity: boolean): void;
-	teleport(location: Location, cause: PlayerTeleportEvent$TeleportCause): boolean;
-	teleport(destination: Entity, cause: PlayerTeleportEvent$TeleportCause): boolean;
-	teleport(location: Location): boolean;
-	teleport(destination: Entity): boolean;
-	getHeight(): number;
-	setPortalCooldown(cooldown: number): void;
-	isDead(): boolean;
-	getNearbyEntities(x: number, y: number, z: number): any;
-	getScoreboardTags(): any;
-	setVelocity(velocity: Vector): void;
-	addScoreboardTag(tag: string): boolean;
-	setPassenger(passenger: Entity): boolean;
+	setSilent(arg0: boolean): void;
 	hasGravity(): boolean;
-	isOnGround(): boolean;
-	getTicksLived(): number;
-	setTicksLived(value: number): void;
-	setFallDistance(distance: number): void;
-	getPassengers(): any;
-	getFireTicks(): number;
-	setFireTicks(ticks: number): void;
-	removePassenger(passenger: Entity): boolean;
-	eject(): boolean;
-	setLastDamageCause(event: EntityDamageEvent): void;
-	getVelocity(): Vector;
-	getWidth(): number;
+	setGravity(arg0: boolean): void;
+	getPortalCooldown(): number;
+	setPortalCooldown(arg0: number): void;
+	getScoreboardTags(): any;
+	addScoreboardTag(arg0: string): boolean;
+	removeScoreboardTag(arg0: string): boolean;
 	getPistonMoveReaction(): PistonMoveReaction;
-	setCustomNameVisible(flag: boolean): void;
-	isCustomNameVisible(): boolean;
-	removeScoreboardTag(tag: string): boolean;
-	playEffect(type: EntityEffect): void;
-	getUniqueId(): string;
-	hasMetadata(metadataKey: string): boolean;
-	setMetadata(metadataKey: string, newMetadataValue: MetadataValue): void;
-	removeMetadata(metadataKey: string, owningPlugin: Plugin): void;
-	getMetadata(metadataKey: string): any;
+	getFacing(): BlockFace;
+	getPose(): Pose;
+	remove(): void;
+	isEmpty(): boolean;
+	getLocation(arg0: Location): Location;
+	getLocation(): Location;
+	getType(): EntityType;
+	setMetadata(arg0: string, arg1: MetadataValue): void;
+	getMetadata(arg0: string): any;
+	hasMetadata(arg0: string): boolean;
+	removeMetadata(arg0: string, arg1: Plugin): void;
+	sendMessage(arg0: string): void;
+	sendMessage(arg0: Array<string>): void;
 	getName(): string;
-	sendMessage(messages: Array<string>): void;
-	sendMessage(message: string): void;
-	hasPermission(perm: Permission): boolean;
-	hasPermission(_name: string): boolean;
-	getEffectivePermissions(): any;
+	hasPermission(arg0: string): boolean;
+	hasPermission(arg0: Permission): boolean;
 	recalculatePermissions(): void;
-	addAttachment(plugin: Plugin, ticks: number): PermissionAttachment;
-	addAttachment(plugin: Plugin, _name: string, value: boolean, ticks: number): PermissionAttachment;
-	addAttachment(plugin: Plugin): PermissionAttachment;
-	addAttachment(plugin: Plugin, _name: string, value: boolean): PermissionAttachment;
-	removeAttachment(attachment: PermissionAttachment): void;
-	isPermissionSet(perm: Permission): boolean;
-	isPermissionSet(_name: string): boolean;
+	isPermissionSet(arg0: string): boolean;
+	isPermissionSet(arg0: Permission): boolean;
+	addAttachment(arg0: Plugin, arg1: number): PermissionAttachment;
+	addAttachment(arg0: Plugin, arg1: string, arg2: boolean, arg3: number): PermissionAttachment;
+	addAttachment(arg0: Plugin, arg1: string, arg2: boolean): PermissionAttachment;
+	addAttachment(arg0: Plugin): PermissionAttachment;
+	removeAttachment(arg0: PermissionAttachment): void;
+	getEffectivePermissions(): any;
 	isOp(): boolean;
-	setOp(value: boolean): void;
+	setOp(arg0: boolean): void;
+	setCustomName(arg0: string): void;
 	getCustomName(): string;
-	setCustomName(_name: string): void;
 	getPersistentDataContainer(): PersistentDataContainer;
-	launchProjectile(projectile: any): Projectile;
-	launchProjectile(projectile: any, velocity: Vector): Projectile;
-	setSeed(seed: number): void;
+	launchProjectile(arg0: any): Projectile;
+	launchProjectile(arg0: any, arg1: Vector): Projectile;
 	getLootTable(): LootTable;
 	getSeed(): number;
-	setLootTable(table: LootTable): void;
+	setLootTable(arg0: LootTable): void;
+	setSeed(arg0: number): void;
 }
 
 export class Animals {

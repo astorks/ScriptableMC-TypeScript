@@ -12,8 +12,8 @@ export interface VehicleEntityCollisionEvent extends VehicleCollisionEvent, Canc
 	setCancelled(cancel: boolean): void;
 	isPickupCancelled(): boolean;
 	setPickupCancelled(cancel: boolean): void;
-	setCollisionCancelled(cancel: boolean): void;
 	isCollisionCancelled(): boolean;
+	setCollisionCancelled(cancel: boolean): void;
 	getVehicle(): Vehicle;
 	getEventName(): string;
 	isAsynchronous(): boolean;
@@ -26,6 +26,10 @@ export class VehicleEntityCollisionEvent {
 	constructor(vehicle: Vehicle, entity: Entity);
 	constructor(...args: any[]) {
 		return new VehicleEntityCollisionEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return VehicleEntityCollisionEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

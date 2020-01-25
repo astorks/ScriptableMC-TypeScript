@@ -1,46 +1,51 @@
 declare var Java: any;
-import {CommandSender} from '../../../org/bukkit/command/CommandSender.js'
 import {Plugin} from '../../../org/bukkit/plugin/Plugin.js'
-import {TabCompleter} from '../../../org/bukkit/command/TabCompleter.js'
 import {CommandExecutor} from '../../../org/bukkit/command/CommandExecutor.js'
+import {TabCompleter} from '../../../org/bukkit/command/TabCompleter.js'
+import {CommandSender} from '../../../org/bukkit/command/CommandSender.js'
 import {CommandMap} from '../../../org/bukkit/command/CommandMap.js'
-import {Command} from '../../../org/bukkit/command/Command.js'
 import {Location} from '../../../org/bukkit/Location.js'
+import {Command} from '../../../org/bukkit/command/Command.js'
 import {PluginIdentifiableCommand} from '../../../org/bukkit/command/PluginIdentifiableCommand.js'
 
 export interface PluginCommand extends Command, PluginIdentifiableCommand {
-	execute(sender: CommandSender, commandLabel: string, args: Array<string>): boolean;
 	getPlugin(): Plugin;
-	tabComplete(sender: CommandSender, alias: string, args: Array<string>): any;
-	getTabCompleter(): TabCompleter;
+	setExecutor(executor: CommandExecutor): void;
 	getExecutor(): CommandExecutor;
 	setTabCompleter(completer: TabCompleter): void;
-	setExecutor(executor: CommandExecutor): void;
-	getName(): string;
-	isRegistered(): boolean;
-	register(commandMap: CommandMap): boolean;
-	setName(_name: string): boolean;
-	getPermission(): string;
-	setPermission(permission: string): void;
+	getTabCompleter(): TabCompleter;
+	tabComplete(sender: CommandSender, alias: string, args: Array<string>): any;
+	execute(sender: CommandSender, commandLabel: string, args: Array<string>): boolean;
 	unregister(commandMap: CommandMap): boolean;
-	setPermissionMessage(permissionMessage: string): Command;
-	testPermissionSilent(target: CommandSender): boolean;
-	getPermissionMessage(): string;
-	testPermission(target: CommandSender): boolean;
-	tabComplete(sender: CommandSender, alias: string, args: Array<string>, location: Location): any;
-	getLabel(): string;
-	getAliases(): any;
-	setLabel(_name: string): boolean;
-	getUsage(): string;
-	setUsage(usage: string): Command;
 	getDescription(): string;
+	tabComplete(sender: CommandSender, alias: string, args: Array<string>, location: Location): any;
+	testPermission(target: CommandSender): boolean;
+	testPermissionSilent(target: CommandSender): boolean;
+	getLabel(): string;
+	setLabel(_name: string): boolean;
+	getAliases(): any;
+	getPermissionMessage(): string;
+	getUsage(): string;
 	setAliases(aliases: any): Command;
 	setDescription(description: string): Command;
+	setPermissionMessage(permissionMessage: string): Command;
+	setUsage(usage: string): Command;
+	register(commandMap: CommandMap): boolean;
+	getName(): string;
+	isRegistered(): boolean;
+	setName(_name: string): boolean;
+	setPermission(permission: string): void;
+	getPermission(): string;
 }
 
 export class PluginCommand {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.command.PluginCommand');
+	}
+	public static broadcastCommandMessage(source: CommandSender, message: string): void;
+	public static broadcastCommandMessage(source: CommandSender, message: string, sendToSource: boolean): void;
+	public static broadcastCommandMessage(...args: any[]): any {
+		return PluginCommand.$javaClass.broadcastCommandMessage(...args);
 	}
 }
 

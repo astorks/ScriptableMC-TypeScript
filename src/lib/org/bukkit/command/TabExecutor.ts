@@ -5,8 +5,8 @@ import {TabCompleter} from '../../../org/bukkit/command/TabCompleter.js'
 import {CommandExecutor} from '../../../org/bukkit/command/CommandExecutor.js'
 
 export interface TabExecutor extends TabCompleter, CommandExecutor {
-	onTabComplete(sender: CommandSender, command: Command, alias: string, args: Array<string>): any;
-	onCommand(sender: CommandSender, command: Command, label: string, args: Array<string>): boolean;
+	onTabComplete(arg0: CommandSender, arg1: Command, arg2: string, arg3: Array<string>): any;
+	onCommand(arg0: CommandSender, arg1: Command, arg2: string, arg3: Array<string>): boolean;
 }
 
 export class TabExecutor {

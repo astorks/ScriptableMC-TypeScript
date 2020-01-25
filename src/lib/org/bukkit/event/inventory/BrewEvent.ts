@@ -7,9 +7,9 @@ import {BlockEvent} from '../../../../org/bukkit/event/block/BlockEvent.js'
 
 export interface BrewEvent extends BlockEvent, Cancellable {
 	getHandlers(): HandlerList;
+	getContents(): BrewerInventory;
 	isCancelled(): boolean;
 	setCancelled(cancel: boolean): void;
-	getContents(): BrewerInventory;
 	getFuelLevel(): number;
 	getBlock(): Block;
 	getEventName(): string;
@@ -23,6 +23,10 @@ export class BrewEvent {
 	constructor(brewer: Block, contents: BrewerInventory, fuelLevel: number);
 	constructor(...args: any[]) {
 		return new BrewEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return BrewEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

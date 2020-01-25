@@ -1,16 +1,16 @@
 declare var Java: any;
 
 export interface File {
-	isDirectory(): boolean;
+	parentFile(): File;
+	readText(): string;
+	readLines(): Array<string>;
+	writeText(text: string): void;
 	exists(): boolean;
+	isDirectory(): boolean;
 	isFile(): boolean;
 	createNewFile(): boolean;
 	mkdir(): boolean;
 	mkdirs(): boolean;
-	readLines(): Array<string>;
-	readText(): string;
-	writeText(text: string): void;
-	parentFile(): File;
 }
 
 export class File {

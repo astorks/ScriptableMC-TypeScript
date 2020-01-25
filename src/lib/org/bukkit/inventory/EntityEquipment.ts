@@ -3,38 +3,38 @@ import {ItemStack} from '../../../org/bukkit/inventory/ItemStack.js'
 import {Entity} from '../../../org/bukkit/entity/Entity.js'
 
 export interface EntityEquipment {
-	clear(): void;
 	getItemInHand(): ItemStack;
-	setItemInHand(stack: ItemStack): void;
+	setItemInHand(arg0: ItemStack): void;
 	getHolder(): Entity;
-	getBootsDropChance(): number;
-	setBootsDropChance(chance: number): void;
-	getItemInHandDropChance(): number;
-	setItemInHandDropChance(chance: number): void;
-	getItemInMainHandDropChance(): number;
-	setItemInMainHandDropChance(chance: number): void;
-	getItemInOffHandDropChance(): number;
-	getLeggingsDropChance(): number;
-	setHelmetDropChance(chance: number): void;
-	getHelmetDropChance(): number;
-	setChestplateDropChance(chance: number): void;
-	getChestplateDropChance(): number;
-	setLeggingsDropChance(chance: number): void;
-	setItemInOffHandDropChance(chance: number): void;
-	getChestplate(): ItemStack;
-	getArmorContents(): Array<ItemStack>;
-	setChestplate(chestplate: ItemStack): void;
-	setArmorContents(items: Array<ItemStack>): void;
-	setLeggings(leggings: ItemStack): void;
 	getItemInMainHand(): ItemStack;
-	getItemInOffHand(): ItemStack;
-	setBoots(boots: ItemStack): void;
-	getLeggings(): ItemStack;
-	setItemInMainHand(item: ItemStack): void;
+	getArmorContents(): Array<ItemStack>;
 	getHelmet(): ItemStack;
-	setHelmet(helmet: ItemStack): void;
-	setItemInOffHand(item: ItemStack): void;
+	getChestplate(): ItemStack;
+	getLeggings(): ItemStack;
 	getBoots(): ItemStack;
+	setArmorContents(arg0: Array<ItemStack>): void;
+	setHelmet(arg0: ItemStack): void;
+	setChestplate(arg0: ItemStack): void;
+	setLeggings(arg0: ItemStack): void;
+	setBoots(arg0: ItemStack): void;
+	setItemInMainHand(arg0: ItemStack): void;
+	getItemInOffHand(): ItemStack;
+	setItemInOffHand(arg0: ItemStack): void;
+	getItemInHandDropChance(): number;
+	setItemInHandDropChance(arg0: number): void;
+	getItemInMainHandDropChance(): number;
+	setItemInMainHandDropChance(arg0: number): void;
+	getItemInOffHandDropChance(): number;
+	setItemInOffHandDropChance(arg0: number): void;
+	getHelmetDropChance(): number;
+	setHelmetDropChance(arg0: number): void;
+	getChestplateDropChance(): number;
+	setChestplateDropChance(arg0: number): void;
+	getLeggingsDropChance(): number;
+	setLeggingsDropChance(arg0: number): void;
+	getBootsDropChance(): number;
+	setBootsDropChance(arg0: number): void;
+	clear(): void;
 }
 
 export class EntityEquipment {

@@ -12,8 +12,8 @@ export interface BlockBreakEvent extends BlockExpEvent, Cancellable {
 	setDropItems(dropItems: boolean): void;
 	isDropItems(): boolean;
 	getHandlers(): HandlerList;
-	setExpToDrop(exp: number): void;
 	getExpToDrop(): number;
+	setExpToDrop(exp: number): void;
 	getBlock(): Block;
 	getEventName(): string;
 	isAsynchronous(): boolean;
@@ -26,6 +26,10 @@ export class BlockBreakEvent {
 	constructor(theBlock: Block, player: Player);
 	constructor(...args: any[]) {
 		return new BlockBreakEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return BlockBreakEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

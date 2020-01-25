@@ -23,5 +23,9 @@ export class BlockSpreadEvent {
 	constructor(...args: any[]) {
 		return new BlockSpreadEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return BlockSpreadEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

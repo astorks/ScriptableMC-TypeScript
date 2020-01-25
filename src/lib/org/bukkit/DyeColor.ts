@@ -4,8 +4,8 @@ import {Color} from '../../org/bukkit/Color.js'
 export interface DyeColor {
 	getColor(): Color;
 	getFireworkColor(): Color;
-	getDyeData(): number;
 	getWoolData(): number;
+	getDyeData(): number;
 	name(): string;
 	compareTo(arg0: any): number;
 	compareTo(arg0: any): number;

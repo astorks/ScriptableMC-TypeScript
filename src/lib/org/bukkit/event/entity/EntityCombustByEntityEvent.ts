@@ -8,9 +8,9 @@ export interface EntityCombustByEntityEvent extends EntityCombustEvent {
 	getCombuster(): Entity;
 	getHandlers(): HandlerList;
 	isCancelled(): boolean;
+	getDuration(): number;
 	setCancelled(cancel: boolean): void;
 	setDuration(duration: number): void;
-	getDuration(): number;
 	getEntity(): Entity;
 	getEntityType(): EntityType;
 	getEventName(): string;
@@ -24,6 +24,10 @@ export class EntityCombustByEntityEvent {
 	constructor(combuster: Entity, combustee: Entity, duration: number);
 	constructor(...args: any[]) {
 		return new EntityCombustByEntityEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return EntityCombustByEntityEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

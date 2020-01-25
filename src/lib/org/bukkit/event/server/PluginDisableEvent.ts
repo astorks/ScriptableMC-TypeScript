@@ -18,5 +18,9 @@ export class PluginDisableEvent {
 	constructor(...args: any[]) {
 		return new PluginDisableEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return PluginDisableEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

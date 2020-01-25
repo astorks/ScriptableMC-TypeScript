@@ -1,43 +1,43 @@
 declare var Java: any;
 import {Plugin} from '../../../org/bukkit/plugin/Plugin.js'
-import {BukkitTask} from '../../../org/bukkit/scheduler/BukkitTask.js'
 import {BukkitRunnable} from '../../../org/bukkit/scheduler/BukkitRunnable.js'
+import {BukkitTask} from '../../../org/bukkit/scheduler/BukkitTask.js'
 
 export interface BukkitScheduler {
-	isQueued(taskId: number): boolean;
-	cancelTasks(plugin: Plugin): void;
-	isCurrentlyRunning(taskId: number): boolean;
-	callSyncMethod(plugin: Plugin, task: any): any;
-	cancelTask(taskId: number): void;
+	isQueued(arg0: number): boolean;
+	scheduleSyncDelayedTask(arg0: Plugin, arg1: any, arg2: number): number;
+	scheduleSyncDelayedTask(arg0: Plugin, arg1: BukkitRunnable): number;
+	scheduleSyncDelayedTask(arg0: Plugin, arg1: BukkitRunnable, arg2: number): number;
+	scheduleSyncDelayedTask(arg0: Plugin, arg1: any): number;
+	runTaskLaterAsynchronously(arg0: Plugin, arg1: BukkitRunnable, arg2: number): BukkitTask;
+	runTaskLaterAsynchronously(arg0: Plugin, arg1: any, arg2: number): void;
+	runTaskLaterAsynchronously(arg0: Plugin, arg1: any, arg2: number): BukkitTask;
+	runTaskTimer(arg0: Plugin, arg1: any, arg2: number, arg3: number): void;
+	runTaskTimer(arg0: Plugin, arg1: any, arg2: number, arg3: number): BukkitTask;
+	runTaskTimer(arg0: Plugin, arg1: BukkitRunnable, arg2: number, arg3: number): BukkitTask;
+	runTaskTimerAsynchronously(arg0: Plugin, arg1: BukkitRunnable, arg2: number, arg3: number): BukkitTask;
+	runTaskTimerAsynchronously(arg0: Plugin, arg1: any, arg2: number, arg3: number): void;
+	runTaskTimerAsynchronously(arg0: Plugin, arg1: any, arg2: number, arg3: number): BukkitTask;
+	callSyncMethod(arg0: Plugin, arg1: any): any;
+	scheduleSyncRepeatingTask(arg0: Plugin, arg1: BukkitRunnable, arg2: number, arg3: number): number;
+	scheduleSyncRepeatingTask(arg0: Plugin, arg1: any, arg2: number, arg3: number): number;
+	scheduleAsyncDelayedTask(arg0: Plugin, arg1: any): number;
+	scheduleAsyncDelayedTask(arg0: Plugin, arg1: any, arg2: number): number;
+	scheduleAsyncRepeatingTask(arg0: Plugin, arg1: any, arg2: number, arg3: number): number;
+	cancelTask(arg0: number): void;
+	cancelTasks(arg0: Plugin): void;
+	isCurrentlyRunning(arg0: number): boolean;
 	getActiveWorkers(): any;
 	getPendingTasks(): any;
-	runTask(plugin: Plugin, task: any): void;
-	runTask(plugin: Plugin, task: BukkitRunnable): BukkitTask;
-	runTask(plugin: Plugin, task: any): BukkitTask;
-	runTaskLater(plugin: Plugin, task: BukkitRunnable, delay: number): BukkitTask;
-	runTaskLater(plugin: Plugin, task: any, delay: number): void;
-	runTaskLater(plugin: Plugin, task: any, delay: number): BukkitTask;
-	runTaskTimer(plugin: Plugin, task: BukkitRunnable, delay: number, period: number): BukkitTask;
-	runTaskTimer(plugin: Plugin, task: any, delay: number, period: number): void;
-	runTaskTimer(plugin: Plugin, task: any, delay: number, period: number): BukkitTask;
-	runTaskTimerAsynchronously(plugin: Plugin, task: any, delay: number, period: number): BukkitTask;
-	runTaskTimerAsynchronously(plugin: Plugin, task: any, delay: number, period: number): void;
-	runTaskTimerAsynchronously(plugin: Plugin, task: BukkitRunnable, delay: number, period: number): BukkitTask;
-	scheduleAsyncDelayedTask(plugin: Plugin, task: any): number;
-	scheduleAsyncDelayedTask(plugin: Plugin, task: any, delay: number): number;
-	scheduleSyncDelayedTask(plugin: Plugin, task: BukkitRunnable): number;
-	scheduleSyncDelayedTask(plugin: Plugin, task: BukkitRunnable, delay: number): number;
-	scheduleSyncDelayedTask(plugin: Plugin, task: any, delay: number): number;
-	scheduleSyncDelayedTask(plugin: Plugin, task: any): number;
-	scheduleAsyncRepeatingTask(plugin: Plugin, task: any, delay: number, period: number): number;
-	scheduleSyncRepeatingTask(plugin: Plugin, task: BukkitRunnable, delay: number, period: number): number;
-	scheduleSyncRepeatingTask(plugin: Plugin, task: any, delay: number, period: number): number;
-	runTaskLaterAsynchronously(plugin: Plugin, task: any, delay: number): BukkitTask;
-	runTaskLaterAsynchronously(plugin: Plugin, task: any, delay: number): void;
-	runTaskLaterAsynchronously(plugin: Plugin, task: BukkitRunnable, delay: number): BukkitTask;
-	runTaskAsynchronously(plugin: Plugin, task: BukkitRunnable): BukkitTask;
-	runTaskAsynchronously(plugin: Plugin, task: any): BukkitTask;
-	runTaskAsynchronously(plugin: Plugin, task: any): void;
+	runTask(arg0: Plugin, arg1: BukkitRunnable): BukkitTask;
+	runTask(arg0: Plugin, arg1: any): BukkitTask;
+	runTask(arg0: Plugin, arg1: any): void;
+	runTaskAsynchronously(arg0: Plugin, arg1: any): BukkitTask;
+	runTaskAsynchronously(arg0: Plugin, arg1: any): void;
+	runTaskAsynchronously(arg0: Plugin, arg1: BukkitRunnable): BukkitTask;
+	runTaskLater(arg0: Plugin, arg1: BukkitRunnable, arg2: number): BukkitTask;
+	runTaskLater(arg0: Plugin, arg1: any, arg2: number): void;
+	runTaskLater(arg0: Plugin, arg1: any, arg2: number): BukkitTask;
 }
 
 export class BukkitScheduler {

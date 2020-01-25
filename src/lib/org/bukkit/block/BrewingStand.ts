@@ -2,13 +2,13 @@ declare var Java: any;
 import {BrewerInventory} from '../../../org/bukkit/inventory/BrewerInventory.js'
 import {Inventory} from '../../../org/bukkit/inventory/Inventory.js'
 import {PersistentDataContainer} from '../../../org/bukkit/persistence/PersistentDataContainer.js'
-import {Location} from '../../../org/bukkit/Location.js'
-import {Material} from '../../../org/bukkit/Material.js'
-import {Block} from '../../../org/bukkit/block/Block.js'
 import {World} from '../../../org/bukkit/World.js'
 import {MaterialData} from '../../../org/bukkit/material/MaterialData.js'
+import {Material} from '../../../org/bukkit/Material.js'
+import {Block} from '../../../org/bukkit/block/Block.js'
 import {Chunk} from '../../../org/bukkit/Chunk.js'
 import {BlockData} from '../../../org/bukkit/block/data/BlockData.js'
+import {Location} from '../../../org/bukkit/Location.js'
 import {MetadataValue} from '../../../org/bukkit/metadata/MetadataValue.js'
 import {Plugin} from '../../../org/bukkit/plugin/Plugin.js'
 import {Container} from '../../../org/bukkit/block/Container.js'
@@ -18,42 +18,42 @@ export interface BrewingStand extends Container {
 	getInventory(): Inventory;
 	getFuelLevel(): number;
 	getBrewingTime(): number;
-	setBrewingTime(brewTime: number): void;
-	setFuelLevel(level: number): void;
+	setBrewingTime(arg0: number): void;
+	setFuelLevel(arg0: number): void;
 	getSnapshotInventory(): BrewerInventory;
 	getSnapshotInventory(): Inventory;
 	getPersistentDataContainer(): PersistentDataContainer;
-	update(force: boolean): boolean;
-	update(force: boolean, applyPhysics: boolean): boolean;
-	update(): boolean;
-	getLocation(): Location;
-	getLocation(loc: Location): Location;
-	getType(): Material;
-	getBlock(): Block;
-	getBlock(): Block;
 	getWorld(): World;
-	setType(type: Material): void;
+	setData(arg0: MaterialData): void;
 	getData(): MaterialData;
-	setData(data: MaterialData): void;
-	getRawData(): number;
-	setRawData(data: number): void;
-	isPlaced(): boolean;
-	getY(): number;
-	getZ(): number;
+	setType(arg0: Material): void;
+	getBlock(): Block;
 	getChunk(): Chunk;
 	getX(): number;
+	getY(): number;
+	getZ(): number;
 	getBlockData(): BlockData;
-	setBlockData(data: BlockData): void;
 	getLightLevel(): number;
-	hasMetadata(metadataKey: string): boolean;
-	setMetadata(metadataKey: string, newMetadataValue: MetadataValue): void;
-	removeMetadata(metadataKey: string, owningPlugin: Plugin): void;
-	getMetadata(metadataKey: string): any;
+	setBlockData(arg0: BlockData): void;
+	getRawData(): number;
+	setRawData(arg0: number): void;
+	isPlaced(): boolean;
+	update(arg0: boolean, arg1: boolean): boolean;
+	update(arg0: boolean): boolean;
+	update(): boolean;
+	getLocation(arg0: Location): Location;
+	getLocation(): Location;
+	getType(): Material;
+	setMetadata(arg0: string, arg1: MetadataValue): void;
+	getMetadata(arg0: string): any;
+	hasMetadata(arg0: string): boolean;
+	removeMetadata(arg0: string, arg1: Plugin): void;
+	getBlock(): Block;
 	isLocked(): boolean;
-	setLock(key: string): void;
 	getLock(): string;
+	setLock(arg0: string): void;
+	setCustomName(arg0: string): void;
 	getCustomName(): string;
-	setCustomName(_name: string): void;
 }
 
 export class BrewingStand {

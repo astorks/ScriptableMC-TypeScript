@@ -22,5 +22,9 @@ export class PlayerToggleSprintEvent {
 	constructor(...args: any[]) {
 		return new PlayerToggleSprintEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return PlayerToggleSprintEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

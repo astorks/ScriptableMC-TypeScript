@@ -1,65 +1,65 @@
 declare var Java: any;
-import {ItemMeta} from '../../../../org/bukkit/inventory/meta/ItemMeta.js'
 import {FireworkEffect} from '../../../../org/bukkit/FireworkEffect.js'
+import {ItemMeta} from '../../../../org/bukkit/inventory/meta/ItemMeta.js'
 import {Enchantment} from '../../../../org/bukkit/enchantments/Enchantment.js'
 import {ItemFlag} from '../../../../org/bukkit/inventory/ItemFlag.js'
-import {Attribute} from '../../../../org/bukkit/attribute/Attribute.js'
-import {AttributeModifier} from '../../../../org/bukkit/attribute/AttributeModifier.js'
 import {Multimap} from '../../../../com/google/common/collect/Multimap.js'
 import {EquipmentSlot} from '../../../../org/bukkit/inventory/EquipmentSlot.js'
+import {Attribute} from '../../../../org/bukkit/attribute/Attribute.js'
+import {AttributeModifier} from '../../../../org/bukkit/attribute/AttributeModifier.js'
 import {CustomItemTagContainer} from '../../../../org/bukkit/inventory/meta/tags/CustomItemTagContainer.js'
 import {PersistentDataContainer} from '../../../../org/bukkit/persistence/PersistentDataContainer.js'
 
 export interface FireworkMeta extends ItemMeta {
-	clone(): FireworkMeta;
+	setPower(arg0: number): void;
+	getPower(): number;
+	addEffect(arg0: FireworkEffect): void;
+	addEffects(arg0: any): void;
+	addEffects(arg0: Array<FireworkEffect>): void;
+	getEffects(): any;
+	getEffectsSize(): number;
+	removeEffect(arg0: number): void;
+	clearEffects(): void;
+	hasEffects(): boolean;
 	clone(): ItemMeta;
 	clone(): any;
-	getPower(): number;
-	setPower(power: number): void;
-	addEffect(effect: FireworkEffect): void;
-	addEffects(effects: any): void;
-	addEffects(effects: Array<FireworkEffect>): void;
-	removeEffect(index: number): void;
-	getEffects(): any;
-	hasEffects(): boolean;
-	getEffectsSize(): number;
-	clearEffects(): void;
-	getDisplayName(): string;
-	setDisplayName(_name: string): void;
-	setUnbreakable(unbreakable: boolean): void;
-	removeEnchant(ench: Enchantment): boolean;
-	setLore(lore: any): void;
-	isUnbreakable(): boolean;
-	setVersion(version: number): void;
-	addEnchant(ench: Enchantment, level: number, ignoreLevelRestriction: boolean): boolean;
-	getEnchantLevel(ench: Enchantment): number;
-	hasEnchant(ench: Enchantment): boolean;
+	clone(): FireworkMeta;
+	hasEnchant(arg0: Enchantment): boolean;
+	getEnchantLevel(arg0: Enchantment): number;
 	getEnchants(): any;
+	isUnbreakable(): boolean;
+	addEnchant(arg0: Enchantment, arg1: number, arg2: boolean): boolean;
+	removeEnchant(arg0: Enchantment): boolean;
+	setVersion(arg0: number): void;
 	getLore(): any;
-	hasItemFlag(flag: ItemFlag): boolean;
-	addItemFlags(itemFlags: Array<ItemFlag>): void;
-	getItemFlags(): any;
-	setCustomModelData(data: any): void;
-	setLocalizedName(_name: string): void;
-	hasLore(): boolean;
-	getLocalizedName(): string;
+	setLore(arg0: any): void;
+	setUnbreakable(arg0: boolean): void;
+	setDisplayName(arg0: string): void;
 	hasDisplayName(): boolean;
 	hasLocalizedName(): boolean;
-	hasCustomModelData(): boolean;
+	getLocalizedName(): string;
+	setLocalizedName(arg0: string): void;
+	hasLore(): boolean;
 	getCustomModelData(): number;
+	setCustomModelData(arg0: any): void;
 	hasEnchants(): boolean;
-	removeItemFlags(itemFlags: Array<ItemFlag>): void;
-	addAttributeModifier(attribute: Attribute, modifier: AttributeModifier): boolean;
-	hasConflictingEnchant(ench: Enchantment): boolean;
+	hasConflictingEnchant(arg0: Enchantment): boolean;
+	addItemFlags(arg0: Array<ItemFlag>): void;
+	removeItemFlags(arg0: Array<ItemFlag>): void;
+	getItemFlags(): any;
+	hasItemFlag(arg0: ItemFlag): boolean;
 	hasAttributeModifiers(): boolean;
-	getAttributeModifiers(slot: EquipmentSlot): Multimap;
-	getAttributeModifiers(attribute: Attribute): any;
 	getAttributeModifiers(): Multimap;
+	getAttributeModifiers(arg0: EquipmentSlot): Multimap;
+	getAttributeModifiers(arg0: Attribute): any;
+	addAttributeModifier(arg0: Attribute, arg1: AttributeModifier): boolean;
+	setAttributeModifiers(arg0: Multimap): void;
+	removeAttributeModifier(arg0: EquipmentSlot): boolean;
+	removeAttributeModifier(arg0: Attribute): boolean;
+	removeAttributeModifier(arg0: Attribute, arg1: AttributeModifier): boolean;
 	getCustomTagContainer(): CustomItemTagContainer;
-	setAttributeModifiers(attributeModifiers: Multimap): void;
-	removeAttributeModifier(slot: EquipmentSlot): boolean;
-	removeAttributeModifier(attribute: Attribute): boolean;
-	removeAttributeModifier(attribute: Attribute, modifier: AttributeModifier): boolean;
+	hasCustomModelData(): boolean;
+	getDisplayName(): string;
 	serialize(): any;
 	getPersistentDataContainer(): PersistentDataContainer;
 }

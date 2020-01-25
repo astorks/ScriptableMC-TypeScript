@@ -5,10 +5,10 @@ import {ChunkGenerator$ChunkData} from '../../../org/bukkit/generator/ChunkGener
 import {ChunkGenerator$BiomeGrid} from '../../../org/bukkit/generator/ChunkGenerator$BiomeGrid.js'
 
 export interface ChunkGenerator {
+	canSpawn(world: World, x: number, z: number): boolean;
 	getDefaultPopulators(world: World): any;
 	getFixedSpawnLocation(world: World, random: any): Location;
 	isParallelCapable(): boolean;
-	canSpawn(world: World, x: number, z: number): boolean;
 	generateChunkData(world: World, random: any, x: number, z: number, biome: ChunkGenerator$BiomeGrid): ChunkGenerator$ChunkData;
 }
 

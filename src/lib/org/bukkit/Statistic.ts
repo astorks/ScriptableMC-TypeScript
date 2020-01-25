@@ -4,10 +4,10 @@ import {Statistic$Type} from '../../org/bukkit/Statistic$Type.js'
 import {Keyed} from '../../org/bukkit/Keyed.js'
 
 export interface Statistic extends Keyed {
+	isSubstatistic(): boolean;
+	isBlock(): boolean;
 	getKey(): NamespacedKey;
 	getType(): Statistic$Type;
-	isBlock(): boolean;
-	isSubstatistic(): boolean;
 	name(): string;
 	compareTo(arg0: any): number;
 	compareTo(arg0: any): number;

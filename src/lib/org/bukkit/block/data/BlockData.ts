@@ -2,13 +2,13 @@ declare var Java: any;
 import {Material} from '../../../../org/bukkit/Material.js'
 
 export interface BlockData {
-	clone(): any;
-	clone(): BlockData;
-	matches(data: BlockData): boolean;
-	merge(data: BlockData): BlockData;
 	getMaterial(): Material;
+	getAsString(arg0: boolean): string;
 	getAsString(): string;
-	getAsString(hideUnspecified: boolean): string;
+	clone(): BlockData;
+	clone(): any;
+	matches(arg0: BlockData): boolean;
+	merge(arg0: BlockData): BlockData;
 }
 
 export class BlockData {

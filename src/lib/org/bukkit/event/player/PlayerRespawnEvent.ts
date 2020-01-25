@@ -22,5 +22,9 @@ export class PlayerRespawnEvent {
 	constructor(...args: any[]) {
 		return new PlayerRespawnEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return PlayerRespawnEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

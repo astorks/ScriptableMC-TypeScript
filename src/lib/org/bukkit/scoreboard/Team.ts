@@ -1,40 +1,40 @@
 declare var Java: any;
-import {Team$Option} from '../../../org/bukkit/scoreboard/Team$Option.js'
-import {Team$OptionStatus} from '../../../org/bukkit/scoreboard/Team$OptionStatus.js'
 import {Scoreboard} from '../../../org/bukkit/scoreboard/Scoreboard.js'
-import {ChatColor} from '../../../org/bukkit/ChatColor.js'
 import {OfflinePlayer} from '../../../org/bukkit/OfflinePlayer.js'
+import {ChatColor} from '../../../org/bukkit/ChatColor.js'
 import {NameTagVisibility} from '../../../org/bukkit/scoreboard/NameTagVisibility.js'
+import {Team$OptionStatus} from '../../../org/bukkit/scoreboard/Team$OptionStatus.js'
+import {Team$Option} from '../../../org/bukkit/scoreboard/Team$Option.js'
 
 export interface Team {
+	unregister(): void;
+	getScoreboard(): Scoreboard;
+	setDisplayName(arg0: string): void;
+	getPlayers(): any;
+	addPlayer(arg0: OfflinePlayer): void;
+	removePlayer(arg0: OfflinePlayer): boolean;
+	getColor(): ChatColor;
+	setColor(arg0: ChatColor): void;
+	getPrefix(): string;
+	setPrefix(arg0: string): void;
+	setSuffix(arg0: string): void;
+	allowFriendlyFire(): boolean;
+	setAllowFriendlyFire(arg0: boolean): void;
+	canSeeFriendlyInvisibles(): boolean;
+	setCanSeeFriendlyInvisibles(arg0: boolean): void;
+	getNameTagVisibility(): NameTagVisibility;
+	setNameTagVisibility(arg0: NameTagVisibility): void;
+	hasPlayer(arg0: OfflinePlayer): boolean;
+	hasEntry(arg0: string): boolean;
+	getOption(arg0: Team$Option): Team$OptionStatus;
+	setOption(arg0: Team$Option, arg1: Team$OptionStatus): void;
+	getSuffix(): string;
 	getName(): string;
-	addEntry(entry: string): void;
+	addEntry(arg0: string): void;
 	getSize(): number;
 	getEntries(): any;
-	unregister(): void;
-	setOption(option: Team$Option, status: Team$OptionStatus): void;
-	getOption(option: Team$Option): Team$OptionStatus;
-	setPrefix(prefix: string): void;
-	getPrefix(): string;
+	removeEntry(arg0: string): boolean;
 	getDisplayName(): string;
-	getScoreboard(): Scoreboard;
-	setDisplayName(displayName: string): void;
-	getColor(): ChatColor;
-	setColor(color: ChatColor): void;
-	getPlayers(): any;
-	allowFriendlyFire(): boolean;
-	getSuffix(): string;
-	removeEntry(entry: string): boolean;
-	setSuffix(suffix: string): void;
-	hasPlayer(player: OfflinePlayer): boolean;
-	hasEntry(entry: string): boolean;
-	addPlayer(player: OfflinePlayer): void;
-	removePlayer(player: OfflinePlayer): boolean;
-	setAllowFriendlyFire(enabled: boolean): void;
-	getNameTagVisibility(): NameTagVisibility;
-	setNameTagVisibility(visibility: NameTagVisibility): void;
-	setCanSeeFriendlyInvisibles(enabled: boolean): void;
-	canSeeFriendlyInvisibles(): boolean;
 }
 
 export class Team {

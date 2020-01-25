@@ -2,11 +2,11 @@ declare var Java: any;
 import {BanEntry} from '../../org/bukkit/BanEntry.js'
 
 export interface BanList {
-	isBanned(target: string): boolean;
-	addBan(target: string, reason: string, expires: any, source: string): BanEntry;
-	pardon(target: string): void;
+	isBanned(arg0: string): boolean;
+	getBanEntry(arg0: string): BanEntry;
+	addBan(arg0: string, arg1: string, arg2: any, arg3: string): BanEntry;
 	getBanEntries(): any;
-	getBanEntry(target: string): BanEntry;
+	pardon(arg0: string): void;
 }
 
 export class BanList {

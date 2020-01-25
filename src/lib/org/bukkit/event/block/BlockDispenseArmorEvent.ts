@@ -11,10 +11,10 @@ export interface BlockDispenseArmorEvent extends BlockDispenseEvent {
 	getHandlers(): HandlerList;
 	setVelocity(vel: Vector): void;
 	getVelocity(): Vector;
-	isCancelled(): boolean;
-	setCancelled(cancel: boolean): void;
 	getItem(): ItemStack;
 	setItem(item: ItemStack): void;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 	getBlock(): Block;
 	getEventName(): string;
 	isAsynchronous(): boolean;
@@ -27,6 +27,10 @@ export class BlockDispenseArmorEvent {
 	constructor(block: Block, dispensed: ItemStack, target: LivingEntity);
 	constructor(...args: any[]) {
 		return new BlockDispenseArmorEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return BlockDispenseArmorEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

@@ -3,8 +3,8 @@ import {Projectile} from '../../../org/bukkit/entity/Projectile.js'
 import {Vector} from '../../../org/bukkit/util/Vector.js'
 
 export interface ProjectileSource {
-	launchProjectile(projectile: any): Projectile;
-	launchProjectile(projectile: any, velocity: Vector): Projectile;
+	launchProjectile(arg0: any): Projectile;
+	launchProjectile(arg0: any, arg1: Vector): Projectile;
 }
 
 export class ProjectileSource {

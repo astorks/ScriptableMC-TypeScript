@@ -1,20 +1,20 @@
 declare var Java: any;
-import {Location} from '../../org/bukkit/Location.js'
 import {Raid$RaidStatus} from '../../org/bukkit/Raid$RaidStatus.js'
+import {Location} from '../../org/bukkit/Location.js'
 
 export interface Raid {
-	getLocation(): Location;
-	getTotalHealth(): number;
-	getSpawnedGroups(): number;
-	getTotalGroups(): number;
-	setBadOmenLevel(badOmenLevel: number): void;
-	isStarted(): boolean;
-	getStatus(): Raid$RaidStatus;
 	getTotalWaves(): number;
-	getRaiders(): any;
+	getTotalHealth(): number;
 	getHeroes(): any;
+	getRaiders(): any;
+	isStarted(): boolean;
 	getActiveTicks(): number;
 	getBadOmenLevel(): number;
+	setBadOmenLevel(arg0: number): void;
+	getStatus(): Raid$RaidStatus;
+	getSpawnedGroups(): number;
+	getTotalGroups(): number;
+	getLocation(): Location;
 }
 
 export class Raid {

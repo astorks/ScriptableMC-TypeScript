@@ -8,9 +8,9 @@ export interface BlockExplodeEvent extends BlockEvent, Cancellable {
 	getHandlers(): HandlerList;
 	isCancelled(): boolean;
 	setCancelled(cancel: boolean): void;
+	getYield(): number;
 	blockList(): any;
 	setYield(_yield: number): void;
-	getYield(): number;
 	getBlock(): Block;
 	getEventName(): string;
 	isAsynchronous(): boolean;
@@ -23,6 +23,10 @@ export class BlockExplodeEvent {
 	constructor(what: Block, blocks: any, _yield: number);
 	constructor(...args: any[]) {
 		return new BlockExplodeEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return BlockExplodeEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

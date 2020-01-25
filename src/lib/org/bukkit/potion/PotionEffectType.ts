@@ -3,12 +3,12 @@ import {Color} from '../../../org/bukkit/Color.js'
 import {PotionEffect} from '../../../org/bukkit/potion/PotionEffect.js'
 
 export interface PotionEffectType {
-	getName(): string;
-	getId(): number;
 	isInstant(): boolean;
 	getColor(): Color;
 	createEffect(duration: number, amplifier: number): PotionEffect;
 	getDurationModifier(): number;
+	getName(): string;
+	getId(): number;
 }
 
 export class PotionEffectType {
@@ -110,6 +110,26 @@ export class PotionEffectType {
 	}
 	public static get HERO_OF_THE_VILLAGE(): PotionEffectType {
 		return PotionEffectType.$javaClass.HERO_OF_THE_VILLAGE;
+	}
+	public static getByName(_name: string): PotionEffectType;
+	public static getByName(...args: any[]): any {
+		return PotionEffectType.$javaClass.getByName(...args);
+	}
+	public static getById(id: number): PotionEffectType;
+	public static getById(...args: any[]): any {
+		return PotionEffectType.$javaClass.getById(...args);
+	}
+	public static registerPotionEffectType(type: PotionEffectType): void;
+	public static registerPotionEffectType(...args: any[]): any {
+		return PotionEffectType.$javaClass.registerPotionEffectType(...args);
+	}
+	public static stopAcceptingRegistrations(): void;
+	public static stopAcceptingRegistrations(...args: any[]): any {
+		return PotionEffectType.$javaClass.stopAcceptingRegistrations(...args);
+	}
+	public static values(): Array<PotionEffectType>;
+	public static values(...args: any[]): any {
+		return PotionEffectType.$javaClass.values(...args);
 	}
 }
 

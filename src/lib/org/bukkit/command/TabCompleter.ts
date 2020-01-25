@@ -3,7 +3,7 @@ import {CommandSender} from '../../../org/bukkit/command/CommandSender.js'
 import {Command} from '../../../org/bukkit/command/Command.js'
 
 export interface TabCompleter {
-	onTabComplete(sender: CommandSender, command: Command, alias: string, args: Array<string>): any;
+	onTabComplete(arg0: CommandSender, arg1: Command, arg2: string, arg3: Array<string>): any;
 }
 
 export class TabCompleter {

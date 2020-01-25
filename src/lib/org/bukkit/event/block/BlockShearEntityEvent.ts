@@ -25,5 +25,9 @@ export class BlockShearEntityEvent {
 	constructor(...args: any[]) {
 		return new BlockShearEntityEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return BlockShearEntityEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

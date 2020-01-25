@@ -5,8 +5,8 @@ import {PlayerEvent} from '../../../../org/bukkit/event/player/PlayerEvent.js'
 
 export interface PlayerLevelChangeEvent extends PlayerEvent {
 	getHandlers(): HandlerList;
-	getOldLevel(): number;
 	getNewLevel(): number;
+	getOldLevel(): number;
 	getPlayer(): Player;
 	getEventName(): string;
 	isAsynchronous(): boolean;
@@ -19,6 +19,10 @@ export class PlayerLevelChangeEvent {
 	constructor(player: Player, oldLevel: number, newLevel: number);
 	constructor(...args: any[]) {
 		return new PlayerLevelChangeEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return PlayerLevelChangeEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

@@ -2,8 +2,8 @@ declare var Java: any;
 import {MapCursor$Type} from '../../org/bukkit/map/MapCursor$Type.js'
 
 export interface StructureType {
-	getName(): string;
 	getMapIcon(): MapCursor$Type;
+	getName(): string;
 }
 
 export class StructureType {
@@ -54,6 +54,10 @@ export class StructureType {
 	}
 	public static get PILLAGER_OUTPOST(): StructureType {
 		return StructureType.$javaClass.PILLAGER_OUTPOST;
+	}
+	public static getStructureTypes(): any;
+	public static getStructureTypes(...args: any[]): any {
+		return StructureType.$javaClass.getStructureTypes(...args);
 	}
 }
 

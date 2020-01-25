@@ -1,11 +1,11 @@
 declare var Java: any;
-import {MapView} from '../../../../org/bukkit/map/MapView.js'
 import {HandlerList} from '../../../../org/bukkit/event/HandlerList.js'
+import {MapView} from '../../../../org/bukkit/map/MapView.js'
 import {ServerEvent} from '../../../../org/bukkit/event/server/ServerEvent.js'
 
 export interface MapInitializeEvent extends ServerEvent {
-	getMap(): MapView;
 	getHandlers(): HandlerList;
+	getMap(): MapView;
 	getEventName(): string;
 	isAsynchronous(): boolean;
 }
@@ -17,6 +17,10 @@ export class MapInitializeEvent {
 	constructor(mapView: MapView);
 	constructor(...args: any[]) {
 		return new MapInitializeEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return MapInitializeEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

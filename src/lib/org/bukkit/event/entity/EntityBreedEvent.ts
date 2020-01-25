@@ -13,11 +13,11 @@ export interface EntityBreedEvent extends EntityEvent, Cancellable {
 	getEntity(): Entity;
 	isCancelled(): boolean;
 	setCancelled(cancel: boolean): void;
-	getBredWith(): ItemStack;
 	setExperience(experience: number): void;
-	getFather(): LivingEntity;
 	getMother(): LivingEntity;
+	getFather(): LivingEntity;
 	getBreeder(): LivingEntity;
+	getBredWith(): ItemStack;
 	getExperience(): number;
 	getEntityType(): EntityType;
 	getEventName(): string;
@@ -31,6 +31,10 @@ export class EntityBreedEvent {
 	constructor(child: LivingEntity, mother: LivingEntity, father: LivingEntity, breeder: LivingEntity, bredWith: ItemStack, experience: number);
 	constructor(...args: any[]) {
 		return new EntityBreedEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return EntityBreedEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

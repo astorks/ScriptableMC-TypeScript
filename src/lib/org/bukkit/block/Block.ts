@@ -1,69 +1,69 @@
 declare var Java: any;
-import {Location} from '../../../org/bukkit/Location.js'
-import {BlockState} from '../../../org/bukkit/block/BlockState.js'
-import {Material} from '../../../org/bukkit/Material.js'
 import {World} from '../../../org/bukkit/World.js'
+import {Material} from '../../../org/bukkit/Material.js'
 import {BoundingBox} from '../../../org/bukkit/util/BoundingBox.js'
 import {PistonMoveReaction} from '../../../org/bukkit/block/PistonMoveReaction.js'
-import {BlockFace} from '../../../org/bukkit/block/BlockFace.js'
+import {Chunk} from '../../../org/bukkit/Chunk.js'
 import {RayTraceResult} from '../../../org/bukkit/util/RayTraceResult.js'
+import {Location} from '../../../org/bukkit/Location.js'
 import {Vector} from '../../../org/bukkit/util/Vector.js'
 import {FluidCollisionMode} from '../../../org/bukkit/FluidCollisionMode.js'
 import {Biome} from '../../../org/bukkit/block/Biome.js'
-import {Chunk} from '../../../org/bukkit/Chunk.js'
 import {BlockData} from '../../../org/bukkit/block/data/BlockData.js'
+import {BlockFace} from '../../../org/bukkit/block/BlockFace.js'
 import {ItemStack} from '../../../org/bukkit/inventory/ItemStack.js'
+import {BlockState} from '../../../org/bukkit/block/BlockState.js'
 import {MetadataValue} from '../../../org/bukkit/metadata/MetadataValue.js'
 import {Plugin} from '../../../org/bukkit/plugin/Plugin.js'
 import {Metadatable} from '../../../org/bukkit/metadata/Metadatable.js'
 
 export interface Block extends Metadatable {
-	isEmpty(): boolean;
-	getLocation(): Location;
-	getLocation(loc: Location): Location;
-	getState(): BlockState;
-	getType(): Material;
 	getWorld(): World;
+	getData(): number;
+	setType(arg0: Material): void;
+	setType(arg0: Material, arg1: boolean): void;
 	getBoundingBox(): BoundingBox;
 	getPistonMoveReaction(): PistonMoveReaction;
-	isBlockFaceIndirectlyPowered(face: BlockFace): boolean;
-	isBlockIndirectlyPowered(): boolean;
-	setType(type: Material): void;
-	setType(type: Material, applyPhysics: boolean): void;
-	getData(): number;
-	rayTrace(start: Location, direction: Vector, maxDistance: number, fluidCollisionMode: FluidCollisionMode): RayTraceResult;
-	getY(): number;
-	getTemperature(): number;
-	getHumidity(): number;
-	getZ(): number;
-	setBiome(bio: Biome): void;
-	getBiome(): Biome;
 	getChunk(): Chunk;
 	getX(): number;
+	getY(): number;
+	getZ(): number;
+	rayTrace(arg0: Location, arg1: Vector, arg2: number, arg3: FluidCollisionMode): RayTraceResult;
+	getBiome(): Biome;
+	setBiome(arg0: Biome): void;
+	getTemperature(): number;
+	getHumidity(): number;
 	getBlockData(): BlockData;
-	getLightFromBlocks(): number;
-	isBlockPowered(): boolean;
-	getBlockPower(face: BlockFace): number;
+	getBlockPower(arg0: BlockFace): number;
 	getBlockPower(): number;
-	setBlockData(data: BlockData): void;
-	setBlockData(data: BlockData, applyPhysics: boolean): void;
-	isPassable(): boolean;
-	isBlockFacePowered(face: BlockFace): boolean;
-	isLiquid(): boolean;
-	breakNaturally(tool: ItemStack): boolean;
-	breakNaturally(): boolean;
-	getLightLevel(): number;
-	getRelative(modX: number, modY: number, modZ: number): Block;
-	getRelative(face: BlockFace): Block;
-	getRelative(face: BlockFace, distance: number): Block;
-	getLightFromSky(): number;
-	getFace(block: Block): BlockFace;
+	getDrops(arg0: ItemStack): any;
 	getDrops(): any;
-	getDrops(tool: ItemStack): any;
-	hasMetadata(metadataKey: string): boolean;
-	setMetadata(metadataKey: string, newMetadataValue: MetadataValue): void;
-	removeMetadata(metadataKey: string, owningPlugin: Plugin): void;
-	getMetadata(metadataKey: string): any;
+	getRelative(arg0: BlockFace, arg1: number): Block;
+	getRelative(arg0: BlockFace): Block;
+	getRelative(arg0: number, arg1: number, arg2: number): Block;
+	getLightLevel(): number;
+	getLightFromSky(): number;
+	setBlockData(arg0: BlockData): void;
+	setBlockData(arg0: BlockData, arg1: boolean): void;
+	getFace(arg0: Block): BlockFace;
+	isBlockPowered(): boolean;
+	isLiquid(): boolean;
+	isBlockIndirectlyPowered(): boolean;
+	isBlockFacePowered(arg0: BlockFace): boolean;
+	isBlockFaceIndirectlyPowered(arg0: BlockFace): boolean;
+	isPassable(): boolean;
+	breakNaturally(): boolean;
+	breakNaturally(arg0: ItemStack): boolean;
+	getLightFromBlocks(): number;
+	isEmpty(): boolean;
+	getLocation(arg0: Location): Location;
+	getLocation(): Location;
+	getState(): BlockState;
+	getType(): Material;
+	setMetadata(arg0: string, arg1: MetadataValue): void;
+	getMetadata(arg0: string): any;
+	hasMetadata(arg0: string): boolean;
+	removeMetadata(arg0: string, arg1: Plugin): void;
 }
 
 export class Block {

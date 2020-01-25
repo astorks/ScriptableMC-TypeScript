@@ -2,7 +2,7 @@ declare var Java: any;
 import {Player} from '../../../../org/bukkit/entity/Player.js'
 
 export interface PluginMessageListener {
-	onPluginMessageReceived(channel: string, player: Player, message: Array<number>): void;
+	onPluginMessageReceived(arg0: string, arg1: Player, arg2: Array<number>): void;
 }
 
 export class PluginMessageListener {

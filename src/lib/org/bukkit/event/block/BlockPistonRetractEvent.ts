@@ -7,8 +7,8 @@ import {BlockPistonEvent} from '../../../../org/bukkit/event/block/BlockPistonEv
 
 export interface BlockPistonRetractEvent extends BlockPistonEvent {
 	getHandlers(): HandlerList;
-	getRetractLocation(): Location;
 	getBlocks(): any;
+	getRetractLocation(): Location;
 	getDirection(): BlockFace;
 	isCancelled(): boolean;
 	setCancelled(cancelled: boolean): void;
@@ -25,6 +25,10 @@ export class BlockPistonRetractEvent {
 	constructor(block: Block, blocks: any, direction: BlockFace);
 	constructor(...args: any[]) {
 		return new BlockPistonRetractEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return BlockPistonRetractEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

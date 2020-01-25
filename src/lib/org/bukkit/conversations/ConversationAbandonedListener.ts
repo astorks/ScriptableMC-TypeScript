@@ -2,7 +2,7 @@ declare var Java: any;
 import {ConversationAbandonedEvent} from '../../../org/bukkit/conversations/ConversationAbandonedEvent.js'
 
 export interface ConversationAbandonedListener {
-	conversationAbandoned(abandonedEvent: ConversationAbandonedEvent): void;
+	conversationAbandoned(arg0: ConversationAbandonedEvent): void;
 }
 
 export class ConversationAbandonedListener {

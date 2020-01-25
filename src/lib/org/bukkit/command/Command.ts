@@ -4,33 +4,38 @@ import {CommandSender} from '../../../org/bukkit/command/CommandSender.js'
 import {Location} from '../../../org/bukkit/Location.js'
 
 export interface Command {
-	getName(): string;
-	isRegistered(): boolean;
-	register(commandMap: CommandMap): boolean;
-	execute(sender: CommandSender, commandLabel: string, args: Array<string>): boolean;
-	setName(_name: string): boolean;
-	getPermission(): string;
-	setPermission(permission: string): void;
 	unregister(commandMap: CommandMap): boolean;
-	setPermissionMessage(permissionMessage: string): Command;
-	testPermissionSilent(target: CommandSender): boolean;
-	getPermissionMessage(): string;
-	testPermission(target: CommandSender): boolean;
+	getDescription(): string;
 	tabComplete(sender: CommandSender, alias: string, args: Array<string>): any;
 	tabComplete(sender: CommandSender, alias: string, args: Array<string>, location: Location): any;
+	testPermission(target: CommandSender): boolean;
+	testPermissionSilent(target: CommandSender): boolean;
 	getLabel(): string;
-	getAliases(): any;
 	setLabel(_name: string): boolean;
+	getAliases(): any;
+	getPermissionMessage(): string;
 	getUsage(): string;
-	setUsage(usage: string): Command;
-	getDescription(): string;
 	setAliases(aliases: any): Command;
 	setDescription(description: string): Command;
+	setPermissionMessage(permissionMessage: string): Command;
+	setUsage(usage: string): Command;
+	register(commandMap: CommandMap): boolean;
+	getName(): string;
+	isRegistered(): boolean;
+	execute(arg0: CommandSender, arg1: string, arg2: Array<string>): boolean;
+	setName(_name: string): boolean;
+	setPermission(permission: string): void;
+	getPermission(): string;
 }
 
 export class Command {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.command.Command');
+	}
+	public static broadcastCommandMessage(source: CommandSender, message: string): void;
+	public static broadcastCommandMessage(source: CommandSender, message: string, sendToSource: boolean): void;
+	public static broadcastCommandMessage(...args: any[]): any {
+		return Command.$javaClass.broadcastCommandMessage(...args);
 	}
 }
 

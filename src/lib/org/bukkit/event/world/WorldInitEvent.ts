@@ -18,5 +18,9 @@ export class WorldInitEvent {
 	constructor(...args: any[]) {
 		return new WorldInitEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return WorldInitEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

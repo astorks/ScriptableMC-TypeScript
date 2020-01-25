@@ -20,5 +20,9 @@ export class PlayerJoinEvent {
 	constructor(...args: any[]) {
 		return new PlayerJoinEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return PlayerJoinEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

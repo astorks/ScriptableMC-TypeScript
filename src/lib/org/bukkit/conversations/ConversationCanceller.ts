@@ -1,12 +1,12 @@
 declare var Java: any;
-import {ConversationContext} from '../../../org/bukkit/conversations/ConversationContext.js'
 import {Conversation} from '../../../org/bukkit/conversations/Conversation.js'
+import {ConversationContext} from '../../../org/bukkit/conversations/ConversationContext.js'
 
 export interface ConversationCanceller {
+	setConversation(arg0: Conversation): void;
+	cancelBasedOnInput(arg0: ConversationContext, arg1: string): boolean;
 	clone(): any;
 	clone(): ConversationCanceller;
-	cancelBasedOnInput(context: ConversationContext, input: string): boolean;
-	setConversation(conversation: Conversation): void;
 }
 
 export class ConversationCanceller {

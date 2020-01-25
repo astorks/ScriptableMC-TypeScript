@@ -2,11 +2,11 @@ declare var Java: any;
 import {PotionEffectType} from '../../../org/bukkit/potion/PotionEffectType.js'
 
 export interface PotionType {
-	isInstant(): boolean;
 	getMaxLevel(): number;
+	isInstant(): boolean;
+	getEffectType(): PotionEffectType;
 	isExtendable(): boolean;
 	isUpgradeable(): boolean;
-	getEffectType(): PotionEffectType;
 	name(): string;
 	compareTo(arg0: any): number;
 	compareTo(arg0: any): number;

@@ -1,14 +1,14 @@
 declare var Java: any;
-import {LivingEntity} from '../../../../org/bukkit/entity/LivingEntity.js'
 import {Entity} from '../../../../org/bukkit/entity/Entity.js'
+import {LivingEntity} from '../../../../org/bukkit/entity/LivingEntity.js'
 import {HandlerList} from '../../../../org/bukkit/event/HandlerList.js'
 import {EntityTargetEvent$TargetReason} from '../../../../org/bukkit/event/entity/EntityTargetEvent$TargetReason.js'
 import {EntityType} from '../../../../org/bukkit/entity/EntityType.js'
 import {EntityTargetEvent} from '../../../../org/bukkit/event/entity/EntityTargetEvent.js'
 
 export interface EntityTargetLivingEntityEvent extends EntityTargetEvent {
-	getTarget(): LivingEntity;
 	getTarget(): Entity;
+	getTarget(): LivingEntity;
 	setTarget(target: Entity): void;
 	getHandlers(): HandlerList;
 	isCancelled(): boolean;
@@ -27,6 +27,10 @@ export class EntityTargetLivingEntityEvent {
 	constructor(entity: Entity, target: LivingEntity, reason: EntityTargetEvent$TargetReason);
 	constructor(...args: any[]) {
 		return new EntityTargetLivingEntityEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return EntityTargetLivingEntityEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

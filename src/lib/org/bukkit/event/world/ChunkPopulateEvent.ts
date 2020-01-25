@@ -20,5 +20,9 @@ export class ChunkPopulateEvent {
 	constructor(...args: any[]) {
 		return new ChunkPopulateEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return ChunkPopulateEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

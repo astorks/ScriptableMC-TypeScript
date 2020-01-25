@@ -9,11 +9,11 @@ export interface BrewingStandFuelEvent extends BlockEvent, Cancellable {
 	getHandlers(): HandlerList;
 	isCancelled(): boolean;
 	setCancelled(cancel: boolean): void;
-	getFuelPower(): number;
 	getFuel(): ItemStack;
+	getFuelPower(): number;
+	setFuelPower(fuelPower: number): void;
 	isConsuming(): boolean;
 	setConsuming(consuming: boolean): void;
-	setFuelPower(fuelPower: number): void;
 	getBlock(): Block;
 	getEventName(): string;
 	isAsynchronous(): boolean;
@@ -26,6 +26,10 @@ export class BrewingStandFuelEvent {
 	constructor(brewingStand: Block, fuel: ItemStack, fuelPower: number);
 	constructor(...args: any[]) {
 		return new BrewingStandFuelEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return BrewingStandFuelEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

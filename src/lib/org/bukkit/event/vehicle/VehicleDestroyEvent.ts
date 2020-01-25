@@ -23,5 +23,9 @@ export class VehicleDestroyEvent {
 	constructor(...args: any[]) {
 		return new VehicleDestroyEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return VehicleDestroyEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

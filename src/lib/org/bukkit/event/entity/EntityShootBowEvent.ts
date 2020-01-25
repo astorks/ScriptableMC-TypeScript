@@ -14,9 +14,9 @@ export interface EntityShootBowEvent extends EntityEvent, Cancellable {
 	isCancelled(): boolean;
 	setCancelled(cancel: boolean): void;
 	getBow(): ItemStack;
-	getForce(): number;
-	setProjectile(projectile: Entity): void;
 	getProjectile(): Entity;
+	setProjectile(projectile: Entity): void;
+	getForce(): number;
 	getEntityType(): EntityType;
 	getEventName(): string;
 	isAsynchronous(): boolean;
@@ -29,6 +29,10 @@ export class EntityShootBowEvent {
 	constructor(shooter: LivingEntity, bow: ItemStack, projectile: Entity, force: number);
 	constructor(...args: any[]) {
 		return new EntityShootBowEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return EntityShootBowEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

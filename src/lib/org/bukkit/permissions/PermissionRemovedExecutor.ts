@@ -2,7 +2,7 @@ declare var Java: any;
 import {PermissionAttachment} from '../../../org/bukkit/permissions/PermissionAttachment.js'
 
 export interface PermissionRemovedExecutor {
-	attachmentRemoved(attachment: PermissionAttachment): void;
+	attachmentRemoved(arg0: PermissionAttachment): void;
 }
 
 export class PermissionRemovedExecutor {

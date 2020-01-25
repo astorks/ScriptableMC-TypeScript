@@ -5,9 +5,9 @@ export interface EnchantmentOffer {
 	getEnchantmentLevel(): number;
 	getEnchantment(): Enchantment;
 	getCost(): number;
-	setCost(cost: number): void;
 	setEnchantment(enchantment: Enchantment): void;
 	setEnchantmentLevel(enchantmentLevel: number): void;
+	setCost(cost: number): void;
 }
 
 export class EnchantmentOffer {

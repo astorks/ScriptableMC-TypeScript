@@ -22,5 +22,9 @@ export class PlayerBedLeaveEvent {
 	constructor(...args: any[]) {
 		return new PlayerBedLeaveEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return PlayerBedLeaveEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

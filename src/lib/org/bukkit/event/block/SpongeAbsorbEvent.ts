@@ -22,5 +22,9 @@ export class SpongeAbsorbEvent {
 	constructor(...args: any[]) {
 		return new SpongeAbsorbEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return SpongeAbsorbEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

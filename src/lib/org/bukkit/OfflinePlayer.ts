@@ -6,19 +6,19 @@ import {AnimalTamer} from '../../org/bukkit/entity/AnimalTamer.js'
 import {ConfigurationSerializable} from '../../org/bukkit/configuration/serialization/ConfigurationSerializable.js'
 
 export interface OfflinePlayer extends ServerOperator, AnimalTamer, ConfigurationSerializable {
-	getName(): string;
 	getPlayer(): Player;
-	getBedSpawnLocation(): Location;
-	isBanned(): boolean;
+	getFirstPlayed(): number;
+	getLastPlayed(): number;
 	hasPlayedBefore(): boolean;
-	setWhitelisted(value: boolean): void;
+	getBedSpawnLocation(): Location;
 	isWhitelisted(): boolean;
 	isOnline(): boolean;
-	getFirstPlayed(): number;
+	setWhitelisted(arg0: boolean): void;
+	isBanned(): boolean;
 	getUniqueId(): string;
-	getLastPlayed(): number;
+	getName(): string;
 	isOp(): boolean;
-	setOp(value: boolean): void;
+	setOp(arg0: boolean): void;
 	serialize(): any;
 }
 

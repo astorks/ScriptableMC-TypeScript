@@ -4,7 +4,7 @@ import {Material} from '../../../org/bukkit/Material.js'
 
 export interface EnchantmentTarget {
 	includes(item: ItemStack): boolean;
-	includes(item: Material): boolean;
+	includes(arg0: Material): boolean;
 	name(): string;
 	compareTo(arg0: any): number;
 	compareTo(arg0: any): number;

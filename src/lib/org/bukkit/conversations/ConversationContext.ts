@@ -4,10 +4,10 @@ import {Conversable} from '../../../org/bukkit/conversations/Conversable.js'
 
 export interface ConversationContext {
 	getPlugin(): Plugin;
-	setSessionData(key: any, value: any): void;
-	getSessionData(key: any): any;
-	getAllSessionData(): any;
 	getForWhom(): Conversable;
+	setSessionData(key: any, value: any): void;
+	getAllSessionData(): any;
+	getSessionData(key: any): any;
 }
 
 export class ConversationContext {

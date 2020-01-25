@@ -8,8 +8,8 @@ export interface PlayerItemHeldEvent extends PlayerEvent, Cancellable {
 	getHandlers(): HandlerList;
 	isCancelled(): boolean;
 	setCancelled(cancel: boolean): void;
-	getPreviousSlot(): number;
 	getNewSlot(): number;
+	getPreviousSlot(): number;
 	getPlayer(): Player;
 	getEventName(): string;
 	isAsynchronous(): boolean;
@@ -22,6 +22,10 @@ export class PlayerItemHeldEvent {
 	constructor(player: Player, previous: number, current: number);
 	constructor(...args: any[]) {
 		return new PlayerItemHeldEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return PlayerItemHeldEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

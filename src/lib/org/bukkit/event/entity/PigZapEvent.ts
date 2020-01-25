@@ -17,9 +17,9 @@ export interface PigZapEvent extends EntityTransformEvent, Cancellable {
 	setCancelled(cancel: boolean): void;
 	getLightning(): LightningStrike;
 	getPigZombie(): PigZombie;
-	getTransformReason(): EntityTransformEvent$TransformReason;
 	getTransformedEntity(): Entity;
 	getTransformedEntities(): any;
+	getTransformReason(): EntityTransformEvent$TransformReason;
 	getEntityType(): EntityType;
 	getEventName(): string;
 	isAsynchronous(): boolean;
@@ -32,6 +32,10 @@ export class PigZapEvent {
 	constructor(pig: Pig, bolt: LightningStrike, pigzombie: PigZombie);
 	constructor(...args: any[]) {
 		return new PigZapEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return PigZapEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

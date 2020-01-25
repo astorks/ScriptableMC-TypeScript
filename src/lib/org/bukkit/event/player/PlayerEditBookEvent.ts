@@ -6,15 +6,15 @@ import {Cancellable} from '../../../../org/bukkit/event/Cancellable.js'
 import {PlayerEvent} from '../../../../org/bukkit/event/player/PlayerEvent.js'
 
 export interface PlayerEditBookEvent extends PlayerEvent, Cancellable {
-	getSlot(): number;
 	getHandlers(): HandlerList;
 	isCancelled(): boolean;
 	setCancelled(cancel: boolean): void;
-	setSigning(signing: boolean): void;
-	getPreviousBookMeta(): BookMeta;
 	isSigning(): boolean;
 	getNewBookMeta(): BookMeta;
 	setNewBookMeta(newBookMeta: BookMeta): void;
+	setSigning(signing: boolean): void;
+	getPreviousBookMeta(): BookMeta;
+	getSlot(): number;
 	getPlayer(): Player;
 	getEventName(): string;
 	isAsynchronous(): boolean;
@@ -27,6 +27,10 @@ export class PlayerEditBookEvent {
 	constructor(who: Player, slot: number, previousBookMeta: BookMeta, newBookMeta: BookMeta, isSigning: boolean);
 	constructor(...args: any[]) {
 		return new PlayerEditBookEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return PlayerEditBookEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

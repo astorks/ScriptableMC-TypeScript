@@ -11,10 +11,10 @@ export interface VillagerAcquireTradeEvent extends EntityEvent, Cancellable {
 	getHandlers(): HandlerList;
 	getEntity(): AbstractVillager;
 	getEntity(): Entity;
-	isCancelled(): boolean;
-	setCancelled(cancel: boolean): void;
 	getRecipe(): MerchantRecipe;
 	setRecipe(recipe: MerchantRecipe): void;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 	getEntityType(): EntityType;
 	getEventName(): string;
 	isAsynchronous(): boolean;
@@ -27,6 +27,10 @@ export class VillagerAcquireTradeEvent {
 	constructor(what: AbstractVillager, recipe: MerchantRecipe);
 	constructor(...args: any[]) {
 		return new VillagerAcquireTradeEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return VillagerAcquireTradeEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

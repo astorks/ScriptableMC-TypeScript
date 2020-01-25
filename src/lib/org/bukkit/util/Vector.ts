@@ -5,56 +5,56 @@ import {BlockVector} from '../../../org/bukkit/util/BlockVector.js'
 import {ConfigurationSerializable} from '../../../org/bukkit/configuration/serialization/ConfigurationSerializable.js'
 
 export interface Vector extends ConfigurationSerializable {
-	add(vec: Vector): Vector;
-	length(): number;
-	clone(): Vector;
-	clone(): any;
-	dot(other: Vector): number;
-	copy(vec: Vector): Vector;
-	zero(): Vector;
-	normalize(): Vector;
+	isNormalized(): boolean;
+	serialize(): any;
+	setX(x: number): Vector;
+	setX(x: number): Vector;
+	setX(x: number): Vector;
+	getX(): number;
+	getBlockX(): number;
+	setY(y: number): Vector;
+	setY(y: number): Vector;
+	setY(y: number): Vector;
+	getY(): number;
+	getBlockY(): number;
+	setZ(z: number): Vector;
+	setZ(z: number): Vector;
+	setZ(z: number): Vector;
+	getZ(): number;
+	getBlockZ(): number;
+	subtract(vec: Vector): Vector;
+	lengthSquared(): number;
 	distance(o: Vector): number;
-	divide(vec: Vector): Vector;
-	multiply(m: number): Vector;
+	distanceSquared(o: Vector): number;
 	multiply(vec: Vector): Vector;
 	multiply(m: number): Vector;
 	multiply(m: number): Vector;
-	isNormalized(): boolean;
-	rotateAroundNonUnitAxis(axis: Vector, angle: number): Vector;
-	serialize(): any;
-	setZ(z: number): Vector;
-	setZ(z: number): Vector;
-	setZ(z: number): Vector;
-	getY(): number;
-	setX(x: number): Vector;
-	setX(x: number): Vector;
-	setX(x: number): Vector;
-	setY(y: number): Vector;
-	setY(y: number): Vector;
-	setY(y: number): Vector;
-	getZ(): number;
-	getBlockZ(): number;
-	getBlockY(): number;
-	getBlockX(): number;
-	getX(): number;
-	subtract(vec: Vector): Vector;
-	distanceSquared(o: Vector): number;
-	lengthSquared(): number;
+	multiply(m: number): Vector;
 	checkFinite(): void;
-	getCrossProduct(o: Vector): Vector;
-	getMidpoint(other: Vector): Vector;
+	rotateAroundY(angle: number): Vector;
+	rotateAroundZ(angle: number): Vector;
 	rotateAroundAxis(axis: Vector, angle: number): Vector;
+	rotateAroundNonUnitAxis(axis: Vector, angle: number): Vector;
+	toLocation(world: World, yaw: number, pitch: number): Location;
+	toLocation(world: World): Location;
+	toBlockVector(): BlockVector;
+	getMidpoint(other: Vector): Vector;
+	crossProduct(o: Vector): Vector;
+	dot(other: Vector): number;
+	midpoint(other: Vector): Vector;
+	angle(other: Vector): number;
+	getCrossProduct(o: Vector): Vector;
+	isInAABB(min: Vector, max: Vector): boolean;
 	isInSphere(origin: Vector, radius: number): boolean;
 	rotateAroundX(angle: number): Vector;
-	rotateAroundZ(angle: number): Vector;
-	isInAABB(min: Vector, max: Vector): boolean;
-	crossProduct(o: Vector): Vector;
-	angle(other: Vector): number;
-	toLocation(world: World): Location;
-	toLocation(world: World, yaw: number, pitch: number): Location;
-	toBlockVector(): BlockVector;
-	rotateAroundY(angle: number): Vector;
-	midpoint(other: Vector): Vector;
+	add(vec: Vector): Vector;
+	clone(): any;
+	clone(): Vector;
+	length(): number;
+	copy(vec: Vector): Vector;
+	normalize(): Vector;
+	zero(): Vector;
+	divide(vec: Vector): Vector;
 }
 
 export class Vector {
@@ -62,11 +62,31 @@ export class Vector {
 		return Java.type('org.bukkit.util.Vector');
 	}
 	constructor(x: number, y: number, z: number);
-	constructor(x: number, y: number, z: number);
 	constructor();
+	constructor(x: number, y: number, z: number);
 	constructor(x: number, y: number, z: number);
 	constructor(...args: any[]) {
 		return new Vector.$javaClass(...args);
+	}
+	public static deserialize(args: any): Vector;
+	public static deserialize(...args: any[]): any {
+		return Vector.$javaClass.deserialize(...args);
+	}
+	public static getMinimum(v1: Vector, v2: Vector): Vector;
+	public static getMinimum(...args: any[]): any {
+		return Vector.$javaClass.getMinimum(...args);
+	}
+	public static getMaximum(v1: Vector, v2: Vector): Vector;
+	public static getMaximum(...args: any[]): any {
+		return Vector.$javaClass.getMaximum(...args);
+	}
+	public static getRandom(): Vector;
+	public static getRandom(...args: any[]): any {
+		return Vector.$javaClass.getRandom(...args);
+	}
+	public static getEpsilon(): number;
+	public static getEpsilon(...args: any[]): any {
+		return Vector.$javaClass.getEpsilon(...args);
 	}
 }
 

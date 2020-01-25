@@ -4,13 +4,13 @@ import {Scoreboard} from '../../../org/bukkit/scoreboard/Scoreboard.js'
 import {Objective} from '../../../org/bukkit/scoreboard/Objective.js'
 
 export interface Score {
-	getEntry(): string;
 	getPlayer(): OfflinePlayer;
 	getScoreboard(): Scoreboard;
-	setScore(score: number): void;
-	isScoreSet(): boolean;
-	getScore(): number;
 	getObjective(): Objective;
+	getScore(): number;
+	isScoreSet(): boolean;
+	setScore(arg0: number): void;
+	getEntry(): string;
 }
 
 export class Score {

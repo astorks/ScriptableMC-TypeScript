@@ -30,5 +30,9 @@ export class EntityBreakDoorEvent {
 	constructor(...args: any[]) {
 		return new EntityBreakDoorEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return EntityBreakDoorEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

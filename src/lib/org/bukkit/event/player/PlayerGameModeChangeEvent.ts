@@ -23,5 +23,9 @@ export class PlayerGameModeChangeEvent {
 	constructor(...args: any[]) {
 		return new PlayerGameModeChangeEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return PlayerGameModeChangeEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

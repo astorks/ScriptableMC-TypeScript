@@ -5,19 +5,19 @@ import {Plugin} from '../../../org/bukkit/plugin/Plugin.js'
 import {ServerOperator} from '../../../org/bukkit/permissions/ServerOperator.js'
 
 export interface Permissible extends ServerOperator {
-	hasPermission(perm: Permission): boolean;
-	hasPermission(_name: string): boolean;
-	getEffectivePermissions(): any;
+	hasPermission(arg0: string): boolean;
+	hasPermission(arg0: Permission): boolean;
 	recalculatePermissions(): void;
-	addAttachment(plugin: Plugin, ticks: number): PermissionAttachment;
-	addAttachment(plugin: Plugin, _name: string, value: boolean, ticks: number): PermissionAttachment;
-	addAttachment(plugin: Plugin): PermissionAttachment;
-	addAttachment(plugin: Plugin, _name: string, value: boolean): PermissionAttachment;
-	removeAttachment(attachment: PermissionAttachment): void;
-	isPermissionSet(perm: Permission): boolean;
-	isPermissionSet(_name: string): boolean;
+	isPermissionSet(arg0: string): boolean;
+	isPermissionSet(arg0: Permission): boolean;
+	addAttachment(arg0: Plugin, arg1: number): PermissionAttachment;
+	addAttachment(arg0: Plugin, arg1: string, arg2: boolean, arg3: number): PermissionAttachment;
+	addAttachment(arg0: Plugin, arg1: string, arg2: boolean): PermissionAttachment;
+	addAttachment(arg0: Plugin): PermissionAttachment;
+	removeAttachment(arg0: PermissionAttachment): void;
+	getEffectivePermissions(): any;
 	isOp(): boolean;
-	setOp(value: boolean): void;
+	setOp(arg0: boolean): void;
 }
 
 export class Permissible {

@@ -1,21 +1,21 @@
 declare var Java: any;
 
 export interface ByteArrayDataInput {
-	readLine(): string;
-	readInt(): number;
-	readUTF(): string;
-	readFloat(): number;
-	readChar(): string;
 	readFully(arg0: Array<number>): void;
 	readFully(arg0: Array<number>, arg1: number, arg2: number): void;
-	skipBytes(arg0: number): number;
-	readBoolean(): boolean;
+	readFloat(): number;
+	readLong(): number;
+	readUnsignedShort(): number;
 	readByte(): number;
 	readUnsignedByte(): number;
 	readShort(): number;
-	readUnsignedShort(): number;
-	readLong(): number;
 	readDouble(): number;
+	readBoolean(): boolean;
+	skipBytes(arg0: number): number;
+	readLine(): string;
+	readInt(): number;
+	readChar(): string;
+	readUTF(): string;
 }
 
 export class ByteArrayDataInput {

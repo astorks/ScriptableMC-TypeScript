@@ -84,6 +84,12 @@ export class GameRule {
 	public static get FIRE_DAMAGE(): GameRule {
 		return GameRule.$javaClass.FIRE_DAMAGE;
 	}
+	public static get DO_PATROL_SPAWNING(): GameRule {
+		return GameRule.$javaClass.DO_PATROL_SPAWNING;
+	}
+	public static get DO_TRADER_SPAWNING(): GameRule {
+		return GameRule.$javaClass.DO_TRADER_SPAWNING;
+	}
 	public static get RANDOM_TICK_SPEED(): GameRule {
 		return GameRule.$javaClass.RANDOM_TICK_SPEED;
 	}
@@ -95,6 +101,14 @@ export class GameRule {
 	}
 	public static get MAX_COMMAND_CHAIN_LENGTH(): GameRule {
 		return GameRule.$javaClass.MAX_COMMAND_CHAIN_LENGTH;
+	}
+	public static getByName(rule: string): GameRule;
+	public static getByName(...args: any[]): any {
+		return GameRule.$javaClass.getByName(...args);
+	}
+	public static values(): Array<GameRule>;
+	public static values(...args: any[]): any {
+		return GameRule.$javaClass.values(...args);
 	}
 }
 

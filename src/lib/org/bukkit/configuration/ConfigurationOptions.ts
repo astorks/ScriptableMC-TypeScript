@@ -2,11 +2,11 @@ declare var Java: any;
 import {Configuration} from '../../../org/bukkit/configuration/Configuration.js'
 
 export interface ConfigurationOptions {
-	configuration(): Configuration;
-	pathSeparator(value: string): ConfigurationOptions;
-	pathSeparator(): string;
 	copyDefaults(): boolean;
 	copyDefaults(value: boolean): ConfigurationOptions;
+	configuration(): Configuration;
+	pathSeparator(): string;
+	pathSeparator(value: string): ConfigurationOptions;
 }
 
 export class ConfigurationOptions {

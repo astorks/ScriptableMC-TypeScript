@@ -1,9 +1,10 @@
 declare var Java: any;
 
 export interface ChatColor {
-	getChar(): string;
 	isColor(): boolean;
 	isFormat(): boolean;
+	asBungee(): any;
+	getChar(): string;
 	name(): string;
 	compareTo(arg0: any): number;
 	compareTo(arg0: any): number;

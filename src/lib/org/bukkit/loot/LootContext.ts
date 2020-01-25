@@ -1,14 +1,14 @@
 declare var Java: any;
-import {Location} from '../../../org/bukkit/Location.js'
 import {HumanEntity} from '../../../org/bukkit/entity/HumanEntity.js'
 import {Entity} from '../../../org/bukkit/entity/Entity.js'
+import {Location} from '../../../org/bukkit/Location.js'
 
 export interface LootContext {
-	getLocation(): Location;
 	getKiller(): HumanEntity;
 	getLootedEntity(): Entity;
-	getLootingModifier(): number;
 	getLuck(): number;
+	getLootingModifier(): number;
+	getLocation(): Location;
 }
 
 export class LootContext {

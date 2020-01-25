@@ -18,5 +18,9 @@ export class ServiceUnregisterEvent {
 	constructor(...args: any[]) {
 		return new ServiceUnregisterEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return ServiceUnregisterEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

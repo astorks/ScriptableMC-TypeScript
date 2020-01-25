@@ -25,5 +25,9 @@ export class BatToggleSleepEvent {
 	constructor(...args: any[]) {
 		return new BatToggleSleepEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return BatToggleSleepEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

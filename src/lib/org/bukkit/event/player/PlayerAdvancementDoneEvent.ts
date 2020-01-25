@@ -20,5 +20,9 @@ export class PlayerAdvancementDoneEvent {
 	constructor(...args: any[]) {
 		return new PlayerAdvancementDoneEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return PlayerAdvancementDoneEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

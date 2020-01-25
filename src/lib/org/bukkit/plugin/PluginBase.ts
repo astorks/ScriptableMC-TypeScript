@@ -1,35 +1,35 @@
 declare var Java: any;
-import {ChunkGenerator} from '../../../org/bukkit/generator/ChunkGenerator.js'
 import {Server} from '../../../org/bukkit/Server.js'
-import {PluginDescriptionFile} from '../../../org/bukkit/plugin/PluginDescriptionFile.js'
 import {PluginLoader} from '../../../org/bukkit/plugin/PluginLoader.js'
+import {PluginDescriptionFile} from '../../../org/bukkit/plugin/PluginDescriptionFile.js'
 import {FileConfiguration} from '../../../org/bukkit/configuration/file/FileConfiguration.js'
+import {ChunkGenerator} from '../../../org/bukkit/generator/ChunkGenerator.js'
 import {CommandSender} from '../../../org/bukkit/command/CommandSender.js'
 import {Command} from '../../../org/bukkit/command/Command.js'
 import {Plugin} from '../../../org/bukkit/plugin/Plugin.js'
 
 export interface PluginBase extends Plugin {
 	getName(): string;
-	getResource(filename: string): any;
 	getLogger(): any;
-	getDefaultWorldGenerator(worldName: string, id: string): ChunkGenerator;
-	onEnable(): void;
-	onDisable(): void;
 	getServer(): Server;
 	onLoad(): void;
-	isEnabled(): boolean;
-	getDescription(): PluginDescriptionFile;
-	isNaggable(): boolean;
+	onEnable(): void;
+	onDisable(): void;
 	getDataFolder(): any;
-	setNaggable(canNag: boolean): void;
 	getPluginLoader(): PluginLoader;
-	saveDefaultConfig(): void;
-	saveConfig(): void;
-	reloadConfig(): void;
+	getDescription(): PluginDescriptionFile;
 	getConfig(): FileConfiguration;
-	saveResource(resourcePath: string, replace: boolean): void;
-	onTabComplete(sender: CommandSender, command: Command, alias: string, args: Array<string>): any;
-	onCommand(sender: CommandSender, command: Command, label: string, args: Array<string>): boolean;
+	reloadConfig(): void;
+	saveConfig(): void;
+	saveDefaultConfig(): void;
+	saveResource(arg0: string, arg1: boolean): void;
+	getDefaultWorldGenerator(arg0: string, arg1: string): ChunkGenerator;
+	isNaggable(): boolean;
+	setNaggable(arg0: boolean): void;
+	isEnabled(): boolean;
+	getResource(arg0: string): any;
+	onTabComplete(arg0: CommandSender, arg1: Command, arg2: string, arg3: Array<string>): any;
+	onCommand(arg0: CommandSender, arg1: Command, arg2: string, arg3: Array<string>): boolean;
 }
 
 export class PluginBase {

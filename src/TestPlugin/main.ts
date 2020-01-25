@@ -16,6 +16,11 @@ import { PlayerInteractAtEntityEvent } from '../lib/org/bukkit/event/player/Play
 import { PlayerInteractEntityEvent } from '../lib/org/bukkit/event/player/PlayerInteractEntityEvent.js';
 import { ByteStreams } from '../lib/com/google/common/io/ByteStreams.js';
 import CONFIG from './config.js'
+import { EntityType } from '../lib/org/bukkit/entity/EntityType.js';
+import { Firework } from '../lib/org/bukkit/entity/Firework.js';
+import { FireworkEffect } from '../lib/org/bukkit/FireworkEffect.js';
+import { FireworkEffect$Builder } from '../lib/org/bukkit/FireworkEffect$Builder.js';
+import { Color } from '../lib/org/bukkit/Color.js';
 
 export class TestPlugin extends JsPlugin {
 
@@ -71,17 +76,28 @@ export class TestPlugin extends JsPlugin {
     onPlayerJoin(listener: any, event: PlayerJoinEvent) {
         let player = event.getPlayer();
 
-        player.sendMessage(this.setPlaceholders(player, ChatColor.DARK_AQUA.toString() + ChatColor.BOLD.toString() + "UUID: %player_uuid%"));
-        player.sendMessage(this.setPlaceholders(player, ChatColor.DARK_AQUA.toString() + "World: %player_world%, Rank: %uperms_rank%"));
-        player.sendMessage(ChatColor.GRAY.toString() + JSON.stringify({
-            health: player.getHealth(),
-            hunger: player.getFoodLevel(),
-            position: {
-                x: player.getLocation().getX(),
-                y: player.getLocation().getY(),
-                z: player.getLocation().getZ()
-            }
-        }));
+        if(CONFIG.fireworkOnJoin) {
+            let fw = player.getWorld().spawnEntity(player.getLocation().add(0, 10, 0), EntityType.FIREWORK) as Firework;
+            let fwm = fw.getFireworkMeta();
+            fwm.setPower(2);
+            fwm.addEffect(FireworkEffect.builder().withColor(Color.BLUE).flicker(true).build());
+            fw.setFireworkMeta(fwm);
+            fw.detonate();
+        }
+
+        if(CONFIG.printDebugOnJoin) {
+            player.sendMessage(this.setPlaceholders(player, ChatColor.DARK_AQUA.toString() + ChatColor.BOLD.toString() + "UUID: %player_uuid%"));
+            player.sendMessage(this.setPlaceholders(player, ChatColor.DARK_AQUA.toString() + "World: %player_world%, Rank: %uperms_rank%"));
+            player.sendMessage(ChatColor.GRAY.toString() + JSON.stringify({
+                health: player.getHealth(),
+                hunger: player.getFoodLevel(),
+                position: {
+                    x: player.getLocation().getX(),
+                    y: player.getLocation().getY(),
+                    z: player.getLocation().getZ()
+                }
+            }));
+        }
     }
 
     onHelloWorldCmdExecute(sender: (CommandSender | Player), command: Command, label: string, args: Array<string>) {
@@ -116,7 +132,7 @@ export class TestPlugin extends JsPlugin {
                                 if(player != null) {
                                     plugin.bungeeGetServer(player);
                                     player.sendMessage("Hello from javascript!!!");
-                                    inventory.close(sender as Player);
+                                    inventory.close(player);
                                 }
                             }
                         ));
@@ -129,19 +145,35 @@ export class TestPlugin extends JsPlugin {
                             () => {
                                 if(player != null) {
                                     plugin.bungeeConnect(player, "hub");
-                                    inventory.close(sender as Player);
+                                    inventory.close(player);
                                 }
                             }
                         ));
 
                         contents.set(1, 3, SmartInventory.clickableItem(
-                            SmartInventory.itemBuilder(new ItemStack(Material.DIAMOND))
+                            SmartInventory.itemBuilder(new ItemStack(Material.BEDROCK))
                                     .setDisplayName("Print Server Name")
                                     .build(),
                             () => {
                                 if(player != null) {
                                     player.sendMessage(plugin.setPlaceholders(player, "%server_name%"));
-                                    inventory.close(sender as Player);
+                                    inventory.close(player);
+                                }
+                            }
+                        ));
+
+                        contents.set(1, 4, SmartInventory.clickableItem(
+                            SmartInventory.itemBuilder(new ItemStack(Material.FIREWORK_ROCKET))
+                                    .setDisplayName("Launch Firework")
+                                    .build(),
+                            () => {
+                                if(player != null) {
+                                    let fw = player.getWorld().spawnEntity(player.getLocation().add(0, 10, 0), EntityType.FIREWORK) as Firework;
+                                    let fwm = fw.getFireworkMeta();
+                                    fwm.setPower(2);
+                                    fwm.addEffect(FireworkEffect.builder().withColor(Color.BLUE).flicker(true).build());
+                                    fw.setFireworkMeta(fwm);
+                                    fw.detonate();
                                 }
                             }
                         ));

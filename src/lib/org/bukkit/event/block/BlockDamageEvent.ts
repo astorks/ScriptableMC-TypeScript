@@ -27,5 +27,9 @@ export class BlockDamageEvent {
 	constructor(...args: any[]) {
 		return new BlockDamageEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return BlockDamageEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

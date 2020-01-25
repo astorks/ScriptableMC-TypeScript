@@ -3,8 +3,8 @@ import {NamespacedKey} from '../../../../org/bukkit/NamespacedKey.js'
 import {Keyed} from '../../../../org/bukkit/Keyed.js'
 
 export interface MemoryKey extends Keyed {
-	getKey(): NamespacedKey;
 	getMemoryClass(): any;
+	getKey(): NamespacedKey;
 }
 
 export class MemoryKey {
@@ -28,6 +28,10 @@ export class MemoryKey {
 	}
 	public static get LAST_WORKED_AT_POI(): MemoryKey {
 		return MemoryKey.$javaClass.LAST_WORKED_AT_POI;
+	}
+	public static getByKey(namespacedKey: NamespacedKey): MemoryKey;
+	public static getByKey(...args: any[]): any {
+		return MemoryKey.$javaClass.getByKey(...args);
 	}
 	public static values(): any;
 	public static values(...args: any[]): any {

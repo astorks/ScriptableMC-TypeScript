@@ -3,13 +3,13 @@ import {MerchantRecipe} from '../../../org/bukkit/inventory/MerchantRecipe.js'
 import {HumanEntity} from '../../../org/bukkit/entity/HumanEntity.js'
 
 export interface Merchant {
-	getRecipe(i: number): MerchantRecipe;
-	getTrader(): HumanEntity;
-	isTrading(): boolean;
-	setRecipes(recipes: any): void;
+	getRecipe(arg0: number): MerchantRecipe;
+	setRecipe(arg0: number, arg1: MerchantRecipe): void;
 	getRecipes(): any;
-	setRecipe(i: number, recipe: MerchantRecipe): void;
+	setRecipes(arg0: any): void;
 	getRecipeCount(): number;
+	isTrading(): boolean;
+	getTrader(): HumanEntity;
 }
 
 export class Merchant {

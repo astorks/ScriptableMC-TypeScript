@@ -20,5 +20,9 @@ export class PlayerRiptideEvent {
 	constructor(...args: any[]) {
 		return new PlayerRiptideEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return PlayerRiptideEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

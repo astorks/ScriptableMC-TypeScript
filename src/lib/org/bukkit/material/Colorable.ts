@@ -3,7 +3,7 @@ import {DyeColor} from '../../../org/bukkit/DyeColor.js'
 
 export interface Colorable {
 	getColor(): DyeColor;
-	setColor(color: DyeColor): void;
+	setColor(arg0: DyeColor): void;
 }
 
 export class Colorable {

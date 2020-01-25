@@ -19,5 +19,9 @@ export class PlayerCommandSendEvent {
 	constructor(...args: any[]) {
 		return new PlayerCommandSendEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return PlayerCommandSendEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

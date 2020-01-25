@@ -1,17 +1,17 @@
 declare var Java: any;
-import {CommandSender} from '../../../org/bukkit/command/CommandSender.js'
 import {Command} from '../../../org/bukkit/command/Command.js'
+import {CommandSender} from '../../../org/bukkit/command/CommandSender.js'
 import {Location} from '../../../org/bukkit/Location.js'
 
 export interface CommandMap {
-	dispatch(sender: CommandSender, cmdLine: string): boolean;
-	register(fallbackPrefix: string, command: Command): boolean;
-	register(label: string, fallbackPrefix: string, command: Command): boolean;
-	tabComplete(sender: CommandSender, cmdLine: string): any;
-	tabComplete(sender: CommandSender, cmdLine: string, location: Location): any;
-	getCommand(_name: string): Command;
-	registerAll(fallbackPrefix: string, commands: any): void;
+	getCommand(arg0: string): Command;
+	tabComplete(arg0: CommandSender, arg1: string, arg2: Location): any;
+	tabComplete(arg0: CommandSender, arg1: string): any;
+	registerAll(arg0: string, arg1: any): void;
 	clearCommands(): void;
+	dispatch(arg0: CommandSender, arg1: string): boolean;
+	register(arg0: string, arg1: Command): boolean;
+	register(arg0: string, arg1: string, arg2: Command): boolean;
 }
 
 export class CommandMap {

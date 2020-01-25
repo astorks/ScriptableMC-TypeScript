@@ -2,7 +2,7 @@ declare var Java: any;
 
 export interface ServerOperator {
 	isOp(): boolean;
-	setOp(value: boolean): void;
+	setOp(arg0: boolean): void;
 }
 
 export class ServerOperator {

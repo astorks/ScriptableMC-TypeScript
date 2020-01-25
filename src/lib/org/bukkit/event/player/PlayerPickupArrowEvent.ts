@@ -7,11 +7,11 @@ import {PlayerPickupItemEvent} from '../../../../org/bukkit/event/player/PlayerP
 
 export interface PlayerPickupArrowEvent extends PlayerPickupItemEvent {
 	getArrow(): AbstractArrow;
-	getHandlers(): HandlerList;
 	getRemaining(): number;
+	getHandlers(): HandlerList;
+	getItem(): Item;
 	isCancelled(): boolean;
 	setCancelled(cancel: boolean): void;
-	getItem(): Item;
 	getPlayer(): Player;
 	getEventName(): string;
 	isAsynchronous(): boolean;
@@ -24,6 +24,10 @@ export class PlayerPickupArrowEvent {
 	constructor(player: Player, item: Item, arrow: AbstractArrow);
 	constructor(...args: any[]) {
 		return new PlayerPickupArrowEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return PlayerPickupArrowEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

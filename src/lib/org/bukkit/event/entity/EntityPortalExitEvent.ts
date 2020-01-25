@@ -8,9 +8,9 @@ import {EntityTeleportEvent} from '../../../../org/bukkit/event/entity/EntityTel
 
 export interface EntityPortalExitEvent extends EntityTeleportEvent {
 	getHandlers(): HandlerList;
-	setAfter(after: Vector): void;
 	getBefore(): Vector;
 	getAfter(): Vector;
+	setAfter(after: Vector): void;
 	isCancelled(): boolean;
 	setCancelled(cancel: boolean): void;
 	getTo(): Location;
@@ -30,6 +30,10 @@ export class EntityPortalExitEvent {
 	constructor(entity: Entity, from: Location, to: Location, before: Vector, after: Vector);
 	constructor(...args: any[]) {
 		return new EntityPortalExitEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return EntityPortalExitEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

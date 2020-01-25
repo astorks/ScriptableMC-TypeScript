@@ -8,9 +8,9 @@ import {EntityEvent} from '../../../../org/bukkit/event/entity/EntityEvent.js'
 
 export interface ExplosionPrimeEvent extends EntityEvent, Cancellable {
 	getHandlers(): HandlerList;
-	setFire(fire: boolean): void;
 	isCancelled(): boolean;
 	setCancelled(cancel: boolean): void;
+	setFire(fire: boolean): void;
 	getRadius(): number;
 	getFire(): boolean;
 	setRadius(radius: number): void;
@@ -24,10 +24,14 @@ export class ExplosionPrimeEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.entity.ExplosionPrimeEvent');
 	}
-	constructor(explosive: Explosive);
 	constructor(what: Entity, radius: number, fire: boolean);
+	constructor(explosive: Explosive);
 	constructor(...args: any[]) {
 		return new ExplosionPrimeEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return ExplosionPrimeEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

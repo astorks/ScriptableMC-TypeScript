@@ -22,5 +22,9 @@ export class EntityUnleashEvent {
 	constructor(...args: any[]) {
 		return new EntityUnleashEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return EntityUnleashEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

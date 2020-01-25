@@ -27,5 +27,9 @@ export class PlayerUnleashEntityEvent {
 	constructor(...args: any[]) {
 		return new PlayerUnleashEntityEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return PlayerUnleashEntityEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

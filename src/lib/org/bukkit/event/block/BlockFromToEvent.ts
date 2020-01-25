@@ -20,10 +20,14 @@ export class BlockFromToEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.block.BlockFromToEvent');
 	}
-	constructor(block: Block, toBlock: Block);
 	constructor(block: Block, face: BlockFace);
+	constructor(block: Block, toBlock: Block);
 	constructor(...args: any[]) {
 		return new BlockFromToEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return BlockFromToEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

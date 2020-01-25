@@ -4,10 +4,10 @@ import {PluginMessageListener} from '../../../../org/bukkit/plugin/messaging/Plu
 import {Messenger} from '../../../../org/bukkit/plugin/messaging/Messenger.js'
 
 export interface PluginMessageListenerRegistration {
-	getChannel(): string;
+	isValid(): boolean;
 	getPlugin(): Plugin;
 	getListener(): PluginMessageListener;
-	isValid(): boolean;
+	getChannel(): string;
 }
 
 export class PluginMessageListenerRegistration {

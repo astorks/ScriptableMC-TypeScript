@@ -3,7 +3,7 @@ import {AttributeInstance} from '../../../org/bukkit/attribute/AttributeInstance
 import {Attribute} from '../../../org/bukkit/attribute/Attribute.js'
 
 export interface Attributable {
-	getAttribute(attribute: Attribute): AttributeInstance;
+	getAttribute(arg0: Attribute): AttributeInstance;
 }
 
 export class Attributable {

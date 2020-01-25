@@ -6,8 +6,8 @@ import {ChunkEvent} from '../../../../org/bukkit/event/world/ChunkEvent.js'
 
 export interface ChunkUnloadEvent extends ChunkEvent {
 	getHandlers(): HandlerList;
-	isSaveChunk(): boolean;
 	setSaveChunk(saveChunk: boolean): void;
+	isSaveChunk(): boolean;
 	getChunk(): Chunk;
 	getWorld(): World;
 	getEventName(): string;
@@ -22,6 +22,10 @@ export class ChunkUnloadEvent {
 	constructor(chunk: Chunk);
 	constructor(...args: any[]) {
 		return new ChunkUnloadEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return ChunkUnloadEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

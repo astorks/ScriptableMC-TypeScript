@@ -20,5 +20,9 @@ export class PlayerChangedWorldEvent {
 	constructor(...args: any[]) {
 		return new PlayerChangedWorldEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return PlayerChangedWorldEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

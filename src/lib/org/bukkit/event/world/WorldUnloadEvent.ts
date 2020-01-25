@@ -21,5 +21,9 @@ export class WorldUnloadEvent {
 	constructor(...args: any[]) {
 		return new WorldUnloadEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return WorldUnloadEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

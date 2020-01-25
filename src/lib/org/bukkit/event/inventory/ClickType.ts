@@ -2,10 +2,10 @@ declare var Java: any;
 
 export interface ClickType {
 	isKeyboardClick(): boolean;
-	isRightClick(): boolean;
-	isShiftClick(): boolean;
-	isLeftClick(): boolean;
 	isCreativeAction(): boolean;
+	isRightClick(): boolean;
+	isLeftClick(): boolean;
+	isShiftClick(): boolean;
 	name(): string;
 	compareTo(arg0: any): number;
 	compareTo(arg0: any): number;

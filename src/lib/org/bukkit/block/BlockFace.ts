@@ -2,11 +2,11 @@ declare var Java: any;
 import {Vector} from '../../../org/bukkit/util/Vector.js'
 
 export interface BlockFace {
-	getOppositeFace(): BlockFace;
+	getDirection(): Vector;
 	getModX(): number;
 	getModY(): number;
 	getModZ(): number;
-	getDirection(): Vector;
+	getOppositeFace(): BlockFace;
 	name(): string;
 	compareTo(arg0: any): number;
 	compareTo(arg0: any): number;

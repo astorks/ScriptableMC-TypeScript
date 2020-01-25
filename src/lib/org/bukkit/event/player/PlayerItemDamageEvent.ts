@@ -7,11 +7,11 @@ import {PlayerEvent} from '../../../../org/bukkit/event/player/PlayerEvent.js'
 
 export interface PlayerItemDamageEvent extends PlayerEvent, Cancellable {
 	getHandlers(): HandlerList;
-	getDamage(): number;
 	setDamage(damage: number): void;
+	getDamage(): number;
+	getItem(): ItemStack;
 	isCancelled(): boolean;
 	setCancelled(cancel: boolean): void;
-	getItem(): ItemStack;
 	getPlayer(): Player;
 	getEventName(): string;
 	isAsynchronous(): boolean;
@@ -24,6 +24,10 @@ export class PlayerItemDamageEvent {
 	constructor(player: Player, what: ItemStack, damage: number);
 	constructor(...args: any[]) {
 		return new PlayerItemDamageEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return PlayerItemDamageEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

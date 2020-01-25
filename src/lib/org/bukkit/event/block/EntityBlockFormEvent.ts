@@ -24,5 +24,9 @@ export class EntityBlockFormEvent {
 	constructor(...args: any[]) {
 		return new EntityBlockFormEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return EntityBlockFormEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

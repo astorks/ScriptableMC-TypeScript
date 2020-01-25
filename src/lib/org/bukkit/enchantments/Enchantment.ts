@@ -1,19 +1,19 @@
 declare var Java: any;
-import {NamespacedKey} from '../../../org/bukkit/NamespacedKey.js'
 import {ItemStack} from '../../../org/bukkit/inventory/ItemStack.js'
+import {NamespacedKey} from '../../../org/bukkit/NamespacedKey.js'
 import {EnchantmentTarget} from '../../../org/bukkit/enchantments/EnchantmentTarget.js'
 import {Keyed} from '../../../org/bukkit/Keyed.js'
 
 export interface Enchantment extends Keyed {
-	getName(): string;
-	getKey(): NamespacedKey;
-	getMaxLevel(): number;
-	canEnchantItem(item: ItemStack): boolean;
 	getStartLevel(): number;
+	getMaxLevel(): number;
+	canEnchantItem(arg0: ItemStack): boolean;
 	getItemTarget(): EnchantmentTarget;
 	isTreasure(): boolean;
 	isCursed(): boolean;
-	conflictsWith(other: Enchantment): boolean;
+	conflictsWith(arg0: Enchantment): boolean;
+	getName(): string;
+	getKey(): NamespacedKey;
 }
 
 export class Enchantment {
@@ -134,6 +134,30 @@ export class Enchantment {
 	}
 	public static get VANISHING_CURSE(): Enchantment {
 		return Enchantment.$javaClass.VANISHING_CURSE;
+	}
+	public static getByName(_name: string): Enchantment;
+	public static getByName(...args: any[]): any {
+		return Enchantment.$javaClass.getByName(...args);
+	}
+	public static getByKey(key: NamespacedKey): Enchantment;
+	public static getByKey(...args: any[]): any {
+		return Enchantment.$javaClass.getByKey(...args);
+	}
+	public static stopAcceptingRegistrations(): void;
+	public static stopAcceptingRegistrations(...args: any[]): any {
+		return Enchantment.$javaClass.stopAcceptingRegistrations(...args);
+	}
+	public static registerEnchantment(enchantment: Enchantment): void;
+	public static registerEnchantment(...args: any[]): any {
+		return Enchantment.$javaClass.registerEnchantment(...args);
+	}
+	public static isAcceptingRegistrations(): boolean;
+	public static isAcceptingRegistrations(...args: any[]): any {
+		return Enchantment.$javaClass.isAcceptingRegistrations(...args);
+	}
+	public static values(): Array<Enchantment>;
+	public static values(...args: any[]): any {
+		return Enchantment.$javaClass.values(...args);
 	}
 }
 

@@ -22,10 +22,14 @@ export class BlockCanBuildEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.block.BlockCanBuildEvent');
 	}
-	constructor(block: Block, player: Player, type: BlockData, canBuild: boolean);
 	constructor(block: Block, type: BlockData, canBuild: boolean);
+	constructor(block: Block, player: Player, type: BlockData, canBuild: boolean);
 	constructor(...args: any[]) {
 		return new BlockCanBuildEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return BlockCanBuildEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

@@ -23,5 +23,9 @@ export class BlockGrowEvent {
 	constructor(...args: any[]) {
 		return new BlockGrowEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return BlockGrowEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

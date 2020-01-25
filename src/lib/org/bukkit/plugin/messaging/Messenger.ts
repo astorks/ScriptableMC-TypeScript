@@ -1,29 +1,29 @@
 declare var Java: any;
-import {Plugin} from '../../../../org/bukkit/plugin/Plugin.js'
 import {PluginMessageListenerRegistration} from '../../../../org/bukkit/plugin/messaging/PluginMessageListenerRegistration.js'
+import {Plugin} from '../../../../org/bukkit/plugin/Plugin.js'
 import {PluginMessageListener} from '../../../../org/bukkit/plugin/messaging/PluginMessageListener.js'
 import {Player} from '../../../../org/bukkit/entity/Player.js'
 
 export interface Messenger {
-	registerOutgoingPluginChannel(plugin: Plugin, channel: string): void;
-	registerIncomingPluginChannel(plugin: Plugin, channel: string, listener: PluginMessageListener): PluginMessageListenerRegistration;
-	unregisterIncomingPluginChannel(plugin: Plugin, channel: string, listener: PluginMessageListener): void;
-	unregisterIncomingPluginChannel(plugin: Plugin, channel: string): void;
-	unregisterIncomingPluginChannel(plugin: Plugin): void;
-	unregisterOutgoingPluginChannel(plugin: Plugin): void;
-	unregisterOutgoingPluginChannel(plugin: Plugin, channel: string): void;
-	isRegistrationValid(registration: PluginMessageListenerRegistration): boolean;
-	isReservedChannel(channel: string): boolean;
-	isIncomingChannelRegistered(plugin: Plugin, channel: string): boolean;
-	getIncomingChannels(plugin: Plugin): any;
-	getIncomingChannels(): any;
-	dispatchIncomingMessage(source: Player, channel: string, message: Array<number>): void;
-	isOutgoingChannelRegistered(plugin: Plugin, channel: string): boolean;
-	getOutgoingChannels(plugin: Plugin): any;
+	registerIncomingPluginChannel(arg0: Plugin, arg1: string, arg2: PluginMessageListener): PluginMessageListenerRegistration;
+	unregisterIncomingPluginChannel(arg0: Plugin): void;
+	unregisterIncomingPluginChannel(arg0: Plugin, arg1: string): void;
+	unregisterIncomingPluginChannel(arg0: Plugin, arg1: string, arg2: PluginMessageListener): void;
+	registerOutgoingPluginChannel(arg0: Plugin, arg1: string): void;
+	unregisterOutgoingPluginChannel(arg0: Plugin): void;
+	unregisterOutgoingPluginChannel(arg0: Plugin, arg1: string): void;
+	isReservedChannel(arg0: string): boolean;
+	isRegistrationValid(arg0: PluginMessageListenerRegistration): boolean;
+	isIncomingChannelRegistered(arg0: Plugin, arg1: string): boolean;
+	isOutgoingChannelRegistered(arg0: Plugin, arg1: string): boolean;
+	dispatchIncomingMessage(arg0: Player, arg1: string, arg2: Array<number>): void;
 	getOutgoingChannels(): any;
-	getIncomingChannelRegistrations(plugin: Plugin, channel: string): any;
-	getIncomingChannelRegistrations(channel: string): any;
-	getIncomingChannelRegistrations(plugin: Plugin): any;
+	getOutgoingChannels(arg0: Plugin): any;
+	getIncomingChannels(arg0: Plugin): any;
+	getIncomingChannels(): any;
+	getIncomingChannelRegistrations(arg0: Plugin, arg1: string): any;
+	getIncomingChannelRegistrations(arg0: string): any;
+	getIncomingChannelRegistrations(arg0: Plugin): any;
 }
 
 export class Messenger {

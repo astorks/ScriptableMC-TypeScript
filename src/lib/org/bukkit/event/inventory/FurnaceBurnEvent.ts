@@ -9,11 +9,11 @@ export interface FurnaceBurnEvent extends BlockEvent, Cancellable {
 	getHandlers(): HandlerList;
 	isCancelled(): boolean;
 	setCancelled(cancel: boolean): void;
-	setBurnTime(burnTime: number): void;
-	isBurning(): boolean;
-	getFuel(): ItemStack;
 	setBurning(burning: boolean): void;
+	getFuel(): ItemStack;
+	isBurning(): boolean;
 	getBurnTime(): number;
+	setBurnTime(burnTime: number): void;
 	getBlock(): Block;
 	getEventName(): string;
 	isAsynchronous(): boolean;
@@ -26,6 +26,10 @@ export class FurnaceBurnEvent {
 	constructor(furnace: Block, fuel: ItemStack, burnTime: number);
 	constructor(...args: any[]) {
 		return new FurnaceBurnEvent.$javaClass(...args);
+	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return FurnaceBurnEvent.$javaClass.getHandlerList(...args);
 	}
 }
 

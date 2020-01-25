@@ -1,16 +1,16 @@
 declare var Java: any;
 
 export interface BanEntry {
+	getExpiration(): any;
+	getSource(): string;
+	getCreated(): any;
+	setCreated(arg0: any): void;
+	setSource(arg0: string): void;
+	setExpiration(arg0: any): void;
+	getReason(): string;
+	setReason(arg0: string): void;
 	save(): void;
 	getTarget(): string;
-	getSource(): string;
-	setCreated(created: any): void;
-	getExpiration(): any;
-	getCreated(): any;
-	setSource(source: string): void;
-	setExpiration(expiration: any): void;
-	getReason(): string;
-	setReason(reason: string): void;
 }
 
 export class BanEntry {

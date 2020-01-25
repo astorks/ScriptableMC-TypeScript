@@ -23,5 +23,9 @@ export class MoistureChangeEvent {
 	constructor(...args: any[]) {
 		return new MoistureChangeEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return MoistureChangeEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

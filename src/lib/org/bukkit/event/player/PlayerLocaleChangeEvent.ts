@@ -19,5 +19,9 @@ export class PlayerLocaleChangeEvent {
 	constructor(...args: any[]) {
 		return new PlayerLocaleChangeEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return PlayerLocaleChangeEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

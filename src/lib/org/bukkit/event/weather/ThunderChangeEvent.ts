@@ -22,5 +22,9 @@ export class ThunderChangeEvent {
 	constructor(...args: any[]) {
 		return new ThunderChangeEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return ThunderChangeEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

@@ -27,5 +27,9 @@ export class PortalCreateEvent {
 	constructor(...args: any[]) {
 		return new PortalCreateEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return PortalCreateEvent.$javaClass.getHandlerList(...args);
+	}
 }
 

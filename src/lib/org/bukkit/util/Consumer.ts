@@ -1,7 +1,7 @@
 declare var Java: any;
 
 export interface Consumer {
-	accept(t: any): void;
+	accept(arg0: any): void;
 }
 
 export class Consumer {

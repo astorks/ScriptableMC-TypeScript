@@ -1,8 +1,8 @@
 declare var Java: any;
 
 export interface AnimalTamer {
-	getName(): string;
 	getUniqueId(): string;
+	getName(): string;
 }
 
 export class AnimalTamer {

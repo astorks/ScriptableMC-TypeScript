@@ -29,5 +29,9 @@ export class EntityChangeBlockEvent {
 	constructor(...args: any[]) {
 		return new EntityChangeBlockEvent.$javaClass(...args);
 	}
+	public static getHandlerList(): HandlerList;
+	public static getHandlerList(...args: any[]): any {
+		return EntityChangeBlockEvent.$javaClass.getHandlerList(...args);
+	}
 }
 
