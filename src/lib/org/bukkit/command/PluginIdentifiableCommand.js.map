@@ -1,0 +1,1 @@
+{"version":3,"file":"PluginIdentifiableCommand.js","sourceRoot":"","sources":["../../../../ts/org/bukkit/command/PluginIdentifiableCommand.ts"],"names":[],"mappings":"AAOA,MAAM,OAAO,yBAAyB;IAC9B,MAAM,KAAK,UAAU;QAC3B,OAAO,IAAI,CAAC,IAAI,CAAC,8CAA8C,CAAC,CAAC;IAClE,CAAC;CACD"}

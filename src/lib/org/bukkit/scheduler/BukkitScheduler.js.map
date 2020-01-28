@@ -1,0 +1,1 @@
+{"version":3,"file":"BukkitScheduler.js","sourceRoot":"","sources":["../../../../ts/org/bukkit/scheduler/BukkitScheduler.ts"],"names":[],"mappings":"AA0CA,MAAM,OAAO,eAAe;IACpB,MAAM,KAAK,UAAU;QAC3B,OAAO,IAAI,CAAC,IAAI,CAAC,sCAAsC,CAAC,CAAC;IAC1D,CAAC;CACD"}

@@ -1,0 +1,15 @@
+export interface HangingBreakEvent$RemoveCause {
+    name(): string;
+    compareTo(arg0: any): number;
+    compareTo(arg0: any): number;
+    getDeclaringClass(): any;
+    ordinal(): number;
+}
+export declare class HangingBreakEvent$RemoveCause {
+    static get $javaClass(): any;
+    static get ENTITY(): HangingBreakEvent$RemoveCause;
+    static get EXPLOSION(): HangingBreakEvent$RemoveCause;
+    static get OBSTRUCTION(): HangingBreakEvent$RemoveCause;
+    static get PHYSICS(): HangingBreakEvent$RemoveCause;
+    static get DEFAULT(): HangingBreakEvent$RemoveCause;
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"CommandSender.js","sourceRoot":"","sources":["../../../../ts/org/bukkit/command/CommandSender.ts"],"names":[],"mappings":"AA2BA,MAAM,OAAO,aAAa;IAClB,MAAM,KAAK,UAAU;QAC3B,OAAO,IAAI,CAAC,IAAI,CAAC,kCAAkC,CAAC,CAAC;IACtD,CAAC;CACD"}

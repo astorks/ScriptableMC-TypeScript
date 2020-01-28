@@ -1,0 +1,1 @@
+{"version":3,"file":"MapFont.js","sourceRoot":"","sources":["../../../../ts/org/bukkit/map/MapFont.ts"],"names":[],"mappings":"AAWA,MAAM,OAAO,OAAO;IACZ,MAAM,KAAK,UAAU;QAC3B,OAAO,IAAI,CAAC,IAAI,CAAC,wBAAwB,CAAC,CAAC;IAC5C,CAAC;IAED,YAAY,GAAG,IAAW;QACzB,OAAO,IAAI,OAAO,CAAC,UAAU,CAAC,GAAG,IAAI,CAAC,CAAC;IACxC,CAAC;CACD"}

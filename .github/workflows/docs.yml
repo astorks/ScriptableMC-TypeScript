@@ -15,14 +15,16 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - name: npm compile
+      run: npm run compile
+      env:
+        CI: true
     - name: npm docs
-      run: |
-        npm run docs
+      run: npm run docs
       env:
         CI: true
     - name: Add .nojekyll
-      run: |
-        touch ./docs/.nojekyll
+      run: touch ./docs/.nojekyll
     - name: Build and Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:

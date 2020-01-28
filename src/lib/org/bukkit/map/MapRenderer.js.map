@@ -1,0 +1,1 @@
+{"version":3,"file":"MapRenderer.js","sourceRoot":"","sources":["../../../../ts/org/bukkit/map/MapRenderer.ts"],"names":[],"mappings":"AAWA,MAAM,OAAO,WAAW;IAChB,MAAM,KAAK,UAAU;QAC3B,OAAO,IAAI,CAAC,IAAI,CAAC,4BAA4B,CAAC,CAAC;IAChD,CAAC;IAGD,YAAY,GAAG,IAAW;QACzB,OAAO,IAAI,WAAW,CAAC,UAAU,CAAC,GAAG,IAAI,CAAC,CAAC;IAC5C,CAAC;CACD"}

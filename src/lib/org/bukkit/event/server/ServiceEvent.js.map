@@ -1,0 +1,1 @@
+{"version":3,"file":"ServiceEvent.js","sourceRoot":"","sources":["../../../../../ts/org/bukkit/event/server/ServiceEvent.ts"],"names":[],"mappings":"AAYA,MAAM,OAAO,YAAY;IACjB,MAAM,KAAK,UAAU;QAC3B,OAAO,IAAI,CAAC,IAAI,CAAC,sCAAsC,CAAC,CAAC;IAC1D,CAAC;IAED,YAAY,GAAG,IAAW;QACzB,OAAO,IAAI,YAAY,CAAC,UAAU,CAAC,GAAG,IAAI,CAAC,CAAC;IAC7C,CAAC;CACD"}

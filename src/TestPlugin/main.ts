@@ -19,7 +19,6 @@ import CONFIG from './config.js'
 import { EntityType } from '../lib/org/bukkit/entity/EntityType.js';
 import { Firework } from '../lib/org/bukkit/entity/Firework.js';
 import { FireworkEffect } from '../lib/org/bukkit/FireworkEffect.js';
-import { FireworkEffect$Builder } from '../lib/org/bukkit/FireworkEffect$Builder.js';
 import { Color } from '../lib/org/bukkit/Color.js';
 
 export class TestPlugin extends JsPlugin {

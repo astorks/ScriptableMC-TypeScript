@@ -1,0 +1,1 @@
+{"version":3,"file":"Command.js","sourceRoot":"","sources":["../../../../ts/org/bukkit/command/Command.ts"],"names":[],"mappings":"AA8BA,MAAM,OAAO,OAAO;IACZ,MAAM,KAAK,UAAU;QAC3B,OAAO,IAAI,CAAC,IAAI,CAAC,4BAA4B,CAAC,CAAC;IAChD,CAAC;IAGM,MAAM,CAAC,uBAAuB,CAAC,GAAG,IAAW;QACnD,OAAO,OAAO,CAAC,UAAU,CAAC,uBAAuB,CAAC,GAAG,IAAI,CAAC,CAAC;IAC5D,CAAC;CACD"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"MerchantRecipe.js","sourceRoot":"","sources":["../../../../ts/org/bukkit/inventory/MerchantRecipe.ts"],"names":[],"mappings":"AAsBA,MAAM,OAAO,cAAc;IACnB,MAAM,KAAK,UAAU;QAC3B,OAAO,IAAI,CAAC,IAAI,CAAC,qCAAqC,CAAC,CAAC;IACzD,CAAC;IAID,YAAY,GAAG,IAAW;QACzB,OAAO,IAAI,cAAc,CAAC,UAAU,CAAC,GAAG,IAAI,CAAC,CAAC;IAC/C,CAAC;CACD"}

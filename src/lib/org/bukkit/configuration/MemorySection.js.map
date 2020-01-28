@@ -1,0 +1,1 @@
+{"version":3,"file":"MemorySection.js","sourceRoot":"","sources":["../../../../ts/org/bukkit/configuration/MemorySection.ts"],"names":[],"mappings":"AA8EA,MAAM,OAAO,aAAa;IAClB,MAAM,KAAK,UAAU;QAC3B,OAAO,IAAI,CAAC,IAAI,CAAC,wCAAwC,CAAC,CAAC;IAC5D,CAAC;IAGM,MAAM,CAAC,UAAU,CAAC,GAAG,IAAW;QACtC,OAAO,aAAa,CAAC,UAAU,CAAC,UAAU,CAAC,GAAG,IAAI,CAAC,CAAC;IACrD,CAAC;CACD"}

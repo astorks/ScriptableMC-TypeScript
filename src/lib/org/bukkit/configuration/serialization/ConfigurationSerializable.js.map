@@ -1,0 +1,1 @@
+{"version":3,"file":"ConfigurationSerializable.js","sourceRoot":"","sources":["../../../../../ts/org/bukkit/configuration/serialization/ConfigurationSerializable.ts"],"names":[],"mappings":"AAMA,MAAM,OAAO,yBAAyB;IAC9B,MAAM,KAAK,UAAU;QAC3B,OAAO,IAAI,CAAC,IAAI,CAAC,kEAAkE,CAAC,CAAC;IACtF,CAAC;CACD"}

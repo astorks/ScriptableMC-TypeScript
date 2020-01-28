@@ -1,0 +1,1 @@
+{"version":3,"file":"Prompt.js","sourceRoot":"","sources":["../../../../ts/org/bukkit/conversations/Prompt.ts"],"names":[],"mappings":"AASA,MAAM,OAAO,MAAM;IACX,MAAM,KAAK,UAAU;QAC3B,OAAO,IAAI,CAAC,IAAI,CAAC,iCAAiC,CAAC,CAAC;IACrD,CAAC;IACM,MAAM,KAAK,mBAAmB;QACpC,OAAO,MAAM,CAAC,UAAU,CAAC,mBAAmB,CAAC;IAC9C,CAAC;CACD"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"RayTraceResult.js","sourceRoot":"","sources":["../../../../ts/org/bukkit/util/RayTraceResult.ts"],"names":[],"mappings":"AAaA,MAAM,OAAO,cAAc;IACnB,MAAM,KAAK,UAAU;QAC3B,OAAO,IAAI,CAAC,IAAI,CAAC,gCAAgC,CAAC,CAAC;IACpD,CAAC;IAMD,YAAY,GAAG,IAAW;QACzB,OAAO,IAAI,cAAc,CAAC,UAAU,CAAC,GAAG,IAAI,CAAC,CAAC;IAC/C,CAAC;CACD"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"PluginDescriptionFile.js","sourceRoot":"","sources":["../../../../ts/org/bukkit/plugin/PluginDescriptionFile.ts"],"names":[],"mappings":"AA2BA,MAAM,OAAO,qBAAqB;IAC1B,MAAM,KAAK,UAAU;QAC3B,OAAO,IAAI,CAAC,IAAI,CAAC,yCAAyC,CAAC,CAAC;IAC7D,CAAC;IAID,YAAY,GAAG,IAAW;QACzB,OAAO,IAAI,qBAAqB,CAAC,UAAU,CAAC,GAAG,IAAI,CAAC,CAAC;IACtD,CAAC;CACD"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"MaterialData.js","sourceRoot":"","sources":["../../../../ts/org/bukkit/material/MaterialData.ts"],"names":[],"mappings":"AAcA,MAAM,OAAO,YAAY;IACjB,MAAM,KAAK,UAAU;QAC3B,OAAO,IAAI,CAAC,IAAI,CAAC,kCAAkC,CAAC,CAAC;IACtD,CAAC;IAGD,YAAY,GAAG,IAAW;QACzB,OAAO,IAAI,YAAY,CAAC,UAAU,CAAC,GAAG,IAAI,CAAC,CAAC;IAC7C,CAAC;CACD"}

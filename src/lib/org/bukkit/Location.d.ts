@@ -1,0 +1,53 @@
+import { Block } from '../../org/bukkit/block/Block.js';
+import { World } from '../../org/bukkit/World.js';
+import { Chunk } from '../../org/bukkit/Chunk.js';
+import { Vector } from '../../org/bukkit/util/Vector.js';
+import { ConfigurationSerializable } from '../../org/bukkit/configuration/serialization/ConfigurationSerializable.js';
+export interface Location extends ConfigurationSerializable {
+    getBlock(): Block;
+    getWorld(): World;
+    serialize(): any;
+    setWorld(world: World): void;
+    isWorldLoaded(): boolean;
+    getChunk(): Chunk;
+    setX(x: number): void;
+    getX(): number;
+    getBlockX(): number;
+    setY(y: number): void;
+    getY(): number;
+    getBlockY(): number;
+    setZ(z: number): void;
+    getZ(): number;
+    getBlockZ(): number;
+    setYaw(yaw: number): void;
+    getYaw(): number;
+    setPitch(pitch: number): void;
+    getPitch(): number;
+    getDirection(): Vector;
+    setDirection(vector: Vector): Location;
+    subtract(vec: Vector): Location;
+    subtract(vec: Location): Location;
+    subtract(x: number, y: number, z: number): Location;
+    lengthSquared(): number;
+    distance(o: Location): number;
+    distanceSquared(o: Location): number;
+    multiply(m: number): Location;
+    toVector(): Vector;
+    checkFinite(): void;
+    add(vec: Location): Location;
+    add(vec: Vector): Location;
+    add(x: number, y: number, z: number): Location;
+    clone(): Location;
+    clone(): any;
+    length(): number;
+    zero(): Location;
+}
+export declare class Location {
+    static get $javaClass(): any;
+    constructor(world: World, x: number, y: number, z: number);
+    constructor(world: World, x: number, y: number, z: number, yaw: number, pitch: number);
+    static deserialize(args: any): Location;
+    static locToBlock(loc: number): number;
+    static normalizeYaw(yaw: number): number;
+    static normalizePitch(pitch: number): number;
+}

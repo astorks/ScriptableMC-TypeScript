@@ -1,0 +1,1 @@
+{"version":3,"file":"BlockEvent.js","sourceRoot":"","sources":["../../../../../ts/org/bukkit/event/block/BlockEvent.ts"],"names":[],"mappings":"AAYA,MAAM,OAAO,UAAU;IACf,MAAM,KAAK,UAAU;QAC3B,OAAO,IAAI,CAAC,IAAI,CAAC,mCAAmC,CAAC,CAAC;IACvD,CAAC;IAED,YAAY,GAAG,IAAW;QACzB,OAAO,IAAI,UAAU,CAAC,UAAU,CAAC,GAAG,IAAI,CAAC,CAAC;IAC3C,CAAC;CACD"}
