@@ -10,7 +10,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docs": "npx typedoc --out docs src",
+    "docs": "npx typedoc --exclude \"**/*.js\" --categorizeByGroup true --name \"ScriptableMC-TypeScript\" --mode modules --includeDeclarations --excludeNotExported --excludePrivate --excludeProtected --excludeExternals --out docs src",
     "compile": "npx tsc",
     "watch": "npx tsc --watch"
   },

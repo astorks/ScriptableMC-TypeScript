@@ -15,10 +15,6 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm compile
-      run: npm run compile
-      env:
-        CI: true
     - name: npm docs
       run: npm run docs
       env:
