@@ -9,4 +9,3 @@ export class SignChangeEvent {
         return SignChangeEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=SignChangeEvent.js.map

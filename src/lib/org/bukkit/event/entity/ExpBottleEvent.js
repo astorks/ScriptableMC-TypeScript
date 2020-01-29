@@ -9,4 +9,3 @@ export class ExpBottleEvent {
         return ExpBottleEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=ExpBottleEvent.js.map

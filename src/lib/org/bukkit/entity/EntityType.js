@@ -315,4 +315,3 @@ export class EntityType {
         return this.$javaClass.UNKNOWN;
     }
 }
-//# sourceMappingURL=EntityType.js.map

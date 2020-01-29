@@ -3,4 +3,3 @@ export class ConversationAbandonedListener {
         return Java.type('org.bukkit.conversations.ConversationAbandonedListener');
     }
 }
-//# sourceMappingURL=ConversationAbandonedListener.js.map

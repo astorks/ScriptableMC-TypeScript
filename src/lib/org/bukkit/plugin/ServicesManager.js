@@ -3,4 +3,3 @@ export class ServicesManager {
         return Java.type('org.bukkit.plugin.ServicesManager');
     }
 }
-//# sourceMappingURL=ServicesManager.js.map

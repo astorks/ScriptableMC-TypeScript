@@ -3,4 +3,3 @@ export class NPC {
         return Java.type('org.bukkit.entity.NPC');
     }
 }
-//# sourceMappingURL=NPC.js.map

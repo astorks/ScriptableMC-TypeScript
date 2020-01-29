@@ -9,4 +9,3 @@ export class BlockPistonExtendEvent {
         return BlockPistonExtendEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=BlockPistonExtendEvent.js.map

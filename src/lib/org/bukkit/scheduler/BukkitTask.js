@@ -3,4 +3,3 @@ export class BukkitTask {
         return Java.type('org.bukkit.scheduler.BukkitTask');
     }
 }
-//# sourceMappingURL=BukkitTask.js.map

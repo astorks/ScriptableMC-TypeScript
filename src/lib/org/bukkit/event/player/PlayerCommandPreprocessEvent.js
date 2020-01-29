@@ -9,4 +9,3 @@ export class PlayerCommandPreprocessEvent {
         return PlayerCommandPreprocessEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerCommandPreprocessEvent.js.map

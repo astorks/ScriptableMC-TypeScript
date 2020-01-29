@@ -3,4 +3,3 @@ export class Warning {
         return Java.type('org.bukkit.Warning');
     }
 }
-//# sourceMappingURL=Warning.js.map

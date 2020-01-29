@@ -3,4 +3,3 @@ export class EnderDragon {
         return Java.type('org.bukkit.entity.EnderDragon');
     }
 }
-//# sourceMappingURL=EnderDragon.js.map

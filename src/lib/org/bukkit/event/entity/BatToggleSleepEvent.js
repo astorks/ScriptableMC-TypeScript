@@ -9,4 +9,3 @@ export class BatToggleSleepEvent {
         return BatToggleSleepEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=BatToggleSleepEvent.js.map

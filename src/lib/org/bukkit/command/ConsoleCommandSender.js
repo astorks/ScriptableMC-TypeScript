@@ -3,4 +3,3 @@ export class ConsoleCommandSender {
         return Java.type('org.bukkit.command.ConsoleCommandSender');
     }
 }
-//# sourceMappingURL=ConsoleCommandSender.js.map

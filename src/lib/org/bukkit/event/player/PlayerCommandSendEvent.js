@@ -9,4 +9,3 @@ export class PlayerCommandSendEvent {
         return PlayerCommandSendEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerCommandSendEvent.js.map

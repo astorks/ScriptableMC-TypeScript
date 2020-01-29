@@ -3,4 +3,3 @@ export class Metadatable {
         return Java.type('org.bukkit.metadata.Metadatable');
     }
 }
-//# sourceMappingURL=Metadatable.js.map

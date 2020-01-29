@@ -21,4 +21,3 @@ export class PlayerBedEnterEvent$BedEnterResult {
         return this.$javaClass.OTHER_PROBLEM;
     }
 }
-//# sourceMappingURL=PlayerBedEnterEvent$BedEnterResult.js.map

@@ -9,4 +9,3 @@ export class SlimeSplitEvent {
         return SlimeSplitEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=SlimeSplitEvent.js.map

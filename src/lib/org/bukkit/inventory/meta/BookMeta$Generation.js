@@ -15,4 +15,3 @@ export class BookMeta$Generation {
         return this.$javaClass.TATTERED;
     }
 }
-//# sourceMappingURL=BookMeta$Generation.js.map

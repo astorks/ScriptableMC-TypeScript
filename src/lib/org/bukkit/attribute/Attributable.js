@@ -3,4 +3,3 @@ export class Attributable {
         return Java.type('org.bukkit.attribute.Attributable');
     }
 }
-//# sourceMappingURL=Attributable.js.map

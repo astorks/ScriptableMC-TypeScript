@@ -18,4 +18,3 @@ export class LightningStrikeEvent$Cause {
         return this.$javaClass.UNKNOWN;
     }
 }
-//# sourceMappingURL=LightningStrikeEvent$Cause.js.map

@@ -3,4 +3,3 @@ export class Multimap {
         return Java.type('com.google.common.collect.Multimap');
     }
 }
-//# sourceMappingURL=Multimap.js.map

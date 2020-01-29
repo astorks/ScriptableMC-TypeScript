@@ -9,4 +9,3 @@ export class InventoryInteractEvent {
         return InventoryInteractEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=InventoryInteractEvent.js.map

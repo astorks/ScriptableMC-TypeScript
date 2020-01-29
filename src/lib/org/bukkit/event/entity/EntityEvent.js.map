@@ -1,1 +1,0 @@
-{"version":3,"file":"EntityEvent.js","sourceRoot":"","sources":["../../../../../ts/org/bukkit/event/entity/EntityEvent.ts"],"names":[],"mappings":"AAcA,MAAM,OAAO,WAAW;IAChB,MAAM,KAAK,UAAU;QAC3B,OAAO,IAAI,CAAC,IAAI,CAAC,qCAAqC,CAAC,CAAC;IACzD,CAAC;IAED,YAAY,GAAG,IAAW;QACzB,OAAO,IAAI,WAAW,CAAC,UAAU,CAAC,GAAG,IAAI,CAAC,CAAC;IAC5C,CAAC;CACD"}

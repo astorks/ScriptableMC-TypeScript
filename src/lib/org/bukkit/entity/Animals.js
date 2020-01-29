@@ -3,4 +3,3 @@ export class Animals {
         return Java.type('org.bukkit.entity.Animals');
     }
 }
-//# sourceMappingURL=Animals.js.map

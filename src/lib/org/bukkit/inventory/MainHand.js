@@ -9,4 +9,3 @@ export class MainHand {
         return this.$javaClass.RIGHT;
     }
 }
-//# sourceMappingURL=MainHand.js.map

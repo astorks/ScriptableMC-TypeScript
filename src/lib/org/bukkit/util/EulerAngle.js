@@ -9,4 +9,3 @@ export class EulerAngle {
         return EulerAngle.$javaClass.ZERO;
     }
 }
-//# sourceMappingURL=EulerAngle.js.map

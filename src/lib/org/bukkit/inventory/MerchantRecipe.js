@@ -6,4 +6,3 @@ export class MerchantRecipe {
         return new MerchantRecipe.$javaClass(...args);
     }
 }
-//# sourceMappingURL=MerchantRecipe.js.map

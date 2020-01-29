@@ -9,4 +9,3 @@ export class CraftItemEvent {
         return CraftItemEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=CraftItemEvent.js.map

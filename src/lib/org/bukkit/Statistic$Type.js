@@ -15,4 +15,3 @@ export class Statistic$Type {
         return this.$javaClass.ENTITY;
     }
 }
-//# sourceMappingURL=Statistic$Type.js.map

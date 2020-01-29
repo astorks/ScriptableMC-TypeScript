@@ -51,4 +51,3 @@ export class Instrument {
         return this.$javaClass.PLING;
     }
 }
-//# sourceMappingURL=Instrument.js.map

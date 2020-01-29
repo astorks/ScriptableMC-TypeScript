@@ -3,4 +3,3 @@ export class EventExecutor {
         return Java.type('org.bukkit.plugin.EventExecutor');
     }
 }
-//# sourceMappingURL=EventExecutor.js.map

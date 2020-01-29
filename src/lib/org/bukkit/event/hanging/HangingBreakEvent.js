@@ -9,4 +9,3 @@ export class HangingBreakEvent {
         return HangingBreakEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=HangingBreakEvent.js.map

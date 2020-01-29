@@ -9,4 +9,3 @@ export class EntityBreedEvent {
         return EntityBreedEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=EntityBreedEvent.js.map

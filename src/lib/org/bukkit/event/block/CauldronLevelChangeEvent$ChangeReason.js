@@ -30,4 +30,3 @@ export class CauldronLevelChangeEvent$ChangeReason {
         return this.$javaClass.UNKNOWN;
     }
 }
-//# sourceMappingURL=CauldronLevelChangeEvent$ChangeReason.js.map

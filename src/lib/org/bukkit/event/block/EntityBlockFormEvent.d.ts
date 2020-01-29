@@ -10,8 +10,8 @@ export interface EntityBlockFormEvent extends BlockFormEvent {
     setCancelled(cancel: boolean): void;
     getNewState(): BlockState;
     getBlock(): Block;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class EntityBlockFormEvent {
     static get $javaClass(): any;

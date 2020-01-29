@@ -9,4 +9,3 @@ export class TabCompleteEvent {
         return TabCompleteEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=TabCompleteEvent.js.map

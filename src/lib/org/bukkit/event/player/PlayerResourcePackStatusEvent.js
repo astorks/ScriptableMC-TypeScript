@@ -9,4 +9,3 @@ export class PlayerResourcePackStatusEvent {
         return PlayerResourcePackStatusEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerResourcePackStatusEvent.js.map

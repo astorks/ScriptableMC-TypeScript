@@ -5,14 +5,14 @@ import { LivingEntity } from '../../../../org/bukkit/entity/LivingEntity.js';
 import { Cancellable } from '../../../../org/bukkit/event/Cancellable.js';
 import { EntityEvent } from '../../../../org/bukkit/event/entity/EntityEvent.js';
 export interface EntityToggleSwimEvent extends EntityEvent, Cancellable {
-    getHandlers(): HandlerList;
     isSwimming(): boolean;
+    getHandlers(): HandlerList;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
     getEntity(): Entity;
     getEntityType(): EntityType;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class EntityToggleSwimEvent {
     static get $javaClass(): any;

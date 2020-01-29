@@ -6,4 +6,3 @@ export class BukkitRunnable {
         return new BukkitRunnable.$javaClass(...args);
     }
 }
-//# sourceMappingURL=BukkitRunnable.js.map

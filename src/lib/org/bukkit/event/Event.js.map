@@ -1,1 +1,0 @@
-{"version":3,"file":"Event.js","sourceRoot":"","sources":["../../../../ts/org/bukkit/event/Event.ts"],"names":[],"mappings":"AASA,MAAM,OAAO,KAAK;IACV,MAAM,KAAK,UAAU;QAC3B,OAAO,IAAI,CAAC,IAAI,CAAC,wBAAwB,CAAC,CAAC;IAC5C,CAAC;IAGD,YAAY,GAAG,IAAW;QACzB,OAAO,IAAI,KAAK,CAAC,UAAU,CAAC,GAAG,IAAI,CAAC,CAAC;IACtC,CAAC;CACD"}

@@ -69,4 +69,3 @@ export class ChatColor {
         return this.$javaClass.RESET;
     }
 }
-//# sourceMappingURL=ChatColor.js.map

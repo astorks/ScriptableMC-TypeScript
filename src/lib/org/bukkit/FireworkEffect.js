@@ -9,4 +9,3 @@ export class FireworkEffect {
         return FireworkEffect.$javaClass.deserialize(...args);
     }
 }
-//# sourceMappingURL=FireworkEffect.js.map

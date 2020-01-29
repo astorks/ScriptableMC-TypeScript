@@ -4,8 +4,8 @@ import { PluginEvent } from '../../../../org/bukkit/event/server/PluginEvent.js'
 export interface PluginEnableEvent extends PluginEvent {
     getHandlers(): HandlerList;
     getPlugin(): Plugin;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class PluginEnableEvent {
     static get $javaClass(): any;

@@ -3,4 +3,3 @@ export class PluginManager {
         return Java.type('org.bukkit.plugin.PluginManager');
     }
 }
-//# sourceMappingURL=PluginManager.js.map

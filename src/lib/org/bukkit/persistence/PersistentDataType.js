@@ -36,4 +36,3 @@ export class PersistentDataType {
         return PersistentDataType.$javaClass.TAG_CONTAINER;
     }
 }
-//# sourceMappingURL=PersistentDataType.js.map

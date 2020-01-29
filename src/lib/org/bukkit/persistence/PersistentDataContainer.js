@@ -3,4 +3,3 @@ export class PersistentDataContainer {
         return Java.type('org.bukkit.persistence.PersistentDataContainer');
     }
 }
-//# sourceMappingURL=PersistentDataContainer.js.map

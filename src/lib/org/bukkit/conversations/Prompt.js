@@ -6,4 +6,3 @@ export class Prompt {
         return Prompt.$javaClass.END_OF_CONVERSATION;
     }
 }
-//# sourceMappingURL=Prompt.js.map

@@ -1,1 +1,0 @@
-{"version":3,"file":"ConversationAbandonedEvent.js","sourceRoot":"","sources":["../../../../ts/org/bukkit/conversations/ConversationAbandonedEvent.ts"],"names":[],"mappings":"AAYA,MAAM,OAAO,0BAA0B;IAC/B,MAAM,KAAK,UAAU;QAC3B,OAAO,IAAI,CAAC,IAAI,CAAC,qDAAqD,CAAC,CAAC;IACzE,CAAC;IAGD,YAAY,GAAG,IAAW;QACzB,OAAO,IAAI,0BAA0B,CAAC,UAAU,CAAC,GAAG,IAAI,CAAC,CAAC;IAC3D,CAAC;CACD"}

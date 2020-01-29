@@ -3,4 +3,3 @@ export class ThrownExpBottle {
         return Java.type('org.bukkit.entity.ThrownExpBottle');
     }
 }
-//# sourceMappingURL=ThrownExpBottle.js.map

@@ -15,4 +15,3 @@ export class EntityUnleashEvent$UnleashReason {
         return this.$javaClass.UNKNOWN;
     }
 }
-//# sourceMappingURL=EntityUnleashEvent$UnleashReason.js.map

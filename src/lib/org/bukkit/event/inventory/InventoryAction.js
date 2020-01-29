@@ -60,4 +60,3 @@ export class InventoryAction {
         return this.$javaClass.UNKNOWN;
     }
 }
-//# sourceMappingURL=InventoryAction.js.map

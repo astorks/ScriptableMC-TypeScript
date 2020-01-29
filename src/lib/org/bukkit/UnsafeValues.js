@@ -3,4 +3,3 @@ export class UnsafeValues {
         return Java.type('org.bukkit.UnsafeValues');
     }
 }
-//# sourceMappingURL=UnsafeValues.js.map

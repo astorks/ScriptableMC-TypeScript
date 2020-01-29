@@ -6,4 +6,3 @@ export class PlayerEvent {
         return new PlayerEvent.$javaClass(...args);
     }
 }
-//# sourceMappingURL=PlayerEvent.js.map

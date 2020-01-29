@@ -39,4 +39,3 @@ export class Attribute {
         return this.$javaClass.ZOMBIE_SPAWN_REINFORCEMENTS;
     }
 }
-//# sourceMappingURL=Attribute.js.map

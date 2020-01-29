@@ -30,4 +30,3 @@ export class EntityRegainHealthEvent$RegainReason {
         return this.$javaClass.CUSTOM;
     }
 }
-//# sourceMappingURL=EntityRegainHealthEvent$RegainReason.js.map

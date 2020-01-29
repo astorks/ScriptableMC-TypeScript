@@ -3,4 +3,3 @@ export class ConfigurationSerializable {
         return Java.type('org.bukkit.configuration.serialization.ConfigurationSerializable');
     }
 }
-//# sourceMappingURL=ConfigurationSerializable.js.map

@@ -3,4 +3,3 @@ export class Explosive {
         return Java.type('org.bukkit.entity.Explosive');
     }
 }
-//# sourceMappingURL=Explosive.js.map

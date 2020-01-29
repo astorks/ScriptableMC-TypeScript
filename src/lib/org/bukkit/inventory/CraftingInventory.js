@@ -3,4 +3,3 @@ export class CraftingInventory {
         return Java.type('org.bukkit.inventory.CraftingInventory');
     }
 }
-//# sourceMappingURL=CraftingInventory.js.map

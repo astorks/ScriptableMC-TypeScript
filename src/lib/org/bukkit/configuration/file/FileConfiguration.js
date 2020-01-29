@@ -9,4 +9,3 @@ export class FileConfiguration {
         return FileConfiguration.$javaClass.createPath(...args);
     }
 }
-//# sourceMappingURL=FileConfiguration.js.map

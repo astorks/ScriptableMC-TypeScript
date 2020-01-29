@@ -3,4 +3,3 @@ export class ItemFactory {
         return Java.type('org.bukkit.inventory.ItemFactory');
     }
 }
-//# sourceMappingURL=ItemFactory.js.map

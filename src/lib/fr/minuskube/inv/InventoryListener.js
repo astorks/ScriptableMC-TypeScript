@@ -6,4 +6,3 @@ export class InventoryListener {
         return new InventoryListener.$javaClass(...args);
     }
 }
-//# sourceMappingURL=InventoryListener.js.map

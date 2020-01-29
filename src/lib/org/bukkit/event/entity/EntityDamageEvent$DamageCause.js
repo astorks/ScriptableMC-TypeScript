@@ -87,4 +87,3 @@ export class EntityDamageEvent$DamageCause {
         return this.$javaClass.DRYOUT;
     }
 }
-//# sourceMappingURL=EntityDamageEvent$DamageCause.js.map

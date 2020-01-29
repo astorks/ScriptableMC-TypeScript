@@ -6,4 +6,3 @@ export class RayTraceResult {
         return new RayTraceResult.$javaClass(...args);
     }
 }
-//# sourceMappingURL=RayTraceResult.js.map

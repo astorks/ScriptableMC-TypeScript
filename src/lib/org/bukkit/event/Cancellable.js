@@ -3,4 +3,3 @@ export class Cancellable {
         return Java.type('org.bukkit.event.Cancellable');
     }
 }
-//# sourceMappingURL=Cancellable.js.map

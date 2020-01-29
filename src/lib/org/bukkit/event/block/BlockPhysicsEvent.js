@@ -9,4 +9,3 @@ export class BlockPhysicsEvent {
         return BlockPhysicsEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=BlockPhysicsEvent.js.map

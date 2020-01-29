@@ -9,4 +9,3 @@ export class ChunkLoadEvent {
         return ChunkLoadEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=ChunkLoadEvent.js.map

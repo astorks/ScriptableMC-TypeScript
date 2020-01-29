@@ -15,4 +15,3 @@ export class Raid$RaidStatus {
         return this.$javaClass.STOPPED;
     }
 }
-//# sourceMappingURL=Raid$RaidStatus.js.map

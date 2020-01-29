@@ -15,17 +15,35 @@ import { EntityDamageEvent } from '../lib/org/bukkit/event/entity/EntityDamageEv
 import { PlayerInteractAtEntityEvent } from '../lib/org/bukkit/event/player/PlayerInteractAtEntityEvent.js';
 import { PlayerInteractEntityEvent } from '../lib/org/bukkit/event/player/PlayerInteractEntityEvent.js';
 import { ByteStreams } from '../lib/com/google/common/io/ByteStreams.js';
-import CONFIG from './config.js'
 import { EntityType } from '../lib/org/bukkit/entity/EntityType.js';
 import { Firework } from '../lib/org/bukkit/entity/Firework.js';
 import { FireworkEffect } from '../lib/org/bukkit/FireworkEffect.js';
 import { Color } from '../lib/org/bukkit/Color.js';
+import { MysqlWrapper } from '../lib/com/pixlfox/scriptablemc/utils/MysqlWrapper.js';
+import CONFIG from './config.js'
 
 export class TestPlugin extends JsPlugin {
+
+    private mysqlConnection: MysqlWrapper;
 
     onLoad() {
         if(CONFIG.debug) {
             console.log("[" + this.pluginName + "] onLoad()");
+        }
+
+        // MySQL example
+        if(CONFIG.mysql.enabled) {
+            this.mysqlConnection = this.mysqlFromConfig(CONFIG.mysql);
+            this.mysqlConnection.openConnectionAsync(() => {
+                let selectStatement = this.mysqlConnection.prepareStatement("SELECT * FROM Testing WHERE enabled = ?;");
+                selectStatement.setBoolean(1, true);
+                let result = selectStatement.executeQuery();
+                while(result.next()) {
+                    console.log(result.getInt("id"), result.getString("title"), result.getString("text"));
+                }
+                result.close();
+                selectStatement.close();
+            });
         }
     }
 

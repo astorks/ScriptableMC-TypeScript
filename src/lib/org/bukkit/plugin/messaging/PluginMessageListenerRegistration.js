@@ -6,4 +6,3 @@ export class PluginMessageListenerRegistration {
         return new PluginMessageListenerRegistration.$javaClass(...args);
     }
 }
-//# sourceMappingURL=PluginMessageListenerRegistration.js.map

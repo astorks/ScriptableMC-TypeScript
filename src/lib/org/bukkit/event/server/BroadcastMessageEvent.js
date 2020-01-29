@@ -9,4 +9,3 @@ export class BroadcastMessageEvent {
         return BroadcastMessageEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=BroadcastMessageEvent.js.map

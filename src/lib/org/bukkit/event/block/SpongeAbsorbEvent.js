@@ -9,4 +9,3 @@ export class SpongeAbsorbEvent {
         return SpongeAbsorbEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=SpongeAbsorbEvent.js.map

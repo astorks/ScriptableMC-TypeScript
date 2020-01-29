@@ -9,4 +9,3 @@ export class PlayerBedLeaveEvent {
         return PlayerBedLeaveEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerBedLeaveEvent.js.map

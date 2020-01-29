@@ -9,4 +9,3 @@ export class PlayerPickupItemEvent {
         return PlayerPickupItemEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerPickupItemEvent.js.map

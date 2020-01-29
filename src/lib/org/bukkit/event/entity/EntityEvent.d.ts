@@ -6,8 +6,8 @@ export interface EntityEvent extends Event {
     getEntity(): Entity;
     getEntityType(): EntityType;
     getHandlers(): HandlerList;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class EntityEvent {
     static get $javaClass(): any;

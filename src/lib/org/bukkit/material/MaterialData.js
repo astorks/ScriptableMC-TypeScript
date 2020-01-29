@@ -6,4 +6,3 @@ export class MaterialData {
         return new MaterialData.$javaClass(...args);
     }
 }
-//# sourceMappingURL=MaterialData.js.map

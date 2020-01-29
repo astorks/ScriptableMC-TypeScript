@@ -54,4 +54,3 @@ export class TreeType {
         return this.$javaClass.CHORUS_PLANT;
     }
 }
-//# sourceMappingURL=TreeType.js.map

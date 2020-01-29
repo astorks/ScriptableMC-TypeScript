@@ -12,8 +12,8 @@ export interface PlayerInteractAtEntityEvent extends PlayerInteractEntityEvent {
     getHand(): EquipmentSlot;
     getRightClicked(): Entity;
     getPlayer(): Player;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class PlayerInteractAtEntityEvent {
     static get $javaClass(): any;

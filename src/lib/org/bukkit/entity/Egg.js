@@ -3,4 +3,3 @@ export class Egg {
         return Java.type('org.bukkit.entity.Egg');
     }
 }
-//# sourceMappingURL=Egg.js.map

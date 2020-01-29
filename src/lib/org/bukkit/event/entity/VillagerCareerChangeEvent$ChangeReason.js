@@ -9,4 +9,3 @@ export class VillagerCareerChangeEvent$ChangeReason {
         return this.$javaClass.EMPLOYED;
     }
 }
-//# sourceMappingURL=VillagerCareerChangeEvent$ChangeReason.js.map

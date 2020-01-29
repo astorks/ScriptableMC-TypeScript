@@ -3,4 +3,3 @@ export class Firework {
         return Java.type('org.bukkit.entity.Firework');
     }
 }
-//# sourceMappingURL=Firework.js.map

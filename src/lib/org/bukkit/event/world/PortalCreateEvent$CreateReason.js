@@ -12,4 +12,3 @@ export class PortalCreateEvent$CreateReason {
         return this.$javaClass.END_PLATFORM;
     }
 }
-//# sourceMappingURL=PortalCreateEvent$CreateReason.js.map

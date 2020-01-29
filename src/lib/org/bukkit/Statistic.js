@@ -240,4 +240,3 @@ export class Statistic {
         return this.$javaClass.INTERACT_WITH_GRINDSTONE;
     }
 }
-//# sourceMappingURL=Statistic.js.map

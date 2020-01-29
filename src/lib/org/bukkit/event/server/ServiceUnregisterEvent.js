@@ -9,4 +9,3 @@ export class ServiceUnregisterEvent {
         return ServiceUnregisterEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=ServiceUnregisterEvent.js.map

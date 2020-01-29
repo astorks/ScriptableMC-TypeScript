@@ -9,4 +9,3 @@ export class PlayerSwapHandItemsEvent {
         return PlayerSwapHandItemsEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerSwapHandItemsEvent.js.map

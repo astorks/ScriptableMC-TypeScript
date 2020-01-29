@@ -51,4 +51,3 @@ export class DyeColor {
         return this.$javaClass.BLACK;
     }
 }
-//# sourceMappingURL=DyeColor.js.map

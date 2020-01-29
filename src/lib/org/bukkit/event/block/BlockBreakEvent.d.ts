@@ -10,11 +10,11 @@ export interface BlockBreakEvent extends BlockExpEvent, Cancellable {
     isDropItems(): boolean;
     setDropItems(dropItems: boolean): void;
     getHandlers(): HandlerList;
-    getExpToDrop(): number;
     setExpToDrop(exp: number): void;
+    getExpToDrop(): number;
     getBlock(): Block;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class BlockBreakEvent {
     static get $javaClass(): any;

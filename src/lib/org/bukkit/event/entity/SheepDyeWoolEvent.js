@@ -9,4 +9,3 @@ export class SheepDyeWoolEvent {
         return SheepDyeWoolEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=SheepDyeWoolEvent.js.map

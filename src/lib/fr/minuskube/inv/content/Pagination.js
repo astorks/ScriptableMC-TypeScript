@@ -3,4 +3,3 @@ export class Pagination {
         return Java.type('fr.minuskube.inv.content.Pagination');
     }
 }
-//# sourceMappingURL=Pagination.js.map

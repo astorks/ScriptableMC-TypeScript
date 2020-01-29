@@ -18,4 +18,3 @@ export class AsyncPlayerPreLoginEvent$Result {
         return this.$javaClass.KICK_OTHER;
     }
 }
-//# sourceMappingURL=AsyncPlayerPreLoginEvent$Result.js.map

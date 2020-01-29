@@ -3,4 +3,3 @@ export class PluginIdentifiableCommand {
         return Java.type('org.bukkit.command.PluginIdentifiableCommand');
     }
 }
-//# sourceMappingURL=PluginIdentifiableCommand.js.map

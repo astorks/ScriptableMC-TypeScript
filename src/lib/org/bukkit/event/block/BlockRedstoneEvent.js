@@ -9,4 +9,3 @@ export class BlockRedstoneEvent {
         return BlockRedstoneEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=BlockRedstoneEvent.js.map

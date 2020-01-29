@@ -6,4 +6,3 @@ export class ConversationAbandonedEvent {
         return new ConversationAbandonedEvent.$javaClass(...args);
     }
 }
-//# sourceMappingURL=ConversationAbandonedEvent.js.map

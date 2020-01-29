@@ -54,4 +54,3 @@ export class EntityTargetEvent$TargetReason {
         return this.$javaClass.UNKNOWN;
     }
 }
-//# sourceMappingURL=EntityTargetEvent$TargetReason.js.map

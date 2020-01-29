@@ -60,4 +60,3 @@ export class BlockFace {
         return this.$javaClass.SELF;
     }
 }
-//# sourceMappingURL=BlockFace.js.map

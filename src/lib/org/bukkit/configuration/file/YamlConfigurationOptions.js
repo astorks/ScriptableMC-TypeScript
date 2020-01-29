@@ -3,4 +3,3 @@ export class YamlConfigurationOptions {
         return Java.type('org.bukkit.configuration.file.YamlConfigurationOptions');
     }
 }
-//# sourceMappingURL=YamlConfigurationOptions.js.map

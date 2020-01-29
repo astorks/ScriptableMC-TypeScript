@@ -3,4 +3,3 @@ export class Plugin {
         return Java.type('org.bukkit.plugin.Plugin');
     }
 }
-//# sourceMappingURL=Plugin.js.map

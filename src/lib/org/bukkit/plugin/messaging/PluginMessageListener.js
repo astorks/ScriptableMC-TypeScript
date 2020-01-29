@@ -3,4 +3,3 @@ export class PluginMessageListener {
         return Java.type('org.bukkit.plugin.messaging.PluginMessageListener');
     }
 }
-//# sourceMappingURL=PluginMessageListener.js.map

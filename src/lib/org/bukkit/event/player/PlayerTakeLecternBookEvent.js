@@ -9,4 +9,3 @@ export class PlayerTakeLecternBookEvent {
         return PlayerTakeLecternBookEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerTakeLecternBookEvent.js.map

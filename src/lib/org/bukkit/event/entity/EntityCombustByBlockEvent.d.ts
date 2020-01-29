@@ -7,13 +7,13 @@ export interface EntityCombustByBlockEvent extends EntityCombustEvent {
     getCombuster(): Block;
     getHandlers(): HandlerList;
     isCancelled(): boolean;
-    getDuration(): number;
     setCancelled(cancel: boolean): void;
+    getDuration(): number;
     setDuration(duration: number): void;
     getEntity(): Entity;
     getEntityType(): EntityType;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class EntityCombustByBlockEvent {
     static get $javaClass(): any;

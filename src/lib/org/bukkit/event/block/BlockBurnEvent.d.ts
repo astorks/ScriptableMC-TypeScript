@@ -8,12 +8,12 @@ export interface BlockBurnEvent extends BlockEvent, Cancellable {
     setCancelled(cancel: boolean): void;
     getIgnitingBlock(): Block;
     getBlock(): Block;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class BlockBurnEvent {
     static get $javaClass(): any;
-    constructor(block: Block);
     constructor(block: Block, ignitingBlock: Block);
+    constructor(block: Block);
     static getHandlerList(): HandlerList;
 }

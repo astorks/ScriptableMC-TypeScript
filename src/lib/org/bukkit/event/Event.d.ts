@@ -1,11 +1,11 @@
 import { HandlerList } from '../../../org/bukkit/event/HandlerList.js';
 export interface Event {
     getHandlers(): HandlerList;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class Event {
     static get $javaClass(): any;
-    constructor(isAsync: boolean);
     constructor();
+    constructor(isAsync: boolean);
 }

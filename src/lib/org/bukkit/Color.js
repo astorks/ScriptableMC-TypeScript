@@ -63,4 +63,3 @@ export class Color {
         return Color.$javaClass.fromBGR(...args);
     }
 }
-//# sourceMappingURL=Color.js.map

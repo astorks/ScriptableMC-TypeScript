@@ -9,4 +9,3 @@ export class MemoryConfiguration {
         return MemoryConfiguration.$javaClass.createPath(...args);
     }
 }
-//# sourceMappingURL=MemoryConfiguration.js.map

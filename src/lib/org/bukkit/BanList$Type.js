@@ -9,4 +9,3 @@ export class BanList$Type {
         return this.$javaClass.IP;
     }
 }
-//# sourceMappingURL=BanList$Type.js.map

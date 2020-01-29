@@ -3,4 +3,3 @@ export class FishHook {
         return Java.type('org.bukkit.entity.FishHook');
     }
 }
-//# sourceMappingURL=FishHook.js.map

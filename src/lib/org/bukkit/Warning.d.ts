@@ -1,6 +1,6 @@
 export interface Warning {
-    reason(): string;
     value(): boolean;
+    reason(): string;
     annotationType(): any;
 }
 export declare class Warning {

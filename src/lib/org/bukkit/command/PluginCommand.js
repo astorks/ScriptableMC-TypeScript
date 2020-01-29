@@ -6,4 +6,3 @@ export class PluginCommand {
         return PluginCommand.$javaClass.broadcastCommandMessage(...args);
     }
 }
-//# sourceMappingURL=PluginCommand.js.map

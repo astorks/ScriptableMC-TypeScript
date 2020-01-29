@@ -9,4 +9,3 @@ export class PlayerGameModeChangeEvent {
         return PlayerGameModeChangeEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerGameModeChangeEvent.js.map

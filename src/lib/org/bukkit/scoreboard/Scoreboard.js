@@ -3,4 +3,3 @@ export class Scoreboard {
         return Java.type('org.bukkit.scoreboard.Scoreboard');
     }
 }
-//# sourceMappingURL=Scoreboard.js.map

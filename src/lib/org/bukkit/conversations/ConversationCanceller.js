@@ -3,4 +3,3 @@ export class ConversationCanceller {
         return Java.type('org.bukkit.conversations.ConversationCanceller');
     }
 }
-//# sourceMappingURL=ConversationCanceller.js.map

@@ -6,4 +6,3 @@ export class InventoryManager {
         return new InventoryManager.$javaClass(...args);
     }
 }
-//# sourceMappingURL=InventoryManager.js.map

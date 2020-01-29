@@ -9,4 +9,3 @@ export class PlayerStatisticIncrementEvent {
         return PlayerStatisticIncrementEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerStatisticIncrementEvent.js.map

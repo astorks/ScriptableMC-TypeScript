@@ -9,4 +9,3 @@ export class PlayerChannelEvent {
         return PlayerChannelEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerChannelEvent.js.map

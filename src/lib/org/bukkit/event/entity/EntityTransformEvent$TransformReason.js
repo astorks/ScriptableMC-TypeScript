@@ -21,4 +21,3 @@ export class EntityTransformEvent$TransformReason {
         return this.$javaClass.SPLIT;
     }
 }
-//# sourceMappingURL=EntityTransformEvent$TransformReason.js.map

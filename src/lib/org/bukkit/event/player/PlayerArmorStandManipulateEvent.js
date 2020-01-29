@@ -9,4 +9,3 @@ export class PlayerArmorStandManipulateEvent {
         return PlayerArmorStandManipulateEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerArmorStandManipulateEvent.js.map

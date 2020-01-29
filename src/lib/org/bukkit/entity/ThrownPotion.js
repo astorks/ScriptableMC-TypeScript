@@ -3,4 +3,3 @@ export class ThrownPotion {
         return Java.type('org.bukkit.entity.ThrownPotion');
     }
 }
-//# sourceMappingURL=ThrownPotion.js.map

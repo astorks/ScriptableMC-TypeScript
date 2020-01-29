@@ -9,4 +9,3 @@ export class VehicleEnterEvent {
         return VehicleEnterEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=VehicleEnterEvent.js.map

@@ -3,4 +3,3 @@ export class SmartInventory$Builder {
         return Java.type('fr.minuskube.inv.SmartInventory$Builder');
     }
 }
-//# sourceMappingURL=SmartInventory$Builder.js.map

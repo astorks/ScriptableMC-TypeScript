@@ -3,4 +3,3 @@ export class BlockState {
         return Java.type('org.bukkit.block.BlockState');
     }
 }
-//# sourceMappingURL=BlockState.js.map

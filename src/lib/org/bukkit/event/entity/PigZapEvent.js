@@ -9,4 +9,3 @@ export class PigZapEvent {
         return PigZapEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PigZapEvent.js.map

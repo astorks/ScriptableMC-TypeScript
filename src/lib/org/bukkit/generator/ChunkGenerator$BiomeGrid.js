@@ -3,4 +3,3 @@ export class ChunkGenerator$BiomeGrid {
         return Java.type('org.bukkit.generator.ChunkGenerator$BiomeGrid');
     }
 }
-//# sourceMappingURL=ChunkGenerator$BiomeGrid.js.map

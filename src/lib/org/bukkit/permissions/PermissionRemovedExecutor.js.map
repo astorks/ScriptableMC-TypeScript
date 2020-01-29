@@ -1,1 +1,0 @@
-{"version":3,"file":"PermissionRemovedExecutor.js","sourceRoot":"","sources":["../../../../ts/org/bukkit/permissions/PermissionRemovedExecutor.ts"],"names":[],"mappings":"AAOA,MAAM,OAAO,yBAAyB;IAC9B,MAAM,KAAK,UAAU;QAC3B,OAAO,IAAI,CAAC,IAAI,CAAC,kDAAkD,CAAC,CAAC;IACtE,CAAC;CACD"}

@@ -9,4 +9,3 @@ export class FireworkExplodeEvent {
         return FireworkExplodeEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=FireworkExplodeEvent.js.map

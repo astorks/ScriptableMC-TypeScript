@@ -3,4 +3,3 @@ export class AreaEffectCloud {
         return Java.type('org.bukkit.entity.AreaEffectCloud');
     }
 }
-//# sourceMappingURL=AreaEffectCloud.js.map

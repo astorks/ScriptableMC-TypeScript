@@ -4,8 +4,8 @@ import { Event } from '../../../../org/bukkit/event/Event.js';
 export interface BlockEvent extends Event {
     getBlock(): Block;
     getHandlers(): HandlerList;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class BlockEvent {
     static get $javaClass(): any;

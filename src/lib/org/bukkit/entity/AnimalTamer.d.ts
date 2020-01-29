@@ -1,6 +1,6 @@
 export interface AnimalTamer {
-    getUniqueId(): string;
     getName(): string;
+    getUniqueId(): string;
 }
 export declare class AnimalTamer {
     static get $javaClass(): any;

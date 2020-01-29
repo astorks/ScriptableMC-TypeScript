@@ -9,4 +9,3 @@ export class HangingPlaceEvent {
         return HangingPlaceEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=HangingPlaceEvent.js.map

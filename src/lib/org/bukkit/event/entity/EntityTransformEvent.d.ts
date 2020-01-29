@@ -13,8 +13,8 @@ export interface EntityTransformEvent extends EntityEvent, Cancellable {
     getTransformReason(): EntityTransformEvent$TransformReason;
     getEntity(): Entity;
     getEntityType(): EntityType;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class EntityTransformEvent {
     static get $javaClass(): any;

@@ -12,4 +12,3 @@ export class FluidCollisionMode {
         return this.$javaClass.ALWAYS;
     }
 }
-//# sourceMappingURL=FluidCollisionMode.js.map

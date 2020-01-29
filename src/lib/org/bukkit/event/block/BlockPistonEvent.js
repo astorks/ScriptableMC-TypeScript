@@ -6,4 +6,3 @@ export class BlockPistonEvent {
         return new BlockPistonEvent.$javaClass(...args);
     }
 }
-//# sourceMappingURL=BlockPistonEvent.js.map

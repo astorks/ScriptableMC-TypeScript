@@ -66,4 +66,3 @@ export class EntityPotionEffectEvent$Cause {
         return this.$javaClass.VILLAGER_TRADE;
     }
 }
-//# sourceMappingURL=EntityPotionEffectEvent$Cause.js.map

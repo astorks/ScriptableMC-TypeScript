@@ -15,4 +15,3 @@ export class NameTagVisibility {
         return this.$javaClass.HIDE_FOR_OWN_TEAM;
     }
 }
-//# sourceMappingURL=NameTagVisibility.js.map

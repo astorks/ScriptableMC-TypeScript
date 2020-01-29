@@ -3,4 +3,3 @@ export class InventoryOpener {
         return Java.type('fr.minuskube.inv.opener.InventoryOpener');
     }
 }
-//# sourceMappingURL=InventoryOpener.js.map

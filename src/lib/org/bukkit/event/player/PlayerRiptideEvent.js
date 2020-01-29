@@ -9,4 +9,3 @@ export class PlayerRiptideEvent {
         return PlayerRiptideEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerRiptideEvent.js.map

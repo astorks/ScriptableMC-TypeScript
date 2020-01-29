@@ -9,4 +9,3 @@ export class PortalCreateEvent {
         return PortalCreateEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PortalCreateEvent.js.map

@@ -9,4 +9,3 @@ export class InventoryDragEvent {
         return InventoryDragEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=InventoryDragEvent.js.map

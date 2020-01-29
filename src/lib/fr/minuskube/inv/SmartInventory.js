@@ -6,4 +6,3 @@ export class SmartInventory {
         return SmartInventory.$javaClass.builder(...args);
     }
 }
-//# sourceMappingURL=SmartInventory.js.map

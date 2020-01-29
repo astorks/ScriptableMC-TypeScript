@@ -3,4 +3,3 @@ export class KeyedBossBar {
         return Java.type('org.bukkit.boss.KeyedBossBar');
     }
 }
-//# sourceMappingURL=KeyedBossBar.js.map

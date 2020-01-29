@@ -102,4 +102,3 @@ export class CreatureSpawnEvent$SpawnReason {
         return this.$javaClass.DEFAULT;
     }
 }
-//# sourceMappingURL=CreatureSpawnEvent$SpawnReason.js.map

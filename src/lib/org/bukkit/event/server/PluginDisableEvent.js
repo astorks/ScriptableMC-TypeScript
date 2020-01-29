@@ -9,4 +9,3 @@ export class PluginDisableEvent {
         return PluginDisableEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PluginDisableEvent.js.map

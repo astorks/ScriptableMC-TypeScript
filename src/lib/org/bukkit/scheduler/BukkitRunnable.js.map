@@ -1,1 +1,0 @@
-{"version":3,"file":"BukkitRunnable.js","sourceRoot":"","sources":["../../../../ts/org/bukkit/scheduler/BukkitRunnable.ts"],"names":[],"mappings":"AAiBA,MAAM,OAAO,cAAc;IACnB,MAAM,KAAK,UAAU;QAC3B,OAAO,IAAI,CAAC,IAAI,CAAC,qCAAqC,CAAC,CAAC;IACzD,CAAC;IAED,YAAY,GAAG,IAAW;QACzB,OAAO,IAAI,cAAc,CAAC,UAAU,CAAC,GAAG,IAAI,CAAC,CAAC;IAC/C,CAAC;CACD"}

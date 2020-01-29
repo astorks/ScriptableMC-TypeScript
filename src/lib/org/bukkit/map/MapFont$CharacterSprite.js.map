@@ -1,1 +1,0 @@
-{"version":3,"file":"MapFont$CharacterSprite.js","sourceRoot":"","sources":["../../../../ts/org/bukkit/map/MapFont$CharacterSprite.ts"],"names":[],"mappings":"AAQA,MAAM,OAAO,uBAAuB;IAC5B,MAAM,KAAK,UAAU;QAC3B,OAAO,IAAI,CAAC,IAAI,CAAC,wCAAwC,CAAC,CAAC;IAC5D,CAAC;IAED,YAAY,GAAG,IAAW;QACzB,OAAO,IAAI,uBAAuB,CAAC,UAAU,CAAC,GAAG,IAAI,CAAC,CAAC;IACxD,CAAC;CACD"}

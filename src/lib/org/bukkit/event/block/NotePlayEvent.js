@@ -9,4 +9,3 @@ export class NotePlayEvent {
         return NotePlayEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=NotePlayEvent.js.map

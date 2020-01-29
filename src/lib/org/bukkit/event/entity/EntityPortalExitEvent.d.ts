@@ -11,14 +11,14 @@ export interface EntityPortalExitEvent extends EntityTeleportEvent {
     getAfter(): Vector;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getTo(): Location;
-    setTo(to: Location): void;
     getFrom(): Location;
+    getTo(): Location;
     setFrom(from: Location): void;
+    setTo(to: Location): void;
     getEntity(): Entity;
     getEntityType(): EntityType;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class EntityPortalExitEvent {
     static get $javaClass(): any;

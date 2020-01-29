@@ -3,4 +3,3 @@ export class FallingBlock {
         return Java.type('org.bukkit.entity.FallingBlock');
     }
 }
-//# sourceMappingURL=FallingBlock.js.map

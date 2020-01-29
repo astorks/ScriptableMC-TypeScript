@@ -3,4 +3,3 @@ export class ExperienceOrb {
         return Java.type('org.bukkit.entity.ExperienceOrb');
     }
 }
-//# sourceMappingURL=ExperienceOrb.js.map

@@ -7,8 +7,8 @@ export interface WorldUnloadEvent extends WorldEvent, Cancellable {
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
     getWorld(): World;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class WorldUnloadEvent {
     static get $javaClass(): any;

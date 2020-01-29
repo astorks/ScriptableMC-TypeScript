@@ -3,4 +3,3 @@ export class LivingEntity {
         return Java.type('org.bukkit.entity.LivingEntity');
     }
 }
-//# sourceMappingURL=LivingEntity.js.map

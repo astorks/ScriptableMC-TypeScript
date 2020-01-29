@@ -4,8 +4,8 @@ import { WorldEvent } from '../../../../org/bukkit/event/world/WorldEvent.js';
 export interface WorldSaveEvent extends WorldEvent {
     getHandlers(): HandlerList;
     getWorld(): World;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class WorldSaveEvent {
     static get $javaClass(): any;

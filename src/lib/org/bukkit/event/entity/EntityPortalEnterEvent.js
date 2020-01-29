@@ -9,4 +9,3 @@ export class EntityPortalEnterEvent {
         return EntityPortalEnterEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=EntityPortalEnterEvent.js.map

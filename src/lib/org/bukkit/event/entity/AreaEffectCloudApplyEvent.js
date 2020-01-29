@@ -9,4 +9,3 @@ export class AreaEffectCloudApplyEvent {
         return AreaEffectCloudApplyEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=AreaEffectCloudApplyEvent.js.map

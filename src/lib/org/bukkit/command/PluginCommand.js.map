@@ -1,1 +1,0 @@
-{"version":3,"file":"PluginCommand.js","sourceRoot":"","sources":["../../../../ts/org/bukkit/command/PluginCommand.ts"],"names":[],"mappings":"AAwCA,MAAM,OAAO,aAAa;IAClB,MAAM,KAAK,UAAU;QAC3B,OAAO,IAAI,CAAC,IAAI,CAAC,kCAAkC,CAAC,CAAC;IACtD,CAAC;IAGM,MAAM,CAAC,uBAAuB,CAAC,GAAG,IAAW;QACnD,OAAO,aAAa,CAAC,UAAU,CAAC,uBAAuB,CAAC,GAAG,IAAI,CAAC,CAAC;IAClE,CAAC;CACD"}

@@ -3,4 +3,3 @@ export class PersistentDataAdapterContext {
         return Java.type('org.bukkit.persistence.PersistentDataAdapterContext');
     }
 }
-//# sourceMappingURL=PersistentDataAdapterContext.js.map

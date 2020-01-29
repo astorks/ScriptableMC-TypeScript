@@ -6,4 +6,3 @@ export class PluginBase {
         return new PluginBase.$javaClass(...args);
     }
 }
-//# sourceMappingURL=PluginBase.js.map

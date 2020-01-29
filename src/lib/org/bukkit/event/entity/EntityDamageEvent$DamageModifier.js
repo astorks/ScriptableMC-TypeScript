@@ -24,4 +24,3 @@ export class EntityDamageEvent$DamageModifier {
         return this.$javaClass.ABSORPTION;
     }
 }
-//# sourceMappingURL=EntityDamageEvent$DamageModifier.js.map

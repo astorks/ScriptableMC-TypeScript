@@ -9,4 +9,3 @@ export class PlayerToggleSneakEvent {
         return PlayerToggleSneakEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerToggleSneakEvent.js.map

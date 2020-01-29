@@ -9,4 +9,3 @@ export class DragType {
         return this.$javaClass.EVEN;
     }
 }
-//# sourceMappingURL=DragType.js.map

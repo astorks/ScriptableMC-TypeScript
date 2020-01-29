@@ -9,4 +9,3 @@ export class RenderType {
         return this.$javaClass.HEARTS;
     }
 }
-//# sourceMappingURL=RenderType.js.map

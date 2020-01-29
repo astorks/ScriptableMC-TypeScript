@@ -12,4 +12,3 @@ export class DisplaySlot {
         return this.$javaClass.SIDEBAR;
     }
 }
-//# sourceMappingURL=DisplaySlot.js.map

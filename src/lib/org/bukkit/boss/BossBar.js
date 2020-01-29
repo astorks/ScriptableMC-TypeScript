@@ -3,4 +3,3 @@ export class BossBar {
         return Java.type('org.bukkit.boss.BossBar');
     }
 }
-//# sourceMappingURL=BossBar.js.map

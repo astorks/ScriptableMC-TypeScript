@@ -9,4 +9,3 @@ export class Messenger {
         return Messenger.$javaClass.MAX_CHANNEL_SIZE;
     }
 }
-//# sourceMappingURL=Messenger.js.map

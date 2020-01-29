@@ -6,4 +6,3 @@ export class PermissionAttachment {
         return new PermissionAttachment.$javaClass(...args);
     }
 }
-//# sourceMappingURL=PermissionAttachment.js.map

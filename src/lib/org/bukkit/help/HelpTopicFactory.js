@@ -3,4 +3,3 @@ export class HelpTopicFactory {
         return Java.type('org.bukkit.help.HelpTopicFactory');
     }
 }
-//# sourceMappingURL=HelpTopicFactory.js.map

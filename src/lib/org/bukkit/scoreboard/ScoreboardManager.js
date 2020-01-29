@@ -3,4 +3,3 @@ export class ScoreboardManager {
         return Java.type('org.bukkit.scoreboard.ScoreboardManager');
     }
 }
-//# sourceMappingURL=ScoreboardManager.js.map

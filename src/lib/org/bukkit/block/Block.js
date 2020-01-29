@@ -3,4 +3,3 @@ export class Block {
         return Java.type('org.bukkit.block.Block');
     }
 }
-//# sourceMappingURL=Block.js.map

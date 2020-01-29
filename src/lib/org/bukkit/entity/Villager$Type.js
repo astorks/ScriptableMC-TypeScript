@@ -24,4 +24,3 @@ export class Villager$Type {
         return this.$javaClass.TAIGA;
     }
 }
-//# sourceMappingURL=Villager$Type.js.map

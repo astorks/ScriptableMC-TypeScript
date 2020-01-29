@@ -9,4 +9,3 @@ export class EntityTargetLivingEntityEvent {
         return EntityTargetLivingEntityEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=EntityTargetLivingEntityEvent.js.map

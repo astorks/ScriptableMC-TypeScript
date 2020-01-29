@@ -18,4 +18,3 @@ export class HangingBreakEvent$RemoveCause {
         return this.$javaClass.DEFAULT;
     }
 }
-//# sourceMappingURL=HangingBreakEvent$RemoveCause.js.map

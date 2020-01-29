@@ -13,8 +13,8 @@ export interface PlayerUnleashEntityEvent extends EntityUnleashEvent, Cancellabl
     getReason(): EntityUnleashEvent$UnleashReason;
     getEntity(): Entity;
     getEntityType(): EntityType;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class PlayerUnleashEntityEvent {
     static get $javaClass(): any;

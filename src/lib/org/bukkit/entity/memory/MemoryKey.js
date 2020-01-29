@@ -20,11 +20,10 @@ export class MemoryKey {
     static get LAST_WORKED_AT_POI() {
         return MemoryKey.$javaClass.LAST_WORKED_AT_POI;
     }
-    static getByKey(...args) {
-        return MemoryKey.$javaClass.getByKey(...args);
-    }
     static values(...args) {
         return MemoryKey.$javaClass.values(...args);
     }
+    static getByKey(...args) {
+        return MemoryKey.$javaClass.getByKey(...args);
+    }
 }
-//# sourceMappingURL=MemoryKey.js.map

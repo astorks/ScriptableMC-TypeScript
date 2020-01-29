@@ -11,12 +11,12 @@ export interface PlayerInteractEntityEvent extends PlayerEvent, Cancellable {
     getHand(): EquipmentSlot;
     getRightClicked(): Entity;
     getPlayer(): Player;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class PlayerInteractEntityEvent {
     static get $javaClass(): any;
-    constructor(who: Player, clickedEntity: Entity);
     constructor(who: Player, clickedEntity: Entity, hand: EquipmentSlot);
+    constructor(who: Player, clickedEntity: Entity);
     static getHandlerList(): HandlerList;
 }

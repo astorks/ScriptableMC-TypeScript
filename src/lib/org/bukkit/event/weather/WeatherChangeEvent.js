@@ -9,4 +9,3 @@ export class WeatherChangeEvent {
         return WeatherChangeEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=WeatherChangeEvent.js.map

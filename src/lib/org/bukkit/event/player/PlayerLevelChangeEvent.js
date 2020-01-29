@@ -9,4 +9,3 @@ export class PlayerLevelChangeEvent {
         return PlayerLevelChangeEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerLevelChangeEvent.js.map

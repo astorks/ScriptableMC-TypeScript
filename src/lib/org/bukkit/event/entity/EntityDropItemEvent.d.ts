@@ -11,8 +11,8 @@ export interface EntityDropItemEvent extends EntityEvent, Cancellable {
     getItemDrop(): Item;
     getEntity(): Entity;
     getEntityType(): EntityType;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class EntityDropItemEvent {
     static get $javaClass(): any;

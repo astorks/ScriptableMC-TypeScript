@@ -12,4 +12,3 @@ export class Event$Result {
         return this.$javaClass.ALLOW;
     }
 }
-//# sourceMappingURL=Event$Result.js.map

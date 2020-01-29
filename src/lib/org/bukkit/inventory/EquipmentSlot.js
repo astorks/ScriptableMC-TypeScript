@@ -21,4 +21,3 @@ export class EquipmentSlot {
         return this.$javaClass.HEAD;
     }
 }
-//# sourceMappingURL=EquipmentSlot.js.map

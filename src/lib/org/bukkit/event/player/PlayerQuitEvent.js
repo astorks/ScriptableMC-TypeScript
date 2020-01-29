@@ -9,4 +9,3 @@ export class PlayerQuitEvent {
         return PlayerQuitEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerQuitEvent.js.map

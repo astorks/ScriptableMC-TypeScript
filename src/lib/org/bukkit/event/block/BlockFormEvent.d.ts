@@ -8,8 +8,8 @@ export interface BlockFormEvent extends BlockGrowEvent {
     setCancelled(cancel: boolean): void;
     getNewState(): BlockState;
     getBlock(): Block;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class BlockFormEvent {
     static get $javaClass(): any;

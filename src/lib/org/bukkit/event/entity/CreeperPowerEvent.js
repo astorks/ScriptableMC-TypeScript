@@ -9,4 +9,3 @@ export class CreeperPowerEvent {
         return CreeperPowerEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=CreeperPowerEvent.js.map

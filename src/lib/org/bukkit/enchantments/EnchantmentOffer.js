@@ -6,4 +6,3 @@ export class EnchantmentOffer {
         return new EnchantmentOffer.$javaClass(...args);
     }
 }
-//# sourceMappingURL=EnchantmentOffer.js.map

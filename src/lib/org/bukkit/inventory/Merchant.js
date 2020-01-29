@@ -3,4 +3,3 @@ export class Merchant {
         return Java.type('org.bukkit.inventory.Merchant');
     }
 }
-//# sourceMappingURL=Merchant.js.map

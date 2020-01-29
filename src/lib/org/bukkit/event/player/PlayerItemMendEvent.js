@@ -9,4 +9,3 @@ export class PlayerItemMendEvent {
         return PlayerItemMendEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerItemMendEvent.js.map

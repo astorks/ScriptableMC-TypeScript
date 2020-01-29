@@ -3,4 +3,3 @@ export class Sheep {
         return Java.type('org.bukkit.entity.Sheep');
     }
 }
-//# sourceMappingURL=Sheep.js.map

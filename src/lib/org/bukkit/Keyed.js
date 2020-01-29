@@ -3,4 +3,3 @@ export class Keyed {
         return Java.type('org.bukkit.Keyed');
     }
 }
-//# sourceMappingURL=Keyed.js.map

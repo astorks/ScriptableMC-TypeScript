@@ -3,4 +3,3 @@ export class ConfigurationOptions {
         return Java.type('org.bukkit.configuration.ConfigurationOptions');
     }
 }
-//# sourceMappingURL=ConfigurationOptions.js.map

@@ -3,4 +3,3 @@ export class PluginMessageRecipient {
         return Java.type('org.bukkit.plugin.messaging.PluginMessageRecipient');
     }
 }
-//# sourceMappingURL=PluginMessageRecipient.js.map

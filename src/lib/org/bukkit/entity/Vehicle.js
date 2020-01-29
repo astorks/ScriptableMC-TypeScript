@@ -3,4 +3,3 @@ export class Vehicle {
         return Java.type('org.bukkit.entity.Vehicle');
     }
 }
-//# sourceMappingURL=Vehicle.js.map

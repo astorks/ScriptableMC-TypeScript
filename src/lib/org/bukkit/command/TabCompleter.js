@@ -3,4 +3,3 @@ export class TabCompleter {
         return Java.type('org.bukkit.command.TabCompleter');
     }
 }
-//# sourceMappingURL=TabCompleter.js.map

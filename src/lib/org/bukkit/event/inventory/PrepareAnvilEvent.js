@@ -9,4 +9,3 @@ export class PrepareAnvilEvent {
         return PrepareAnvilEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PrepareAnvilEvent.js.map

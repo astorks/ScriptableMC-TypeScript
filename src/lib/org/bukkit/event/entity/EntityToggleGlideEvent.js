@@ -9,4 +9,3 @@ export class EntityToggleGlideEvent {
         return EntityToggleGlideEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=EntityToggleGlideEvent.js.map

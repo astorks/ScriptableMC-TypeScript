@@ -6,4 +6,3 @@ export class ChunkGenerator {
         return new ChunkGenerator.$javaClass(...args);
     }
 }
-//# sourceMappingURL=ChunkGenerator.js.map

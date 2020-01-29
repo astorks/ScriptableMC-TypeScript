@@ -3,4 +3,3 @@ export class AbstractHorse {
         return Java.type('org.bukkit.entity.AbstractHorse');
     }
 }
-//# sourceMappingURL=AbstractHorse.js.map

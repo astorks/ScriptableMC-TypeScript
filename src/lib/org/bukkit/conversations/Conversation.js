@@ -6,4 +6,3 @@ export class Conversation {
         return new Conversation.$javaClass(...args);
     }
 }
-//# sourceMappingURL=Conversation.js.map

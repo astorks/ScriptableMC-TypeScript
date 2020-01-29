@@ -9,4 +9,3 @@ export class BlockDispenseArmorEvent {
         return BlockDispenseArmorEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=BlockDispenseArmorEvent.js.map

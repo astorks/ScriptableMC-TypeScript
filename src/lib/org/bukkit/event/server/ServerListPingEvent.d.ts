@@ -2,19 +2,19 @@ import { HandlerList } from '../../../../org/bukkit/event/HandlerList.js';
 import { CachedServerIcon } from '../../../../org/bukkit/util/CachedServerIcon.js';
 import { ServerEvent } from '../../../../org/bukkit/event/server/ServerEvent.js';
 export interface ServerListPingEvent extends ServerEvent {
-    getHandlers(): HandlerList;
+    iterator(): any;
+    getAddress(): any;
     getMaxPlayers(): number;
     getMotd(): string;
-    setMotd(motd: string): void;
+    getHandlers(): HandlerList;
     getNumPlayers(): number;
     setMaxPlayers(maxPlayers: number): void;
     setServerIcon(icon: CachedServerIcon): void;
-    getAddress(): any;
-    iterator(): any;
-    isAsynchronous(): boolean;
+    setMotd(motd: string): void;
     getEventName(): string;
+    isAsynchronous(): boolean;
     spliterator(): any;
-    forEach(arg0: any): void;
+    forEach(action: any): void;
 }
 export declare class ServerListPingEvent {
     static get $javaClass(): any;

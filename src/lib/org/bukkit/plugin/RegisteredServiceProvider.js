@@ -6,4 +6,3 @@ export class RegisteredServiceProvider {
         return new RegisteredServiceProvider.$javaClass(...args);
     }
 }
-//# sourceMappingURL=RegisteredServiceProvider.js.map

@@ -12,8 +12,8 @@ export interface BlockPistonRetractEvent extends BlockPistonEvent {
     setCancelled(cancelled: boolean): void;
     isSticky(): boolean;
     getBlock(): Block;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class BlockPistonRetractEvent {
     static get $javaClass(): any;

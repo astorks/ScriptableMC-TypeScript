@@ -9,8 +9,8 @@ export interface PlayerItemHeldEvent extends PlayerEvent, Cancellable {
     getNewSlot(): number;
     getPreviousSlot(): number;
     getPlayer(): Player;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class PlayerItemHeldEvent {
     static get $javaClass(): any;

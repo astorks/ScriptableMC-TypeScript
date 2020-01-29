@@ -15,4 +15,3 @@ export class Difficulty {
         return this.$javaClass.HARD;
     }
 }
-//# sourceMappingURL=Difficulty.js.map

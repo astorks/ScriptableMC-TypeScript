@@ -6,4 +6,3 @@ export class Event {
         return new Event.$javaClass(...args);
     }
 }
-//# sourceMappingURL=Event.js.map

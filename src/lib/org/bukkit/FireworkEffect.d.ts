@@ -1,13 +1,13 @@
 import { FireworkEffect$Builder } from '../../org/bukkit/FireworkEffect$Builder.js';
-import { ConfigurationSerializable } from '../../org/bukkit/configuration/serialization/ConfigurationSerializable.js';
 import { FireworkEffect$Type } from '../../org/bukkit/FireworkEffect$Type.js';
+import { ConfigurationSerializable } from '../../org/bukkit/configuration/serialization/ConfigurationSerializable.js';
 export interface FireworkEffect extends ConfigurationSerializable {
-    serialize(): any;
-    hasFlicker(): boolean;
-    hasTrail(): boolean;
-    getColors(): any;
-    getFadeColors(): any;
     getType(): FireworkEffect$Type;
+    serialize(): any;
+    hasTrail(): boolean;
+    hasFlicker(): boolean;
+    getFadeColors(): any;
+    getColors(): any;
 }
 export declare class FireworkEffect {
     static get $javaClass(): any;

@@ -9,4 +9,3 @@ export class BlockBreakEvent {
         return BlockBreakEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=BlockBreakEvent.js.map

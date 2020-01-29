@@ -3,4 +3,3 @@ export class OfflinePlayer {
         return Java.type('org.bukkit.OfflinePlayer');
     }
 }
-//# sourceMappingURL=OfflinePlayer.js.map

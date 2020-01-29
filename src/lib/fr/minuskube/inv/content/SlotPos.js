@@ -9,4 +9,3 @@ export class SlotPos {
         return SlotPos.$javaClass.of(...args);
     }
 }
-//# sourceMappingURL=SlotPos.js.map

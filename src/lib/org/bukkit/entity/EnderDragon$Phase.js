@@ -36,4 +36,3 @@ export class EnderDragon$Phase {
         return this.$javaClass.HOVER;
     }
 }
-//# sourceMappingURL=EnderDragon$Phase.js.map

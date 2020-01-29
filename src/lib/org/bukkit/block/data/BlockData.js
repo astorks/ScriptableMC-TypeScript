@@ -3,4 +3,3 @@ export class BlockData {
         return Java.type('org.bukkit.block.data.BlockData');
     }
 }
-//# sourceMappingURL=BlockData.js.map

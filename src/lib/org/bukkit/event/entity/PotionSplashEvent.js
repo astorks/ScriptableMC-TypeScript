@@ -9,4 +9,3 @@ export class PotionSplashEvent {
         return PotionSplashEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PotionSplashEvent.js.map

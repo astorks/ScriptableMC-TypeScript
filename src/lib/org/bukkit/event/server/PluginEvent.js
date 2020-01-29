@@ -6,4 +6,3 @@ export class PluginEvent {
         return new PluginEvent.$javaClass(...args);
     }
 }
-//# sourceMappingURL=PluginEvent.js.map

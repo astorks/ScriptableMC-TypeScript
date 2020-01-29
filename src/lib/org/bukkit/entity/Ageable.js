@@ -3,4 +3,3 @@ export class Ageable {
         return Java.type('org.bukkit.entity.Ageable');
     }
 }
-//# sourceMappingURL=Ageable.js.map

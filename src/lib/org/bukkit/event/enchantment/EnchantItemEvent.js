@@ -9,4 +9,3 @@ export class EnchantItemEvent {
         return EnchantItemEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=EnchantItemEvent.js.map

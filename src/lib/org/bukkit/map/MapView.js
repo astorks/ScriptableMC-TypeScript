@@ -3,4 +3,3 @@ export class MapView {
         return Java.type('org.bukkit.map.MapView');
     }
 }
-//# sourceMappingURL=MapView.js.map

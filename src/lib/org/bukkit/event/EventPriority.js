@@ -21,4 +21,3 @@ export class EventPriority {
         return this.$javaClass.MONITOR;
     }
 }
-//# sourceMappingURL=EventPriority.js.map

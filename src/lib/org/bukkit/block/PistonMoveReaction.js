@@ -18,4 +18,3 @@ export class PistonMoveReaction {
         return this.$javaClass.PUSH_ONLY;
     }
 }
-//# sourceMappingURL=PistonMoveReaction.js.map

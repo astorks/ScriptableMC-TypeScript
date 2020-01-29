@@ -6,4 +6,3 @@ export class WorldEvent {
         return new WorldEvent.$javaClass(...args);
     }
 }
-//# sourceMappingURL=WorldEvent.js.map

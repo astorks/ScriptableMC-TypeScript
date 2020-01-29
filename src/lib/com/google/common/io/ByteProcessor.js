@@ -3,4 +3,3 @@ export class ByteProcessor {
         return Java.type('com.google.common.io.ByteProcessor');
     }
 }
-//# sourceMappingURL=ByteProcessor.js.map

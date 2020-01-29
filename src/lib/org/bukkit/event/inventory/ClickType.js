@@ -42,4 +42,3 @@ export class ClickType {
         return this.$javaClass.UNKNOWN;
     }
 }
-//# sourceMappingURL=ClickType.js.map

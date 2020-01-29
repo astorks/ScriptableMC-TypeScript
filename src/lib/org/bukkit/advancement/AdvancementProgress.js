@@ -3,4 +3,3 @@ export class AdvancementProgress {
         return Java.type('org.bukkit.advancement.AdvancementProgress');
     }
 }
-//# sourceMappingURL=AdvancementProgress.js.map

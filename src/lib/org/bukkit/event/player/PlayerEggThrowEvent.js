@@ -9,4 +9,3 @@ export class PlayerEggThrowEvent {
         return PlayerEggThrowEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerEggThrowEvent.js.map

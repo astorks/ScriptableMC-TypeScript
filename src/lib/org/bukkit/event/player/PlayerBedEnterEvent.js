@@ -9,4 +9,3 @@ export class PlayerBedEnterEvent {
         return PlayerBedEnterEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerBedEnterEvent.js.map

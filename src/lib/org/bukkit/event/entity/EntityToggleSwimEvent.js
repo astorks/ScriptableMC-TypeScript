@@ -9,4 +9,3 @@ export class EntityToggleSwimEvent {
         return EntityToggleSwimEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=EntityToggleSwimEvent.js.map

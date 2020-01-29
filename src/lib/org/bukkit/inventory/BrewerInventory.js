@@ -3,4 +3,3 @@ export class BrewerInventory {
         return Java.type('org.bukkit.inventory.BrewerInventory');
     }
 }
-//# sourceMappingURL=BrewerInventory.js.map

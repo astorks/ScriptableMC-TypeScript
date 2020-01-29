@@ -8,8 +8,8 @@ export interface ThunderChangeEvent extends WeatherEvent, Cancellable {
     setCancelled(cancel: boolean): void;
     toThunderState(): boolean;
     getWorld(): World;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class ThunderChangeEvent {
     static get $javaClass(): any;

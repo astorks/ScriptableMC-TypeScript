@@ -1,1 +1,0 @@
-{"version":3,"file":"MapCursor.js","sourceRoot":"","sources":["../../../../ts/org/bukkit/map/MapCursor.ts"],"names":[],"mappings":"AAoBA,MAAM,OAAO,SAAS;IACd,MAAM,KAAK,UAAU;QAC3B,OAAO,IAAI,CAAC,IAAI,CAAC,0BAA0B,CAAC,CAAC;IAC9C,CAAC;IAKD,YAAY,GAAG,IAAW;QACzB,OAAO,IAAI,SAAS,CAAC,UAAU,CAAC,GAAG,IAAI,CAAC,CAAC;IAC1C,CAAC;CACD"}

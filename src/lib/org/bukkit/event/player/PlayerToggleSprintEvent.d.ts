@@ -3,13 +3,13 @@ import { Player } from '../../../../org/bukkit/entity/Player.js';
 import { Cancellable } from '../../../../org/bukkit/event/Cancellable.js';
 import { PlayerEvent } from '../../../../org/bukkit/event/player/PlayerEvent.js';
 export interface PlayerToggleSprintEvent extends PlayerEvent, Cancellable {
-    getHandlers(): HandlerList;
     isSprinting(): boolean;
+    getHandlers(): HandlerList;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
     getPlayer(): Player;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class PlayerToggleSprintEvent {
     static get $javaClass(): any;

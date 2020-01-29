@@ -9,4 +9,3 @@ export class PlayerItemConsumeEvent {
         return PlayerItemConsumeEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerItemConsumeEvent.js.map

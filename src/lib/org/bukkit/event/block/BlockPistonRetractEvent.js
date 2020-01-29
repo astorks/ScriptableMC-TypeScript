@@ -9,4 +9,3 @@ export class BlockPistonRetractEvent {
         return BlockPistonRetractEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=BlockPistonRetractEvent.js.map

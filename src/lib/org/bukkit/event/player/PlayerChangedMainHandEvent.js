@@ -9,4 +9,3 @@ export class PlayerChangedMainHandEvent {
         return PlayerChangedMainHandEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerChangedMainHandEvent.js.map

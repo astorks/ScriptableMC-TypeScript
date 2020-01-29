@@ -11,8 +11,8 @@ export interface BatToggleSleepEvent extends EntityEvent, Cancellable {
     isAwake(): boolean;
     getEntity(): Entity;
     getEntityType(): EntityType;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class BatToggleSleepEvent {
     static get $javaClass(): any;

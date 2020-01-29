@@ -198,4 +198,3 @@ export class Tag {
         return Tag.$javaClass.ITEMS_LECTERN_BOOKS;
     }
 }
-//# sourceMappingURL=Tag.js.map

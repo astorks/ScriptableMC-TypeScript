@@ -9,4 +9,3 @@ export class BlockIgniteEvent {
         return BlockIgniteEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=BlockIgniteEvent.js.map

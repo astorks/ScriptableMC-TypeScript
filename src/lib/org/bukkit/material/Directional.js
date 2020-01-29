@@ -3,4 +3,3 @@ export class Directional {
         return Java.type('org.bukkit.material.Directional');
     }
 }
-//# sourceMappingURL=Directional.js.map

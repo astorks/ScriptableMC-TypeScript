@@ -4,8 +4,8 @@ import { VehicleEvent } from '../../../../org/bukkit/event/vehicle/VehicleEvent.
 export interface VehicleUpdateEvent extends VehicleEvent {
     getHandlers(): HandlerList;
     getVehicle(): Vehicle;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class VehicleUpdateEvent {
     static get $javaClass(): any;

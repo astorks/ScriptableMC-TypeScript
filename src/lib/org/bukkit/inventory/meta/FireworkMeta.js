@@ -3,4 +3,3 @@ export class FireworkMeta {
         return Java.type('org.bukkit.inventory.meta.FireworkMeta');
     }
 }
-//# sourceMappingURL=FireworkMeta.js.map

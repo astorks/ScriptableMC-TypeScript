@@ -1,22 +1,22 @@
-import { HandlerList } from '../../../../org/bukkit/event/HandlerList.js';
-import { FishHook } from '../../../../org/bukkit/entity/FishHook.js';
-import { Entity } from '../../../../org/bukkit/entity/Entity.js';
 import { PlayerFishEvent$State } from '../../../../org/bukkit/event/player/PlayerFishEvent$State.js';
+import { HandlerList } from '../../../../org/bukkit/event/HandlerList.js';
+import { Entity } from '../../../../org/bukkit/entity/Entity.js';
+import { FishHook } from '../../../../org/bukkit/entity/FishHook.js';
 import { Player } from '../../../../org/bukkit/entity/Player.js';
 import { Cancellable } from '../../../../org/bukkit/event/Cancellable.js';
 import { PlayerEvent } from '../../../../org/bukkit/event/player/PlayerEvent.js';
 export interface PlayerFishEvent extends PlayerEvent, Cancellable {
+    getState(): PlayerFishEvent$State;
     getHandlers(): HandlerList;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getExpToDrop(): number;
     setExpToDrop(amount: number): void;
-    getHook(): FishHook;
+    getExpToDrop(): number;
     getCaught(): Entity;
-    getState(): PlayerFishEvent$State;
+    getHook(): FishHook;
     getPlayer(): Player;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class PlayerFishEvent {
     static get $javaClass(): any;

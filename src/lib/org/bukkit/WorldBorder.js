@@ -3,4 +3,3 @@ export class WorldBorder {
         return Java.type('org.bukkit.WorldBorder');
     }
 }
-//# sourceMappingURL=WorldBorder.js.map

@@ -6,4 +6,3 @@ export class EntityEvent {
         return new EntityEvent.$javaClass(...args);
     }
 }
-//# sourceMappingURL=EntityEvent.js.map

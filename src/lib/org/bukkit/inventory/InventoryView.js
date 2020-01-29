@@ -9,4 +9,3 @@ export class InventoryView {
         return InventoryView.$javaClass.OUTSIDE;
     }
 }
-//# sourceMappingURL=InventoryView.js.map

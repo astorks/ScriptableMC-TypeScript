@@ -9,4 +9,3 @@ export class ChunkPopulateEvent {
         return ChunkPopulateEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=ChunkPopulateEvent.js.map

@@ -9,4 +9,3 @@ export class EntityCombustByEntityEvent {
         return EntityCombustByEntityEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=EntityCombustByEntityEvent.js.map

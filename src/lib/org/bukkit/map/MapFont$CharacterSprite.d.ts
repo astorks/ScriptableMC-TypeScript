@@ -1,7 +1,7 @@
 export interface MapFont$CharacterSprite {
+    get(row: number, col: number): boolean;
     getHeight(): number;
     getWidth(): number;
-    get(row: number, col: number): boolean;
 }
 export declare class MapFont$CharacterSprite {
     static get $javaClass(): any;

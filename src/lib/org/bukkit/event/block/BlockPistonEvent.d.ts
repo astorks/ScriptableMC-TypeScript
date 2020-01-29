@@ -10,8 +10,8 @@ export interface BlockPistonEvent extends BlockEvent, Cancellable {
     isSticky(): boolean;
     getBlock(): Block;
     getHandlers(): HandlerList;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class BlockPistonEvent {
     static get $javaClass(): any;

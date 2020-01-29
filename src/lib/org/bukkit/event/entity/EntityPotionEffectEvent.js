@@ -9,4 +9,3 @@ export class EntityPotionEffectEvent {
         return EntityPotionEffectEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=EntityPotionEffectEvent.js.map

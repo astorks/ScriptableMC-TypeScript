@@ -3,4 +3,3 @@ export class Hanging {
         return Java.type('org.bukkit.entity.Hanging');
     }
 }
-//# sourceMappingURL=Hanging.js.map

@@ -9,4 +9,3 @@ export class PigZombieAngerEvent {
         return PigZombieAngerEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PigZombieAngerEvent.js.map

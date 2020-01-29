@@ -9,4 +9,3 @@ export class EntityDamageByBlockEvent {
         return EntityDamageByBlockEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=EntityDamageByBlockEvent.js.map

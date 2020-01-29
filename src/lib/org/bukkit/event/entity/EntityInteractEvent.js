@@ -9,4 +9,3 @@ export class EntityInteractEvent {
         return EntityInteractEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=EntityInteractEvent.js.map

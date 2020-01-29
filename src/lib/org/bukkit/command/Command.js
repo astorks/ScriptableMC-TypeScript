@@ -6,4 +6,3 @@ export class Command {
         return Command.$javaClass.broadcastCommandMessage(...args);
     }
 }
-//# sourceMappingURL=Command.js.map

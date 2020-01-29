@@ -3,4 +3,3 @@ export class ConversationPrefix {
         return Java.type('org.bukkit.conversations.ConversationPrefix');
     }
 }
-//# sourceMappingURL=ConversationPrefix.js.map

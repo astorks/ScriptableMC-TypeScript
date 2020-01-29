@@ -63,4 +63,3 @@ export class InventoryView$Property {
         return this.$javaClass.BOOK_PAGE;
     }
 }
-//# sourceMappingURL=InventoryView$Property.js.map

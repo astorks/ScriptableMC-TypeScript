@@ -9,4 +9,3 @@ export class EntityTameEvent {
         return EntityTameEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=EntityTameEvent.js.map

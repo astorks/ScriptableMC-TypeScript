@@ -9,4 +9,3 @@ export class EntityDropItemEvent {
         return EntityDropItemEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=EntityDropItemEvent.js.map

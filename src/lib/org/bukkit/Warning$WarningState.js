@@ -12,4 +12,3 @@ export class Warning$WarningState {
         return this.$javaClass.DEFAULT;
     }
 }
-//# sourceMappingURL=Warning$WarningState.js.map

@@ -84,4 +84,3 @@ export class EntityEffect {
         return this.$javaClass.HURT_EXPLOSION;
     }
 }
-//# sourceMappingURL=EntityEffect.js.map

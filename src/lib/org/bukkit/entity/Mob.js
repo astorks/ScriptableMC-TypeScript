@@ -3,4 +3,3 @@ export class Mob {
         return Java.type('org.bukkit.entity.Mob');
     }
 }
-//# sourceMappingURL=Mob.js.map

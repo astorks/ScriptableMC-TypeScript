@@ -9,4 +9,3 @@ export class CreatureSpawnEvent {
         return CreatureSpawnEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=CreatureSpawnEvent.js.map

@@ -3,4 +3,3 @@ export class ItemMeta {
         return Java.type('org.bukkit.inventory.meta.ItemMeta');
     }
 }
-//# sourceMappingURL=ItemMeta.js.map

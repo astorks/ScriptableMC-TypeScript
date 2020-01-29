@@ -3,4 +3,3 @@ export class AnvilInventory {
         return Java.type('org.bukkit.inventory.AnvilInventory');
     }
 }
-//# sourceMappingURL=AnvilInventory.js.map

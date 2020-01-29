@@ -9,4 +9,3 @@ export class LightningStrikeEvent {
         return LightningStrikeEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=LightningStrikeEvent.js.map

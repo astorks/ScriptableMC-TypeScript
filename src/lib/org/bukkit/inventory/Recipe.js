@@ -3,4 +3,3 @@ export class Recipe {
         return Java.type('org.bukkit.inventory.Recipe');
     }
 }
-//# sourceMappingURL=Recipe.js.map

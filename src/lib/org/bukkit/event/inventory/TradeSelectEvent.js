@@ -9,4 +9,3 @@ export class TradeSelectEvent {
         return TradeSelectEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=TradeSelectEvent.js.map

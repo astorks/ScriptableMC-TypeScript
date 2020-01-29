@@ -9,4 +9,3 @@ export class LeavesDecayEvent {
         return LeavesDecayEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=LeavesDecayEvent.js.map

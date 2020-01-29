@@ -3,4 +3,3 @@ export class SlotIterator {
         return Java.type('fr.minuskube.inv.content.SlotIterator');
     }
 }
-//# sourceMappingURL=SlotIterator.js.map

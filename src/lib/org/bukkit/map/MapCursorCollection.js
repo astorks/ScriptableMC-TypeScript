@@ -6,4 +6,3 @@ export class MapCursorCollection {
         return new MapCursorCollection.$javaClass(...args);
     }
 }
-//# sourceMappingURL=MapCursorCollection.js.map

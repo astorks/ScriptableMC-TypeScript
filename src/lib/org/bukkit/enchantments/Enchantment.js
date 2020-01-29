@@ -116,23 +116,22 @@ export class Enchantment {
     static get VANISHING_CURSE() {
         return Enchantment.$javaClass.VANISHING_CURSE;
     }
+    static values(...args) {
+        return Enchantment.$javaClass.values(...args);
+    }
     static getByName(...args) {
         return Enchantment.$javaClass.getByName(...args);
-    }
-    static getByKey(...args) {
-        return Enchantment.$javaClass.getByKey(...args);
-    }
-    static stopAcceptingRegistrations(...args) {
-        return Enchantment.$javaClass.stopAcceptingRegistrations(...args);
     }
     static registerEnchantment(...args) {
         return Enchantment.$javaClass.registerEnchantment(...args);
     }
+    static stopAcceptingRegistrations(...args) {
+        return Enchantment.$javaClass.stopAcceptingRegistrations(...args);
+    }
     static isAcceptingRegistrations(...args) {
         return Enchantment.$javaClass.isAcceptingRegistrations(...args);
     }
-    static values(...args) {
-        return Enchantment.$javaClass.values(...args);
+    static getByKey(...args) {
+        return Enchantment.$javaClass.getByKey(...args);
     }
 }
-//# sourceMappingURL=Enchantment.js.map

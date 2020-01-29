@@ -9,4 +9,3 @@ export class EntityPickupItemEvent {
         return EntityPickupItemEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=EntityPickupItemEvent.js.map

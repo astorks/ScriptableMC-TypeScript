@@ -8,11 +8,11 @@ export interface FurnaceExtractEvent extends BlockExpEvent {
     getItemType(): Material;
     getItemAmount(): number;
     getHandlers(): HandlerList;
-    getExpToDrop(): number;
     setExpToDrop(exp: number): void;
+    getExpToDrop(): number;
     getBlock(): Block;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class FurnaceExtractEvent {
     static get $javaClass(): any;

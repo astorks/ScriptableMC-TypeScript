@@ -9,4 +9,3 @@ export class PluginLoadOrder {
         return this.$javaClass.POSTWORLD;
     }
 }
-//# sourceMappingURL=PluginLoadOrder.js.map

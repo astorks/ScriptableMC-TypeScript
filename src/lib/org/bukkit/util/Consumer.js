@@ -3,4 +3,3 @@ export class Consumer {
         return Java.type('org.bukkit.util.Consumer');
     }
 }
-//# sourceMappingURL=Consumer.js.map

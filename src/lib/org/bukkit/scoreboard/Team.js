@@ -3,4 +3,3 @@ export class Team {
         return Java.type('org.bukkit.scoreboard.Team');
     }
 }
-//# sourceMappingURL=Team.js.map

@@ -3,4 +3,3 @@ export class Objective {
         return Java.type('org.bukkit.scoreboard.Objective');
     }
 }
-//# sourceMappingURL=Objective.js.map

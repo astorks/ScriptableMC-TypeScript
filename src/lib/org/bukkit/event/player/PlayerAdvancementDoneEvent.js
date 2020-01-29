@@ -9,4 +9,3 @@ export class PlayerAdvancementDoneEvent {
         return PlayerAdvancementDoneEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerAdvancementDoneEvent.js.map

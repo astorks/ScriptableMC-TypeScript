@@ -12,4 +12,3 @@ export class AbstractArrow$PickupStatus {
         return this.$javaClass.CREATIVE_ONLY;
     }
 }
-//# sourceMappingURL=AbstractArrow$PickupStatus.js.map

@@ -6,4 +6,3 @@ export class ScriptablePluginContext {
         return new ScriptablePluginContext.$javaClass(...args);
     }
 }
-//# sourceMappingURL=ScriptablePluginContext.js.map

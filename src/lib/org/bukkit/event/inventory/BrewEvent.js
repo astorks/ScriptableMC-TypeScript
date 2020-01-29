@@ -9,4 +9,3 @@ export class BrewEvent {
         return BrewEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=BrewEvent.js.map

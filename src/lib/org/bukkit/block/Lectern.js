@@ -3,4 +3,3 @@ export class Lectern {
         return Java.type('org.bukkit.block.Lectern');
     }
 }
-//# sourceMappingURL=Lectern.js.map

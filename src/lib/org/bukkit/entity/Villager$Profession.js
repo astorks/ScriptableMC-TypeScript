@@ -48,4 +48,3 @@ export class Villager$Profession {
         return this.$javaClass.WEAPONSMITH;
     }
 }
-//# sourceMappingURL=Villager$Profession.js.map

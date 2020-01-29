@@ -9,4 +9,3 @@ export class VehicleBlockCollisionEvent {
         return VehicleBlockCollisionEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=VehicleBlockCollisionEvent.js.map

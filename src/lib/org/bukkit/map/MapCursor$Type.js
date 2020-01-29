@@ -84,4 +84,3 @@ export class MapCursor$Type {
         return this.$javaClass.RED_X;
     }
 }
-//# sourceMappingURL=MapCursor$Type.js.map

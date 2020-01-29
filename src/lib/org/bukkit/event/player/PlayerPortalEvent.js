@@ -9,4 +9,3 @@ export class PlayerPortalEvent {
         return PlayerPortalEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerPortalEvent.js.map

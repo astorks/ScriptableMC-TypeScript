@@ -24,4 +24,3 @@ export class PlayerFishEvent$State {
         return this.$javaClass.BITE;
     }
 }
-//# sourceMappingURL=PlayerFishEvent$State.js.map

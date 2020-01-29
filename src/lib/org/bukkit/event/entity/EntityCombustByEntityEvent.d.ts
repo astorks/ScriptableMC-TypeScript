@@ -6,13 +6,13 @@ export interface EntityCombustByEntityEvent extends EntityCombustEvent {
     getCombuster(): Entity;
     getHandlers(): HandlerList;
     isCancelled(): boolean;
-    getDuration(): number;
     setCancelled(cancel: boolean): void;
+    getDuration(): number;
     setDuration(duration: number): void;
     getEntity(): Entity;
     getEntityType(): EntityType;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class EntityCombustByEntityEvent {
     static get $javaClass(): any;

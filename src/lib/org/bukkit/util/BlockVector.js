@@ -8,17 +8,16 @@ export class BlockVector {
     static deserialize(...args) {
         return BlockVector.$javaClass.deserialize(...args);
     }
-    static getEpsilon(...args) {
-        return BlockVector.$javaClass.getEpsilon(...args);
+    static getMaximum(...args) {
+        return BlockVector.$javaClass.getMaximum(...args);
     }
     static getMinimum(...args) {
         return BlockVector.$javaClass.getMinimum(...args);
     }
-    static getMaximum(...args) {
-        return BlockVector.$javaClass.getMaximum(...args);
-    }
     static getRandom(...args) {
         return BlockVector.$javaClass.getRandom(...args);
     }
+    static getEpsilon(...args) {
+        return BlockVector.$javaClass.getEpsilon(...args);
+    }
 }
-//# sourceMappingURL=BlockVector.js.map

@@ -9,4 +9,3 @@ export class PlayerToggleFlightEvent {
         return PlayerToggleFlightEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerToggleFlightEvent.js.map

@@ -18,4 +18,3 @@ export class FireworkEffect$Type {
         return this.$javaClass.CREEPER;
     }
 }
-//# sourceMappingURL=FireworkEffect$Type.js.map

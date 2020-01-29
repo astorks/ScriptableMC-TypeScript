@@ -9,4 +9,3 @@ export class EntityShootBowEvent {
         return EntityShootBowEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=EntityShootBowEvent.js.map

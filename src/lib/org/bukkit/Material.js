@@ -4317,4 +4317,3 @@ export class Material {
         return this.$javaClass.LEGACY_RECORD_12;
     }
 }
-//# sourceMappingURL=Material.js.map

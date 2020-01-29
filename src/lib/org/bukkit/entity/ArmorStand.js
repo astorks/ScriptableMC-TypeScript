@@ -3,4 +3,3 @@ export class ArmorStand {
         return Java.type('org.bukkit.entity.ArmorStand');
     }
 }
-//# sourceMappingURL=ArmorStand.js.map

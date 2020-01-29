@@ -9,4 +9,3 @@ export class ItemDespawnEvent {
         return ItemDespawnEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=ItemDespawnEvent.js.map

@@ -9,4 +9,3 @@ export class FluidLevelChangeEvent {
         return FluidLevelChangeEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=FluidLevelChangeEvent.js.map

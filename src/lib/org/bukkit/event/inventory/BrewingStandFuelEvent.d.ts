@@ -7,14 +7,14 @@ export interface BrewingStandFuelEvent extends BlockEvent, Cancellable {
     getHandlers(): HandlerList;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getFuel(): ItemStack;
-    getFuelPower(): number;
     setFuelPower(fuelPower: number): void;
     isConsuming(): boolean;
+    getFuelPower(): number;
     setConsuming(consuming: boolean): void;
+    getFuel(): ItemStack;
     getBlock(): Block;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class BrewingStandFuelEvent {
     static get $javaClass(): any;

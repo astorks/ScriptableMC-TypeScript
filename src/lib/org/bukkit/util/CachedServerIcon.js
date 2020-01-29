@@ -3,4 +3,3 @@ export class CachedServerIcon {
         return Java.type('org.bukkit.util.CachedServerIcon');
     }
 }
-//# sourceMappingURL=CachedServerIcon.js.map

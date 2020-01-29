@@ -6,4 +6,3 @@ export class BlockEvent {
         return new BlockEvent.$javaClass(...args);
     }
 }
-//# sourceMappingURL=BlockEvent.js.map

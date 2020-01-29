@@ -3,4 +3,3 @@ export class ProjectileSource {
         return Java.type('org.bukkit.projectiles.ProjectileSource');
     }
 }
-//# sourceMappingURL=ProjectileSource.js.map

@@ -9,4 +9,3 @@ export class EntityRegainHealthEvent {
         return EntityRegainHealthEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=EntityRegainHealthEvent.js.map

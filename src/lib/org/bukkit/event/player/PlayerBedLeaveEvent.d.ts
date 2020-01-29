@@ -3,13 +3,13 @@ import { Block } from '../../../../org/bukkit/block/Block.js';
 import { Player } from '../../../../org/bukkit/entity/Player.js';
 import { PlayerEvent } from '../../../../org/bukkit/event/player/PlayerEvent.js';
 export interface PlayerBedLeaveEvent extends PlayerEvent {
-    getHandlers(): HandlerList;
     setSpawnLocation(setBedSpawn: boolean): void;
-    getBed(): Block;
+    getHandlers(): HandlerList;
     shouldSetSpawnLocation(): boolean;
+    getBed(): Block;
     getPlayer(): Player;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class PlayerBedLeaveEvent {
     static get $javaClass(): any;

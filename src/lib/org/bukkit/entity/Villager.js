@@ -3,4 +3,3 @@ export class Villager {
         return Java.type('org.bukkit.entity.Villager');
     }
 }
-//# sourceMappingURL=Villager.js.map

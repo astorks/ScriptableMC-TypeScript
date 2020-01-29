@@ -9,4 +9,3 @@ export class AsyncPlayerChatEvent {
         return AsyncPlayerChatEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=AsyncPlayerChatEvent.js.map

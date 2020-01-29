@@ -9,4 +9,3 @@ export class ProjectileLaunchEvent {
         return ProjectileLaunchEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=ProjectileLaunchEvent.js.map

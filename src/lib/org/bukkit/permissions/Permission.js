@@ -15,4 +15,3 @@ export class Permission {
         return Permission.$javaClass.loadPermission(...args);
     }
 }
-//# sourceMappingURL=Permission.js.map

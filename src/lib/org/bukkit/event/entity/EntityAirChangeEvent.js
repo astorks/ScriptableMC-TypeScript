@@ -9,4 +9,3 @@ export class EntityAirChangeEvent {
         return EntityAirChangeEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=EntityAirChangeEvent.js.map

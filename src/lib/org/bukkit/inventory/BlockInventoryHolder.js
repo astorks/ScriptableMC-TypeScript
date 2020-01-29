@@ -3,4 +3,3 @@ export class BlockInventoryHolder {
         return Java.type('org.bukkit.inventory.BlockInventoryHolder');
     }
 }
-//# sourceMappingURL=BlockInventoryHolder.js.map

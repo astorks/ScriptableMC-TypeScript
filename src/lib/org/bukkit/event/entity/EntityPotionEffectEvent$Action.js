@@ -15,4 +15,3 @@ export class EntityPotionEffectEvent$Action {
         return this.$javaClass.REMOVED;
     }
 }
-//# sourceMappingURL=EntityPotionEffectEvent$Action.js.map

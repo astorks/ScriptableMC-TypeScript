@@ -10,8 +10,8 @@ export interface BlockExplodeEvent extends BlockEvent, Cancellable {
     getYield(): number;
     setYield(_yield: number): void;
     getBlock(): Block;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class BlockExplodeEvent {
     static get $javaClass(): any;

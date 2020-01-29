@@ -6,4 +6,3 @@ export class HelpTopic {
         return new HelpTopic.$javaClass(...args);
     }
 }
-//# sourceMappingURL=HelpTopic.js.map

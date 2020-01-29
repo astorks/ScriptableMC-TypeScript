@@ -9,4 +9,3 @@ export class BlockPlaceEvent {
         return BlockPlaceEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=BlockPlaceEvent.js.map

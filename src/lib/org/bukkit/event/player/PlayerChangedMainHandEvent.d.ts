@@ -1,13 +1,13 @@
-import { HandlerList } from '../../../../org/bukkit/event/HandlerList.js';
 import { MainHand } from '../../../../org/bukkit/inventory/MainHand.js';
+import { HandlerList } from '../../../../org/bukkit/event/HandlerList.js';
 import { Player } from '../../../../org/bukkit/entity/Player.js';
 import { PlayerEvent } from '../../../../org/bukkit/event/player/PlayerEvent.js';
 export interface PlayerChangedMainHandEvent extends PlayerEvent {
-    getHandlers(): HandlerList;
     getMainHand(): MainHand;
+    getHandlers(): HandlerList;
     getPlayer(): Player;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class PlayerChangedMainHandEvent {
     static get $javaClass(): any;

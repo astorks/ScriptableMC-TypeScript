@@ -2433,4 +2433,3 @@ export class Sound {
         return this.$javaClass.WEATHER_RAIN_ABOVE;
     }
 }
-//# sourceMappingURL=Sound.js.map

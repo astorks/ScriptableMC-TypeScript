@@ -9,8 +9,8 @@ export interface MoistureChangeEvent extends BlockEvent, Cancellable {
     setCancelled(cancel: boolean): void;
     getNewState(): BlockState;
     getBlock(): Block;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class MoistureChangeEvent {
     static get $javaClass(): any;

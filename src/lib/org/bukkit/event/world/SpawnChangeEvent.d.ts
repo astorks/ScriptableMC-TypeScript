@@ -6,8 +6,8 @@ export interface SpawnChangeEvent extends WorldEvent {
     getHandlers(): HandlerList;
     getPreviousLocation(): Location;
     getWorld(): World;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class SpawnChangeEvent {
     static get $javaClass(): any;

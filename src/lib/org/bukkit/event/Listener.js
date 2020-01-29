@@ -3,4 +3,3 @@ export class Listener {
         return Java.type('org.bukkit.event.Listener');
     }
 }
-//# sourceMappingURL=Listener.js.map

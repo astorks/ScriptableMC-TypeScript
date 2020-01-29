@@ -98,8 +98,14 @@ export class PotionEffectType {
     static get HERO_OF_THE_VILLAGE() {
         return PotionEffectType.$javaClass.HERO_OF_THE_VILLAGE;
     }
+    static values(...args) {
+        return PotionEffectType.$javaClass.values(...args);
+    }
     static getByName(...args) {
         return PotionEffectType.$javaClass.getByName(...args);
+    }
+    static stopAcceptingRegistrations(...args) {
+        return PotionEffectType.$javaClass.stopAcceptingRegistrations(...args);
     }
     static getById(...args) {
         return PotionEffectType.$javaClass.getById(...args);
@@ -107,11 +113,4 @@ export class PotionEffectType {
     static registerPotionEffectType(...args) {
         return PotionEffectType.$javaClass.registerPotionEffectType(...args);
     }
-    static stopAcceptingRegistrations(...args) {
-        return PotionEffectType.$javaClass.stopAcceptingRegistrations(...args);
-    }
-    static values(...args) {
-        return PotionEffectType.$javaClass.values(...args);
-    }
 }
-//# sourceMappingURL=PotionEffectType.js.map

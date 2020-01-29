@@ -12,4 +12,3 @@ export class Team$Option {
         return this.$javaClass.COLLISION_RULE;
     }
 }
-//# sourceMappingURL=Team$Option.js.map

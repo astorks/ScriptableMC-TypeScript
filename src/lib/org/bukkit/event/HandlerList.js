@@ -8,14 +8,13 @@ export class HandlerList {
     static unregisterAll(...args) {
         return HandlerList.$javaClass.unregisterAll(...args);
     }
-    static getRegisteredListeners(...args) {
-        return HandlerList.$javaClass.getRegisteredListeners(...args);
-    }
     static bakeAll(...args) {
         return HandlerList.$javaClass.bakeAll(...args);
     }
     static getHandlerLists(...args) {
         return HandlerList.$javaClass.getHandlerLists(...args);
     }
+    static getRegisteredListeners(...args) {
+        return HandlerList.$javaClass.getRegisteredListeners(...args);
+    }
 }
-//# sourceMappingURL=HandlerList.js.map

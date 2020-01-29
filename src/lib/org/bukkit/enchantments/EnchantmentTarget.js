@@ -45,4 +45,3 @@ export class EnchantmentTarget {
         return this.$javaClass.CROSSBOW;
     }
 }
-//# sourceMappingURL=EnchantmentTarget.js.map

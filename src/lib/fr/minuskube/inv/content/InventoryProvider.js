@@ -3,4 +3,3 @@ export class InventoryProvider {
         return Java.type('fr.minuskube.inv.content.InventoryProvider');
     }
 }
-//# sourceMappingURL=InventoryProvider.js.map

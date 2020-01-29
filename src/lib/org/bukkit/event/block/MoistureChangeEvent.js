@@ -9,4 +9,3 @@ export class MoistureChangeEvent {
         return MoistureChangeEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=MoistureChangeEvent.js.map

@@ -9,4 +9,3 @@ export class EntityTeleportEvent {
         return EntityTeleportEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=EntityTeleportEvent.js.map

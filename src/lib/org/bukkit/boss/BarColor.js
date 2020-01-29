@@ -24,4 +24,3 @@ export class BarColor {
         return this.$javaClass.WHITE;
     }
 }
-//# sourceMappingURL=BarColor.js.map

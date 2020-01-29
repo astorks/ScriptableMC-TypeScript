@@ -9,4 +9,3 @@ export class BlockFadeEvent {
         return BlockFadeEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=BlockFadeEvent.js.map

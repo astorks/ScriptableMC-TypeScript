@@ -9,4 +9,3 @@ export class ExplosionPrimeEvent {
         return ExplosionPrimeEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=ExplosionPrimeEvent.js.map

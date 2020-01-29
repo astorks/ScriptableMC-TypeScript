@@ -27,4 +27,3 @@ export class BlockIgniteEvent$IgniteCause {
         return this.$javaClass.ARROW;
     }
 }
-//# sourceMappingURL=BlockIgniteEvent$IgniteCause.js.map

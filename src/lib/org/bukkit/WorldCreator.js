@@ -5,11 +5,10 @@ export class WorldCreator {
     constructor(...args) {
         return new WorldCreator.$javaClass(...args);
     }
-    static getGeneratorForName(...args) {
-        return WorldCreator.$javaClass.getGeneratorForName(...args);
-    }
     static _name(...args) {
         return WorldCreator.$javaClass.name(...args);
     }
+    static getGeneratorForName(...args) {
+        return WorldCreator.$javaClass.getGeneratorForName(...args);
+    }
 }
-//# sourceMappingURL=WorldCreator.js.map

@@ -6,13 +6,13 @@ export interface PlayerKickEvent extends PlayerEvent, Cancellable {
     getHandlers(): HandlerList;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    setReason(kickReason: string): void;
     getReason(): string;
+    setReason(kickReason: string): void;
     getLeaveMessage(): string;
     setLeaveMessage(leaveMessage: string): void;
     getPlayer(): Player;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class PlayerKickEvent {
     static get $javaClass(): any;

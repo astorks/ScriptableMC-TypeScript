@@ -207,4 +207,3 @@ export class Particle {
         return this.$javaClass.LEGACY_FALLING_DUST;
     }
 }
-//# sourceMappingURL=Particle.js.map

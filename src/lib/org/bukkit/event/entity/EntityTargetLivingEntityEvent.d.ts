@@ -14,8 +14,8 @@ export interface EntityTargetLivingEntityEvent extends EntityTargetEvent {
     getReason(): EntityTargetEvent$TargetReason;
     getEntity(): Entity;
     getEntityType(): EntityType;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class EntityTargetLivingEntityEvent {
     static get $javaClass(): any;

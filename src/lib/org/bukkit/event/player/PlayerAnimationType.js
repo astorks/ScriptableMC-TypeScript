@@ -6,4 +6,3 @@ export class PlayerAnimationType {
         return this.$javaClass.ARM_SWING;
     }
 }
-//# sourceMappingURL=PlayerAnimationType.js.map

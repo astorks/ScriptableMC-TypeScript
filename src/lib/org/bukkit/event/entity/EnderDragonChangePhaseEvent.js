@@ -9,4 +9,3 @@ export class EnderDragonChangePhaseEvent {
         return EnderDragonChangePhaseEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=EnderDragonChangePhaseEvent.js.map

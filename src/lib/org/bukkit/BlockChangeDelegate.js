@@ -3,4 +3,3 @@ export class BlockChangeDelegate {
         return Java.type('org.bukkit.BlockChangeDelegate');
     }
 }
-//# sourceMappingURL=BlockChangeDelegate.js.map

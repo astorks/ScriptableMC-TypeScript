@@ -9,4 +9,3 @@ export class AsyncPlayerPreLoginEvent {
         return AsyncPlayerPreLoginEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=AsyncPlayerPreLoginEvent.js.map

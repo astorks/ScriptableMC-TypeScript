@@ -9,4 +9,3 @@ export class BrewingStandFuelEvent {
         return BrewingStandFuelEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=BrewingStandFuelEvent.js.map

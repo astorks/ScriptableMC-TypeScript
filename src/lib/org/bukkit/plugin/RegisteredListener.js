@@ -6,4 +6,3 @@ export class RegisteredListener {
         return new RegisteredListener.$javaClass(...args);
     }
 }
-//# sourceMappingURL=RegisteredListener.js.map

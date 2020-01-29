@@ -7,14 +7,14 @@ export interface FurnaceBurnEvent extends BlockEvent, Cancellable {
     getHandlers(): HandlerList;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getFuel(): ItemStack;
+    isBurning(): boolean;
     setBurnTime(burnTime: number): void;
     setBurning(burning: boolean): void;
-    isBurning(): boolean;
     getBurnTime(): number;
+    getFuel(): ItemStack;
     getBlock(): Block;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class FurnaceBurnEvent {
     static get $javaClass(): any;

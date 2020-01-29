@@ -9,4 +9,3 @@ export class BlockShearEntityEvent {
         return BlockShearEntityEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=BlockShearEntityEvent.js.map

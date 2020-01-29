@@ -3,4 +3,3 @@ export class Nameable {
         return Java.type('org.bukkit.Nameable');
     }
 }
-//# sourceMappingURL=Nameable.js.map

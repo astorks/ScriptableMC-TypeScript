@@ -4,8 +4,8 @@ import { ServiceEvent } from '../../../../org/bukkit/event/server/ServiceEvent.j
 export interface ServiceUnregisterEvent extends ServiceEvent {
     getHandlers(): HandlerList;
     getProvider(): RegisteredServiceProvider;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class ServiceUnregisterEvent {
     static get $javaClass(): any;

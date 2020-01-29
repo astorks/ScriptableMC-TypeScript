@@ -18,4 +18,3 @@ export class Action {
         return this.$javaClass.PHYSICAL;
     }
 }
-//# sourceMappingURL=Action.js.map

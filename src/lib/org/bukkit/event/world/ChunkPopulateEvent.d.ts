@@ -6,8 +6,8 @@ export interface ChunkPopulateEvent extends ChunkEvent {
     getHandlers(): HandlerList;
     getChunk(): Chunk;
     getWorld(): World;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class ChunkPopulateEvent {
     static get $javaClass(): any;

@@ -3,4 +3,3 @@ export class Raid {
         return Java.type('org.bukkit.Raid');
     }
 }
-//# sourceMappingURL=Raid.js.map

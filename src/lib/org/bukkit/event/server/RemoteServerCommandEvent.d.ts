@@ -6,10 +6,10 @@ export interface RemoteServerCommandEvent extends ServerCommandEvent {
     getCommand(): string;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    setCommand(message: string): void;
     getSender(): CommandSender;
-    isAsynchronous(): boolean;
+    setCommand(message: string): void;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class RemoteServerCommandEvent {
     static get $javaClass(): any;

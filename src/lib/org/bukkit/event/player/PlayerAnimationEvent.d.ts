@@ -9,8 +9,8 @@ export interface PlayerAnimationEvent extends PlayerEvent, Cancellable {
     setCancelled(cancel: boolean): void;
     getAnimationType(): PlayerAnimationType;
     getPlayer(): Player;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class PlayerAnimationEvent {
     static get $javaClass(): any;

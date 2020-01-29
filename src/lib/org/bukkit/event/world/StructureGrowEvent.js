@@ -9,4 +9,3 @@ export class StructureGrowEvent {
         return StructureGrowEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=StructureGrowEvent.js.map

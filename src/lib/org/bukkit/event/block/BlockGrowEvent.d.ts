@@ -9,8 +9,8 @@ export interface BlockGrowEvent extends BlockEvent, Cancellable {
     setCancelled(cancel: boolean): void;
     getNewState(): BlockState;
     getBlock(): Block;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class BlockGrowEvent {
     static get $javaClass(): any;

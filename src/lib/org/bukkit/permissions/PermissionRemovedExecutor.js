@@ -3,4 +3,3 @@ export class PermissionRemovedExecutor {
         return Java.type('org.bukkit.permissions.PermissionRemovedExecutor');
     }
 }
-//# sourceMappingURL=PermissionRemovedExecutor.js.map

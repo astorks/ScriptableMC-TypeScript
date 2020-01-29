@@ -9,4 +9,3 @@ export class BlockFertilizeEvent {
         return BlockFertilizeEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=BlockFertilizeEvent.js.map

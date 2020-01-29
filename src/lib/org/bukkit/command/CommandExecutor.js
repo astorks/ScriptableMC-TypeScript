@@ -3,4 +3,3 @@ export class CommandExecutor {
         return Java.type('org.bukkit.command.CommandExecutor');
     }
 }
-//# sourceMappingURL=CommandExecutor.js.map

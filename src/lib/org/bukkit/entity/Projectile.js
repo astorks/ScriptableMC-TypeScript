@@ -3,4 +3,3 @@ export class Projectile {
         return Java.type('org.bukkit.entity.Projectile');
     }
 }
-//# sourceMappingURL=Projectile.js.map

@@ -6,4 +6,3 @@ export class PotionEffect {
         return new PotionEffect.$javaClass(...args);
     }
 }
-//# sourceMappingURL=PotionEffect.js.map

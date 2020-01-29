@@ -9,4 +9,3 @@ export class PlayerItemDamageEvent {
         return PlayerItemDamageEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerItemDamageEvent.js.map

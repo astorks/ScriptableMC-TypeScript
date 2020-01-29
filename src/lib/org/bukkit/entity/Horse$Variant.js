@@ -21,4 +21,3 @@ export class Horse$Variant {
         return this.$javaClass.LLAMA;
     }
 }
-//# sourceMappingURL=Horse$Variant.js.map

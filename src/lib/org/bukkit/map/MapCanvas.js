@@ -3,4 +3,3 @@ export class MapCanvas {
         return Java.type('org.bukkit.map.MapCanvas');
     }
 }
-//# sourceMappingURL=MapCanvas.js.map

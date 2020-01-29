@@ -9,4 +9,3 @@ export class AttributeModifier {
         return AttributeModifier.$javaClass.deserialize(...args);
     }
 }
-//# sourceMappingURL=AttributeModifier.js.map

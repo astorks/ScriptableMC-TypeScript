@@ -3,4 +3,3 @@ export class ByteArrayDataInput {
         return Java.type('com.google.common.io.ByteArrayDataInput');
     }
 }
-//# sourceMappingURL=ByteArrayDataInput.js.map

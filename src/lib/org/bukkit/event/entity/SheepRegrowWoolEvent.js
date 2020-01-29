@@ -9,4 +9,3 @@ export class SheepRegrowWoolEvent {
         return SheepRegrowWoolEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=SheepRegrowWoolEvent.js.map

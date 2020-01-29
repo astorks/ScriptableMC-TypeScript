@@ -9,4 +9,3 @@ export class ItemStack {
         return ItemStack.$javaClass.deserialize(...args);
     }
 }
-//# sourceMappingURL=ItemStack.js.map

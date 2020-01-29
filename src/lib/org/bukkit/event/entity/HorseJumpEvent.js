@@ -9,4 +9,3 @@ export class HorseJumpEvent {
         return HorseJumpEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=HorseJumpEvent.js.map

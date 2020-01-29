@@ -1,11 +1,11 @@
 import { CommandSender } from '../../../org/bukkit/command/CommandSender.js';
 export interface HelpTopic {
-    canSee(arg0: CommandSender): boolean;
-    amendCanSee(amendedPermission: string): void;
-    getShortText(): string;
-    getFullText(forWho: CommandSender): string;
-    amendTopic(amendedShortText: string, amendedFullText: string): void;
     getName(): string;
+    canSee(arg0: CommandSender): boolean;
+    getFullText(forWho: CommandSender): string;
+    getShortText(): string;
+    amendTopic(amendedShortText: string, amendedFullText: string): void;
+    amendCanSee(amendedPermission: string): void;
 }
 export declare class HelpTopic {
     static get $javaClass(): any;

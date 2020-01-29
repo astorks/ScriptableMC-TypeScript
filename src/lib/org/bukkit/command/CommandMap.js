@@ -3,4 +3,3 @@ export class CommandMap {
         return Java.type('org.bukkit.command.CommandMap');
     }
 }
-//# sourceMappingURL=CommandMap.js.map

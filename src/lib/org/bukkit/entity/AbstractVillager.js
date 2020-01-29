@@ -3,4 +3,3 @@ export class AbstractVillager {
         return Java.type('org.bukkit.entity.AbstractVillager');
     }
 }
-//# sourceMappingURL=AbstractVillager.js.map

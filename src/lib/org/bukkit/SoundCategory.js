@@ -33,4 +33,3 @@ export class SoundCategory {
         return this.$javaClass.VOICE;
     }
 }
-//# sourceMappingURL=SoundCategory.js.map

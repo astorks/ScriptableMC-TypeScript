@@ -3,4 +3,3 @@ export class Monster {
         return Java.type('org.bukkit.entity.Monster');
     }
 }
-//# sourceMappingURL=Monster.js.map

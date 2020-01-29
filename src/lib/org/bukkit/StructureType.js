@@ -51,4 +51,3 @@ export class StructureType {
         return StructureType.$javaClass.getStructureTypes(...args);
     }
 }
-//# sourceMappingURL=StructureType.js.map

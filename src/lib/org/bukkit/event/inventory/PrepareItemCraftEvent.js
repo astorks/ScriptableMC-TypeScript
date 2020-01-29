@@ -9,4 +9,3 @@ export class PrepareItemCraftEvent {
         return PrepareItemCraftEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PrepareItemCraftEvent.js.map

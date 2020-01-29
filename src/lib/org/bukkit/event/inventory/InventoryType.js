@@ -75,4 +75,3 @@ export class InventoryType {
         return this.$javaClass.STONECUTTER;
     }
 }
-//# sourceMappingURL=InventoryType.js.map

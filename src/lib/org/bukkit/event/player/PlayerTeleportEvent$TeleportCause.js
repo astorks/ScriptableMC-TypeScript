@@ -30,4 +30,3 @@ export class PlayerTeleportEvent$TeleportCause {
         return this.$javaClass.UNKNOWN;
     }
 }
-//# sourceMappingURL=PlayerTeleportEvent$TeleportCause.js.map

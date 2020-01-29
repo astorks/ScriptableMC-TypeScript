@@ -6,13 +6,13 @@ import { EntityEvent } from '../../../../org/bukkit/event/entity/EntityEvent.js'
 export interface EntityCombustEvent extends EntityEvent, Cancellable {
     getHandlers(): HandlerList;
     isCancelled(): boolean;
-    getDuration(): number;
     setCancelled(cancel: boolean): void;
+    getDuration(): number;
     setDuration(duration: number): void;
     getEntity(): Entity;
     getEntityType(): EntityType;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class EntityCombustEvent {
     static get $javaClass(): any;

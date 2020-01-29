@@ -3,4 +3,3 @@ export class Bat {
         return Java.type('org.bukkit.entity.Bat');
     }
 }
-//# sourceMappingURL=Bat.js.map

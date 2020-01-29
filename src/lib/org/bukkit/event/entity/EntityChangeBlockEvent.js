@@ -9,4 +9,3 @@ export class EntityChangeBlockEvent {
         return EntityChangeBlockEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=EntityChangeBlockEvent.js.map

@@ -9,4 +9,3 @@ export class EntityBlockFormEvent {
         return EntityBlockFormEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=EntityBlockFormEvent.js.map

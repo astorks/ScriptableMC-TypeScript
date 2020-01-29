@@ -9,4 +9,3 @@ export class ServerLoadEvent$LoadType {
         return this.$javaClass.RELOAD;
     }
 }
-//# sourceMappingURL=ServerLoadEvent$LoadType.js.map

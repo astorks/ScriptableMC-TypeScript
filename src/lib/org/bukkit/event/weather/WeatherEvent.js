@@ -6,4 +6,3 @@ export class WeatherEvent {
         return new WeatherEvent.$javaClass(...args);
     }
 }
-//# sourceMappingURL=WeatherEvent.js.map

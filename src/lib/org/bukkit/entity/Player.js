@@ -3,4 +3,3 @@ export class Player {
         return Java.type('org.bukkit.entity.Player');
     }
 }
-//# sourceMappingURL=Player.js.map

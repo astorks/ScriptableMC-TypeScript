@@ -9,4 +9,3 @@ export class ItemMergeEvent {
         return ItemMergeEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=ItemMergeEvent.js.map

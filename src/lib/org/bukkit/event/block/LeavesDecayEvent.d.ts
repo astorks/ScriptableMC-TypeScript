@@ -7,8 +7,8 @@ export interface LeavesDecayEvent extends BlockEvent, Cancellable {
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
     getBlock(): Block;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class LeavesDecayEvent {
     static get $javaClass(): any;

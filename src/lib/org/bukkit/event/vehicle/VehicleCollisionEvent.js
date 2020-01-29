@@ -6,4 +6,3 @@ export class VehicleCollisionEvent {
         return new VehicleCollisionEvent.$javaClass(...args);
     }
 }
-//# sourceMappingURL=VehicleCollisionEvent.js.map

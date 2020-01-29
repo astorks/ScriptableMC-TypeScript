@@ -24,4 +24,3 @@ export class WorldType {
         return this.$javaClass.BUFFET;
     }
 }
-//# sourceMappingURL=WorldType.js.map

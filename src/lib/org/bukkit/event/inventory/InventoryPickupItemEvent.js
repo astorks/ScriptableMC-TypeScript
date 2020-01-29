@@ -9,4 +9,3 @@ export class InventoryPickupItemEvent {
         return InventoryPickupItemEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=InventoryPickupItemEvent.js.map

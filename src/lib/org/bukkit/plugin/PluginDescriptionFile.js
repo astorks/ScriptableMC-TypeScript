@@ -6,4 +6,3 @@ export class PluginDescriptionFile {
         return new PluginDescriptionFile.$javaClass(...args);
     }
 }
-//# sourceMappingURL=PluginDescriptionFile.js.map

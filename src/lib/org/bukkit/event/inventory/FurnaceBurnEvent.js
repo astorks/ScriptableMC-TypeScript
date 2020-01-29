@@ -9,4 +9,3 @@ export class FurnaceBurnEvent {
         return FurnaceBurnEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=FurnaceBurnEvent.js.map

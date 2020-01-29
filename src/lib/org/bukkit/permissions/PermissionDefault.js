@@ -15,4 +15,3 @@ export class PermissionDefault {
         return this.$javaClass.NOT_OP;
     }
 }
-//# sourceMappingURL=PermissionDefault.js.map

@@ -3,4 +3,3 @@ export class Lockable {
         return Java.type('org.bukkit.block.Lockable');
     }
 }
-//# sourceMappingURL=Lockable.js.map

@@ -24,4 +24,3 @@ export class InventoryType$SlotType {
         return this.$javaClass.FUEL;
     }
 }
-//# sourceMappingURL=InventoryType$SlotType.js.map

@@ -9,4 +9,3 @@ export class SlotIterator$Type {
         return this.$javaClass.VERTICAL;
     }
 }
-//# sourceMappingURL=SlotIterator$Type.js.map

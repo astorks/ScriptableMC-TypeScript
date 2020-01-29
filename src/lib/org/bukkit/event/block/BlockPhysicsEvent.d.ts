@@ -11,12 +11,12 @@ export interface BlockPhysicsEvent extends BlockEvent, Cancellable {
     getChangedType(): Material;
     getSourceBlock(): Block;
     getBlock(): Block;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class BlockPhysicsEvent {
     static get $javaClass(): any;
-    constructor(block: Block, changed: BlockData);
     constructor(block: Block, changed: BlockData, sourceBlock: Block);
+    constructor(block: Block, changed: BlockData);
     static getHandlerList(): HandlerList;
 }

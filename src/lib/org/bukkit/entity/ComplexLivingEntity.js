@@ -3,4 +3,3 @@ export class ComplexLivingEntity {
         return Java.type('org.bukkit.entity.ComplexLivingEntity');
     }
 }
-//# sourceMappingURL=ComplexLivingEntity.js.map

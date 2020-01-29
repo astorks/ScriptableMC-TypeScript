@@ -6,4 +6,3 @@ export class MapFont {
         return new MapFont.$javaClass(...args);
     }
 }
-//# sourceMappingURL=MapFont.js.map

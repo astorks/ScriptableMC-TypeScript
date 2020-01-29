@@ -9,4 +9,3 @@ export class PrepareItemEnchantEvent {
         return PrepareItemEnchantEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PrepareItemEnchantEvent.js.map

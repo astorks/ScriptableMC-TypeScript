@@ -3,4 +3,3 @@ export class PigZombie {
         return Java.type('org.bukkit.entity.PigZombie');
     }
 }
-//# sourceMappingURL=PigZombie.js.map

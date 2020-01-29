@@ -18,4 +18,3 @@ export class MapView$Scale {
         return this.$javaClass.FARTHEST;
     }
 }
-//# sourceMappingURL=MapView$Scale.js.map

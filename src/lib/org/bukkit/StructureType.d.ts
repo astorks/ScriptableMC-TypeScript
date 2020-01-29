@@ -1,7 +1,7 @@
 import { MapCursor$Type } from '../../org/bukkit/map/MapCursor$Type.js';
 export interface StructureType {
-    getMapIcon(): MapCursor$Type;
     getName(): string;
+    getMapIcon(): MapCursor$Type;
 }
 export declare class StructureType {
     static get $javaClass(): any;

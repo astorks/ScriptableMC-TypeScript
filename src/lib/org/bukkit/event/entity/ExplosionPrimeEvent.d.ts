@@ -14,12 +14,12 @@ export interface ExplosionPrimeEvent extends EntityEvent, Cancellable {
     getFire(): boolean;
     getEntity(): Entity;
     getEntityType(): EntityType;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class ExplosionPrimeEvent {
     static get $javaClass(): any;
-    constructor(what: Entity, radius: number, fire: boolean);
     constructor(explosive: Explosive);
+    constructor(what: Entity, radius: number, fire: boolean);
     static getHandlerList(): HandlerList;
 }

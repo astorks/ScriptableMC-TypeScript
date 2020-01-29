@@ -24,4 +24,3 @@ export class Note$Tone {
         return this.$javaClass.F;
     }
 }
-//# sourceMappingURL=Note$Tone.js.map

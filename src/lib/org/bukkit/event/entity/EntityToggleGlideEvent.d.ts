@@ -5,14 +5,14 @@ import { LivingEntity } from '../../../../org/bukkit/entity/LivingEntity.js';
 import { Cancellable } from '../../../../org/bukkit/event/Cancellable.js';
 import { EntityEvent } from '../../../../org/bukkit/event/entity/EntityEvent.js';
 export interface EntityToggleGlideEvent extends EntityEvent, Cancellable {
-    getHandlers(): HandlerList;
     isGliding(): boolean;
+    getHandlers(): HandlerList;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
     getEntity(): Entity;
     getEntityType(): EntityType;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class EntityToggleGlideEvent {
     static get $javaClass(): any;

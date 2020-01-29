@@ -9,4 +9,3 @@ export class FoodLevelChangeEvent {
         return FoodLevelChangeEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=FoodLevelChangeEvent.js.map

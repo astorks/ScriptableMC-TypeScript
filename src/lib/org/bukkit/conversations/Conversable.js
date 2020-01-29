@@ -3,4 +3,3 @@ export class Conversable {
         return Java.type('org.bukkit.conversations.Conversable');
     }
 }
-//# sourceMappingURL=Conversable.js.map

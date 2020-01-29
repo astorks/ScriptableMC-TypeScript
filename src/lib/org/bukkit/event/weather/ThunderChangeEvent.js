@@ -9,4 +9,3 @@ export class ThunderChangeEvent {
         return ThunderChangeEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=ThunderChangeEvent.js.map

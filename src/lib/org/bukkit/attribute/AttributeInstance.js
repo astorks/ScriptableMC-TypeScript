@@ -3,4 +3,3 @@ export class AttributeInstance {
         return Java.type('org.bukkit.attribute.AttributeInstance');
     }
 }
-//# sourceMappingURL=AttributeInstance.js.map

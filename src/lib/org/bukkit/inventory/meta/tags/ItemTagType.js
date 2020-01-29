@@ -36,4 +36,3 @@ export class ItemTagType {
         return ItemTagType.$javaClass.TAG_CONTAINER;
     }
 }
-//# sourceMappingURL=ItemTagType.js.map

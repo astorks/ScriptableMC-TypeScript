@@ -9,4 +9,3 @@ export class PlayerLocaleChangeEvent {
         return PlayerLocaleChangeEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerLocaleChangeEvent.js.map

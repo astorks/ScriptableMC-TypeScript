@@ -9,4 +9,3 @@ export class PlayerRecipeDiscoverEvent {
         return PlayerRecipeDiscoverEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerRecipeDiscoverEvent.js.map

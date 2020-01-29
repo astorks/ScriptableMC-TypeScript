@@ -3,4 +3,3 @@ export class EntityEquipment {
         return Java.type('org.bukkit.inventory.EntityEquipment');
     }
 }
-//# sourceMappingURL=EntityEquipment.js.map

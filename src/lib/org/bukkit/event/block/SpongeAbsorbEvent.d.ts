@@ -8,8 +8,8 @@ export interface SpongeAbsorbEvent extends BlockEvent, Cancellable {
     setCancelled(cancel: boolean): void;
     getBlocks(): any;
     getBlock(): Block;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class SpongeAbsorbEvent {
     static get $javaClass(): any;

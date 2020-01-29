@@ -3,4 +3,3 @@ export class BanList {
         return Java.type('org.bukkit.BanList');
     }
 }
-//# sourceMappingURL=BanList.js.map

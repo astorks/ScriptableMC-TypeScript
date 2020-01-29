@@ -3,4 +3,3 @@ export class Colorable {
         return Java.type('org.bukkit.material.Colorable');
     }
 }
-//# sourceMappingURL=Colorable.js.map

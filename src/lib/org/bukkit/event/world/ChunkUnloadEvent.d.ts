@@ -8,12 +8,12 @@ export interface ChunkUnloadEvent extends ChunkEvent {
     setSaveChunk(saveChunk: boolean): void;
     getChunk(): Chunk;
     getWorld(): World;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class ChunkUnloadEvent {
     static get $javaClass(): any;
-    constructor(chunk: Chunk);
     constructor(chunk: Chunk, save: boolean);
+    constructor(chunk: Chunk);
     static getHandlerList(): HandlerList;
 }

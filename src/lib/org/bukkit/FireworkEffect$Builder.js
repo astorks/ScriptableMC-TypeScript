@@ -3,4 +3,3 @@ export class FireworkEffect$Builder {
         return Java.type('org.bukkit.FireworkEffect$Builder');
     }
 }
-//# sourceMappingURL=FireworkEffect$Builder.js.map

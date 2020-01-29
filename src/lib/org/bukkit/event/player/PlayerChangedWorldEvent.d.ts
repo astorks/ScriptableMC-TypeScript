@@ -6,8 +6,8 @@ export interface PlayerChangedWorldEvent extends PlayerEvent {
     getHandlers(): HandlerList;
     getFrom(): World;
     getPlayer(): Player;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class PlayerChangedWorldEvent {
     static get $javaClass(): any;

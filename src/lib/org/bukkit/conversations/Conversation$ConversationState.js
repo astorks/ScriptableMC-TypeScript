@@ -12,4 +12,3 @@ export class Conversation$ConversationState {
         return this.$javaClass.ABANDONED;
     }
 }
-//# sourceMappingURL=Conversation$ConversationState.js.map

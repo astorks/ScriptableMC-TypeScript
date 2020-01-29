@@ -9,4 +9,3 @@ export class BlockCookEvent {
         return BlockCookEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=BlockCookEvent.js.map

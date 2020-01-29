@@ -4,8 +4,8 @@ import { Event } from '../../../../org/bukkit/event/Event.js';
 export interface WeatherEvent extends Event {
     getWorld(): World;
     getHandlers(): HandlerList;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class WeatherEvent {
     static get $javaClass(): any;

@@ -3,4 +3,3 @@ export class Boss {
         return Java.type('org.bukkit.entity.Boss');
     }
 }
-//# sourceMappingURL=Boss.js.map

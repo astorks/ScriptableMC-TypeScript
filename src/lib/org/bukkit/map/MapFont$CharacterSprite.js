@@ -6,4 +6,3 @@ export class MapFont$CharacterSprite {
         return new MapFont$CharacterSprite.$javaClass(...args);
     }
 }
-//# sourceMappingURL=MapFont$CharacterSprite.js.map

@@ -9,4 +9,3 @@ export class WorldLoadEvent {
         return WorldLoadEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=WorldLoadEvent.js.map

@@ -18,4 +18,3 @@ export class BarStyle {
         return this.$javaClass.SEGMENTED_20;
     }
 }
-//# sourceMappingURL=BarStyle.js.map

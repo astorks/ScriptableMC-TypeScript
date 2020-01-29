@@ -3,4 +3,3 @@ export class Inventory {
         return Java.type('org.bukkit.inventory.Inventory');
     }
 }
-//# sourceMappingURL=Inventory.js.map

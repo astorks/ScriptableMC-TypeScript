@@ -6,4 +6,3 @@ export class PlayerBucketEvent {
         return new PlayerBucketEvent.$javaClass(...args);
     }
 }
-//# sourceMappingURL=PlayerBucketEvent.js.map

@@ -12,4 +12,3 @@ export class World$Environment {
         return this.$javaClass.THE_END;
     }
 }
-//# sourceMappingURL=World$Environment.js.map

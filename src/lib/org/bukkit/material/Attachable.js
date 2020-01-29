@@ -3,4 +3,3 @@ export class Attachable {
         return Java.type('org.bukkit.material.Attachable');
     }
 }
-//# sourceMappingURL=Attachable.js.map

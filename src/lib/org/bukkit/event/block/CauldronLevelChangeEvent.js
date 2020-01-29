@@ -9,4 +9,3 @@ export class CauldronLevelChangeEvent {
         return CauldronLevelChangeEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=CauldronLevelChangeEvent.js.map

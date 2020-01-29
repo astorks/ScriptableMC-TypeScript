@@ -9,8 +9,8 @@ export interface PlayerDropItemEvent extends PlayerEvent, Cancellable {
     setCancelled(cancel: boolean): void;
     getItemDrop(): Item;
     getPlayer(): Player;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class PlayerDropItemEvent {
     static get $javaClass(): any;

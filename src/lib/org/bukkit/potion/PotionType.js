@@ -66,4 +66,3 @@ export class PotionType {
         return this.$javaClass.SLOW_FALLING;
     }
 }
-//# sourceMappingURL=PotionType.js.map

@@ -12,4 +12,3 @@ export class CreeperPowerEvent$PowerCause {
         return this.$javaClass.SET_OFF;
     }
 }
-//# sourceMappingURL=CreeperPowerEvent$PowerCause.js.map

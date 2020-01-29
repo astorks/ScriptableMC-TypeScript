@@ -6,8 +6,8 @@ export interface PlayerJoinEvent extends PlayerEvent {
     setJoinMessage(joinMessage: string): void;
     getJoinMessage(): string;
     getPlayer(): Player;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class PlayerJoinEvent {
     static get $javaClass(): any;

@@ -9,4 +9,3 @@ export class PlayerKickEvent {
         return PlayerKickEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerKickEvent.js.map

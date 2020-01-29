@@ -3,4 +3,3 @@ export class Permissible {
         return Java.type('org.bukkit.permissions.Permissible');
     }
 }
-//# sourceMappingURL=Permissible.js.map

@@ -9,4 +9,3 @@ export class PlayerLeashEntityEvent {
         return PlayerLeashEntityEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerLeashEntityEvent.js.map

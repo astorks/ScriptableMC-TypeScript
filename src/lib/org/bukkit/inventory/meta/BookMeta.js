@@ -3,4 +3,3 @@ export class BookMeta {
         return Java.type('org.bukkit.inventory.meta.BookMeta');
     }
 }
-//# sourceMappingURL=BookMeta.js.map

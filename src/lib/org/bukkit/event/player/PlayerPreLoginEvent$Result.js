@@ -18,4 +18,3 @@ export class PlayerPreLoginEvent$Result {
         return this.$javaClass.KICK_OTHER;
     }
 }
-//# sourceMappingURL=PlayerPreLoginEvent$Result.js.map

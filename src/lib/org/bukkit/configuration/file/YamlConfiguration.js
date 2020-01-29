@@ -12,4 +12,3 @@ export class YamlConfiguration {
         return YamlConfiguration.$javaClass.createPath(...args);
     }
 }
-//# sourceMappingURL=YamlConfiguration.js.map

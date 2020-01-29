@@ -1,1 +1,0 @@
-{"version":3,"file":"LootContext.js","sourceRoot":"","sources":["../../../../ts/org/bukkit/loot/LootContext.ts"],"names":[],"mappings":"AAaA,MAAM,OAAO,WAAW;IAChB,MAAM,KAAK,UAAU;QAC3B,OAAO,IAAI,CAAC,IAAI,CAAC,6BAA6B,CAAC,CAAC;IACjD,CAAC;IACM,MAAM,KAAK,qBAAqB;QACtC,OAAO,WAAW,CAAC,UAAU,CAAC,qBAAqB,CAAC;IACrD,CAAC;CACD"}

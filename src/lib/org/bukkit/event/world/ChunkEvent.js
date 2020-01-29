@@ -3,4 +3,3 @@ export class ChunkEvent {
         return Java.type('org.bukkit.event.world.ChunkEvent');
     }
 }
-//# sourceMappingURL=ChunkEvent.js.map

@@ -3,7 +3,7 @@ export interface Warning$WarningState {
     printFor(warning: Warning): boolean;
     name(): string;
     compareTo(arg0: any): number;
-    compareTo(arg0: any): number;
+    compareTo(o: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }

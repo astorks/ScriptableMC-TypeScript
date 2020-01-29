@@ -7,13 +7,13 @@ export interface PlayerMoveEvent extends PlayerEvent, Cancellable {
     getHandlers(): HandlerList;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getTo(): Location;
-    setTo(to: Location): void;
     getFrom(): Location;
+    getTo(): Location;
     setFrom(from: Location): void;
+    setTo(to: Location): void;
     getPlayer(): Player;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class PlayerMoveEvent {
     static get $javaClass(): any;

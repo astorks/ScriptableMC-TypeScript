@@ -9,4 +9,3 @@ export class PlayerRespawnEvent {
         return PlayerRespawnEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerRespawnEvent.js.map

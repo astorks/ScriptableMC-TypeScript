@@ -9,4 +9,3 @@ export class Effect$Type {
         return this.$javaClass.VISUAL;
     }
 }
-//# sourceMappingURL=Effect$Type.js.map

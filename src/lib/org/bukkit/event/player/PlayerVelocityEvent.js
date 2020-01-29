@@ -9,4 +9,3 @@ export class PlayerVelocityEvent {
         return PlayerVelocityEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerVelocityEvent.js.map

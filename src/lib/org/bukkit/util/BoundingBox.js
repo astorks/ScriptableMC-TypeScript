@@ -5,11 +5,10 @@ export class BoundingBox {
     constructor(...args) {
         return new BoundingBox.$javaClass(...args);
     }
-    static deserialize(...args) {
-        return BoundingBox.$javaClass.deserialize(...args);
-    }
     static of(...args) {
         return BoundingBox.$javaClass.of(...args);
     }
+    static deserialize(...args) {
+        return BoundingBox.$javaClass.deserialize(...args);
+    }
 }
-//# sourceMappingURL=BoundingBox.js.map

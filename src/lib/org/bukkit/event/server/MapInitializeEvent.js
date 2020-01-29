@@ -9,4 +9,3 @@ export class MapInitializeEvent {
         return MapInitializeEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=MapInitializeEvent.js.map

@@ -1,11 +1,11 @@
 export interface Note$Tone {
+    getId(sharped: boolean): number;
+    getId(): number;
     isSharpable(): boolean;
     isSharped(id: number): boolean;
-    getId(): number;
-    getId(sharped: boolean): number;
     name(): string;
     compareTo(arg0: any): number;
-    compareTo(arg0: any): number;
+    compareTo(o: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }

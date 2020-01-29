@@ -15,4 +15,3 @@ export class GameMode {
         return this.$javaClass.SPECTATOR;
     }
 }
-//# sourceMappingURL=GameMode.js.map

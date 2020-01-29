@@ -9,4 +9,3 @@ export class BlockSpreadEvent {
         return BlockSpreadEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=BlockSpreadEvent.js.map

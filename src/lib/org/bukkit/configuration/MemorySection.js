@@ -6,4 +6,3 @@ export class MemorySection {
         return MemorySection.$javaClass.createPath(...args);
     }
 }
-//# sourceMappingURL=MemorySection.js.map

@@ -1,1 +1,0 @@
-{"version":3,"file":"EventExecutor.js","sourceRoot":"","sources":["../../../../ts/org/bukkit/plugin/EventExecutor.ts"],"names":[],"mappings":"AAQA,MAAM,OAAO,aAAa;IAClB,MAAM,KAAK,UAAU;QAC3B,OAAO,IAAI,CAAC,IAAI,CAAC,iCAAiC,CAAC,CAAC;IACrD,CAAC;CACD"}

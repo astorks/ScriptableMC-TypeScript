@@ -3,4 +3,3 @@ export class ServerOperator {
         return Java.type('org.bukkit.permissions.ServerOperator');
     }
 }
-//# sourceMappingURL=ServerOperator.js.map

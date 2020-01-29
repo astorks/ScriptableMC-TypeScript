@@ -3,4 +3,3 @@ export class AbstractArrow {
         return Java.type('org.bukkit.entity.AbstractArrow');
     }
 }
-//# sourceMappingURL=AbstractArrow.js.map

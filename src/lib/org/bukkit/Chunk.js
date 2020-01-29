@@ -3,4 +3,3 @@ export class Chunk {
         return Java.type('org.bukkit.Chunk');
     }
 }
-//# sourceMappingURL=Chunk.js.map

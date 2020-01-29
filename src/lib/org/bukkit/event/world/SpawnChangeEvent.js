@@ -9,4 +9,3 @@ export class SpawnChangeEvent {
         return SpawnChangeEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=SpawnChangeEvent.js.map

@@ -3,4 +3,3 @@ export class Arrow {
         return Java.type('org.bukkit.entity.Arrow');
     }
 }
-//# sourceMappingURL=Arrow.js.map

@@ -9,4 +9,3 @@ export class VillagerCareerChangeEvent {
         return VillagerCareerChangeEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=VillagerCareerChangeEvent.js.map

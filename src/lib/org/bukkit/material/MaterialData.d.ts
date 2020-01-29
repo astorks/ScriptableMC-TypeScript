@@ -1,13 +1,13 @@
 import { Material } from '../../../org/bukkit/Material.js';
 import { ItemStack } from '../../../org/bukkit/inventory/ItemStack.js';
 export interface MaterialData {
+    clone(): any;
+    clone(): MaterialData;
     getData(): number;
     setData(data: number): void;
     getItemType(): Material;
-    toItemStack(): ItemStack;
     toItemStack(amount: number): ItemStack;
-    clone(): any;
-    clone(): MaterialData;
+    toItemStack(): ItemStack;
 }
 export declare class MaterialData {
     static get $javaClass(): any;

@@ -12,4 +12,3 @@ export class JavaPlugin {
         return JavaPlugin.$javaClass.getProvidingPlugin(...args);
     }
 }
-//# sourceMappingURL=JavaPlugin.js.map

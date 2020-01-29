@@ -12,4 +12,3 @@ export class BarFlag {
         return this.$javaClass.CREATE_FOG;
     }
 }
-//# sourceMappingURL=BarFlag.js.map

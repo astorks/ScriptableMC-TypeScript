@@ -3,4 +3,3 @@ export class Ambient {
         return Java.type('org.bukkit.entity.Ambient');
     }
 }
-//# sourceMappingURL=Ambient.js.map

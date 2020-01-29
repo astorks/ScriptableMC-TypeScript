@@ -18,4 +18,3 @@ export class ServicePriority {
         return this.$javaClass.Highest;
     }
 }
-//# sourceMappingURL=ServicePriority.js.map

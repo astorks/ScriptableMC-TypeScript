@@ -3,4 +3,3 @@ export class HumanEntity {
         return Java.type('org.bukkit.entity.HumanEntity');
     }
 }
-//# sourceMappingURL=HumanEntity.js.map

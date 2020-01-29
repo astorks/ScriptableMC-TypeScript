@@ -9,4 +9,3 @@ export class EntityBreakDoorEvent {
         return EntityBreakDoorEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=EntityBreakDoorEvent.js.map

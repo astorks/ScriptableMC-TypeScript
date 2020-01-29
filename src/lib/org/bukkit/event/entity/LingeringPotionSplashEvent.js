@@ -9,4 +9,3 @@ export class LingeringPotionSplashEvent {
         return LingeringPotionSplashEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=LingeringPotionSplashEvent.js.map

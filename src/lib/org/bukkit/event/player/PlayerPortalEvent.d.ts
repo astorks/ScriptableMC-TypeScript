@@ -5,27 +5,27 @@ import { Player } from '../../../../org/bukkit/entity/Player.js';
 import { PlayerTeleportEvent } from '../../../../org/bukkit/event/player/PlayerTeleportEvent.js';
 export interface PlayerPortalEvent extends PlayerTeleportEvent {
     getHandlers(): HandlerList;
-    setSearchRadius(searchRadius: number): void;
     getSearchRadius(): number;
+    setSearchRadius(searchRadius: number): void;
     getCanCreatePortal(): boolean;
+    getCreationRadius(): number;
     setCanCreatePortal(canCreatePortal: boolean): void;
     setCreationRadius(creationRadius: number): void;
-    getCreationRadius(): number;
     getCause(): PlayerTeleportEvent$TeleportCause;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getTo(): Location;
-    setTo(to: Location): void;
     getFrom(): Location;
+    getTo(): Location;
     setFrom(from: Location): void;
+    setTo(to: Location): void;
     getPlayer(): Player;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class PlayerPortalEvent {
     static get $javaClass(): any;
+    constructor(player: Player, from: Location, to: Location, cause: PlayerTeleportEvent$TeleportCause);
     constructor(player: Player, from: Location, to: Location);
     constructor(player: Player, from: Location, to: Location, cause: PlayerTeleportEvent$TeleportCause, getSearchRadius: number, canCreatePortal: boolean, creationRadius: number);
-    constructor(player: Player, from: Location, to: Location, cause: PlayerTeleportEvent$TeleportCause);
     static getHandlerList(): HandlerList;
 }

@@ -9,4 +9,3 @@ export class ServerListPingEvent {
         return ServerListPingEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=ServerListPingEvent.js.map

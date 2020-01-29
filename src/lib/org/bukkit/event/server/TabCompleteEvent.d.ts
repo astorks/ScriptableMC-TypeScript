@@ -8,10 +8,10 @@ export interface TabCompleteEvent extends Event, Cancellable {
     setCancelled(cancelled: boolean): void;
     getBuffer(): string;
     getCompletions(): any;
-    setCompletions(completions: any): void;
     getSender(): CommandSender;
-    isAsynchronous(): boolean;
+    setCompletions(completions: any): void;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class TabCompleteEvent {
     static get $javaClass(): any;

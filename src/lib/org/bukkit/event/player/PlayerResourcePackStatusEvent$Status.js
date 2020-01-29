@@ -15,4 +15,3 @@ export class PlayerResourcePackStatusEvent$Status {
         return this.$javaClass.ACCEPTED;
     }
 }
-//# sourceMappingURL=PlayerResourcePackStatusEvent$Status.js.map

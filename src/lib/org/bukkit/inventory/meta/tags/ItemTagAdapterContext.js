@@ -3,4 +3,3 @@ export class ItemTagAdapterContext {
         return Java.type('org.bukkit.inventory.meta.tags.ItemTagAdapterContext');
     }
 }
-//# sourceMappingURL=ItemTagAdapterContext.js.map

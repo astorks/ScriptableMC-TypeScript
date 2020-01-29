@@ -9,4 +9,3 @@ export class PlayerEditBookEvent {
         return PlayerEditBookEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerEditBookEvent.js.map

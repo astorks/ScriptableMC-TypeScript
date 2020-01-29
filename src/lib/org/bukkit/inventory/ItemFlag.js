@@ -21,4 +21,3 @@ export class ItemFlag {
         return this.$javaClass.HIDE_POTION_EFFECTS;
     }
 }
-//# sourceMappingURL=ItemFlag.js.map

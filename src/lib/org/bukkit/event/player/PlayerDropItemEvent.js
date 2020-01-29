@@ -9,4 +9,3 @@ export class PlayerDropItemEvent {
         return PlayerDropItemEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerDropItemEvent.js.map

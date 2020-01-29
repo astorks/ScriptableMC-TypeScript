@@ -7,8 +7,8 @@ export interface BlockRedstoneEvent extends BlockEvent {
     getNewCurrent(): number;
     setNewCurrent(newCurrent: number): void;
     getBlock(): Block;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class BlockRedstoneEvent {
     static get $javaClass(): any;

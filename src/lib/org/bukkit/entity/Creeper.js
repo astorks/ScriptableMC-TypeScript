@@ -3,4 +3,3 @@ export class Creeper {
         return Java.type('org.bukkit.entity.Creeper');
     }
 }
-//# sourceMappingURL=Creeper.js.map

@@ -9,4 +9,3 @@ export class PlayerToggleSprintEvent {
         return PlayerToggleSprintEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerToggleSprintEvent.js.map

@@ -18,4 +18,3 @@ export class NamespacedKey {
         return NamespacedKey.$javaClass.randomKey(...args);
     }
 }
-//# sourceMappingURL=NamespacedKey.js.map

@@ -9,4 +9,3 @@ export class EntityPortalExitEvent {
         return EntityPortalExitEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=EntityPortalExitEvent.js.map

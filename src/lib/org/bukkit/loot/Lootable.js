@@ -3,4 +3,3 @@ export class Lootable {
         return Java.type('org.bukkit.loot.Lootable');
     }
 }
-//# sourceMappingURL=Lootable.js.map

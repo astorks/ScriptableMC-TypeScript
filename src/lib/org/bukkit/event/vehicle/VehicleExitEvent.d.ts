@@ -9,8 +9,8 @@ export interface VehicleExitEvent extends VehicleEvent, Cancellable {
     setCancelled(cancel: boolean): void;
     getExited(): LivingEntity;
     getVehicle(): Vehicle;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class VehicleExitEvent {
     static get $javaClass(): any;

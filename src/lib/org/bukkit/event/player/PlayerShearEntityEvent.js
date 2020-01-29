@@ -9,4 +9,3 @@ export class PlayerShearEntityEvent {
         return PlayerShearEntityEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerShearEntityEvent.js.map

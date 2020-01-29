@@ -3,4 +3,3 @@ export class Zombie {
         return Java.type('org.bukkit.entity.Zombie');
     }
 }
-//# sourceMappingURL=Zombie.js.map

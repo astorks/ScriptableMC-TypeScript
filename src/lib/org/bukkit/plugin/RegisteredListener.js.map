@@ -1,1 +1,0 @@
-{"version":3,"file":"RegisteredListener.js","sourceRoot":"","sources":["../../../../ts/org/bukkit/plugin/RegisteredListener.ts"],"names":[],"mappings":"AAeA,MAAM,OAAO,kBAAkB;IACvB,MAAM,KAAK,UAAU;QAC3B,OAAO,IAAI,CAAC,IAAI,CAAC,sCAAsC,CAAC,CAAC;IAC1D,CAAC;IAED,YAAY,GAAG,IAAW;QACzB,OAAO,IAAI,kBAAkB,CAAC,UAAU,CAAC,GAAG,IAAI,CAAC,CAAC;IACnD,CAAC;CACD"}

@@ -9,8 +9,8 @@ export interface PlayerGameModeChangeEvent extends PlayerEvent, Cancellable {
     setCancelled(cancel: boolean): void;
     getNewGameMode(): GameMode;
     getPlayer(): Player;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class PlayerGameModeChangeEvent {
     static get $javaClass(): any;

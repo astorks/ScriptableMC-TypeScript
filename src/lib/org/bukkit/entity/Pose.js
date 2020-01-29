@@ -24,4 +24,3 @@ export class Pose {
         return this.$javaClass.DYING;
     }
 }
-//# sourceMappingURL=Pose.js.map

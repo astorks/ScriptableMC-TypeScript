@@ -9,4 +9,3 @@ export class ServerLoadEvent {
         return ServerLoadEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=ServerLoadEvent.js.map

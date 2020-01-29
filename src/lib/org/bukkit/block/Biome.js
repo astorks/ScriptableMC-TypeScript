@@ -228,4 +228,3 @@ export class Biome {
         return this.$javaClass.BAMBOO_JUNGLE_HILLS;
     }
 }
-//# sourceMappingURL=Biome.js.map

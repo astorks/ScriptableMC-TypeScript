@@ -15,4 +15,3 @@ export class Team$OptionStatus {
         return this.$javaClass.FOR_OWN_TEAM;
     }
 }
-//# sourceMappingURL=Team$OptionStatus.js.map

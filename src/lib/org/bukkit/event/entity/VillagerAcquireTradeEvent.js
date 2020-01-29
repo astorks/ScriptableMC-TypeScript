@@ -9,4 +9,3 @@ export class VillagerAcquireTradeEvent {
         return VillagerAcquireTradeEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=VillagerAcquireTradeEvent.js.map

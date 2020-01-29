@@ -9,8 +9,8 @@ export interface BlockSpreadEvent extends BlockFormEvent {
     setCancelled(cancel: boolean): void;
     getNewState(): BlockState;
     getBlock(): Block;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
 export declare class BlockSpreadEvent {
     static get $javaClass(): any;

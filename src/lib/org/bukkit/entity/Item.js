@@ -3,4 +3,3 @@ export class Item {
         return Java.type('org.bukkit.entity.Item');
     }
 }
-//# sourceMappingURL=Item.js.map

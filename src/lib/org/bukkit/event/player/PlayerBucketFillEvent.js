@@ -9,4 +9,3 @@ export class PlayerBucketFillEvent {
         return PlayerBucketFillEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerBucketFillEvent.js.map

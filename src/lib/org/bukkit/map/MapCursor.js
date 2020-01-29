@@ -6,4 +6,3 @@ export class MapCursor {
         return new MapCursor.$javaClass(...args);
     }
 }
-//# sourceMappingURL=MapCursor.js.map
