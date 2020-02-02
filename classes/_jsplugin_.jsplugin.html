@@ -98,7 +98,10 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_jsplugin_.jsplugin.html#getfile" class="tsd-kind-icon">get<wbr>File</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_jsplugin_.jsplugin.html#mysqlfromconfig" class="tsd-kind-icon">mysql<wbr>From<wbr>Config</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_jsplugin_.jsplugin.html#newcommand" class="tsd-kind-icon">new<wbr>Command</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_jsplugin_.jsplugin.html#newmysqlinstance" class="tsd-kind-icon">new<wbr>Mysql<wbr>Instance</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_jsplugin_.jsplugin.html#ondisable" class="tsd-kind-icon">on<wbr>Disable</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_jsplugin_.jsplugin.html#onenable" class="tsd-kind-icon">on<wbr>Enable</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_jsplugin_.jsplugin.html#onload" class="tsd-kind-icon">on<wbr>Load</a></li>
@@ -123,7 +126,7 @@
 					<div class="tsd-signature tsd-kind-icon">context<span class="tsd-signature-symbol">:</span> <a href="_lib_com_pixlfox_scriptablemc_core_scriptableplugincontext_d_.scriptableplugincontext.html" class="tsd-signature-type">ScriptablePluginContext</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/353b845/src/JsPlugin.ts#L14">JsPlugin.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/c940b74/src/JsPlugin.ts#L16">JsPlugin.ts:16</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -140,7 +143,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/353b845/src/JsPlugin.ts#L16">JsPlugin.ts:16</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/c940b74/src/JsPlugin.ts#L18">JsPlugin.ts:18</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -157,7 +160,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/353b845/src/JsPlugin.ts#L20">JsPlugin.ts:20</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/c940b74/src/JsPlugin.ts#L22">JsPlugin.ts:22</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_server_d_.server.html" class="tsd-signature-type">Server</a></h4>
@@ -168,6 +171,69 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getfile" class="tsd-anchor"></a>
+					<h3>get<wbr>File</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>File<span class="tsd-signature-symbol">(</span>pathName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_com_pixlfox_scriptablemc_utils_filewrapper_d_.filewrapper.html" class="tsd-signature-type">FileWrapper</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/c940b74/src/JsPlugin.ts#L58">JsPlugin.ts:58</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>pathName: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_lib_com_pixlfox_scriptablemc_utils_filewrapper_d_.filewrapper.html" class="tsd-signature-type">FileWrapper</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="mysqlfromconfig" class="tsd-anchor"></a>
+					<h3>mysql<wbr>From<wbr>Config</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">mysql<wbr>From<wbr>Config<span class="tsd-signature-symbol">(</span>configObject<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>database<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>host<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>password<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>port<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>username<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_com_pixlfox_scriptablemc_utils_mysqlwrapper_d_.mysqlwrapper.html" class="tsd-signature-type">MysqlWrapper</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/c940b74/src/JsPlugin.ts#L66">JsPlugin.ts:66</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>configObject: <span class="tsd-signature-symbol">{ </span>database<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>host<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>password<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>port<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>username<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5>database<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>host<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>password<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>port<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>username<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_lib_com_pixlfox_scriptablemc_utils_mysqlwrapper_d_.mysqlwrapper.html" class="tsd-signature-type">MysqlWrapper</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="newcommand" class="tsd-anchor"></a>
 					<h3>new<wbr>Command</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -177,7 +243,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/353b845/src/JsPlugin.ts#L28">JsPlugin.ts:28</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/c940b74/src/JsPlugin.ts#L30">JsPlugin.ts:30</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -191,6 +257,41 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="newmysqlinstance" class="tsd-anchor"></a>
+					<h3>new<wbr>Mysql<wbr>Instance</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new<wbr>Mysql<wbr>Instance<span class="tsd-signature-symbol">(</span>host<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, port<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, database<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, username<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, password<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_com_pixlfox_scriptablemc_utils_mysqlwrapper_d_.mysqlwrapper.html" class="tsd-signature-type">MysqlWrapper</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/c940b74/src/JsPlugin.ts#L62">JsPlugin.ts:62</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>host: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>port: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>database: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>username: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>password: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_lib_com_pixlfox_scriptablemc_utils_mysqlwrapper_d_.mysqlwrapper.html" class="tsd-signature-type">MysqlWrapper</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="ondisable" class="tsd-anchor"></a>
 					<h3>on<wbr>Disable</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -200,7 +301,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/353b845/src/JsPlugin.ts#L62">JsPlugin.ts:62</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/c940b74/src/JsPlugin.ts#L76">JsPlugin.ts:76</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -217,7 +318,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/353b845/src/JsPlugin.ts#L61">JsPlugin.ts:61</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/c940b74/src/JsPlugin.ts#L75">JsPlugin.ts:75</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -234,7 +335,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/353b845/src/JsPlugin.ts#L60">JsPlugin.ts:60</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/c940b74/src/JsPlugin.ts#L74">JsPlugin.ts:74</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -251,7 +352,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/353b845/src/JsPlugin.ts#L52">JsPlugin.ts:52</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/c940b74/src/JsPlugin.ts#L38">JsPlugin.ts:38</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -274,7 +375,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/353b845/src/JsPlugin.ts#L24">JsPlugin.ts:24</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/c940b74/src/JsPlugin.ts#L26">JsPlugin.ts:26</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -327,7 +428,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/353b845/src/JsPlugin.ts#L32">JsPlugin.ts:32</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/c940b74/src/JsPlugin.ts#L42">JsPlugin.ts:42</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -377,7 +478,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/353b845/src/JsPlugin.ts#L40">JsPlugin.ts:40</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/c940b74/src/JsPlugin.ts#L50">JsPlugin.ts:50</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -400,7 +501,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/353b845/src/JsPlugin.ts#L56">JsPlugin.ts:56</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/c940b74/src/JsPlugin.ts#L70">JsPlugin.ts:70</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -426,7 +527,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/353b845/src/JsPlugin.ts#L48">JsPlugin.ts:48</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/c940b74/src/JsPlugin.ts#L34">JsPlugin.ts:34</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -449,7 +550,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/353b845/src/JsPlugin.ts#L36">JsPlugin.ts:36</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/c940b74/src/JsPlugin.ts#L46">JsPlugin.ts:46</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -472,7 +573,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/353b845/src/JsPlugin.ts#L44">JsPlugin.ts:44</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/c940b74/src/JsPlugin.ts#L54">JsPlugin.ts:54</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -515,7 +616,16 @@
 								<a href="_jsplugin_.jsplugin.html#server" class="tsd-kind-icon">server</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_jsplugin_.jsplugin.html#getfile" class="tsd-kind-icon">get<wbr>File</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_jsplugin_.jsplugin.html#mysqlfromconfig" class="tsd-kind-icon">mysql<wbr>From<wbr>Config</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_jsplugin_.jsplugin.html#newcommand" class="tsd-kind-icon">new<wbr>Command</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_jsplugin_.jsplugin.html#newmysqlinstance" class="tsd-kind-icon">new<wbr>Mysql<wbr>Instance</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_jsplugin_.jsplugin.html#ondisable" class="tsd-kind-icon">on<wbr>Disable</a>
