@@ -3,8 +3,8 @@ import Plugin from '../../../org/bukkit/plugin/Plugin.js';
 export default interface ConversationContext {
     getPlugin(): Plugin;
     getForWhom(): Conversable;
-    getSessionData(key: any): any;
     getAllSessionData(): any;
+    getSessionData(key: any): any;
     setSessionData(key: any, value: any): void;
 }
 export default class ConversationContext {

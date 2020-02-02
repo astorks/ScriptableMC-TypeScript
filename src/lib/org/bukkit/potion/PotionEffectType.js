@@ -98,9 +98,6 @@ export default class PotionEffectType {
     static get HERO_OF_THE_VILLAGE() {
         return PotionEffectType.$javaClass.HERO_OF_THE_VILLAGE;
     }
-    static values(...args) {
-        return PotionEffectType.$javaClass.values(...args);
-    }
     static getByName(...args) {
         return PotionEffectType.$javaClass.getByName(...args);
     }
@@ -112,5 +109,8 @@ export default class PotionEffectType {
     }
     static stopAcceptingRegistrations(...args) {
         return PotionEffectType.$javaClass.stopAcceptingRegistrations(...args);
+    }
+    static values(...args) {
+        return PotionEffectType.$javaClass.values(...args);
     }
 }

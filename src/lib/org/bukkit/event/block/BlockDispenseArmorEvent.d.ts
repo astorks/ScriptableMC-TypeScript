@@ -6,11 +6,11 @@ import LivingEntity from '../../../../org/bukkit/entity/LivingEntity.js';
 import Vector from '../../../../org/bukkit/util/Vector.js';
 export default interface BlockDispenseArmorEvent extends BlockDispenseEvent {
     getTargetEntity(): LivingEntity;
+    getHandlers(): HandlerList;
     setVelocity(vel: Vector): void;
     getVelocity(): Vector;
-    getItem(): ItemStack;
     setItem(item: ItemStack): void;
-    getHandlers(): HandlerList;
+    getItem(): ItemStack;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
     getBlock(): Block;

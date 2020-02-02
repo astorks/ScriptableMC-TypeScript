@@ -4,22 +4,22 @@ import ItemStack from '../../../org/bukkit/inventory/ItemStack.js';
 import Material from '../../../org/bukkit/Material.js';
 import MaterialData from '../../../org/bukkit/material/MaterialData.js';
 export default interface Banner extends MaterialData, Attachable {
-    clone(): MaterialData;
-    clone(): Banner;
-    clone(): any;
     getFacing(): BlockFace;
+    getAttachedFace(): BlockFace;
     setFacingDirection(face: BlockFace): void;
     isWallBanner(): boolean;
-    getAttachedFace(): BlockFace;
+    clone(): any;
+    clone(): Banner;
+    clone(): MaterialData;
     getData(): number;
     setData(data: number): void;
     getItemType(): Material;
-    toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
+    toItemStack(amount: number): ItemStack;
 }
 export default class Banner {
     static get $javaClass(): any;
-    constructor(type: Material, data: number);
-    constructor(type: Material);
     constructor();
+    constructor(type: Material);
+    constructor(type: Material, data: number);
 }

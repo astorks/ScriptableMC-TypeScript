@@ -6,19 +6,19 @@ import Sapling from '../../../../../org/bukkit/block/data/type/Sapling.js';
 export default interface Bamboo extends Ageable, Sapling {
     getLeaves(): Bamboo$Leaves;
     setLeaves(arg0: Bamboo$Leaves): void;
-    getAge(): number;
     setAge(arg0: number): void;
+    getAge(): number;
     getMaximumAge(): number;
-    clone(): any;
+    getMaterial(): Material;
+    getAsString(arg0: boolean): string;
+    getAsString(): string;
     clone(): BlockData;
+    clone(): any;
     matches(arg0: BlockData): boolean;
     merge(arg0: BlockData): BlockData;
-    getMaterial(): Material;
-    getAsString(): string;
-    getAsString(arg0: boolean): string;
-    getMaximumStage(): number;
     getStage(): number;
     setStage(arg0: number): void;
+    getMaximumStage(): number;
 }
 export default class Bamboo {
     static get $javaClass(): any;

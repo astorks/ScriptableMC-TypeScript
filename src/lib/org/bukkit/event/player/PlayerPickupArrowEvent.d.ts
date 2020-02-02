@@ -5,9 +5,9 @@ import Player from '../../../../org/bukkit/entity/Player.js';
 import PlayerPickupItemEvent from '../../../../org/bukkit/event/player/PlayerPickupItemEvent.js';
 export default interface PlayerPickupArrowEvent extends PlayerPickupItemEvent {
     getArrow(): AbstractArrow;
+    getHandlers(): HandlerList;
     getRemaining(): number;
     getItem(): Item;
-    getHandlers(): HandlerList;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
     getPlayer(): Player;

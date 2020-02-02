@@ -8,10 +8,10 @@ export default interface BrewingStandFuelEvent extends BlockEvent, Cancellable {
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
     getFuel(): ItemStack;
-    setFuelPower(fuelPower: number): void;
-    setConsuming(consuming: boolean): void;
-    isConsuming(): boolean;
     getFuelPower(): number;
+    setFuelPower(fuelPower: number): void;
+    isConsuming(): boolean;
+    setConsuming(consuming: boolean): void;
     getBlock(): Block;
     getEventName(): string;
     isAsynchronous(): boolean;

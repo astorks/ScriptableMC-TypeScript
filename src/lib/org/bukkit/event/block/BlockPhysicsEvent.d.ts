@@ -16,7 +16,7 @@ export default interface BlockPhysicsEvent extends BlockEvent, Cancellable {
 }
 export default class BlockPhysicsEvent {
     static get $javaClass(): any;
-    constructor(block: Block, changed: BlockData, sourceBlock: Block);
     constructor(block: Block, changed: BlockData);
+    constructor(block: Block, changed: BlockData, sourceBlock: Block);
     static getHandlerList(): HandlerList;
 }

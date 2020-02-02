@@ -4,16 +4,16 @@ import InventoryProvider from '../../../fr/minuskube/inv/content/InventoryProvid
 import InventoryType from '../../../org/bukkit/event/inventory/InventoryType.js';
 import SmartInventory from '../../../fr/minuskube/inv/SmartInventory.js';
 export default interface SmartInventory$Builder {
+    title(title: string): SmartInventory$Builder;
+    listener(listener: InventoryListener): SmartInventory$Builder;
+    build(): SmartInventory;
+    closeable(closeable: boolean): SmartInventory$Builder;
+    manager(manager: InventoryManager): SmartInventory$Builder;
     parent(parent: SmartInventory): SmartInventory$Builder;
     type(type: InventoryType): SmartInventory$Builder;
     size(rows: number, columns: number): SmartInventory$Builder;
-    id(id: string): SmartInventory$Builder;
     provider(provider: InventoryProvider): SmartInventory$Builder;
-    build(): SmartInventory;
-    title(title: string): SmartInventory$Builder;
-    closeable(closeable: boolean): SmartInventory$Builder;
-    manager(manager: InventoryManager): SmartInventory$Builder;
-    listener(listener: InventoryListener): SmartInventory$Builder;
+    id(id: string): SmartInventory$Builder;
 }
 export default class SmartInventory$Builder {
     static get $javaClass(): any;

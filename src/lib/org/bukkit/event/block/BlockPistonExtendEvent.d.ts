@@ -3,9 +3,9 @@ import BlockFace from '../../../../org/bukkit/block/BlockFace.js';
 import BlockPistonEvent from '../../../../org/bukkit/event/block/BlockPistonEvent.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 export default interface BlockPistonExtendEvent extends BlockPistonEvent {
-    getLength(): number;
     getHandlers(): HandlerList;
-    getBlocks(): any;
+    getBlocks(): Array<Block>;
+    getLength(): number;
     getDirection(): BlockFace;
     isCancelled(): boolean;
     setCancelled(cancelled: boolean): void;
@@ -16,7 +16,7 @@ export default interface BlockPistonExtendEvent extends BlockPistonEvent {
 }
 export default class BlockPistonExtendEvent {
     static get $javaClass(): any;
-    constructor(block: Block, blocks: any, direction: BlockFace);
     constructor(block: Block, length: number, direction: BlockFace);
+    constructor(block: Block, blocks: Array<any>, direction: BlockFace);
     static getHandlerList(): HandlerList;
 }

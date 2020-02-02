@@ -2,26 +2,27 @@ import Entity from '../../../../org/bukkit/entity/Entity.js';
 import EntityDeathEvent from '../../../../org/bukkit/event/entity/EntityDeathEvent.js';
 import EntityType from '../../../../org/bukkit/entity/EntityType.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
+import ItemStack from '../../../../org/bukkit/inventory/ItemStack.js';
 import LivingEntity from '../../../../org/bukkit/entity/LivingEntity.js';
 import Player from '../../../../org/bukkit/entity/Player.js';
 export default interface PlayerDeathEvent extends EntityDeathEvent {
-    getEntity(): LivingEntity;
     getEntity(): Entity;
+    getEntity(): LivingEntity;
     getEntity(): Player;
-    getNewTotalExp(): number;
-    getNewExp(): number;
-    setKeepLevel(keepLevel: boolean): void;
-    getDeathMessage(): string;
-    getKeepLevel(): boolean;
-    setNewTotalExp(totalExp: number): void;
-    setNewExp(exp: number): void;
-    setKeepInventory(keepInventory: boolean): void;
-    setDeathMessage(deathMessage: string): void;
-    getKeepInventory(): boolean;
-    setNewLevel(level: number): void;
     getNewLevel(): number;
+    setNewLevel(level: number): void;
+    getDeathMessage(): string;
+    getNewExp(): number;
+    setNewExp(exp: number): void;
+    getNewTotalExp(): number;
+    setNewTotalExp(totalExp: number): void;
+    getKeepLevel(): boolean;
+    setKeepLevel(keepLevel: boolean): void;
+    setKeepInventory(keepInventory: boolean): void;
+    getKeepInventory(): boolean;
+    setDeathMessage(deathMessage: string): void;
     getHandlers(): HandlerList;
-    getDrops(): any;
+    getDrops(): Array<ItemStack>;
     getDroppedExp(): number;
     setDroppedExp(exp: number): void;
     getEntityType(): EntityType;
@@ -30,8 +31,8 @@ export default interface PlayerDeathEvent extends EntityDeathEvent {
 }
 export default class PlayerDeathEvent {
     static get $javaClass(): any;
-    constructor(player: Player, drops: any, droppedExp: number, newExp: number, newTotalExp: number, newLevel: number, deathMessage: string);
-    constructor(player: Player, drops: any, droppedExp: number, newExp: number, deathMessage: string);
-    constructor(player: Player, drops: any, droppedExp: number, deathMessage: string);
+    constructor(player: Player, drops: Array<any>, droppedExp: number, deathMessage: string);
+    constructor(player: Player, drops: Array<any>, droppedExp: number, newExp: number, deathMessage: string);
+    constructor(player: Player, drops: Array<any>, droppedExp: number, newExp: number, newTotalExp: number, newLevel: number, deathMessage: string);
     static getHandlerList(): HandlerList;
 }

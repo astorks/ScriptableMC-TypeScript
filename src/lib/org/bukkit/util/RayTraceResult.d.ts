@@ -5,14 +5,14 @@ import Vector from '../../../org/bukkit/util/Vector.js';
 export default interface RayTraceResult {
     getHitPosition(): Vector;
     getHitBlock(): Block;
-    getHitEntity(): Entity;
     getHitBlockFace(): BlockFace;
+    getHitEntity(): Entity;
 }
 export default class RayTraceResult {
     static get $javaClass(): any;
     constructor(hitPosition: Vector, hitEntity: Entity, hitBlockFace: BlockFace);
-    constructor(hitPosition: Vector, hitEntity: Entity);
-    constructor(hitPosition: Vector, hitBlock: Block, hitBlockFace: BlockFace);
     constructor(hitPosition: Vector);
     constructor(hitPosition: Vector, hitBlockFace: BlockFace);
+    constructor(hitPosition: Vector, hitBlock: Block, hitBlockFace: BlockFace);
+    constructor(hitPosition: Vector, hitEntity: Entity);
 }

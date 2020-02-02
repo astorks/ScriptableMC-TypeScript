@@ -7,8 +7,8 @@ export default interface FurnaceBurnEvent extends BlockEvent, Cancellable {
     getHandlers(): HandlerList;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    setBurnTime(burnTime: number): void;
     getBurnTime(): number;
+    setBurnTime(burnTime: number): void;
     getFuel(): ItemStack;
     isBurning(): boolean;
     setBurning(burning: boolean): void;

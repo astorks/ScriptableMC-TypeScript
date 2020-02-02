@@ -3,10 +3,10 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import ServerCommandEvent from '../../../../org/bukkit/event/server/ServerCommandEvent.js';
 export default interface RemoteServerCommandEvent extends ServerCommandEvent {
     getHandlers(): HandlerList;
+    getSender(): CommandSender;
     getCommand(): string;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getSender(): CommandSender;
     setCommand(message: string): void;
     getEventName(): string;
     isAsynchronous(): boolean;

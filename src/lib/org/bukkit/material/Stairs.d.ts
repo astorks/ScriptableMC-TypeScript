@@ -4,20 +4,20 @@ import ItemStack from '../../../org/bukkit/inventory/ItemStack.js';
 import Material from '../../../org/bukkit/Material.js';
 import MaterialData from '../../../org/bukkit/material/MaterialData.js';
 export default interface Stairs extends MaterialData, Directional {
-    clone(): MaterialData;
-    clone(): Stairs;
-    clone(): any;
     getFacing(): BlockFace;
     setFacingDirection(face: BlockFace): void;
-    getDescendingDirection(): BlockFace;
-    getAscendingDirection(): BlockFace;
-    setInverted(inv: boolean): void;
     isInverted(): boolean;
+    setInverted(inv: boolean): void;
+    getAscendingDirection(): BlockFace;
+    getDescendingDirection(): BlockFace;
+    clone(): Stairs;
+    clone(): any;
+    clone(): MaterialData;
     getData(): number;
     setData(data: number): void;
     getItemType(): Material;
-    toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
+    toItemStack(amount: number): ItemStack;
 }
 export default class Stairs {
     static get $javaClass(): any;

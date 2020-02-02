@@ -2,9 +2,9 @@ import Enchantment from '../../../org/bukkit/enchantments/Enchantment.js';
 export default interface EnchantmentOffer {
     getEnchantmentLevel(): number;
     getEnchantment(): Enchantment;
-    setEnchantment(enchantment: Enchantment): void;
     setCost(cost: number): void;
     getCost(): number;
+    setEnchantment(enchantment: Enchantment): void;
     setEnchantmentLevel(enchantmentLevel: number): void;
 }
 export default class EnchantmentOffer {

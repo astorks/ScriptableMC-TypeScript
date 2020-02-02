@@ -13,8 +13,8 @@ export default interface Chest extends DirectionalContainer {
     getData(): number;
     setData(data: number): void;
     getItemType(): Material;
-    toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
+    toItemStack(amount: number): ItemStack;
 }
 export default class Chest {
     static get $javaClass(): any;

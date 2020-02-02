@@ -5,9 +5,9 @@ import EntityRegainHealthEvent$RegainReason from '../../../../org/bukkit/event/e
 import EntityType from '../../../../org/bukkit/entity/EntityType.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 export default interface EntityRegainHealthEvent extends EntityEvent, Cancellable {
-    setAmount(amount: number): void;
-    getAmount(): number;
     getHandlers(): HandlerList;
+    getAmount(): number;
+    setAmount(amount: number): void;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
     getRegainReason(): EntityRegainHealthEvent$RegainReason;

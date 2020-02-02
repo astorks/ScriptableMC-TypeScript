@@ -8,15 +8,15 @@ export default interface PlayerInteractEntityEvent extends PlayerEvent, Cancella
     getHandlers(): HandlerList;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getRightClicked(): Entity;
     getHand(): EquipmentSlot;
+    getRightClicked(): Entity;
     getPlayer(): Player;
     getEventName(): string;
     isAsynchronous(): boolean;
 }
 export default class PlayerInteractEntityEvent {
     static get $javaClass(): any;
-    constructor(who: Player, clickedEntity: Entity, hand: EquipmentSlot);
     constructor(who: Player, clickedEntity: Entity);
+    constructor(who: Player, clickedEntity: Entity, hand: EquipmentSlot);
     static getHandlerList(): HandlerList;
 }

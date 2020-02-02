@@ -9,17 +9,17 @@ export default interface Tripwire extends Attachable, MultipleFacing, Powerable 
     isDisarmed(): boolean;
     isAttached(): boolean;
     setAttached(arg0: boolean): void;
-    clone(): any;
+    getMaterial(): Material;
+    getAsString(arg0: boolean): string;
+    getAsString(): string;
     clone(): BlockData;
+    clone(): any;
     matches(arg0: BlockData): boolean;
     merge(arg0: BlockData): BlockData;
-    getMaterial(): Material;
-    getAsString(): string;
-    getAsString(arg0: boolean): string;
     getFaces(): any;
     hasFace(arg0: BlockFace): boolean;
-    getAllowedFaces(): any;
     setFace(arg0: BlockFace, arg1: boolean): void;
+    getAllowedFaces(): any;
     isPowered(): boolean;
     setPowered(arg0: boolean): void;
 }

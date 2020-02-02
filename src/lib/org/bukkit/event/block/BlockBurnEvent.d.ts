@@ -13,7 +13,7 @@ export default interface BlockBurnEvent extends BlockEvent, Cancellable {
 }
 export default class BlockBurnEvent {
     static get $javaClass(): any;
-    constructor(block: Block, ignitingBlock: Block);
     constructor(block: Block);
+    constructor(block: Block, ignitingBlock: Block);
     static getHandlerList(): HandlerList;
 }

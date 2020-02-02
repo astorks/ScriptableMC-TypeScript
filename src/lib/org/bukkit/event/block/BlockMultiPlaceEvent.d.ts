@@ -6,24 +6,24 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import ItemStack from '../../../../org/bukkit/inventory/ItemStack.js';
 import Player from '../../../../org/bukkit/entity/Player.js';
 export default interface BlockMultiPlaceEvent extends BlockPlaceEvent {
-    getReplacedBlockStates(): any;
+    getReplacedBlockStates(): Array<BlockState>;
+    getHandlers(): HandlerList;
     getPlayer(): Player;
     getItemInHand(): ItemStack;
-    getHandlers(): HandlerList;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
     canBuild(): boolean;
+    getBlockPlaced(): Block;
+    getBlockReplacedState(): BlockState;
+    getBlockAgainst(): Block;
     getHand(): EquipmentSlot;
     setBuild(canBuild: boolean): void;
-    getBlockPlaced(): Block;
-    getBlockAgainst(): Block;
-    getBlockReplacedState(): BlockState;
     getBlock(): Block;
     getEventName(): string;
     isAsynchronous(): boolean;
 }
 export default class BlockMultiPlaceEvent {
     static get $javaClass(): any;
-    constructor(states: any, clicked: Block, itemInHand: ItemStack, thePlayer: Player, canBuild: boolean);
+    constructor(states: Array<any>, clicked: Block, itemInHand: ItemStack, thePlayer: Player, canBuild: boolean);
     static getHandlerList(): HandlerList;
 }

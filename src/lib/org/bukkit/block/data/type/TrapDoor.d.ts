@@ -10,22 +10,22 @@ import Waterlogged from '../../../../../org/bukkit/block/data/Waterlogged.js';
 export default interface TrapDoor extends Bisected, Directional, Openable, Powerable, Waterlogged {
     getHalf(): Bisected$Half;
     setHalf(arg0: Bisected$Half): void;
-    clone(): any;
+    getMaterial(): Material;
+    getAsString(arg0: boolean): string;
+    getAsString(): string;
     clone(): BlockData;
+    clone(): any;
     matches(arg0: BlockData): boolean;
     merge(arg0: BlockData): BlockData;
-    getMaterial(): Material;
-    getAsString(): string;
-    getAsString(arg0: boolean): string;
     getFacing(): BlockFace;
-    getFaces(): any;
     setFacing(arg0: BlockFace): void;
-    isOpen(): boolean;
+    getFaces(): any;
     setOpen(arg0: boolean): void;
+    isOpen(): boolean;
     isPowered(): boolean;
     setPowered(arg0: boolean): void;
-    isWaterlogged(): boolean;
     setWaterlogged(arg0: boolean): void;
+    isWaterlogged(): boolean;
 }
 export default class TrapDoor {
     static get $javaClass(): any;

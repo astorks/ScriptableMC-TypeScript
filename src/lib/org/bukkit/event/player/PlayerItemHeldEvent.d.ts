@@ -6,8 +6,8 @@ export default interface PlayerItemHeldEvent extends PlayerEvent, Cancellable {
     getHandlers(): HandlerList;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getPreviousSlot(): number;
     getNewSlot(): number;
+    getPreviousSlot(): number;
     getPlayer(): Player;
     getEventName(): string;
     isAsynchronous(): boolean;

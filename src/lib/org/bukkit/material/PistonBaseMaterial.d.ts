@@ -5,19 +5,19 @@ import Material from '../../../org/bukkit/Material.js';
 import MaterialData from '../../../org/bukkit/material/MaterialData.js';
 import Redstone from '../../../org/bukkit/material/Redstone.js';
 export default interface PistonBaseMaterial extends MaterialData, Directional, Redstone {
-    clone(): PistonBaseMaterial;
-    clone(): MaterialData;
-    clone(): any;
     getFacing(): BlockFace;
     setFacingDirection(face: BlockFace): void;
     isSticky(): boolean;
     isPowered(): boolean;
     setPowered(powered: boolean): void;
+    clone(): MaterialData;
+    clone(): any;
+    clone(): PistonBaseMaterial;
     getData(): number;
     setData(data: number): void;
     getItemType(): Material;
-    toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
+    toItemStack(amount: number): ItemStack;
 }
 export default class PistonBaseMaterial {
     static get $javaClass(): any;

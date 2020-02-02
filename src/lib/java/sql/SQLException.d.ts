@@ -1,32 +1,32 @@
 export default interface SQLException {
-    iterator(): any;
     getSQLState(): string;
     getErrorCode(): number;
     getNextException(): SQLException;
-    setNextException(ex: SQLException): void;
-    printStackTrace(s: any): void;
+    setNextException(arg0: SQLException): void;
+    iterator(): any;
+    printStackTrace(arg0: any): void;
     printStackTrace(): void;
-    printStackTrace(s: any): void;
+    printStackTrace(arg0: any): void;
     fillInStackTrace(): any;
     getCause(): any;
-    initCause(cause: any): any;
+    initCause(arg0: any): any;
     getMessage(): string;
-    getSuppressed(): Array<any>;
     getLocalizedMessage(): string;
     getStackTrace(): Array<any>;
-    setStackTrace(stackTrace: Array<any>): void;
-    addSuppressed(exception: any): void;
+    setStackTrace(arg0: Array<any>): void;
+    addSuppressed(arg0: any): void;
+    getSuppressed(): Array<any>;
     spliterator(): any;
-    forEach(action: any): void;
+    forEach(arg0: any): void;
 }
 export default class SQLException {
     static get $javaClass(): any;
-    constructor(cause: any);
-    constructor(reason: string, cause: any);
-    constructor(reason: string, sqlState: string, cause: any);
-    constructor(reason: string, sqlState: string, vendorCode: number, cause: any);
-    constructor(reason: string, SQLState: string, vendorCode: number);
-    constructor(reason: string, SQLState: string);
-    constructor(reason: string);
+    constructor(arg0: string, arg1: string, arg2: number, arg3: any);
+    constructor(arg0: string, arg1: string, arg2: any);
+    constructor(arg0: string, arg1: string, arg2: number);
+    constructor(arg0: string, arg1: string);
+    constructor(arg0: string);
+    constructor(arg0: string, arg1: any);
+    constructor(arg0: any);
     constructor();
 }

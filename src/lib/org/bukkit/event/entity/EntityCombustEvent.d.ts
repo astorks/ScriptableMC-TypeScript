@@ -4,9 +4,9 @@ import EntityEvent from '../../../../org/bukkit/event/entity/EntityEvent.js';
 import EntityType from '../../../../org/bukkit/entity/EntityType.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 export default interface EntityCombustEvent extends EntityEvent, Cancellable {
-    getDuration(): number;
     getHandlers(): HandlerList;
     isCancelled(): boolean;
+    getDuration(): number;
     setCancelled(cancel: boolean): void;
     setDuration(duration: number): void;
     getEntity(): Entity;

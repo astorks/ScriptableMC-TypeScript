@@ -1,9 +1,9 @@
 import LootTable from '../../../org/bukkit/loot/LootTable.js';
 export default interface Lootable {
-    getSeed(): number;
     getLootTable(): LootTable;
-    setSeed(arg0: number): void;
+    getSeed(): number;
     setLootTable(arg0: LootTable): void;
+    setSeed(arg0: number): void;
 }
 export default class Lootable {
     static get $javaClass(): any;

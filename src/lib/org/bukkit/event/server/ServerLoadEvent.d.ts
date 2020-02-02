@@ -2,8 +2,8 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import ServerEvent from '../../../../org/bukkit/event/server/ServerEvent.js';
 import ServerLoadEvent$LoadType from '../../../../org/bukkit/event/server/ServerLoadEvent$LoadType.js';
 export default interface ServerLoadEvent extends ServerEvent {
-    getType(): ServerLoadEvent$LoadType;
     getHandlers(): HandlerList;
+    getType(): ServerLoadEvent$LoadType;
     getEventName(): string;
     isAsynchronous(): boolean;
 }

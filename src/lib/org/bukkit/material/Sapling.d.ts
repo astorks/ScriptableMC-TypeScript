@@ -4,27 +4,27 @@ import MaterialData from '../../../org/bukkit/material/MaterialData.js';
 import TreeSpecies from '../../../org/bukkit/TreeSpecies.js';
 import Wood from '../../../org/bukkit/material/Wood.js';
 export default interface Sapling extends Wood {
-    clone(): Sapling;
-    clone(): Wood;
-    clone(): any;
-    clone(): MaterialData;
-    setIsInstantGrowable(isInstantGrowable: boolean): void;
     isInstantGrowable(): boolean;
+    setIsInstantGrowable(isInstantGrowable: boolean): void;
+    clone(): MaterialData;
+    clone(): any;
+    clone(): Wood;
+    clone(): Sapling;
     getSpecies(): TreeSpecies;
     setSpecies(species: TreeSpecies): void;
     getData(): number;
     setData(data: number): void;
     getItemType(): Material;
-    toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
+    toItemStack(amount: number): ItemStack;
 }
 export default class Sapling {
     static get $javaClass(): any;
-    constructor(type: Material);
-    constructor(type: Material, species: TreeSpecies);
-    constructor(type: Material, species: TreeSpecies, isInstantGrowable: boolean);
     constructor(type: Material, data: number);
+    constructor(type: Material, species: TreeSpecies, isInstantGrowable: boolean);
     constructor();
     constructor(species: TreeSpecies);
     constructor(species: TreeSpecies, isInstantGrowable: boolean);
+    constructor(type: Material);
+    constructor(type: Material, species: TreeSpecies);
 }

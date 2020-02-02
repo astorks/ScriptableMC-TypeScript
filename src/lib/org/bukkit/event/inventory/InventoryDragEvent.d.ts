@@ -7,21 +7,21 @@ import InventoryInteractEvent from '../../../../org/bukkit/event/inventory/Inven
 import InventoryView from '../../../../org/bukkit/inventory/InventoryView.js';
 import ItemStack from '../../../../org/bukkit/inventory/ItemStack.js';
 export default interface InventoryDragEvent extends InventoryInteractEvent {
-    getType(): DragType;
     getHandlers(): HandlerList;
-    getCursor(): ItemStack;
     setCursor(newCursor: ItemStack): void;
+    getCursor(): ItemStack;
     getNewItems(): any;
-    getOldCursor(): ItemStack;
-    getInventorySlots(): any;
     getRawSlots(): any;
-    setResult(newResult: Event$Result): void;
-    getResult(): Event$Result;
+    getInventorySlots(): any;
+    getOldCursor(): ItemStack;
+    getType(): DragType;
     isCancelled(): boolean;
     setCancelled(toCancel: boolean): void;
+    setResult(newResult: Event$Result): void;
     getWhoClicked(): HumanEntity;
+    getResult(): Event$Result;
     getInventory(): Inventory;
-    getViewers(): any;
+    getViewers(): Array<HumanEntity>;
     getView(): InventoryView;
     getEventName(): string;
     isAsynchronous(): boolean;

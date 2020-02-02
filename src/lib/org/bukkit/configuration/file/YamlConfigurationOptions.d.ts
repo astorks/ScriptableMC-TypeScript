@@ -6,28 +6,28 @@ import MemoryConfiguration from '../../../../org/bukkit/configuration/MemoryConf
 import MemoryConfigurationOptions from '../../../../org/bukkit/configuration/MemoryConfigurationOptions.js';
 import YamlConfiguration from '../../../../org/bukkit/configuration/file/YamlConfiguration.js';
 export default interface YamlConfigurationOptions extends FileConfigurationOptions {
-    indent(value: number): YamlConfigurationOptions;
+    copyDefaults(value: boolean): FileConfigurationOptions;
+    copyDefaults(value: boolean): YamlConfigurationOptions;
+    copyDefaults(value: boolean): ConfigurationOptions;
+    copyDefaults(value: boolean): MemoryConfigurationOptions;
     indent(): number;
+    indent(value: number): YamlConfigurationOptions;
+    header(value: string): FileConfigurationOptions;
+    header(value: string): YamlConfigurationOptions;
+    copyHeader(value: boolean): YamlConfigurationOptions;
+    copyHeader(value: boolean): FileConfigurationOptions;
+    configuration(): YamlConfiguration;
     configuration(): Configuration;
     configuration(): MemoryConfiguration;
     configuration(): FileConfiguration;
-    configuration(): YamlConfiguration;
+    pathSeparator(value: string): MemoryConfigurationOptions;
+    pathSeparator(value: string): ConfigurationOptions;
     pathSeparator(value: string): FileConfigurationOptions;
     pathSeparator(value: string): YamlConfigurationOptions;
-    pathSeparator(value: string): ConfigurationOptions;
-    pathSeparator(value: string): MemoryConfigurationOptions;
-    copyDefaults(value: boolean): ConfigurationOptions;
-    copyDefaults(value: boolean): MemoryConfigurationOptions;
-    copyDefaults(value: boolean): YamlConfigurationOptions;
-    copyDefaults(value: boolean): FileConfigurationOptions;
-    header(value: string): YamlConfigurationOptions;
-    header(value: string): FileConfigurationOptions;
-    copyHeader(value: boolean): FileConfigurationOptions;
-    copyHeader(value: boolean): YamlConfigurationOptions;
     header(): string;
     copyHeader(): boolean;
-    pathSeparator(): string;
     copyDefaults(): boolean;
+    pathSeparator(): string;
 }
 export default class YamlConfigurationOptions {
     static get $javaClass(): any;

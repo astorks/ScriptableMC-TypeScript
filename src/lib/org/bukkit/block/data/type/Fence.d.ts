@@ -6,17 +6,17 @@ import Waterlogged from '../../../../../org/bukkit/block/data/Waterlogged.js';
 export default interface Fence extends MultipleFacing, Waterlogged {
     getFaces(): any;
     hasFace(arg0: BlockFace): boolean;
-    getAllowedFaces(): any;
     setFace(arg0: BlockFace, arg1: boolean): void;
-    clone(): any;
+    getAllowedFaces(): any;
+    getMaterial(): Material;
+    getAsString(arg0: boolean): string;
+    getAsString(): string;
     clone(): BlockData;
+    clone(): any;
     matches(arg0: BlockData): boolean;
     merge(arg0: BlockData): BlockData;
-    getMaterial(): Material;
-    getAsString(): string;
-    getAsString(arg0: boolean): string;
-    isWaterlogged(): boolean;
     setWaterlogged(arg0: boolean): void;
+    isWaterlogged(): boolean;
 }
 export default class Fence {
     static get $javaClass(): any;

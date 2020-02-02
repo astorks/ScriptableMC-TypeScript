@@ -5,11 +5,11 @@ export default class SimplexNoiseGenerator {
     constructor(...args) {
         return new SimplexNoiseGenerator.$javaClass(...args);
     }
-    static getInstance(...args) {
-        return SimplexNoiseGenerator.$javaClass.getInstance(...args);
-    }
     static getNoise(...args) {
         return SimplexNoiseGenerator.$javaClass.getNoise(...args);
+    }
+    static getInstance(...args) {
+        return SimplexNoiseGenerator.$javaClass.getInstance(...args);
     }
     static floor(...args) {
         return SimplexNoiseGenerator.$javaClass.floor(...args);

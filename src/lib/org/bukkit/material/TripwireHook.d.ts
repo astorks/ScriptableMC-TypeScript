@@ -5,27 +5,27 @@ import MaterialData from '../../../org/bukkit/material/MaterialData.js';
 import Redstone from '../../../org/bukkit/material/Redstone.js';
 import SimpleAttachableMaterialData from '../../../org/bukkit/material/SimpleAttachableMaterialData.js';
 export default interface TripwireHook extends SimpleAttachableMaterialData, Redstone {
-    clone(): SimpleAttachableMaterialData;
-    clone(): TripwireHook;
-    clone(): any;
-    clone(): MaterialData;
+    getAttachedFace(): BlockFace;
+    setFacingDirection(face: BlockFace): void;
+    isPowered(): boolean;
     isActivated(): boolean;
     setActivated(act: boolean): void;
     isConnected(): boolean;
     setConnected(connected: boolean): void;
-    setFacingDirection(face: BlockFace): void;
-    getAttachedFace(): BlockFace;
-    isPowered(): boolean;
+    clone(): MaterialData;
+    clone(): TripwireHook;
+    clone(): any;
+    clone(): SimpleAttachableMaterialData;
     getFacing(): BlockFace;
     getData(): number;
     setData(data: number): void;
     getItemType(): Material;
-    toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
+    toItemStack(amount: number): ItemStack;
 }
 export default class TripwireHook {
     static get $javaClass(): any;
     constructor(dir: BlockFace);
-    constructor(type: Material, data: number);
     constructor();
+    constructor(type: Material, data: number);
 }

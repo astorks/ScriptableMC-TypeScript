@@ -6,11 +6,11 @@ import EntityType from '../../../../org/bukkit/entity/EntityType.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import Sheep from '../../../../org/bukkit/entity/Sheep.js';
 export default interface SheepDyeWoolEvent extends EntityEvent, Cancellable {
+    getHandlers(): HandlerList;
+    getColor(): DyeColor;
     getEntity(): Sheep;
     getEntity(): Entity;
     setColor(color: DyeColor): void;
-    getColor(): DyeColor;
-    getHandlers(): HandlerList;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
     getEntityType(): EntityType;

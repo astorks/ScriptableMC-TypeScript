@@ -14,10 +14,10 @@ export default class Vector {
     static getMinimum(...args) {
         return Vector.$javaClass.getMinimum(...args);
     }
-    static getRandom(...args) {
-        return Vector.$javaClass.getRandom(...args);
-    }
     static getMaximum(...args) {
         return Vector.$javaClass.getMaximum(...args);
+    }
+    static getRandom(...args) {
+        return Vector.$javaClass.getRandom(...args);
     }
 }

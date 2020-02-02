@@ -1,13 +1,13 @@
 import Vector from '../../../org/bukkit/util/Vector.js';
 export default interface BlockFace {
     getDirection(): Vector;
-    getModZ(): number;
-    getModY(): number;
     getModX(): number;
+    getModY(): number;
+    getModZ(): number;
     getOppositeFace(): BlockFace;
     name(): string;
     compareTo(arg0: any): number;
-    compareTo(o: any): number;
+    compareTo(arg0: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }

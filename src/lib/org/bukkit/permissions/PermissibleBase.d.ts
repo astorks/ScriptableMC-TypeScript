@@ -4,19 +4,19 @@ import PermissionAttachment from '../../../org/bukkit/permissions/PermissionAtta
 import Plugin from '../../../org/bukkit/plugin/Plugin.js';
 import ServerOperator from '../../../org/bukkit/permissions/ServerOperator.js';
 export default interface PermissibleBase extends Permissible {
-    isOp(): boolean;
-    setOp(value: boolean): void;
     hasPermission(perm: Permission): boolean;
     hasPermission(inName: string): boolean;
-    addAttachment(plugin: Plugin): PermissionAttachment;
-    addAttachment(plugin: Plugin, _name: string, value: boolean, ticks: number): PermissionAttachment;
-    addAttachment(plugin: Plugin, ticks: number): PermissionAttachment;
-    addAttachment(plugin: Plugin, _name: string, value: boolean): PermissionAttachment;
-    isPermissionSet(_name: string): boolean;
-    isPermissionSet(perm: Permission): boolean;
-    removeAttachment(attachment: PermissionAttachment): void;
     recalculatePermissions(): void;
+    isPermissionSet(perm: Permission): boolean;
+    isPermissionSet(_name: string): boolean;
+    addAttachment(plugin: Plugin, _name: string, value: boolean): PermissionAttachment;
+    addAttachment(plugin: Plugin, ticks: number): PermissionAttachment;
+    addAttachment(plugin: Plugin, _name: string, value: boolean, ticks: number): PermissionAttachment;
+    addAttachment(plugin: Plugin): PermissionAttachment;
+    removeAttachment(attachment: PermissionAttachment): void;
     getEffectivePermissions(): any;
+    isOp(): boolean;
+    setOp(value: boolean): void;
     clearPermissions(): void;
 }
 export default class PermissibleBase {

@@ -1,27 +1,27 @@
 export default interface BukkitObjectOutputStream {
-    write(buf: Array<number>, off: number, len: number): void;
-    write(buf: Array<number>): void;
-    write(val: number): void;
-    writeObject(obj: any): void;
+    writeFloat(arg0: number): void;
+    writeLong(arg0: number): void;
+    writeByte(arg0: number): void;
+    useProtocolVersion(arg0: number): void;
+    writeUnshared(arg0: any): void;
+    writeBoolean(arg0: boolean): void;
+    writeShort(arg0: number): void;
+    writeDouble(arg0: number): void;
+    writeChars(arg0: string): void;
+    write(arg0: number): void;
+    write(arg0: Array<number>, arg1: number, arg2: number): void;
+    write(arg0: Array<number>): void;
+    writeObject(arg0: any): void;
     defaultWriteObject(): void;
     flush(): void;
     close(): void;
-    writeInt(val: number): void;
+    writeInt(arg0: number): void;
     putFields(): any;
     writeFields(): void;
     reset(): void;
-    writeBytes(str: string): void;
-    writeUTF(str: string): void;
-    writeFloat(val: number): void;
-    writeChar(val: number): void;
-    writeBoolean(val: boolean): void;
-    writeByte(val: number): void;
-    writeShort(val: number): void;
-    writeLong(val: number): void;
-    writeDouble(val: number): void;
-    writeChars(str: string): void;
-    useProtocolVersion(version: number): void;
-    writeUnshared(obj: any): void;
+    writeChar(arg0: number): void;
+    writeBytes(arg0: string): void;
+    writeUTF(arg0: string): void;
 }
 export default class BukkitObjectOutputStream {
     static get $javaClass(): any;
@@ -53,8 +53,6 @@ export default class BukkitObjectOutputStream {
     static get SC_ENUM(): number;
     static get SUBSTITUTION_PERMISSION(): any;
     static get SUBCLASS_IMPLEMENTATION_PERMISSION(): any;
-    static get SERIAL_FILTER_PERMISSION(): any;
     static get PROTOCOL_VERSION_1(): number;
     static get PROTOCOL_VERSION_2(): number;
-    static nullOutputStream(): any;
 }

@@ -7,8 +7,8 @@ import Player from '../../../../org/bukkit/entity/Player.js';
 import PlayerBucketEvent from '../../../../org/bukkit/event/player/PlayerBucketEvent.js';
 export default interface PlayerBucketFillEvent extends PlayerBucketEvent {
     getHandlers(): HandlerList;
-    getBlock(): Block;
     getItemStack(): ItemStack;
+    getBlock(): Block;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
     setItemStack(itemStack: ItemStack): void;

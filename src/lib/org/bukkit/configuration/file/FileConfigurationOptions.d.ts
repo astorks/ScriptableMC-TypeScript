@@ -4,21 +4,21 @@ import FileConfiguration from '../../../../org/bukkit/configuration/file/FileCon
 import MemoryConfiguration from '../../../../org/bukkit/configuration/MemoryConfiguration.js';
 import MemoryConfigurationOptions from '../../../../org/bukkit/configuration/MemoryConfigurationOptions.js';
 export default interface FileConfigurationOptions extends MemoryConfigurationOptions {
-    configuration(): MemoryConfiguration;
-    configuration(): Configuration;
-    configuration(): FileConfiguration;
-    pathSeparator(value: string): MemoryConfigurationOptions;
-    pathSeparator(value: string): ConfigurationOptions;
-    pathSeparator(value: string): FileConfigurationOptions;
+    copyDefaults(value: boolean): FileConfigurationOptions;
     copyDefaults(value: boolean): MemoryConfigurationOptions;
     copyDefaults(value: boolean): ConfigurationOptions;
-    copyDefaults(value: boolean): FileConfigurationOptions;
     header(): string;
     header(value: string): FileConfigurationOptions;
-    copyHeader(value: boolean): FileConfigurationOptions;
     copyHeader(): boolean;
-    pathSeparator(): string;
+    copyHeader(value: boolean): FileConfigurationOptions;
+    configuration(): Configuration;
+    configuration(): MemoryConfiguration;
+    configuration(): FileConfiguration;
+    pathSeparator(value: string): ConfigurationOptions;
+    pathSeparator(value: string): MemoryConfigurationOptions;
+    pathSeparator(value: string): FileConfigurationOptions;
     copyDefaults(): boolean;
+    pathSeparator(): string;
 }
 export default class FileConfigurationOptions {
     static get $javaClass(): any;

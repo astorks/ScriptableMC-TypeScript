@@ -8,8 +8,8 @@ export default interface JavaPluginLoader extends PluginLoader {
     enablePlugin(plugin: Plugin): void;
     disablePlugin(plugin: Plugin): void;
     getPluginDescription(file: any): PluginDescriptionFile;
-    createRegisteredListeners(listener: Listener, plugin: Plugin): any;
     getPluginFileFilters(): Array<any>;
+    createRegisteredListeners(listener: Listener, plugin: Plugin): any;
 }
 export default class JavaPluginLoader {
     static get $javaClass(): any;

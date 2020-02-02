@@ -5,21 +5,21 @@ import Material from '../../../../../org/bukkit/Material.js';
 import Powerable from '../../../../../org/bukkit/block/data/Powerable.js';
 export default interface Repeater extends Directional, Powerable {
     isLocked(): boolean;
-    setLocked(arg0: boolean): void;
-    getMaximumDelay(): number;
     getMinimumDelay(): number;
+    getMaximumDelay(): number;
+    setLocked(arg0: boolean): void;
     getDelay(): number;
     setDelay(arg0: number): void;
     getFacing(): BlockFace;
-    getFaces(): any;
     setFacing(arg0: BlockFace): void;
-    clone(): any;
+    getFaces(): any;
+    getMaterial(): Material;
+    getAsString(arg0: boolean): string;
+    getAsString(): string;
     clone(): BlockData;
+    clone(): any;
     matches(arg0: BlockData): boolean;
     merge(arg0: BlockData): BlockData;
-    getMaterial(): Material;
-    getAsString(): string;
-    getAsString(arg0: boolean): string;
     isPowered(): boolean;
     setPowered(arg0: boolean): void;
 }

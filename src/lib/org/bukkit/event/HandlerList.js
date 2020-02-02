@@ -8,13 +8,13 @@ export default class HandlerList {
     static unregisterAll(...args) {
         return HandlerList.$javaClass.unregisterAll(...args);
     }
-    static getHandlerLists(...args) {
-        return HandlerList.$javaClass.getHandlerLists(...args);
-    }
     static bakeAll(...args) {
         return HandlerList.$javaClass.bakeAll(...args);
     }
     static getRegisteredListeners(...args) {
         return HandlerList.$javaClass.getRegisteredListeners(...args);
+    }
+    static getHandlerLists(...args) {
+        return HandlerList.$javaClass.getHandlerLists(...args);
     }
 }

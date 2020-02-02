@@ -1,6 +1,6 @@
 export default interface Warning {
-    value(): boolean;
     reason(): string;
+    value(): boolean;
     annotationType(): any;
 }
 export default class Warning {

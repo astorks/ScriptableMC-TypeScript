@@ -11,18 +11,18 @@ export default interface Stairs extends Bisected, Directional, Waterlogged {
     setShape(arg0: Stairs$Shape): void;
     getHalf(): Bisected$Half;
     setHalf(arg0: Bisected$Half): void;
-    clone(): any;
+    getMaterial(): Material;
+    getAsString(arg0: boolean): string;
+    getAsString(): string;
     clone(): BlockData;
+    clone(): any;
     matches(arg0: BlockData): boolean;
     merge(arg0: BlockData): BlockData;
-    getMaterial(): Material;
-    getAsString(): string;
-    getAsString(arg0: boolean): string;
     getFacing(): BlockFace;
-    getFaces(): any;
     setFacing(arg0: BlockFace): void;
-    isWaterlogged(): boolean;
+    getFaces(): any;
     setWaterlogged(arg0: boolean): void;
+    isWaterlogged(): boolean;
 }
 export default class Stairs {
     static get $javaClass(): any;

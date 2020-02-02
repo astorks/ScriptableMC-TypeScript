@@ -5,13 +5,13 @@ export default interface Rail extends BlockData {
     getShape(): Rail$Shape;
     setShape(arg0: Rail$Shape): void;
     getShapes(): any;
-    clone(): any;
+    getMaterial(): Material;
+    getAsString(arg0: boolean): string;
+    getAsString(): string;
     clone(): BlockData;
+    clone(): any;
     matches(arg0: BlockData): boolean;
     merge(arg0: BlockData): BlockData;
-    getMaterial(): Material;
-    getAsString(): string;
-    getAsString(arg0: boolean): string;
 }
 export default class Rail {
     static get $javaClass(): any;

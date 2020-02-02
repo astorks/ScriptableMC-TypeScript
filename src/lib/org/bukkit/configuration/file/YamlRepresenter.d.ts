@@ -5,12 +5,12 @@ export default interface YamlRepresenter {
     addTypeDescription(td: any): any;
     setPropertyUtils(propertyUtils: any): void;
     setDefaultFlowStyle(defaultFlowStyle: any): void;
-    getDefaultScalarStyle(): any;
-    isExplicitPropertyUtils(): boolean;
-    setDefaultScalarStyle(defaultStyle: any): void;
-    getDefaultFlowStyle(): any;
     getPropertyUtils(): any;
     represent(data: any): any;
+    setDefaultScalarStyle(defaultStyle: any): void;
+    getDefaultScalarStyle(): any;
+    getDefaultFlowStyle(): any;
+    isExplicitPropertyUtils(): boolean;
 }
 export default class YamlRepresenter {
     static get $javaClass(): any;

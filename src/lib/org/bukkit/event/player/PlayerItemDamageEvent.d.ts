@@ -4,10 +4,10 @@ import ItemStack from '../../../../org/bukkit/inventory/ItemStack.js';
 import Player from '../../../../org/bukkit/entity/Player.js';
 import PlayerEvent from '../../../../org/bukkit/event/player/PlayerEvent.js';
 export default interface PlayerItemDamageEvent extends PlayerEvent, Cancellable {
+    getHandlers(): HandlerList;
     setDamage(damage: number): void;
     getDamage(): number;
     getItem(): ItemStack;
-    getHandlers(): HandlerList;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
     getPlayer(): Player;

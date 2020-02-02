@@ -4,15 +4,15 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import Player from '../../../../org/bukkit/entity/Player.js';
 import PlayerEvent from '../../../../org/bukkit/event/player/PlayerEvent.js';
 export default interface PlayerEditBookEvent extends PlayerEvent, Cancellable {
-    getSlot(): number;
     getHandlers(): HandlerList;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
+    getNewBookMeta(): BookMeta;
     isSigning(): boolean;
     setSigning(signing: boolean): void;
     setNewBookMeta(newBookMeta: BookMeta): void;
-    getNewBookMeta(): BookMeta;
     getPreviousBookMeta(): BookMeta;
+    getSlot(): number;
     getPlayer(): Player;
     getEventName(): string;
     isAsynchronous(): boolean;

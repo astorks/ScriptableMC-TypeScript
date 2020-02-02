@@ -4,12 +4,12 @@ export default interface IndexHelpTopic extends HelpTopic {
     canSee(sender: CommandSender): boolean;
     amendCanSee(amendedPermission: string): void;
     getFullText(sender: CommandSender): string;
-    getName(): string;
-    amendTopic(amendedShortText: string, amendedFullText: string): void;
     getShortText(): string;
+    amendTopic(amendedShortText: string, amendedFullText: string): void;
+    getName(): string;
 }
 export default class IndexHelpTopic {
     static get $javaClass(): any;
-    constructor(_name: string, shortText: string, permission: string, topics: any);
     constructor(_name: string, shortText: string, permission: string, topics: any, preamble: string);
+    constructor(_name: string, shortText: string, permission: string, topics: any);
 }

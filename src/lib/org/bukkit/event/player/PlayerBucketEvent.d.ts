@@ -7,8 +7,8 @@ import Material from '../../../../org/bukkit/Material.js';
 import Player from '../../../../org/bukkit/entity/Player.js';
 import PlayerEvent from '../../../../org/bukkit/event/player/PlayerEvent.js';
 export default interface PlayerBucketEvent extends PlayerEvent, Cancellable {
-    getBlock(): Block;
     getItemStack(): ItemStack;
+    getBlock(): Block;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
     setItemStack(itemStack: ItemStack): void;

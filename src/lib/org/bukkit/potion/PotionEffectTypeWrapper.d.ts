@@ -2,13 +2,13 @@ import Color from '../../../org/bukkit/Color.js';
 import PotionEffect from '../../../org/bukkit/potion/PotionEffect.js';
 import PotionEffectType from '../../../org/bukkit/potion/PotionEffectType.js';
 export default interface PotionEffectTypeWrapper extends PotionEffectType {
+    getColor(): Color;
+    isInstant(): boolean;
+    getDurationModifier(): number;
     getName(): string;
     getType(): PotionEffectType;
-    isInstant(): boolean;
-    getColor(): Color;
-    getDurationModifier(): number;
-    getId(): number;
     createEffect(duration: number, amplifier: number): PotionEffect;
+    getId(): number;
 }
 export default class PotionEffectTypeWrapper {
     static get $javaClass(): any;
@@ -44,9 +44,9 @@ export default class PotionEffectTypeWrapper {
     static get DOLPHINS_GRACE(): PotionEffectType;
     static get BAD_OMEN(): PotionEffectType;
     static get HERO_OF_THE_VILLAGE(): PotionEffectType;
-    static values(): Array<PotionEffectType>;
     static getByName(_name: string): PotionEffectType;
     static getById(id: number): PotionEffectType;
     static registerPotionEffectType(type: PotionEffectType): void;
     static stopAcceptingRegistrations(): void;
+    static values(): Array<PotionEffectType>;
 }

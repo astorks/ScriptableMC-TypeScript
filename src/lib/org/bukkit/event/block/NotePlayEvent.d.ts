@@ -8,10 +8,10 @@ export default interface NotePlayEvent extends BlockEvent, Cancellable {
     getHandlers(): HandlerList;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getInstrument(): Instrument;
-    getNote(): Note;
     setNote(note: Note): void;
+    getInstrument(): Instrument;
     setInstrument(instrument: Instrument): void;
+    getNote(): Note;
     getBlock(): Block;
     getEventName(): string;
     isAsynchronous(): boolean;

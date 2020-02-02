@@ -4,9 +4,9 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import Inventory from '../../../../org/bukkit/inventory/Inventory.js';
 import Item from '../../../../org/bukkit/entity/Item.js';
 export default interface InventoryPickupItemEvent extends Event, Cancellable {
+    getHandlers(): HandlerList;
     getInventory(): Inventory;
     getItem(): Item;
-    getHandlers(): HandlerList;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
     getEventName(): string;

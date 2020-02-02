@@ -5,10 +5,10 @@ import SmartInventoryProvider from '../../../../com/pixlfox/scriptablemc/smartin
 import SmartItemBuilder from '../../../../com/pixlfox/scriptablemc/smartinvs/SmartItemBuilder.js';
 export default interface SmartInventoryInterface {
     builder(): SmartInventory$Builder;
-    provider(scriptableObject: any): SmartInventoryProvider;
+    itemBuilder(itemStack: ItemStack): SmartItemBuilder;
     clickableItem(item: ItemStack, consumer: any): ClickableItem;
     clickableItem(item: ItemStack): ClickableItem;
-    itemBuilder(itemStack: ItemStack): SmartItemBuilder;
+    provider(scriptableObject: any): SmartInventoryProvider;
 }
 export default class SmartInventoryInterface {
     static get $javaClass(): any;

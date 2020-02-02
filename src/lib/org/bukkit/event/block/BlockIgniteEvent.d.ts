@@ -6,21 +6,21 @@ import Entity from '../../../../org/bukkit/entity/Entity.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import Player from '../../../../org/bukkit/entity/Player.js';
 export default interface BlockIgniteEvent extends BlockEvent, Cancellable {
-    getCause(): BlockIgniteEvent$IgniteCause;
-    getPlayer(): Player;
     getHandlers(): HandlerList;
+    getPlayer(): Player;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getIgnitingEntity(): Entity;
     getIgnitingBlock(): Block;
+    getIgnitingEntity(): Entity;
+    getCause(): BlockIgniteEvent$IgniteCause;
     getBlock(): Block;
     getEventName(): string;
     isAsynchronous(): boolean;
 }
 export default class BlockIgniteEvent {
     static get $javaClass(): any;
-    constructor(theBlock: Block, cause: BlockIgniteEvent$IgniteCause, ignitingBlock: Block);
-    constructor(theBlock: Block, cause: BlockIgniteEvent$IgniteCause, ignitingEntity: Entity);
     constructor(theBlock: Block, cause: BlockIgniteEvent$IgniteCause, ignitingEntity: Entity, ignitingBlock: Block);
+    constructor(theBlock: Block, cause: BlockIgniteEvent$IgniteCause, ignitingEntity: Entity);
+    constructor(theBlock: Block, cause: BlockIgniteEvent$IgniteCause, ignitingBlock: Block);
     static getHandlerList(): HandlerList;
 }

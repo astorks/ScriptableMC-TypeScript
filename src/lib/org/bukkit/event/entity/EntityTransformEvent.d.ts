@@ -9,7 +9,7 @@ export default interface EntityTransformEvent extends EntityEvent, Cancellable {
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
     getTransformedEntity(): Entity;
-    getTransformedEntities(): any;
+    getTransformedEntities(): Array<Entity>;
     getTransformReason(): EntityTransformEvent$TransformReason;
     getEntity(): Entity;
     getEntityType(): EntityType;
@@ -18,6 +18,6 @@ export default interface EntityTransformEvent extends EntityEvent, Cancellable {
 }
 export default class EntityTransformEvent {
     static get $javaClass(): any;
-    constructor(original: Entity, convertedList: any, transformReason: EntityTransformEvent$TransformReason);
+    constructor(original: Entity, convertedList: Array<any>, transformReason: EntityTransformEvent$TransformReason);
     static getHandlerList(): HandlerList;
 }

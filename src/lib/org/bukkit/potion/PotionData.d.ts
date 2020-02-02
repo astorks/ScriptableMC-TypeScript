@@ -1,8 +1,8 @@
 import PotionType from '../../../org/bukkit/potion/PotionType.js';
 export default interface PotionData {
-    getType(): PotionType;
     isUpgraded(): boolean;
     isExtended(): boolean;
+    getType(): PotionType;
 }
 export default class PotionData {
     static get $javaClass(): any;

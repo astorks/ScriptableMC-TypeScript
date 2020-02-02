@@ -5,21 +5,22 @@ import ScriptablePluginContext from '../../../../com/pixlfox/scriptablemc/core/S
 export default interface ScriptablePluginEngine extends Listener {
     getBootstrapPlugin(): JavaPlugin;
     getDebugEnabled(): boolean;
-    evalCommandSenderJs(source: string, sender: CommandSender): any;
-    getRootScriptsFolder(): string;
-    evalJs(source: string): any;
-    loadPlugin(scriptableClass: any): ScriptablePluginContext;
-    enablePlugin(pluginContext: ScriptablePluginContext): void;
-    disablePlugin(pluginContext: ScriptablePluginContext): void;
+    eval(source: any): any;
     evalFile(filePath: string): any;
     evalFile(scriptFile: any): any;
+    evalJs(source: string): any;
+    evalCommandSenderJs(source: string, sender: CommandSender): any;
+    loadPlugin(scriptableClass: any): ScriptablePluginContext;
     enableAllPlugins(): void;
-    eval(source: any): any;
+    enablePlugin(pluginContext: ScriptablePluginContext): void;
+    disablePlugin(pluginContext: ScriptablePluginContext): void;
+    getRootScriptsFolder(): string;
+    getExtractLibs(): boolean;
 }
 export default class ScriptablePluginEngine {
     static get $javaClass(): any;
-    constructor(bootstrapPlugin: JavaPlugin, rootScriptsFolder: string, debugEnabled: boolean);
-    constructor(arg0: JavaPlugin, arg1: string, arg2: boolean, arg3: number, arg4: any);
+    constructor(bootstrapPlugin: JavaPlugin, rootScriptsFolder: string, debugEnabled: boolean, extractLibs: boolean);
+    constructor(arg0: JavaPlugin, arg1: string, arg2: boolean, arg3: boolean, arg4: number, arg5: any);
     static access$getInst$cp(): ScriptablePluginEngine;
     static access$setInst$cp(value: ScriptablePluginEngine): void;
 }

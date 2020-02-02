@@ -4,18 +4,18 @@ import Material from '../../../org/bukkit/Material.js';
 import NamespacedKey from '../../../org/bukkit/NamespacedKey.js';
 import RecipeChoice from '../../../org/bukkit/inventory/RecipeChoice.js';
 export default interface SmokingRecipe extends CookingRecipe {
-    getKey(): NamespacedKey;
     setInput(input: Material): CookingRecipe;
-    getResult(): ItemStack;
-    setGroup(group: string): void;
+    setInputChoice(input: RecipeChoice): CookingRecipe;
+    getInputChoice(): RecipeChoice;
+    getInput(): ItemStack;
     setExperience(experience: number): void;
     getExperience(): number;
-    getInputChoice(): RecipeChoice;
-    getGroup(): string;
-    getCookingTime(): number;
-    getInput(): ItemStack;
-    setInputChoice(input: RecipeChoice): CookingRecipe;
     setCookingTime(cookingTime: number): void;
+    getCookingTime(): number;
+    getGroup(): string;
+    setGroup(group: string): void;
+    getKey(): NamespacedKey;
+    getResult(): ItemStack;
 }
 export default class SmokingRecipe {
     static get $javaClass(): any;

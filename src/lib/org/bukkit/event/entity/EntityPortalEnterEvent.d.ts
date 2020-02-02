@@ -4,8 +4,8 @@ import EntityType from '../../../../org/bukkit/entity/EntityType.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import Location from '../../../../org/bukkit/Location.js';
 export default interface EntityPortalEnterEvent extends EntityEvent {
-    getLocation(): Location;
     getHandlers(): HandlerList;
+    getLocation(): Location;
     getEntity(): Entity;
     getEntityType(): EntityType;
     getEventName(): string;

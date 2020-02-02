@@ -8,15 +8,15 @@ import LightningStrike from '../../../../org/bukkit/entity/LightningStrike.js';
 import Pig from '../../../../org/bukkit/entity/Pig.js';
 import PigZombie from '../../../../org/bukkit/entity/PigZombie.js';
 export default interface PigZapEvent extends EntityTransformEvent, Cancellable {
+    getHandlers(): HandlerList;
     getEntity(): Pig;
     getEntity(): Entity;
-    getHandlers(): HandlerList;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getPigZombie(): PigZombie;
     getLightning(): LightningStrike;
+    getPigZombie(): PigZombie;
     getTransformedEntity(): Entity;
-    getTransformedEntities(): any;
+    getTransformedEntities(): Array<Entity>;
     getTransformReason(): EntityTransformEvent$TransformReason;
     getEntityType(): EntityType;
     getEventName(): string;

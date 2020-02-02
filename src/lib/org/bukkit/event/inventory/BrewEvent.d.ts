@@ -4,8 +4,8 @@ import BrewerInventory from '../../../../org/bukkit/inventory/BrewerInventory.js
 import Cancellable from '../../../../org/bukkit/event/Cancellable.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 export default interface BrewEvent extends BlockEvent, Cancellable {
-    getContents(): BrewerInventory;
     getHandlers(): HandlerList;
+    getContents(): BrewerInventory;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
     getFuelLevel(): number;

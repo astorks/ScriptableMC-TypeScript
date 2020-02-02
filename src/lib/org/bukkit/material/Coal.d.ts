@@ -3,21 +3,21 @@ import ItemStack from '../../../org/bukkit/inventory/ItemStack.js';
 import Material from '../../../org/bukkit/Material.js';
 import MaterialData from '../../../org/bukkit/material/MaterialData.js';
 export default interface Coal extends MaterialData {
+    setType(type: CoalType): void;
+    clone(): any;
     clone(): Coal;
     clone(): MaterialData;
-    clone(): any;
     getType(): CoalType;
-    setType(type: CoalType): void;
     getData(): number;
     setData(data: number): void;
     getItemType(): Material;
-    toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
+    toItemStack(amount: number): ItemStack;
 }
 export default class Coal {
     static get $javaClass(): any;
+    constructor();
     constructor(type: Material, data: number);
     constructor(type: Material);
     constructor(type: CoalType);
-    constructor();
 }

@@ -5,8 +5,8 @@ import EntityEvent from '../../../../org/bukkit/event/entity/EntityEvent.js';
 import EntityType from '../../../../org/bukkit/entity/EntityType.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 export default interface EntityInteractEvent extends EntityEvent, Cancellable {
-    getBlock(): Block;
     getHandlers(): HandlerList;
+    getBlock(): Block;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
     getEntity(): Entity;

@@ -1,7 +1,7 @@
 export default interface TechnicalPiston$Type {
     name(): string;
     compareTo(arg0: any): number;
-    compareTo(o: any): number;
+    compareTo(arg0: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }

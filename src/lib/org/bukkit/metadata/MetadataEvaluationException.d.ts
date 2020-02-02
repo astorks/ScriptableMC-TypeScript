@@ -1,16 +1,16 @@
 export default interface MetadataEvaluationException {
-    printStackTrace(s: any): void;
+    printStackTrace(arg0: any): void;
     printStackTrace(): void;
-    printStackTrace(s: any): void;
+    printStackTrace(arg0: any): void;
     fillInStackTrace(): any;
     getCause(): any;
-    initCause(cause: any): any;
+    initCause(arg0: any): any;
     getMessage(): string;
-    getSuppressed(): Array<any>;
     getLocalizedMessage(): string;
     getStackTrace(): Array<any>;
-    setStackTrace(stackTrace: Array<any>): void;
-    addSuppressed(exception: any): void;
+    setStackTrace(arg0: Array<any>): void;
+    addSuppressed(arg0: any): void;
+    getSuppressed(): Array<any>;
 }
 export default class MetadataEvaluationException {
     static get $javaClass(): any;

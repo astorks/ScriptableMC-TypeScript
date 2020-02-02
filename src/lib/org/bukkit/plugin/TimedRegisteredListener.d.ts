@@ -5,16 +5,16 @@ import Listener from '../../../org/bukkit/event/Listener.js';
 import Plugin from '../../../org/bukkit/plugin/Plugin.js';
 import RegisteredListener from '../../../org/bukkit/plugin/RegisteredListener.js';
 export default interface TimedRegisteredListener extends RegisteredListener {
-    reset(): void;
-    getCount(): number;
     callEvent(event: Event): void;
+    getCount(): number;
     getTotalTime(): number;
     hasMultiple(): boolean;
     getEventClass(): any;
-    getPriority(): EventPriority;
+    reset(): void;
     getPlugin(): Plugin;
     getListener(): Listener;
     isIgnoringCancelled(): boolean;
+    getPriority(): EventPriority;
 }
 export default class TimedRegisteredListener {
     static get $javaClass(): any;

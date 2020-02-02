@@ -4,10 +4,10 @@ import Inventory from '../../../../org/bukkit/inventory/Inventory.js';
 import InventoryEvent from '../../../../org/bukkit/event/inventory/InventoryEvent.js';
 import InventoryView from '../../../../org/bukkit/inventory/InventoryView.js';
 export default interface InventoryCloseEvent extends InventoryEvent {
-    getPlayer(): HumanEntity;
     getHandlers(): HandlerList;
+    getPlayer(): HumanEntity;
     getInventory(): Inventory;
-    getViewers(): any;
+    getViewers(): Array<HumanEntity>;
     getView(): InventoryView;
     getEventName(): string;
     isAsynchronous(): boolean;

@@ -1,26 +1,27 @@
+import Permission from '../../../org/bukkit/permissions/Permission.js';
 import PermissionDefault from '../../../org/bukkit/permissions/PermissionDefault.js';
 import PluginLoadOrder from '../../../org/bukkit/plugin/PluginLoadOrder.js';
 export default interface PluginDescriptionFile {
-    getName(): string;
-    getPermissions(): any;
-    save(writer: any): void;
-    getVersion(): string;
     getDescription(): string;
     getFullName(): string;
-    getPrefix(): string;
-    getRawName(): string;
-    getLoadBefore(): any;
-    getAPIVersion(): string;
-    getDepend(): any;
+    getVersion(): string;
     getMain(): string;
-    getAwareness(): any;
-    getWebsite(): string;
-    getSoftDepend(): any;
     getLoad(): PluginLoadOrder;
-    getAuthors(): any;
-    getClassLoaderOf(): string;
+    getAuthors(): Array<string>;
+    getWebsite(): string;
+    getDepend(): Array<string>;
+    getSoftDepend(): Array<string>;
+    getLoadBefore(): Array<string>;
+    getPrefix(): string;
     getCommands(): any;
     getPermissionDefault(): PermissionDefault;
+    getAwareness(): any;
+    getAPIVersion(): string;
+    getClassLoaderOf(): string;
+    getRawName(): string;
+    getName(): string;
+    getPermissions(): Array<Permission>;
+    save(writer: any): void;
 }
 export default class PluginDescriptionFile {
     static get $javaClass(): any;

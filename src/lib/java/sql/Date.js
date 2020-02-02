@@ -11,10 +11,10 @@ export default class Date {
     static from(...args) {
         return Date.$javaClass.from(...args);
     }
-    static parse(...args) {
-        return Date.$javaClass.parse(...args);
-    }
     static UTC(...args) {
         return Date.$javaClass.UTC(...args);
+    }
+    static parse(...args) {
+        return Date.$javaClass.parse(...args);
     }
 }

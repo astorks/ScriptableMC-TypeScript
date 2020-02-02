@@ -9,17 +9,17 @@ export default interface PlayerBedEnterEvent extends PlayerEvent, Cancellable {
     getHandlers(): HandlerList;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getBed(): Block;
-    getBedEnterResult(): PlayerBedEnterEvent$BedEnterResult;
-    useBed(): Event$Result;
     setUseBed(useBed: Event$Result): void;
+    getBed(): Block;
+    useBed(): Event$Result;
+    getBedEnterResult(): PlayerBedEnterEvent$BedEnterResult;
     getPlayer(): Player;
     getEventName(): string;
     isAsynchronous(): boolean;
 }
 export default class PlayerBedEnterEvent {
     static get $javaClass(): any;
-    constructor(who: Player, bed: Block);
     constructor(who: Player, bed: Block, bedEnterResult: PlayerBedEnterEvent$BedEnterResult);
+    constructor(who: Player, bed: Block);
     static getHandlerList(): HandlerList;
 }

@@ -6,13 +6,13 @@ import Location from '../../../../org/bukkit/Location.js';
 import Vector from '../../../../org/bukkit/util/Vector.js';
 export default interface EntityPortalExitEvent extends EntityTeleportEvent {
     getHandlers(): HandlerList;
-    setAfter(after: Vector): void;
     getBefore(): Vector;
     getAfter(): Vector;
+    setAfter(after: Vector): void;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getTo(): Location;
     getFrom(): Location;
+    getTo(): Location;
     setFrom(from: Location): void;
     setTo(to: Location): void;
     getEntity(): Entity;

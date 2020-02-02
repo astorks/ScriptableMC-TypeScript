@@ -7,26 +7,26 @@ import PluginLoader from '../../../org/bukkit/plugin/PluginLoader.js';
 import Server from '../../../org/bukkit/Server.js';
 import TabExecutor from '../../../org/bukkit/command/TabExecutor.js';
 export default interface Plugin extends TabExecutor {
-    getName(): string;
-    getResource(arg0: string): any;
     getLogger(): any;
+    onEnable(): void;
+    onDisable(): void;
     getServer(): Server;
     onLoad(): void;
-    saveConfig(): void;
-    saveDefaultConfig(): void;
-    reloadConfig(): void;
-    getPluginLoader(): PluginLoader;
-    getConfig(): FileConfiguration;
-    saveResource(arg0: string, arg1: boolean): void;
     isEnabled(): boolean;
     getDescription(): PluginDescriptionFile;
     getDataFolder(): any;
+    getPluginLoader(): PluginLoader;
+    getConfig(): FileConfiguration;
+    reloadConfig(): void;
+    saveConfig(): void;
+    saveDefaultConfig(): void;
+    saveResource(arg0: string, arg1: boolean): void;
     getDefaultWorldGenerator(arg0: string, arg1: string): ChunkGenerator;
     isNaggable(): boolean;
     setNaggable(arg0: boolean): void;
-    onEnable(): void;
-    onDisable(): void;
-    onTabComplete(arg0: CommandSender, arg1: Command, arg2: string, arg3: Array<string>): any;
+    getName(): string;
+    getResource(arg0: string): any;
+    onTabComplete(arg0: CommandSender, arg1: Command, arg2: string, arg3: Array<string>): Array<string>;
     onCommand(arg0: CommandSender, arg1: Command, arg2: string, arg3: Array<string>): boolean;
 }
 export default class Plugin {

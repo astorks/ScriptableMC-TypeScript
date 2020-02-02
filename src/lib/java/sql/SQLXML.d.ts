@@ -1,13 +1,13 @@
 export default interface SQLXML {
-    free(): void;
-    getString(): string;
-    setResult(arg0: any): any;
     getSource(arg0: any): any;
-    setCharacterStream(): any;
-    setBinaryStream(): any;
+    getString(): string;
     setString(arg0: string): void;
+    setBinaryStream(): any;
+    setCharacterStream(): any;
     getCharacterStream(): any;
+    free(): void;
     getBinaryStream(): any;
+    setResult(arg0: any): any;
 }
 export default class SQLXML {
     static get $javaClass(): any;

@@ -1,8 +1,8 @@
 import Keyed from '../../../../org/bukkit/Keyed.js';
 import NamespacedKey from '../../../../org/bukkit/NamespacedKey.js';
 export default interface MemoryKey extends Keyed {
-    getKey(): NamespacedKey;
     getMemoryClass(): any;
+    getKey(): NamespacedKey;
 }
 export default class MemoryKey {
     static get $javaClass(): any;
@@ -12,6 +12,6 @@ export default class MemoryKey {
     static get LAST_SLEPT(): MemoryKey;
     static get LAST_WOKEN(): MemoryKey;
     static get LAST_WORKED_AT_POI(): MemoryKey;
-    static values(): any;
     static getByKey(namespacedKey: NamespacedKey): MemoryKey;
+    static values(): any;
 }

@@ -5,11 +5,8 @@ export default class ConfigurationSerialization {
     static get SERIALIZED_TYPE_KEY() {
         return ConfigurationSerialization.$javaClass.SERIALIZED_TYPE_KEY;
     }
-    static unregisterClass(...args) {
-        return ConfigurationSerialization.$javaClass.unregisterClass(...args);
-    }
-    static getAlias(...args) {
-        return ConfigurationSerialization.$javaClass.getAlias(...args);
+    static deserializeObject(...args) {
+        return ConfigurationSerialization.$javaClass.deserializeObject(...args);
     }
     static registerClass(...args) {
         return ConfigurationSerialization.$javaClass.registerClass(...args);
@@ -17,7 +14,10 @@ export default class ConfigurationSerialization {
     static getClassByAlias(...args) {
         return ConfigurationSerialization.$javaClass.getClassByAlias(...args);
     }
-    static deserializeObject(...args) {
-        return ConfigurationSerialization.$javaClass.deserializeObject(...args);
+    static getAlias(...args) {
+        return ConfigurationSerialization.$javaClass.getAlias(...args);
+    }
+    static unregisterClass(...args) {
+        return ConfigurationSerialization.$javaClass.unregisterClass(...args);
     }
 }

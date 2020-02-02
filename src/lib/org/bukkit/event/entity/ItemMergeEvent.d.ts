@@ -5,12 +5,12 @@ import EntityType from '../../../../org/bukkit/entity/EntityType.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import Item from '../../../../org/bukkit/entity/Item.js';
 export default interface ItemMergeEvent extends EntityEvent, Cancellable {
-    getTarget(): Item;
-    getEntity(): Item;
-    getEntity(): Entity;
     getHandlers(): HandlerList;
+    getEntity(): Entity;
+    getEntity(): Item;
     isCancelled(): boolean;
     setCancelled(cancelled: boolean): void;
+    getTarget(): Item;
     getEntityType(): EntityType;
     getEventName(): string;
     isAsynchronous(): boolean;

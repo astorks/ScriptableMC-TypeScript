@@ -14,10 +14,10 @@ export default class BlockVector {
     static getMinimum(...args) {
         return BlockVector.$javaClass.getMinimum(...args);
     }
-    static getRandom(...args) {
-        return BlockVector.$javaClass.getRandom(...args);
-    }
     static getMaximum(...args) {
         return BlockVector.$javaClass.getMaximum(...args);
+    }
+    static getRandom(...args) {
+        return BlockVector.$javaClass.getRandom(...args);
     }
 }

@@ -6,10 +6,10 @@ import EntityType from '../../../../org/bukkit/entity/EntityType.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import LivingEntity from '../../../../org/bukkit/entity/LivingEntity.js';
 export default interface EntityTameEvent extends EntityEvent, Cancellable {
+    getHandlers(): HandlerList;
     getOwner(): AnimalTamer;
     getEntity(): Entity;
     getEntity(): LivingEntity;
-    getHandlers(): HandlerList;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
     getEntityType(): EntityType;

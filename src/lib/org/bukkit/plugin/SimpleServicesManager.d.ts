@@ -3,18 +3,18 @@ import RegisteredServiceProvider from '../../../org/bukkit/plugin/RegisteredServ
 import ServicePriority from '../../../org/bukkit/plugin/ServicePriority.js';
 import ServicesManager from '../../../org/bukkit/plugin/ServicesManager.js';
 export default interface SimpleServicesManager extends ServicesManager {
-    register(service: any, provider: any, plugin: Plugin, priority: ServicePriority): void;
-    load(service: any): any;
-    unregister(provider: any): void;
+    unregisterAll(plugin: Plugin): void;
     unregister(service: any, provider: any): void;
-    getRegistrations(plugin: Plugin): any;
-    getRegistrations(service: any): any;
+    unregister(provider: any): void;
+    getKnownServices(): any;
+    getKnownServices(): any;
+    getRegistration(service: any): RegisteredServiceProvider;
+    getRegistrations(service: any): Array<any>;
+    getRegistrations(plugin: Plugin): Array<any>;
     getRegistrations(service: any): any;
     isProvidedFor(service: any): boolean;
-    getRegistration(service: any): RegisteredServiceProvider;
-    getKnownServices(): any;
-    getKnownServices(): any;
-    unregisterAll(plugin: Plugin): void;
+    register(service: any, provider: any, plugin: Plugin, priority: ServicePriority): void;
+    load(service: any): any;
 }
 export default class SimpleServicesManager {
     static get $javaClass(): any;

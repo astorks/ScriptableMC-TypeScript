@@ -5,9 +5,9 @@ import Cancellable from '../../../../org/bukkit/event/Cancellable.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 export default interface BlockFromToEvent extends BlockEvent, Cancellable {
     getHandlers(): HandlerList;
+    getFace(): BlockFace;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getFace(): BlockFace;
     getToBlock(): Block;
     getBlock(): Block;
     getEventName(): string;
@@ -15,7 +15,7 @@ export default interface BlockFromToEvent extends BlockEvent, Cancellable {
 }
 export default class BlockFromToEvent {
     static get $javaClass(): any;
-    constructor(block: Block, toBlock: Block);
     constructor(block: Block, face: BlockFace);
+    constructor(block: Block, toBlock: Block);
     static getHandlerList(): HandlerList;
 }

@@ -6,14 +6,14 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import ItemStack from '../../../../org/bukkit/inventory/ItemStack.js';
 import LivingEntity from '../../../../org/bukkit/entity/LivingEntity.js';
 export default interface EntityShootBowEvent extends EntityEvent, Cancellable {
-    getEntity(): Entity;
-    getEntity(): LivingEntity;
     getHandlers(): HandlerList;
+    getEntity(): LivingEntity;
+    getEntity(): Entity;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    setProjectile(projectile: Entity): void;
     getBow(): ItemStack;
     getProjectile(): Entity;
+    setProjectile(projectile: Entity): void;
     getForce(): number;
     getEntityType(): EntityType;
     getEventName(): string;

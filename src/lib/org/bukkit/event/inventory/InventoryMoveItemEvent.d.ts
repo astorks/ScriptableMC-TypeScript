@@ -4,14 +4,14 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import Inventory from '../../../../org/bukkit/inventory/Inventory.js';
 import ItemStack from '../../../../org/bukkit/inventory/ItemStack.js';
 export default interface InventoryMoveItemEvent extends Event, Cancellable {
-    getItem(): ItemStack;
-    setItem(itemStack: ItemStack): void;
     getHandlers(): HandlerList;
     getSource(): Inventory;
+    setItem(itemStack: ItemStack): void;
+    getItem(): ItemStack;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getInitiator(): Inventory;
     getDestination(): Inventory;
+    getInitiator(): Inventory;
     getEventName(): string;
     isAsynchronous(): boolean;
 }

@@ -4,12 +4,12 @@ import Player from '../../../../org/bukkit/entity/Player.js';
 import PlayerMoveEvent from '../../../../org/bukkit/event/player/PlayerMoveEvent.js';
 import PlayerTeleportEvent$TeleportCause from '../../../../org/bukkit/event/player/PlayerTeleportEvent$TeleportCause.js';
 export default interface PlayerTeleportEvent extends PlayerMoveEvent {
-    getCause(): PlayerTeleportEvent$TeleportCause;
     getHandlers(): HandlerList;
+    getCause(): PlayerTeleportEvent$TeleportCause;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getTo(): Location;
     getFrom(): Location;
+    getTo(): Location;
     setFrom(from: Location): void;
     setTo(to: Location): void;
     getPlayer(): Player;
@@ -18,7 +18,7 @@ export default interface PlayerTeleportEvent extends PlayerMoveEvent {
 }
 export default class PlayerTeleportEvent {
     static get $javaClass(): any;
-    constructor(player: Player, from: Location, to: Location, cause: PlayerTeleportEvent$TeleportCause);
     constructor(player: Player, from: Location, to: Location);
+    constructor(player: Player, from: Location, to: Location, cause: PlayerTeleportEvent$TeleportCause);
     static getHandlerList(): HandlerList;
 }

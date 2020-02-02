@@ -1,12 +1,12 @@
 import Color from '../../org/bukkit/Color.js';
 export default interface DyeColor {
     getColor(): Color;
-    getWoolData(): number;
     getFireworkColor(): Color;
+    getWoolData(): number;
     getDyeData(): number;
     name(): string;
     compareTo(arg0: any): number;
-    compareTo(o: any): number;
+    compareTo(arg0: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }

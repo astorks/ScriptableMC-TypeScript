@@ -5,7 +5,7 @@ import Raider from '../../../../org/bukkit/entity/Raider.js';
 import World from '../../../../org/bukkit/World.js';
 export default interface RaidSpawnWaveEvent extends RaidEvent {
     getHandlers(): HandlerList;
-    getRaiders(): any;
+    getRaiders(): Array<Raider>;
     getPatrolLeader(): Raider;
     getRaid(): Raid;
     getWorld(): World;
@@ -14,6 +14,6 @@ export default interface RaidSpawnWaveEvent extends RaidEvent {
 }
 export default class RaidSpawnWaveEvent {
     static get $javaClass(): any;
-    constructor(raid: Raid, world: World, leader: Raider, raiders: any);
+    constructor(raid: Raid, world: World, leader: Raider, raiders: Array<any>);
     static getHandlerList(): HandlerList;
 }

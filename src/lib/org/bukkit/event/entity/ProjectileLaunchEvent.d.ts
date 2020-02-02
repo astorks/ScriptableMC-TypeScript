@@ -6,12 +6,12 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import Location from '../../../../org/bukkit/Location.js';
 import Projectile from '../../../../org/bukkit/entity/Projectile.js';
 export default interface ProjectileLaunchEvent extends EntitySpawnEvent, Cancellable {
-    getEntity(): Projectile;
     getEntity(): Entity;
+    getEntity(): Projectile;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getLocation(): Location;
     getHandlers(): HandlerList;
+    getLocation(): Location;
     getEntityType(): EntityType;
     getEventName(): string;
     isAsynchronous(): boolean;

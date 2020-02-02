@@ -5,17 +5,17 @@ import Vector from '../../../org/bukkit/util/Vector.js';
 import World from '../../../org/bukkit/World.js';
 export default interface BlockIterator {
     remove(): void;
-    next(): Block;
-    next(): any;
     hasNext(): boolean;
-    forEachRemaining(action: any): void;
+    next(): any;
+    next(): Block;
+    forEachRemaining(arg0: any): void;
 }
 export default class BlockIterator {
     static get $javaClass(): any;
-    constructor(entity: LivingEntity, maxDistance: number);
     constructor(loc: Location);
-    constructor(loc: Location, yOffset: number);
-    constructor(loc: Location, yOffset: number, maxDistance: number);
+    constructor(entity: LivingEntity, maxDistance: number);
     constructor(entity: LivingEntity);
     constructor(world: World, start: Vector, direction: Vector, yOffset: number, maxDistance: number);
+    constructor(loc: Location, yOffset: number, maxDistance: number);
+    constructor(loc: Location, yOffset: number);
 }

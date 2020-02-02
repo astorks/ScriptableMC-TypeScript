@@ -7,16 +7,16 @@ import Plugin from '../../../org/bukkit/plugin/Plugin.js';
 import Prompt from '../../../org/bukkit/conversations/Prompt.js';
 export default interface ConversationFactory {
     addConversationAbandonedListener(listener: ConversationAbandonedListener): ConversationFactory;
-    thatExcludesNonPlayersWithMessage(playerOnlyMessage: string): ConversationFactory;
     withConversationCanceller(canceller: ConversationCanceller): ConversationFactory;
     withInitialSessionData(initialSessionData: any): ConversationFactory;
     withEscapeSequence(escapeSequence: string): ConversationFactory;
-    withLocalEcho(localEchoEnabled: boolean): ConversationFactory;
-    withTimeout(timeoutSeconds: number): ConversationFactory;
+    thatExcludesNonPlayersWithMessage(playerOnlyMessage: string): ConversationFactory;
     buildConversation(forWhom: Conversable): Conversation;
-    withPrefix(prefix: ConversationPrefix): ConversationFactory;
-    withModality(modal: boolean): ConversationFactory;
     withFirstPrompt(firstPrompt: Prompt): ConversationFactory;
+    withLocalEcho(localEchoEnabled: boolean): ConversationFactory;
+    withModality(modal: boolean): ConversationFactory;
+    withPrefix(prefix: ConversationPrefix): ConversationFactory;
+    withTimeout(timeoutSeconds: number): ConversationFactory;
 }
 export default class ConversationFactory {
     static get $javaClass(): any;

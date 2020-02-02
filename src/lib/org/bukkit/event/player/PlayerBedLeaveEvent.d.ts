@@ -3,8 +3,8 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import Player from '../../../../org/bukkit/entity/Player.js';
 import PlayerEvent from '../../../../org/bukkit/event/player/PlayerEvent.js';
 export default interface PlayerBedLeaveEvent extends PlayerEvent {
-    setSpawnLocation(setBedSpawn: boolean): void;
     getHandlers(): HandlerList;
+    setSpawnLocation(setBedSpawn: boolean): void;
     getBed(): Block;
     shouldSetSpawnLocation(): boolean;
     getPlayer(): Player;

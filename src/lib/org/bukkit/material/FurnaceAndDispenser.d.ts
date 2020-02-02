@@ -13,8 +13,8 @@ export default interface FurnaceAndDispenser extends DirectionalContainer {
     getData(): number;
     setData(data: number): void;
     getItemType(): Material;
-    toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
+    toItemStack(amount: number): ItemStack;
 }
 export default class FurnaceAndDispenser {
     static get $javaClass(): any;

@@ -8,8 +8,8 @@ export default interface EntityTeleportEvent extends EntityEvent, Cancellable {
     getHandlers(): HandlerList;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getTo(): Location;
     getFrom(): Location;
+    getTo(): Location;
     setFrom(from: Location): void;
     setTo(to: Location): void;
     getEntity(): Entity;

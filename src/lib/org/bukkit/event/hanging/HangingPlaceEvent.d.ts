@@ -6,9 +6,9 @@ import Hanging from '../../../../org/bukkit/entity/Hanging.js';
 import HangingEvent from '../../../../org/bukkit/event/hanging/HangingEvent.js';
 import Player from '../../../../org/bukkit/entity/Player.js';
 export default interface HangingPlaceEvent extends HangingEvent, Cancellable {
-    getPlayer(): Player;
-    getBlock(): Block;
     getHandlers(): HandlerList;
+    getBlock(): Block;
+    getPlayer(): Player;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
     getBlockFace(): BlockFace;

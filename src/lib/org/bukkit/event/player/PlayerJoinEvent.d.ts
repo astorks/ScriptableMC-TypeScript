@@ -3,8 +3,8 @@ import Player from '../../../../org/bukkit/entity/Player.js';
 import PlayerEvent from '../../../../org/bukkit/event/player/PlayerEvent.js';
 export default interface PlayerJoinEvent extends PlayerEvent {
     getHandlers(): HandlerList;
-    setJoinMessage(joinMessage: string): void;
     getJoinMessage(): string;
+    setJoinMessage(joinMessage: string): void;
     getPlayer(): Player;
     getEventName(): string;
     isAsynchronous(): boolean;

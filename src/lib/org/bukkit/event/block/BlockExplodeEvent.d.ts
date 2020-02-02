@@ -7,14 +7,14 @@ export default interface BlockExplodeEvent extends BlockEvent, Cancellable {
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
     getYield(): number;
+    blockList(): Array<Block>;
     setYield(_yield: number): void;
-    blockList(): any;
     getBlock(): Block;
     getEventName(): string;
     isAsynchronous(): boolean;
 }
 export default class BlockExplodeEvent {
     static get $javaClass(): any;
-    constructor(what: Block, blocks: any, _yield: number);
+    constructor(what: Block, blocks: Array<any>, _yield: number);
     static getHandlerList(): HandlerList;
 }

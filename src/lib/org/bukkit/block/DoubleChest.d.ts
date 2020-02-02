@@ -4,14 +4,14 @@ import InventoryHolder from '../../../org/bukkit/inventory/InventoryHolder.js';
 import Location from '../../../org/bukkit/Location.js';
 import World from '../../../org/bukkit/World.js';
 export default interface DoubleChest extends InventoryHolder {
-    getLocation(): Location;
-    getZ(): number;
-    getY(): number;
-    getX(): number;
     getInventory(): Inventory;
     getWorld(): World;
-    getLeftSide(): InventoryHolder;
+    getX(): number;
+    getY(): number;
+    getZ(): number;
     getRightSide(): InventoryHolder;
+    getLeftSide(): InventoryHolder;
+    getLocation(): Location;
 }
 export default class DoubleChest {
     static get $javaClass(): any;

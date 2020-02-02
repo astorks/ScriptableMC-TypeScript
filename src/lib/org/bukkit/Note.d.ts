@@ -1,11 +1,11 @@
 import Note$Tone from '../../org/bukkit/Note$Tone.js';
 export default interface Note {
-    getId(): number;
-    getOctave(): number;
-    getTone(): Note$Tone;
     sharped(): Note;
     flattened(): Note;
+    getOctave(): number;
+    getTone(): Note$Tone;
     isSharped(): boolean;
+    getId(): number;
 }
 export default class Note {
     static get $javaClass(): any;

@@ -4,19 +4,19 @@ import RenderType from '../../../org/bukkit/scoreboard/RenderType.js';
 import Score from '../../../org/bukkit/scoreboard/Score.js';
 import Scoreboard from '../../../org/bukkit/scoreboard/Scoreboard.js';
 export default interface Objective {
-    getName(): string;
-    getDisplayName(): string;
     unregister(): void;
-    getScoreboard(): Scoreboard;
     setDisplayName(arg0: string): void;
+    getScoreboard(): Scoreboard;
     getCriteria(): string;
-    getScore(arg0: OfflinePlayer): Score;
-    getScore(arg0: string): Score;
-    getRenderType(): RenderType;
-    isModifiable(): boolean;
+    setDisplaySlot(arg0: DisplaySlot): void;
     getDisplaySlot(): DisplaySlot;
     setRenderType(arg0: RenderType): void;
-    setDisplaySlot(arg0: DisplaySlot): void;
+    isModifiable(): boolean;
+    getRenderType(): RenderType;
+    getScore(arg0: OfflinePlayer): Score;
+    getScore(arg0: string): Score;
+    getName(): string;
+    getDisplayName(): string;
 }
 export default class Objective {
     static get $javaClass(): any;

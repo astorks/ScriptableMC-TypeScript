@@ -7,9 +7,9 @@ export default interface TimeSkipEvent extends WorldEvent, Cancellable {
     getHandlers(): HandlerList;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    setSkipAmount(skipAmount: number): void;
-    getSkipAmount(): number;
     getSkipReason(): TimeSkipEvent$SkipReason;
+    getSkipAmount(): number;
+    setSkipAmount(skipAmount: number): void;
     getWorld(): World;
     getEventName(): string;
     isAsynchronous(): boolean;

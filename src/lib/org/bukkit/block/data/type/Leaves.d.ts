@@ -5,13 +5,13 @@ export default interface Leaves extends BlockData {
     setPersistent(arg0: boolean): void;
     setDistance(arg0: number): void;
     getDistance(): number;
-    clone(): any;
+    getMaterial(): Material;
+    getAsString(arg0: boolean): string;
+    getAsString(): string;
     clone(): BlockData;
+    clone(): any;
     matches(arg0: BlockData): boolean;
     merge(arg0: BlockData): BlockData;
-    getMaterial(): Material;
-    getAsString(): string;
-    getAsString(arg0: boolean): string;
 }
 export default class Leaves {
     static get $javaClass(): any;

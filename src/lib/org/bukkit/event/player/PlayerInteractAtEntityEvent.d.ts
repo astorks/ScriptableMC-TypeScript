@@ -9,8 +9,8 @@ export default interface PlayerInteractAtEntityEvent extends PlayerInteractEntit
     getClickedPosition(): Vector;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getRightClicked(): Entity;
     getHand(): EquipmentSlot;
+    getRightClicked(): Entity;
     getPlayer(): Player;
     getEventName(): string;
     isAsynchronous(): boolean;

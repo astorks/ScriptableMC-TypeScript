@@ -5,17 +5,17 @@ import PlayerTeleportEvent from '../../../../org/bukkit/event/player/PlayerTelep
 import PlayerTeleportEvent$TeleportCause from '../../../../org/bukkit/event/player/PlayerTeleportEvent$TeleportCause.js';
 export default interface PlayerPortalEvent extends PlayerTeleportEvent {
     getHandlers(): HandlerList;
-    setCreationRadius(creationRadius: number): void;
-    getCanCreatePortal(): boolean;
-    getCreationRadius(): number;
-    setCanCreatePortal(canCreatePortal: boolean): void;
-    setSearchRadius(searchRadius: number): void;
     getSearchRadius(): number;
+    setSearchRadius(searchRadius: number): void;
+    getCanCreatePortal(): boolean;
+    setCanCreatePortal(canCreatePortal: boolean): void;
+    setCreationRadius(creationRadius: number): void;
+    getCreationRadius(): number;
     getCause(): PlayerTeleportEvent$TeleportCause;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getTo(): Location;
     getFrom(): Location;
+    getTo(): Location;
     setFrom(from: Location): void;
     setTo(to: Location): void;
     getPlayer(): Player;
@@ -24,8 +24,8 @@ export default interface PlayerPortalEvent extends PlayerTeleportEvent {
 }
 export default class PlayerPortalEvent {
     static get $javaClass(): any;
-    constructor(player: Player, from: Location, to: Location, cause: PlayerTeleportEvent$TeleportCause);
     constructor(player: Player, from: Location, to: Location);
     constructor(player: Player, from: Location, to: Location, cause: PlayerTeleportEvent$TeleportCause, getSearchRadius: number, canCreatePortal: boolean, creationRadius: number);
+    constructor(player: Player, from: Location, to: Location, cause: PlayerTeleportEvent$TeleportCause);
     static getHandlerList(): HandlerList;
 }

@@ -1,7 +1,7 @@
 export default interface EntityPotionEffectEvent$Cause {
     name(): string;
     compareTo(arg0: any): number;
-    compareTo(o: any): number;
+    compareTo(arg0: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }
@@ -20,6 +20,7 @@ export default class EntityPotionEffectEvent$Cause {
     static get FOOD(): EntityPotionEffectEvent$Cause;
     static get ILLUSION(): EntityPotionEffectEvent$Cause;
     static get MILK(): EntityPotionEffectEvent$Cause;
+    static get PATROL_CAPTAIN(): EntityPotionEffectEvent$Cause;
     static get PLUGIN(): EntityPotionEffectEvent$Cause;
     static get POTION_DRINK(): EntityPotionEffectEvent$Cause;
     static get POTION_SPLASH(): EntityPotionEffectEvent$Cause;
@@ -28,4 +29,5 @@ export default class EntityPotionEffectEvent$Cause {
     static get TURTLE_HELMET(): EntityPotionEffectEvent$Cause;
     static get UNKNOWN(): EntityPotionEffectEvent$Cause;
     static get VILLAGER_TRADE(): EntityPotionEffectEvent$Cause;
+    static get WITHER_ROSE(): EntityPotionEffectEvent$Cause;
 }

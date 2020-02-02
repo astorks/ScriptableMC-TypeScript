@@ -3,11 +3,11 @@ import CommandSender from '../../../org/bukkit/command/CommandSender.js';
 import HelpTopic from '../../../org/bukkit/help/HelpTopic.js';
 export default interface GenericCommandHelpTopic extends HelpTopic {
     canSee(sender: CommandSender): boolean;
-    getName(): string;
     amendCanSee(amendedPermission: string): void;
+    getShortText(): string;
     getFullText(forWho: CommandSender): string;
     amendTopic(amendedShortText: string, amendedFullText: string): void;
-    getShortText(): string;
+    getName(): string;
 }
 export default class GenericCommandHelpTopic {
     static get $javaClass(): any;

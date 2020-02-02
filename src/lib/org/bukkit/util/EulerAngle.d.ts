@@ -1,12 +1,12 @@
 export default interface EulerAngle {
-    add(x: number, y: number, z: number): EulerAngle;
-    setZ(z: number): EulerAngle;
     setX(x: number): EulerAngle;
-    subtract(x: number, y: number, z: number): EulerAngle;
-    getZ(): number;
+    getX(): number;
     setY(y: number): EulerAngle;
     getY(): number;
-    getX(): number;
+    setZ(z: number): EulerAngle;
+    getZ(): number;
+    subtract(x: number, y: number, z: number): EulerAngle;
+    add(x: number, y: number, z: number): EulerAngle;
 }
 export default class EulerAngle {
     static get $javaClass(): any;

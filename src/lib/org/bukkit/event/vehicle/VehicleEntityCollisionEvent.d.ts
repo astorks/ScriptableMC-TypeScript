@@ -4,14 +4,14 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import Vehicle from '../../../../org/bukkit/entity/Vehicle.js';
 import VehicleCollisionEvent from '../../../../org/bukkit/event/vehicle/VehicleCollisionEvent.js';
 export default interface VehicleEntityCollisionEvent extends VehicleCollisionEvent, Cancellable {
-    getEntity(): Entity;
     getHandlers(): HandlerList;
+    getEntity(): Entity;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
     isPickupCancelled(): boolean;
     setPickupCancelled(cancel: boolean): void;
-    setCollisionCancelled(cancel: boolean): void;
     isCollisionCancelled(): boolean;
+    setCollisionCancelled(cancel: boolean): void;
     getVehicle(): Vehicle;
     getEventName(): string;
     isAsynchronous(): boolean;

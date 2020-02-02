@@ -3,15 +3,15 @@ import EnchantmentTarget from '../../../org/bukkit/enchantments/EnchantmentTarge
 import ItemStack from '../../../org/bukkit/inventory/ItemStack.js';
 import NamespacedKey from '../../../org/bukkit/NamespacedKey.js';
 export default interface EnchantmentWrapper extends Enchantment {
-    getName(): string;
-    getMaxLevel(): number;
     getStartLevel(): number;
+    getMaxLevel(): number;
     canEnchantItem(item: ItemStack): boolean;
+    getItemTarget(): EnchantmentTarget;
     isTreasure(): boolean;
+    isCursed(): boolean;
     conflictsWith(other: Enchantment): boolean;
     getEnchantment(): Enchantment;
-    isCursed(): boolean;
-    getItemTarget(): EnchantmentTarget;
+    getName(): string;
     getKey(): NamespacedKey;
 }
 export default class EnchantmentWrapper {
@@ -54,10 +54,10 @@ export default class EnchantmentWrapper {
     static get PIERCING(): Enchantment;
     static get MENDING(): Enchantment;
     static get VANISHING_CURSE(): Enchantment;
-    static values(): Array<Enchantment>;
     static getByName(_name: string): Enchantment;
     static getByKey(key: NamespacedKey): Enchantment;
-    static registerEnchantment(enchantment: Enchantment): void;
     static stopAcceptingRegistrations(): void;
+    static registerEnchantment(enchantment: Enchantment): void;
     static isAcceptingRegistrations(): boolean;
+    static values(): Array<Enchantment>;
 }

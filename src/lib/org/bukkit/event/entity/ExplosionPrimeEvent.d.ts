@@ -8,8 +8,8 @@ export default interface ExplosionPrimeEvent extends EntityEvent, Cancellable {
     getHandlers(): HandlerList;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    setRadius(radius: number): void;
     getRadius(): number;
+    setRadius(radius: number): void;
     getFire(): boolean;
     setFire(fire: boolean): void;
     getEntity(): Entity;
@@ -19,7 +19,7 @@ export default interface ExplosionPrimeEvent extends EntityEvent, Cancellable {
 }
 export default class ExplosionPrimeEvent {
     static get $javaClass(): any;
-    constructor(explosive: Explosive);
     constructor(what: Entity, radius: number, fire: boolean);
+    constructor(explosive: Explosive);
     static getHandlerList(): HandlerList;
 }

@@ -9,35 +9,35 @@ import InventoryType$SlotType from '../../../../org/bukkit/event/inventory/Inven
 import InventoryView from '../../../../org/bukkit/inventory/InventoryView.js';
 import ItemStack from '../../../../org/bukkit/inventory/ItemStack.js';
 export default interface InventoryClickEvent extends InventoryInteractEvent {
-    getSlot(): number;
     getHandlers(): HandlerList;
-    getCursor(): ItemStack;
     setCursor(stack: ItemStack): void;
+    getCursor(): ItemStack;
     getSlotType(): InventoryType$SlotType;
     getClickedInventory(): Inventory;
     getCurrentItem(): ItemStack;
-    getAction(): InventoryAction;
-    getClick(): ClickType;
-    getHotbarButton(): number;
-    isShiftClick(): boolean;
     isRightClick(): boolean;
+    isLeftClick(): boolean;
+    isShiftClick(): boolean;
     setCurrentItem(stack: ItemStack): void;
     getRawSlot(): number;
-    isLeftClick(): boolean;
-    setResult(newResult: Event$Result): void;
-    getResult(): Event$Result;
+    getHotbarButton(): number;
+    getAction(): InventoryAction;
+    getClick(): ClickType;
+    getSlot(): number;
     isCancelled(): boolean;
     setCancelled(toCancel: boolean): void;
+    setResult(newResult: Event$Result): void;
     getWhoClicked(): HumanEntity;
+    getResult(): Event$Result;
     getInventory(): Inventory;
-    getViewers(): any;
+    getViewers(): Array<HumanEntity>;
     getView(): InventoryView;
     getEventName(): string;
     isAsynchronous(): boolean;
 }
 export default class InventoryClickEvent {
     static get $javaClass(): any;
-    constructor(view: InventoryView, type: InventoryType$SlotType, slot: number, click: ClickType, action: InventoryAction, key: number);
     constructor(view: InventoryView, type: InventoryType$SlotType, slot: number, click: ClickType, action: InventoryAction);
+    constructor(view: InventoryView, type: InventoryType$SlotType, slot: number, click: ClickType, action: InventoryAction, key: number);
     static getHandlerList(): HandlerList;
 }
