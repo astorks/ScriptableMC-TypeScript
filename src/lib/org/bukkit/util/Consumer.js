@@ -1,6 +1,5 @@
-export class Consumer {
+export default class Consumer {
     static get $javaClass() {
         return Java.type('org.bukkit.util.Consumer');
     }
 }
-//# sourceMappingURL=Consumer.js.map

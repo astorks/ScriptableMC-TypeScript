@@ -1,4 +1,4 @@
-export class ItemTagType {
+export default class ItemTagType {
     static get $javaClass() {
         return Java.type('org.bukkit.inventory.meta.tags.ItemTagType');
     }
@@ -36,4 +36,3 @@ export class ItemTagType {
         return ItemTagType.$javaClass.TAG_CONTAINER;
     }
 }
-//# sourceMappingURL=ItemTagType.js.map

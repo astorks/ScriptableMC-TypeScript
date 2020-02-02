@@ -1,4 +1,4 @@
-export class Material {
+export default class Material {
     static get $javaClass() {
         return Java.type('org.bukkit.Material');
     }
@@ -4317,4 +4317,3 @@ export class Material {
         return this.$javaClass.LEGACY_RECORD_12;
     }
 }
-//# sourceMappingURL=Material.js.map

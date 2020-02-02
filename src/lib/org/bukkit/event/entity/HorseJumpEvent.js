@@ -1,4 +1,4 @@
-export class HorseJumpEvent {
+export default class HorseJumpEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.HorseJumpEvent');
     }
@@ -9,4 +9,3 @@ export class HorseJumpEvent {
         return HorseJumpEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=HorseJumpEvent.js.map

@@ -1,4 +1,4 @@
-export class PlayerPreLoginEvent$Result {
+export default class PlayerPreLoginEvent$Result {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerPreLoginEvent$Result');
     }
@@ -18,4 +18,3 @@ export class PlayerPreLoginEvent$Result {
         return this.$javaClass.KICK_OTHER;
     }
 }
-//# sourceMappingURL=PlayerPreLoginEvent$Result.js.map

@@ -1,7 +1,7 @@
-import { NamespacedKey } from '../../org/bukkit/NamespacedKey.js';
-import { Statistic$Type } from '../../org/bukkit/Statistic$Type.js';
-import { Keyed } from '../../org/bukkit/Keyed.js';
-export interface Statistic extends Keyed {
+import Keyed from '../../org/bukkit/Keyed.js';
+import NamespacedKey from '../../org/bukkit/NamespacedKey.js';
+import Statistic$Type from '../../org/bukkit/Statistic$Type.js';
+export default interface Statistic extends Keyed {
     isBlock(): boolean;
     isSubstatistic(): boolean;
     getKey(): NamespacedKey;
@@ -12,7 +12,7 @@ export interface Statistic extends Keyed {
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class Statistic {
+export default class Statistic {
     static get $javaClass(): any;
     static get DAMAGE_DEALT(): Statistic;
     static get DAMAGE_TAKEN(): Statistic;

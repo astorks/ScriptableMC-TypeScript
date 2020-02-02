@@ -1,8 +1,8 @@
-export interface SlotPos {
+export default interface SlotPos {
     getRow(): number;
     getColumn(): number;
 }
-export declare class SlotPos {
+export default class SlotPos {
     static get $javaClass(): any;
     constructor(row: number, column: number);
     static of(row: number, column: number): SlotPos;

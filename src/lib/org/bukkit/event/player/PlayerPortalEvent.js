@@ -1,4 +1,4 @@
-export class PlayerPortalEvent {
+export default class PlayerPortalEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerPortalEvent');
     }
@@ -9,4 +9,3 @@ export class PlayerPortalEvent {
         return PlayerPortalEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerPortalEvent.js.map

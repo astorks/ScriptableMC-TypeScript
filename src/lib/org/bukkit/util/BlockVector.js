@@ -1,4 +1,4 @@
-export class BlockVector {
+export default class BlockVector {
     static get $javaClass() {
         return Java.type('org.bukkit.util.BlockVector');
     }
@@ -21,4 +21,3 @@ export class BlockVector {
         return BlockVector.$javaClass.getRandom(...args);
     }
 }
-//# sourceMappingURL=BlockVector.js.map

@@ -1,4 +1,4 @@
-export class BrewEvent {
+export default class BrewEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.inventory.BrewEvent');
     }
@@ -9,4 +9,3 @@ export class BrewEvent {
         return BrewEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=BrewEvent.js.map

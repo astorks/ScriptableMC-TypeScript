@@ -1,11 +1,11 @@
-export interface InventoryType$SlotType {
+export default interface InventoryType$SlotType {
     name(): string;
     compareTo(arg0: any): number;
     compareTo(arg0: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class InventoryType$SlotType {
+export default class InventoryType$SlotType {
     static get $javaClass(): any;
     static get RESULT(): InventoryType$SlotType;
     static get CRAFTING(): InventoryType$SlotType;

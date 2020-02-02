@@ -1,4 +1,4 @@
-export class PlayerBucketEmptyEvent {
+export default class PlayerBucketEmptyEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerBucketEmptyEvent');
     }
@@ -9,4 +9,3 @@ export class PlayerBucketEmptyEvent {
         return PlayerBucketEmptyEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerBucketEmptyEvent.js.map

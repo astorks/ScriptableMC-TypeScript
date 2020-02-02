@@ -1,4 +1,4 @@
-export class ItemMergeEvent {
+export default class ItemMergeEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.ItemMergeEvent');
     }
@@ -9,4 +9,3 @@ export class ItemMergeEvent {
         return ItemMergeEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=ItemMergeEvent.js.map

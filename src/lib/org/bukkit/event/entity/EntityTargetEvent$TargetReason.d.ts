@@ -1,11 +1,11 @@
-export interface EntityTargetEvent$TargetReason {
+export default interface EntityTargetEvent$TargetReason {
     name(): string;
     compareTo(arg0: any): number;
     compareTo(arg0: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class EntityTargetEvent$TargetReason {
+export default class EntityTargetEvent$TargetReason {
     static get $javaClass(): any;
     static get TARGET_DIED(): EntityTargetEvent$TargetReason;
     static get CLOSEST_PLAYER(): EntityTargetEvent$TargetReason;

@@ -1,4 +1,4 @@
-export class MerchantRecipe {
+export default class MerchantRecipe {
     static get $javaClass() {
         return Java.type('org.bukkit.inventory.MerchantRecipe');
     }
@@ -6,4 +6,3 @@ export class MerchantRecipe {
         return new MerchantRecipe.$javaClass(...args);
     }
 }
-//# sourceMappingURL=MerchantRecipe.js.map

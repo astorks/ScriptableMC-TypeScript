@@ -1,4 +1,4 @@
-export class GameMode {
+export default class GameMode {
     static get $javaClass() {
         return Java.type('org.bukkit.GameMode');
     }
@@ -15,4 +15,3 @@ export class GameMode {
         return this.$javaClass.SPECTATOR;
     }
 }
-//# sourceMappingURL=GameMode.js.map

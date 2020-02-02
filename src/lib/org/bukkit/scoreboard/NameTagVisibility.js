@@ -1,4 +1,4 @@
-export class NameTagVisibility {
+export default class NameTagVisibility {
     static get $javaClass() {
         return Java.type('org.bukkit.scoreboard.NameTagVisibility');
     }
@@ -15,4 +15,3 @@ export class NameTagVisibility {
         return this.$javaClass.HIDE_FOR_OWN_TEAM;
     }
 }
-//# sourceMappingURL=NameTagVisibility.js.map

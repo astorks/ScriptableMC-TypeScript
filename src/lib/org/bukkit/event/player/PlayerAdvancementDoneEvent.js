@@ -1,4 +1,4 @@
-export class PlayerAdvancementDoneEvent {
+export default class PlayerAdvancementDoneEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerAdvancementDoneEvent');
     }
@@ -9,4 +9,3 @@ export class PlayerAdvancementDoneEvent {
         return PlayerAdvancementDoneEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerAdvancementDoneEvent.js.map

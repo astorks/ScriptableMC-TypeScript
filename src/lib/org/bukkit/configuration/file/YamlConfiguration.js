@@ -1,4 +1,4 @@
-export class YamlConfiguration {
+export default class YamlConfiguration {
     static get $javaClass() {
         return Java.type('org.bukkit.configuration.file.YamlConfiguration');
     }
@@ -12,4 +12,3 @@ export class YamlConfiguration {
         return YamlConfiguration.$javaClass.createPath(...args);
     }
 }
-//# sourceMappingURL=YamlConfiguration.js.map

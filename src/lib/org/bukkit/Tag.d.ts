@@ -1,11 +1,11 @@
-import { Keyed } from '../../org/bukkit/Keyed.js';
-import { NamespacedKey } from '../../org/bukkit/NamespacedKey.js';
-export interface Tag extends Keyed {
+import Keyed from '../../org/bukkit/Keyed.js';
+import NamespacedKey from '../../org/bukkit/NamespacedKey.js';
+export default interface Tag extends Keyed {
     getValues(): any;
     isTagged(arg0: Keyed): boolean;
     getKey(): NamespacedKey;
 }
-export declare class Tag {
+export default class Tag {
     static get $javaClass(): any;
     static get REGISTRY_BLOCKS(): string;
     static get WOOL(): Tag;

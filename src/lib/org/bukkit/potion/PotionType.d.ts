@@ -1,5 +1,5 @@
-import { PotionEffectType } from '../../../org/bukkit/potion/PotionEffectType.js';
-export interface PotionType {
+import PotionEffectType from '../../../org/bukkit/potion/PotionEffectType.js';
+export default interface PotionType {
     getMaxLevel(): number;
     isInstant(): boolean;
     getEffectType(): PotionEffectType;
@@ -11,7 +11,7 @@ export interface PotionType {
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class PotionType {
+export default class PotionType {
     static get $javaClass(): any;
     static get UNCRAFTABLE(): PotionType;
     static get WATER(): PotionType;

@@ -1,4 +1,4 @@
-export class EntityResurrectEvent {
+export default class EntityResurrectEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.EntityResurrectEvent');
     }
@@ -9,4 +9,3 @@ export class EntityResurrectEvent {
         return EntityResurrectEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=EntityResurrectEvent.js.map

@@ -1,8 +1,8 @@
-import { Permission } from '../../../org/bukkit/permissions/Permission.js';
-import { PermissionAttachment } from '../../../org/bukkit/permissions/PermissionAttachment.js';
-import { Plugin } from '../../../org/bukkit/plugin/Plugin.js';
-import { ServerOperator } from '../../../org/bukkit/permissions/ServerOperator.js';
-export interface Permissible extends ServerOperator {
+import Permission from '../../../org/bukkit/permissions/Permission.js';
+import PermissionAttachment from '../../../org/bukkit/permissions/PermissionAttachment.js';
+import Plugin from '../../../org/bukkit/plugin/Plugin.js';
+import ServerOperator from '../../../org/bukkit/permissions/ServerOperator.js';
+export default interface Permissible extends ServerOperator {
     hasPermission(arg0: string): boolean;
     hasPermission(arg0: Permission): boolean;
     recalculatePermissions(): void;
@@ -17,6 +17,6 @@ export interface Permissible extends ServerOperator {
     isOp(): boolean;
     setOp(arg0: boolean): void;
 }
-export declare class Permissible {
+export default class Permissible {
     static get $javaClass(): any;
 }

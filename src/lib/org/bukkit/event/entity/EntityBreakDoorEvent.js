@@ -1,4 +1,4 @@
-export class EntityBreakDoorEvent {
+export default class EntityBreakDoorEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.EntityBreakDoorEvent');
     }
@@ -9,4 +9,3 @@ export class EntityBreakDoorEvent {
         return EntityBreakDoorEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=EntityBreakDoorEvent.js.map

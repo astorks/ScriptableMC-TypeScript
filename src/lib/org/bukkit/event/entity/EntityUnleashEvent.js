@@ -1,4 +1,4 @@
-export class EntityUnleashEvent {
+export default class EntityUnleashEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.EntityUnleashEvent');
     }
@@ -9,4 +9,3 @@ export class EntityUnleashEvent {
         return EntityUnleashEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=EntityUnleashEvent.js.map

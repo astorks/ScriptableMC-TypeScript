@@ -1,4 +1,4 @@
-export class PlayerEditBookEvent {
+export default class PlayerEditBookEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerEditBookEvent');
     }
@@ -9,4 +9,3 @@ export class PlayerEditBookEvent {
         return PlayerEditBookEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerEditBookEvent.js.map

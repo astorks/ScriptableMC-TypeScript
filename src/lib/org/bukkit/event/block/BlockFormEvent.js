@@ -1,4 +1,4 @@
-export class BlockFormEvent {
+export default class BlockFormEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.block.BlockFormEvent');
     }
@@ -9,4 +9,3 @@ export class BlockFormEvent {
         return BlockFormEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=BlockFormEvent.js.map

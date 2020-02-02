@@ -1,11 +1,11 @@
-export interface EntityDamageEvent$DamageModifier {
+export default interface EntityDamageEvent$DamageModifier {
     name(): string;
     compareTo(arg0: any): number;
     compareTo(arg0: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class EntityDamageEvent$DamageModifier {
+export default class EntityDamageEvent$DamageModifier {
     static get $javaClass(): any;
     static get BASE(): EntityDamageEvent$DamageModifier;
     static get HARD_HAT(): EntityDamageEvent$DamageModifier;

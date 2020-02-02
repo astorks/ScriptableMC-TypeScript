@@ -1,4 +1,4 @@
-export class AsyncPlayerPreLoginEvent {
+export default class AsyncPlayerPreLoginEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.AsyncPlayerPreLoginEvent');
     }
@@ -9,4 +9,3 @@ export class AsyncPlayerPreLoginEvent {
         return AsyncPlayerPreLoginEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=AsyncPlayerPreLoginEvent.js.map

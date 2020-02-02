@@ -1,4 +1,4 @@
-export class EntityDropItemEvent {
+export default class EntityDropItemEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.EntityDropItemEvent');
     }
@@ -9,4 +9,3 @@ export class EntityDropItemEvent {
         return EntityDropItemEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=EntityDropItemEvent.js.map

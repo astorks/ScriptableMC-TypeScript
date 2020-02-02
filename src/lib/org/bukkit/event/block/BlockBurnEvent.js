@@ -1,4 +1,4 @@
-export class BlockBurnEvent {
+export default class BlockBurnEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.block.BlockBurnEvent');
     }
@@ -9,4 +9,3 @@ export class BlockBurnEvent {
         return BlockBurnEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=BlockBurnEvent.js.map

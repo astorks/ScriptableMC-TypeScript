@@ -1,4 +1,4 @@
-export class PlayerTeleportEvent$TeleportCause {
+export default class PlayerTeleportEvent$TeleportCause {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerTeleportEvent$TeleportCause');
     }
@@ -30,4 +30,3 @@ export class PlayerTeleportEvent$TeleportCause {
         return this.$javaClass.UNKNOWN;
     }
 }
-//# sourceMappingURL=PlayerTeleportEvent$TeleportCause.js.map

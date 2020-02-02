@@ -1,4 +1,4 @@
-export class SoundCategory {
+export default class SoundCategory {
     static get $javaClass() {
         return Java.type('org.bukkit.SoundCategory');
     }
@@ -33,4 +33,3 @@ export class SoundCategory {
         return this.$javaClass.VOICE;
     }
 }
-//# sourceMappingURL=SoundCategory.js.map

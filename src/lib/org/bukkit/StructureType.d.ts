@@ -1,9 +1,9 @@
-import { MapCursor$Type } from '../../org/bukkit/map/MapCursor$Type.js';
-export interface StructureType {
+import MapCursor$Type from '../../org/bukkit/map/MapCursor$Type.js';
+export default interface StructureType {
     getMapIcon(): MapCursor$Type;
     getName(): string;
 }
-export declare class StructureType {
+export default class StructureType {
     static get $javaClass(): any;
     static get MINESHAFT(): StructureType;
     static get VILLAGE(): StructureType;

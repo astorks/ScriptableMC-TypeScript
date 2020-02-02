@@ -1,4 +1,4 @@
-export class RemoteServerCommandEvent {
+export default class RemoteServerCommandEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.server.RemoteServerCommandEvent');
     }
@@ -9,4 +9,3 @@ export class RemoteServerCommandEvent {
         return RemoteServerCommandEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=RemoteServerCommandEvent.js.map

@@ -1,4 +1,4 @@
-export class ItemFlag {
+export default class ItemFlag {
     static get $javaClass() {
         return Java.type('org.bukkit.inventory.ItemFlag');
     }
@@ -21,4 +21,3 @@ export class ItemFlag {
         return this.$javaClass.HIDE_POTION_EFFECTS;
     }
 }
-//# sourceMappingURL=ItemFlag.js.map

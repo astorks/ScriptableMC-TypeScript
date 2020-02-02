@@ -1,4 +1,4 @@
-export class World$Environment {
+export default class World$Environment {
     static get $javaClass() {
         return Java.type('org.bukkit.World$Environment');
     }
@@ -12,4 +12,3 @@ export class World$Environment {
         return this.$javaClass.THE_END;
     }
 }
-//# sourceMappingURL=World$Environment.js.map

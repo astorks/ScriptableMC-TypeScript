@@ -1,4 +1,4 @@
-export class SpongeAbsorbEvent {
+export default class SpongeAbsorbEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.block.SpongeAbsorbEvent');
     }
@@ -9,4 +9,3 @@ export class SpongeAbsorbEvent {
         return SpongeAbsorbEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=SpongeAbsorbEvent.js.map

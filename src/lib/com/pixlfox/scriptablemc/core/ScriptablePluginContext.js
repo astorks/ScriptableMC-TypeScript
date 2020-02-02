@@ -1,4 +1,4 @@
-export class ScriptablePluginContext {
+export default class ScriptablePluginContext {
     static get $javaClass() {
         return Java.type('com.pixlfox.scriptablemc.core.ScriptablePluginContext');
     }
@@ -6,4 +6,3 @@ export class ScriptablePluginContext {
         return new ScriptablePluginContext.$javaClass(...args);
     }
 }
-//# sourceMappingURL=ScriptablePluginContext.js.map

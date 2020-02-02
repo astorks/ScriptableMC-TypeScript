@@ -1,4 +1,4 @@
-export class ChunkUnloadEvent {
+export default class ChunkUnloadEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.world.ChunkUnloadEvent');
     }
@@ -9,4 +9,3 @@ export class ChunkUnloadEvent {
         return ChunkUnloadEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=ChunkUnloadEvent.js.map

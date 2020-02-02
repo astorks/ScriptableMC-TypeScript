@@ -1,4 +1,4 @@
-export class Tag {
+export default class Tag {
     static get $javaClass() {
         return Java.type('org.bukkit.Tag');
     }
@@ -198,4 +198,3 @@ export class Tag {
         return Tag.$javaClass.ITEMS_LECTERN_BOOKS;
     }
 }
-//# sourceMappingURL=Tag.js.map

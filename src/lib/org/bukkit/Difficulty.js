@@ -1,4 +1,4 @@
-export class Difficulty {
+export default class Difficulty {
     static get $javaClass() {
         return Java.type('org.bukkit.Difficulty');
     }
@@ -15,4 +15,3 @@ export class Difficulty {
         return this.$javaClass.HARD;
     }
 }
-//# sourceMappingURL=Difficulty.js.map

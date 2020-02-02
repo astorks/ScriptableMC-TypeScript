@@ -1,4 +1,4 @@
-export class PlayerShearEntityEvent {
+export default class PlayerShearEntityEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerShearEntityEvent');
     }
@@ -9,4 +9,3 @@ export class PlayerShearEntityEvent {
         return PlayerShearEntityEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerShearEntityEvent.js.map

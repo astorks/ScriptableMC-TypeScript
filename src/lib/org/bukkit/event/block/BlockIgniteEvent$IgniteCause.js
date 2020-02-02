@@ -1,4 +1,4 @@
-export class BlockIgniteEvent$IgniteCause {
+export default class BlockIgniteEvent$IgniteCause {
     static get $javaClass() {
         return Java.type('org.bukkit.event.block.BlockIgniteEvent$IgniteCause');
     }
@@ -27,4 +27,3 @@ export class BlockIgniteEvent$IgniteCause {
         return this.$javaClass.ARROW;
     }
 }
-//# sourceMappingURL=BlockIgniteEvent$IgniteCause.js.map

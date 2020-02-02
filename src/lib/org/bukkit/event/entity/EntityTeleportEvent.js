@@ -1,4 +1,4 @@
-export class EntityTeleportEvent {
+export default class EntityTeleportEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.EntityTeleportEvent');
     }
@@ -9,4 +9,3 @@ export class EntityTeleportEvent {
         return EntityTeleportEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=EntityTeleportEvent.js.map

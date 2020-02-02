@@ -1,4 +1,4 @@
-export class DragType {
+export default class DragType {
     static get $javaClass() {
         return Java.type('org.bukkit.event.inventory.DragType');
     }
@@ -9,4 +9,3 @@ export class DragType {
         return this.$javaClass.EVEN;
     }
 }
-//# sourceMappingURL=DragType.js.map

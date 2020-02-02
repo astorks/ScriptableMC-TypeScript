@@ -1,5 +1,5 @@
-import { Note$Tone } from '../../org/bukkit/Note$Tone.js';
-export interface Note {
+import Note$Tone from '../../org/bukkit/Note$Tone.js';
+export default interface Note {
     sharped(): Note;
     flattened(): Note;
     getOctave(): number;
@@ -7,7 +7,7 @@ export interface Note {
     isSharped(): boolean;
     getId(): number;
 }
-export declare class Note {
+export default class Note {
     static get $javaClass(): any;
     constructor(note: number);
     constructor(octave: number, tone: Note$Tone, sharped: boolean);

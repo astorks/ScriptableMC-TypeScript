@@ -1,10 +1,10 @@
-import { Location } from '../../../org/bukkit/Location.js';
-import { Vector } from '../../../org/bukkit/util/Vector.js';
-import { RayTraceResult } from '../../../org/bukkit/util/RayTraceResult.js';
-import { BlockFace } from '../../../org/bukkit/block/BlockFace.js';
-import { Block } from '../../../org/bukkit/block/Block.js';
-import { ConfigurationSerializable } from '../../../org/bukkit/configuration/serialization/ConfigurationSerializable.js';
-export interface BoundingBox extends ConfigurationSerializable {
+import Block from '../../../org/bukkit/block/Block.js';
+import BlockFace from '../../../org/bukkit/block/BlockFace.js';
+import ConfigurationSerializable from '../../../org/bukkit/configuration/serialization/ConfigurationSerializable.js';
+import Location from '../../../org/bukkit/Location.js';
+import RayTraceResult from '../../../org/bukkit/util/RayTraceResult.js';
+import Vector from '../../../org/bukkit/util/Vector.js';
+export default interface BoundingBox extends ConfigurationSerializable {
     getMinX(): number;
     getMinY(): number;
     union(other: BoundingBox): BoundingBox;
@@ -51,7 +51,7 @@ export interface BoundingBox extends ConfigurationSerializable {
     shift(shift: Location): BoundingBox;
     shift(shiftX: number, shiftY: number, shiftZ: number): BoundingBox;
 }
-export declare class BoundingBox {
+export default class BoundingBox {
     static get $javaClass(): any;
     constructor(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number);
     constructor();

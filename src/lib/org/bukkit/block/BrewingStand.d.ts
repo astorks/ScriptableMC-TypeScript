@@ -1,25 +1,25 @@
-import { BrewerInventory } from '../../../org/bukkit/inventory/BrewerInventory.js';
-import { Inventory } from '../../../org/bukkit/inventory/Inventory.js';
-import { PersistentDataContainer } from '../../../org/bukkit/persistence/PersistentDataContainer.js';
-import { Block } from '../../../org/bukkit/block/Block.js';
-import { World } from '../../../org/bukkit/World.js';
-import { MaterialData } from '../../../org/bukkit/material/MaterialData.js';
-import { Material } from '../../../org/bukkit/Material.js';
-import { Chunk } from '../../../org/bukkit/Chunk.js';
-import { BlockData } from '../../../org/bukkit/block/data/BlockData.js';
-import { Location } from '../../../org/bukkit/Location.js';
-import { MetadataValue } from '../../../org/bukkit/metadata/MetadataValue.js';
-import { Plugin } from '../../../org/bukkit/plugin/Plugin.js';
-import { Container } from '../../../org/bukkit/block/Container.js';
-export interface BrewingStand extends Container {
+import Block from '../../../org/bukkit/block/Block.js';
+import BlockData from '../../../org/bukkit/block/data/BlockData.js';
+import BrewerInventory from '../../../org/bukkit/inventory/BrewerInventory.js';
+import Chunk from '../../../org/bukkit/Chunk.js';
+import Container from '../../../org/bukkit/block/Container.js';
+import Inventory from '../../../org/bukkit/inventory/Inventory.js';
+import Location from '../../../org/bukkit/Location.js';
+import Material from '../../../org/bukkit/Material.js';
+import MaterialData from '../../../org/bukkit/material/MaterialData.js';
+import MetadataValue from '../../../org/bukkit/metadata/MetadataValue.js';
+import PersistentDataContainer from '../../../org/bukkit/persistence/PersistentDataContainer.js';
+import Plugin from '../../../org/bukkit/plugin/Plugin.js';
+import World from '../../../org/bukkit/World.js';
+export default interface BrewingStand extends Container {
     getInventory(): BrewerInventory;
     getInventory(): Inventory;
+    getSnapshotInventory(): Inventory;
+    getSnapshotInventory(): BrewerInventory;
     getFuelLevel(): number;
     getBrewingTime(): number;
     setBrewingTime(arg0: number): void;
     setFuelLevel(arg0: number): void;
-    getSnapshotInventory(): BrewerInventory;
-    getSnapshotInventory(): Inventory;
     getPersistentDataContainer(): PersistentDataContainer;
     getBlock(): Block;
     getWorld(): World;
@@ -33,17 +33,17 @@ export interface BrewingStand extends Container {
     getBlockData(): BlockData;
     getLightLevel(): number;
     setBlockData(arg0: BlockData): void;
-    getRawData(): number;
     setRawData(arg0: number): void;
     isPlaced(): boolean;
-    update(arg0: boolean, arg1: boolean): boolean;
+    getRawData(): number;
     update(arg0: boolean): boolean;
+    update(arg0: boolean, arg1: boolean): boolean;
     update(): boolean;
     getLocation(arg0: Location): Location;
     getLocation(): Location;
     getType(): Material;
     setMetadata(arg0: string, arg1: MetadataValue): void;
-    getMetadata(arg0: string): any;
+    getMetadata(arg0: string): Array<MetadataValue>;
     hasMetadata(arg0: string): boolean;
     removeMetadata(arg0: string, arg1: Plugin): void;
     getBlock(): Block;
@@ -53,6 +53,6 @@ export interface BrewingStand extends Container {
     getCustomName(): string;
     setCustomName(arg0: string): void;
 }
-export declare class BrewingStand {
+export default class BrewingStand {
     static get $javaClass(): any;
 }

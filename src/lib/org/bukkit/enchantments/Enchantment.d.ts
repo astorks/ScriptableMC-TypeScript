@@ -1,8 +1,8 @@
-import { ItemStack } from '../../../org/bukkit/inventory/ItemStack.js';
-import { NamespacedKey } from '../../../org/bukkit/NamespacedKey.js';
-import { EnchantmentTarget } from '../../../org/bukkit/enchantments/EnchantmentTarget.js';
-import { Keyed } from '../../../org/bukkit/Keyed.js';
-export interface Enchantment extends Keyed {
+import EnchantmentTarget from '../../../org/bukkit/enchantments/EnchantmentTarget.js';
+import ItemStack from '../../../org/bukkit/inventory/ItemStack.js';
+import Keyed from '../../../org/bukkit/Keyed.js';
+import NamespacedKey from '../../../org/bukkit/NamespacedKey.js';
+export default interface Enchantment extends Keyed {
     getStartLevel(): number;
     getMaxLevel(): number;
     canEnchantItem(arg0: ItemStack): boolean;
@@ -13,7 +13,7 @@ export interface Enchantment extends Keyed {
     getName(): string;
     getKey(): NamespacedKey;
 }
-export declare class Enchantment {
+export default class Enchantment {
     static get $javaClass(): any;
     constructor(key: NamespacedKey);
     static get PROTECTION_ENVIRONMENTAL(): Enchantment;

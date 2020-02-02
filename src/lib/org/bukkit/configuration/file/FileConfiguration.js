@@ -1,4 +1,4 @@
-export class FileConfiguration {
+export default class FileConfiguration {
     static get $javaClass() {
         return Java.type('org.bukkit.configuration.file.FileConfiguration');
     }
@@ -9,4 +9,3 @@ export class FileConfiguration {
         return FileConfiguration.$javaClass.createPath(...args);
     }
 }
-//# sourceMappingURL=FileConfiguration.js.map

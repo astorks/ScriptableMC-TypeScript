@@ -1,4 +1,4 @@
-export class NamespacedKey {
+export default class NamespacedKey {
     static get $javaClass() {
         return Java.type('org.bukkit.NamespacedKey');
     }
@@ -18,4 +18,3 @@ export class NamespacedKey {
         return NamespacedKey.$javaClass.randomKey(...args);
     }
 }
-//# sourceMappingURL=NamespacedKey.js.map

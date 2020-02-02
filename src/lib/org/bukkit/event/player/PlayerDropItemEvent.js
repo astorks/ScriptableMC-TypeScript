@@ -1,4 +1,4 @@
-export class PlayerDropItemEvent {
+export default class PlayerDropItemEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerDropItemEvent');
     }
@@ -9,4 +9,3 @@ export class PlayerDropItemEvent {
         return PlayerDropItemEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerDropItemEvent.js.map

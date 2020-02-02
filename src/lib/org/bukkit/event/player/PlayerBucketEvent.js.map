@@ -1,1 +1,0 @@
-{"version":3,"file":"PlayerBucketEvent.js","sourceRoot":"","sources":["../../../../../ts/org/bukkit/event/player/PlayerBucketEvent.ts"],"names":[],"mappings":"AAyBA,MAAM,OAAO,iBAAiB;IACtB,MAAM,KAAK,UAAU;QAC3B,OAAO,IAAI,CAAC,IAAI,CAAC,2CAA2C,CAAC,CAAC;IAC/D,CAAC;IAGD,YAAY,GAAG,IAAW;QACzB,OAAO,IAAI,iBAAiB,CAAC,UAAU,CAAC,GAAG,IAAI,CAAC,CAAC;IAClD,CAAC;CACD"}

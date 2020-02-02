@@ -1,4 +1,4 @@
-export class PlayerLoginEvent$Result {
+export default class PlayerLoginEvent$Result {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerLoginEvent$Result');
     }
@@ -18,4 +18,3 @@ export class PlayerLoginEvent$Result {
         return this.$javaClass.KICK_OTHER;
     }
 }
-//# sourceMappingURL=PlayerLoginEvent$Result.js.map

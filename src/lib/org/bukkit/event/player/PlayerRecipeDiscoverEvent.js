@@ -1,4 +1,4 @@
-export class PlayerRecipeDiscoverEvent {
+export default class PlayerRecipeDiscoverEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerRecipeDiscoverEvent');
     }
@@ -9,4 +9,3 @@ export class PlayerRecipeDiscoverEvent {
         return PlayerRecipeDiscoverEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerRecipeDiscoverEvent.js.map

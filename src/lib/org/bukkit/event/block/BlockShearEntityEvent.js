@@ -1,4 +1,4 @@
-export class BlockShearEntityEvent {
+export default class BlockShearEntityEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.block.BlockShearEntityEvent');
     }
@@ -9,4 +9,3 @@ export class BlockShearEntityEvent {
         return BlockShearEntityEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=BlockShearEntityEvent.js.map

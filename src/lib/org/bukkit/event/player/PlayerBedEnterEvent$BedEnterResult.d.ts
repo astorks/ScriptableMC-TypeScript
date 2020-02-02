@@ -1,11 +1,11 @@
-export interface PlayerBedEnterEvent$BedEnterResult {
+export default interface PlayerBedEnterEvent$BedEnterResult {
     name(): string;
     compareTo(arg0: any): number;
     compareTo(arg0: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class PlayerBedEnterEvent$BedEnterResult {
+export default class PlayerBedEnterEvent$BedEnterResult {
     static get $javaClass(): any;
     static get OK(): PlayerBedEnterEvent$BedEnterResult;
     static get NOT_POSSIBLE_HERE(): PlayerBedEnterEvent$BedEnterResult;

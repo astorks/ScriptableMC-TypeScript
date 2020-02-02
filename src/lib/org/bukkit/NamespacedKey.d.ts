@@ -1,9 +1,9 @@
-import { Plugin } from '../../org/bukkit/plugin/Plugin.js';
-export interface NamespacedKey {
+import Plugin from '../../org/bukkit/plugin/Plugin.js';
+export default interface NamespacedKey {
     getNamespace(): string;
     getKey(): string;
 }
-export declare class NamespacedKey {
+export default class NamespacedKey {
     static get $javaClass(): any;
     constructor(plugin: Plugin, key: string);
     constructor(namespace: string, key: string);

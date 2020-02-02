@@ -1,5 +1,5 @@
-import { Effect$Type } from '../../org/bukkit/Effect$Type.js';
-export interface Effect {
+import Effect$Type from '../../org/bukkit/Effect$Type.js';
+export default interface Effect {
     getData(): any;
     getId(): number;
     getType(): Effect$Type;
@@ -9,7 +9,7 @@ export interface Effect {
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class Effect {
+export default class Effect {
     static get $javaClass(): any;
     static get CLICK2(): Effect;
     static get CLICK1(): Effect;

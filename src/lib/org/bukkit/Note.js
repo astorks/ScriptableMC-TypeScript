@@ -1,4 +1,4 @@
-export class Note {
+export default class Note {
     static get $javaClass() {
         return Java.type('org.bukkit.Note');
     }
@@ -15,4 +15,3 @@ export class Note {
         return Note.$javaClass.natural(...args);
     }
 }
-//# sourceMappingURL=Note.js.map

@@ -1,4 +1,4 @@
-export class PermissionAttachment {
+export default class PermissionAttachment {
     static get $javaClass() {
         return Java.type('org.bukkit.permissions.PermissionAttachment');
     }
@@ -6,4 +6,3 @@ export class PermissionAttachment {
         return new PermissionAttachment.$javaClass(...args);
     }
 }
-//# sourceMappingURL=PermissionAttachment.js.map

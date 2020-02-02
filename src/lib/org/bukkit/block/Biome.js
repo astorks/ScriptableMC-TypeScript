@@ -1,4 +1,4 @@
-export class Biome {
+export default class Biome {
     static get $javaClass() {
         return Java.type('org.bukkit.block.Biome');
     }
@@ -228,4 +228,3 @@ export class Biome {
         return this.$javaClass.BAMBOO_JUNGLE_HILLS;
     }
 }
-//# sourceMappingURL=Biome.js.map

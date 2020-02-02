@@ -1,4 +1,4 @@
-export class PlayerSwapHandItemsEvent {
+export default class PlayerSwapHandItemsEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerSwapHandItemsEvent');
     }
@@ -9,4 +9,3 @@ export class PlayerSwapHandItemsEvent {
         return PlayerSwapHandItemsEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerSwapHandItemsEvent.js.map

@@ -1,4 +1,4 @@
-export class EntityInteractEvent {
+export default class EntityInteractEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.EntityInteractEvent');
     }
@@ -9,4 +9,3 @@ export class EntityInteractEvent {
         return EntityInteractEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=EntityInteractEvent.js.map

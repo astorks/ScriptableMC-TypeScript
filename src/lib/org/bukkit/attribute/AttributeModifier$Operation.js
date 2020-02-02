@@ -1,4 +1,4 @@
-export class AttributeModifier$Operation {
+export default class AttributeModifier$Operation {
     static get $javaClass() {
         return Java.type('org.bukkit.attribute.AttributeModifier$Operation');
     }
@@ -12,4 +12,3 @@ export class AttributeModifier$Operation {
         return this.$javaClass.MULTIPLY_SCALAR_1;
     }
 }
-//# sourceMappingURL=AttributeModifier$Operation.js.map

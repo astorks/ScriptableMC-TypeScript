@@ -1,4 +1,4 @@
-export class WorldType {
+export default class WorldType {
     static get $javaClass() {
         return Java.type('org.bukkit.WorldType');
     }
@@ -24,4 +24,3 @@ export class WorldType {
         return this.$javaClass.BUFFET;
     }
 }
-//# sourceMappingURL=WorldType.js.map

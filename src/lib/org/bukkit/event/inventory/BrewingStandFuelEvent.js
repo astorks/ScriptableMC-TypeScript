@@ -1,4 +1,4 @@
-export class BrewingStandFuelEvent {
+export default class BrewingStandFuelEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.inventory.BrewingStandFuelEvent');
     }
@@ -9,4 +9,3 @@ export class BrewingStandFuelEvent {
         return BrewingStandFuelEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=BrewingStandFuelEvent.js.map

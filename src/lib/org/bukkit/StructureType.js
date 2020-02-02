@@ -1,4 +1,4 @@
-export class StructureType {
+export default class StructureType {
     static get $javaClass() {
         return Java.type('org.bukkit.StructureType');
     }
@@ -51,4 +51,3 @@ export class StructureType {
         return StructureType.$javaClass.getStructureTypes(...args);
     }
 }
-//# sourceMappingURL=StructureType.js.map

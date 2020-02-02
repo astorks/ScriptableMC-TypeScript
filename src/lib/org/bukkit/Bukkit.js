@@ -1,9 +1,12 @@
-export class Bukkit {
+export default class Bukkit {
     static get $javaClass() {
         return Java.type('org.bukkit.Bukkit');
     }
     static getLogger(...args) {
         return Bukkit.$javaClass.getLogger(...args);
+    }
+    static getServicesManager(...args) {
+        return Bukkit.$javaClass.getServicesManager(...args);
     }
     static getPluginManager(...args) {
         return Bukkit.$javaClass.getPluginManager(...args);
@@ -14,23 +17,20 @@ export class Bukkit {
     static getServer(...args) {
         return Bukkit.$javaClass.getServer(...args);
     }
-    static getOnlinePlayers(...args) {
-        return Bukkit.$javaClass.getOnlinePlayers(...args);
-    }
     static getWorld(...args) {
         return Bukkit.$javaClass.getWorld(...args);
     }
     static getConsoleSender(...args) {
         return Bukkit.$javaClass.getConsoleSender(...args);
     }
-    static getItemFactory(...args) {
-        return Bukkit.$javaClass.getItemFactory(...args);
+    static getAllowNether(...args) {
+        return Bukkit.$javaClass.getAllowNether(...args);
     }
     static getPluginCommand(...args) {
         return Bukkit.$javaClass.getPluginCommand(...args);
     }
-    static getAllowEnd(...args) {
-        return Bukkit.$javaClass.getAllowEnd(...args);
+    static getWorldType(...args) {
+        return Bukkit.$javaClass.getWorldType(...args);
     }
     static getBukkitVersion(...args) {
         return Bukkit.$javaClass.getBukkitVersion(...args);
@@ -38,8 +38,20 @@ export class Bukkit {
     static getVersion(...args) {
         return Bukkit.$javaClass.getVersion(...args);
     }
-    static getIp(...args) {
-        return Bukkit.$javaClass.getIp(...args);
+    static getAllowEnd(...args) {
+        return Bukkit.$javaClass.getAllowEnd(...args);
+    }
+    static setWhitelist(...args) {
+        return Bukkit.$javaClass.setWhitelist(...args);
+    }
+    static getWhitelistedPlayers(...args) {
+        return Bukkit.$javaClass.getWhitelistedPlayers(...args);
+    }
+    static reloadWhitelist(...args) {
+        return Bukkit.$javaClass.reloadWhitelist(...args);
+    }
+    static broadcastMessage(...args) {
+        return Bukkit.$javaClass.broadcastMessage(...args);
     }
     static getUpdateFolder(...args) {
         return Bukkit.$javaClass.getUpdateFolder(...args);
@@ -56,6 +68,9 @@ export class Bukkit {
     static getTicksPerMonsterSpawns(...args) {
         return Bukkit.$javaClass.getTicksPerMonsterSpawns(...args);
     }
+    static getPlayer(...args) {
+        return Bukkit.$javaClass.getPlayer(...args);
+    }
     static getPlayerExact(...args) {
         return Bukkit.$javaClass.getPlayerExact(...args);
     }
@@ -64,9 +79,6 @@ export class Bukkit {
     }
     static getScheduler(...args) {
         return Bukkit.$javaClass.getScheduler(...args);
-    }
-    static getServicesManager(...args) {
-        return Bukkit.$javaClass.getServicesManager(...args);
     }
     static getWorlds(...args) {
         return Bukkit.$javaClass.getWorlds(...args);
@@ -83,47 +95,29 @@ export class Bukkit {
     static reload(...args) {
         return Bukkit.$javaClass.reload(...args);
     }
-    static reloadData(...args) {
-        return Bukkit.$javaClass.reloadData(...args);
-    }
-    static savePlayers(...args) {
-        return Bukkit.$javaClass.savePlayers(...args);
-    }
     static getMaxPlayers(...args) {
         return Bukkit.$javaClass.getMaxPlayers(...args);
     }
     static getViewDistance(...args) {
         return Bukkit.$javaClass.getViewDistance(...args);
     }
+    static getIp(...args) {
+        return Bukkit.$javaClass.getIp(...args);
+    }
+    static getOnlinePlayers(...args) {
+        return Bukkit.$javaClass.getOnlinePlayers(...args);
+    }
     static getGenerateStructures(...args) {
         return Bukkit.$javaClass.getGenerateStructures(...args);
-    }
-    static getAllowNether(...args) {
-        return Bukkit.$javaClass.getAllowNether(...args);
     }
     static hasWhitelist(...args) {
         return Bukkit.$javaClass.hasWhitelist(...args);
     }
-    static setWhitelist(...args) {
-        return Bukkit.$javaClass.setWhitelist(...args);
+    static reloadData(...args) {
+        return Bukkit.$javaClass.reloadData(...args);
     }
-    static getWhitelistedPlayers(...args) {
-        return Bukkit.$javaClass.getWhitelistedPlayers(...args);
-    }
-    static reloadWhitelist(...args) {
-        return Bukkit.$javaClass.reloadWhitelist(...args);
-    }
-    static broadcastMessage(...args) {
-        return Bukkit.$javaClass.broadcastMessage(...args);
-    }
-    static getAllowFlight(...args) {
-        return Bukkit.$javaClass.getAllowFlight(...args);
-    }
-    static getWorldType(...args) {
-        return Bukkit.$javaClass.getWorldType(...args);
-    }
-    static getPlayer(...args) {
-        return Bukkit.$javaClass.getPlayer(...args);
+    static savePlayers(...args) {
+        return Bukkit.$javaClass.savePlayers(...args);
     }
     static dispatchCommand(...args) {
         return Bukkit.$javaClass.dispatchCommand(...args);
@@ -143,6 +137,9 @@ export class Bukkit {
     static resetRecipes(...args) {
         return Bukkit.$javaClass.resetRecipes(...args);
     }
+    static removeRecipe(...args) {
+        return Bukkit.$javaClass.removeRecipe(...args);
+    }
     static getCommandAliases(...args) {
         return Bukkit.$javaClass.getCommandAliases(...args);
     }
@@ -154,6 +151,9 @@ export class Bukkit {
     }
     static getOnlineMode(...args) {
         return Bukkit.$javaClass.getOnlineMode(...args);
+    }
+    static getAllowFlight(...args) {
+        return Bukkit.$javaClass.getAllowFlight(...args);
     }
     static isHardcore(...args) {
         return Bukkit.$javaClass.isHardcore(...args);
@@ -226,6 +226,9 @@ export class Bukkit {
     }
     static getWarningState(...args) {
         return Bukkit.$javaClass.getWarningState(...args);
+    }
+    static getItemFactory(...args) {
+        return Bukkit.$javaClass.getItemFactory(...args);
     }
     static getScoreboardManager(...args) {
         return Bukkit.$javaClass.getScoreboardManager(...args);
@@ -303,4 +306,3 @@ export class Bukkit {
         return Bukkit.$javaClass.createMap(...args);
     }
 }
-//# sourceMappingURL=Bukkit.js.map

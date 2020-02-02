@@ -1,4 +1,4 @@
-export class MaterialData {
+export default class MaterialData {
     static get $javaClass() {
         return Java.type('org.bukkit.material.MaterialData');
     }
@@ -6,4 +6,3 @@ export class MaterialData {
         return new MaterialData.$javaClass(...args);
     }
 }
-//# sourceMappingURL=MaterialData.js.map

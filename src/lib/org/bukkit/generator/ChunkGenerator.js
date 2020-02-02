@@ -1,4 +1,4 @@
-export class ChunkGenerator {
+export default class ChunkGenerator {
     static get $javaClass() {
         return Java.type('org.bukkit.generator.ChunkGenerator');
     }
@@ -6,4 +6,3 @@ export class ChunkGenerator {
         return new ChunkGenerator.$javaClass(...args);
     }
 }
-//# sourceMappingURL=ChunkGenerator.js.map

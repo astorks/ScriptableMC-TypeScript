@@ -1,4 +1,4 @@
-export class FireworkEffect$Type {
+export default class FireworkEffect$Type {
     static get $javaClass() {
         return Java.type('org.bukkit.FireworkEffect$Type');
     }
@@ -18,4 +18,3 @@ export class FireworkEffect$Type {
         return this.$javaClass.CREEPER;
     }
 }
-//# sourceMappingURL=FireworkEffect$Type.js.map

@@ -1,4 +1,4 @@
-export class AreaEffectCloudApplyEvent {
+export default class AreaEffectCloudApplyEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.AreaEffectCloudApplyEvent');
     }
@@ -9,4 +9,3 @@ export class AreaEffectCloudApplyEvent {
         return AreaEffectCloudApplyEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=AreaEffectCloudApplyEvent.js.map

@@ -1,17 +1,17 @@
-import { MaterialData } from '../../org/bukkit/material/MaterialData.js';
-import { BlockData } from '../../org/bukkit/block/data/BlockData.js';
-import { NamespacedKey } from '../../org/bukkit/NamespacedKey.js';
-import { Keyed } from '../../org/bukkit/Keyed.js';
-export interface Material extends Keyed {
-    getMaxDurability(): number;
+import BlockData from '../../org/bukkit/block/data/BlockData.js';
+import Keyed from '../../org/bukkit/Keyed.js';
+import MaterialData from '../../org/bukkit/material/MaterialData.js';
+import NamespacedKey from '../../org/bukkit/NamespacedKey.js';
+export default interface Material extends Keyed {
     isLegacy(): boolean;
     getData(): any;
     getNewData(raw: number): MaterialData;
     getMaxStackSize(): number;
-    hasGravity(): boolean;
-    createBlockData(): BlockData;
+    getMaxDurability(): number;
     createBlockData(data: string): BlockData;
+    createBlockData(): BlockData;
     createBlockData(consumer: any): BlockData;
+    hasGravity(): boolean;
     isBlock(): boolean;
     isEdible(): boolean;
     isRecord(): boolean;
@@ -34,7 +34,7 @@ export interface Material extends Keyed {
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class Material {
+export default class Material {
     static get $javaClass(): any;
     static get ACACIA_BOAT(): Material;
     static get ACACIA_BUTTON(): Material;

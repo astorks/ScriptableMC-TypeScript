@@ -1,4 +1,4 @@
-export class ExpBottleEvent {
+export default class ExpBottleEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.ExpBottleEvent');
     }
@@ -9,4 +9,3 @@ export class ExpBottleEvent {
         return ExpBottleEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=ExpBottleEvent.js.map

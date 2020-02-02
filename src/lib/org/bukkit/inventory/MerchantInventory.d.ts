@@ -1,29 +1,30 @@
-import { MerchantRecipe } from '../../../org/bukkit/inventory/MerchantRecipe.js';
-import { Merchant } from '../../../org/bukkit/inventory/Merchant.js';
-import { ItemStack } from '../../../org/bukkit/inventory/ItemStack.js';
-import { InventoryHolder } from '../../../org/bukkit/inventory/InventoryHolder.js';
-import { Material } from '../../../org/bukkit/Material.js';
-import { Location } from '../../../org/bukkit/Location.js';
-import { InventoryType } from '../../../org/bukkit/event/inventory/InventoryType.js';
-import { Inventory } from '../../../org/bukkit/inventory/Inventory.js';
-export interface MerchantInventory extends Inventory {
-    getSelectedRecipe(): MerchantRecipe;
-    getMerchant(): Merchant;
+import HumanEntity from '../../../org/bukkit/entity/HumanEntity.js';
+import Inventory from '../../../org/bukkit/inventory/Inventory.js';
+import InventoryHolder from '../../../org/bukkit/inventory/InventoryHolder.js';
+import InventoryType from '../../../org/bukkit/event/inventory/InventoryType.js';
+import ItemStack from '../../../org/bukkit/inventory/ItemStack.js';
+import Location from '../../../org/bukkit/Location.js';
+import Material from '../../../org/bukkit/Material.js';
+import Merchant from '../../../org/bukkit/inventory/Merchant.js';
+import MerchantRecipe from '../../../org/bukkit/inventory/MerchantRecipe.js';
+export default interface MerchantInventory extends Inventory {
     getSelectedRecipeIndex(): number;
+    getMerchant(): Merchant;
+    getSelectedRecipe(): MerchantRecipe;
     setContents(arg0: Array<ItemStack>): void;
     getMaxStackSize(): number;
+    setItem(arg0: number, arg1: ItemStack): void;
+    addItem(arg0: Array<ItemStack>): any;
+    setMaxStackSize(arg0: number): void;
+    getItem(arg0: number): ItemStack;
     removeItem(arg0: Array<ItemStack>): any;
     getContents(): Array<ItemStack>;
     getStorageContents(): Array<ItemStack>;
     setStorageContents(arg0: Array<ItemStack>): void;
     containsAtLeast(arg0: ItemStack, arg1: number): boolean;
     firstEmpty(): number;
-    getViewers(): any;
+    getViewers(): Array<HumanEntity>;
     getHolder(): InventoryHolder;
-    setItem(arg0: number, arg1: ItemStack): void;
-    addItem(arg0: Array<ItemStack>): any;
-    setMaxStackSize(arg0: number): void;
-    getItem(arg0: number): ItemStack;
     remove(arg0: ItemStack): void;
     remove(arg0: Material): void;
     clear(): void;
@@ -45,6 +46,6 @@ export interface MerchantInventory extends Inventory {
     spliterator(): any;
     forEach(arg0: any): void;
 }
-export declare class MerchantInventory {
+export default class MerchantInventory {
     static get $javaClass(): any;
 }

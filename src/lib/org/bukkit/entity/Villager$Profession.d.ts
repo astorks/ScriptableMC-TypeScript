@@ -1,6 +1,6 @@
-import { NamespacedKey } from '../../../org/bukkit/NamespacedKey.js';
-import { Keyed } from '../../../org/bukkit/Keyed.js';
-export interface Villager$Profession extends Keyed {
+import Keyed from '../../../org/bukkit/Keyed.js';
+import NamespacedKey from '../../../org/bukkit/NamespacedKey.js';
+export default interface Villager$Profession extends Keyed {
     getKey(): NamespacedKey;
     name(): string;
     compareTo(arg0: any): number;
@@ -8,7 +8,7 @@ export interface Villager$Profession extends Keyed {
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class Villager$Profession {
+export default class Villager$Profession {
     static get $javaClass(): any;
     static get NONE(): Villager$Profession;
     static get ARMORER(): Villager$Profession;

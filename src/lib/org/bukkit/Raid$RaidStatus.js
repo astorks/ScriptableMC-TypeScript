@@ -1,4 +1,4 @@
-export class Raid$RaidStatus {
+export default class Raid$RaidStatus {
     static get $javaClass() {
         return Java.type('org.bukkit.Raid$RaidStatus');
     }
@@ -15,4 +15,3 @@ export class Raid$RaidStatus {
         return this.$javaClass.STOPPED;
     }
 }
-//# sourceMappingURL=Raid$RaidStatus.js.map

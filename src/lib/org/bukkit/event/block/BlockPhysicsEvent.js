@@ -1,4 +1,4 @@
-export class BlockPhysicsEvent {
+export default class BlockPhysicsEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.block.BlockPhysicsEvent');
     }
@@ -9,4 +9,3 @@ export class BlockPhysicsEvent {
         return BlockPhysicsEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=BlockPhysicsEvent.js.map

@@ -1,4 +1,4 @@
-export class MoistureChangeEvent {
+export default class MoistureChangeEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.block.MoistureChangeEvent');
     }
@@ -9,4 +9,3 @@ export class MoistureChangeEvent {
         return MoistureChangeEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=MoistureChangeEvent.js.map

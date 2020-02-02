@@ -1,4 +1,4 @@
-export class PluginCommand {
+export default class PluginCommand {
     static get $javaClass() {
         return Java.type('org.bukkit.command.PluginCommand');
     }
@@ -6,4 +6,3 @@ export class PluginCommand {
         return PluginCommand.$javaClass.broadcastCommandMessage(...args);
     }
 }
-//# sourceMappingURL=PluginCommand.js.map

@@ -1,9 +1,15 @@
-export class ByteStreams {
+export default class ByteStreams {
     static get $javaClass() {
         return Java.type('com.google.common.io.ByteStreams');
     }
     static readFully(...args) {
         return ByteStreams.$javaClass.readFully(...args);
+    }
+    static nullOutputStream(...args) {
+        return ByteStreams.$javaClass.nullOutputStream(...args);
+    }
+    static skipFully(...args) {
+        return ByteStreams.$javaClass.skipFully(...args);
     }
     static exhaust(...args) {
         return ByteStreams.$javaClass.exhaust(...args);
@@ -13,12 +19,6 @@ export class ByteStreams {
     }
     static newDataOutput(...args) {
         return ByteStreams.$javaClass.newDataOutput(...args);
-    }
-    static nullOutputStream(...args) {
-        return ByteStreams.$javaClass.nullOutputStream(...args);
-    }
-    static skipFully(...args) {
-        return ByteStreams.$javaClass.skipFully(...args);
     }
     static limit(...args) {
         return ByteStreams.$javaClass.limit(...args);
@@ -36,4 +36,3 @@ export class ByteStreams {
         return ByteStreams.$javaClass.toByteArray(...args);
     }
 }
-//# sourceMappingURL=ByteStreams.js.map

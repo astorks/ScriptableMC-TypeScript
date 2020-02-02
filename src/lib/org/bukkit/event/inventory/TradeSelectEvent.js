@@ -1,4 +1,4 @@
-export class TradeSelectEvent {
+export default class TradeSelectEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.inventory.TradeSelectEvent');
     }
@@ -9,4 +9,3 @@ export class TradeSelectEvent {
         return TradeSelectEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=TradeSelectEvent.js.map

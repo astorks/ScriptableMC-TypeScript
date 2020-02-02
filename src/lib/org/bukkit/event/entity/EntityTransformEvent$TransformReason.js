@@ -1,4 +1,4 @@
-export class EntityTransformEvent$TransformReason {
+export default class EntityTransformEvent$TransformReason {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.EntityTransformEvent$TransformReason');
     }
@@ -21,4 +21,3 @@ export class EntityTransformEvent$TransformReason {
         return this.$javaClass.SPLIT;
     }
 }
-//# sourceMappingURL=EntityTransformEvent$TransformReason.js.map

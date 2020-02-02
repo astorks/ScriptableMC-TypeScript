@@ -1,4 +1,4 @@
-export class RayTraceResult {
+export default class RayTraceResult {
     static get $javaClass() {
         return Java.type('org.bukkit.util.RayTraceResult');
     }
@@ -6,4 +6,3 @@ export class RayTraceResult {
         return new RayTraceResult.$javaClass(...args);
     }
 }
-//# sourceMappingURL=RayTraceResult.js.map

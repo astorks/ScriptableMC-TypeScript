@@ -1,4 +1,4 @@
-export class PigZombieAngerEvent {
+export default class PigZombieAngerEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.PigZombieAngerEvent');
     }
@@ -9,4 +9,3 @@ export class PigZombieAngerEvent {
         return PigZombieAngerEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PigZombieAngerEvent.js.map

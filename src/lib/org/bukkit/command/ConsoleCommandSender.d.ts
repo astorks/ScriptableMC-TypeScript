@@ -1,12 +1,12 @@
-import { Server } from '../../../org/bukkit/Server.js';
-import { Permission } from '../../../org/bukkit/permissions/Permission.js';
-import { PermissionAttachment } from '../../../org/bukkit/permissions/PermissionAttachment.js';
-import { Plugin } from '../../../org/bukkit/plugin/Plugin.js';
-import { Conversation } from '../../../org/bukkit/conversations/Conversation.js';
-import { ConversationAbandonedEvent } from '../../../org/bukkit/conversations/ConversationAbandonedEvent.js';
-import { CommandSender } from '../../../org/bukkit/command/CommandSender.js';
-import { Conversable } from '../../../org/bukkit/conversations/Conversable.js';
-export interface ConsoleCommandSender extends CommandSender, Conversable {
+import CommandSender from '../../../org/bukkit/command/CommandSender.js';
+import Conversable from '../../../org/bukkit/conversations/Conversable.js';
+import Conversation from '../../../org/bukkit/conversations/Conversation.js';
+import ConversationAbandonedEvent from '../../../org/bukkit/conversations/ConversationAbandonedEvent.js';
+import Permission from '../../../org/bukkit/permissions/Permission.js';
+import PermissionAttachment from '../../../org/bukkit/permissions/PermissionAttachment.js';
+import Plugin from '../../../org/bukkit/plugin/Plugin.js';
+import Server from '../../../org/bukkit/Server.js';
+export default interface ConsoleCommandSender extends CommandSender, Conversable {
     getServer(): Server;
     sendMessage(arg0: string): void;
     sendMessage(arg0: Array<string>): void;
@@ -31,6 +31,6 @@ export interface ConsoleCommandSender extends CommandSender, Conversable {
     abandonConversation(arg0: Conversation): void;
     isConversing(): boolean;
 }
-export declare class ConsoleCommandSender {
+export default class ConsoleCommandSender {
     static get $javaClass(): any;
 }

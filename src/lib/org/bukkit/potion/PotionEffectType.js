@@ -1,4 +1,4 @@
-export class PotionEffectType {
+export default class PotionEffectType {
     static get $javaClass() {
         return Java.type('org.bukkit.potion.PotionEffectType');
     }
@@ -114,4 +114,3 @@ export class PotionEffectType {
         return PotionEffectType.$javaClass.values(...args);
     }
 }
-//# sourceMappingURL=PotionEffectType.js.map

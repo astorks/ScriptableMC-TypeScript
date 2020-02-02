@@ -1,7 +1,7 @@
-import { Vector } from '../../../org/bukkit/util/Vector.js';
-import { Location } from '../../../org/bukkit/Location.js';
-import { World } from '../../../org/bukkit/World.js';
-export interface BlockVector extends Vector {
+import Location from '../../../org/bukkit/Location.js';
+import Vector from '../../../org/bukkit/util/Vector.js';
+import World from '../../../org/bukkit/World.js';
+export default interface BlockVector extends Vector {
     clone(): BlockVector;
     clone(): Vector;
     clone(): any;
@@ -54,7 +54,7 @@ export interface BlockVector extends Vector {
     zero(): Vector;
     divide(vec: Vector): Vector;
 }
-export declare class BlockVector {
+export default class BlockVector {
     static get $javaClass(): any;
     constructor(x: number, y: number, z: number);
     constructor(x: number, y: number, z: number);

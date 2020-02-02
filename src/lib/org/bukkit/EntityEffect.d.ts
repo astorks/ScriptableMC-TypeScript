@@ -1,4 +1,4 @@
-export interface EntityEffect {
+export default interface EntityEffect {
     getData(): number;
     getApplicable(): any;
     name(): string;
@@ -7,7 +7,7 @@ export interface EntityEffect {
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class EntityEffect {
+export default class EntityEffect {
     static get $javaClass(): any;
     static get ARROW_PARTICLES(): EntityEffect;
     static get RABBIT_JUMP(): EntityEffect;

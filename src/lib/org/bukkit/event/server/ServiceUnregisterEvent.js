@@ -1,4 +1,4 @@
-export class ServiceUnregisterEvent {
+export default class ServiceUnregisterEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.server.ServiceUnregisterEvent');
     }
@@ -9,4 +9,3 @@ export class ServiceUnregisterEvent {
         return ServiceUnregisterEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=ServiceUnregisterEvent.js.map

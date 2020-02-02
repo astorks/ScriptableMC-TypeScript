@@ -1,15 +1,15 @@
-export interface BanEntry {
+export default interface BanEntry {
     getSource(): string;
     getExpiration(): any;
     getCreated(): any;
-    setReason(arg0: string): void;
-    getReason(): string;
-    setSource(arg0: string): void;
     setCreated(arg0: any): void;
+    setSource(arg0: string): void;
     setExpiration(arg0: any): void;
+    getReason(): string;
+    setReason(arg0: string): void;
     save(): void;
     getTarget(): string;
 }
-export declare class BanEntry {
+export default class BanEntry {
     static get $javaClass(): any;
 }

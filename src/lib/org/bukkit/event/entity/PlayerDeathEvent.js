@@ -1,4 +1,4 @@
-export class PlayerDeathEvent {
+export default class PlayerDeathEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.PlayerDeathEvent');
     }
@@ -9,4 +9,3 @@ export class PlayerDeathEvent {
         return PlayerDeathEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerDeathEvent.js.map

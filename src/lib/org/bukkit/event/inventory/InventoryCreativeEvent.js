@@ -1,4 +1,4 @@
-export class InventoryCreativeEvent {
+export default class InventoryCreativeEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.inventory.InventoryCreativeEvent');
     }
@@ -9,4 +9,3 @@ export class InventoryCreativeEvent {
         return InventoryCreativeEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=InventoryCreativeEvent.js.map

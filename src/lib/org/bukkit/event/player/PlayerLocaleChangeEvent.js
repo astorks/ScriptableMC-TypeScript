@@ -1,4 +1,4 @@
-export class PlayerLocaleChangeEvent {
+export default class PlayerLocaleChangeEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerLocaleChangeEvent');
     }
@@ -9,4 +9,3 @@ export class PlayerLocaleChangeEvent {
         return PlayerLocaleChangeEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerLocaleChangeEvent.js.map

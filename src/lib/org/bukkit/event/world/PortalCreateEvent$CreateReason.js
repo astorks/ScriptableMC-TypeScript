@@ -1,4 +1,4 @@
-export class PortalCreateEvent$CreateReason {
+export default class PortalCreateEvent$CreateReason {
     static get $javaClass() {
         return Java.type('org.bukkit.event.world.PortalCreateEvent$CreateReason');
     }
@@ -12,4 +12,3 @@ export class PortalCreateEvent$CreateReason {
         return this.$javaClass.END_PLATFORM;
     }
 }
-//# sourceMappingURL=PortalCreateEvent$CreateReason.js.map

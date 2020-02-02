@@ -1,4 +1,4 @@
-export class MapRenderer {
+export default class MapRenderer {
     static get $javaClass() {
         return Java.type('org.bukkit.map.MapRenderer');
     }
@@ -6,4 +6,3 @@ export class MapRenderer {
         return new MapRenderer.$javaClass(...args);
     }
 }
-//# sourceMappingURL=MapRenderer.js.map

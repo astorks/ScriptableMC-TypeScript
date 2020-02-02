@@ -1,4 +1,4 @@
-export class PlayerEvent {
+export default class PlayerEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerEvent');
     }
@@ -6,4 +6,3 @@ export class PlayerEvent {
         return new PlayerEvent.$javaClass(...args);
     }
 }
-//# sourceMappingURL=PlayerEvent.js.map

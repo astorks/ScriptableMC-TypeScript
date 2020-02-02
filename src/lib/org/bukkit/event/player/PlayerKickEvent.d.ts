@@ -1,20 +1,20 @@
-import { HandlerList } from '../../../../org/bukkit/event/HandlerList.js';
-import { Player } from '../../../../org/bukkit/entity/Player.js';
-import { Cancellable } from '../../../../org/bukkit/event/Cancellable.js';
-import { PlayerEvent } from '../../../../org/bukkit/event/player/PlayerEvent.js';
-export interface PlayerKickEvent extends PlayerEvent, Cancellable {
+import Cancellable from '../../../../org/bukkit/event/Cancellable.js';
+import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
+import Player from '../../../../org/bukkit/entity/Player.js';
+import PlayerEvent from '../../../../org/bukkit/event/player/PlayerEvent.js';
+export default interface PlayerKickEvent extends PlayerEvent, Cancellable {
     getHandlers(): HandlerList;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    setReason(kickReason: string): void;
     getReason(): string;
+    setReason(kickReason: string): void;
     getLeaveMessage(): string;
     setLeaveMessage(leaveMessage: string): void;
     getPlayer(): Player;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
-export declare class PlayerKickEvent {
+export default class PlayerKickEvent {
     static get $javaClass(): any;
     constructor(playerKicked: Player, kickReason: string, leaveMessage: string);
     static getHandlerList(): HandlerList;

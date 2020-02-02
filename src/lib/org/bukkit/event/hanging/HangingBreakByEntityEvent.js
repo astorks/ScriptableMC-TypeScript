@@ -1,4 +1,4 @@
-export class HangingBreakByEntityEvent {
+export default class HangingBreakByEntityEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.hanging.HangingBreakByEntityEvent');
     }
@@ -9,4 +9,3 @@ export class HangingBreakByEntityEvent {
         return HangingBreakByEntityEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=HangingBreakByEntityEvent.js.map

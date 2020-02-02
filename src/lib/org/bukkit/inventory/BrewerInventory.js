@@ -1,6 +1,5 @@
-export class BrewerInventory {
+export default class BrewerInventory {
     static get $javaClass() {
         return Java.type('org.bukkit.inventory.BrewerInventory');
     }
 }
-//# sourceMappingURL=BrewerInventory.js.map

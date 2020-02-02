@@ -1,4 +1,4 @@
-export class TreeType {
+export default class TreeType {
     static get $javaClass() {
         return Java.type('org.bukkit.TreeType');
     }
@@ -54,4 +54,3 @@ export class TreeType {
         return this.$javaClass.CHORUS_PLANT;
     }
 }
-//# sourceMappingURL=TreeType.js.map

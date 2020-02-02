@@ -1,4 +1,4 @@
-export class EntityPoseChangeEvent {
+export default class EntityPoseChangeEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.EntityPoseChangeEvent');
     }
@@ -9,4 +9,3 @@ export class EntityPoseChangeEvent {
         return EntityPoseChangeEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=EntityPoseChangeEvent.js.map

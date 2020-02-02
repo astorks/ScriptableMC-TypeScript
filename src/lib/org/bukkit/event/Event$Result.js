@@ -1,4 +1,4 @@
-export class Event$Result {
+export default class Event$Result {
     static get $javaClass() {
         return Java.type('org.bukkit.event.Event$Result');
     }
@@ -12,4 +12,3 @@ export class Event$Result {
         return this.$javaClass.ALLOW;
     }
 }
-//# sourceMappingURL=Event$Result.js.map

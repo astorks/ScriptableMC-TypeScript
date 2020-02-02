@@ -1,4 +1,4 @@
-export class EntityRegainHealthEvent {
+export default class EntityRegainHealthEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.EntityRegainHealthEvent');
     }
@@ -9,4 +9,3 @@ export class EntityRegainHealthEvent {
         return EntityRegainHealthEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=EntityRegainHealthEvent.js.map

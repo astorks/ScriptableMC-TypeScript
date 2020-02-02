@@ -1,4 +1,4 @@
-export class InventoryMoveItemEvent {
+export default class InventoryMoveItemEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.inventory.InventoryMoveItemEvent');
     }
@@ -9,4 +9,3 @@ export class InventoryMoveItemEvent {
         return InventoryMoveItemEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=InventoryMoveItemEvent.js.map

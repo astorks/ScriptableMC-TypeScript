@@ -1,4 +1,4 @@
-export class Server {
+export default class Server {
     static get $javaClass() {
         return Java.type('org.bukkit.Server');
     }
@@ -9,4 +9,3 @@ export class Server {
         return Server.$javaClass.BROADCAST_CHANNEL_USERS;
     }
 }
-//# sourceMappingURL=Server.js.map

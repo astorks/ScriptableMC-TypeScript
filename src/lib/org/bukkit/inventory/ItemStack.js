@@ -1,4 +1,4 @@
-export class ItemStack {
+export default class ItemStack {
     static get $javaClass() {
         return Java.type('org.bukkit.inventory.ItemStack');
     }
@@ -9,4 +9,3 @@ export class ItemStack {
         return ItemStack.$javaClass.deserialize(...args);
     }
 }
-//# sourceMappingURL=ItemStack.js.map

@@ -1,11 +1,11 @@
-import { HandlerList } from '../../../../org/bukkit/event/HandlerList.js';
-import { Event } from '../../../../org/bukkit/event/Event.js';
-export interface ServerEvent extends Event {
+import Event from '../../../../org/bukkit/event/Event.js';
+import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
+export default interface ServerEvent extends Event {
     getHandlers(): HandlerList;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
-export declare class ServerEvent {
+export default class ServerEvent {
     static get $javaClass(): any;
     constructor();
     constructor(isAsync: boolean);

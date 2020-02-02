@@ -1,4 +1,4 @@
-export class SheepRegrowWoolEvent {
+export default class SheepRegrowWoolEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.SheepRegrowWoolEvent');
     }
@@ -9,4 +9,3 @@ export class SheepRegrowWoolEvent {
         return SheepRegrowWoolEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=SheepRegrowWoolEvent.js.map

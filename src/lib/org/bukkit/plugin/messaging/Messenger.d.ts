@@ -1,8 +1,8 @@
-import { PluginMessageListenerRegistration } from '../../../../org/bukkit/plugin/messaging/PluginMessageListenerRegistration.js';
-import { Plugin } from '../../../../org/bukkit/plugin/Plugin.js';
-import { PluginMessageListener } from '../../../../org/bukkit/plugin/messaging/PluginMessageListener.js';
-import { Player } from '../../../../org/bukkit/entity/Player.js';
-export interface Messenger {
+import Player from '../../../../org/bukkit/entity/Player.js';
+import Plugin from '../../../../org/bukkit/plugin/Plugin.js';
+import PluginMessageListener from '../../../../org/bukkit/plugin/messaging/PluginMessageListener.js';
+import PluginMessageListenerRegistration from '../../../../org/bukkit/plugin/messaging/PluginMessageListenerRegistration.js';
+export default interface Messenger {
     registerIncomingPluginChannel(arg0: Plugin, arg1: string, arg2: PluginMessageListener): PluginMessageListenerRegistration;
     unregisterIncomingPluginChannel(arg0: Plugin, arg1: string): void;
     unregisterIncomingPluginChannel(arg0: Plugin): void;
@@ -23,7 +23,7 @@ export interface Messenger {
     dispatchIncomingMessage(arg0: Player, arg1: string, arg2: Array<number>): void;
     isReservedChannel(arg0: string): boolean;
 }
-export declare class Messenger {
+export default class Messenger {
     static get $javaClass(): any;
     static get MAX_MESSAGE_SIZE(): number;
     static get MAX_CHANNEL_SIZE(): number;

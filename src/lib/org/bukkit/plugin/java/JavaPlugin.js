@@ -1,4 +1,4 @@
-export class JavaPlugin {
+export default class JavaPlugin {
     static get $javaClass() {
         return Java.type('org.bukkit.plugin.java.JavaPlugin');
     }
@@ -12,4 +12,3 @@ export class JavaPlugin {
         return JavaPlugin.$javaClass.getProvidingPlugin(...args);
     }
 }
-//# sourceMappingURL=JavaPlugin.js.map

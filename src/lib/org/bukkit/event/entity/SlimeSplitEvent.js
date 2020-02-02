@@ -1,4 +1,4 @@
-export class SlimeSplitEvent {
+export default class SlimeSplitEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.SlimeSplitEvent');
     }
@@ -9,4 +9,3 @@ export class SlimeSplitEvent {
         return SlimeSplitEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=SlimeSplitEvent.js.map

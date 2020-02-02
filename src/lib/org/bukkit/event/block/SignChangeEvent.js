@@ -1,4 +1,4 @@
-export class SignChangeEvent {
+export default class SignChangeEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.block.SignChangeEvent');
     }
@@ -9,4 +9,3 @@ export class SignChangeEvent {
         return SignChangeEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=SignChangeEvent.js.map

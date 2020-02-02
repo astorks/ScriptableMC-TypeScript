@@ -1,4 +1,4 @@
-export class CreatureSpawnEvent$SpawnReason {
+export default class CreatureSpawnEvent$SpawnReason {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.CreatureSpawnEvent$SpawnReason');
     }
@@ -102,4 +102,3 @@ export class CreatureSpawnEvent$SpawnReason {
         return this.$javaClass.DEFAULT;
     }
 }
-//# sourceMappingURL=CreatureSpawnEvent$SpawnReason.js.map

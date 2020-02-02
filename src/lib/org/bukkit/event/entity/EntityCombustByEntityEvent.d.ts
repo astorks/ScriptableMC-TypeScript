@@ -1,8 +1,8 @@
-import { Entity } from '../../../../org/bukkit/entity/Entity.js';
-import { HandlerList } from '../../../../org/bukkit/event/HandlerList.js';
-import { EntityType } from '../../../../org/bukkit/entity/EntityType.js';
-import { EntityCombustEvent } from '../../../../org/bukkit/event/entity/EntityCombustEvent.js';
-export interface EntityCombustByEntityEvent extends EntityCombustEvent {
+import Entity from '../../../../org/bukkit/entity/Entity.js';
+import EntityCombustEvent from '../../../../org/bukkit/event/entity/EntityCombustEvent.js';
+import EntityType from '../../../../org/bukkit/entity/EntityType.js';
+import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
+export default interface EntityCombustByEntityEvent extends EntityCombustEvent {
     getCombuster(): Entity;
     getHandlers(): HandlerList;
     isCancelled(): boolean;
@@ -11,10 +11,10 @@ export interface EntityCombustByEntityEvent extends EntityCombustEvent {
     setDuration(duration: number): void;
     getEntity(): Entity;
     getEntityType(): EntityType;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
-export declare class EntityCombustByEntityEvent {
+export default class EntityCombustByEntityEvent {
     static get $javaClass(): any;
     constructor(combuster: Entity, combustee: Entity, duration: number);
     static getHandlerList(): HandlerList;

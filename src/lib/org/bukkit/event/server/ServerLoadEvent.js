@@ -1,4 +1,4 @@
-export class ServerLoadEvent {
+export default class ServerLoadEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.server.ServerLoadEvent');
     }
@@ -9,4 +9,3 @@ export class ServerLoadEvent {
         return ServerLoadEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=ServerLoadEvent.js.map

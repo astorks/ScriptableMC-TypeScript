@@ -1,8 +1,8 @@
-import { Location } from '../../../org/bukkit/Location.js';
-import { World } from '../../../org/bukkit/World.js';
-import { BlockVector } from '../../../org/bukkit/util/BlockVector.js';
-import { ConfigurationSerializable } from '../../../org/bukkit/configuration/serialization/ConfigurationSerializable.js';
-export interface Vector extends ConfigurationSerializable {
+import BlockVector from '../../../org/bukkit/util/BlockVector.js';
+import ConfigurationSerializable from '../../../org/bukkit/configuration/serialization/ConfigurationSerializable.js';
+import Location from '../../../org/bukkit/Location.js';
+import World from '../../../org/bukkit/World.js';
+export default interface Vector extends ConfigurationSerializable {
     isNormalized(): boolean;
     serialize(): any;
     setX(x: number): Vector;
@@ -54,7 +54,7 @@ export interface Vector extends ConfigurationSerializable {
     zero(): Vector;
     divide(vec: Vector): Vector;
 }
-export declare class Vector {
+export default class Vector {
     static get $javaClass(): any;
     constructor(x: number, y: number, z: number);
     constructor();

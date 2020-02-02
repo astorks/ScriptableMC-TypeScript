@@ -1,4 +1,4 @@
-export class EntityDamageEvent$DamageModifier {
+export default class EntityDamageEvent$DamageModifier {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.EntityDamageEvent$DamageModifier');
     }
@@ -24,4 +24,3 @@ export class EntityDamageEvent$DamageModifier {
         return this.$javaClass.ABSORPTION;
     }
 }
-//# sourceMappingURL=EntityDamageEvent$DamageModifier.js.map

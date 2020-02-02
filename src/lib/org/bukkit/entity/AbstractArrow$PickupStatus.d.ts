@@ -1,11 +1,11 @@
-export interface AbstractArrow$PickupStatus {
+export default interface AbstractArrow$PickupStatus {
     name(): string;
     compareTo(arg0: any): number;
     compareTo(arg0: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class AbstractArrow$PickupStatus {
+export default class AbstractArrow$PickupStatus {
     static get $javaClass(): any;
     static get DISALLOWED(): AbstractArrow$PickupStatus;
     static get ALLOWED(): AbstractArrow$PickupStatus;

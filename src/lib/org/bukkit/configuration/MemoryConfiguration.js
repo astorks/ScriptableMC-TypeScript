@@ -1,4 +1,4 @@
-export class MemoryConfiguration {
+export default class MemoryConfiguration {
     static get $javaClass() {
         return Java.type('org.bukkit.configuration.MemoryConfiguration');
     }
@@ -9,4 +9,3 @@ export class MemoryConfiguration {
         return MemoryConfiguration.$javaClass.createPath(...args);
     }
 }
-//# sourceMappingURL=MemoryConfiguration.js.map

@@ -1,13 +1,13 @@
-import { Enchantment } from '../../../org/bukkit/enchantments/Enchantment.js';
-export interface EnchantmentOffer {
+import Enchantment from '../../../org/bukkit/enchantments/Enchantment.js';
+export default interface EnchantmentOffer {
     getEnchantmentLevel(): number;
     getEnchantment(): Enchantment;
+    setCost(cost: number): void;
     getCost(): number;
     setEnchantment(enchantment: Enchantment): void;
     setEnchantmentLevel(enchantmentLevel: number): void;
-    setCost(cost: number): void;
 }
-export declare class EnchantmentOffer {
+export default class EnchantmentOffer {
     static get $javaClass(): any;
     constructor(enchantment: Enchantment, enchantmentLevel: number, cost: number);
 }

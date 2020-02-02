@@ -1,5 +1,5 @@
-import { Color } from '../../org/bukkit/Color.js';
-export interface DyeColor {
+import Color from '../../org/bukkit/Color.js';
+export default interface DyeColor {
     getColor(): Color;
     getFireworkColor(): Color;
     getWoolData(): number;
@@ -10,7 +10,7 @@ export interface DyeColor {
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class DyeColor {
+export default class DyeColor {
     static get $javaClass(): any;
     static get WHITE(): DyeColor;
     static get ORANGE(): DyeColor;

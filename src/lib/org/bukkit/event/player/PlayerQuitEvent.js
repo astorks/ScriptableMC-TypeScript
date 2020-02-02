@@ -1,4 +1,4 @@
-export class PlayerQuitEvent {
+export default class PlayerQuitEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerQuitEvent');
     }
@@ -9,4 +9,3 @@ export class PlayerQuitEvent {
         return PlayerQuitEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerQuitEvent.js.map

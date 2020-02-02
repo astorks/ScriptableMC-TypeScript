@@ -1,4 +1,4 @@
-export class InventoryType {
+export default class InventoryType {
     static get $javaClass() {
         return Java.type('org.bukkit.event.inventory.InventoryType');
     }
@@ -75,4 +75,3 @@ export class InventoryType {
         return this.$javaClass.STONECUTTER;
     }
 }
-//# sourceMappingURL=InventoryType.js.map

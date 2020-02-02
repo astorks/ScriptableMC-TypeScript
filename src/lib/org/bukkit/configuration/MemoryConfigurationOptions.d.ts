@@ -1,7 +1,7 @@
-import { ConfigurationOptions } from '../../../org/bukkit/configuration/ConfigurationOptions.js';
-import { MemoryConfiguration } from '../../../org/bukkit/configuration/MemoryConfiguration.js';
-import { Configuration } from '../../../org/bukkit/configuration/Configuration.js';
-export interface MemoryConfigurationOptions extends ConfigurationOptions {
+import Configuration from '../../../org/bukkit/configuration/Configuration.js';
+import ConfigurationOptions from '../../../org/bukkit/configuration/ConfigurationOptions.js';
+import MemoryConfiguration from '../../../org/bukkit/configuration/MemoryConfiguration.js';
+export default interface MemoryConfigurationOptions extends ConfigurationOptions {
     copyDefaults(value: boolean): MemoryConfigurationOptions;
     copyDefaults(value: boolean): ConfigurationOptions;
     configuration(): MemoryConfiguration;
@@ -11,6 +11,6 @@ export interface MemoryConfigurationOptions extends ConfigurationOptions {
     copyDefaults(): boolean;
     pathSeparator(): string;
 }
-export declare class MemoryConfigurationOptions {
+export default class MemoryConfigurationOptions {
     static get $javaClass(): any;
 }

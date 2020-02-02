@@ -1,22 +1,23 @@
-import { HandlerList } from '../../../../org/bukkit/event/HandlerList.js';
-import { LivingEntity } from '../../../../org/bukkit/entity/LivingEntity.js';
-import { Entity } from '../../../../org/bukkit/entity/Entity.js';
-import { EntityType } from '../../../../org/bukkit/entity/EntityType.js';
-import { EntityEvent } from '../../../../org/bukkit/event/entity/EntityEvent.js';
-export interface EntityDeathEvent extends EntityEvent {
+import Entity from '../../../../org/bukkit/entity/Entity.js';
+import EntityEvent from '../../../../org/bukkit/event/entity/EntityEvent.js';
+import EntityType from '../../../../org/bukkit/entity/EntityType.js';
+import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
+import ItemStack from '../../../../org/bukkit/inventory/ItemStack.js';
+import LivingEntity from '../../../../org/bukkit/entity/LivingEntity.js';
+export default interface EntityDeathEvent extends EntityEvent {
     getHandlers(): HandlerList;
     getEntity(): LivingEntity;
     getEntity(): Entity;
-    getDrops(): any;
+    getDrops(): Array<ItemStack>;
     getDroppedExp(): number;
     setDroppedExp(exp: number): void;
     getEntityType(): EntityType;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
-export declare class EntityDeathEvent {
+export default class EntityDeathEvent {
     static get $javaClass(): any;
-    constructor(entity: LivingEntity, drops: any);
-    constructor(what: LivingEntity, drops: any, droppedExp: number);
+    constructor(entity: LivingEntity, drops: Array<any>);
+    constructor(what: LivingEntity, drops: Array<any>, droppedExp: number);
     static getHandlerList(): HandlerList;
 }

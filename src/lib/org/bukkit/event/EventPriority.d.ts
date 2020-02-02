@@ -1,4 +1,4 @@
-export interface EventPriority {
+export default interface EventPriority {
     getSlot(): number;
     name(): string;
     compareTo(arg0: any): number;
@@ -6,7 +6,7 @@ export interface EventPriority {
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class EventPriority {
+export default class EventPriority {
     static get $javaClass(): any;
     static get LOWEST(): EventPriority;
     static get LOW(): EventPriority;

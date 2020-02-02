@@ -1,4 +1,4 @@
-export class MapFont$CharacterSprite {
+export default class MapFont$CharacterSprite {
     static get $javaClass() {
         return Java.type('org.bukkit.map.MapFont$CharacterSprite');
     }
@@ -6,4 +6,3 @@ export class MapFont$CharacterSprite {
         return new MapFont$CharacterSprite.$javaClass(...args);
     }
 }
-//# sourceMappingURL=MapFont$CharacterSprite.js.map

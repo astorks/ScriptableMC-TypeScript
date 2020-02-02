@@ -1,4 +1,4 @@
-export class EntityTargetEvent$TargetReason {
+export default class EntityTargetEvent$TargetReason {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.EntityTargetEvent$TargetReason');
     }
@@ -54,4 +54,3 @@ export class EntityTargetEvent$TargetReason {
         return this.$javaClass.UNKNOWN;
     }
 }
-//# sourceMappingURL=EntityTargetEvent$TargetReason.js.map

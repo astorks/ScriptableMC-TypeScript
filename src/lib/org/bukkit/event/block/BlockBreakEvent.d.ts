@@ -1,9 +1,9 @@
-import { Player } from '../../../../org/bukkit/entity/Player.js';
-import { HandlerList } from '../../../../org/bukkit/event/HandlerList.js';
-import { Block } from '../../../../org/bukkit/block/Block.js';
-import { Cancellable } from '../../../../org/bukkit/event/Cancellable.js';
-import { BlockExpEvent } from '../../../../org/bukkit/event/block/BlockExpEvent.js';
-export interface BlockBreakEvent extends BlockExpEvent, Cancellable {
+import Block from '../../../../org/bukkit/block/Block.js';
+import BlockExpEvent from '../../../../org/bukkit/event/block/BlockExpEvent.js';
+import Cancellable from '../../../../org/bukkit/event/Cancellable.js';
+import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
+import Player from '../../../../org/bukkit/entity/Player.js';
+export default interface BlockBreakEvent extends BlockExpEvent, Cancellable {
     getPlayer(): Player;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
@@ -13,10 +13,10 @@ export interface BlockBreakEvent extends BlockExpEvent, Cancellable {
     getExpToDrop(): number;
     setExpToDrop(exp: number): void;
     getBlock(): Block;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
-export declare class BlockBreakEvent {
+export default class BlockBreakEvent {
     static get $javaClass(): any;
     constructor(theBlock: Block, player: Player);
     static getHandlerList(): HandlerList;

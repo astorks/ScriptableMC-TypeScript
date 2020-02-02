@@ -1,4 +1,4 @@
-export class PluginBase {
+export default class PluginBase {
     static get $javaClass() {
         return Java.type('org.bukkit.plugin.PluginBase');
     }
@@ -6,4 +6,3 @@ export class PluginBase {
         return new PluginBase.$javaClass(...args);
     }
 }
-//# sourceMappingURL=PluginBase.js.map

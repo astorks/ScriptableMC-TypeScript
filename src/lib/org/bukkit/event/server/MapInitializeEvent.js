@@ -1,4 +1,4 @@
-export class MapInitializeEvent {
+export default class MapInitializeEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.server.MapInitializeEvent');
     }
@@ -9,4 +9,3 @@ export class MapInitializeEvent {
         return MapInitializeEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=MapInitializeEvent.js.map

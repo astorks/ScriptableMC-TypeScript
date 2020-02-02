@@ -1,4 +1,4 @@
-export class WorldUnloadEvent {
+export default class WorldUnloadEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.world.WorldUnloadEvent');
     }
@@ -9,4 +9,3 @@ export class WorldUnloadEvent {
         return WorldUnloadEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=WorldUnloadEvent.js.map

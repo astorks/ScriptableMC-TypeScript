@@ -1,4 +1,4 @@
-export class BanList$Type {
+export default class BanList$Type {
     static get $javaClass() {
         return Java.type('org.bukkit.BanList$Type');
     }
@@ -9,4 +9,3 @@ export class BanList$Type {
         return this.$javaClass.IP;
     }
 }
-//# sourceMappingURL=BanList$Type.js.map

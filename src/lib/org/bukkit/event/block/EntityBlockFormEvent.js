@@ -1,4 +1,4 @@
-export class EntityBlockFormEvent {
+export default class EntityBlockFormEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.block.EntityBlockFormEvent');
     }
@@ -9,4 +9,3 @@ export class EntityBlockFormEvent {
         return EntityBlockFormEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=EntityBlockFormEvent.js.map

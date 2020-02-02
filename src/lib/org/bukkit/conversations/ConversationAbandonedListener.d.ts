@@ -1,7 +1,7 @@
-import { ConversationAbandonedEvent } from '../../../org/bukkit/conversations/ConversationAbandonedEvent.js';
-export interface ConversationAbandonedListener {
+import ConversationAbandonedEvent from '../../../org/bukkit/conversations/ConversationAbandonedEvent.js';
+export default interface ConversationAbandonedListener {
     conversationAbandoned(arg0: ConversationAbandonedEvent): void;
 }
-export declare class ConversationAbandonedListener {
+export default class ConversationAbandonedListener {
     static get $javaClass(): any;
 }

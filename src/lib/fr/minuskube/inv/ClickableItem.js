@@ -1,4 +1,4 @@
-export class ClickableItem {
+export default class ClickableItem {
     static get $javaClass() {
         return Java.type('fr.minuskube.inv.ClickableItem');
     }
@@ -9,4 +9,3 @@ export class ClickableItem {
         return ClickableItem.$javaClass.empty(...args);
     }
 }
-//# sourceMappingURL=ClickableItem.js.map

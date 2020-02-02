@@ -1,5 +1,5 @@
-import { Material } from '../../../../org/bukkit/Material.js';
-export interface BlockData {
+import Material from '../../../../org/bukkit/Material.js';
+export default interface BlockData {
     getMaterial(): Material;
     getAsString(arg0: boolean): string;
     getAsString(): string;
@@ -8,6 +8,6 @@ export interface BlockData {
     matches(arg0: BlockData): boolean;
     merge(arg0: BlockData): BlockData;
 }
-export declare class BlockData {
+export default class BlockData {
     static get $javaClass(): any;
 }

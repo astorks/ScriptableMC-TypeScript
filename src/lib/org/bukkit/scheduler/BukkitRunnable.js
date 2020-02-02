@@ -1,4 +1,4 @@
-export class BukkitRunnable {
+export default class BukkitRunnable {
     static get $javaClass() {
         return Java.type('org.bukkit.scheduler.BukkitRunnable');
     }
@@ -6,4 +6,3 @@ export class BukkitRunnable {
         return new BukkitRunnable.$javaClass(...args);
     }
 }
-//# sourceMappingURL=BukkitRunnable.js.map

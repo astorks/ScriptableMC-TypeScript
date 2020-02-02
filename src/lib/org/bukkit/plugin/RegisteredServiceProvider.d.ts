@@ -1,6 +1,6 @@
-import { Plugin } from '../../../org/bukkit/plugin/Plugin.js';
-import { ServicePriority } from '../../../org/bukkit/plugin/ServicePriority.js';
-export interface RegisteredServiceProvider {
+import Plugin from '../../../org/bukkit/plugin/Plugin.js';
+import ServicePriority from '../../../org/bukkit/plugin/ServicePriority.js';
+export default interface RegisteredServiceProvider {
     getProvider(): any;
     getPlugin(): Plugin;
     getService(): any;
@@ -8,7 +8,7 @@ export interface RegisteredServiceProvider {
     compareTo(arg0: any): number;
     getPriority(): ServicePriority;
 }
-export declare class RegisteredServiceProvider {
+export default class RegisteredServiceProvider {
     static get $javaClass(): any;
     constructor(service: any, provider: any, priority: ServicePriority, plugin: Plugin);
 }

@@ -1,4 +1,4 @@
-export class RegisteredServiceProvider {
+export default class RegisteredServiceProvider {
     static get $javaClass() {
         return Java.type('org.bukkit.plugin.RegisteredServiceProvider');
     }
@@ -6,4 +6,3 @@ export class RegisteredServiceProvider {
         return new RegisteredServiceProvider.$javaClass(...args);
     }
 }
-//# sourceMappingURL=RegisteredServiceProvider.js.map

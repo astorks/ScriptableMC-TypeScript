@@ -1,4 +1,4 @@
-export class PlayerFishEvent$State {
+export default class PlayerFishEvent$State {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerFishEvent$State');
     }
@@ -24,4 +24,3 @@ export class PlayerFishEvent$State {
         return this.$javaClass.BITE;
     }
 }
-//# sourceMappingURL=PlayerFishEvent$State.js.map

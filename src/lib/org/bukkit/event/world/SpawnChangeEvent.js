@@ -1,4 +1,4 @@
-export class SpawnChangeEvent {
+export default class SpawnChangeEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.world.SpawnChangeEvent');
     }
@@ -9,4 +9,3 @@ export class SpawnChangeEvent {
         return SpawnChangeEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=SpawnChangeEvent.js.map

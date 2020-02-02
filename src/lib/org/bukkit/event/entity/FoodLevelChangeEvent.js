@@ -1,4 +1,4 @@
-export class FoodLevelChangeEvent {
+export default class FoodLevelChangeEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.FoodLevelChangeEvent');
     }
@@ -9,4 +9,3 @@ export class FoodLevelChangeEvent {
         return FoodLevelChangeEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=FoodLevelChangeEvent.js.map

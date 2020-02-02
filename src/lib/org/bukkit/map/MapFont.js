@@ -1,4 +1,4 @@
-export class MapFont {
+export default class MapFont {
     static get $javaClass() {
         return Java.type('org.bukkit.map.MapFont');
     }
@@ -6,4 +6,3 @@ export class MapFont {
         return new MapFont.$javaClass(...args);
     }
 }
-//# sourceMappingURL=MapFont.js.map

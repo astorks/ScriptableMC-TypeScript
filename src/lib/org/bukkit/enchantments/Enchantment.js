@@ -1,4 +1,4 @@
-export class Enchantment {
+export default class Enchantment {
     static get $javaClass() {
         return Java.type('org.bukkit.enchantments.Enchantment');
     }
@@ -135,4 +135,3 @@ export class Enchantment {
         return Enchantment.$javaClass.values(...args);
     }
 }
-//# sourceMappingURL=Enchantment.js.map

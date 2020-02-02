@@ -1,4 +1,4 @@
-export interface ClickType {
+export default interface ClickType {
     isRightClick(): boolean;
     isLeftClick(): boolean;
     isShiftClick(): boolean;
@@ -10,7 +10,7 @@ export interface ClickType {
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class ClickType {
+export default class ClickType {
     static get $javaClass(): any;
     static get LEFT(): ClickType;
     static get SHIFT_LEFT(): ClickType;

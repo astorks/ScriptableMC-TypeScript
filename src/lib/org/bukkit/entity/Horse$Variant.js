@@ -1,4 +1,4 @@
-export class Horse$Variant {
+export default class Horse$Variant {
     static get $javaClass() {
         return Java.type('org.bukkit.entity.Horse$Variant');
     }
@@ -21,4 +21,3 @@ export class Horse$Variant {
         return this.$javaClass.LLAMA;
     }
 }
-//# sourceMappingURL=Horse$Variant.js.map

@@ -1,4 +1,4 @@
-export interface InventoryType {
+export default interface InventoryType {
     isCreatable(): boolean;
     getDefaultSize(): number;
     getDefaultTitle(): string;
@@ -8,7 +8,7 @@ export interface InventoryType {
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class InventoryType {
+export default class InventoryType {
     static get $javaClass(): any;
     static get CHEST(): InventoryType;
     static get DISPENSER(): InventoryType;

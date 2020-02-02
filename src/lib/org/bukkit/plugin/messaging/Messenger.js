@@ -1,4 +1,4 @@
-export class Messenger {
+export default class Messenger {
     static get $javaClass() {
         return Java.type('org.bukkit.plugin.messaging.Messenger');
     }
@@ -9,4 +9,3 @@ export class Messenger {
         return Messenger.$javaClass.MAX_CHANNEL_SIZE;
     }
 }
-//# sourceMappingURL=Messenger.js.map

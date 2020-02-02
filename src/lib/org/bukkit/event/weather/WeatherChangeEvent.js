@@ -1,4 +1,4 @@
-export class WeatherChangeEvent {
+export default class WeatherChangeEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.weather.WeatherChangeEvent');
     }
@@ -9,4 +9,3 @@ export class WeatherChangeEvent {
         return WeatherChangeEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=WeatherChangeEvent.js.map

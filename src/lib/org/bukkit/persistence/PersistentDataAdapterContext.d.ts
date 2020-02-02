@@ -1,7 +1,7 @@
-import { PersistentDataContainer } from '../../../org/bukkit/persistence/PersistentDataContainer.js';
-export interface PersistentDataAdapterContext {
+import PersistentDataContainer from '../../../org/bukkit/persistence/PersistentDataContainer.js';
+export default interface PersistentDataAdapterContext {
     newPersistentDataContainer(): PersistentDataContainer;
 }
-export declare class PersistentDataAdapterContext {
+export default class PersistentDataAdapterContext {
     static get $javaClass(): any;
 }

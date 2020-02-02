@@ -1,15 +1,15 @@
-import { Scoreboard } from '../../../org/bukkit/scoreboard/Scoreboard.js';
-import { OfflinePlayer } from '../../../org/bukkit/OfflinePlayer.js';
-import { Objective } from '../../../org/bukkit/scoreboard/Objective.js';
-export interface Score {
-    getScoreboard(): Scoreboard;
+import Objective from '../../../org/bukkit/scoreboard/Objective.js';
+import OfflinePlayer from '../../../org/bukkit/OfflinePlayer.js';
+import Scoreboard from '../../../org/bukkit/scoreboard/Scoreboard.js';
+export default interface Score {
     getPlayer(): OfflinePlayer;
+    getScoreboard(): Scoreboard;
     getObjective(): Objective;
-    setScore(arg0: number): void;
-    isScoreSet(): boolean;
     getScore(): number;
+    isScoreSet(): boolean;
+    setScore(arg0: number): void;
     getEntry(): string;
 }
-export declare class Score {
+export default class Score {
     static get $javaClass(): any;
 }

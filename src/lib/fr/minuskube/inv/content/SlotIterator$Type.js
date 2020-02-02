@@ -1,4 +1,4 @@
-export class SlotIterator$Type {
+export default class SlotIterator$Type {
     static get $javaClass() {
         return Java.type('fr.minuskube.inv.content.SlotIterator$Type');
     }
@@ -9,4 +9,3 @@ export class SlotIterator$Type {
         return this.$javaClass.VERTICAL;
     }
 }
-//# sourceMappingURL=SlotIterator$Type.js.map

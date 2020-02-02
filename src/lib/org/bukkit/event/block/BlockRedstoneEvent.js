@@ -1,4 +1,4 @@
-export class BlockRedstoneEvent {
+export default class BlockRedstoneEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.block.BlockRedstoneEvent');
     }
@@ -9,4 +9,3 @@ export class BlockRedstoneEvent {
         return BlockRedstoneEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=BlockRedstoneEvent.js.map

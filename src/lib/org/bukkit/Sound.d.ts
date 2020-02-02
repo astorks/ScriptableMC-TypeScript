@@ -1,11 +1,11 @@
-export interface Sound {
+export default interface Sound {
     name(): string;
     compareTo(arg0: any): number;
     compareTo(arg0: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class Sound {
+export default class Sound {
     static get $javaClass(): any;
     static get AMBIENT_CAVE(): Sound;
     static get AMBIENT_UNDERWATER_ENTER(): Sound;

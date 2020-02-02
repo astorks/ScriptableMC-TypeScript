@@ -1,4 +1,4 @@
-export class FireworkExplodeEvent {
+export default class FireworkExplodeEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.FireworkExplodeEvent');
     }
@@ -9,4 +9,3 @@ export class FireworkExplodeEvent {
         return FireworkExplodeEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=FireworkExplodeEvent.js.map

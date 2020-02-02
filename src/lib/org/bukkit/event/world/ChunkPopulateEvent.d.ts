@@ -1,15 +1,15 @@
-import { HandlerList } from '../../../../org/bukkit/event/HandlerList.js';
-import { Chunk } from '../../../../org/bukkit/Chunk.js';
-import { World } from '../../../../org/bukkit/World.js';
-import { ChunkEvent } from '../../../../org/bukkit/event/world/ChunkEvent.js';
-export interface ChunkPopulateEvent extends ChunkEvent {
+import Chunk from '../../../../org/bukkit/Chunk.js';
+import ChunkEvent from '../../../../org/bukkit/event/world/ChunkEvent.js';
+import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
+import World from '../../../../org/bukkit/World.js';
+export default interface ChunkPopulateEvent extends ChunkEvent {
     getHandlers(): HandlerList;
     getChunk(): Chunk;
     getWorld(): World;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
-export declare class ChunkPopulateEvent {
+export default class ChunkPopulateEvent {
     static get $javaClass(): any;
     constructor(chunk: Chunk);
     static getHandlerList(): HandlerList;

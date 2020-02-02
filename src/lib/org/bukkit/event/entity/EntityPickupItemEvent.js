@@ -1,4 +1,4 @@
-export class EntityPickupItemEvent {
+export default class EntityPickupItemEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.EntityPickupItemEvent');
     }
@@ -9,4 +9,3 @@ export class EntityPickupItemEvent {
         return EntityPickupItemEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=EntityPickupItemEvent.js.map

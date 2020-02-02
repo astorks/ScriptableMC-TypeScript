@@ -1,4 +1,4 @@
-export class PortalCreateEvent {
+export default class PortalCreateEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.world.PortalCreateEvent');
     }
@@ -9,4 +9,3 @@ export class PortalCreateEvent {
         return PortalCreateEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PortalCreateEvent.js.map

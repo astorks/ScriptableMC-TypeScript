@@ -1,4 +1,4 @@
-export class PotionSplashEvent {
+export default class PotionSplashEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.PotionSplashEvent');
     }
@@ -9,4 +9,3 @@ export class PotionSplashEvent {
         return PotionSplashEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PotionSplashEvent.js.map

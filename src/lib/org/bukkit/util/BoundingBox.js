@@ -1,4 +1,4 @@
-export class BoundingBox {
+export default class BoundingBox {
     static get $javaClass() {
         return Java.type('org.bukkit.util.BoundingBox');
     }
@@ -12,4 +12,3 @@ export class BoundingBox {
         return BoundingBox.$javaClass.of(...args);
     }
 }
-//# sourceMappingURL=BoundingBox.js.map

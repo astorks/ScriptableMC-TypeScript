@@ -1,4 +1,4 @@
-export class LightningStrikeEvent$Cause {
+export default class LightningStrikeEvent$Cause {
     static get $javaClass() {
         return Java.type('org.bukkit.event.weather.LightningStrikeEvent$Cause');
     }
@@ -18,4 +18,3 @@ export class LightningStrikeEvent$Cause {
         return this.$javaClass.UNKNOWN;
     }
 }
-//# sourceMappingURL=LightningStrikeEvent$Cause.js.map

@@ -1,1 +1,0 @@
-{"version":3,"file":"ServerEvent.js","sourceRoot":"","sources":["../../../../../ts/org/bukkit/event/server/ServerEvent.ts"],"names":[],"mappings":"AAUA,MAAM,OAAO,WAAW;IAChB,MAAM,KAAK,UAAU;QAC3B,OAAO,IAAI,CAAC,IAAI,CAAC,qCAAqC,CAAC,CAAC;IACzD,CAAC;IAGD,YAAY,GAAG,IAAW;QACzB,OAAO,IAAI,WAAW,CAAC,UAAU,CAAC,GAAG,IAAI,CAAC,CAAC;IAC5C,CAAC;CACD"}

@@ -1,4 +1,4 @@
-export class PotionData {
+export default class PotionData {
     static get $javaClass() {
         return Java.type('org.bukkit.potion.PotionData');
     }
@@ -6,4 +6,3 @@ export class PotionData {
         return new PotionData.$javaClass(...args);
     }
 }
-//# sourceMappingURL=PotionData.js.map

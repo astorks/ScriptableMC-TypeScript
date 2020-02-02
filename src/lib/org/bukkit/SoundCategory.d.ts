@@ -1,11 +1,11 @@
-export interface SoundCategory {
+export default interface SoundCategory {
     name(): string;
     compareTo(arg0: any): number;
     compareTo(arg0: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class SoundCategory {
+export default class SoundCategory {
     static get $javaClass(): any;
     static get MASTER(): SoundCategory;
     static get MUSIC(): SoundCategory;

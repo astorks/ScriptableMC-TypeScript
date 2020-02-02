@@ -1,4 +1,4 @@
-export class PlayerToggleFlightEvent {
+export default class PlayerToggleFlightEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerToggleFlightEvent');
     }
@@ -9,4 +9,3 @@ export class PlayerToggleFlightEvent {
         return PlayerToggleFlightEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerToggleFlightEvent.js.map

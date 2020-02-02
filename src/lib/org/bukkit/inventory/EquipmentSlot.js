@@ -1,4 +1,4 @@
-export class EquipmentSlot {
+export default class EquipmentSlot {
     static get $javaClass() {
         return Java.type('org.bukkit.inventory.EquipmentSlot');
     }
@@ -21,4 +21,3 @@ export class EquipmentSlot {
         return this.$javaClass.HEAD;
     }
 }
-//# sourceMappingURL=EquipmentSlot.js.map

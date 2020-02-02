@@ -1,4 +1,4 @@
-export class EntityCombustByEntityEvent {
+export default class EntityCombustByEntityEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.EntityCombustByEntityEvent');
     }
@@ -9,4 +9,3 @@ export class EntityCombustByEntityEvent {
         return EntityCombustByEntityEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=EntityCombustByEntityEvent.js.map

@@ -1,8 +1,8 @@
-import { Scoreboard } from '../../../org/bukkit/scoreboard/Scoreboard.js';
-export interface ScoreboardManager {
+import Scoreboard from '../../../org/bukkit/scoreboard/Scoreboard.js';
+export default interface ScoreboardManager {
     getMainScoreboard(): Scoreboard;
     getNewScoreboard(): Scoreboard;
 }
-export declare class ScoreboardManager {
+export default class ScoreboardManager {
     static get $javaClass(): any;
 }

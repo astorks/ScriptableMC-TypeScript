@@ -1,4 +1,4 @@
-export class PrepareAnvilEvent {
+export default class PrepareAnvilEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.inventory.PrepareAnvilEvent');
     }
@@ -9,4 +9,3 @@ export class PrepareAnvilEvent {
         return PrepareAnvilEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PrepareAnvilEvent.js.map

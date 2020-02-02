@@ -1,4 +1,4 @@
-export class Conversation {
+export default class Conversation {
     static get $javaClass() {
         return Java.type('org.bukkit.conversations.Conversation');
     }
@@ -6,4 +6,3 @@ export class Conversation {
         return new Conversation.$javaClass(...args);
     }
 }
-//# sourceMappingURL=Conversation.js.map

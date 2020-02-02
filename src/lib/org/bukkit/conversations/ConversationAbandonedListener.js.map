@@ -1,1 +1,0 @@
-{"version":3,"file":"ConversationAbandonedListener.js","sourceRoot":"","sources":["../../../../ts/org/bukkit/conversations/ConversationAbandonedListener.ts"],"names":[],"mappings":"AAOA,MAAM,OAAO,6BAA6B;IAClC,MAAM,KAAK,UAAU;QAC3B,OAAO,IAAI,CAAC,IAAI,CAAC,wDAAwD,CAAC,CAAC;IAC5E,CAAC;CACD"}

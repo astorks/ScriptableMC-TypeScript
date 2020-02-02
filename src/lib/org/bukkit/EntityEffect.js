@@ -1,4 +1,4 @@
-export class EntityEffect {
+export default class EntityEffect {
     static get $javaClass() {
         return Java.type('org.bukkit.EntityEffect');
     }
@@ -84,4 +84,3 @@ export class EntityEffect {
         return this.$javaClass.HURT_EXPLOSION;
     }
 }
-//# sourceMappingURL=EntityEffect.js.map

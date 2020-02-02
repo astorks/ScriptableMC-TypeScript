@@ -1,4 +1,4 @@
-export class BarStyle {
+export default class BarStyle {
     static get $javaClass() {
         return Java.type('org.bukkit.boss.BarStyle');
     }
@@ -18,4 +18,3 @@ export class BarStyle {
         return this.$javaClass.SEGMENTED_20;
     }
 }
-//# sourceMappingURL=BarStyle.js.map

@@ -1,4 +1,4 @@
-export class Action {
+export default class Action {
     static get $javaClass() {
         return Java.type('org.bukkit.event.block.Action');
     }
@@ -18,4 +18,3 @@ export class Action {
         return this.$javaClass.PHYSICAL;
     }
 }
-//# sourceMappingURL=Action.js.map

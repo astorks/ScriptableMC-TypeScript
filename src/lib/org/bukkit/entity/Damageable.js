@@ -1,6 +1,5 @@
-export class Damageable {
+export default class Damageable {
     static get $javaClass() {
         return Java.type('org.bukkit.entity.Damageable');
     }
 }
-//# sourceMappingURL=Damageable.js.map

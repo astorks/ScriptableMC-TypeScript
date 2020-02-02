@@ -1,4 +1,4 @@
-export class PlayerExpChangeEvent {
+export default class PlayerExpChangeEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerExpChangeEvent');
     }
@@ -9,4 +9,3 @@ export class PlayerExpChangeEvent {
         return PlayerExpChangeEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerExpChangeEvent.js.map

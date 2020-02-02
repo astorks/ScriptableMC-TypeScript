@@ -1,4 +1,4 @@
-export class PlayerPickupItemEvent {
+export default class PlayerPickupItemEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerPickupItemEvent');
     }
@@ -9,4 +9,3 @@ export class PlayerPickupItemEvent {
         return PlayerPickupItemEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerPickupItemEvent.js.map

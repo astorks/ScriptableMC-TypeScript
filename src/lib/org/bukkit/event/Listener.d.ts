@@ -1,5 +1,5 @@
-export interface Listener {
+export default interface Listener {
 }
-export declare class Listener {
+export default class Listener {
     static get $javaClass(): any;
 }

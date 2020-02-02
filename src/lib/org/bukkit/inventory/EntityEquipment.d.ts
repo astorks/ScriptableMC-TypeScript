@@ -1,6 +1,6 @@
-import { ItemStack } from '../../../org/bukkit/inventory/ItemStack.js';
-import { Entity } from '../../../org/bukkit/entity/Entity.js';
-export interface EntityEquipment {
+import Entity from '../../../org/bukkit/entity/Entity.js';
+import ItemStack from '../../../org/bukkit/inventory/ItemStack.js';
+export default interface EntityEquipment {
     getItemInHand(): ItemStack;
     setItemInHand(arg0: ItemStack): void;
     getHolder(): Entity;
@@ -18,6 +18,8 @@ export interface EntityEquipment {
     setItemInMainHand(arg0: ItemStack): void;
     getItemInOffHand(): ItemStack;
     setItemInOffHand(arg0: ItemStack): void;
+    getItemInHandDropChance(): number;
+    setItemInHandDropChance(arg0: number): void;
     getItemInMainHandDropChance(): number;
     setItemInMainHandDropChance(arg0: number): void;
     getItemInOffHandDropChance(): number;
@@ -30,10 +32,8 @@ export interface EntityEquipment {
     setLeggingsDropChance(arg0: number): void;
     getBootsDropChance(): number;
     setBootsDropChance(arg0: number): void;
-    getItemInHandDropChance(): number;
-    setItemInHandDropChance(arg0: number): void;
     clear(): void;
 }
-export declare class EntityEquipment {
+export default class EntityEquipment {
     static get $javaClass(): any;
 }

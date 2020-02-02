@@ -1,4 +1,4 @@
-export class Attribute {
+export default class Attribute {
     static get $javaClass() {
         return Java.type('org.bukkit.attribute.Attribute');
     }
@@ -39,4 +39,3 @@ export class Attribute {
         return this.$javaClass.ZOMBIE_SPAWN_REINFORCEMENTS;
     }
 }
-//# sourceMappingURL=Attribute.js.map

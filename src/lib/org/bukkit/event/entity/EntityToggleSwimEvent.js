@@ -1,4 +1,4 @@
-export class EntityToggleSwimEvent {
+export default class EntityToggleSwimEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.EntityToggleSwimEvent');
     }
@@ -9,4 +9,3 @@ export class EntityToggleSwimEvent {
         return EntityToggleSwimEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=EntityToggleSwimEvent.js.map

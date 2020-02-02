@@ -1,10 +1,10 @@
-import { Entity } from '../../../../org/bukkit/entity/Entity.js';
-import { Item } from '../../../../org/bukkit/entity/Item.js';
-import { HandlerList } from '../../../../org/bukkit/event/HandlerList.js';
-import { Location } from '../../../../org/bukkit/Location.js';
-import { EntityType } from '../../../../org/bukkit/entity/EntityType.js';
-import { EntitySpawnEvent } from '../../../../org/bukkit/event/entity/EntitySpawnEvent.js';
-export interface ItemSpawnEvent extends EntitySpawnEvent {
+import Entity from '../../../../org/bukkit/entity/Entity.js';
+import EntitySpawnEvent from '../../../../org/bukkit/event/entity/EntitySpawnEvent.js';
+import EntityType from '../../../../org/bukkit/entity/EntityType.js';
+import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
+import Item from '../../../../org/bukkit/entity/Item.js';
+import Location from '../../../../org/bukkit/Location.js';
+export default interface ItemSpawnEvent extends EntitySpawnEvent {
     getEntity(): Entity;
     getEntity(): Item;
     getHandlers(): HandlerList;
@@ -12,10 +12,10 @@ export interface ItemSpawnEvent extends EntitySpawnEvent {
     setCancelled(cancel: boolean): void;
     getLocation(): Location;
     getEntityType(): EntityType;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
-export declare class ItemSpawnEvent {
+export default class ItemSpawnEvent {
     static get $javaClass(): any;
     constructor(spawnee: Item);
     constructor(spawnee: Item, loc: Location);

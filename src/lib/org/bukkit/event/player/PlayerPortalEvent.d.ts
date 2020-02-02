@@ -1,12 +1,12 @@
-import { HandlerList } from '../../../../org/bukkit/event/HandlerList.js';
-import { PlayerTeleportEvent$TeleportCause } from '../../../../org/bukkit/event/player/PlayerTeleportEvent$TeleportCause.js';
-import { Location } from '../../../../org/bukkit/Location.js';
-import { Player } from '../../../../org/bukkit/entity/Player.js';
-import { PlayerTeleportEvent } from '../../../../org/bukkit/event/player/PlayerTeleportEvent.js';
-export interface PlayerPortalEvent extends PlayerTeleportEvent {
+import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
+import Location from '../../../../org/bukkit/Location.js';
+import Player from '../../../../org/bukkit/entity/Player.js';
+import PlayerTeleportEvent from '../../../../org/bukkit/event/player/PlayerTeleportEvent.js';
+import PlayerTeleportEvent$TeleportCause from '../../../../org/bukkit/event/player/PlayerTeleportEvent$TeleportCause.js';
+export default interface PlayerPortalEvent extends PlayerTeleportEvent {
     getHandlers(): HandlerList;
-    setSearchRadius(searchRadius: number): void;
     getSearchRadius(): number;
+    setSearchRadius(searchRadius: number): void;
     getCanCreatePortal(): boolean;
     setCanCreatePortal(canCreatePortal: boolean): void;
     setCreationRadius(creationRadius: number): void;
@@ -14,15 +14,15 @@ export interface PlayerPortalEvent extends PlayerTeleportEvent {
     getCause(): PlayerTeleportEvent$TeleportCause;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getTo(): Location;
-    setTo(to: Location): void;
     getFrom(): Location;
+    getTo(): Location;
     setFrom(from: Location): void;
+    setTo(to: Location): void;
     getPlayer(): Player;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
-export declare class PlayerPortalEvent {
+export default class PlayerPortalEvent {
     static get $javaClass(): any;
     constructor(player: Player, from: Location, to: Location);
     constructor(player: Player, from: Location, to: Location, cause: PlayerTeleportEvent$TeleportCause, getSearchRadius: number, canCreatePortal: boolean, creationRadius: number);

@@ -1,4 +1,4 @@
-export class FluidCollisionMode {
+export default class FluidCollisionMode {
     static get $javaClass() {
         return Java.type('org.bukkit.FluidCollisionMode');
     }
@@ -12,4 +12,3 @@ export class FluidCollisionMode {
         return this.$javaClass.ALWAYS;
     }
 }
-//# sourceMappingURL=FluidCollisionMode.js.map

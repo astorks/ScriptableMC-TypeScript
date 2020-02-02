@@ -1,15 +1,15 @@
-import { BarFlag } from '../../../org/bukkit/boss/BarFlag.js';
-import { BarColor } from '../../../org/bukkit/boss/BarColor.js';
-import { BarStyle } from '../../../org/bukkit/boss/BarStyle.js';
-import { Player } from '../../../org/bukkit/entity/Player.js';
-import { NamespacedKey } from '../../../org/bukkit/NamespacedKey.js';
-import { BossBar } from '../../../org/bukkit/boss/BossBar.js';
-import { Keyed } from '../../../org/bukkit/Keyed.js';
-export interface KeyedBossBar extends BossBar, Keyed {
+import BarColor from '../../../org/bukkit/boss/BarColor.js';
+import BarFlag from '../../../org/bukkit/boss/BarFlag.js';
+import BarStyle from '../../../org/bukkit/boss/BarStyle.js';
+import BossBar from '../../../org/bukkit/boss/BossBar.js';
+import Keyed from '../../../org/bukkit/Keyed.js';
+import NamespacedKey from '../../../org/bukkit/NamespacedKey.js';
+import Player from '../../../org/bukkit/entity/Player.js';
+export default interface KeyedBossBar extends BossBar, Keyed {
     addFlag(arg0: BarFlag): void;
     getTitle(): string;
-    getPlayers(): any;
     getColor(): BarColor;
+    getPlayers(): Array<Player>;
     setTitle(arg0: string): void;
     setColor(arg0: BarColor): void;
     getStyle(): BarStyle;
@@ -27,6 +27,6 @@ export interface KeyedBossBar extends BossBar, Keyed {
     removeAll(): void;
     getKey(): NamespacedKey;
 }
-export declare class KeyedBossBar {
+export default class KeyedBossBar {
     static get $javaClass(): any;
 }

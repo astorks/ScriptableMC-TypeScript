@@ -1,4 +1,4 @@
-export interface Note$Tone {
+export default interface Note$Tone {
     isSharpable(): boolean;
     isSharped(id: number): boolean;
     getId(): number;
@@ -9,7 +9,7 @@ export interface Note$Tone {
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class Note$Tone {
+export default class Note$Tone {
     static get $javaClass(): any;
     static get G(): Note$Tone;
     static get A(): Note$Tone;

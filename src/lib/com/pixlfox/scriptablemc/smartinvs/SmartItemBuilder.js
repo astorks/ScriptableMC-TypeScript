@@ -1,4 +1,4 @@
-export class SmartItemBuilder {
+export default class SmartItemBuilder {
     static get $javaClass() {
         return Java.type('com.pixlfox.scriptablemc.smartinvs.SmartItemBuilder');
     }
@@ -6,4 +6,3 @@ export class SmartItemBuilder {
         return new SmartItemBuilder.$javaClass(...args);
     }
 }
-//# sourceMappingURL=SmartItemBuilder.js.map

@@ -1,16 +1,17 @@
-import { HandlerList } from '../../../../org/bukkit/event/HandlerList.js';
-import { Inventory } from '../../../../org/bukkit/inventory/Inventory.js';
-import { InventoryView } from '../../../../org/bukkit/inventory/InventoryView.js';
-import { Event } from '../../../../org/bukkit/event/Event.js';
-export interface InventoryEvent extends Event {
+import Event from '../../../../org/bukkit/event/Event.js';
+import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
+import HumanEntity from '../../../../org/bukkit/entity/HumanEntity.js';
+import Inventory from '../../../../org/bukkit/inventory/Inventory.js';
+import InventoryView from '../../../../org/bukkit/inventory/InventoryView.js';
+export default interface InventoryEvent extends Event {
     getHandlers(): HandlerList;
     getInventory(): Inventory;
-    getViewers(): any;
+    getViewers(): Array<HumanEntity>;
     getView(): InventoryView;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
-export declare class InventoryEvent {
+export default class InventoryEvent {
     static get $javaClass(): any;
     constructor(transaction: InventoryView);
     static getHandlerList(): HandlerList;

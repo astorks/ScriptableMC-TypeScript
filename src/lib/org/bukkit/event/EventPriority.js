@@ -1,4 +1,4 @@
-export class EventPriority {
+export default class EventPriority {
     static get $javaClass() {
         return Java.type('org.bukkit.event.EventPriority');
     }
@@ -21,4 +21,3 @@ export class EventPriority {
         return this.$javaClass.MONITOR;
     }
 }
-//# sourceMappingURL=EventPriority.js.map

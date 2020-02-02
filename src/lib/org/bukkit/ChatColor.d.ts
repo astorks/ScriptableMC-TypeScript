@@ -1,4 +1,4 @@
-export interface ChatColor {
+export default interface ChatColor {
     isColor(): boolean;
     isFormat(): boolean;
     asBungee(): any;
@@ -9,7 +9,7 @@ export interface ChatColor {
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class ChatColor {
+export default class ChatColor {
     static get $javaClass(): any;
     static get BLACK(): ChatColor;
     static get DARK_BLUE(): ChatColor;

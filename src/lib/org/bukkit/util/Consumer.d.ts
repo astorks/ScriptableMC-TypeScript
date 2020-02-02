@@ -1,6 +1,6 @@
-export interface Consumer {
+export default interface Consumer {
     accept(arg0: any): void;
 }
-export declare class Consumer {
+export default class Consumer {
     static get $javaClass(): any;
 }

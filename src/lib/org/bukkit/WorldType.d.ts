@@ -1,4 +1,4 @@
-export interface WorldType {
+export default interface WorldType {
     getName(): string;
     name(): string;
     compareTo(arg0: any): number;
@@ -6,7 +6,7 @@ export interface WorldType {
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class WorldType {
+export default class WorldType {
     static get $javaClass(): any;
     static get NORMAL(): WorldType;
     static get FLAT(): WorldType;

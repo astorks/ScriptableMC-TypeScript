@@ -1,4 +1,4 @@
-export class SlotPos {
+export default class SlotPos {
     static get $javaClass() {
         return Java.type('fr.minuskube.inv.content.SlotPos');
     }
@@ -9,4 +9,3 @@ export class SlotPos {
         return SlotPos.$javaClass.of(...args);
     }
 }
-//# sourceMappingURL=SlotPos.js.map

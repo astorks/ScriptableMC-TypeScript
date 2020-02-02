@@ -1,6 +1,6 @@
-import { ItemStack } from '../../../org/bukkit/inventory/ItemStack.js';
-import { Material } from '../../../org/bukkit/Material.js';
-export interface EnchantmentTarget {
+import ItemStack from '../../../org/bukkit/inventory/ItemStack.js';
+import Material from '../../../org/bukkit/Material.js';
+export default interface EnchantmentTarget {
     includes(item: ItemStack): boolean;
     includes(arg0: Material): boolean;
     name(): string;
@@ -9,7 +9,7 @@ export interface EnchantmentTarget {
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class EnchantmentTarget {
+export default class EnchantmentTarget {
     static get $javaClass(): any;
     static get ALL(): EnchantmentTarget;
     static get ARMOR(): EnchantmentTarget;

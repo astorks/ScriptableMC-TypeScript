@@ -1,4 +1,4 @@
-export interface EulerAngle {
+export default interface EulerAngle {
     setX(x: number): EulerAngle;
     getX(): number;
     setY(y: number): EulerAngle;
@@ -8,7 +8,7 @@ export interface EulerAngle {
     subtract(x: number, y: number, z: number): EulerAngle;
     add(x: number, y: number, z: number): EulerAngle;
 }
-export declare class EulerAngle {
+export default class EulerAngle {
     static get $javaClass(): any;
     constructor(x: number, y: number, z: number);
     static get ZERO(): EulerAngle;

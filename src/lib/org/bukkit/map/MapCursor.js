@@ -1,4 +1,4 @@
-export class MapCursor {
+export default class MapCursor {
     static get $javaClass() {
         return Java.type('org.bukkit.map.MapCursor');
     }
@@ -6,4 +6,3 @@ export class MapCursor {
         return new MapCursor.$javaClass(...args);
     }
 }
-//# sourceMappingURL=MapCursor.js.map

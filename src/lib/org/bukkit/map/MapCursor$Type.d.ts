@@ -1,4 +1,4 @@
-export interface MapCursor$Type {
+export default interface MapCursor$Type {
     getValue(): number;
     name(): string;
     compareTo(arg0: any): number;
@@ -6,7 +6,7 @@ export interface MapCursor$Type {
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class MapCursor$Type {
+export default class MapCursor$Type {
     static get $javaClass(): any;
     static get WHITE_POINTER(): MapCursor$Type;
     static get GREEN_POINTER(): MapCursor$Type;

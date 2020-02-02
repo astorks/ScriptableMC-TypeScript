@@ -1,4 +1,4 @@
-export class VehicleCollisionEvent {
+export default class VehicleCollisionEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.vehicle.VehicleCollisionEvent');
     }
@@ -6,4 +6,3 @@ export class VehicleCollisionEvent {
         return new VehicleCollisionEvent.$javaClass(...args);
     }
 }
-//# sourceMappingURL=VehicleCollisionEvent.js.map

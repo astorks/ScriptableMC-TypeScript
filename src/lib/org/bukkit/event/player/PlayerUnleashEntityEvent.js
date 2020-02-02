@@ -1,4 +1,4 @@
-export class PlayerUnleashEntityEvent {
+export default class PlayerUnleashEntityEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerUnleashEntityEvent');
     }
@@ -9,4 +9,3 @@ export class PlayerUnleashEntityEvent {
         return PlayerUnleashEntityEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerUnleashEntityEvent.js.map

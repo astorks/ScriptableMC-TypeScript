@@ -1,50 +1,50 @@
-import { ProjectileSource } from '../../../org/bukkit/projectiles/ProjectileSource.js';
-import { Color } from '../../../org/bukkit/Color.js';
-import { PotionData } from '../../../org/bukkit/potion/PotionData.js';
-import { PotionEffect } from '../../../org/bukkit/potion/PotionEffect.js';
-import { PotionEffectType } from '../../../org/bukkit/potion/PotionEffectType.js';
-import { Particle } from '../../../org/bukkit/Particle.js';
-import { Server } from '../../../org/bukkit/Server.js';
-import { World } from '../../../org/bukkit/World.js';
-import { EntityEffect } from '../../../org/bukkit/EntityEffect.js';
-import { Vector } from '../../../org/bukkit/util/Vector.js';
-import { BoundingBox } from '../../../org/bukkit/util/BoundingBox.js';
-import { Entity } from '../../../org/bukkit/entity/Entity.js';
-import { Location } from '../../../org/bukkit/Location.js';
-import { PlayerTeleportEvent$TeleportCause } from '../../../org/bukkit/event/player/PlayerTeleportEvent$TeleportCause.js';
-import { EntityDamageEvent } from '../../../org/bukkit/event/entity/EntityDamageEvent.js';
-import { PistonMoveReaction } from '../../../org/bukkit/block/PistonMoveReaction.js';
-import { BlockFace } from '../../../org/bukkit/block/BlockFace.js';
-import { Pose } from '../../../org/bukkit/entity/Pose.js';
-import { EntityType } from '../../../org/bukkit/entity/EntityType.js';
-import { MetadataValue } from '../../../org/bukkit/metadata/MetadataValue.js';
-import { Plugin } from '../../../org/bukkit/plugin/Plugin.js';
-import { Permission } from '../../../org/bukkit/permissions/Permission.js';
-import { PermissionAttachment } from '../../../org/bukkit/permissions/PermissionAttachment.js';
-import { PersistentDataContainer } from '../../../org/bukkit/persistence/PersistentDataContainer.js';
-export interface AreaEffectCloud extends Entity {
+import BlockFace from '../../../org/bukkit/block/BlockFace.js';
+import BoundingBox from '../../../org/bukkit/util/BoundingBox.js';
+import Color from '../../../org/bukkit/Color.js';
+import Entity from '../../../org/bukkit/entity/Entity.js';
+import EntityDamageEvent from '../../../org/bukkit/event/entity/EntityDamageEvent.js';
+import EntityEffect from '../../../org/bukkit/EntityEffect.js';
+import EntityType from '../../../org/bukkit/entity/EntityType.js';
+import Location from '../../../org/bukkit/Location.js';
+import MetadataValue from '../../../org/bukkit/metadata/MetadataValue.js';
+import Particle from '../../../org/bukkit/Particle.js';
+import Permission from '../../../org/bukkit/permissions/Permission.js';
+import PermissionAttachment from '../../../org/bukkit/permissions/PermissionAttachment.js';
+import PersistentDataContainer from '../../../org/bukkit/persistence/PersistentDataContainer.js';
+import PistonMoveReaction from '../../../org/bukkit/block/PistonMoveReaction.js';
+import PlayerTeleportEvent$TeleportCause from '../../../org/bukkit/event/player/PlayerTeleportEvent$TeleportCause.js';
+import Plugin from '../../../org/bukkit/plugin/Plugin.js';
+import Pose from '../../../org/bukkit/entity/Pose.js';
+import PotionData from '../../../org/bukkit/potion/PotionData.js';
+import PotionEffect from '../../../org/bukkit/potion/PotionEffect.js';
+import PotionEffectType from '../../../org/bukkit/potion/PotionEffectType.js';
+import ProjectileSource from '../../../org/bukkit/projectiles/ProjectileSource.js';
+import Server from '../../../org/bukkit/Server.js';
+import Vector from '../../../org/bukkit/util/Vector.js';
+import World from '../../../org/bukkit/World.js';
+export default interface AreaEffectCloud extends Entity {
     getSource(): ProjectileSource;
     getColor(): Color;
     setColor(arg0: Color): void;
     getDuration(): number;
-    hasCustomEffects(): boolean;
     setBasePotionData(arg0: PotionData): void;
+    hasCustomEffects(): boolean;
     getBasePotionData(): PotionData;
-    getCustomEffects(): any;
+    getCustomEffects(): Array<PotionEffect>;
     addCustomEffect(arg0: PotionEffect, arg1: boolean): boolean;
     removeCustomEffect(arg0: PotionEffectType): boolean;
     hasCustomEffect(arg0: PotionEffectType): boolean;
     clearCustomEffects(): void;
     setSource(arg0: ProjectileSource): void;
     setDuration(arg0: number): void;
-    setRadius(arg0: number): void;
-    getRadius(): number;
     getWaitTime(): number;
-    getDurationOnUse(): number;
     setWaitTime(arg0: number): void;
-    setDurationOnUse(arg0: number): void;
     getReapplicationDelay(): number;
     setReapplicationDelay(arg0: number): void;
+    getDurationOnUse(): number;
+    setDurationOnUse(arg0: number): void;
+    getRadius(): number;
+    setRadius(arg0: number): void;
     getRadiusOnUse(): number;
     setRadiusOnUse(arg0: number): void;
     getRadiusPerTick(): number;
@@ -67,7 +67,7 @@ export interface AreaEffectCloud extends Entity {
     teleport(arg0: Location): boolean;
     teleport(arg0: Location, arg1: PlayerTeleportEvent$TeleportCause): boolean;
     teleport(arg0: Entity, arg1: PlayerTeleportEvent$TeleportCause): boolean;
-    getNearbyEntities(arg0: number, arg1: number, arg2: number): any;
+    getNearbyEntities(arg0: number, arg1: number, arg2: number): Array<Entity>;
     getEntityId(): number;
     getFireTicks(): number;
     getMaxFireTicks(): number;
@@ -77,7 +77,7 @@ export interface AreaEffectCloud extends Entity {
     setPersistent(arg0: boolean): void;
     getPassenger(): Entity;
     setPassenger(arg0: Entity): boolean;
-    getPassengers(): any;
+    getPassengers(): Array<Entity>;
     addPassenger(arg0: Entity): boolean;
     removePassenger(arg0: Entity): boolean;
     eject(): boolean;
@@ -115,7 +115,7 @@ export interface AreaEffectCloud extends Entity {
     getLocation(arg0: Location): Location;
     getType(): EntityType;
     setMetadata(arg0: string, arg1: MetadataValue): void;
-    getMetadata(arg0: string): any;
+    getMetadata(arg0: string): Array<MetadataValue>;
     hasMetadata(arg0: string): boolean;
     removeMetadata(arg0: string, arg1: Plugin): void;
     sendMessage(arg0: string): void;
@@ -138,6 +138,6 @@ export interface AreaEffectCloud extends Entity {
     setCustomName(arg0: string): void;
     getPersistentDataContainer(): PersistentDataContainer;
 }
-export declare class AreaEffectCloud {
+export default class AreaEffectCloud {
     static get $javaClass(): any;
 }

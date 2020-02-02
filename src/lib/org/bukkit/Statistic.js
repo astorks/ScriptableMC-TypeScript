@@ -1,4 +1,4 @@
-export class Statistic {
+export default class Statistic {
     static get $javaClass() {
         return Java.type('org.bukkit.Statistic');
     }
@@ -240,4 +240,3 @@ export class Statistic {
         return this.$javaClass.INTERACT_WITH_GRINDSTONE;
     }
 }
-//# sourceMappingURL=Statistic.js.map

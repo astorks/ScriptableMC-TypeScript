@@ -1,4 +1,4 @@
-export class PrepareItemCraftEvent {
+export default class PrepareItemCraftEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.inventory.PrepareItemCraftEvent');
     }
@@ -9,4 +9,3 @@ export class PrepareItemCraftEvent {
         return PrepareItemCraftEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PrepareItemCraftEvent.js.map

@@ -1,4 +1,4 @@
-export class BlockPistonRetractEvent {
+export default class BlockPistonRetractEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.block.BlockPistonRetractEvent');
     }
@@ -9,4 +9,3 @@ export class BlockPistonRetractEvent {
         return BlockPistonRetractEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=BlockPistonRetractEvent.js.map

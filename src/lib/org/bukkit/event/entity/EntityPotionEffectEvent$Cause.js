@@ -1,4 +1,4 @@
-export class EntityPotionEffectEvent$Cause {
+export default class EntityPotionEffectEvent$Cause {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.EntityPotionEffectEvent$Cause');
     }
@@ -41,6 +41,9 @@ export class EntityPotionEffectEvent$Cause {
     static get MILK() {
         return this.$javaClass.MILK;
     }
+    static get PATROL_CAPTAIN() {
+        return this.$javaClass.PATROL_CAPTAIN;
+    }
     static get PLUGIN() {
         return this.$javaClass.PLUGIN;
     }
@@ -65,5 +68,7 @@ export class EntityPotionEffectEvent$Cause {
     static get VILLAGER_TRADE() {
         return this.$javaClass.VILLAGER_TRADE;
     }
+    static get WITHER_ROSE() {
+        return this.$javaClass.WITHER_ROSE;
+    }
 }
-//# sourceMappingURL=EntityPotionEffectEvent$Cause.js.map

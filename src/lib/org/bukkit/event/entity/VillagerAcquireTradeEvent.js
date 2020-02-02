@@ -1,4 +1,4 @@
-export class VillagerAcquireTradeEvent {
+export default class VillagerAcquireTradeEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.VillagerAcquireTradeEvent');
     }
@@ -9,4 +9,3 @@ export class VillagerAcquireTradeEvent {
         return VillagerAcquireTradeEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=VillagerAcquireTradeEvent.js.map

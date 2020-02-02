@@ -1,6 +1,6 @@
-export interface Multiset {
-    setCount(arg0: any, arg1: number): number;
+export default interface Multiset {
     setCount(arg0: any, arg1: number, arg2: number): boolean;
+    setCount(arg0: any, arg1: number): number;
     elementSet(): any;
     add(arg0: any): boolean;
     add(arg0: any, arg1: number): number;
@@ -26,6 +26,6 @@ export interface Multiset {
     removeIf(arg0: any): boolean;
     parallelStream(): any;
 }
-export declare class Multiset {
+export default class Multiset {
     static get $javaClass(): any;
 }

@@ -1,4 +1,4 @@
-export class PlayerChangedWorldEvent {
+export default class PlayerChangedWorldEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerChangedWorldEvent');
     }
@@ -9,4 +9,3 @@ export class PlayerChangedWorldEvent {
         return PlayerChangedWorldEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerChangedWorldEvent.js.map

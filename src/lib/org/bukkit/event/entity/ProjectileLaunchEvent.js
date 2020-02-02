@@ -1,4 +1,4 @@
-export class ProjectileLaunchEvent {
+export default class ProjectileLaunchEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.ProjectileLaunchEvent');
     }
@@ -9,4 +9,3 @@ export class ProjectileLaunchEvent {
         return ProjectileLaunchEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=ProjectileLaunchEvent.js.map

@@ -1,14 +1,14 @@
-import { Color } from '../../../org/bukkit/Color.js';
-import { PotionEffect } from '../../../org/bukkit/potion/PotionEffect.js';
-export interface PotionEffectType {
-    isInstant(): boolean;
+import Color from '../../../org/bukkit/Color.js';
+import PotionEffect from '../../../org/bukkit/potion/PotionEffect.js';
+export default interface PotionEffectType {
     getColor(): Color;
+    isInstant(): boolean;
     createEffect(duration: number, amplifier: number): PotionEffect;
     getDurationModifier(): number;
     getName(): string;
     getId(): number;
 }
-export declare class PotionEffectType {
+export default class PotionEffectType {
     static get $javaClass(): any;
     static get SPEED(): PotionEffectType;
     static get SLOW(): PotionEffectType;

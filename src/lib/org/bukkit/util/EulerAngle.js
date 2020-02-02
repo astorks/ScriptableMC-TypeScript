@@ -1,4 +1,4 @@
-export class EulerAngle {
+export default class EulerAngle {
     static get $javaClass() {
         return Java.type('org.bukkit.util.EulerAngle');
     }
@@ -9,4 +9,3 @@ export class EulerAngle {
         return EulerAngle.$javaClass.ZERO;
     }
 }
-//# sourceMappingURL=EulerAngle.js.map

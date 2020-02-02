@@ -1,4 +1,4 @@
-export class CreeperPowerEvent {
+export default class CreeperPowerEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.CreeperPowerEvent');
     }
@@ -9,4 +9,3 @@ export class CreeperPowerEvent {
         return CreeperPowerEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=CreeperPowerEvent.js.map

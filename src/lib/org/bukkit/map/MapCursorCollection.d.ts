@@ -1,5 +1,5 @@
-import { MapCursor } from '../../../org/bukkit/map/MapCursor.js';
-export interface MapCursorCollection {
+import MapCursor from '../../../org/bukkit/map/MapCursor.js';
+export default interface MapCursorCollection {
     getCursor(index: number): MapCursor;
     removeCursor(cursor: MapCursor): boolean;
     addCursor(x: number, y: number, direction: number): MapCursor;
@@ -9,7 +9,7 @@ export interface MapCursorCollection {
     addCursor(x: number, y: number, direction: number, type: number, visible: boolean, caption: string): MapCursor;
     size(): number;
 }
-export declare class MapCursorCollection {
+export default class MapCursorCollection {
     static get $javaClass(): any;
     constructor();
 }

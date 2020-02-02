@@ -1,4 +1,4 @@
-export class HelpTopic {
+export default class HelpTopic {
     static get $javaClass() {
         return Java.type('org.bukkit.help.HelpTopic');
     }
@@ -6,4 +6,3 @@ export class HelpTopic {
         return new HelpTopic.$javaClass(...args);
     }
 }
-//# sourceMappingURL=HelpTopic.js.map

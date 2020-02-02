@@ -1,6 +1,5 @@
-export class Attachable {
+export default class Attachable {
     static get $javaClass() {
         return Java.type('org.bukkit.material.Attachable');
     }
 }
-//# sourceMappingURL=Attachable.js.map

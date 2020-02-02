@@ -1,1 +1,0 @@
-{"version":3,"file":"ConversationContext.js","sourceRoot":"","sources":["../../../../ts/org/bukkit/conversations/ConversationContext.ts"],"names":[],"mappings":"AAYA,MAAM,OAAO,mBAAmB;IACxB,MAAM,KAAK,UAAU;QAC3B,OAAO,IAAI,CAAC,IAAI,CAAC,8CAA8C,CAAC,CAAC;IAClE,CAAC;IAED,YAAY,GAAG,IAAW;QACzB,OAAO,IAAI,mBAAmB,CAAC,UAAU,CAAC,GAAG,IAAI,CAAC,CAAC;IACpD,CAAC;CACD"}

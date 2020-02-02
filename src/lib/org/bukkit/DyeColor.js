@@ -1,4 +1,4 @@
-export class DyeColor {
+export default class DyeColor {
     static get $javaClass() {
         return Java.type('org.bukkit.DyeColor');
     }
@@ -51,4 +51,3 @@ export class DyeColor {
         return this.$javaClass.BLACK;
     }
 }
-//# sourceMappingURL=DyeColor.js.map

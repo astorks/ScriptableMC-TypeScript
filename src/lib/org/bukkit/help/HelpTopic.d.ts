@@ -1,5 +1,5 @@
-import { CommandSender } from '../../../org/bukkit/command/CommandSender.js';
-export interface HelpTopic {
+import CommandSender from '../../../org/bukkit/command/CommandSender.js';
+export default interface HelpTopic {
     canSee(arg0: CommandSender): boolean;
     amendCanSee(amendedPermission: string): void;
     getShortText(): string;
@@ -7,7 +7,7 @@ export interface HelpTopic {
     amendTopic(amendedShortText: string, amendedFullText: string): void;
     getName(): string;
 }
-export declare class HelpTopic {
+export default class HelpTopic {
     static get $javaClass(): any;
     constructor();
 }

@@ -1,4 +1,4 @@
-export class PersistentDataType {
+export default class PersistentDataType {
     static get $javaClass() {
         return Java.type('org.bukkit.persistence.PersistentDataType');
     }
@@ -36,4 +36,3 @@ export class PersistentDataType {
         return PersistentDataType.$javaClass.TAG_CONTAINER;
     }
 }
-//# sourceMappingURL=PersistentDataType.js.map

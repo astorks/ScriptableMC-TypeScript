@@ -1,11 +1,11 @@
-export interface CreatureSpawnEvent$SpawnReason {
+export default interface CreatureSpawnEvent$SpawnReason {
     name(): string;
     compareTo(arg0: any): number;
     compareTo(arg0: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class CreatureSpawnEvent$SpawnReason {
+export default class CreatureSpawnEvent$SpawnReason {
     static get $javaClass(): any;
     static get NATURAL(): CreatureSpawnEvent$SpawnReason;
     static get JOCKEY(): CreatureSpawnEvent$SpawnReason;

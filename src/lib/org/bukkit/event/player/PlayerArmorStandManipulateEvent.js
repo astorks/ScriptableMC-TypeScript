@@ -1,4 +1,4 @@
-export class PlayerArmorStandManipulateEvent {
+export default class PlayerArmorStandManipulateEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerArmorStandManipulateEvent');
     }
@@ -9,4 +9,3 @@ export class PlayerArmorStandManipulateEvent {
         return PlayerArmorStandManipulateEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerArmorStandManipulateEvent.js.map

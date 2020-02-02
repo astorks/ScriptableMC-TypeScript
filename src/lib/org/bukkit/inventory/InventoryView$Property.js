@@ -1,4 +1,4 @@
-export class InventoryView$Property {
+export default class InventoryView$Property {
     static get $javaClass() {
         return Java.type('org.bukkit.inventory.InventoryView$Property');
     }
@@ -63,4 +63,3 @@ export class InventoryView$Property {
         return this.$javaClass.BOOK_PAGE;
     }
 }
-//# sourceMappingURL=InventoryView$Property.js.map

@@ -1,4 +1,4 @@
-export class Instrument {
+export default class Instrument {
     static get $javaClass() {
         return Java.type('org.bukkit.Instrument');
     }
@@ -51,4 +51,3 @@ export class Instrument {
         return this.$javaClass.PLING;
     }
 }
-//# sourceMappingURL=Instrument.js.map

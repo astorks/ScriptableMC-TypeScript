@@ -1,4 +1,4 @@
-export class PlayerVelocityEvent {
+export default class PlayerVelocityEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerVelocityEvent');
     }
@@ -9,4 +9,3 @@ export class PlayerVelocityEvent {
         return PlayerVelocityEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerVelocityEvent.js.map

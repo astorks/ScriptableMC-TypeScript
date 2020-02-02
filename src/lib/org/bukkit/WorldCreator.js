@@ -1,4 +1,4 @@
-export class WorldCreator {
+export default class WorldCreator {
     static get $javaClass() {
         return Java.type('org.bukkit.WorldCreator');
     }
@@ -12,4 +12,3 @@ export class WorldCreator {
         return WorldCreator.$javaClass.name(...args);
     }
 }
-//# sourceMappingURL=WorldCreator.js.map

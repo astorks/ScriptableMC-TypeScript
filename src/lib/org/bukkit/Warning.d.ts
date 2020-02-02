@@ -1,8 +1,8 @@
-export interface Warning {
+export default interface Warning {
     reason(): string;
     value(): boolean;
     annotationType(): any;
 }
-export declare class Warning {
+export default class Warning {
     static get $javaClass(): any;
 }

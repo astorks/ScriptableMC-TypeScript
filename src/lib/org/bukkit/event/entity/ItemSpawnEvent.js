@@ -1,4 +1,4 @@
-export class ItemSpawnEvent {
+export default class ItemSpawnEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.ItemSpawnEvent');
     }
@@ -9,4 +9,3 @@ export class ItemSpawnEvent {
         return ItemSpawnEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=ItemSpawnEvent.js.map

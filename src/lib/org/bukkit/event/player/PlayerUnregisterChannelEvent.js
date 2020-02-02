@@ -1,4 +1,4 @@
-export class PlayerUnregisterChannelEvent {
+export default class PlayerUnregisterChannelEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerUnregisterChannelEvent');
     }
@@ -9,4 +9,3 @@ export class PlayerUnregisterChannelEvent {
         return PlayerUnregisterChannelEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerUnregisterChannelEvent.js.map

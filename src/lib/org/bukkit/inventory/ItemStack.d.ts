@@ -1,17 +1,9 @@
-import { Enchantment } from '../../../org/bukkit/enchantments/Enchantment.js';
-import { MaterialData } from '../../../org/bukkit/material/MaterialData.js';
-import { ItemMeta } from '../../../org/bukkit/inventory/meta/ItemMeta.js';
-import { Material } from '../../../org/bukkit/Material.js';
-import { ConfigurationSerializable } from '../../../org/bukkit/configuration/serialization/ConfigurationSerializable.js';
-export interface ItemStack extends ConfigurationSerializable {
-    getEnchantments(): any;
-    addEnchantments(enchantments: any): void;
-    addEnchantment(ench: Enchantment, level: number): void;
-    addUnsafeEnchantment(ench: Enchantment, level: number): void;
-    addUnsafeEnchantments(enchantments: any): void;
-    removeEnchantment(ench: Enchantment): number;
-    serialize(): any;
-    setDurability(durability: number): void;
+import ConfigurationSerializable from '../../../org/bukkit/configuration/serialization/ConfigurationSerializable.js';
+import Enchantment from '../../../org/bukkit/enchantments/Enchantment.js';
+import ItemMeta from '../../../org/bukkit/inventory/meta/ItemMeta.js';
+import Material from '../../../org/bukkit/Material.js';
+import MaterialData from '../../../org/bukkit/material/MaterialData.js';
+export default interface ItemStack extends ConfigurationSerializable {
     getAmount(): number;
     getData(): MaterialData;
     hasItemMeta(): boolean;
@@ -25,11 +17,19 @@ export interface ItemStack extends ConfigurationSerializable {
     isSimilar(stack: ItemStack): boolean;
     containsEnchantment(ench: Enchantment): boolean;
     getEnchantmentLevel(ench: Enchantment): number;
+    getEnchantments(): any;
+    addEnchantments(enchantments: any): void;
+    addEnchantment(ench: Enchantment, level: number): void;
+    addUnsafeEnchantment(ench: Enchantment, level: number): void;
+    addUnsafeEnchantments(enchantments: any): void;
+    removeEnchantment(ench: Enchantment): number;
+    serialize(): any;
+    setDurability(durability: number): void;
     clone(): any;
     clone(): ItemStack;
     getType(): Material;
 }
-export declare class ItemStack {
+export default class ItemStack {
     static get $javaClass(): any;
     constructor(type: Material, amount: number, damage: number);
     constructor(type: Material, amount: number);

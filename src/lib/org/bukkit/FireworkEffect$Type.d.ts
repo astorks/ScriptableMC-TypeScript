@@ -1,11 +1,11 @@
-export interface FireworkEffect$Type {
+export default interface FireworkEffect$Type {
     name(): string;
     compareTo(arg0: any): number;
     compareTo(arg0: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class FireworkEffect$Type {
+export default class FireworkEffect$Type {
     static get $javaClass(): any;
     static get BALL(): FireworkEffect$Type;
     static get BALL_LARGE(): FireworkEffect$Type;

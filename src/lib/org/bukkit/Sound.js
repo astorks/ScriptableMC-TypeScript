@@ -1,4 +1,4 @@
-export class Sound {
+export default class Sound {
     static get $javaClass() {
         return Java.type('org.bukkit.Sound');
     }
@@ -2433,4 +2433,3 @@ export class Sound {
         return this.$javaClass.WEATHER_RAIN_ABOVE;
     }
 }
-//# sourceMappingURL=Sound.js.map

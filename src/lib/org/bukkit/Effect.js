@@ -1,4 +1,4 @@
-export class Effect {
+export default class Effect {
     static get $javaClass() {
         return Java.type('org.bukkit.Effect');
     }
@@ -138,4 +138,3 @@ export class Effect {
         return this.$javaClass.ENDERDRAGON_GROWL;
     }
 }
-//# sourceMappingURL=Effect.js.map

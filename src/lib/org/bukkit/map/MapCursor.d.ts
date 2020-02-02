@@ -1,5 +1,5 @@
-import { MapCursor$Type } from '../../../org/bukkit/map/MapCursor$Type.js';
-export interface MapCursor {
+import MapCursor$Type from '../../../org/bukkit/map/MapCursor$Type.js';
+export default interface MapCursor {
     setType(type: MapCursor$Type): void;
     setX(x: number): void;
     getX(): number;
@@ -15,7 +15,7 @@ export interface MapCursor {
     getType(): MapCursor$Type;
     getRawType(): number;
 }
-export declare class MapCursor {
+export default class MapCursor {
     static get $javaClass(): any;
     constructor(x: number, y: number, direction: number, type: number, visible: boolean, caption: string);
     constructor(x: number, y: number, direction: number, type: MapCursor$Type, visible: boolean);

@@ -1,4 +1,4 @@
-export class HangingPlaceEvent {
+export default class HangingPlaceEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.hanging.HangingPlaceEvent');
     }
@@ -9,4 +9,3 @@ export class HangingPlaceEvent {
         return HangingPlaceEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=HangingPlaceEvent.js.map

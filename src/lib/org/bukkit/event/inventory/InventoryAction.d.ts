@@ -1,11 +1,11 @@
-export interface InventoryAction {
+export default interface InventoryAction {
     name(): string;
     compareTo(arg0: any): number;
     compareTo(arg0: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class InventoryAction {
+export default class InventoryAction {
     static get $javaClass(): any;
     static get NOTHING(): InventoryAction;
     static get PICKUP_ALL(): InventoryAction;

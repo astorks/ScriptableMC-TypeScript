@@ -1,4 +1,4 @@
-export class ThunderChangeEvent {
+export default class ThunderChangeEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.weather.ThunderChangeEvent');
     }
@@ -9,4 +9,3 @@ export class ThunderChangeEvent {
         return ThunderChangeEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=ThunderChangeEvent.js.map

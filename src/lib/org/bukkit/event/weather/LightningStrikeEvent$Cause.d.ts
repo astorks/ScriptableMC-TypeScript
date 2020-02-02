@@ -1,11 +1,11 @@
-export interface LightningStrikeEvent$Cause {
+export default interface LightningStrikeEvent$Cause {
     name(): string;
     compareTo(arg0: any): number;
     compareTo(arg0: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class LightningStrikeEvent$Cause {
+export default class LightningStrikeEvent$Cause {
     static get $javaClass(): any;
     static get COMMAND(): LightningStrikeEvent$Cause;
     static get TRIDENT(): LightningStrikeEvent$Cause;

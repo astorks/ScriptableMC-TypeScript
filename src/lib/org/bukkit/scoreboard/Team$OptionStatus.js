@@ -1,4 +1,4 @@
-export class Team$OptionStatus {
+export default class Team$OptionStatus {
     static get $javaClass() {
         return Java.type('org.bukkit.scoreboard.Team$OptionStatus');
     }
@@ -15,4 +15,3 @@ export class Team$OptionStatus {
         return this.$javaClass.FOR_OWN_TEAM;
     }
 }
-//# sourceMappingURL=Team$OptionStatus.js.map

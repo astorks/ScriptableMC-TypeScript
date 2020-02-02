@@ -1,4 +1,4 @@
-export class WorldInitEvent {
+export default class WorldInitEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.world.WorldInitEvent');
     }
@@ -9,4 +9,3 @@ export class WorldInitEvent {
         return WorldInitEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=WorldInitEvent.js.map

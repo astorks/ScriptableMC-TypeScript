@@ -1,4 +1,4 @@
-export class InventoryListener {
+export default class InventoryListener {
     static get $javaClass() {
         return Java.type('fr.minuskube.inv.InventoryListener');
     }
@@ -6,4 +6,3 @@ export class InventoryListener {
         return new InventoryListener.$javaClass(...args);
     }
 }
-//# sourceMappingURL=InventoryListener.js.map

@@ -1,4 +1,4 @@
-export class SmartInventory {
+export default class SmartInventory {
     static get $javaClass() {
         return Java.type('fr.minuskube.inv.SmartInventory');
     }
@@ -6,4 +6,3 @@ export class SmartInventory {
         return SmartInventory.$javaClass.builder(...args);
     }
 }
-//# sourceMappingURL=SmartInventory.js.map

@@ -1,4 +1,4 @@
-export class GameRule {
+export default class GameRule {
     static get $javaClass() {
         return Java.type('org.bukkit.GameRule');
     }
@@ -102,4 +102,3 @@ export class GameRule {
         return GameRule.$javaClass.values(...args);
     }
 }
-//# sourceMappingURL=GameRule.js.map

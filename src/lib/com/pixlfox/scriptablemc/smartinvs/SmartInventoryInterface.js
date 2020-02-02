@@ -1,4 +1,4 @@
-export class SmartInventoryInterface {
+export default class SmartInventoryInterface {
     static get $javaClass() {
         return Java.type('com.pixlfox.scriptablemc.smartinvs.SmartInventoryInterface');
     }
@@ -6,4 +6,3 @@ export class SmartInventoryInterface {
         return new SmartInventoryInterface.$javaClass(...args);
     }
 }
-//# sourceMappingURL=SmartInventoryInterface.js.map

@@ -1,4 +1,4 @@
-export class LeavesDecayEvent {
+export default class LeavesDecayEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.block.LeavesDecayEvent');
     }
@@ -9,4 +9,3 @@ export class LeavesDecayEvent {
         return LeavesDecayEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=LeavesDecayEvent.js.map

@@ -1,4 +1,4 @@
-export class TabCompleteEvent {
+export default class TabCompleteEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.server.TabCompleteEvent');
     }
@@ -9,4 +9,3 @@ export class TabCompleteEvent {
         return TabCompleteEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=TabCompleteEvent.js.map

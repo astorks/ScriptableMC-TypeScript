@@ -1,4 +1,4 @@
-export class CauldronLevelChangeEvent$ChangeReason {
+export default class CauldronLevelChangeEvent$ChangeReason {
     static get $javaClass() {
         return Java.type('org.bukkit.event.block.CauldronLevelChangeEvent$ChangeReason');
     }
@@ -30,4 +30,3 @@ export class CauldronLevelChangeEvent$ChangeReason {
         return this.$javaClass.UNKNOWN;
     }
 }
-//# sourceMappingURL=CauldronLevelChangeEvent$ChangeReason.js.map

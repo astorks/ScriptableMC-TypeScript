@@ -1,21 +1,21 @@
-import { HandlerList } from '../../../../org/bukkit/event/HandlerList.js';
-import { Material } from '../../../../org/bukkit/Material.js';
-import { Player } from '../../../../org/bukkit/entity/Player.js';
-import { BlockData } from '../../../../org/bukkit/block/data/BlockData.js';
-import { Block } from '../../../../org/bukkit/block/Block.js';
-import { BlockEvent } from '../../../../org/bukkit/event/block/BlockEvent.js';
-export interface BlockCanBuildEvent extends BlockEvent {
+import Block from '../../../../org/bukkit/block/Block.js';
+import BlockData from '../../../../org/bukkit/block/data/BlockData.js';
+import BlockEvent from '../../../../org/bukkit/event/block/BlockEvent.js';
+import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
+import Material from '../../../../org/bukkit/Material.js';
+import Player from '../../../../org/bukkit/entity/Player.js';
+export default interface BlockCanBuildEvent extends BlockEvent {
     getHandlers(): HandlerList;
-    getMaterial(): Material;
     getPlayer(): Player;
+    getMaterial(): Material;
     getBlockData(): BlockData;
-    isBuildable(): boolean;
     setBuildable(cancel: boolean): void;
+    isBuildable(): boolean;
     getBlock(): Block;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
-export declare class BlockCanBuildEvent {
+export default class BlockCanBuildEvent {
     static get $javaClass(): any;
     constructor(block: Block, type: BlockData, canBuild: boolean);
     constructor(block: Block, player: Player, type: BlockData, canBuild: boolean);

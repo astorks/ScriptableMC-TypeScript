@@ -1,4 +1,4 @@
-export class PlayerInteractEvent {
+export default class PlayerInteractEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerInteractEvent');
     }
@@ -9,4 +9,3 @@ export class PlayerInteractEvent {
         return PlayerInteractEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerInteractEvent.js.map

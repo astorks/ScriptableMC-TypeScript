@@ -1,4 +1,4 @@
-export class Vector {
+export default class Vector {
     static get $javaClass() {
         return Java.type('org.bukkit.util.Vector');
     }
@@ -21,4 +21,3 @@ export class Vector {
         return Vector.$javaClass.getRandom(...args);
     }
 }
-//# sourceMappingURL=Vector.js.map

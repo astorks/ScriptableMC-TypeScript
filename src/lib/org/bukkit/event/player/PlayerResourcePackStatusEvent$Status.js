@@ -1,4 +1,4 @@
-export class PlayerResourcePackStatusEvent$Status {
+export default class PlayerResourcePackStatusEvent$Status {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerResourcePackStatusEvent$Status');
     }
@@ -15,4 +15,3 @@ export class PlayerResourcePackStatusEvent$Status {
         return this.$javaClass.ACCEPTED;
     }
 }
-//# sourceMappingURL=PlayerResourcePackStatusEvent$Status.js.map

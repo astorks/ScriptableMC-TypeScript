@@ -1,4 +1,4 @@
-export class BlockCookEvent {
+export default class BlockCookEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.block.BlockCookEvent');
     }
@@ -9,4 +9,3 @@ export class BlockCookEvent {
         return BlockCookEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=BlockCookEvent.js.map

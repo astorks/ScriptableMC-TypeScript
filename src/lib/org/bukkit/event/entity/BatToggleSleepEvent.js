@@ -1,4 +1,4 @@
-export class BatToggleSleepEvent {
+export default class BatToggleSleepEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.BatToggleSleepEvent');
     }
@@ -9,4 +9,3 @@ export class BatToggleSleepEvent {
         return BatToggleSleepEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=BatToggleSleepEvent.js.map

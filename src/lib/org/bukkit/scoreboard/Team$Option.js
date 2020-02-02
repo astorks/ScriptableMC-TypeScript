@@ -1,4 +1,4 @@
-export class Team$Option {
+export default class Team$Option {
     static get $javaClass() {
         return Java.type('org.bukkit.scoreboard.Team$Option');
     }
@@ -12,4 +12,3 @@ export class Team$Option {
         return this.$javaClass.COLLISION_RULE;
     }
 }
-//# sourceMappingURL=Team$Option.js.map

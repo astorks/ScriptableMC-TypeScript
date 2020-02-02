@@ -1,6 +1,7 @@
-import { Raid$RaidStatus } from '../../org/bukkit/Raid$RaidStatus.js';
-import { Location } from '../../org/bukkit/Location.js';
-export interface Raid {
+import Location from '../../org/bukkit/Location.js';
+import Raid$RaidStatus from '../../org/bukkit/Raid$RaidStatus.js';
+import Raider from '../../org/bukkit/entity/Raider.js';
+export default interface Raid {
     isStarted(): boolean;
     getActiveTicks(): number;
     getBadOmenLevel(): number;
@@ -11,9 +12,9 @@ export interface Raid {
     getTotalWaves(): number;
     getTotalHealth(): number;
     getHeroes(): any;
-    getRaiders(): any;
+    getRaiders(): Array<Raider>;
     getLocation(): Location;
 }
-export declare class Raid {
+export default class Raid {
     static get $javaClass(): any;
 }

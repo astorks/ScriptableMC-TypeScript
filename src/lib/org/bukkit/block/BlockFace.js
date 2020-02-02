@@ -1,4 +1,4 @@
-export class BlockFace {
+export default class BlockFace {
     static get $javaClass() {
         return Java.type('org.bukkit.block.BlockFace');
     }
@@ -60,4 +60,3 @@ export class BlockFace {
         return this.$javaClass.SELF;
     }
 }
-//# sourceMappingURL=BlockFace.js.map

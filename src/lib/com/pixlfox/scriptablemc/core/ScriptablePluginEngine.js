@@ -1,4 +1,4 @@
-export class ScriptablePluginEngine {
+export default class ScriptablePluginEngine {
     static get $javaClass() {
         return Java.type('com.pixlfox.scriptablemc.core.ScriptablePluginEngine');
     }
@@ -12,4 +12,3 @@ export class ScriptablePluginEngine {
         return ScriptablePluginEngine.$javaClass.access$setInst$cp(...args);
     }
 }
-//# sourceMappingURL=ScriptablePluginEngine.js.map

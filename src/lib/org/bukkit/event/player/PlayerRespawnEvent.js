@@ -1,4 +1,4 @@
-export class PlayerRespawnEvent {
+export default class PlayerRespawnEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerRespawnEvent');
     }
@@ -9,4 +9,3 @@ export class PlayerRespawnEvent {
         return PlayerRespawnEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerRespawnEvent.js.map

@@ -1,4 +1,4 @@
-export class PlayerToggleSprintEvent {
+export default class PlayerToggleSprintEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerToggleSprintEvent');
     }
@@ -9,4 +9,3 @@ export class PlayerToggleSprintEvent {
         return PlayerToggleSprintEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerToggleSprintEvent.js.map

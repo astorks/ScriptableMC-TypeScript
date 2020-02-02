@@ -1,11 +1,11 @@
-export interface Action {
+export default interface Action {
     name(): string;
     compareTo(arg0: any): number;
     compareTo(arg0: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class Action {
+export default class Action {
     static get $javaClass(): any;
     static get LEFT_CLICK_BLOCK(): Action;
     static get RIGHT_CLICK_BLOCK(): Action;

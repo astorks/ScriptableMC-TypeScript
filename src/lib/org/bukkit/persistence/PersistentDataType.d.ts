@@ -1,11 +1,11 @@
-import { PersistentDataAdapterContext } from '../../../org/bukkit/persistence/PersistentDataAdapterContext.js';
-export interface PersistentDataType {
+import PersistentDataAdapterContext from '../../../org/bukkit/persistence/PersistentDataAdapterContext.js';
+export default interface PersistentDataType {
     getPrimitiveType(): any;
     getComplexType(): any;
     toPrimitive(arg0: any, arg1: PersistentDataAdapterContext): any;
     fromPrimitive(arg0: any, arg1: PersistentDataAdapterContext): any;
 }
-export declare class PersistentDataType {
+export default class PersistentDataType {
     static get $javaClass(): any;
     static get BYTE(): PersistentDataType;
     static get SHORT(): PersistentDataType;

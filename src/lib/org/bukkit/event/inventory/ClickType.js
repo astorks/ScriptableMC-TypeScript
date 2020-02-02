@@ -1,4 +1,4 @@
-export class ClickType {
+export default class ClickType {
     static get $javaClass() {
         return Java.type('org.bukkit.event.inventory.ClickType');
     }
@@ -42,4 +42,3 @@ export class ClickType {
         return this.$javaClass.UNKNOWN;
     }
 }
-//# sourceMappingURL=ClickType.js.map

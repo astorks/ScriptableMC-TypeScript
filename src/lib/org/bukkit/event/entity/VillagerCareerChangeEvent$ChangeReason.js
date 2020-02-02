@@ -1,4 +1,4 @@
-export class VillagerCareerChangeEvent$ChangeReason {
+export default class VillagerCareerChangeEvent$ChangeReason {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.VillagerCareerChangeEvent$ChangeReason');
     }
@@ -9,4 +9,3 @@ export class VillagerCareerChangeEvent$ChangeReason {
         return this.$javaClass.EMPLOYED;
     }
 }
-//# sourceMappingURL=VillagerCareerChangeEvent$ChangeReason.js.map

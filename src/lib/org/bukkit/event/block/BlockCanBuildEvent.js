@@ -1,4 +1,4 @@
-export class BlockCanBuildEvent {
+export default class BlockCanBuildEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.block.BlockCanBuildEvent');
     }
@@ -9,4 +9,3 @@ export class BlockCanBuildEvent {
         return BlockCanBuildEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=BlockCanBuildEvent.js.map

@@ -1,4 +1,4 @@
-export class InventoryView {
+export default class InventoryView {
     static get $javaClass() {
         return Java.type('org.bukkit.inventory.InventoryView');
     }
@@ -9,4 +9,3 @@ export class InventoryView {
         return InventoryView.$javaClass.OUTSIDE;
     }
 }
-//# sourceMappingURL=InventoryView.js.map

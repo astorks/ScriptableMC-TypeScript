@@ -1,6 +1,5 @@
-export class BlockInventoryHolder {
+export default class BlockInventoryHolder {
     static get $javaClass() {
         return Java.type('org.bukkit.inventory.BlockInventoryHolder');
     }
 }
-//# sourceMappingURL=BlockInventoryHolder.js.map

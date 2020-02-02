@@ -1,4 +1,4 @@
-export class WeatherType {
+export default class WeatherType {
     static get $javaClass() {
         return Java.type('org.bukkit.WeatherType');
     }
@@ -9,4 +9,3 @@ export class WeatherType {
         return this.$javaClass.CLEAR;
     }
 }
-//# sourceMappingURL=WeatherType.js.map

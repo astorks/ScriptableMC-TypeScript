@@ -1,4 +1,4 @@
-export class PotionType {
+export default class PotionType {
     static get $javaClass() {
         return Java.type('org.bukkit.potion.PotionType');
     }
@@ -66,4 +66,3 @@ export class PotionType {
         return this.$javaClass.SLOW_FALLING;
     }
 }
-//# sourceMappingURL=PotionType.js.map

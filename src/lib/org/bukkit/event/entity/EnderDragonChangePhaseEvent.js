@@ -1,4 +1,4 @@
-export class EnderDragonChangePhaseEvent {
+export default class EnderDragonChangePhaseEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.EnderDragonChangePhaseEvent');
     }
@@ -9,4 +9,3 @@ export class EnderDragonChangePhaseEvent {
         return EnderDragonChangePhaseEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=EnderDragonChangePhaseEvent.js.map

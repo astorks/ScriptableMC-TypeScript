@@ -1,4 +1,4 @@
-export class InventoryType$SlotType {
+export default class InventoryType$SlotType {
     static get $javaClass() {
         return Java.type('org.bukkit.event.inventory.InventoryType$SlotType');
     }
@@ -24,4 +24,3 @@ export class InventoryType$SlotType {
         return this.$javaClass.FUEL;
     }
 }
-//# sourceMappingURL=InventoryType$SlotType.js.map

@@ -1,4 +1,4 @@
-export class FluidLevelChangeEvent {
+export default class FluidLevelChangeEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.block.FluidLevelChangeEvent');
     }
@@ -9,4 +9,3 @@ export class FluidLevelChangeEvent {
         return FluidLevelChangeEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=FluidLevelChangeEvent.js.map

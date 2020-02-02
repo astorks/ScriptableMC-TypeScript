@@ -1,4 +1,4 @@
-export class SheepDyeWoolEvent {
+export default class SheepDyeWoolEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.SheepDyeWoolEvent');
     }
@@ -9,4 +9,3 @@ export class SheepDyeWoolEvent {
         return SheepDyeWoolEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=SheepDyeWoolEvent.js.map

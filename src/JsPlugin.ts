@@ -1,16 +1,18 @@
-import { Event } from "./lib/org/bukkit/event/Event.js";
-import { Server } from "./lib/org/bukkit/Server.js";
-import { ScriptablePluginContext } from "./lib/com/pixlfox/scriptablemc/core/ScriptablePluginContext.js";
-import { ScriptablePluginEngine } from "./lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.js";
-import { PluginCommand } from "./lib/org/bukkit/command/PluginCommand.js";
-import { Player } from "./lib/org/bukkit/entity/Player.js";
-import { PluginMessageListenerRegistration } from "./lib/org/bukkit/plugin/messaging/PluginMessageListenerRegistration.js";
-import { OfflinePlayer } from "./lib/org/bukkit/OfflinePlayer.js";
+import Event from "./lib/org/bukkit/event/Event.js";
+import Server from "./lib/org/bukkit/Server.js";
+import ScriptablePluginContext from "./lib/com/pixlfox/scriptablemc/core/ScriptablePluginContext.js";
+import ScriptablePluginEngine from "./lib/com/pixlfox/scriptablemc/core/ScriptablePluginEngine.js";
+import PluginCommand from "./lib/org/bukkit/command/PluginCommand.js";
+import Player from "./lib/org/bukkit/entity/Player.js";
+import PluginMessageListenerRegistration from "./lib/org/bukkit/plugin/messaging/PluginMessageListenerRegistration.js";
+import OfflinePlayer from "./lib/org/bukkit/OfflinePlayer.js";
+import FileWrapper from "./lib/com/pixlfox/scriptablemc/utils/FileWrapper.js";
+import MysqlWrapper from "./lib/com/pixlfox/scriptablemc/utils/MysqlWrapper.js";
 
 declare const engine: ScriptablePluginEngine;
 declare type Type<T> = { new (...args: any[]): T; };
 
-export class JsPlugin {
+export default class JsPlugin {
     public context: ScriptablePluginContext;
 
     get pluginName(): string {
@@ -29,6 +31,14 @@ export class JsPlugin {
         return this.context.newCommand(name);
     }
 
+    unregisterCommand(command: PluginCommand) {
+        this.context.unregisterCommand(command);
+    }
+
+    registerCommand(command: PluginCommand) {
+        this.context.registerCommand(command);
+    }
+
     registerIncomingPluginChannel(channel: string, callback: (channel: string, player: Player, message: number[]) => void): PluginMessageListenerRegistration {
         return this.context.registerIncomingPluginChannel(channel, callback.bind(this));
     }
@@ -45,12 +55,16 @@ export class JsPlugin {
         this.context.unregisterOutgoingPluginChannel(channel);
     }
 
-    unregisterCommand(command: PluginCommand) {
-        this.context.unregisterCommand(command);
+    getFile(pathName: string): FileWrapper {
+        return this.context.getFile(pathName);
     }
 
-    registerCommand(command: PluginCommand) {
-        this.context.registerCommand(command);
+    newMysqlInstance(host: string, port: number, database: string, username: string, password: string): MysqlWrapper {
+        return this.context.newMysqlInstance(host, port, database, username, password);
+    }
+
+    mysqlFromConfig(configObject: { host: string, port: number, database: string, username: string, password: string }): MysqlWrapper {
+        return this.newMysqlInstance(configObject.host, configObject.port, configObject.database, configObject.username, configObject.password);
     }
 
     setPlaceholders(player: (Player | OfflinePlayer), placeholderText: string): string {

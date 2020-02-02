@@ -1,4 +1,4 @@
-export class EnchantmentOffer {
+export default class EnchantmentOffer {
     static get $javaClass() {
         return Java.type('org.bukkit.enchantments.EnchantmentOffer');
     }
@@ -6,4 +6,3 @@ export class EnchantmentOffer {
         return new EnchantmentOffer.$javaClass(...args);
     }
 }
-//# sourceMappingURL=EnchantmentOffer.js.map

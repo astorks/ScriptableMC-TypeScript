@@ -1,6 +1,6 @@
-import { Conversation } from '../../../org/bukkit/conversations/Conversation.js';
-import { ConversationAbandonedEvent } from '../../../org/bukkit/conversations/ConversationAbandonedEvent.js';
-export interface Conversable {
+import Conversation from '../../../org/bukkit/conversations/Conversation.js';
+import ConversationAbandonedEvent from '../../../org/bukkit/conversations/ConversationAbandonedEvent.js';
+export default interface Conversable {
     sendRawMessage(arg0: string): void;
     acceptConversationInput(arg0: string): void;
     beginConversation(arg0: Conversation): boolean;
@@ -8,6 +8,6 @@ export interface Conversable {
     abandonConversation(arg0: Conversation): void;
     isConversing(): boolean;
 }
-export declare class Conversable {
+export default class Conversable {
     static get $javaClass(): any;
 }

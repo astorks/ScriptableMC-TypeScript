@@ -1,4 +1,4 @@
-export class ConversationAbandonedEvent {
+export default class ConversationAbandonedEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.conversations.ConversationAbandonedEvent');
     }
@@ -6,4 +6,3 @@ export class ConversationAbandonedEvent {
         return new ConversationAbandonedEvent.$javaClass(...args);
     }
 }
-//# sourceMappingURL=ConversationAbandonedEvent.js.map

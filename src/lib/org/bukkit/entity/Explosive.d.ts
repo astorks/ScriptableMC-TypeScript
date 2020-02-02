@@ -1,26 +1,26 @@
-import { Server } from '../../../org/bukkit/Server.js';
-import { World } from '../../../org/bukkit/World.js';
-import { EntityEffect } from '../../../org/bukkit/EntityEffect.js';
-import { Vector } from '../../../org/bukkit/util/Vector.js';
-import { BoundingBox } from '../../../org/bukkit/util/BoundingBox.js';
-import { Entity } from '../../../org/bukkit/entity/Entity.js';
-import { Location } from '../../../org/bukkit/Location.js';
-import { PlayerTeleportEvent$TeleportCause } from '../../../org/bukkit/event/player/PlayerTeleportEvent$TeleportCause.js';
-import { EntityDamageEvent } from '../../../org/bukkit/event/entity/EntityDamageEvent.js';
-import { PistonMoveReaction } from '../../../org/bukkit/block/PistonMoveReaction.js';
-import { BlockFace } from '../../../org/bukkit/block/BlockFace.js';
-import { Pose } from '../../../org/bukkit/entity/Pose.js';
-import { EntityType } from '../../../org/bukkit/entity/EntityType.js';
-import { MetadataValue } from '../../../org/bukkit/metadata/MetadataValue.js';
-import { Plugin } from '../../../org/bukkit/plugin/Plugin.js';
-import { Permission } from '../../../org/bukkit/permissions/Permission.js';
-import { PermissionAttachment } from '../../../org/bukkit/permissions/PermissionAttachment.js';
-import { PersistentDataContainer } from '../../../org/bukkit/persistence/PersistentDataContainer.js';
-export interface Explosive extends Entity {
+import BlockFace from '../../../org/bukkit/block/BlockFace.js';
+import BoundingBox from '../../../org/bukkit/util/BoundingBox.js';
+import Entity from '../../../org/bukkit/entity/Entity.js';
+import EntityDamageEvent from '../../../org/bukkit/event/entity/EntityDamageEvent.js';
+import EntityEffect from '../../../org/bukkit/EntityEffect.js';
+import EntityType from '../../../org/bukkit/entity/EntityType.js';
+import Location from '../../../org/bukkit/Location.js';
+import MetadataValue from '../../../org/bukkit/metadata/MetadataValue.js';
+import Permission from '../../../org/bukkit/permissions/Permission.js';
+import PermissionAttachment from '../../../org/bukkit/permissions/PermissionAttachment.js';
+import PersistentDataContainer from '../../../org/bukkit/persistence/PersistentDataContainer.js';
+import PistonMoveReaction from '../../../org/bukkit/block/PistonMoveReaction.js';
+import PlayerTeleportEvent$TeleportCause from '../../../org/bukkit/event/player/PlayerTeleportEvent$TeleportCause.js';
+import Plugin from '../../../org/bukkit/plugin/Plugin.js';
+import Pose from '../../../org/bukkit/entity/Pose.js';
+import Server from '../../../org/bukkit/Server.js';
+import Vector from '../../../org/bukkit/util/Vector.js';
+import World from '../../../org/bukkit/World.js';
+export default interface Explosive extends Entity {
     getYield(): number;
     setYield(arg0: number): void;
-    isIncendiary(): boolean;
     setIsIncendiary(arg0: boolean): void;
+    isIncendiary(): boolean;
     isValid(): boolean;
     getServer(): Server;
     getWorld(): World;
@@ -36,7 +36,7 @@ export interface Explosive extends Entity {
     teleport(arg0: Location): boolean;
     teleport(arg0: Location, arg1: PlayerTeleportEvent$TeleportCause): boolean;
     teleport(arg0: Entity, arg1: PlayerTeleportEvent$TeleportCause): boolean;
-    getNearbyEntities(arg0: number, arg1: number, arg2: number): any;
+    getNearbyEntities(arg0: number, arg1: number, arg2: number): Array<Entity>;
     getEntityId(): number;
     getFireTicks(): number;
     getMaxFireTicks(): number;
@@ -46,7 +46,7 @@ export interface Explosive extends Entity {
     setPersistent(arg0: boolean): void;
     getPassenger(): Entity;
     setPassenger(arg0: Entity): boolean;
-    getPassengers(): any;
+    getPassengers(): Array<Entity>;
     addPassenger(arg0: Entity): boolean;
     removePassenger(arg0: Entity): boolean;
     eject(): boolean;
@@ -84,7 +84,7 @@ export interface Explosive extends Entity {
     getLocation(arg0: Location): Location;
     getType(): EntityType;
     setMetadata(arg0: string, arg1: MetadataValue): void;
-    getMetadata(arg0: string): any;
+    getMetadata(arg0: string): Array<MetadataValue>;
     hasMetadata(arg0: string): boolean;
     removeMetadata(arg0: string, arg1: Plugin): void;
     sendMessage(arg0: string): void;
@@ -107,6 +107,6 @@ export interface Explosive extends Entity {
     setCustomName(arg0: string): void;
     getPersistentDataContainer(): PersistentDataContainer;
 }
-export declare class Explosive {
+export default class Explosive {
     static get $javaClass(): any;
 }

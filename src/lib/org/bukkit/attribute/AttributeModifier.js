@@ -1,4 +1,4 @@
-export class AttributeModifier {
+export default class AttributeModifier {
     static get $javaClass() {
         return Java.type('org.bukkit.attribute.AttributeModifier');
     }
@@ -9,4 +9,3 @@ export class AttributeModifier {
         return AttributeModifier.$javaClass.deserialize(...args);
     }
 }
-//# sourceMappingURL=AttributeModifier.js.map

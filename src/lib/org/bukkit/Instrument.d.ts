@@ -1,4 +1,4 @@
-export interface Instrument {
+export default interface Instrument {
     getType(): number;
     name(): string;
     compareTo(arg0: any): number;
@@ -6,7 +6,7 @@ export interface Instrument {
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class Instrument {
+export default class Instrument {
     static get $javaClass(): any;
     static get PIANO(): Instrument;
     static get BASS_DRUM(): Instrument;

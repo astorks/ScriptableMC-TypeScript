@@ -1,4 +1,4 @@
-export class BroadcastMessageEvent {
+export default class BroadcastMessageEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.server.BroadcastMessageEvent');
     }
@@ -9,4 +9,3 @@ export class BroadcastMessageEvent {
         return BroadcastMessageEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=BroadcastMessageEvent.js.map

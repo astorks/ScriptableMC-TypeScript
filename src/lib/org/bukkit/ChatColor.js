@@ -1,4 +1,4 @@
-export class ChatColor {
+export default class ChatColor {
     static get $javaClass() {
         return Java.type('org.bukkit.ChatColor');
     }
@@ -69,4 +69,3 @@ export class ChatColor {
         return this.$javaClass.RESET;
     }
 }
-//# sourceMappingURL=ChatColor.js.map

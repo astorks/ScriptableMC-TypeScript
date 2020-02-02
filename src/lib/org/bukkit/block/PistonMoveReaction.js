@@ -1,4 +1,4 @@
-export class PistonMoveReaction {
+export default class PistonMoveReaction {
     static get $javaClass() {
         return Java.type('org.bukkit.block.PistonMoveReaction');
     }
@@ -18,4 +18,3 @@ export class PistonMoveReaction {
         return this.$javaClass.PUSH_ONLY;
     }
 }
-//# sourceMappingURL=PistonMoveReaction.js.map

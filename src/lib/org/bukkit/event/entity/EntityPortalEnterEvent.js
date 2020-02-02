@@ -1,4 +1,4 @@
-export class EntityPortalEnterEvent {
+export default class EntityPortalEnterEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.EntityPortalEnterEvent');
     }
@@ -9,4 +9,3 @@ export class EntityPortalEnterEvent {
         return EntityPortalEnterEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=EntityPortalEnterEvent.js.map

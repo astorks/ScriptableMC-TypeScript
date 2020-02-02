@@ -1,4 +1,4 @@
-export class BarFlag {
+export default class BarFlag {
     static get $javaClass() {
         return Java.type('org.bukkit.boss.BarFlag');
     }
@@ -12,4 +12,3 @@ export class BarFlag {
         return this.$javaClass.CREATE_FOG;
     }
 }
-//# sourceMappingURL=BarFlag.js.map

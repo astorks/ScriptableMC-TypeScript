@@ -1,4 +1,4 @@
-export class NotePlayEvent {
+export default class NotePlayEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.block.NotePlayEvent');
     }
@@ -9,4 +9,3 @@ export class NotePlayEvent {
         return NotePlayEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=NotePlayEvent.js.map

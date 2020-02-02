@@ -1,4 +1,4 @@
-export class EntityRegainHealthEvent$RegainReason {
+export default class EntityRegainHealthEvent$RegainReason {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.EntityRegainHealthEvent$RegainReason');
     }
@@ -30,4 +30,3 @@ export class EntityRegainHealthEvent$RegainReason {
         return this.$javaClass.CUSTOM;
     }
 }
-//# sourceMappingURL=EntityRegainHealthEvent$RegainReason.js.map

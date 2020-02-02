@@ -1,11 +1,11 @@
-export interface EntityPotionEffectEvent$Action {
+export default interface EntityPotionEffectEvent$Action {
     name(): string;
     compareTo(arg0: any): number;
     compareTo(arg0: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class EntityPotionEffectEvent$Action {
+export default class EntityPotionEffectEvent$Action {
     static get $javaClass(): any;
     static get ADDED(): EntityPotionEffectEvent$Action;
     static get CHANGED(): EntityPotionEffectEvent$Action;

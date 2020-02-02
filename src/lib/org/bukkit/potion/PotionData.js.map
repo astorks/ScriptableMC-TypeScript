@@ -1,1 +1,0 @@
-{"version":3,"file":"PotionData.js","sourceRoot":"","sources":["../../../../ts/org/bukkit/potion/PotionData.ts"],"names":[],"mappings":"AASA,MAAM,OAAO,UAAU;IACf,MAAM,KAAK,UAAU;QAC3B,OAAO,IAAI,CAAC,IAAI,CAAC,8BAA8B,CAAC,CAAC;IAClD,CAAC;IAGD,YAAY,GAAG,IAAW;QACzB,OAAO,IAAI,UAAU,CAAC,UAAU,CAAC,GAAG,IAAI,CAAC,CAAC;IAC3C,CAAC;CACD"}

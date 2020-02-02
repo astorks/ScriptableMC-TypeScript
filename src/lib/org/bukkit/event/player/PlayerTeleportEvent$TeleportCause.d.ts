@@ -1,11 +1,11 @@
-export interface PlayerTeleportEvent$TeleportCause {
+export default interface PlayerTeleportEvent$TeleportCause {
     name(): string;
     compareTo(arg0: any): number;
     compareTo(arg0: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class PlayerTeleportEvent$TeleportCause {
+export default class PlayerTeleportEvent$TeleportCause {
     static get $javaClass(): any;
     static get ENDER_PEARL(): PlayerTeleportEvent$TeleportCause;
     static get COMMAND(): PlayerTeleportEvent$TeleportCause;

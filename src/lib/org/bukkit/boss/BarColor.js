@@ -1,4 +1,4 @@
-export class BarColor {
+export default class BarColor {
     static get $javaClass() {
         return Java.type('org.bukkit.boss.BarColor');
     }
@@ -24,4 +24,3 @@ export class BarColor {
         return this.$javaClass.WHITE;
     }
 }
-//# sourceMappingURL=BarColor.js.map

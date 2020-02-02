@@ -1,4 +1,4 @@
-export class VillagerReplenishTradeEvent {
+export default class VillagerReplenishTradeEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.VillagerReplenishTradeEvent');
     }
@@ -9,4 +9,3 @@ export class VillagerReplenishTradeEvent {
         return VillagerReplenishTradeEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=VillagerReplenishTradeEvent.js.map

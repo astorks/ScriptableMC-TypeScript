@@ -1,4 +1,4 @@
-export class Villager$Type {
+export default class Villager$Type {
     static get $javaClass() {
         return Java.type('org.bukkit.entity.Villager$Type');
     }
@@ -24,4 +24,3 @@ export class Villager$Type {
         return this.$javaClass.TAIGA;
     }
 }
-//# sourceMappingURL=Villager$Type.js.map

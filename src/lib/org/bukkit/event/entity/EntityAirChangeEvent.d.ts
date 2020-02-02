@@ -1,9 +1,9 @@
-import { HandlerList } from '../../../../org/bukkit/event/HandlerList.js';
-import { Entity } from '../../../../org/bukkit/entity/Entity.js';
-import { EntityType } from '../../../../org/bukkit/entity/EntityType.js';
-import { Cancellable } from '../../../../org/bukkit/event/Cancellable.js';
-import { EntityEvent } from '../../../../org/bukkit/event/entity/EntityEvent.js';
-export interface EntityAirChangeEvent extends EntityEvent, Cancellable {
+import Cancellable from '../../../../org/bukkit/event/Cancellable.js';
+import Entity from '../../../../org/bukkit/entity/Entity.js';
+import EntityEvent from '../../../../org/bukkit/event/entity/EntityEvent.js';
+import EntityType from '../../../../org/bukkit/entity/EntityType.js';
+import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
+export default interface EntityAirChangeEvent extends EntityEvent, Cancellable {
     getHandlers(): HandlerList;
     getAmount(): number;
     setAmount(amount: number): void;
@@ -11,10 +11,10 @@ export interface EntityAirChangeEvent extends EntityEvent, Cancellable {
     setCancelled(cancelled: boolean): void;
     getEntity(): Entity;
     getEntityType(): EntityType;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
-export declare class EntityAirChangeEvent {
+export default class EntityAirChangeEvent {
     static get $javaClass(): any;
     constructor(what: Entity, amount: number);
     static getHandlerList(): HandlerList;

@@ -1,4 +1,4 @@
-export class Location {
+export default class Location {
     static get $javaClass() {
         return Java.type('org.bukkit.Location');
     }
@@ -18,4 +18,3 @@ export class Location {
         return Location.$javaClass.normalizePitch(...args);
     }
 }
-//# sourceMappingURL=Location.js.map

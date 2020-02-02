@@ -1,4 +1,4 @@
-export class EntityPotionEffectEvent {
+export default class EntityPotionEffectEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.EntityPotionEffectEvent');
     }
@@ -9,4 +9,3 @@ export class EntityPotionEffectEvent {
         return EntityPotionEffectEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=EntityPotionEffectEvent.js.map

@@ -1,4 +1,4 @@
-export class PlayerToggleSneakEvent {
+export default class PlayerToggleSneakEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerToggleSneakEvent');
     }
@@ -9,4 +9,3 @@ export class PlayerToggleSneakEvent {
         return PlayerToggleSneakEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerToggleSneakEvent.js.map

@@ -1,4 +1,4 @@
-export class PlayerItemDamageEvent {
+export default class PlayerItemDamageEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerItemDamageEvent');
     }
@@ -9,4 +9,3 @@ export class PlayerItemDamageEvent {
         return PlayerItemDamageEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerItemDamageEvent.js.map

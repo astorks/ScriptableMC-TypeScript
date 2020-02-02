@@ -1,11 +1,11 @@
-export interface EntityRegainHealthEvent$RegainReason {
+export default interface EntityRegainHealthEvent$RegainReason {
     name(): string;
     compareTo(arg0: any): number;
     compareTo(arg0: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class EntityRegainHealthEvent$RegainReason {
+export default class EntityRegainHealthEvent$RegainReason {
     static get $javaClass(): any;
     static get REGEN(): EntityRegainHealthEvent$RegainReason;
     static get SATIATED(): EntityRegainHealthEvent$RegainReason;

@@ -1,19 +1,19 @@
-import { HandlerList } from '../../../../org/bukkit/event/HandlerList.js';
-import { Entity } from '../../../../org/bukkit/entity/Entity.js';
-import { Player } from '../../../../org/bukkit/entity/Player.js';
-import { Cancellable } from '../../../../org/bukkit/event/Cancellable.js';
-import { Event } from '../../../../org/bukkit/event/Event.js';
-export interface PlayerLeashEntityEvent extends Event, Cancellable {
+import Cancellable from '../../../../org/bukkit/event/Cancellable.js';
+import Entity from '../../../../org/bukkit/entity/Entity.js';
+import Event from '../../../../org/bukkit/event/Event.js';
+import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
+import Player from '../../../../org/bukkit/entity/Player.js';
+export default interface PlayerLeashEntityEvent extends Event, Cancellable {
     getHandlers(): HandlerList;
-    getLeashHolder(): Entity;
     getPlayer(): Player;
     getEntity(): Entity;
+    getLeashHolder(): Entity;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    isAsynchronous(): boolean;
     getEventName(): string;
+    isAsynchronous(): boolean;
 }
-export declare class PlayerLeashEntityEvent {
+export default class PlayerLeashEntityEvent {
     static get $javaClass(): any;
     constructor(what: Entity, leashHolder: Entity, leasher: Player);
     static getHandlerList(): HandlerList;

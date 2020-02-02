@@ -1,4 +1,4 @@
-export class MapView$Scale {
+export default class MapView$Scale {
     static get $javaClass() {
         return Java.type('org.bukkit.map.MapView$Scale');
     }
@@ -18,4 +18,3 @@ export class MapView$Scale {
         return this.$javaClass.FARTHEST;
     }
 }
-//# sourceMappingURL=MapView$Scale.js.map

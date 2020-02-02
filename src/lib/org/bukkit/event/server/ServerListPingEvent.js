@@ -1,4 +1,4 @@
-export class ServerListPingEvent {
+export default class ServerListPingEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.server.ServerListPingEvent');
     }
@@ -9,4 +9,3 @@ export class ServerListPingEvent {
         return ServerListPingEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=ServerListPingEvent.js.map

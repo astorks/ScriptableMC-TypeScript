@@ -1,4 +1,4 @@
-export class PlayerCommandPreprocessEvent {
+export default class PlayerCommandPreprocessEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerCommandPreprocessEvent');
     }
@@ -9,4 +9,3 @@ export class PlayerCommandPreprocessEvent {
         return PlayerCommandPreprocessEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerCommandPreprocessEvent.js.map

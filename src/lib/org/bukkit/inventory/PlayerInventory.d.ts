@@ -1,16 +1,16 @@
-import { ItemStack } from '../../../org/bukkit/inventory/ItemStack.js';
-import { InventoryHolder } from '../../../org/bukkit/inventory/InventoryHolder.js';
-import { HumanEntity } from '../../../org/bukkit/entity/HumanEntity.js';
-import { Material } from '../../../org/bukkit/Material.js';
-import { Location } from '../../../org/bukkit/Location.js';
-import { InventoryType } from '../../../org/bukkit/event/inventory/InventoryType.js';
-import { Inventory } from '../../../org/bukkit/inventory/Inventory.js';
-export interface PlayerInventory extends Inventory {
+import HumanEntity from '../../../org/bukkit/entity/HumanEntity.js';
+import Inventory from '../../../org/bukkit/inventory/Inventory.js';
+import InventoryHolder from '../../../org/bukkit/inventory/InventoryHolder.js';
+import InventoryType from '../../../org/bukkit/event/inventory/InventoryType.js';
+import ItemStack from '../../../org/bukkit/inventory/ItemStack.js';
+import Location from '../../../org/bukkit/Location.js';
+import Material from '../../../org/bukkit/Material.js';
+export default interface PlayerInventory extends Inventory {
     getItemInHand(): ItemStack;
     setItemInHand(arg0: ItemStack): void;
+    setItem(arg0: number, arg1: ItemStack): void;
     getHolder(): InventoryHolder;
     getHolder(): HumanEntity;
-    setItem(arg0: number, arg1: ItemStack): void;
     getItemInMainHand(): ItemStack;
     getArmorContents(): Array<ItemStack>;
     getExtraContents(): Array<ItemStack>;
@@ -31,16 +31,16 @@ export interface PlayerInventory extends Inventory {
     setHeldItemSlot(arg0: number): void;
     setContents(arg0: Array<ItemStack>): void;
     getMaxStackSize(): number;
+    addItem(arg0: Array<ItemStack>): any;
+    setMaxStackSize(arg0: number): void;
+    getItem(arg0: number): ItemStack;
     removeItem(arg0: Array<ItemStack>): any;
     getContents(): Array<ItemStack>;
     getStorageContents(): Array<ItemStack>;
     setStorageContents(arg0: Array<ItemStack>): void;
     containsAtLeast(arg0: ItemStack, arg1: number): boolean;
     firstEmpty(): number;
-    getViewers(): any;
-    addItem(arg0: Array<ItemStack>): any;
-    setMaxStackSize(arg0: number): void;
-    getItem(arg0: number): ItemStack;
+    getViewers(): Array<HumanEntity>;
     remove(arg0: ItemStack): void;
     remove(arg0: Material): void;
     clear(): void;
@@ -62,6 +62,6 @@ export interface PlayerInventory extends Inventory {
     spliterator(): any;
     forEach(arg0: any): void;
 }
-export declare class PlayerInventory {
+export default class PlayerInventory {
     static get $javaClass(): any;
 }

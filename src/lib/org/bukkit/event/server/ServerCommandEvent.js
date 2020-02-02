@@ -1,4 +1,4 @@
-export class ServerCommandEvent {
+export default class ServerCommandEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.server.ServerCommandEvent');
     }
@@ -9,4 +9,3 @@ export class ServerCommandEvent {
         return ServerCommandEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=ServerCommandEvent.js.map

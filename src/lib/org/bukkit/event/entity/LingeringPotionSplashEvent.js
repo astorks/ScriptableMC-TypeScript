@@ -1,4 +1,4 @@
-export class LingeringPotionSplashEvent {
+export default class LingeringPotionSplashEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.LingeringPotionSplashEvent');
     }
@@ -9,4 +9,3 @@ export class LingeringPotionSplashEvent {
         return LingeringPotionSplashEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=LingeringPotionSplashEvent.js.map

@@ -1,4 +1,4 @@
-export class PlayerBedLeaveEvent {
+export default class PlayerBedLeaveEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerBedLeaveEvent');
     }
@@ -9,4 +9,3 @@ export class PlayerBedLeaveEvent {
         return PlayerBedLeaveEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerBedLeaveEvent.js.map

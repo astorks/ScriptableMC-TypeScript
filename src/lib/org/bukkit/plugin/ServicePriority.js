@@ -1,4 +1,4 @@
-export class ServicePriority {
+export default class ServicePriority {
     static get $javaClass() {
         return Java.type('org.bukkit.plugin.ServicePriority');
     }
@@ -18,4 +18,3 @@ export class ServicePriority {
         return this.$javaClass.Highest;
     }
 }
-//# sourceMappingURL=ServicePriority.js.map

@@ -1,4 +1,4 @@
-export interface World$Environment {
+export default interface World$Environment {
     getId(): number;
     name(): string;
     compareTo(arg0: any): number;
@@ -6,7 +6,7 @@ export interface World$Environment {
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class World$Environment {
+export default class World$Environment {
     static get $javaClass(): any;
     static get NORMAL(): World$Environment;
     static get NETHER(): World$Environment;

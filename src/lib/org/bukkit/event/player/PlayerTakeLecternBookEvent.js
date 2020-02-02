@@ -1,4 +1,4 @@
-export class PlayerTakeLecternBookEvent {
+export default class PlayerTakeLecternBookEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerTakeLecternBookEvent');
     }
@@ -9,4 +9,3 @@ export class PlayerTakeLecternBookEvent {
         return PlayerTakeLecternBookEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerTakeLecternBookEvent.js.map

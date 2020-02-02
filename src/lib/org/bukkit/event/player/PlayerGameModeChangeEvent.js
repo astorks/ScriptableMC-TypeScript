@@ -1,4 +1,4 @@
-export class PlayerGameModeChangeEvent {
+export default class PlayerGameModeChangeEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerGameModeChangeEvent');
     }
@@ -9,4 +9,3 @@ export class PlayerGameModeChangeEvent {
         return PlayerGameModeChangeEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=PlayerGameModeChangeEvent.js.map

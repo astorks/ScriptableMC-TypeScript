@@ -1,4 +1,4 @@
-export class Prompt {
+export default class Prompt {
     static get $javaClass() {
         return Java.type('org.bukkit.conversations.Prompt');
     }
@@ -6,4 +6,3 @@ export class Prompt {
         return Prompt.$javaClass.END_OF_CONVERSATION;
     }
 }
-//# sourceMappingURL=Prompt.js.map

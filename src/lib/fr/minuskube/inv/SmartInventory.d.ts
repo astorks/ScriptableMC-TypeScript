@@ -1,10 +1,10 @@
-import { InventoryProvider } from '../../../fr/minuskube/inv/content/InventoryProvider.js';
-import { InventoryManager } from '../../../fr/minuskube/inv/InventoryManager.js';
-import { SmartInventory$Builder } from '../../../fr/minuskube/inv/SmartInventory$Builder.js';
-import { Player } from '../../../org/bukkit/entity/Player.js';
-import { InventoryType } from '../../../org/bukkit/event/inventory/InventoryType.js';
-import { Inventory } from '../../../org/bukkit/inventory/Inventory.js';
-export interface SmartInventory {
+import Inventory from '../../../org/bukkit/inventory/Inventory.js';
+import InventoryManager from '../../../fr/minuskube/inv/InventoryManager.js';
+import InventoryProvider from '../../../fr/minuskube/inv/content/InventoryProvider.js';
+import InventoryType from '../../../org/bukkit/event/inventory/InventoryType.js';
+import Player from '../../../org/bukkit/entity/Player.js';
+import SmartInventory$Builder from '../../../fr/minuskube/inv/SmartInventory$Builder.js';
+export default interface SmartInventory {
     getProvider(): InventoryProvider;
     getTitle(): string;
     getRows(): number;
@@ -19,7 +19,7 @@ export interface SmartInventory {
     open(player: Player, page: number): Inventory;
     open(player: Player): Inventory;
 }
-export declare class SmartInventory {
+export default class SmartInventory {
     static get $javaClass(): any;
     static builder(): SmartInventory$Builder;
 }

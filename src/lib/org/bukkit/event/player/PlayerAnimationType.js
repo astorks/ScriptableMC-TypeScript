@@ -1,4 +1,4 @@
-export class PlayerAnimationType {
+export default class PlayerAnimationType {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerAnimationType');
     }
@@ -6,4 +6,3 @@ export class PlayerAnimationType {
         return this.$javaClass.ARM_SWING;
     }
 }
-//# sourceMappingURL=PlayerAnimationType.js.map

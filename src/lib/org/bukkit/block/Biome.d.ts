@@ -1,6 +1,6 @@
-import { NamespacedKey } from '../../../org/bukkit/NamespacedKey.js';
-import { Keyed } from '../../../org/bukkit/Keyed.js';
-export interface Biome extends Keyed {
+import Keyed from '../../../org/bukkit/Keyed.js';
+import NamespacedKey from '../../../org/bukkit/NamespacedKey.js';
+export default interface Biome extends Keyed {
     getKey(): NamespacedKey;
     name(): string;
     compareTo(arg0: any): number;
@@ -8,7 +8,7 @@ export interface Biome extends Keyed {
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class Biome {
+export default class Biome {
     static get $javaClass(): any;
     static get OCEAN(): Biome;
     static get PLAINS(): Biome;

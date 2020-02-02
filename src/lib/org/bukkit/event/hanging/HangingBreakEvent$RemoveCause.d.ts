@@ -1,11 +1,11 @@
-export interface HangingBreakEvent$RemoveCause {
+export default interface HangingBreakEvent$RemoveCause {
     name(): string;
     compareTo(arg0: any): number;
     compareTo(arg0: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class HangingBreakEvent$RemoveCause {
+export default class HangingBreakEvent$RemoveCause {
     static get $javaClass(): any;
     static get ENTITY(): HangingBreakEvent$RemoveCause;
     static get EXPLOSION(): HangingBreakEvent$RemoveCause;

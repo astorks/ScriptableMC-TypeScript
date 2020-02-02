@@ -1,4 +1,4 @@
-export class VehicleEnterEvent {
+export default class VehicleEnterEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.vehicle.VehicleEnterEvent');
     }
@@ -9,4 +9,3 @@ export class VehicleEnterEvent {
         return VehicleEnterEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=VehicleEnterEvent.js.map

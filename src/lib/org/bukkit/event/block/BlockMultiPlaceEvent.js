@@ -1,4 +1,4 @@
-export class BlockMultiPlaceEvent {
+export default class BlockMultiPlaceEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.block.BlockMultiPlaceEvent');
     }
@@ -9,4 +9,3 @@ export class BlockMultiPlaceEvent {
         return BlockMultiPlaceEvent.$javaClass.getHandlerList(...args);
     }
 }
-//# sourceMappingURL=BlockMultiPlaceEvent.js.map

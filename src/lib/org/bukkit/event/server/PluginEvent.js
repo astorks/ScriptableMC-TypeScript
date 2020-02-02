@@ -1,4 +1,4 @@
-export class PluginEvent {
+export default class PluginEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.server.PluginEvent');
     }
@@ -6,4 +6,3 @@ export class PluginEvent {
         return new PluginEvent.$javaClass(...args);
     }
 }
-//# sourceMappingURL=PluginEvent.js.map

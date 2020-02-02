@@ -1,1 +1,0 @@
-{"version":3,"file":"PlayerAnimationType.js","sourceRoot":"","sources":["../../../../../ts/org/bukkit/event/player/PlayerAnimationType.ts"],"names":[],"mappings":"AAUA,MAAM,OAAO,mBAAmB;IACxB,MAAM,KAAK,UAAU;QAC3B,OAAO,IAAI,CAAC,IAAI,CAAC,6CAA6C,CAAC,CAAC;IACjE,CAAC;IAEM,MAAM,KAAK,SAAS;QAC1B,OAAO,IAAI,CAAC,UAAU,CAAC,SAAS,CAAC;IAClC,CAAC;CACD"}

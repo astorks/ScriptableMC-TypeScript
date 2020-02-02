@@ -1,4 +1,4 @@
-export class PermissionDefault {
+export default class PermissionDefault {
     static get $javaClass() {
         return Java.type('org.bukkit.permissions.PermissionDefault');
     }
@@ -15,4 +15,3 @@ export class PermissionDefault {
         return this.$javaClass.NOT_OP;
     }
 }
-//# sourceMappingURL=PermissionDefault.js.map

@@ -1,9 +1,9 @@
-import { World } from '../../org/bukkit/World.js';
-import { CommandSender } from '../../org/bukkit/command/CommandSender.js';
-import { ChunkGenerator } from '../../org/bukkit/generator/ChunkGenerator.js';
-import { WorldType } from '../../org/bukkit/WorldType.js';
-import { World$Environment } from '../../org/bukkit/World$Environment.js';
-export interface WorldCreator {
+import ChunkGenerator from '../../org/bukkit/generator/ChunkGenerator.js';
+import CommandSender from '../../org/bukkit/command/CommandSender.js';
+import World from '../../org/bukkit/World.js';
+import World$Environment from '../../org/bukkit/World$Environment.js';
+import WorldType from '../../org/bukkit/WorldType.js';
+export default interface WorldCreator {
     createWorld(): World;
     seed(): number;
     seed(seed: number): WorldCreator;
@@ -25,7 +25,7 @@ export interface WorldCreator {
     environment(): World$Environment;
     environment(env: World$Environment): WorldCreator;
 }
-export declare class WorldCreator {
+export default class WorldCreator {
     static get $javaClass(): any;
     constructor(_name: string);
     static getGeneratorForName(world: string, _name: string, output: CommandSender): ChunkGenerator;
