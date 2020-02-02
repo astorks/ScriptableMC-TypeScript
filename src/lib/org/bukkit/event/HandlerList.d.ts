@@ -1,22 +1,22 @@
-import { RegisteredListener } from '../../../org/bukkit/plugin/RegisteredListener.js';
-import { Plugin } from '../../../org/bukkit/plugin/Plugin.js';
-import { Listener } from '../../../org/bukkit/event/Listener.js';
-export interface HandlerList {
+import Listener from '../../../org/bukkit/event/Listener.js';
+import Plugin from '../../../org/bukkit/plugin/Plugin.js';
+import RegisteredListener from '../../../org/bukkit/plugin/RegisteredListener.js';
+export default interface HandlerList {
     register(listener: RegisteredListener): void;
     unregister(plugin: Plugin): void;
-    unregister(listener: Listener): void;
     unregister(listener: RegisteredListener): void;
+    unregister(listener: Listener): void;
     registerAll(listeners: any): void;
     bake(): void;
     getRegisteredListeners(): Array<RegisteredListener>;
 }
-export declare class HandlerList {
+export default class HandlerList {
     static get $javaClass(): any;
     constructor();
-    static unregisterAll(): void;
     static unregisterAll(listener: Listener): void;
     static unregisterAll(plugin: Plugin): void;
-    static bakeAll(): void;
+    static unregisterAll(): void;
     static getHandlerLists(): any;
+    static bakeAll(): void;
     static getRegisteredListeners(plugin: Plugin): any;
 }

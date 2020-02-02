@@ -1,4 +1,4 @@
-export class WorldSaveEvent {
+export default class WorldSaveEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.world.WorldSaveEvent');
     }

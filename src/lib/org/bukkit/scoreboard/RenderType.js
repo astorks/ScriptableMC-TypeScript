@@ -1,4 +1,4 @@
-export class RenderType {
+export default class RenderType {
     static get $javaClass() {
         return Java.type('org.bukkit.scoreboard.RenderType');
     }

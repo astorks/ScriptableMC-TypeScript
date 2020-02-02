@@ -1,5 +1,5 @@
-import { InventoryType } from '../../../org/bukkit/event/inventory/InventoryType.js';
-export interface InventoryView$Property {
+import InventoryType from '../../../org/bukkit/event/inventory/InventoryType.js';
+export default interface InventoryView$Property {
     getId(): number;
     getType(): InventoryType;
     name(): string;
@@ -8,7 +8,7 @@ export interface InventoryView$Property {
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class InventoryView$Property {
+export default class InventoryView$Property {
     static get $javaClass(): any;
     static get BREW_TIME(): InventoryView$Property;
     static get BURN_TIME(): InventoryView$Property;

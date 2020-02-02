@@ -1,4 +1,4 @@
-export class PluginBase {
+export default class PluginBase {
     static get $javaClass() {
         return Java.type('org.bukkit.plugin.PluginBase');
     }

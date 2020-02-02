@@ -1,4 +1,4 @@
-export class PlayerChangedWorldEvent {
+export default class PlayerChangedWorldEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerChangedWorldEvent');
     }

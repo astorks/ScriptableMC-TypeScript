@@ -1,7 +1,7 @@
-export interface Savepoint {
+export default interface Savepoint {
     getSavepointId(): number;
     getSavepointName(): string;
 }
-export declare class Savepoint {
+export default class Savepoint {
     static get $javaClass(): any;
 }

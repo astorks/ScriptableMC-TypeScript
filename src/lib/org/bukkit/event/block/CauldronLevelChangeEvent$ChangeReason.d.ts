@@ -1,11 +1,11 @@
-export interface CauldronLevelChangeEvent$ChangeReason {
+export default interface CauldronLevelChangeEvent$ChangeReason {
     name(): string;
     compareTo(arg0: any): number;
     compareTo(o: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class CauldronLevelChangeEvent$ChangeReason {
+export default class CauldronLevelChangeEvent$ChangeReason {
     static get $javaClass(): any;
     static get BUCKET_FILL(): CauldronLevelChangeEvent$ChangeReason;
     static get BUCKET_EMPTY(): CauldronLevelChangeEvent$ChangeReason;

@@ -1,4 +1,4 @@
-export class ClickableItem {
+export default class ClickableItem {
     static get $javaClass() {
         return Java.type('fr.minuskube.inv.ClickableItem');
     }

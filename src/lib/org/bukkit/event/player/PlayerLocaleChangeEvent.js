@@ -1,4 +1,4 @@
-export class PlayerLocaleChangeEvent {
+export default class PlayerLocaleChangeEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerLocaleChangeEvent');
     }

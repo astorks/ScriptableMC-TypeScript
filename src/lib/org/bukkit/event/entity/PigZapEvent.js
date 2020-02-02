@@ -1,4 +1,4 @@
-export class PigZapEvent {
+export default class PigZapEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.PigZapEvent');
     }

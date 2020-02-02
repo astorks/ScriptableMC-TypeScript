@@ -1,4 +1,4 @@
-export class BookMeta$Generation {
+export default class BookMeta$Generation {
     static get $javaClass() {
         return Java.type('org.bukkit.inventory.meta.BookMeta$Generation');
     }

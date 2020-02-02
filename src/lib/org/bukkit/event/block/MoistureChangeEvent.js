@@ -1,4 +1,4 @@
-export class MoistureChangeEvent {
+export default class MoistureChangeEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.block.MoistureChangeEvent');
     }

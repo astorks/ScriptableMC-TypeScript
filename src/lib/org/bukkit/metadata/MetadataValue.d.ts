@@ -1,17 +1,17 @@
-import { Plugin } from '../../../org/bukkit/plugin/Plugin.js';
-export interface MetadataValue {
+import Plugin from '../../../org/bukkit/plugin/Plugin.js';
+export default interface MetadataValue {
     value(): any;
     asString(): string;
-    asBoolean(): boolean;
-    asLong(): number;
     asDouble(): number;
-    asByte(): number;
-    asShort(): number;
+    asLong(): number;
     asInt(): number;
+    asBoolean(): boolean;
+    asShort(): number;
     asFloat(): number;
+    asByte(): number;
     getOwningPlugin(): Plugin;
     invalidate(): void;
 }
-export declare class MetadataValue {
+export default class MetadataValue {
     static get $javaClass(): any;
 }

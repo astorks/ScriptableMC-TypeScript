@@ -1,4 +1,4 @@
-export class EulerAngle {
+export default class EulerAngle {
     static get $javaClass() {
         return Java.type('org.bukkit.util.EulerAngle');
     }

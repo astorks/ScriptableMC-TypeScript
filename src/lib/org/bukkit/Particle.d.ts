@@ -1,4 +1,4 @@
-export interface Particle {
+export default interface Particle {
     getDataType(): any;
     name(): string;
     compareTo(arg0: any): number;
@@ -6,7 +6,7 @@ export interface Particle {
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class Particle {
+export default class Particle {
     static get $javaClass(): any;
     static get EXPLOSION_NORMAL(): Particle;
     static get EXPLOSION_LARGE(): Particle;

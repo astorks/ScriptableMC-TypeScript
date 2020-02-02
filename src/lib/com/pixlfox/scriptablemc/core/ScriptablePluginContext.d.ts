@@ -1,39 +1,43 @@
-import { FileWrapper } from '../../../../com/pixlfox/scriptablemc/utils/FileWrapper.js';
-import { PluginMessageListenerRegistration } from '../../../../org/bukkit/plugin/messaging/PluginMessageListenerRegistration.js';
-import { PluginMessageListener } from '../../../../org/bukkit/plugin/messaging/PluginMessageListener.js';
-import { PluginCommand } from '../../../../org/bukkit/command/PluginCommand.js';
-import { Player } from '../../../../org/bukkit/entity/Player.js';
-import { OfflinePlayer } from '../../../../org/bukkit/OfflinePlayer.js';
-import { MysqlWrapper } from '../../../../com/pixlfox/scriptablemc/utils/MysqlWrapper.js';
-import { SmartItemBuilder } from '../../../../com/pixlfox/scriptablemc/smartinvs/SmartItemBuilder.js';
-import { ItemStack } from '../../../../org/bukkit/inventory/ItemStack.js';
-import { SmartInventoryInterface } from '../../../../com/pixlfox/scriptablemc/smartinvs/SmartInventoryInterface.js';
-import { EventExecutor } from '../../../../org/bukkit/plugin/EventExecutor.js';
-import { Server } from '../../../../org/bukkit/Server.js';
-import { JavaPlugin } from '../../../../org/bukkit/plugin/java/JavaPlugin.js';
-import { ScriptablePluginEngine } from '../../../../com/pixlfox/scriptablemc/core/ScriptablePluginEngine.js';
-import { Listener } from '../../../../org/bukkit/event/Listener.js';
-export interface ScriptablePluginContext extends Listener {
+import EventExecutor from '../../../../org/bukkit/plugin/EventExecutor.js';
+import FileWrapper from '../../../../com/pixlfox/scriptablemc/utils/FileWrapper.js';
+import ItemStack from '../../../../org/bukkit/inventory/ItemStack.js';
+import JavaPlugin from '../../../../org/bukkit/plugin/java/JavaPlugin.js';
+import Listener from '../../../../org/bukkit/event/Listener.js';
+import MysqlWrapper from '../../../../com/pixlfox/scriptablemc/utils/MysqlWrapper.js';
+import OfflinePlayer from '../../../../org/bukkit/OfflinePlayer.js';
+import Player from '../../../../org/bukkit/entity/Player.js';
+import PluginCommand from '../../../../org/bukkit/command/PluginCommand.js';
+import PluginMessageListener from '../../../../org/bukkit/plugin/messaging/PluginMessageListener.js';
+import PluginMessageListenerRegistration from '../../../../org/bukkit/plugin/messaging/PluginMessageListenerRegistration.js';
+import ScriptablePluginEngine from '../../../../com/pixlfox/scriptablemc/core/ScriptablePluginEngine.js';
+import Server from '../../../../org/bukkit/Server.js';
+import ServicesManager from '../../../../org/bukkit/plugin/ServicesManager.js';
+import SmartInventoryInterface from '../../../../com/pixlfox/scriptablemc/smartinvs/SmartInventoryInterface.js';
+import SmartItemBuilder from '../../../../com/pixlfox/scriptablemc/smartinvs/SmartItemBuilder.js';
+export default interface ScriptablePluginContext extends Listener {
     getFile(pathName: string): FileWrapper;
-    unregisterIncomingPluginChannel(channel: string): void;
+    getJavaPlugin(): JavaPlugin;
+    getServer(): Server;
+    getServicesManager(): ServicesManager;
     unregisterOutgoingPluginChannel(channel: string): void;
     registerOutgoingPluginChannel(channel: string): void;
+    unregisterIncomingPluginChannel(channel: string): void;
     registerIncomingPluginChannel(channelName: string, listener: PluginMessageListener): PluginMessageListenerRegistration;
-    getPluginName(): string;
-    newCommand(_name: string): PluginCommand;
-    getPluginInstance(): any;
+    getBukkitServiceRegistration(_class: any): any;
+    getBukkitServiceRegistration(className: string): any;
     setPlaceholders(player: Player, placeholderText: string): string;
     setPlaceholders(player: OfflinePlayer, placeholderText: string): string;
-    newMysqlInstance(host: string, port: number, database: string, username: string, password: string): MysqlWrapper;
-    itemBuilder(itemStack: ItemStack): SmartItemBuilder;
-    registerCommand(command: PluginCommand): void;
-    smartInventory(): SmartInventoryInterface;
     unregisterCommand(command: PluginCommand): void;
+    newCommand(_name: string): PluginCommand;
+    smartInventory(): SmartInventoryInterface;
+    newMysqlInstance(host: string, port: number, database: string, username: string, password: string): MysqlWrapper;
+    getPluginInstance(): any;
     registerEvent(eventClass: any, executor: EventExecutor): void;
-    getServer(): Server;
-    getJavaPlugin(): JavaPlugin;
+    registerCommand(command: PluginCommand): void;
+    getPluginName(): string;
+    itemBuilder(itemStack: ItemStack): SmartItemBuilder;
 }
-export declare class ScriptablePluginContext {
+export default class ScriptablePluginContext {
     static get $javaClass(): any;
     constructor(engine: ScriptablePluginEngine, pluginName: string, pluginInstance: any);
 }

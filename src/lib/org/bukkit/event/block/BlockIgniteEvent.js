@@ -1,4 +1,4 @@
-export class BlockIgniteEvent {
+export default class BlockIgniteEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.block.BlockIgniteEvent');
     }

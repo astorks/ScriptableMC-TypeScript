@@ -1,4 +1,4 @@
-export class StructureType {
+export default class StructureType {
     static get $javaClass() {
         return Java.type('org.bukkit.StructureType');
     }

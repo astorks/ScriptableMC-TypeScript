@@ -1,4 +1,4 @@
-export class SmartInventoryProvider {
+export default class SmartInventoryProvider {
     static get $javaClass() {
         return Java.type('com.pixlfox.scriptablemc.smartinvs.SmartInventoryProvider');
     }

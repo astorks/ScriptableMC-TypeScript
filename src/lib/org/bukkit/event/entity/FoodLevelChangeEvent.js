@@ -1,4 +1,4 @@
-export class FoodLevelChangeEvent {
+export default class FoodLevelChangeEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.FoodLevelChangeEvent');
     }

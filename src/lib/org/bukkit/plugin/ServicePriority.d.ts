@@ -1,11 +1,11 @@
-export interface ServicePriority {
+export default interface ServicePriority {
     name(): string;
     compareTo(arg0: any): number;
     compareTo(o: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class ServicePriority {
+export default class ServicePriority {
     static get $javaClass(): any;
     static get Lowest(): ServicePriority;
     static get Low(): ServicePriority;

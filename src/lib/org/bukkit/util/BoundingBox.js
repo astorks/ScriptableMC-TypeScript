@@ -1,4 +1,4 @@
-export class BoundingBox {
+export default class BoundingBox {
     static get $javaClass() {
         return Java.type('org.bukkit.util.BoundingBox');
     }

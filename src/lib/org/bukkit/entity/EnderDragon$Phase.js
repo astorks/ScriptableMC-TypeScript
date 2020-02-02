@@ -1,4 +1,4 @@
-export class EnderDragon$Phase {
+export default class EnderDragon$Phase {
     static get $javaClass() {
         return Java.type('org.bukkit.entity.EnderDragon$Phase');
     }

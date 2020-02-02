@@ -1,4 +1,4 @@
-export class NamespacedKey {
+export default class NamespacedKey {
     static get $javaClass() {
         return Java.type('org.bukkit.NamespacedKey');
     }

@@ -1,4 +1,4 @@
-export class BlockPistonExtendEvent {
+export default class BlockPistonExtendEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.block.BlockPistonExtendEvent');
     }

@@ -1,9 +1,9 @@
-import { WorldType } from '../../org/bukkit/WorldType.js';
-import { World } from '../../org/bukkit/World.js';
-import { ChunkGenerator } from '../../org/bukkit/generator/ChunkGenerator.js';
-import { CommandSender } from '../../org/bukkit/command/CommandSender.js';
-import { World$Environment } from '../../org/bukkit/World$Environment.js';
-export interface WorldCreator {
+import ChunkGenerator from '../../org/bukkit/generator/ChunkGenerator.js';
+import CommandSender from '../../org/bukkit/command/CommandSender.js';
+import World from '../../org/bukkit/World.js';
+import World$Environment from '../../org/bukkit/World$Environment.js';
+import WorldType from '../../org/bukkit/WorldType.js';
+export default interface WorldCreator {
     name(): string;
     type(): WorldType;
     type(type: WorldType): WorldCreator;
@@ -15,17 +15,17 @@ export interface WorldCreator {
     generator(generator: string, output: CommandSender): WorldCreator;
     environment(env: World$Environment): WorldCreator;
     environment(): World$Environment;
-    createWorld(): World;
     generatorSettings(generatorSettings: string): WorldCreator;
     generatorSettings(): string;
     seed(seed: number): WorldCreator;
     seed(): number;
+    generateStructures(): boolean;
+    generateStructures(generate: boolean): WorldCreator;
     hardcore(): boolean;
     hardcore(hardcore: boolean): WorldCreator;
-    generateStructures(generate: boolean): WorldCreator;
-    generateStructures(): boolean;
+    createWorld(): World;
 }
-export declare class WorldCreator {
+export default class WorldCreator {
     static get $javaClass(): any;
     constructor(_name: string);
     static _name(_name: string): WorldCreator;

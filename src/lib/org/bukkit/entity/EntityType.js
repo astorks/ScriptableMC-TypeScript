@@ -1,4 +1,4 @@
-export class EntityType {
+export default class EntityType {
     static get $javaClass() {
         return Java.type('org.bukkit.entity.EntityType');
     }

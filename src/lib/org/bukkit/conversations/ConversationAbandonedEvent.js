@@ -1,4 +1,4 @@
-export class ConversationAbandonedEvent {
+export default class ConversationAbandonedEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.conversations.ConversationAbandonedEvent');
     }

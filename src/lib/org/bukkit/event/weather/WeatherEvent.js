@@ -1,4 +1,4 @@
-export class WeatherEvent {
+export default class WeatherEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.weather.WeatherEvent');
     }

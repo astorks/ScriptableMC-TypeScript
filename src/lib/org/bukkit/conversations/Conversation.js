@@ -1,4 +1,4 @@
-export class Conversation {
+export default class Conversation {
     static get $javaClass() {
         return Java.type('org.bukkit.conversations.Conversation');
     }

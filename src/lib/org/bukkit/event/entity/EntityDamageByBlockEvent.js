@@ -1,4 +1,4 @@
-export class EntityDamageByBlockEvent {
+export default class EntityDamageByBlockEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.EntityDamageByBlockEvent');
     }

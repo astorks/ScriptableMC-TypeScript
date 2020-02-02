@@ -1,4 +1,4 @@
-export class Tag {
+export default class Tag {
     static get $javaClass() {
         return Java.type('org.bukkit.Tag');
     }

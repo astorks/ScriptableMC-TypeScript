@@ -1,0 +1,50 @@
+import Event from '../../../org/bukkit/event/Event.js';
+import EventExecutor from '../../../org/bukkit/plugin/EventExecutor.js';
+import EventPriority from '../../../org/bukkit/event/EventPriority.js';
+import Listener from '../../../org/bukkit/event/Listener.js';
+import Permissible from '../../../org/bukkit/permissions/Permissible.js';
+import Permission from '../../../org/bukkit/permissions/Permission.js';
+import Plugin from '../../../org/bukkit/plugin/Plugin.js';
+import PluginDescriptionFile from '../../../org/bukkit/plugin/PluginDescriptionFile.js';
+import PluginManager from '../../../org/bukkit/plugin/PluginManager.js';
+import Server from '../../../org/bukkit/Server.js';
+import SimpleCommandMap from '../../../org/bukkit/command/SimpleCommandMap.js';
+export default interface SimplePluginManager extends PluginManager {
+    getPermissions(): any;
+    getPermission(_name: string): Permission;
+    loadPlugin(file: any): Plugin;
+    enablePlugin(plugin: Plugin): void;
+    disablePlugin(plugin: Plugin): void;
+    registerEvent(event: any, listener: Listener, priority: EventPriority, executor: EventExecutor, plugin: Plugin): void;
+    registerEvent(event: any, listener: Listener, priority: EventPriority, executor: EventExecutor, plugin: Plugin, ignoreCancelled: boolean): void;
+    getPlugin(_name: string): Plugin;
+    getPermissionSubscriptions(permission: string): any;
+    getDefaultPermSubscriptions(op: boolean): any;
+    subscribeToDefaultPerms(op: boolean, permissible: Permissible): void;
+    unsubscribeFromPermission(permission: string, permissible: Permissible): void;
+    subscribeToPermission(permission: string, permissible: Permissible): void;
+    recalculatePermissionDefaults(perm: Permission): void;
+    getDefaultPermissions(op: boolean): any;
+    unsubscribeFromDefaultPerms(op: boolean, permissible: Permissible): void;
+    loadPlugins(directory: any): Array<Plugin>;
+    addPermission(perm: Permission, dirty: boolean): void;
+    addPermission(perm: Permission): void;
+    disablePlugins(): void;
+    getPlugins(): Array<Plugin>;
+    clearPlugins(): void;
+    callEvent(event: Event): void;
+    registerInterface(loader: any): void;
+    removePermission(_name: string): void;
+    removePermission(perm: Permission): void;
+    registerEvents(listener: Listener, plugin: Plugin): void;
+    isPluginEnabled(plugin: Plugin): boolean;
+    isPluginEnabled(_name: string): boolean;
+    useTimings(): boolean;
+    useTimings(use: boolean): void;
+    dirtyPermissibles(): void;
+    isTransitiveDepend(plugin: PluginDescriptionFile, depend: PluginDescriptionFile): boolean;
+}
+export default class SimplePluginManager {
+    static get $javaClass(): any;
+    constructor(instance: Server, commandMap: SimpleCommandMap);
+}

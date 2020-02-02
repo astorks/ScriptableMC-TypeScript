@@ -1,19 +1,19 @@
-import { NamespacedKey } from '../../../org/bukkit/NamespacedKey.js';
-import { ItemStack } from '../../../org/bukkit/inventory/ItemStack.js';
-import { EnchantmentTarget } from '../../../org/bukkit/enchantments/EnchantmentTarget.js';
-import { Keyed } from '../../../org/bukkit/Keyed.js';
-export interface Enchantment extends Keyed {
+import EnchantmentTarget from '../../../org/bukkit/enchantments/EnchantmentTarget.js';
+import ItemStack from '../../../org/bukkit/inventory/ItemStack.js';
+import Keyed from '../../../org/bukkit/Keyed.js';
+import NamespacedKey from '../../../org/bukkit/NamespacedKey.js';
+export default interface Enchantment extends Keyed {
     getName(): string;
     getKey(): NamespacedKey;
+    getMaxLevel(): number;
     getStartLevel(): number;
     canEnchantItem(arg0: ItemStack): boolean;
-    getMaxLevel(): number;
     isTreasure(): boolean;
-    getItemTarget(): EnchantmentTarget;
     conflictsWith(arg0: Enchantment): boolean;
     isCursed(): boolean;
+    getItemTarget(): EnchantmentTarget;
 }
-export declare class Enchantment {
+export default class Enchantment {
     static get $javaClass(): any;
     constructor(key: NamespacedKey);
     static get PROTECTION_ENVIRONMENTAL(): Enchantment;
@@ -55,8 +55,8 @@ export declare class Enchantment {
     static get VANISHING_CURSE(): Enchantment;
     static values(): Array<Enchantment>;
     static getByName(_name: string): Enchantment;
+    static getByKey(key: NamespacedKey): Enchantment;
     static registerEnchantment(enchantment: Enchantment): void;
     static stopAcceptingRegistrations(): void;
     static isAcceptingRegistrations(): boolean;
-    static getByKey(key: NamespacedKey): Enchantment;
 }

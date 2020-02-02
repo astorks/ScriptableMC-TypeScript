@@ -1,4 +1,4 @@
-export class EntityDeathEvent {
+export default class EntityDeathEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.EntityDeathEvent');
     }

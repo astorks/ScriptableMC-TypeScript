@@ -1,4 +1,4 @@
-export class DragType {
+export default class DragType {
     static get $javaClass() {
         return Java.type('org.bukkit.event.inventory.DragType');
     }

@@ -1,4 +1,4 @@
-export class HorseJumpEvent {
+export default class HorseJumpEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.HorseJumpEvent');
     }

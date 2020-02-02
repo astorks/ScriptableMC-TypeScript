@@ -1,4 +1,4 @@
-export class Prompt {
+export default class Prompt {
     static get $javaClass() {
         return Java.type('org.bukkit.conversations.Prompt');
     }

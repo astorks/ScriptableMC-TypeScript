@@ -1,4 +1,4 @@
-export class PlayerStatisticIncrementEvent {
+export default class PlayerStatisticIncrementEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerStatisticIncrementEvent');
     }

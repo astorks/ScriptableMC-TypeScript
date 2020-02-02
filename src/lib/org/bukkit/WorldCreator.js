@@ -1,4 +1,4 @@
-export class WorldCreator {
+export default class WorldCreator {
     static get $javaClass() {
         return Java.type('org.bukkit.WorldCreator');
     }

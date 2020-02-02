@@ -1,4 +1,4 @@
-export class EntityTameEvent {
+export default class EntityTameEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.EntityTameEvent');
     }

@@ -1,4 +1,4 @@
-export class PlayerCommandSendEvent {
+export default class PlayerCommandSendEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerCommandSendEvent');
     }

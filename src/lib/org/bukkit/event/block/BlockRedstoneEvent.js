@@ -1,4 +1,4 @@
-export class BlockRedstoneEvent {
+export default class BlockRedstoneEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.block.BlockRedstoneEvent');
     }

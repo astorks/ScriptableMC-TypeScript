@@ -1,4 +1,4 @@
-export class InventoryOpenEvent {
+export default class InventoryOpenEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.inventory.InventoryOpenEvent');
     }

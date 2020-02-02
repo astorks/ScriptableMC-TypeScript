@@ -1,4 +1,4 @@
-export class ItemTagType {
+export default class ItemTagType {
     static get $javaClass() {
         return Java.type('org.bukkit.inventory.meta.tags.ItemTagType');
     }

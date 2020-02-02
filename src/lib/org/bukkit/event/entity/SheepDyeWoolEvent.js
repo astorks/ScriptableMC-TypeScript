@@ -1,4 +1,4 @@
-export class SheepDyeWoolEvent {
+export default class SheepDyeWoolEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.SheepDyeWoolEvent');
     }

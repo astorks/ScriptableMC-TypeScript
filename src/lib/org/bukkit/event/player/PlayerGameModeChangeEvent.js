@@ -1,4 +1,4 @@
-export class PlayerGameModeChangeEvent {
+export default class PlayerGameModeChangeEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerGameModeChangeEvent');
     }

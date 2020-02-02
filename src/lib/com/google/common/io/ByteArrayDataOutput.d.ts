@@ -1,4 +1,4 @@
-export interface ByteArrayDataOutput {
+export default interface ByteArrayDataOutput {
     write(arg0: Array<number>, arg1: number, arg2: number): void;
     write(arg0: Array<number>): void;
     write(arg0: number): void;
@@ -15,6 +15,6 @@ export interface ByteArrayDataOutput {
     writeDouble(arg0: number): void;
     writeChars(arg0: string): void;
 }
-export declare class ByteArrayDataOutput {
+export default class ByteArrayDataOutput {
     static get $javaClass(): any;
 }

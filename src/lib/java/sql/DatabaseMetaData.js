@@ -1,4 +1,4 @@
-export class DatabaseMetaData {
+export default class DatabaseMetaData {
     static get $javaClass() {
         return Java.type('java.sql.DatabaseMetaData');
     }

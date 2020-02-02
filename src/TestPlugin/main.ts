@@ -1,29 +1,30 @@
-import { JsPlugin } from '../JsPlugin.js';
-import { ChatColor } from '../lib/org/bukkit/ChatColor.js';
-import { CommandSender } from '../lib/org/bukkit/command/CommandSender.js';
-import { Command } from '../lib/org/bukkit/command/Command.js';
-import { Player } from '../lib/org/bukkit/entity/Player.js';
-import { PlayerJoinEvent } from '../lib/org/bukkit/event/player/PlayerJoinEvent.js';
-import { InventoryContents } from '../lib/fr/minuskube/inv/content/InventoryContents.js';
-import { ItemStack } from '../lib/org/bukkit/inventory/ItemStack.js';
-import { Material } from '../lib/org/bukkit/Material.js';
-import { Enchantment } from '../lib/org/bukkit/enchantments/Enchantment.js';
-import { PlayerInteractEvent } from '../lib/org/bukkit/event/player/PlayerInteractEvent.js';
-import { BlockBreakEvent } from '../lib/org/bukkit/event/block/BlockBreakEvent.js';
-import { BlockPlaceEvent } from '../lib/org/bukkit/event/block/BlockPlaceEvent.js';
-import { EntityDamageEvent } from '../lib/org/bukkit/event/entity/EntityDamageEvent.js';
-import { PlayerInteractAtEntityEvent } from '../lib/org/bukkit/event/player/PlayerInteractAtEntityEvent.js';
-import { PlayerInteractEntityEvent } from '../lib/org/bukkit/event/player/PlayerInteractEntityEvent.js';
-import { ByteStreams } from '../lib/com/google/common/io/ByteStreams.js';
-import { EntityType } from '../lib/org/bukkit/entity/EntityType.js';
-import { Firework } from '../lib/org/bukkit/entity/Firework.js';
-import { FireworkEffect } from '../lib/org/bukkit/FireworkEffect.js';
-import { Color } from '../lib/org/bukkit/Color.js';
-import { MysqlWrapper } from '../lib/com/pixlfox/scriptablemc/utils/MysqlWrapper.js';
+import JsPlugin from '../JsPlugin.js';
+import ChatColor from '../lib/org/bukkit/ChatColor.js';
+import CommandSender from '../lib/org/bukkit/command/CommandSender.js';
+import Command from '../lib/org/bukkit/command/Command.js';
+import Player from '../lib/org/bukkit/entity/Player.js';
+import PlayerJoinEvent from '../lib/org/bukkit/event/player/PlayerJoinEvent.js';
+import InventoryContents from '../lib/fr/minuskube/inv/content/InventoryContents.js';
+import ItemStack from '../lib/org/bukkit/inventory/ItemStack.js';
+import Material from '../lib/org/bukkit/Material.js';
+import Enchantment from '../lib/org/bukkit/enchantments/Enchantment.js';
+import PlayerInteractEvent from '../lib/org/bukkit/event/player/PlayerInteractEvent.js';
+import BlockBreakEvent from '../lib/org/bukkit/event/block/BlockBreakEvent.js';
+import BlockPlaceEvent from '../lib/org/bukkit/event/block/BlockPlaceEvent.js';
+import EntityDamageEvent from '../lib/org/bukkit/event/entity/EntityDamageEvent.js';
+import PlayerInteractAtEntityEvent from '../lib/org/bukkit/event/player/PlayerInteractAtEntityEvent.js';
+import PlayerInteractEntityEvent from '../lib/org/bukkit/event/player/PlayerInteractEntityEvent.js';
+import ByteStreams from '../lib/com/google/common/io/ByteStreams.js';
+import EntityType from '../lib/org/bukkit/entity/EntityType.js';
+import Firework from '../lib/org/bukkit/entity/Firework.js';
+import FireworkEffect from '../lib/org/bukkit/FireworkEffect.js';
+import Color from '../lib/org/bukkit/Color.js';
+import MysqlWrapper from '../lib/com/pixlfox/scriptablemc/utils/MysqlWrapper.js';
 import CONFIG from './config.js'
 
 export class TestPlugin extends JsPlugin {
 
+    
     private mysqlConnection: MysqlWrapper;
 
     onLoad() {

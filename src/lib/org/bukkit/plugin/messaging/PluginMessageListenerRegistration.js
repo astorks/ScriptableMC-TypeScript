@@ -1,4 +1,4 @@
-export class PluginMessageListenerRegistration {
+export default class PluginMessageListenerRegistration {
     static get $javaClass() {
         return Java.type('org.bukkit.plugin.messaging.PluginMessageListenerRegistration');
     }

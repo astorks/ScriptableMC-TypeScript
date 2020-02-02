@@ -1,4 +1,4 @@
-export class Vector {
+export default class Vector {
     static get $javaClass() {
         return Java.type('org.bukkit.util.Vector');
     }
@@ -8,8 +8,8 @@ export class Vector {
     static deserialize(...args) {
         return Vector.$javaClass.deserialize(...args);
     }
-    static getMaximum(...args) {
-        return Vector.$javaClass.getMaximum(...args);
+    static getEpsilon(...args) {
+        return Vector.$javaClass.getEpsilon(...args);
     }
     static getMinimum(...args) {
         return Vector.$javaClass.getMinimum(...args);
@@ -17,7 +17,7 @@ export class Vector {
     static getRandom(...args) {
         return Vector.$javaClass.getRandom(...args);
     }
-    static getEpsilon(...args) {
-        return Vector.$javaClass.getEpsilon(...args);
+    static getMaximum(...args) {
+        return Vector.$javaClass.getMaximum(...args);
     }
 }

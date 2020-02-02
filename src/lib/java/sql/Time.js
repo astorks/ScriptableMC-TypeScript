@@ -1,4 +1,4 @@
-export class Time {
+export default class Time {
     static get $javaClass() {
         return Java.type('java.sql.Time');
     }
@@ -8,11 +8,11 @@ export class Time {
     static valueOf(...args) {
         return Time.$javaClass.valueOf(...args);
     }
-    static parse(...args) {
-        return Time.$javaClass.parse(...args);
-    }
     static from(...args) {
         return Time.$javaClass.from(...args);
+    }
+    static parse(...args) {
+        return Time.$javaClass.parse(...args);
     }
     static UTC(...args) {
         return Time.$javaClass.UTC(...args);

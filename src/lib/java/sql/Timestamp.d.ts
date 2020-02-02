@@ -1,4 +1,4 @@
-export interface Timestamp {
+export default interface Timestamp {
     compareTo(ts: Timestamp): number;
     compareTo(arg0: any): number;
     compareTo(o: any): number;
@@ -7,15 +7,15 @@ export interface Timestamp {
     getTime(): number;
     setTime(time: number): void;
     toInstant(): any;
+    toLocalDateTime(): any;
     getNanos(): number;
     setNanos(n: number): void;
-    toLocalDateTime(): any;
     clone(): any;
-    getDate(): number;
     before(when: any): boolean;
     after(when: any): boolean;
     getSeconds(): number;
     getYear(): number;
+    getDate(): number;
     setYear(year: number): void;
     getMonth(): number;
     setMonth(month: number): void;
@@ -30,7 +30,7 @@ export interface Timestamp {
     toGMTString(): string;
     getTimezoneOffset(): number;
 }
-export declare class Timestamp {
+export default class Timestamp {
     static get $javaClass(): any;
     constructor(year: number, month: number, date: number, hour: number, minute: number, second: number, nano: number);
     constructor(time: number);

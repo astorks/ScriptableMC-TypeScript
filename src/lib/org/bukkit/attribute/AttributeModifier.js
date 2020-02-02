@@ -1,4 +1,4 @@
-export class AttributeModifier {
+export default class AttributeModifier {
     static get $javaClass() {
         return Java.type('org.bukkit.attribute.AttributeModifier');
     }

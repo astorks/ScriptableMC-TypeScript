@@ -1,4 +1,4 @@
-export class FurnaceExtractEvent {
+export default class FurnaceExtractEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.inventory.FurnaceExtractEvent');
     }

@@ -1,4 +1,4 @@
-export class BlockFace {
+export default class BlockFace {
     static get $javaClass() {
         return Java.type('org.bukkit.block.BlockFace');
     }

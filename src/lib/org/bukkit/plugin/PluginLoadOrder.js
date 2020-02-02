@@ -1,4 +1,4 @@
-export class PluginLoadOrder {
+export default class PluginLoadOrder {
     static get $javaClass() {
         return Java.type('org.bukkit.plugin.PluginLoadOrder');
     }

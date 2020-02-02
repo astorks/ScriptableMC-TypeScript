@@ -1,4 +1,4 @@
-export interface ByteArrayDataInput {
+export default interface ByteArrayDataInput {
     readLine(): string;
     readInt(): number;
     readUTF(): string;
@@ -15,6 +15,6 @@ export interface ByteArrayDataInput {
     readLong(): number;
     readDouble(): number;
 }
-export declare class ByteArrayDataInput {
+export default class ByteArrayDataInput {
     static get $javaClass(): any;
 }

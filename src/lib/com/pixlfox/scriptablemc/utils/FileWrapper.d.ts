@@ -1,16 +1,16 @@
-export interface FileWrapper {
+export default interface FileWrapper {
     isDirectory(): boolean;
     exists(): boolean;
     isFile(): boolean;
     createNewFile(): boolean;
     mkdir(): boolean;
     mkdirs(): boolean;
-    readLines(): Array<string>;
     parentFile(): FileWrapper;
-    readText(): string;
     writeText(text: string): void;
+    readLines(): Array<string>;
+    readText(): string;
 }
-export declare class FileWrapper {
+export default class FileWrapper {
     static get $javaClass(): any;
     constructor(pathName: string);
 }

@@ -1,6 +1,6 @@
-export interface RowId {
+export default interface RowId {
     getBytes(): Array<number>;
 }
-export declare class RowId {
+export default class RowId {
     static get $javaClass(): any;
 }

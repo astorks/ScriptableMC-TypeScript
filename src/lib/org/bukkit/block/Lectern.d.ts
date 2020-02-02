@@ -1,17 +1,17 @@
-import { Inventory } from '../../../org/bukkit/inventory/Inventory.js';
-import { PersistentDataContainer } from '../../../org/bukkit/persistence/PersistentDataContainer.js';
-import { Location } from '../../../org/bukkit/Location.js';
-import { Material } from '../../../org/bukkit/Material.js';
-import { Block } from '../../../org/bukkit/block/Block.js';
-import { World } from '../../../org/bukkit/World.js';
-import { MaterialData } from '../../../org/bukkit/material/MaterialData.js';
-import { Chunk } from '../../../org/bukkit/Chunk.js';
-import { BlockData } from '../../../org/bukkit/block/data/BlockData.js';
-import { MetadataValue } from '../../../org/bukkit/metadata/MetadataValue.js';
-import { Plugin } from '../../../org/bukkit/plugin/Plugin.js';
-import { TileState } from '../../../org/bukkit/block/TileState.js';
-import { BlockInventoryHolder } from '../../../org/bukkit/inventory/BlockInventoryHolder.js';
-export interface Lectern extends TileState, BlockInventoryHolder {
+import Block from '../../../org/bukkit/block/Block.js';
+import BlockData from '../../../org/bukkit/block/data/BlockData.js';
+import BlockInventoryHolder from '../../../org/bukkit/inventory/BlockInventoryHolder.js';
+import Chunk from '../../../org/bukkit/Chunk.js';
+import Inventory from '../../../org/bukkit/inventory/Inventory.js';
+import Location from '../../../org/bukkit/Location.js';
+import Material from '../../../org/bukkit/Material.js';
+import MaterialData from '../../../org/bukkit/material/MaterialData.js';
+import MetadataValue from '../../../org/bukkit/metadata/MetadataValue.js';
+import PersistentDataContainer from '../../../org/bukkit/persistence/PersistentDataContainer.js';
+import Plugin from '../../../org/bukkit/plugin/Plugin.js';
+import TileState from '../../../org/bukkit/block/TileState.js';
+import World from '../../../org/bukkit/World.js';
+export default interface Lectern extends TileState, BlockInventoryHolder {
     getInventory(): Inventory;
     getSnapshotInventory(): Inventory;
     getPage(): number;
@@ -23,27 +23,27 @@ export interface Lectern extends TileState, BlockInventoryHolder {
     getLocation(): Location;
     getLocation(arg0: Location): Location;
     getType(): Material;
-    getBlock(): Block;
-    getBlock(): Block;
-    getWorld(): World;
-    getData(): MaterialData;
-    setData(arg0: MaterialData): void;
-    setType(arg0: Material): void;
-    getX(): number;
-    getY(): number;
-    getZ(): number;
     getChunk(): Chunk;
+    getZ(): number;
+    getY(): number;
+    getX(): number;
+    getWorld(): World;
+    getBlock(): Block;
+    getBlock(): Block;
+    getData(): MaterialData;
+    setType(arg0: Material): void;
+    setData(arg0: MaterialData): void;
+    setRawData(arg0: number): void;
+    getRawData(): number;
+    isPlaced(): boolean;
     getBlockData(): BlockData;
     getLightLevel(): number;
     setBlockData(arg0: BlockData): void;
-    isPlaced(): boolean;
-    setRawData(arg0: number): void;
-    getRawData(): number;
-    hasMetadata(arg0: string): boolean;
-    getMetadata(arg0: string): any;
-    setMetadata(arg0: string, arg1: MetadataValue): void;
     removeMetadata(arg0: string, arg1: Plugin): void;
+    hasMetadata(arg0: string): boolean;
+    setMetadata(arg0: string, arg1: MetadataValue): void;
+    getMetadata(arg0: string): any;
 }
-export declare class Lectern {
+export default class Lectern {
     static get $javaClass(): any;
 }

@@ -1,4 +1,4 @@
-export class EntityBlockFormEvent {
+export default class EntityBlockFormEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.block.EntityBlockFormEvent');
     }

@@ -1,4 +1,4 @@
-export class PlayerTakeLecternBookEvent {
+export default class PlayerTakeLecternBookEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerTakeLecternBookEvent');
     }

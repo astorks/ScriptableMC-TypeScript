@@ -1,17 +1,17 @@
-import { HandlerList } from '../../../../org/bukkit/event/HandlerList.js';
-import { Cancellable } from '../../../../org/bukkit/event/Cancellable.js';
-import { ServerEvent } from '../../../../org/bukkit/event/server/ServerEvent.js';
-export interface BroadcastMessageEvent extends ServerEvent, Cancellable {
+import Cancellable from '../../../../org/bukkit/event/Cancellable.js';
+import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
+import ServerEvent from '../../../../org/bukkit/event/server/ServerEvent.js';
+export default interface BroadcastMessageEvent extends ServerEvent, Cancellable {
     getMessage(): string;
+    setMessage(message: string): void;
     getHandlers(): HandlerList;
     isCancelled(): boolean;
     setCancelled(cancelled: boolean): void;
-    setMessage(message: string): void;
     getRecipients(): any;
     getEventName(): string;
     isAsynchronous(): boolean;
 }
-export declare class BroadcastMessageEvent {
+export default class BroadcastMessageEvent {
     static get $javaClass(): any;
     constructor(isAsync: boolean, message: string, recipients: any);
     constructor(message: string, recipients: any);

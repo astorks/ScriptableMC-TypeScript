@@ -1,11 +1,11 @@
-export interface PlayerFishEvent$State {
+export default interface PlayerFishEvent$State {
     name(): string;
     compareTo(arg0: any): number;
     compareTo(o: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class PlayerFishEvent$State {
+export default class PlayerFishEvent$State {
     static get $javaClass(): any;
     static get FISHING(): PlayerFishEvent$State;
     static get CAUGHT_FISH(): PlayerFishEvent$State;

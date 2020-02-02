@@ -1,4 +1,4 @@
-export class PlayerChangedMainHandEvent {
+export default class PlayerChangedMainHandEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerChangedMainHandEvent');
     }

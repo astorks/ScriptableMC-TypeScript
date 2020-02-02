@@ -1,4 +1,4 @@
-export class PotionEffect {
+export default class PotionEffect {
     static get $javaClass() {
         return Java.type('org.bukkit.potion.PotionEffect');
     }

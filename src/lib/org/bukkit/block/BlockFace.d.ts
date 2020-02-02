@@ -1,8 +1,8 @@
-import { Vector } from '../../../org/bukkit/util/Vector.js';
-export interface BlockFace {
+import Vector from '../../../org/bukkit/util/Vector.js';
+export default interface BlockFace {
     getDirection(): Vector;
-    getModY(): number;
     getModZ(): number;
+    getModY(): number;
     getModX(): number;
     getOppositeFace(): BlockFace;
     name(): string;
@@ -11,7 +11,7 @@ export interface BlockFace {
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class BlockFace {
+export default class BlockFace {
     static get $javaClass(): any;
     static get NORTH(): BlockFace;
     static get EAST(): BlockFace;

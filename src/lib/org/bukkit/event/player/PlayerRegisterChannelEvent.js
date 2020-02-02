@@ -1,4 +1,4 @@
-export class PlayerRegisterChannelEvent {
+export default class PlayerRegisterChannelEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerRegisterChannelEvent');
     }

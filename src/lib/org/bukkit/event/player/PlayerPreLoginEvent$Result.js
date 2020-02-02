@@ -1,4 +1,4 @@
-export class PlayerPreLoginEvent$Result {
+export default class PlayerPreLoginEvent$Result {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerPreLoginEvent$Result');
     }

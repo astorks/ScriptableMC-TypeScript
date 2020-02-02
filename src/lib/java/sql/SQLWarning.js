@@ -1,4 +1,4 @@
-export class SQLWarning {
+export default class SQLWarning {
     static get $javaClass() {
         return Java.type('java.sql.SQLWarning');
     }

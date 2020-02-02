@@ -1,4 +1,4 @@
-export class Messenger {
+export default class Messenger {
     static get $javaClass() {
         return Java.type('org.bukkit.plugin.messaging.Messenger');
     }

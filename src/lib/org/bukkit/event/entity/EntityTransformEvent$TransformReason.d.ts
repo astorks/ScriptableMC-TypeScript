@@ -1,11 +1,11 @@
-export interface EntityTransformEvent$TransformReason {
+export default interface EntityTransformEvent$TransformReason {
     name(): string;
     compareTo(arg0: any): number;
     compareTo(o: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class EntityTransformEvent$TransformReason {
+export default class EntityTransformEvent$TransformReason {
     static get $javaClass(): any;
     static get CURED(): EntityTransformEvent$TransformReason;
     static get INFECTION(): EntityTransformEvent$TransformReason;

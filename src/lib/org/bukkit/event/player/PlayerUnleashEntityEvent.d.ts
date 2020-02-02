@@ -1,11 +1,11 @@
-import { Player } from '../../../../org/bukkit/entity/Player.js';
-import { HandlerList } from '../../../../org/bukkit/event/HandlerList.js';
-import { EntityUnleashEvent$UnleashReason } from '../../../../org/bukkit/event/entity/EntityUnleashEvent$UnleashReason.js';
-import { Entity } from '../../../../org/bukkit/entity/Entity.js';
-import { EntityType } from '../../../../org/bukkit/entity/EntityType.js';
-import { Cancellable } from '../../../../org/bukkit/event/Cancellable.js';
-import { EntityUnleashEvent } from '../../../../org/bukkit/event/entity/EntityUnleashEvent.js';
-export interface PlayerUnleashEntityEvent extends EntityUnleashEvent, Cancellable {
+import Cancellable from '../../../../org/bukkit/event/Cancellable.js';
+import Entity from '../../../../org/bukkit/entity/Entity.js';
+import EntityType from '../../../../org/bukkit/entity/EntityType.js';
+import EntityUnleashEvent from '../../../../org/bukkit/event/entity/EntityUnleashEvent.js';
+import EntityUnleashEvent$UnleashReason from '../../../../org/bukkit/event/entity/EntityUnleashEvent$UnleashReason.js';
+import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
+import Player from '../../../../org/bukkit/entity/Player.js';
+export default interface PlayerUnleashEntityEvent extends EntityUnleashEvent, Cancellable {
     getPlayer(): Player;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
@@ -16,7 +16,7 @@ export interface PlayerUnleashEntityEvent extends EntityUnleashEvent, Cancellabl
     getEventName(): string;
     isAsynchronous(): boolean;
 }
-export declare class PlayerUnleashEntityEvent {
+export default class PlayerUnleashEntityEvent {
     static get $javaClass(): any;
     constructor(entity: Entity, player: Player);
     static getHandlerList(): HandlerList;

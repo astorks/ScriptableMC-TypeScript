@@ -1,4 +1,4 @@
-export class ServerListPingEvent {
+export default class ServerListPingEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.server.ServerListPingEvent');
     }

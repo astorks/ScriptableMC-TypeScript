@@ -1,4 +1,4 @@
-export class BarFlag {
+export default class BarFlag {
     static get $javaClass() {
         return Java.type('org.bukkit.boss.BarFlag');
     }

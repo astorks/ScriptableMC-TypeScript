@@ -1,16 +1,16 @@
-export interface ClickType {
-    isKeyboardClick(): boolean;
+export default interface ClickType {
     isShiftClick(): boolean;
-    isLeftClick(): boolean;
     isRightClick(): boolean;
+    isKeyboardClick(): boolean;
     isCreativeAction(): boolean;
+    isLeftClick(): boolean;
     name(): string;
     compareTo(arg0: any): number;
     compareTo(o: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class ClickType {
+export default class ClickType {
     static get $javaClass(): any;
     static get LEFT(): ClickType;
     static get SHIFT_LEFT(): ClickType;

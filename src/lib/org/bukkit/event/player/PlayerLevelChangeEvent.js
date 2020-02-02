@@ -1,4 +1,4 @@
-export class PlayerLevelChangeEvent {
+export default class PlayerLevelChangeEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerLevelChangeEvent');
     }

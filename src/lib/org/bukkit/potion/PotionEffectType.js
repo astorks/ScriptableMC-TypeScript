@@ -1,4 +1,4 @@
-export class PotionEffectType {
+export default class PotionEffectType {
     static get $javaClass() {
         return Java.type('org.bukkit.potion.PotionEffectType');
     }
@@ -104,13 +104,13 @@ export class PotionEffectType {
     static getByName(...args) {
         return PotionEffectType.$javaClass.getByName(...args);
     }
-    static stopAcceptingRegistrations(...args) {
-        return PotionEffectType.$javaClass.stopAcceptingRegistrations(...args);
-    }
     static getById(...args) {
         return PotionEffectType.$javaClass.getById(...args);
     }
     static registerPotionEffectType(...args) {
         return PotionEffectType.$javaClass.registerPotionEffectType(...args);
+    }
+    static stopAcceptingRegistrations(...args) {
+        return PotionEffectType.$javaClass.stopAcceptingRegistrations(...args);
     }
 }

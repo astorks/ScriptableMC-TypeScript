@@ -1,4 +1,4 @@
-export class StructureGrowEvent {
+export default class StructureGrowEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.world.StructureGrowEvent');
     }

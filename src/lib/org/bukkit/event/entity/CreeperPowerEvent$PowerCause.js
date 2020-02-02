@@ -1,4 +1,4 @@
-export class CreeperPowerEvent$PowerCause {
+export default class CreeperPowerEvent$PowerCause {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.CreeperPowerEvent$PowerCause');
     }

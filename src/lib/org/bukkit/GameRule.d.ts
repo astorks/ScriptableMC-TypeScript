@@ -1,8 +1,8 @@
-export interface GameRule {
+export default interface GameRule {
     getName(): string;
     getType(): any;
 }
-export declare class GameRule {
+export default class GameRule {
     static get $javaClass(): any;
     static get ANNOUNCE_ADVANCEMENTS(): GameRule;
     static get COMMAND_BLOCK_OUTPUT(): GameRule;

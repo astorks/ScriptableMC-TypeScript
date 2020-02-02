@@ -1,11 +1,11 @@
-import { Configuration } from '../../../../org/bukkit/configuration/Configuration.js';
-import { MemoryConfiguration } from '../../../../org/bukkit/configuration/MemoryConfiguration.js';
-import { FileConfiguration } from '../../../../org/bukkit/configuration/file/FileConfiguration.js';
-import { YamlConfiguration } from '../../../../org/bukkit/configuration/file/YamlConfiguration.js';
-import { FileConfigurationOptions } from '../../../../org/bukkit/configuration/file/FileConfigurationOptions.js';
-import { ConfigurationOptions } from '../../../../org/bukkit/configuration/ConfigurationOptions.js';
-import { MemoryConfigurationOptions } from '../../../../org/bukkit/configuration/MemoryConfigurationOptions.js';
-export interface YamlConfigurationOptions extends FileConfigurationOptions {
+import Configuration from '../../../../org/bukkit/configuration/Configuration.js';
+import ConfigurationOptions from '../../../../org/bukkit/configuration/ConfigurationOptions.js';
+import FileConfiguration from '../../../../org/bukkit/configuration/file/FileConfiguration.js';
+import FileConfigurationOptions from '../../../../org/bukkit/configuration/file/FileConfigurationOptions.js';
+import MemoryConfiguration from '../../../../org/bukkit/configuration/MemoryConfiguration.js';
+import MemoryConfigurationOptions from '../../../../org/bukkit/configuration/MemoryConfigurationOptions.js';
+import YamlConfiguration from '../../../../org/bukkit/configuration/file/YamlConfiguration.js';
+export default interface YamlConfigurationOptions extends FileConfigurationOptions {
     indent(value: number): YamlConfigurationOptions;
     indent(): number;
     configuration(): Configuration;
@@ -29,6 +29,6 @@ export interface YamlConfigurationOptions extends FileConfigurationOptions {
     pathSeparator(): string;
     copyDefaults(): boolean;
 }
-export declare class YamlConfigurationOptions {
+export default class YamlConfigurationOptions {
     static get $javaClass(): any;
 }

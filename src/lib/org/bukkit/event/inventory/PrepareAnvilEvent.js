@@ -1,4 +1,4 @@
-export class PrepareAnvilEvent {
+export default class PrepareAnvilEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.inventory.PrepareAnvilEvent');
     }

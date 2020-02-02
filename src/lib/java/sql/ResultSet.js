@@ -1,4 +1,4 @@
-export class ResultSet {
+export default class ResultSet {
     static get $javaClass() {
         return Java.type('java.sql.ResultSet');
     }

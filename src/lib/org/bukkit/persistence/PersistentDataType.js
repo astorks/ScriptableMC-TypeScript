@@ -1,4 +1,4 @@
-export class PersistentDataType {
+export default class PersistentDataType {
     static get $javaClass() {
         return Java.type('org.bukkit.persistence.PersistentDataType');
     }

@@ -1,5 +1,5 @@
-import { Multiset } from '../../../../com/google/common/collect/Multiset.js';
-export interface Multimap {
+import Multiset from '../../../../com/google/common/collect/Multiset.js';
+export default interface Multimap {
     remove(arg0: any, arg1: any): boolean;
     get(arg0: any): any;
     put(arg0: any, arg1: any): boolean;
@@ -20,6 +20,6 @@ export interface Multimap {
     replaceValues(arg0: any, arg1: any): any;
     containsEntry(arg0: any, arg1: any): boolean;
 }
-export declare class Multimap {
+export default class Multimap {
     static get $javaClass(): any;
 }

@@ -1,4 +1,4 @@
-export class Pose {
+export default class Pose {
     static get $javaClass() {
         return Java.type('org.bukkit.entity.Pose');
     }

@@ -1,4 +1,4 @@
-export class EntityPickupItemEvent {
+export default class EntityPickupItemEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.EntityPickupItemEvent');
     }

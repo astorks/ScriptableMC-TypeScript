@@ -1,4 +1,4 @@
-export class EnchantmentOffer {
+export default class EnchantmentOffer {
     static get $javaClass() {
         return Java.type('org.bukkit.enchantments.EnchantmentOffer');
     }

@@ -1,4 +1,4 @@
-export class PigZombieAngerEvent {
+export default class PigZombieAngerEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.PigZombieAngerEvent');
     }

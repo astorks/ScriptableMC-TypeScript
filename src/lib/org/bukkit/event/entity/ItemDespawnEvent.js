@@ -1,4 +1,4 @@
-export class ItemDespawnEvent {
+export default class ItemDespawnEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.ItemDespawnEvent');
     }

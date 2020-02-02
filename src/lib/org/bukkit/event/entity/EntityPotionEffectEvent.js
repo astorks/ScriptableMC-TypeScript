@@ -1,4 +1,4 @@
-export class EntityPotionEffectEvent {
+export default class EntityPotionEffectEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.EntityPotionEffectEvent');
     }

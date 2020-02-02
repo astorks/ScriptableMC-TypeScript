@@ -1,4 +1,4 @@
-export class Biome {
+export default class Biome {
     static get $javaClass() {
         return Java.type('org.bukkit.block.Biome');
     }

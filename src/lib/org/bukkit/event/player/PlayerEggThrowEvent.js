@@ -1,4 +1,4 @@
-export class PlayerEggThrowEvent {
+export default class PlayerEggThrowEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerEggThrowEvent');
     }

@@ -1,4 +1,4 @@
-export class RemoteServerCommandEvent {
+export default class RemoteServerCommandEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.server.RemoteServerCommandEvent');
     }

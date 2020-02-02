@@ -1,4 +1,4 @@
-export class PortalCreateEvent {
+export default class PortalCreateEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.world.PortalCreateEvent');
     }

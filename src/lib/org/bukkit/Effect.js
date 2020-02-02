@@ -1,4 +1,4 @@
-export class Effect {
+export default class Effect {
     static get $javaClass() {
         return Java.type('org.bukkit.Effect');
     }

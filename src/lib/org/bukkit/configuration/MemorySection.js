@@ -1,4 +1,4 @@
-export class MemorySection {
+export default class MemorySection {
     static get $javaClass() {
         return Java.type('org.bukkit.configuration.MemorySection');
     }

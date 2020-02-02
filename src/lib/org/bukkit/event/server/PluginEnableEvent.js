@@ -1,4 +1,4 @@
-export class PluginEnableEvent {
+export default class PluginEnableEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.server.PluginEnableEvent');
     }

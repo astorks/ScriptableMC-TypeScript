@@ -1,7 +1,7 @@
-import { CustomItemTagContainer } from '../../../../../org/bukkit/inventory/meta/tags/CustomItemTagContainer.js';
-export interface ItemTagAdapterContext {
+import CustomItemTagContainer from '../../../../../org/bukkit/inventory/meta/tags/CustomItemTagContainer.js';
+export default interface ItemTagAdapterContext {
     newTagContainer(): CustomItemTagContainer;
 }
-export declare class ItemTagAdapterContext {
+export default class ItemTagAdapterContext {
     static get $javaClass(): any;
 }

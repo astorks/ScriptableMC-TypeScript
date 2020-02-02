@@ -1,14 +1,14 @@
-import { Location } from '../../../org/bukkit/Location.js';
-import { HumanEntity } from '../../../org/bukkit/entity/HumanEntity.js';
-import { Entity } from '../../../org/bukkit/entity/Entity.js';
-export interface LootContext {
+import Entity from '../../../org/bukkit/entity/Entity.js';
+import HumanEntity from '../../../org/bukkit/entity/HumanEntity.js';
+import Location from '../../../org/bukkit/Location.js';
+export default interface LootContext {
     getLocation(): Location;
     getKiller(): HumanEntity;
-    getLootingModifier(): number;
     getLootedEntity(): Entity;
     getLuck(): number;
+    getLootingModifier(): number;
 }
-export declare class LootContext {
+export default class LootContext {
     static get $javaClass(): any;
     static get DEFAULT_LOOT_MODIFIER(): number;
 }

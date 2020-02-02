@@ -1,11 +1,11 @@
-export interface PlayerPreLoginEvent$Result {
+export default interface PlayerPreLoginEvent$Result {
     name(): string;
     compareTo(arg0: any): number;
     compareTo(o: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class PlayerPreLoginEvent$Result {
+export default class PlayerPreLoginEvent$Result {
     static get $javaClass(): any;
     static get ALLOWED(): PlayerPreLoginEvent$Result;
     static get KICK_FULL(): PlayerPreLoginEvent$Result;

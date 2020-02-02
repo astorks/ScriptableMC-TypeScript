@@ -1,4 +1,4 @@
-export class MapCursor {
+export default class MapCursor {
     static get $javaClass() {
         return Java.type('org.bukkit.map.MapCursor');
     }

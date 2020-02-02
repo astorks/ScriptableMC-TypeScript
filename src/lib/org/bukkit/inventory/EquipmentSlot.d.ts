@@ -1,11 +1,11 @@
-export interface EquipmentSlot {
+export default interface EquipmentSlot {
     name(): string;
     compareTo(arg0: any): number;
     compareTo(o: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class EquipmentSlot {
+export default class EquipmentSlot {
     static get $javaClass(): any;
     static get HAND(): EquipmentSlot;
     static get OFF_HAND(): EquipmentSlot;

@@ -1,4 +1,4 @@
-export class ByteStreams {
+export default class ByteStreams {
     static get $javaClass() {
         return Java.type('com.google.common.io.ByteStreams');
     }
@@ -23,16 +23,16 @@ export class ByteStreams {
     static readFully(...args) {
         return ByteStreams.$javaClass.readFully(...args);
     }
+    static newDataInput(...args) {
+        return ByteStreams.$javaClass.newDataInput(...args);
+    }
+    static newDataOutput(...args) {
+        return ByteStreams.$javaClass.newDataOutput(...args);
+    }
     static skipFully(...args) {
         return ByteStreams.$javaClass.skipFully(...args);
     }
     static exhaust(...args) {
         return ByteStreams.$javaClass.exhaust(...args);
-    }
-    static newDataOutput(...args) {
-        return ByteStreams.$javaClass.newDataOutput(...args);
-    }
-    static newDataInput(...args) {
-        return ByteStreams.$javaClass.newDataInput(...args);
     }
 }

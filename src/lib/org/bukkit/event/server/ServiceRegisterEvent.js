@@ -1,4 +1,4 @@
-export class ServiceRegisterEvent {
+export default class ServiceRegisterEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.server.ServiceRegisterEvent');
     }

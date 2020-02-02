@@ -1,4 +1,4 @@
-export class FileConfiguration {
+export default class FileConfiguration {
     static get $javaClass() {
         return Java.type('org.bukkit.configuration.file.FileConfiguration');
     }

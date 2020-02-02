@@ -1,13 +1,13 @@
-import { HandlerList } from '../../../../org/bukkit/event/HandlerList.js';
-import { World } from '../../../../org/bukkit/World.js';
-import { WorldEvent } from '../../../../org/bukkit/event/world/WorldEvent.js';
-export interface WorldInitEvent extends WorldEvent {
+import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
+import World from '../../../../org/bukkit/World.js';
+import WorldEvent from '../../../../org/bukkit/event/world/WorldEvent.js';
+export default interface WorldInitEvent extends WorldEvent {
     getHandlers(): HandlerList;
     getWorld(): World;
     getEventName(): string;
     isAsynchronous(): boolean;
 }
-export declare class WorldInitEvent {
+export default class WorldInitEvent {
     static get $javaClass(): any;
     constructor(world: World);
     static getHandlerList(): HandlerList;

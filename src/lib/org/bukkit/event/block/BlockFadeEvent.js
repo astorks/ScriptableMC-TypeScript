@@ -1,4 +1,4 @@
-export class BlockFadeEvent {
+export default class BlockFadeEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.block.BlockFadeEvent');
     }

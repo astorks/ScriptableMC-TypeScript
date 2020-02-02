@@ -1,4 +1,4 @@
-export class RowIdLifetime {
+export default class RowIdLifetime {
     static get $javaClass() {
         return Java.type('java.sql.RowIdLifetime');
     }

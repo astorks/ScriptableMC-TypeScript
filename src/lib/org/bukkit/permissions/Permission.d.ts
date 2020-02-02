@@ -1,17 +1,17 @@
-import { PermissionDefault } from '../../../org/bukkit/permissions/PermissionDefault.js';
-export interface Permission {
+import PermissionDefault from '../../../org/bukkit/permissions/PermissionDefault.js';
+export default interface Permission {
     getName(): string;
     getDefault(): PermissionDefault;
     setDefault(value: PermissionDefault): void;
     getDescription(): string;
     setDescription(value: string): void;
+    getPermissibles(): any;
     addParent(perm: Permission, value: boolean): void;
     addParent(_name: string, value: boolean): Permission;
-    getPermissibles(): any;
     getChildren(): any;
     recalculatePermissibles(): void;
 }
-export declare class Permission {
+export default class Permission {
     static get $javaClass(): any;
     constructor(_name: string, description: string, defaultValue: PermissionDefault);
     constructor(_name: string, description: string, defaultValue: PermissionDefault, children: any);

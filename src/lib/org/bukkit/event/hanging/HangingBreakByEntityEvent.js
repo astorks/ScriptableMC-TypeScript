@@ -1,4 +1,4 @@
-export class HangingBreakByEntityEvent {
+export default class HangingBreakByEntityEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.hanging.HangingBreakByEntityEvent');
     }

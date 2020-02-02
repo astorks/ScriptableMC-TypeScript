@@ -1,4 +1,4 @@
-export interface GameMode {
+export default interface GameMode {
     getValue(): number;
     name(): string;
     compareTo(arg0: any): number;
@@ -6,7 +6,7 @@ export interface GameMode {
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class GameMode {
+export default class GameMode {
     static get $javaClass(): any;
     static get CREATIVE(): GameMode;
     static get SURVIVAL(): GameMode;

@@ -1,4 +1,4 @@
-export class PlayerAnimationEvent {
+export default class PlayerAnimationEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerAnimationEvent');
     }

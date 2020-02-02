@@ -1,4 +1,4 @@
-export class TreeType {
+export default class TreeType {
     static get $javaClass() {
         return Java.type('org.bukkit.TreeType');
     }

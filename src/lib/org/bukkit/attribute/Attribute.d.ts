@@ -1,11 +1,11 @@
-export interface Attribute {
+export default interface Attribute {
     name(): string;
     compareTo(arg0: any): number;
     compareTo(o: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class Attribute {
+export default class Attribute {
     static get $javaClass(): any;
     static get GENERIC_MAX_HEALTH(): Attribute;
     static get GENERIC_FOLLOW_RANGE(): Attribute;

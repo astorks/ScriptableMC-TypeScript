@@ -1,4 +1,4 @@
-export class Statement {
+export default class Statement {
     static get $javaClass() {
         return Java.type('java.sql.Statement');
     }

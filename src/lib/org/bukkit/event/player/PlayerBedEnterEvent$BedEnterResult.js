@@ -1,4 +1,4 @@
-export class PlayerBedEnterEvent$BedEnterResult {
+export default class PlayerBedEnterEvent$BedEnterResult {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerBedEnterEvent$BedEnterResult');
     }

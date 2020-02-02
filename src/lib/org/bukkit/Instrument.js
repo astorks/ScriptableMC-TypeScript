@@ -1,4 +1,4 @@
-export class Instrument {
+export default class Instrument {
     static get $javaClass() {
         return Java.type('org.bukkit.Instrument');
     }

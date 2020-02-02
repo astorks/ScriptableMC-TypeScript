@@ -1,11 +1,11 @@
-export interface Pose {
+export default interface Pose {
     name(): string;
     compareTo(arg0: any): number;
     compareTo(o: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class Pose {
+export default class Pose {
     static get $javaClass(): any;
     static get STANDING(): Pose;
     static get FALL_FLYING(): Pose;

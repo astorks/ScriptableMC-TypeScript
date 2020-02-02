@@ -1,4 +1,4 @@
-export class BanList$Type {
+export default class BanList$Type {
     static get $javaClass() {
         return Java.type('org.bukkit.BanList$Type');
     }

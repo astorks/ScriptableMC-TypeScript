@@ -1,4 +1,4 @@
-export class Warning$WarningState {
+export default class Warning$WarningState {
     static get $javaClass() {
         return Java.type('org.bukkit.Warning$WarningState');
     }

@@ -1,4 +1,4 @@
-export class FluidCollisionMode {
+export default class FluidCollisionMode {
     static get $javaClass() {
         return Java.type('org.bukkit.FluidCollisionMode');
     }

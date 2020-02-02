@@ -1,4 +1,4 @@
-export class DyeColor {
+export default class DyeColor {
     static get $javaClass() {
         return Java.type('org.bukkit.DyeColor');
     }

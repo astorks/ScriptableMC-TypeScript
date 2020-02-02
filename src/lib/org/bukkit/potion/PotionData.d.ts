@@ -1,10 +1,10 @@
-import { PotionType } from '../../../org/bukkit/potion/PotionType.js';
-export interface PotionData {
+import PotionType from '../../../org/bukkit/potion/PotionType.js';
+export default interface PotionData {
     getType(): PotionType;
-    isExtended(): boolean;
     isUpgraded(): boolean;
+    isExtended(): boolean;
 }
-export declare class PotionData {
+export default class PotionData {
     static get $javaClass(): any;
     constructor(type: PotionType, extended: boolean, upgraded: boolean);
     constructor(type: PotionType);

@@ -1,4 +1,4 @@
-export class SpongeAbsorbEvent {
+export default class SpongeAbsorbEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.block.SpongeAbsorbEvent');
     }

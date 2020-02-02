@@ -1,4 +1,4 @@
-export class LootContext {
+export default class LootContext {
     static get $javaClass() {
         return Java.type('org.bukkit.loot.LootContext');
     }

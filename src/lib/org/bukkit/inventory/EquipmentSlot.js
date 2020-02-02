@@ -1,4 +1,4 @@
-export class EquipmentSlot {
+export default class EquipmentSlot {
     static get $javaClass() {
         return Java.type('org.bukkit.inventory.EquipmentSlot');
     }

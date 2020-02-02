@@ -1,10 +1,10 @@
-import { Entity } from '../../../../org/bukkit/entity/Entity.js';
-import { Slime } from '../../../../org/bukkit/entity/Slime.js';
-import { HandlerList } from '../../../../org/bukkit/event/HandlerList.js';
-import { EntityType } from '../../../../org/bukkit/entity/EntityType.js';
-import { Cancellable } from '../../../../org/bukkit/event/Cancellable.js';
-import { EntityEvent } from '../../../../org/bukkit/event/entity/EntityEvent.js';
-export interface SlimeSplitEvent extends EntityEvent, Cancellable {
+import Cancellable from '../../../../org/bukkit/event/Cancellable.js';
+import Entity from '../../../../org/bukkit/entity/Entity.js';
+import EntityEvent from '../../../../org/bukkit/event/entity/EntityEvent.js';
+import EntityType from '../../../../org/bukkit/entity/EntityType.js';
+import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
+import Slime from '../../../../org/bukkit/entity/Slime.js';
+export default interface SlimeSplitEvent extends EntityEvent, Cancellable {
     getCount(): number;
     getEntity(): Entity;
     getEntity(): Slime;
@@ -16,7 +16,7 @@ export interface SlimeSplitEvent extends EntityEvent, Cancellable {
     getEventName(): string;
     isAsynchronous(): boolean;
 }
-export declare class SlimeSplitEvent {
+export default class SlimeSplitEvent {
     static get $javaClass(): any;
     constructor(slime: Slime, count: number);
     static getHandlerList(): HandlerList;

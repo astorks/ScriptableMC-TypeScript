@@ -1,16 +1,16 @@
-import { ItemStack } from '../../../org/bukkit/inventory/ItemStack.js';
-import { Recipe } from '../../../org/bukkit/inventory/Recipe.js';
-import { Material } from '../../../org/bukkit/Material.js';
-import { Location } from '../../../org/bukkit/Location.js';
-import { InventoryType } from '../../../org/bukkit/event/inventory/InventoryType.js';
-import { InventoryHolder } from '../../../org/bukkit/inventory/InventoryHolder.js';
-import { Inventory } from '../../../org/bukkit/inventory/Inventory.js';
-export interface CraftingInventory extends Inventory {
+import Inventory from '../../../org/bukkit/inventory/Inventory.js';
+import InventoryHolder from '../../../org/bukkit/inventory/InventoryHolder.js';
+import InventoryType from '../../../org/bukkit/event/inventory/InventoryType.js';
+import ItemStack from '../../../org/bukkit/inventory/ItemStack.js';
+import Location from '../../../org/bukkit/Location.js';
+import Material from '../../../org/bukkit/Material.js';
+import Recipe from '../../../org/bukkit/inventory/Recipe.js';
+export default interface CraftingInventory extends Inventory {
     setResult(arg0: ItemStack): void;
     getResult(): ItemStack;
     getRecipe(): Recipe;
-    getMatrix(): Array<ItemStack>;
     setMatrix(arg0: Array<ItemStack>): void;
+    getMatrix(): Array<ItemStack>;
     remove(arg0: Material): void;
     remove(arg0: ItemStack): void;
     clear(): void;
@@ -31,21 +31,21 @@ export interface CraftingInventory extends Inventory {
     all(arg0: ItemStack): any;
     setContents(arg0: Array<ItemStack>): void;
     getMaxStackSize(): number;
-    setItem(arg0: number, arg1: ItemStack): void;
+    getHolder(): InventoryHolder;
+    containsAtLeast(arg0: ItemStack, arg1: number): boolean;
+    getItem(arg0: number): ItemStack;
+    getViewers(): any;
     addItem(arg0: Array<ItemStack>): any;
     setMaxStackSize(arg0: number): void;
-    getItem(arg0: number): ItemStack;
     setStorageContents(arg0: Array<ItemStack>): void;
-    containsAtLeast(arg0: ItemStack, arg1: number): boolean;
-    getContents(): Array<ItemStack>;
     getStorageContents(): Array<ItemStack>;
-    getViewers(): any;
-    getHolder(): InventoryHolder;
-    firstEmpty(): number;
+    setItem(arg0: number, arg1: ItemStack): void;
     removeItem(arg0: Array<ItemStack>): any;
+    getContents(): Array<ItemStack>;
+    firstEmpty(): number;
     spliterator(): any;
     forEach(action: any): void;
 }
-export declare class CraftingInventory {
+export default class CraftingInventory {
     static get $javaClass(): any;
 }

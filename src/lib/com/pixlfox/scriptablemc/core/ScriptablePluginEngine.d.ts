@@ -1,22 +1,25 @@
-import { ScriptablePluginContext } from '../../../../com/pixlfox/scriptablemc/core/ScriptablePluginContext.js';
-import { JavaPlugin } from '../../../../org/bukkit/plugin/java/JavaPlugin.js';
-import { Listener } from '../../../../org/bukkit/event/Listener.js';
-export interface ScriptablePluginEngine extends Listener {
-    loadPlugin(scriptableClass: any): ScriptablePluginContext;
-    getRootScriptsFolder(): string;
-    evalJs(source: string): any;
-    eval(source: any): any;
-    evalFile(filePath: string): any;
+import CommandSender from '../../../../org/bukkit/command/CommandSender.js';
+import JavaPlugin from '../../../../org/bukkit/plugin/java/JavaPlugin.js';
+import Listener from '../../../../org/bukkit/event/Listener.js';
+import ScriptablePluginContext from '../../../../com/pixlfox/scriptablemc/core/ScriptablePluginContext.js';
+export default interface ScriptablePluginEngine extends Listener {
     getBootstrapPlugin(): JavaPlugin;
     getDebugEnabled(): boolean;
+    evalCommandSenderJs(source: string, sender: CommandSender): any;
+    getRootScriptsFolder(): string;
+    evalJs(source: string): any;
+    loadPlugin(scriptableClass: any): ScriptablePluginContext;
     enablePlugin(pluginContext: ScriptablePluginContext): void;
-    enableAllPlugins(): void;
     disablePlugin(pluginContext: ScriptablePluginContext): void;
+    evalFile(filePath: string): any;
+    evalFile(scriptFile: any): any;
+    enableAllPlugins(): void;
+    eval(source: any): any;
 }
-export declare class ScriptablePluginEngine {
+export default class ScriptablePluginEngine {
     static get $javaClass(): any;
-    constructor(arg0: JavaPlugin, arg1: string, arg2: boolean, arg3: number, arg4: any);
     constructor(bootstrapPlugin: JavaPlugin, rootScriptsFolder: string, debugEnabled: boolean);
-    static access$setInst$cp(value: ScriptablePluginEngine): void;
+    constructor(arg0: JavaPlugin, arg1: string, arg2: boolean, arg3: number, arg4: any);
     static access$getInst$cp(): ScriptablePluginEngine;
+    static access$setInst$cp(value: ScriptablePluginEngine): void;
 }

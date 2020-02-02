@@ -1,9 +1,9 @@
-export interface SQLException {
+export default interface SQLException {
     iterator(): any;
-    getNextException(): SQLException;
-    setNextException(ex: SQLException): void;
     getSQLState(): string;
     getErrorCode(): number;
+    getNextException(): SQLException;
+    setNextException(ex: SQLException): void;
     printStackTrace(s: any): void;
     printStackTrace(): void;
     printStackTrace(s: any): void;
@@ -19,7 +19,7 @@ export interface SQLException {
     spliterator(): any;
     forEach(action: any): void;
 }
-export declare class SQLException {
+export default class SQLException {
     static get $javaClass(): any;
     constructor(cause: any);
     constructor(reason: string, cause: any);

@@ -1,4 +1,4 @@
-export class Attribute {
+export default class Attribute {
     static get $javaClass() {
         return Java.type('org.bukkit.attribute.Attribute');
     }

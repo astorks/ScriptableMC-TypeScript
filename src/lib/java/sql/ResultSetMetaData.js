@@ -1,4 +1,4 @@
-export class ResultSetMetaData {
+export default class ResultSetMetaData {
     static get $javaClass() {
         return Java.type('java.sql.ResultSetMetaData');
     }

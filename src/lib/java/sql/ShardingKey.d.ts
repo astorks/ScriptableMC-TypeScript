@@ -1,5 +1,5 @@
-export interface ShardingKey {
+export default interface ShardingKey {
 }
-export declare class ShardingKey {
+export default class ShardingKey {
     static get $javaClass(): any;
 }

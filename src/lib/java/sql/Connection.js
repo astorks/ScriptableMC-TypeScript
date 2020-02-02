@@ -1,4 +1,4 @@
-export class Connection {
+export default class Connection {
     static get $javaClass() {
         return Java.type('java.sql.Connection');
     }

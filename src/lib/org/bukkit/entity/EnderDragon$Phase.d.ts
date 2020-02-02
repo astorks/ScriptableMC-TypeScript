@@ -1,11 +1,11 @@
-export interface EnderDragon$Phase {
+export default interface EnderDragon$Phase {
     name(): string;
     compareTo(arg0: any): number;
     compareTo(o: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class EnderDragon$Phase {
+export default class EnderDragon$Phase {
     static get $javaClass(): any;
     static get CIRCLING(): EnderDragon$Phase;
     static get STRAFING(): EnderDragon$Phase;

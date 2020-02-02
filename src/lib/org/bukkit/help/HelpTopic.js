@@ -1,4 +1,4 @@
-export class HelpTopic {
+export default class HelpTopic {
     static get $javaClass() {
         return Java.type('org.bukkit.help.HelpTopic');
     }

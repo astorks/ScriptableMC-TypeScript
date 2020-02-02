@@ -1,4 +1,4 @@
-export class EntityPortalEnterEvent {
+export default class EntityPortalEnterEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.EntityPortalEnterEvent');
     }

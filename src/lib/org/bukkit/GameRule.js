@@ -1,4 +1,4 @@
-export class GameRule {
+export default class GameRule {
     static get $javaClass() {
         return Java.type('org.bukkit.GameRule');
     }

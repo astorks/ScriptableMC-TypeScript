@@ -1,4 +1,4 @@
-export class PlayerInteractAtEntityEvent {
+export default class PlayerInteractAtEntityEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerInteractAtEntityEvent');
     }

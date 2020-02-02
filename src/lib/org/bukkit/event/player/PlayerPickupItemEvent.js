@@ -1,4 +1,4 @@
-export class PlayerPickupItemEvent {
+export default class PlayerPickupItemEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerPickupItemEvent');
     }

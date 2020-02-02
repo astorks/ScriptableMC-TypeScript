@@ -1,4 +1,4 @@
-export class Raid$RaidStatus {
+export default class Raid$RaidStatus {
     static get $javaClass() {
         return Java.type('org.bukkit.Raid$RaidStatus');
     }

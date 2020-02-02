@@ -1,5 +1,5 @@
-export interface CachedServerIcon {
+export default interface CachedServerIcon {
 }
-export declare class CachedServerIcon {
+export default class CachedServerIcon {
     static get $javaClass(): any;
 }

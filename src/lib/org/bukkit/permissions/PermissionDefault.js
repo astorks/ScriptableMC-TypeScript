@@ -1,4 +1,4 @@
-export class PermissionDefault {
+export default class PermissionDefault {
     static get $javaClass() {
         return Java.type('org.bukkit.permissions.PermissionDefault');
     }

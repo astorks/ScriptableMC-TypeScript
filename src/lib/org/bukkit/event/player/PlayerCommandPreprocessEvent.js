@@ -1,4 +1,4 @@
-export class PlayerCommandPreprocessEvent {
+export default class PlayerCommandPreprocessEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerCommandPreprocessEvent');
     }

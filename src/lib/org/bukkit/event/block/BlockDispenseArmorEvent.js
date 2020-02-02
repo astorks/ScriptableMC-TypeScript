@@ -1,4 +1,4 @@
-export class BlockDispenseArmorEvent {
+export default class BlockDispenseArmorEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.block.BlockDispenseArmorEvent');
     }

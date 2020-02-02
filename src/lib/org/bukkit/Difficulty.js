@@ -1,4 +1,4 @@
-export class Difficulty {
+export default class Difficulty {
     static get $javaClass() {
         return Java.type('org.bukkit.Difficulty');
     }

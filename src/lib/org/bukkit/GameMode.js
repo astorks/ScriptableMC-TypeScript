@@ -1,4 +1,4 @@
-export class GameMode {
+export default class GameMode {
     static get $javaClass() {
         return Java.type('org.bukkit.GameMode');
     }

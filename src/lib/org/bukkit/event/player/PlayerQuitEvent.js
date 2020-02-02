@@ -1,4 +1,4 @@
-export class PlayerQuitEvent {
+export default class PlayerQuitEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerQuitEvent');
     }

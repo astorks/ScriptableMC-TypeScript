@@ -1,8 +1,8 @@
-export interface SQLType {
+export default interface SQLType {
     getName(): string;
     getVendorTypeNumber(): any;
     getVendor(): string;
 }
-export declare class SQLType {
+export default class SQLType {
     static get $javaClass(): any;
 }

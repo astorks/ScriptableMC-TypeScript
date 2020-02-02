@@ -1,9 +1,9 @@
-import { Player } from '../../../../org/bukkit/entity/Player.js';
-import { HandlerList } from '../../../../org/bukkit/event/HandlerList.js';
-import { Block } from '../../../../org/bukkit/block/Block.js';
-import { Cancellable } from '../../../../org/bukkit/event/Cancellable.js';
-import { BlockEvent } from '../../../../org/bukkit/event/block/BlockEvent.js';
-export interface BlockFertilizeEvent extends BlockEvent, Cancellable {
+import Block from '../../../../org/bukkit/block/Block.js';
+import BlockEvent from '../../../../org/bukkit/event/block/BlockEvent.js';
+import Cancellable from '../../../../org/bukkit/event/Cancellable.js';
+import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
+import Player from '../../../../org/bukkit/entity/Player.js';
+export default interface BlockFertilizeEvent extends BlockEvent, Cancellable {
     getPlayer(): Player;
     getHandlers(): HandlerList;
     isCancelled(): boolean;
@@ -13,7 +13,7 @@ export interface BlockFertilizeEvent extends BlockEvent, Cancellable {
     getEventName(): string;
     isAsynchronous(): boolean;
 }
-export declare class BlockFertilizeEvent {
+export default class BlockFertilizeEvent {
     static get $javaClass(): any;
     constructor(theBlock: Block, player: Player, blocks: any);
     static getHandlerList(): HandlerList;

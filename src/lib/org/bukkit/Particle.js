@@ -1,4 +1,4 @@
-export class Particle {
+export default class Particle {
     static get $javaClass() {
         return Java.type('org.bukkit.Particle');
     }

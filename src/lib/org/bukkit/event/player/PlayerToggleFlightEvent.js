@@ -1,4 +1,4 @@
-export class PlayerToggleFlightEvent {
+export default class PlayerToggleFlightEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerToggleFlightEvent');
     }

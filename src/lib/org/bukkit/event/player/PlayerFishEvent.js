@@ -1,4 +1,4 @@
-export class PlayerFishEvent {
+export default class PlayerFishEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerFishEvent');
     }

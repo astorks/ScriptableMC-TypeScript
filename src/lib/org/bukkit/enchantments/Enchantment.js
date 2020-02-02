@@ -1,4 +1,4 @@
-export class Enchantment {
+export default class Enchantment {
     static get $javaClass() {
         return Java.type('org.bukkit.enchantments.Enchantment');
     }
@@ -122,6 +122,9 @@ export class Enchantment {
     static getByName(...args) {
         return Enchantment.$javaClass.getByName(...args);
     }
+    static getByKey(...args) {
+        return Enchantment.$javaClass.getByKey(...args);
+    }
     static registerEnchantment(...args) {
         return Enchantment.$javaClass.registerEnchantment(...args);
     }
@@ -130,8 +133,5 @@ export class Enchantment {
     }
     static isAcceptingRegistrations(...args) {
         return Enchantment.$javaClass.isAcceptingRegistrations(...args);
-    }
-    static getByKey(...args) {
-        return Enchantment.$javaClass.getByKey(...args);
     }
 }

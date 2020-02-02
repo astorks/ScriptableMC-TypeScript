@@ -1,4 +1,4 @@
-export class YamlConfiguration {
+export default class YamlConfiguration {
     static get $javaClass() {
         return Java.type('org.bukkit.configuration.file.YamlConfiguration');
     }

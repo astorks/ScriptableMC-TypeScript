@@ -1,4 +1,4 @@
-export class RayTraceResult {
+export default class RayTraceResult {
     static get $javaClass() {
         return Java.type('org.bukkit.util.RayTraceResult');
     }

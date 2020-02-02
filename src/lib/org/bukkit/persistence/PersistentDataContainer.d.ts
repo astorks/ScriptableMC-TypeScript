@@ -1,7 +1,7 @@
-import { NamespacedKey } from '../../../org/bukkit/NamespacedKey.js';
-import { PersistentDataType } from '../../../org/bukkit/persistence/PersistentDataType.js';
-import { PersistentDataAdapterContext } from '../../../org/bukkit/persistence/PersistentDataAdapterContext.js';
-export interface PersistentDataContainer {
+import NamespacedKey from '../../../org/bukkit/NamespacedKey.js';
+import PersistentDataAdapterContext from '../../../org/bukkit/persistence/PersistentDataAdapterContext.js';
+import PersistentDataType from '../../../org/bukkit/persistence/PersistentDataType.js';
+export default interface PersistentDataContainer {
     remove(arg0: NamespacedKey): void;
     get(arg0: NamespacedKey, arg1: PersistentDataType): any;
     isEmpty(): boolean;
@@ -10,6 +10,6 @@ export interface PersistentDataContainer {
     has(arg0: NamespacedKey, arg1: PersistentDataType): boolean;
     getAdapterContext(): PersistentDataAdapterContext;
 }
-export declare class PersistentDataContainer {
+export default class PersistentDataContainer {
     static get $javaClass(): any;
 }

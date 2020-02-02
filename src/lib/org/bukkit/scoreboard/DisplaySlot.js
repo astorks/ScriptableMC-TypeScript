@@ -1,4 +1,4 @@
-export class DisplaySlot {
+export default class DisplaySlot {
     static get $javaClass() {
         return Java.type('org.bukkit.scoreboard.DisplaySlot');
     }

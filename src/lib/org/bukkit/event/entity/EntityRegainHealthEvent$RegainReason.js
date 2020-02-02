@@ -1,4 +1,4 @@
-export class EntityRegainHealthEvent$RegainReason {
+export default class EntityRegainHealthEvent$RegainReason {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.EntityRegainHealthEvent$RegainReason');
     }

@@ -1,11 +1,11 @@
-export interface EntityUnleashEvent$UnleashReason {
+export default interface EntityUnleashEvent$UnleashReason {
     name(): string;
     compareTo(arg0: any): number;
     compareTo(o: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class EntityUnleashEvent$UnleashReason {
+export default class EntityUnleashEvent$UnleashReason {
     static get $javaClass(): any;
     static get HOLDER_GONE(): EntityUnleashEvent$UnleashReason;
     static get PLAYER_UNLEASH(): EntityUnleashEvent$UnleashReason;

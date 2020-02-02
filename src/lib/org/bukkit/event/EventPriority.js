@@ -1,4 +1,4 @@
-export class EventPriority {
+export default class EventPriority {
     static get $javaClass() {
         return Java.type('org.bukkit.event.EventPriority');
     }

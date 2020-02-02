@@ -1,4 +1,4 @@
-export class Event$Result {
+export default class Event$Result {
     static get $javaClass() {
         return Java.type('org.bukkit.event.Event$Result');
     }

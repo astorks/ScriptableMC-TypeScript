@@ -1,12 +1,12 @@
-import { SQLException } from '../../java/sql/SQLException.js';
-export interface SQLWarning extends SQLException {
-    setNextWarning(w: SQLWarning): void;
+import SQLException from '../../java/sql/SQLException.js';
+export default interface SQLWarning extends SQLException {
     getNextWarning(): SQLWarning;
+    setNextWarning(w: SQLWarning): void;
     iterator(): any;
-    getNextException(): SQLException;
-    setNextException(ex: SQLException): void;
     getSQLState(): string;
     getErrorCode(): number;
+    getNextException(): SQLException;
+    setNextException(ex: SQLException): void;
     printStackTrace(s: any): void;
     printStackTrace(): void;
     printStackTrace(s: any): void;
@@ -22,7 +22,7 @@ export interface SQLWarning extends SQLException {
     spliterator(): any;
     forEach(action: any): void;
 }
-export declare class SQLWarning {
+export default class SQLWarning {
     static get $javaClass(): any;
     constructor(cause: any);
     constructor(reason: string, cause: any);

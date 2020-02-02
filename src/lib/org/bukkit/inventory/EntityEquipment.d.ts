@@ -1,39 +1,39 @@
-import { ItemStack } from '../../../org/bukkit/inventory/ItemStack.js';
-import { Entity } from '../../../org/bukkit/entity/Entity.js';
-export interface EntityEquipment {
+import Entity from '../../../org/bukkit/entity/Entity.js';
+import ItemStack from '../../../org/bukkit/inventory/ItemStack.js';
+export default interface EntityEquipment {
     clear(): void;
-    getItemInHand(): ItemStack;
     setItemInHand(arg0: ItemStack): void;
+    getItemInHand(): ItemStack;
     getHolder(): Entity;
+    getLeggingsDropChance(): number;
+    getItemInHandDropChance(): number;
+    getItemInOffHandDropChance(): number;
+    getItemInMainHandDropChance(): number;
     setItemInMainHandDropChance(arg0: number): void;
     getChestplateDropChance(): number;
-    setHelmetDropChance(arg0: number): void;
-    getItemInHandDropChance(): number;
-    getItemInMainHandDropChance(): number;
     setChestplateDropChance(arg0: number): void;
-    getLeggingsDropChance(): number;
-    getHelmetDropChance(): number;
-    getItemInOffHandDropChance(): number;
-    setLeggingsDropChance(arg0: number): void;
     setItemInHandDropChance(arg0: number): void;
+    setHelmetDropChance(arg0: number): void;
+    getHelmetDropChance(): number;
     setItemInOffHandDropChance(arg0: number): void;
-    getBoots(): ItemStack;
-    setHelmet(arg0: ItemStack): void;
-    getItemInMainHand(): ItemStack;
+    setLeggingsDropChance(arg0: number): void;
     getItemInOffHand(): ItemStack;
-    setItemInOffHand(arg0: ItemStack): void;
-    setChestplate(arg0: ItemStack): void;
-    getLeggings(): ItemStack;
-    setLeggings(arg0: ItemStack): void;
-    getArmorContents(): Array<ItemStack>;
-    setArmorContents(arg0: Array<ItemStack>): void;
-    getHelmet(): ItemStack;
-    setBootsDropChance(arg0: number): void;
     getChestplate(): ItemStack;
-    setBoots(arg0: ItemStack): void;
+    setLeggings(arg0: ItemStack): void;
+    setBootsDropChance(arg0: number): void;
     getBootsDropChance(): number;
+    getLeggings(): ItemStack;
+    setChestplate(arg0: ItemStack): void;
     setItemInMainHand(arg0: ItemStack): void;
+    getItemInMainHand(): ItemStack;
+    getBoots(): ItemStack;
+    setArmorContents(arg0: Array<ItemStack>): void;
+    getArmorContents(): Array<ItemStack>;
+    setBoots(arg0: ItemStack): void;
+    setItemInOffHand(arg0: ItemStack): void;
+    getHelmet(): ItemStack;
+    setHelmet(arg0: ItemStack): void;
 }
-export declare class EntityEquipment {
+export default class EntityEquipment {
     static get $javaClass(): any;
 }

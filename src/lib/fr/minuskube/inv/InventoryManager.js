@@ -1,4 +1,4 @@
-export class InventoryManager {
+export default class InventoryManager {
     static get $javaClass() {
         return Java.type('fr.minuskube.inv.InventoryManager');
     }

@@ -1,4 +1,4 @@
-export class ServicePriority {
+export default class ServicePriority {
     static get $javaClass() {
         return Java.type('org.bukkit.plugin.ServicePriority');
     }

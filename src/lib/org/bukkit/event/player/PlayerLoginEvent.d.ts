@@ -1,23 +1,23 @@
-import { PlayerLoginEvent$Result } from '../../../../org/bukkit/event/player/PlayerLoginEvent$Result.js';
-import { HandlerList } from '../../../../org/bukkit/event/HandlerList.js';
-import { Player } from '../../../../org/bukkit/entity/Player.js';
-import { PlayerEvent } from '../../../../org/bukkit/event/player/PlayerEvent.js';
-export interface PlayerLoginEvent extends PlayerEvent {
+import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
+import Player from '../../../../org/bukkit/entity/Player.js';
+import PlayerEvent from '../../../../org/bukkit/event/player/PlayerEvent.js';
+import PlayerLoginEvent$Result from '../../../../org/bukkit/event/player/PlayerLoginEvent$Result.js';
+export default interface PlayerLoginEvent extends PlayerEvent {
     getAddress(): any;
     setResult(result: PlayerLoginEvent$Result): void;
     getResult(): PlayerLoginEvent$Result;
     getHandlers(): HandlerList;
-    allow(): void;
     setKickMessage(message: string): void;
-    disallow(result: PlayerLoginEvent$Result, message: string): void;
     getKickMessage(): string;
-    getRealAddress(): any;
+    allow(): void;
+    disallow(result: PlayerLoginEvent$Result, message: string): void;
     getHostname(): string;
+    getRealAddress(): any;
     getPlayer(): Player;
     getEventName(): string;
     isAsynchronous(): boolean;
 }
-export declare class PlayerLoginEvent {
+export default class PlayerLoginEvent {
     static get $javaClass(): any;
     constructor(player: Player, hostname: string, address: any);
     constructor(player: Player, hostname: string, address: any, realAddress: any);

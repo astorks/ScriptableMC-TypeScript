@@ -1,4 +1,4 @@
-export class FireworkEffect$Type {
+export default class FireworkEffect$Type {
     static get $javaClass() {
         return Java.type('org.bukkit.FireworkEffect$Type');
     }

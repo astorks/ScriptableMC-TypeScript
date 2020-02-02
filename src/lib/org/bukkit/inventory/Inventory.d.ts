@@ -1,9 +1,9 @@
-import { Material } from '../../../org/bukkit/Material.js';
-import { ItemStack } from '../../../org/bukkit/inventory/ItemStack.js';
-import { Location } from '../../../org/bukkit/Location.js';
-import { InventoryType } from '../../../org/bukkit/event/inventory/InventoryType.js';
-import { InventoryHolder } from '../../../org/bukkit/inventory/InventoryHolder.js';
-export interface Inventory {
+import InventoryHolder from '../../../org/bukkit/inventory/InventoryHolder.js';
+import InventoryType from '../../../org/bukkit/event/inventory/InventoryType.js';
+import ItemStack from '../../../org/bukkit/inventory/ItemStack.js';
+import Location from '../../../org/bukkit/Location.js';
+import Material from '../../../org/bukkit/Material.js';
+export default interface Inventory {
     remove(arg0: Material): void;
     remove(arg0: ItemStack): void;
     clear(): void;
@@ -24,21 +24,21 @@ export interface Inventory {
     all(arg0: ItemStack): any;
     setContents(arg0: Array<ItemStack>): void;
     getMaxStackSize(): number;
-    setItem(arg0: number, arg1: ItemStack): void;
+    getHolder(): InventoryHolder;
+    containsAtLeast(arg0: ItemStack, arg1: number): boolean;
+    getItem(arg0: number): ItemStack;
+    getViewers(): any;
     addItem(arg0: Array<ItemStack>): any;
     setMaxStackSize(arg0: number): void;
-    getItem(arg0: number): ItemStack;
     setStorageContents(arg0: Array<ItemStack>): void;
-    containsAtLeast(arg0: ItemStack, arg1: number): boolean;
-    getContents(): Array<ItemStack>;
     getStorageContents(): Array<ItemStack>;
-    getViewers(): any;
-    getHolder(): InventoryHolder;
-    firstEmpty(): number;
+    setItem(arg0: number, arg1: ItemStack): void;
     removeItem(arg0: Array<ItemStack>): any;
+    getContents(): Array<ItemStack>;
+    firstEmpty(): number;
     spliterator(): any;
     forEach(action: any): void;
 }
-export declare class Inventory {
+export default class Inventory {
     static get $javaClass(): any;
 }

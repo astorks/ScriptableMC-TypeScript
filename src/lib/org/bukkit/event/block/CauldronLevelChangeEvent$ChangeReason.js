@@ -1,4 +1,4 @@
-export class CauldronLevelChangeEvent$ChangeReason {
+export default class CauldronLevelChangeEvent$ChangeReason {
     static get $javaClass() {
         return Java.type('org.bukkit.event.block.CauldronLevelChangeEvent$ChangeReason');
     }

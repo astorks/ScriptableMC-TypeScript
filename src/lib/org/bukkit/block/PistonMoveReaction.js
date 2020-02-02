@@ -1,4 +1,4 @@
-export class PistonMoveReaction {
+export default class PistonMoveReaction {
     static get $javaClass() {
         return Java.type('org.bukkit.block.PistonMoveReaction');
     }

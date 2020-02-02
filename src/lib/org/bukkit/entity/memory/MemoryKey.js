@@ -1,4 +1,4 @@
-export class MemoryKey {
+export default class MemoryKey {
     static get $javaClass() {
         return Java.type('org.bukkit.entity.memory.MemoryKey');
     }

@@ -1,4 +1,4 @@
-export class SoundCategory {
+export default class SoundCategory {
     static get $javaClass() {
         return Java.type('org.bukkit.SoundCategory');
     }

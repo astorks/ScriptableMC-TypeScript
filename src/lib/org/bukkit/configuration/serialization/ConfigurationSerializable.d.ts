@@ -1,6 +1,6 @@
-export interface ConfigurationSerializable {
+export default interface ConfigurationSerializable {
     serialize(): any;
 }
-export declare class ConfigurationSerializable {
+export default class ConfigurationSerializable {
     static get $javaClass(): any;
 }

@@ -1,4 +1,4 @@
-export class BlockPistonRetractEvent {
+export default class BlockPistonRetractEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.block.BlockPistonRetractEvent');
     }

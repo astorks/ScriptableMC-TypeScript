@@ -1,4 +1,4 @@
-export class EntityDropItemEvent {
+export default class EntityDropItemEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.EntityDropItemEvent');
     }

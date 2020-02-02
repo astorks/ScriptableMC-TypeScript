@@ -1,11 +1,11 @@
-export interface RowIdLifetime {
+export default interface RowIdLifetime {
     name(): string;
     compareTo(arg0: any): number;
     compareTo(o: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class RowIdLifetime {
+export default class RowIdLifetime {
     static get $javaClass(): any;
     static get ROWID_UNSUPPORTED(): RowIdLifetime;
     static get ROWID_VALID_OTHER(): RowIdLifetime;

@@ -1,4 +1,4 @@
-export class NameTagVisibility {
+export default class NameTagVisibility {
     static get $javaClass() {
         return Java.type('org.bukkit.scoreboard.NameTagVisibility');
     }

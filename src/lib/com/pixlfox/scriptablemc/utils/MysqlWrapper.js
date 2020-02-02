@@ -1,4 +1,4 @@
-export class MysqlWrapper {
+export default class MysqlWrapper {
     static get $javaClass() {
         return Java.type('com.pixlfox.scriptablemc.utils.MysqlWrapper');
     }

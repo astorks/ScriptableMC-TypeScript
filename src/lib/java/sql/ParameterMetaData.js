@@ -1,4 +1,4 @@
-export class ParameterMetaData {
+export default class ParameterMetaData {
     static get $javaClass() {
         return Java.type('java.sql.ParameterMetaData');
     }

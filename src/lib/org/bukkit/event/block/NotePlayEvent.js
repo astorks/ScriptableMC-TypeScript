@@ -1,4 +1,4 @@
-export class NotePlayEvent {
+export default class NotePlayEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.block.NotePlayEvent');
     }

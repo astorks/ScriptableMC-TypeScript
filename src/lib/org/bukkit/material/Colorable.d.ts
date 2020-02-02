@@ -1,8 +1,8 @@
-import { DyeColor } from '../../../org/bukkit/DyeColor.js';
-export interface Colorable {
-    getColor(): DyeColor;
+import DyeColor from '../../../org/bukkit/DyeColor.js';
+export default interface Colorable {
     setColor(arg0: DyeColor): void;
+    getColor(): DyeColor;
 }
-export declare class Colorable {
+export default class Colorable {
     static get $javaClass(): any;
 }

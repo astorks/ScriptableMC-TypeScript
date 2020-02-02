@@ -1,4 +1,4 @@
-export class LingeringPotionSplashEvent {
+export default class LingeringPotionSplashEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.LingeringPotionSplashEvent');
     }

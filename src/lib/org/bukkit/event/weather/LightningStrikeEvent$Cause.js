@@ -1,4 +1,4 @@
-export class LightningStrikeEvent$Cause {
+export default class LightningStrikeEvent$Cause {
     static get $javaClass() {
         return Java.type('org.bukkit.event.weather.LightningStrikeEvent$Cause');
     }

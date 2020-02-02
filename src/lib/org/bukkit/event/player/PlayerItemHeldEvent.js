@@ -1,4 +1,4 @@
-export class PlayerItemHeldEvent {
+export default class PlayerItemHeldEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerItemHeldEvent');
     }

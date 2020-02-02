@@ -1,4 +1,4 @@
-export class Horse$Variant {
+export default class Horse$Variant {
     static get $javaClass() {
         return Java.type('org.bukkit.entity.Horse$Variant');
     }

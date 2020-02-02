@@ -1,4 +1,4 @@
-export class Note$Tone {
+export default class Note$Tone {
     static get $javaClass() {
         return Java.type('org.bukkit.Note$Tone');
     }

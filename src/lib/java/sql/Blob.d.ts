@@ -1,4 +1,4 @@
-export interface Blob {
+export default interface Blob {
     length(): number;
     getBytes(arg0: number, arg1: number): Array<number>;
     position(arg0: Array<number>, arg1: number): number;
@@ -11,6 +11,6 @@ export interface Blob {
     getBinaryStream(arg0: number, arg1: number): any;
     getBinaryStream(): any;
 }
-export declare class Blob {
+export default class Blob {
     static get $javaClass(): any;
 }

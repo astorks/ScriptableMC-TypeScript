@@ -1,4 +1,4 @@
-export class ServerLoadEvent$LoadType {
+export default class ServerLoadEvent$LoadType {
     static get $javaClass() {
         return Java.type('org.bukkit.event.server.ServerLoadEvent$LoadType');
     }

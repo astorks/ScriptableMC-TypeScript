@@ -1,4 +1,4 @@
-export class MapInitializeEvent {
+export default class MapInitializeEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.server.MapInitializeEvent');
     }

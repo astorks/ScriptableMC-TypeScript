@@ -1,4 +1,4 @@
-export class PlayerLeashEntityEvent {
+export default class PlayerLeashEntityEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.PlayerLeashEntityEvent');
     }

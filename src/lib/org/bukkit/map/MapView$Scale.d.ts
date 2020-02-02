@@ -1,4 +1,4 @@
-export interface MapView$Scale {
+export default interface MapView$Scale {
     getValue(): number;
     name(): string;
     compareTo(arg0: any): number;
@@ -6,7 +6,7 @@ export interface MapView$Scale {
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class MapView$Scale {
+export default class MapView$Scale {
     static get $javaClass(): any;
     static get CLOSEST(): MapView$Scale;
     static get CLOSE(): MapView$Scale;

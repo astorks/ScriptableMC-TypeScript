@@ -1,4 +1,4 @@
-export class SQLException {
+export default class SQLException {
     static get $javaClass() {
         return Java.type('java.sql.SQLException');
     }

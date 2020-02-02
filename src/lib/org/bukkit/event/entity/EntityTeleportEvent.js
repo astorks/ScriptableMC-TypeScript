@@ -1,4 +1,4 @@
-export class EntityTeleportEvent {
+export default class EntityTeleportEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.EntityTeleportEvent');
     }

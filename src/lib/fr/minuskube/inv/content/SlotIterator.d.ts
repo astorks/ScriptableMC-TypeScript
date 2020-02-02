@@ -1,6 +1,6 @@
-import { ClickableItem } from '../../../../fr/minuskube/inv/ClickableItem.js';
-import { SlotPos } from '../../../../fr/minuskube/inv/content/SlotPos.js';
-export interface SlotIterator {
+import ClickableItem from '../../../../fr/minuskube/inv/ClickableItem.js';
+import SlotPos from '../../../../fr/minuskube/inv/content/SlotPos.js';
+export default interface SlotIterator {
     get(): any;
     next(): SlotIterator;
     set(arg0: ClickableItem): SlotIterator;
@@ -8,14 +8,14 @@ export interface SlotIterator {
     previous(): SlotIterator;
     row(arg0: number): SlotIterator;
     row(): number;
-    column(arg0: number): SlotIterator;
-    column(): number;
-    ended(): boolean;
     blacklist(arg0: number, arg1: number): SlotIterator;
     blacklist(arg0: SlotPos): SlotIterator;
-    allowOverride(arg0: boolean): SlotIterator;
+    column(): number;
+    column(arg0: number): SlotIterator;
+    ended(): boolean;
     doesAllowOverride(): boolean;
+    allowOverride(arg0: boolean): SlotIterator;
 }
-export declare class SlotIterator {
+export default class SlotIterator {
     static get $javaClass(): any;
 }

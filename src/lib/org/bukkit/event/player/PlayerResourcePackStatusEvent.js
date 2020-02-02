@@ -1,4 +1,4 @@
-export class PlayerResourcePackStatusEvent {
+export default class PlayerResourcePackStatusEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerResourcePackStatusEvent');
     }

@@ -1,4 +1,4 @@
-export class Team$OptionStatus {
+export default class Team$OptionStatus {
     static get $javaClass() {
         return Java.type('org.bukkit.scoreboard.Team$OptionStatus');
     }

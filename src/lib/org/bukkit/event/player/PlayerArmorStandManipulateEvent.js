@@ -1,4 +1,4 @@
-export class PlayerArmorStandManipulateEvent {
+export default class PlayerArmorStandManipulateEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerArmorStandManipulateEvent');
     }

@@ -1,4 +1,4 @@
-export class ExplosionPrimeEvent {
+export default class ExplosionPrimeEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.ExplosionPrimeEvent');
     }

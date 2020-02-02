@@ -1,7 +1,7 @@
-import { NamespacedKey } from '../../org/bukkit/NamespacedKey.js';
-export interface Keyed {
+import NamespacedKey from '../../org/bukkit/NamespacedKey.js';
+export default interface Keyed {
     getKey(): NamespacedKey;
 }
-export declare class Keyed {
+export default class Keyed {
     static get $javaClass(): any;
 }

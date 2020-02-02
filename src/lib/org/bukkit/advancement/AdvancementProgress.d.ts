@@ -1,13 +1,13 @@
-import { Advancement } from '../../../org/bukkit/advancement/Advancement.js';
-export interface AdvancementProgress {
+import Advancement from '../../../org/bukkit/advancement/Advancement.js';
+export default interface AdvancementProgress {
     isDone(): boolean;
     getAdvancement(): Advancement;
     getRemainingCriteria(): any;
-    getAwardedCriteria(): any;
-    revokeCriteria(arg0: string): boolean;
     awardCriteria(arg0: string): boolean;
+    revokeCriteria(arg0: string): boolean;
+    getAwardedCriteria(): any;
     getDateAwarded(arg0: string): any;
 }
-export declare class AdvancementProgress {
+export default class AdvancementProgress {
     static get $javaClass(): any;
 }

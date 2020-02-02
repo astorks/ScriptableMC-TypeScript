@@ -1,4 +1,4 @@
-export class EntityBreedEvent {
+export default class EntityBreedEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.EntityBreedEvent');
     }

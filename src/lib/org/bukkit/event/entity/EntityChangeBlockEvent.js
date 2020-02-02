@@ -1,4 +1,4 @@
-export class EntityChangeBlockEvent {
+export default class EntityChangeBlockEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.EntityChangeBlockEvent');
     }

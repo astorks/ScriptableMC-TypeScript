@@ -1,4 +1,4 @@
-export class PlayerToggleSneakEvent {
+export default class PlayerToggleSneakEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerToggleSneakEvent');
     }

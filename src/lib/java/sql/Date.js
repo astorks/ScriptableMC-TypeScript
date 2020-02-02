@@ -1,4 +1,4 @@
-export class Date {
+export default class Date {
     static get $javaClass() {
         return Java.type('java.sql.Date');
     }
@@ -8,11 +8,11 @@ export class Date {
     static valueOf(...args) {
         return Date.$javaClass.valueOf(...args);
     }
-    static parse(...args) {
-        return Date.$javaClass.parse(...args);
-    }
     static from(...args) {
         return Date.$javaClass.from(...args);
+    }
+    static parse(...args) {
+        return Date.$javaClass.parse(...args);
     }
     static UTC(...args) {
         return Date.$javaClass.UTC(...args);

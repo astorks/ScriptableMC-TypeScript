@@ -1,11 +1,11 @@
-export interface Team$OptionStatus {
+export default interface Team$OptionStatus {
     name(): string;
     compareTo(arg0: any): number;
     compareTo(o: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class Team$OptionStatus {
+export default class Team$OptionStatus {
     static get $javaClass(): any;
     static get ALWAYS(): Team$OptionStatus;
     static get NEVER(): Team$OptionStatus;

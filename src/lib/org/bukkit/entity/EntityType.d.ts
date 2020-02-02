@@ -1,19 +1,19 @@
-import { NamespacedKey } from '../../../org/bukkit/NamespacedKey.js';
-import { Keyed } from '../../../org/bukkit/Keyed.js';
-export interface EntityType extends Keyed {
+import Keyed from '../../../org/bukkit/Keyed.js';
+import NamespacedKey from '../../../org/bukkit/NamespacedKey.js';
+export default interface EntityType extends Keyed {
     getName(): string;
     getKey(): NamespacedKey;
     isAlive(): boolean;
-    getEntityClass(): any;
-    isSpawnable(): boolean;
     getTypeId(): number;
+    isSpawnable(): boolean;
+    getEntityClass(): any;
     name(): string;
     compareTo(arg0: any): number;
     compareTo(o: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class EntityType {
+export default class EntityType {
     static get $javaClass(): any;
     static get DROPPED_ITEM(): EntityType;
     static get EXPERIENCE_ORB(): EntityType;

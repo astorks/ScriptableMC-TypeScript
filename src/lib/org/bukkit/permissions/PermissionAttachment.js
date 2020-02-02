@@ -1,4 +1,4 @@
-export class PermissionAttachment {
+export default class PermissionAttachment {
     static get $javaClass() {
         return Java.type('org.bukkit.permissions.PermissionAttachment');
     }

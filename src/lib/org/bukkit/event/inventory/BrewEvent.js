@@ -1,4 +1,4 @@
-export class BrewEvent {
+export default class BrewEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.inventory.BrewEvent');
     }

@@ -1,4 +1,4 @@
-export interface Difficulty {
+export default interface Difficulty {
     getValue(): number;
     name(): string;
     compareTo(arg0: any): number;
@@ -6,7 +6,7 @@ export interface Difficulty {
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class Difficulty {
+export default class Difficulty {
     static get $javaClass(): any;
     static get PEACEFUL(): Difficulty;
     static get EASY(): Difficulty;

@@ -1,4 +1,4 @@
-export class ItemFlag {
+export default class ItemFlag {
     static get $javaClass() {
         return Java.type('org.bukkit.inventory.ItemFlag');
     }

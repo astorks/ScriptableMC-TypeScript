@@ -1,4 +1,4 @@
-export class LeavesDecayEvent {
+export default class LeavesDecayEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.block.LeavesDecayEvent');
     }

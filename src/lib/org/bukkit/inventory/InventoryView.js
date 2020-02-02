@@ -1,4 +1,4 @@
-export class InventoryView {
+export default class InventoryView {
     static get $javaClass() {
         return Java.type('org.bukkit.inventory.InventoryView');
     }

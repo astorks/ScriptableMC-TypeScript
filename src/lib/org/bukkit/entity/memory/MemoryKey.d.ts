@@ -1,10 +1,10 @@
-import { NamespacedKey } from '../../../../org/bukkit/NamespacedKey.js';
-import { Keyed } from '../../../../org/bukkit/Keyed.js';
-export interface MemoryKey extends Keyed {
+import Keyed from '../../../../org/bukkit/Keyed.js';
+import NamespacedKey from '../../../../org/bukkit/NamespacedKey.js';
+export default interface MemoryKey extends Keyed {
     getKey(): NamespacedKey;
     getMemoryClass(): any;
 }
-export declare class MemoryKey {
+export default class MemoryKey {
     static get $javaClass(): any;
     static get HOME(): MemoryKey;
     static get MEETING_POINT(): MemoryKey;

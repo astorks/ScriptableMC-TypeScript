@@ -1,11 +1,11 @@
-export interface Statistic$Type {
+export default interface Statistic$Type {
     name(): string;
     compareTo(arg0: any): number;
     compareTo(o: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class Statistic$Type {
+export default class Statistic$Type {
     static get $javaClass(): any;
     static get UNTYPED(): Statistic$Type;
     static get ITEM(): Statistic$Type;

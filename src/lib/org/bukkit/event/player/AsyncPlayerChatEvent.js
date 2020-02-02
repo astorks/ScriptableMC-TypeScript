@@ -1,4 +1,4 @@
-export class AsyncPlayerChatEvent {
+export default class AsyncPlayerChatEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.AsyncPlayerChatEvent');
     }

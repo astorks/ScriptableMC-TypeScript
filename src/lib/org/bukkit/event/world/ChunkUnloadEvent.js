@@ -1,4 +1,4 @@
-export class ChunkUnloadEvent {
+export default class ChunkUnloadEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.world.ChunkUnloadEvent');
     }

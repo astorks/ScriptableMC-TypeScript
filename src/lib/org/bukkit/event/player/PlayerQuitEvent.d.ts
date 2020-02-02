@@ -1,15 +1,15 @@
-import { HandlerList } from '../../../../org/bukkit/event/HandlerList.js';
-import { Player } from '../../../../org/bukkit/entity/Player.js';
-import { PlayerEvent } from '../../../../org/bukkit/event/player/PlayerEvent.js';
-export interface PlayerQuitEvent extends PlayerEvent {
+import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
+import Player from '../../../../org/bukkit/entity/Player.js';
+import PlayerEvent from '../../../../org/bukkit/event/player/PlayerEvent.js';
+export default interface PlayerQuitEvent extends PlayerEvent {
     getHandlers(): HandlerList;
-    setQuitMessage(quitMessage: string): void;
     getQuitMessage(): string;
+    setQuitMessage(quitMessage: string): void;
     getPlayer(): Player;
     getEventName(): string;
     isAsynchronous(): boolean;
 }
-export declare class PlayerQuitEvent {
+export default class PlayerQuitEvent {
     static get $javaClass(): any;
     constructor(who: Player, quitMessage: string);
     static getHandlerList(): HandlerList;

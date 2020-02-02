@@ -1,4 +1,4 @@
-export interface PistonMoveReaction {
+export default interface PistonMoveReaction {
     getId(): number;
     name(): string;
     compareTo(arg0: any): number;
@@ -6,7 +6,7 @@ export interface PistonMoveReaction {
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class PistonMoveReaction {
+export default class PistonMoveReaction {
     static get $javaClass(): any;
     static get MOVE(): PistonMoveReaction;
     static get BREAK(): PistonMoveReaction;

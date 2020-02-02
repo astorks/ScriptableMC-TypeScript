@@ -1,4 +1,4 @@
-export class EnchantItemEvent {
+export default class EnchantItemEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.enchantment.EnchantItemEvent');
     }

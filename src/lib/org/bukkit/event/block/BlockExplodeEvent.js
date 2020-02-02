@@ -1,4 +1,4 @@
-export class BlockExplodeEvent {
+export default class BlockExplodeEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.block.BlockExplodeEvent');
     }

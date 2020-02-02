@@ -1,4 +1,4 @@
-export class BarStyle {
+export default class BarStyle {
     static get $javaClass() {
         return Java.type('org.bukkit.boss.BarStyle');
     }

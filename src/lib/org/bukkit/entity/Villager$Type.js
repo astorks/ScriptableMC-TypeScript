@@ -1,4 +1,4 @@
-export class Villager$Type {
+export default class Villager$Type {
     static get $javaClass() {
         return Java.type('org.bukkit.entity.Villager$Type');
     }

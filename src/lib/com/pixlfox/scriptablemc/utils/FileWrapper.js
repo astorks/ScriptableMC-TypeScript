@@ -1,4 +1,4 @@
-export class FileWrapper {
+export default class FileWrapper {
     static get $javaClass() {
         return Java.type('com.pixlfox.scriptablemc.utils.FileWrapper');
     }

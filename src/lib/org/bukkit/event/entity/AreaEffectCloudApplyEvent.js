@@ -1,4 +1,4 @@
-export class AreaEffectCloudApplyEvent {
+export default class AreaEffectCloudApplyEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.AreaEffectCloudApplyEvent');
     }

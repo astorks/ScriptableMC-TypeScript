@@ -1,4 +1,4 @@
-export class SlotPos {
+export default class SlotPos {
     static get $javaClass() {
         return Java.type('fr.minuskube.inv.content.SlotPos');
     }

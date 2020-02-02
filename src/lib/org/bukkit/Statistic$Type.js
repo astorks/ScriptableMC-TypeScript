@@ -1,4 +1,4 @@
-export class Statistic$Type {
+export default class Statistic$Type {
     static get $javaClass() {
         return Java.type('org.bukkit.Statistic$Type');
     }

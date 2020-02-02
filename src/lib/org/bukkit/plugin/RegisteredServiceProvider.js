@@ -1,4 +1,4 @@
-export class RegisteredServiceProvider {
+export default class RegisteredServiceProvider {
     static get $javaClass() {
         return Java.type('org.bukkit.plugin.RegisteredServiceProvider');
     }

@@ -1,4 +1,4 @@
-export class InventoryAction {
+export default class InventoryAction {
     static get $javaClass() {
         return Java.type('org.bukkit.event.inventory.InventoryAction');
     }

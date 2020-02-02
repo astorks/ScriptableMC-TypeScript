@@ -1,8 +1,8 @@
-import { HandlerList } from '../../../../org/bukkit/event/HandlerList.js';
-import { World } from '../../../../org/bukkit/World.js';
-import { Cancellable } from '../../../../org/bukkit/event/Cancellable.js';
-import { WorldEvent } from '../../../../org/bukkit/event/world/WorldEvent.js';
-export interface WorldUnloadEvent extends WorldEvent, Cancellable {
+import Cancellable from '../../../../org/bukkit/event/Cancellable.js';
+import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
+import World from '../../../../org/bukkit/World.js';
+import WorldEvent from '../../../../org/bukkit/event/world/WorldEvent.js';
+export default interface WorldUnloadEvent extends WorldEvent, Cancellable {
     getHandlers(): HandlerList;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
@@ -10,7 +10,7 @@ export interface WorldUnloadEvent extends WorldEvent, Cancellable {
     getEventName(): string;
     isAsynchronous(): boolean;
 }
-export declare class WorldUnloadEvent {
+export default class WorldUnloadEvent {
     static get $javaClass(): any;
     constructor(world: World);
     static getHandlerList(): HandlerList;

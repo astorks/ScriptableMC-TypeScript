@@ -1,11 +1,11 @@
-export interface EntityPotionEffectEvent$Cause {
+export default interface EntityPotionEffectEvent$Cause {
     name(): string;
     compareTo(arg0: any): number;
     compareTo(o: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class EntityPotionEffectEvent$Cause {
+export default class EntityPotionEffectEvent$Cause {
     static get $javaClass(): any;
     static get AREA_EFFECT_CLOUD(): EntityPotionEffectEvent$Cause;
     static get ARROW(): EntityPotionEffectEvent$Cause;

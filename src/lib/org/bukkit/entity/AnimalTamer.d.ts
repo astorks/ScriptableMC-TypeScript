@@ -1,7 +1,7 @@
-export interface AnimalTamer {
+export default interface AnimalTamer {
     getName(): string;
     getUniqueId(): string;
 }
-export declare class AnimalTamer {
+export default class AnimalTamer {
     static get $javaClass(): any;
 }

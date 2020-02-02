@@ -1,40 +1,40 @@
-import { NamespacedKey } from '../../org/bukkit/NamespacedKey.js';
-import { MaterialData } from '../../org/bukkit/material/MaterialData.js';
-import { BlockData } from '../../org/bukkit/block/data/BlockData.js';
-import { Keyed } from '../../org/bukkit/Keyed.js';
-export interface Material extends Keyed {
+import BlockData from '../../org/bukkit/block/data/BlockData.js';
+import Keyed from '../../org/bukkit/Keyed.js';
+import MaterialData from '../../org/bukkit/material/MaterialData.js';
+import NamespacedKey from '../../org/bukkit/NamespacedKey.js';
+export default interface Material extends Keyed {
     getKey(): NamespacedKey;
     getId(): number;
-    hasGravity(): boolean;
-    getData(): any;
-    getMaxStackSize(): number;
-    getNewData(raw: number): MaterialData;
-    isLegacy(): boolean;
-    getMaxDurability(): number;
-    createBlockData(): BlockData;
     createBlockData(consumer: any): BlockData;
     createBlockData(data: string): BlockData;
-    isBlock(): boolean;
-    isFuel(): boolean;
+    createBlockData(): BlockData;
+    hasGravity(): boolean;
+    isLegacy(): boolean;
+    getData(): any;
+    getNewData(raw: number): MaterialData;
+    getMaxStackSize(): number;
+    getMaxDurability(): number;
+    isOccluding(): boolean;
     isRecord(): boolean;
+    isAir(): boolean;
+    getBlastResistance(): number;
     isSolid(): boolean;
     isTransparent(): boolean;
-    isBurnable(): boolean;
     getHardness(): number;
     isEdible(): boolean;
-    isAir(): boolean;
-    isFlammable(): boolean;
-    isOccluding(): boolean;
-    isItem(): boolean;
-    getBlastResistance(): number;
     isInteractable(): boolean;
+    isFuel(): boolean;
+    isFlammable(): boolean;
+    isBlock(): boolean;
+    isBurnable(): boolean;
+    isItem(): boolean;
     name(): string;
     compareTo(arg0: any): number;
     compareTo(o: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class Material {
+export default class Material {
     static get $javaClass(): any;
     static get ACACIA_BOAT(): Material;
     static get ACACIA_BUTTON(): Material;

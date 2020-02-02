@@ -1,4 +1,4 @@
-export class TabCompleteEvent {
+export default class TabCompleteEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.server.TabCompleteEvent');
     }

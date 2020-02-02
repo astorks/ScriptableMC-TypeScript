@@ -1,4 +1,4 @@
-export class ChunkPopulateEvent {
+export default class ChunkPopulateEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.world.ChunkPopulateEvent');
     }

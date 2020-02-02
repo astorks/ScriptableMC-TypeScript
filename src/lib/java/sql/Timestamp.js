@@ -1,4 +1,4 @@
-export class Timestamp {
+export default class Timestamp {
     static get $javaClass() {
         return Java.type('java.sql.Timestamp');
     }

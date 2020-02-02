@@ -1,4 +1,4 @@
-export class PlayerSwapHandItemsEvent {
+export default class PlayerSwapHandItemsEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerSwapHandItemsEvent');
     }

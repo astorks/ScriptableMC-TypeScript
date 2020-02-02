@@ -1,11 +1,11 @@
-export interface NameTagVisibility {
+export default interface NameTagVisibility {
     name(): string;
     compareTo(arg0: any): number;
     compareTo(o: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class NameTagVisibility {
+export default class NameTagVisibility {
     static get $javaClass(): any;
     static get ALWAYS(): NameTagVisibility;
     static get NEVER(): NameTagVisibility;

@@ -1,14 +1,14 @@
-import { Color } from '../../../org/bukkit/Color.js';
-import { PotionEffect } from '../../../org/bukkit/potion/PotionEffect.js';
-export interface PotionEffectType {
+import Color from '../../../org/bukkit/Color.js';
+import PotionEffect from '../../../org/bukkit/potion/PotionEffect.js';
+export default interface PotionEffectType {
     getName(): string;
     getId(): number;
     isInstant(): boolean;
+    createEffect(duration: number, amplifier: number): PotionEffect;
     getColor(): Color;
     getDurationModifier(): number;
-    createEffect(duration: number, amplifier: number): PotionEffect;
 }
-export declare class PotionEffectType {
+export default class PotionEffectType {
     static get $javaClass(): any;
     static get SPEED(): PotionEffectType;
     static get SLOW(): PotionEffectType;
@@ -44,7 +44,7 @@ export declare class PotionEffectType {
     static get HERO_OF_THE_VILLAGE(): PotionEffectType;
     static values(): Array<PotionEffectType>;
     static getByName(_name: string): PotionEffectType;
-    static stopAcceptingRegistrations(): void;
     static getById(id: number): PotionEffectType;
     static registerPotionEffectType(type: PotionEffectType): void;
+    static stopAcceptingRegistrations(): void;
 }

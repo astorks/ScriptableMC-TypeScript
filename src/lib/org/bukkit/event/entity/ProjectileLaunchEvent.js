@@ -1,4 +1,4 @@
-export class ProjectileLaunchEvent {
+export default class ProjectileLaunchEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.ProjectileLaunchEvent');
     }

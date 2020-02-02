@@ -1,0 +1,51 @@
+export default interface PatternType {
+    getIdentifier(): string;
+    name(): string;
+    compareTo(arg0: any): number;
+    compareTo(o: any): number;
+    getDeclaringClass(): any;
+    ordinal(): number;
+}
+export default class PatternType {
+    static get $javaClass(): any;
+    static get BASE(): PatternType;
+    static get SQUARE_BOTTOM_LEFT(): PatternType;
+    static get SQUARE_BOTTOM_RIGHT(): PatternType;
+    static get SQUARE_TOP_LEFT(): PatternType;
+    static get SQUARE_TOP_RIGHT(): PatternType;
+    static get STRIPE_BOTTOM(): PatternType;
+    static get STRIPE_TOP(): PatternType;
+    static get STRIPE_LEFT(): PatternType;
+    static get STRIPE_RIGHT(): PatternType;
+    static get STRIPE_CENTER(): PatternType;
+    static get STRIPE_MIDDLE(): PatternType;
+    static get STRIPE_DOWNRIGHT(): PatternType;
+    static get STRIPE_DOWNLEFT(): PatternType;
+    static get STRIPE_SMALL(): PatternType;
+    static get CROSS(): PatternType;
+    static get STRAIGHT_CROSS(): PatternType;
+    static get TRIANGLE_BOTTOM(): PatternType;
+    static get TRIANGLE_TOP(): PatternType;
+    static get TRIANGLES_BOTTOM(): PatternType;
+    static get TRIANGLES_TOP(): PatternType;
+    static get DIAGONAL_LEFT(): PatternType;
+    static get DIAGONAL_RIGHT(): PatternType;
+    static get DIAGONAL_LEFT_MIRROR(): PatternType;
+    static get DIAGONAL_RIGHT_MIRROR(): PatternType;
+    static get CIRCLE_MIDDLE(): PatternType;
+    static get RHOMBUS_MIDDLE(): PatternType;
+    static get HALF_VERTICAL(): PatternType;
+    static get HALF_HORIZONTAL(): PatternType;
+    static get HALF_VERTICAL_MIRROR(): PatternType;
+    static get HALF_HORIZONTAL_MIRROR(): PatternType;
+    static get BORDER(): PatternType;
+    static get CURLY_BORDER(): PatternType;
+    static get CREEPER(): PatternType;
+    static get GRADIENT(): PatternType;
+    static get GRADIENT_UP(): PatternType;
+    static get BRICKS(): PatternType;
+    static get SKULL(): PatternType;
+    static get FLOWER(): PatternType;
+    static get MOJANG(): PatternType;
+    static get GLOBE(): PatternType;
+}

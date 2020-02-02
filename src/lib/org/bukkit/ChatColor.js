@@ -1,4 +1,4 @@
-export class ChatColor {
+export default class ChatColor {
     static get $javaClass() {
         return Java.type('org.bukkit.ChatColor');
     }

@@ -1,11 +1,11 @@
-export interface TreeType {
+export default interface TreeType {
     name(): string;
     compareTo(arg0: any): number;
     compareTo(o: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class TreeType {
+export default class TreeType {
     static get $javaClass(): any;
     static get TREE(): TreeType;
     static get BIG_TREE(): TreeType;

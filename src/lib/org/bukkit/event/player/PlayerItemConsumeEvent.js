@@ -1,4 +1,4 @@
-export class PlayerItemConsumeEvent {
+export default class PlayerItemConsumeEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerItemConsumeEvent');
     }

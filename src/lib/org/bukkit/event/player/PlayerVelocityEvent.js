@@ -1,4 +1,4 @@
-export class PlayerVelocityEvent {
+export default class PlayerVelocityEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.player.PlayerVelocityEvent');
     }

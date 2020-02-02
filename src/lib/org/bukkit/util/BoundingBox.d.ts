@@ -1,10 +1,10 @@
-import { Vector } from '../../../org/bukkit/util/Vector.js';
-import { Block } from '../../../org/bukkit/block/Block.js';
-import { Location } from '../../../org/bukkit/Location.js';
-import { BlockFace } from '../../../org/bukkit/block/BlockFace.js';
-import { RayTraceResult } from '../../../org/bukkit/util/RayTraceResult.js';
-import { ConfigurationSerializable } from '../../../org/bukkit/configuration/serialization/ConfigurationSerializable.js';
-export interface BoundingBox extends ConfigurationSerializable {
+import Block from '../../../org/bukkit/block/Block.js';
+import BlockFace from '../../../org/bukkit/block/BlockFace.js';
+import ConfigurationSerializable from '../../../org/bukkit/configuration/serialization/ConfigurationSerializable.js';
+import Location from '../../../org/bukkit/Location.js';
+import RayTraceResult from '../../../org/bukkit/util/RayTraceResult.js';
+import Vector from '../../../org/bukkit/util/Vector.js';
+export default interface BoundingBox extends ConfigurationSerializable {
     clone(): any;
     clone(): BoundingBox;
     contains(position: Vector): boolean;
@@ -27,31 +27,31 @@ export interface BoundingBox extends ConfigurationSerializable {
     union(position: Vector): BoundingBox;
     union(position: Location): BoundingBox;
     union(other: BoundingBox): BoundingBox;
+    rayTrace(start: Vector, direction: Vector, maxDistance: number): RayTraceResult;
     getHeight(): number;
     serialize(): any;
-    getCenterX(): number;
     getCenterZ(): number;
-    rayTrace(start: Vector, direction: Vector, maxDistance: number): RayTraceResult;
+    getCenterX(): number;
     getMinX(): number;
     getMinY(): number;
     intersection(other: BoundingBox): BoundingBox;
-    getMaxY(): number;
-    getWidthX(): number;
+    getMaxX(): number;
+    getMinZ(): number;
     getMax(): Vector;
-    getCenterY(): number;
+    expandDirectional(direction: Vector): BoundingBox;
+    expandDirectional(dirX: number, dirY: number, dirZ: number): BoundingBox;
+    overlaps(min: Vector, max: Vector): boolean;
+    overlaps(other: BoundingBox): boolean;
+    getMin(): Vector;
+    getWidthX(): number;
     getWidthZ(): number;
+    getCenterY(): number;
+    getVolume(): number;
+    getMaxY(): number;
     getMaxZ(): number;
     getCenter(): Vector;
-    getMin(): Vector;
-    getVolume(): number;
-    getMinZ(): number;
-    getMaxX(): number;
-    expandDirectional(dirX: number, dirY: number, dirZ: number): BoundingBox;
-    expandDirectional(direction: Vector): BoundingBox;
-    overlaps(other: BoundingBox): boolean;
-    overlaps(min: Vector, max: Vector): boolean;
 }
-export declare class BoundingBox {
+export default class BoundingBox {
     static get $javaClass(): any;
     constructor();
     constructor(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number);

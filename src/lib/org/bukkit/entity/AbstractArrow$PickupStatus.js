@@ -1,4 +1,4 @@
-export class AbstractArrow$PickupStatus {
+export default class AbstractArrow$PickupStatus {
     static get $javaClass() {
         return Java.type('org.bukkit.entity.AbstractArrow$PickupStatus');
     }

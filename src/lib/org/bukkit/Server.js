@@ -1,4 +1,4 @@
-export class Server {
+export default class Server {
     static get $javaClass() {
         return Java.type('org.bukkit.Server');
     }

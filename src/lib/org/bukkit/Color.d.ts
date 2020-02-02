@@ -1,19 +1,19 @@
-import { DyeColor } from '../../org/bukkit/DyeColor.js';
-import { ConfigurationSerializable } from '../../org/bukkit/configuration/serialization/ConfigurationSerializable.js';
-export interface Color extends ConfigurationSerializable {
+import ConfigurationSerializable from '../../org/bukkit/configuration/serialization/ConfigurationSerializable.js';
+import DyeColor from '../../org/bukkit/DyeColor.js';
+export default interface Color extends ConfigurationSerializable {
     serialize(): any;
-    setRed(red: number): Color;
     getGreen(): number;
+    asBGR(): number;
+    setBlue(blue: number): Color;
+    mixColors(colors: Array<Color>): Color;
+    mixDyes(colors: Array<DyeColor>): Color;
+    setGreen(green: number): Color;
+    setRed(red: number): Color;
     getRed(): number;
     getBlue(): number;
     asRGB(): number;
-    asBGR(): number;
-    mixColors(colors: Array<Color>): Color;
-    setBlue(blue: number): Color;
-    setGreen(green: number): Color;
-    mixDyes(colors: Array<DyeColor>): Color;
 }
-export declare class Color {
+export default class Color {
     static get $javaClass(): any;
     static get WHITE(): Color;
     static get SILVER(): Color;
@@ -33,8 +33,8 @@ export declare class Color {
     static get PURPLE(): Color;
     static get ORANGE(): Color;
     static deserialize(map: any): Color;
-    static fromRGB(red: number, green: number, blue: number): Color;
-    static fromRGB(rgb: number): Color;
     static fromBGR(bgr: number): Color;
     static fromBGR(blue: number, green: number, red: number): Color;
+    static fromRGB(red: number, green: number, blue: number): Color;
+    static fromRGB(rgb: number): Color;
 }

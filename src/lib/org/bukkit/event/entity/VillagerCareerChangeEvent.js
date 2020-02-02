@@ -1,4 +1,4 @@
-export class VillagerCareerChangeEvent {
+export default class VillagerCareerChangeEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.VillagerCareerChangeEvent');
     }

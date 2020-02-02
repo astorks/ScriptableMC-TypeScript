@@ -1,4 +1,4 @@
-export class MemoryConfiguration {
+export default class MemoryConfiguration {
     static get $javaClass() {
         return Java.type('org.bukkit.configuration.MemoryConfiguration');
     }

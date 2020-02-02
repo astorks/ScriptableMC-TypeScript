@@ -1,4 +1,4 @@
-export class MainHand {
+export default class MainHand {
     static get $javaClass() {
         return Java.type('org.bukkit.inventory.MainHand');
     }

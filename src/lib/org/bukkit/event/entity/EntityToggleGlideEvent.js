@@ -1,4 +1,4 @@
-export class EntityToggleGlideEvent {
+export default class EntityToggleGlideEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.entity.EntityToggleGlideEvent');
     }

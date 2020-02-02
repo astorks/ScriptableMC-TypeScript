@@ -1,11 +1,11 @@
-export interface BlockIgniteEvent$IgniteCause {
+export default interface BlockIgniteEvent$IgniteCause {
     name(): string;
     compareTo(arg0: any): number;
     compareTo(o: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class BlockIgniteEvent$IgniteCause {
+export default class BlockIgniteEvent$IgniteCause {
     static get $javaClass(): any;
     static get LAVA(): BlockIgniteEvent$IgniteCause;
     static get FLINT_AND_STEEL(): BlockIgniteEvent$IgniteCause;

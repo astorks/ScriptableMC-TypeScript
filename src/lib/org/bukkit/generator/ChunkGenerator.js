@@ -1,4 +1,4 @@
-export class ChunkGenerator {
+export default class ChunkGenerator {
     static get $javaClass() {
         return Java.type('org.bukkit.generator.ChunkGenerator');
     }

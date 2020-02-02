@@ -1,4 +1,4 @@
-export class MaterialData {
+export default class MaterialData {
     static get $javaClass() {
         return Java.type('org.bukkit.material.MaterialData');
     }

@@ -1,4 +1,4 @@
-export class ClickType {
+export default class ClickType {
     static get $javaClass() {
         return Java.type('org.bukkit.event.inventory.ClickType');
     }

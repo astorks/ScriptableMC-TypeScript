@@ -1,4 +1,4 @@
-export class BlockShearEntityEvent {
+export default class BlockShearEntityEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.block.BlockShearEntityEvent');
     }

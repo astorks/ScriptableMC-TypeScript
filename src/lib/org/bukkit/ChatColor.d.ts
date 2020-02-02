@@ -1,15 +1,15 @@
-export interface ChatColor {
+export default interface ChatColor {
     getChar(): string;
     isColor(): boolean;
-    isFormat(): boolean;
     asBungee(): any;
+    isFormat(): boolean;
     name(): string;
     compareTo(arg0: any): number;
     compareTo(o: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }
-export declare class ChatColor {
+export default class ChatColor {
     static get $javaClass(): any;
     static get BLACK(): ChatColor;
     static get DARK_BLUE(): ChatColor;

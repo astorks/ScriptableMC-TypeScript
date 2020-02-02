@@ -1,4 +1,4 @@
-export class Color {
+export default class Color {
     static get $javaClass() {
         return Java.type('org.bukkit.Color');
     }
@@ -56,10 +56,10 @@ export class Color {
     static deserialize(...args) {
         return Color.$javaClass.deserialize(...args);
     }
-    static fromRGB(...args) {
-        return Color.$javaClass.fromRGB(...args);
-    }
     static fromBGR(...args) {
         return Color.$javaClass.fromBGR(...args);
+    }
+    static fromRGB(...args) {
+        return Color.$javaClass.fromRGB(...args);
     }
 }

@@ -1,4 +1,4 @@
-export class VehicleEnterEvent {
+export default class VehicleEnterEvent {
     static get $javaClass() {
         return Java.type('org.bukkit.event.vehicle.VehicleEnterEvent');
     }
