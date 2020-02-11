@@ -8,8 +8,8 @@ export default class ConfigurationSerialization {
     static deserializeObject(...args) {
         return ConfigurationSerialization.$javaClass.deserializeObject(...args);
     }
-    static registerClass(...args) {
-        return ConfigurationSerialization.$javaClass.registerClass(...args);
+    static unregisterClass(...args) {
+        return ConfigurationSerialization.$javaClass.unregisterClass(...args);
     }
     static getClassByAlias(...args) {
         return ConfigurationSerialization.$javaClass.getClassByAlias(...args);
@@ -17,7 +17,7 @@ export default class ConfigurationSerialization {
     static getAlias(...args) {
         return ConfigurationSerialization.$javaClass.getAlias(...args);
     }
-    static unregisterClass(...args) {
-        return ConfigurationSerialization.$javaClass.unregisterClass(...args);
+    static registerClass(...args) {
+        return ConfigurationSerialization.$javaClass.registerClass(...args);
     }
 }

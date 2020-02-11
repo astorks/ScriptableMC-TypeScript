@@ -4,18 +4,18 @@ import Material from '../../../org/bukkit/Material.js';
 import NamespacedKey from '../../../org/bukkit/NamespacedKey.js';
 import RecipeChoice from '../../../org/bukkit/inventory/RecipeChoice.js';
 export default interface BlastingRecipe extends CookingRecipe {
-    setInput(input: Material): CookingRecipe;
-    setInputChoice(input: RecipeChoice): CookingRecipe;
-    getInputChoice(): RecipeChoice;
-    getInput(): ItemStack;
-    setExperience(experience: number): void;
-    getExperience(): number;
-    setCookingTime(cookingTime: number): void;
-    getCookingTime(): number;
-    getGroup(): string;
-    setGroup(group: string): void;
     getKey(): NamespacedKey;
+    setInput(input: Material): CookingRecipe;
     getResult(): ItemStack;
+    getInput(): ItemStack;
+    setInputChoice(input: RecipeChoice): CookingRecipe;
+    getExperience(): number;
+    setGroup(group: string): void;
+    getCookingTime(): number;
+    setExperience(experience: number): void;
+    setCookingTime(cookingTime: number): void;
+    getGroup(): string;
+    getInputChoice(): RecipeChoice;
 }
 export default class BlastingRecipe {
     static get $javaClass(): any;

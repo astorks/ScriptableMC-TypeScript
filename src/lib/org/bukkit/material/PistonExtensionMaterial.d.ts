@@ -4,19 +4,19 @@ import ItemStack from '../../../org/bukkit/inventory/ItemStack.js';
 import Material from '../../../org/bukkit/Material.js';
 import MaterialData from '../../../org/bukkit/material/MaterialData.js';
 export default interface PistonExtensionMaterial extends MaterialData, Attachable {
-    getFacing(): BlockFace;
-    getAttachedFace(): BlockFace;
-    setFacingDirection(face: BlockFace): void;
-    isSticky(): boolean;
-    setSticky(sticky: boolean): void;
+    clone(): PistonExtensionMaterial;
     clone(): MaterialData;
     clone(): any;
-    clone(): PistonExtensionMaterial;
-    getData(): number;
-    setData(data: number): void;
-    getItemType(): Material;
-    toItemStack(): ItemStack;
+    getFacing(): BlockFace;
+    isSticky(): boolean;
+    setFacingDirection(face: BlockFace): void;
+    getAttachedFace(): BlockFace;
+    setSticky(sticky: boolean): void;
     toItemStack(amount: number): ItemStack;
+    toItemStack(): ItemStack;
+    getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class PistonExtensionMaterial {
     static get $javaClass(): any;

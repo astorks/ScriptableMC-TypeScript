@@ -8,9 +8,9 @@ export default interface EntityTransformEvent extends EntityEvent, Cancellable {
     getHandlers(): HandlerList;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
+    getTransformReason(): EntityTransformEvent$TransformReason;
     getTransformedEntity(): Entity;
     getTransformedEntities(): Array<Entity>;
-    getTransformReason(): EntityTransformEvent$TransformReason;
     getEntity(): Entity;
     getEntityType(): EntityType;
     getEventName(): string;

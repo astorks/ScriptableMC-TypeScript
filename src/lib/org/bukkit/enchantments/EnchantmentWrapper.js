@@ -116,14 +116,11 @@ export default class EnchantmentWrapper {
     static get VANISHING_CURSE() {
         return EnchantmentWrapper.$javaClass.VANISHING_CURSE;
     }
+    static values(...args) {
+        return EnchantmentWrapper.$javaClass.values(...args);
+    }
     static getByName(...args) {
         return EnchantmentWrapper.$javaClass.getByName(...args);
-    }
-    static getByKey(...args) {
-        return EnchantmentWrapper.$javaClass.getByKey(...args);
-    }
-    static stopAcceptingRegistrations(...args) {
-        return EnchantmentWrapper.$javaClass.stopAcceptingRegistrations(...args);
     }
     static registerEnchantment(...args) {
         return EnchantmentWrapper.$javaClass.registerEnchantment(...args);
@@ -131,7 +128,10 @@ export default class EnchantmentWrapper {
     static isAcceptingRegistrations(...args) {
         return EnchantmentWrapper.$javaClass.isAcceptingRegistrations(...args);
     }
-    static values(...args) {
-        return EnchantmentWrapper.$javaClass.values(...args);
+    static stopAcceptingRegistrations(...args) {
+        return EnchantmentWrapper.$javaClass.stopAcceptingRegistrations(...args);
+    }
+    static getByKey(...args) {
+        return EnchantmentWrapper.$javaClass.getByKey(...args);
     }
 }

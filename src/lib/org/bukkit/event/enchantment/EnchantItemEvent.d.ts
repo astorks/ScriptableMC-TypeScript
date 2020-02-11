@@ -12,12 +12,12 @@ export default interface EnchantItemEvent extends InventoryEvent, Cancellable {
     getItem(): ItemStack;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getEnchanter(): Player;
     getEnchantBlock(): Block;
-    getExpLevelCost(): number;
+    getEnchanter(): Player;
+    whichButton(): number;
     setExpLevelCost(level: number): void;
     getEnchantsToAdd(): any;
-    whichButton(): number;
+    getExpLevelCost(): number;
     getInventory(): Inventory;
     getViewers(): Array<HumanEntity>;
     getView(): InventoryView;

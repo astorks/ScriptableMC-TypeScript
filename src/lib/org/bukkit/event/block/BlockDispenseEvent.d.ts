@@ -6,8 +6,8 @@ import ItemStack from '../../../../org/bukkit/inventory/ItemStack.js';
 import Vector from '../../../../org/bukkit/util/Vector.js';
 export default interface BlockDispenseEvent extends BlockEvent, Cancellable {
     getHandlers(): HandlerList;
-    setVelocity(vel: Vector): void;
     getVelocity(): Vector;
+    setVelocity(vel: Vector): void;
     setItem(item: ItemStack): void;
     getItem(): ItemStack;
     isCancelled(): boolean;

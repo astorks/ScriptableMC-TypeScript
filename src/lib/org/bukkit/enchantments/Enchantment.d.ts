@@ -3,15 +3,15 @@ import ItemStack from '../../../org/bukkit/inventory/ItemStack.js';
 import Keyed from '../../../org/bukkit/Keyed.js';
 import NamespacedKey from '../../../org/bukkit/NamespacedKey.js';
 export default interface Enchantment extends Keyed {
-    getStartLevel(): number;
-    getMaxLevel(): number;
-    canEnchantItem(arg0: ItemStack): boolean;
-    getItemTarget(): EnchantmentTarget;
-    isTreasure(): boolean;
-    isCursed(): boolean;
-    conflictsWith(arg0: Enchantment): boolean;
     getName(): string;
     getKey(): NamespacedKey;
+    getMaxLevel(): number;
+    canEnchantItem(arg0: ItemStack): boolean;
+    getStartLevel(): number;
+    conflictsWith(arg0: Enchantment): boolean;
+    isTreasure(): boolean;
+    isCursed(): boolean;
+    getItemTarget(): EnchantmentTarget;
 }
 export default class Enchantment {
     static get $javaClass(): any;
@@ -53,10 +53,10 @@ export default class Enchantment {
     static get PIERCING(): Enchantment;
     static get MENDING(): Enchantment;
     static get VANISHING_CURSE(): Enchantment;
+    static values(): Array<Enchantment>;
     static getByName(_name: string): Enchantment;
-    static getByKey(key: NamespacedKey): Enchantment;
-    static stopAcceptingRegistrations(): void;
     static registerEnchantment(enchantment: Enchantment): void;
     static isAcceptingRegistrations(): boolean;
-    static values(): Array<Enchantment>;
+    static stopAcceptingRegistrations(): void;
+    static getByKey(key: NamespacedKey): Enchantment;
 }

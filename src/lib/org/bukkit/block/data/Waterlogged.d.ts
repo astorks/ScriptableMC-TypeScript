@@ -3,13 +3,13 @@ import Material from '../../../../org/bukkit/Material.js';
 export default interface Waterlogged extends BlockData {
     setWaterlogged(arg0: boolean): void;
     isWaterlogged(): boolean;
-    getMaterial(): Material;
-    getAsString(arg0: boolean): string;
-    getAsString(): string;
-    clone(): BlockData;
     clone(): any;
+    clone(): BlockData;
     matches(arg0: BlockData): boolean;
     merge(arg0: BlockData): BlockData;
+    getMaterial(): Material;
+    getAsString(): string;
+    getAsString(arg0: boolean): string;
 }
 export default class Waterlogged {
     static get $javaClass(): any;

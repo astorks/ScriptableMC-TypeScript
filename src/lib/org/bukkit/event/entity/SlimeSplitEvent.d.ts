@@ -5,13 +5,13 @@ import EntityType from '../../../../org/bukkit/entity/EntityType.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import Slime from '../../../../org/bukkit/entity/Slime.js';
 export default interface SlimeSplitEvent extends EntityEvent, Cancellable {
+    getCount(): number;
     getHandlers(): HandlerList;
-    getEntity(): Slime;
     getEntity(): Entity;
+    getEntity(): Slime;
+    setCount(count: number): void;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getCount(): number;
-    setCount(count: number): void;
     getEntityType(): EntityType;
     getEventName(): string;
     isAsynchronous(): boolean;

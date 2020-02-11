@@ -5,9 +5,9 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import Player from '../../../../org/bukkit/entity/Player.js';
 export default interface PlayerLeashEntityEvent extends Event, Cancellable {
     getHandlers(): HandlerList;
-    getPlayer(): Player;
-    getEntity(): Entity;
     getLeashHolder(): Entity;
+    getEntity(): Entity;
+    getPlayer(): Player;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
     getEventName(): string;

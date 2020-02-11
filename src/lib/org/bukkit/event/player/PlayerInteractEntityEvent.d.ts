@@ -6,9 +6,9 @@ import Player from '../../../../org/bukkit/entity/Player.js';
 import PlayerEvent from '../../../../org/bukkit/event/player/PlayerEvent.js';
 export default interface PlayerInteractEntityEvent extends PlayerEvent, Cancellable {
     getHandlers(): HandlerList;
+    getHand(): EquipmentSlot;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getHand(): EquipmentSlot;
     getRightClicked(): Entity;
     getPlayer(): Player;
     getEventName(): string;
@@ -16,7 +16,7 @@ export default interface PlayerInteractEntityEvent extends PlayerEvent, Cancella
 }
 export default class PlayerInteractEntityEvent {
     static get $javaClass(): any;
-    constructor(who: Player, clickedEntity: Entity);
     constructor(who: Player, clickedEntity: Entity, hand: EquipmentSlot);
+    constructor(who: Player, clickedEntity: Entity);
     static getHandlerList(): HandlerList;
 }

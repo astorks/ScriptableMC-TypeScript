@@ -7,8 +7,8 @@ import Vector from '../../../../org/bukkit/util/Vector.js';
 export default interface BlockDispenseArmorEvent extends BlockDispenseEvent {
     getTargetEntity(): LivingEntity;
     getHandlers(): HandlerList;
-    setVelocity(vel: Vector): void;
     getVelocity(): Vector;
+    setVelocity(vel: Vector): void;
     setItem(item: ItemStack): void;
     getItem(): ItemStack;
     isCancelled(): boolean;

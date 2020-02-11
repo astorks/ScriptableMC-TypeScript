@@ -13,11 +13,11 @@ export default interface PrepareItemEnchantEvent extends InventoryEvent, Cancell
     getItem(): ItemStack;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getEnchanter(): Player;
-    getEnchantBlock(): Block;
+    getExpLevelCostsOffered(): Array<number>;
     getEnchantmentBonus(): number;
     getOffers(): Array<EnchantmentOffer>;
-    getExpLevelCostsOffered(): Array<number>;
+    getEnchantBlock(): Block;
+    getEnchanter(): Player;
     getInventory(): Inventory;
     getViewers(): Array<HumanEntity>;
     getView(): InventoryView;

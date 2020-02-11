@@ -13,8 +13,8 @@ export default interface VillagerReplenishTradeEvent extends EntityEvent, Cancel
     setRecipe(recipe: MerchantRecipe): void;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getBonus(): number;
     setBonus(bonus: number): void;
+    getBonus(): number;
     getEntityType(): EntityType;
     getEventName(): string;
     isAsynchronous(): boolean;

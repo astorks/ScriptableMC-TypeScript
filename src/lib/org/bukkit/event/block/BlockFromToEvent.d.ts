@@ -15,7 +15,7 @@ export default interface BlockFromToEvent extends BlockEvent, Cancellable {
 }
 export default class BlockFromToEvent {
     static get $javaClass(): any;
-    constructor(block: Block, face: BlockFace);
     constructor(block: Block, toBlock: Block);
+    constructor(block: Block, face: BlockFace);
     static getHandlerList(): HandlerList;
 }

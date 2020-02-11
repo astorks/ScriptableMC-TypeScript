@@ -10,13 +10,13 @@ export default interface Campfire extends Directional, Lightable, Waterlogged {
     getFacing(): BlockFace;
     setFacing(arg0: BlockFace): void;
     getFaces(): any;
-    getMaterial(): Material;
-    getAsString(arg0: boolean): string;
-    getAsString(): string;
-    clone(): BlockData;
     clone(): any;
+    clone(): BlockData;
     matches(arg0: BlockData): boolean;
     merge(arg0: BlockData): BlockData;
+    getMaterial(): Material;
+    getAsString(): string;
+    getAsString(arg0: boolean): string;
     isLit(): boolean;
     setLit(arg0: boolean): void;
     setWaterlogged(arg0: boolean): void;

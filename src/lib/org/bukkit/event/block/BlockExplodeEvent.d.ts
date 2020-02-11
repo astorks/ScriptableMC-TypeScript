@@ -6,8 +6,8 @@ export default interface BlockExplodeEvent extends BlockEvent, Cancellable {
     getHandlers(): HandlerList;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getYield(): number;
     blockList(): Array<Block>;
+    getYield(): number;
     setYield(_yield: number): void;
     getBlock(): Block;
     getEventName(): string;

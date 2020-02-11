@@ -7,8 +7,8 @@ import ItemStack from '../../../../org/bukkit/inventory/ItemStack.js';
 import LivingEntity from '../../../../org/bukkit/entity/LivingEntity.js';
 export default interface EntityShootBowEvent extends EntityEvent, Cancellable {
     getHandlers(): HandlerList;
-    getEntity(): LivingEntity;
     getEntity(): Entity;
+    getEntity(): LivingEntity;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
     getBow(): ItemStack;

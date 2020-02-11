@@ -5,13 +5,13 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import ItemStack from '../../../../org/bukkit/inventory/ItemStack.js';
 export default interface BrewingStandFuelEvent extends BlockEvent, Cancellable {
     getHandlers(): HandlerList;
+    isConsuming(): boolean;
+    setConsuming(consuming: boolean): void;
+    getFuelPower(): number;
+    setFuelPower(fuelPower: number): void;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
     getFuel(): ItemStack;
-    getFuelPower(): number;
-    setFuelPower(fuelPower: number): void;
-    isConsuming(): boolean;
-    setConsuming(consuming: boolean): void;
     getBlock(): Block;
     getEventName(): string;
     isAsynchronous(): boolean;

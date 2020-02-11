@@ -5,14 +5,14 @@ import NamespacedKey from '../../../org/bukkit/NamespacedKey.js';
 import Recipe from '../../../org/bukkit/inventory/Recipe.js';
 import RecipeChoice from '../../../org/bukkit/inventory/RecipeChoice.js';
 export default interface StonecuttingRecipe extends Recipe, Keyed {
-    setInput(input: Material): StonecuttingRecipe;
-    setInputChoice(input: RecipeChoice): StonecuttingRecipe;
-    getInputChoice(): RecipeChoice;
-    getInput(): ItemStack;
-    getGroup(): string;
-    setGroup(group: string): void;
     getKey(): NamespacedKey;
+    setInput(input: Material): StonecuttingRecipe;
     getResult(): ItemStack;
+    getInput(): ItemStack;
+    setInputChoice(input: RecipeChoice): StonecuttingRecipe;
+    setGroup(group: string): void;
+    getGroup(): string;
+    getInputChoice(): RecipeChoice;
 }
 export default class StonecuttingRecipe {
     static get $javaClass(): any;

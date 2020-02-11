@@ -6,15 +6,15 @@ import Waterlogged from '../../../../../org/bukkit/block/data/Waterlogged.js';
 export default interface GlassPane extends MultipleFacing, Waterlogged {
     getFaces(): any;
     hasFace(arg0: BlockFace): boolean;
-    setFace(arg0: BlockFace, arg1: boolean): void;
     getAllowedFaces(): any;
-    getMaterial(): Material;
-    getAsString(arg0: boolean): string;
-    getAsString(): string;
-    clone(): BlockData;
+    setFace(arg0: BlockFace, arg1: boolean): void;
     clone(): any;
+    clone(): BlockData;
     matches(arg0: BlockData): boolean;
     merge(arg0: BlockData): BlockData;
+    getMaterial(): Material;
+    getAsString(): string;
+    getAsString(arg0: boolean): string;
     setWaterlogged(arg0: boolean): void;
     isWaterlogged(): boolean;
 }

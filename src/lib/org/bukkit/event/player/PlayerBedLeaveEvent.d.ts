@@ -5,8 +5,8 @@ import PlayerEvent from '../../../../org/bukkit/event/player/PlayerEvent.js';
 export default interface PlayerBedLeaveEvent extends PlayerEvent {
     getHandlers(): HandlerList;
     setSpawnLocation(setBedSpawn: boolean): void;
-    getBed(): Block;
     shouldSetSpawnLocation(): boolean;
+    getBed(): Block;
     getPlayer(): Player;
     getEventName(): string;
     isAsynchronous(): boolean;

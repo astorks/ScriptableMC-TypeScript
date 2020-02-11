@@ -7,9 +7,9 @@ import Vector from '../../../../org/bukkit/util/Vector.js';
 export default interface PlayerInteractAtEntityEvent extends PlayerInteractEntityEvent {
     getHandlers(): HandlerList;
     getClickedPosition(): Vector;
+    getHand(): EquipmentSlot;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getHand(): EquipmentSlot;
     getRightClicked(): Entity;
     getPlayer(): Player;
     getEventName(): string;

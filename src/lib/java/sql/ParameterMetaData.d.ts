@@ -1,15 +1,15 @@
 export default interface ParameterMetaData {
+    getParameterCount(): number;
+    isSigned(arg0: number): boolean;
     getScale(arg0: number): number;
+    isNullable(arg0: number): number;
     getParameterType(arg0: number): number;
+    getParameterMode(arg0: number): number;
+    getPrecision(arg0: number): number;
     getParameterTypeName(arg0: number): string;
     getParameterClassName(arg0: number): string;
-    getParameterMode(arg0: number): number;
-    isNullable(arg0: number): number;
-    isSigned(arg0: number): boolean;
-    getPrecision(arg0: number): number;
-    getParameterCount(): number;
-    isWrapperFor(arg0: any): boolean;
     unwrap(arg0: any): any;
+    isWrapperFor(arg0: any): boolean;
 }
 export default class ParameterMetaData {
     static get $javaClass(): any;

@@ -6,6 +6,6 @@ export default interface Event {
 }
 export default class Event {
     static get $javaClass(): any;
-    constructor(isAsync: boolean);
     constructor();
+    constructor(isAsync: boolean);
 }

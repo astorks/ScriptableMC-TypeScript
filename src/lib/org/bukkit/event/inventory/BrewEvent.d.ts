@@ -5,10 +5,10 @@ import Cancellable from '../../../../org/bukkit/event/Cancellable.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 export default interface BrewEvent extends BlockEvent, Cancellable {
     getHandlers(): HandlerList;
+    getFuelLevel(): number;
     getContents(): BrewerInventory;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getFuelLevel(): number;
     getBlock(): Block;
     getEventName(): string;
     isAsynchronous(): boolean;

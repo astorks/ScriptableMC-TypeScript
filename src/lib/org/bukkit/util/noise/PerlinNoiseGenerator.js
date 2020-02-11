@@ -5,11 +5,11 @@ export default class PerlinNoiseGenerator {
     constructor(...args) {
         return new PerlinNoiseGenerator.$javaClass(...args);
     }
-    static getNoise(...args) {
-        return PerlinNoiseGenerator.$javaClass.getNoise(...args);
-    }
     static getInstance(...args) {
         return PerlinNoiseGenerator.$javaClass.getInstance(...args);
+    }
+    static getNoise(...args) {
+        return PerlinNoiseGenerator.$javaClass.getNoise(...args);
     }
     static floor(...args) {
         return PerlinNoiseGenerator.$javaClass.floor(...args);

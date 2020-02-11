@@ -8,7 +8,7 @@ export default interface RegexPrompt extends ValidatingPrompt {
 }
 export default class RegexPrompt {
     static get $javaClass(): any;
-    constructor(regex: string);
     constructor(pattern: any);
+    constructor(regex: string);
     static get END_OF_CONVERSATION(): Prompt;
 }

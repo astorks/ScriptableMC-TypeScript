@@ -8,9 +8,9 @@ export default interface PlayerMoveEvent extends PlayerEvent, Cancellable {
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
     getFrom(): Location;
-    getTo(): Location;
-    setFrom(from: Location): void;
     setTo(to: Location): void;
+    setFrom(from: Location): void;
+    getTo(): Location;
     getPlayer(): Player;
     getEventName(): string;
     isAsynchronous(): boolean;

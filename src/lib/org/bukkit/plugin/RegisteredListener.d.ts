@@ -4,11 +4,11 @@ import EventPriority from '../../../org/bukkit/event/EventPriority.js';
 import Listener from '../../../org/bukkit/event/Listener.js';
 import Plugin from '../../../org/bukkit/plugin/Plugin.js';
 export default interface RegisteredListener {
+    getPriority(): EventPriority;
     getPlugin(): Plugin;
     getListener(): Listener;
     callEvent(event: Event): void;
     isIgnoringCancelled(): boolean;
-    getPriority(): EventPriority;
 }
 export default class RegisteredListener {
     static get $javaClass(): any;

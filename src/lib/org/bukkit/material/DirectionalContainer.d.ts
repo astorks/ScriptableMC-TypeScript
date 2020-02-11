@@ -4,16 +4,16 @@ import ItemStack from '../../../org/bukkit/inventory/ItemStack.js';
 import Material from '../../../org/bukkit/Material.js';
 import MaterialData from '../../../org/bukkit/material/MaterialData.js';
 export default interface DirectionalContainer extends MaterialData, Directional {
-    getFacing(): BlockFace;
-    setFacingDirection(face: BlockFace): void;
     clone(): DirectionalContainer;
     clone(): any;
     clone(): MaterialData;
-    getData(): number;
-    setData(data: number): void;
-    getItemType(): Material;
-    toItemStack(): ItemStack;
+    getFacing(): BlockFace;
+    setFacingDirection(face: BlockFace): void;
     toItemStack(amount: number): ItemStack;
+    toItemStack(): ItemStack;
+    getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class DirectionalContainer {
     static get $javaClass(): any;

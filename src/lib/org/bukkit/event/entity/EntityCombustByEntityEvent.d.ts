@@ -6,8 +6,8 @@ export default interface EntityCombustByEntityEvent extends EntityCombustEvent {
     getCombuster(): Entity;
     getHandlers(): HandlerList;
     isCancelled(): boolean;
-    getDuration(): number;
     setCancelled(cancel: boolean): void;
+    getDuration(): number;
     setDuration(duration: number): void;
     getEntity(): Entity;
     getEntityType(): EntityType;

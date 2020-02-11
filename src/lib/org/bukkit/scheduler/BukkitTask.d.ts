@@ -3,8 +3,8 @@ export default interface BukkitTask {
     getOwner(): Plugin;
     isCancelled(): boolean;
     cancel(): void;
-    getTaskId(): number;
     isSync(): boolean;
+    getTaskId(): number;
 }
 export default class BukkitTask {
     static get $javaClass(): any;

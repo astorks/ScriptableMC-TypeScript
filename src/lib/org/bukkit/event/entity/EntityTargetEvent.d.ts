@@ -5,12 +5,12 @@ import EntityTargetEvent$TargetReason from '../../../../org/bukkit/event/entity/
 import EntityType from '../../../../org/bukkit/entity/EntityType.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 export default interface EntityTargetEvent extends EntityEvent, Cancellable {
+    getTarget(): Entity;
+    setTarget(target: Entity): void;
     getHandlers(): HandlerList;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
     getReason(): EntityTargetEvent$TargetReason;
-    getTarget(): Entity;
-    setTarget(target: Entity): void;
     getEntity(): Entity;
     getEntityType(): EntityType;
     getEventName(): string;

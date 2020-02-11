@@ -1,7 +1,7 @@
 export default interface SQLType {
+    getName(): string;
     getVendor(): string;
     getVendorTypeNumber(): any;
-    getName(): string;
 }
 export default class SQLType {
     static get $javaClass(): any;

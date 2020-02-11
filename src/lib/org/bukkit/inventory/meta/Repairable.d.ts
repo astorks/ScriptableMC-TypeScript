@@ -1,9 +1,9 @@
 export default interface Repairable {
-    hasRepairCost(): boolean;
+    clone(): any;
+    clone(): Repairable;
     getRepairCost(): number;
     setRepairCost(arg0: number): void;
-    clone(): Repairable;
-    clone(): any;
+    hasRepairCost(): boolean;
 }
 export default class Repairable {
     static get $javaClass(): any;

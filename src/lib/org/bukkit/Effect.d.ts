@@ -1,11 +1,11 @@
 import Effect$Type from '../../org/bukkit/Effect$Type.js';
 export default interface Effect {
-    getData(): any;
     getId(): number;
     getType(): Effect$Type;
+    getData(): any;
     name(): string;
     compareTo(arg0: any): number;
-    compareTo(arg0: any): number;
+    compareTo(o: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }

@@ -5,13 +5,13 @@ export default class Note {
     constructor(...args) {
         return new Note.$javaClass(...args);
     }
-    static flat(...args) {
-        return Note.$javaClass.flat(...args);
+    static natural(...args) {
+        return Note.$javaClass.natural(...args);
     }
     static sharp(...args) {
         return Note.$javaClass.sharp(...args);
     }
-    static natural(...args) {
-        return Note.$javaClass.natural(...args);
+    static flat(...args) {
+        return Note.$javaClass.flat(...args);
     }
 }

@@ -2,10 +2,10 @@ import Enchantment from '../../../org/bukkit/enchantments/Enchantment.js';
 export default interface EnchantmentOffer {
     getEnchantmentLevel(): number;
     getEnchantment(): Enchantment;
-    setCost(cost: number): void;
     getCost(): number;
-    setEnchantment(enchantment: Enchantment): void;
+    setCost(cost: number): void;
     setEnchantmentLevel(enchantmentLevel: number): void;
+    setEnchantment(enchantment: Enchantment): void;
 }
 export default class EnchantmentOffer {
     static get $javaClass(): any;

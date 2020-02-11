@@ -4,12 +4,12 @@ import Event from '../../../../org/bukkit/event/Event.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 export default interface TabCompleteEvent extends Event, Cancellable {
     getHandlers(): HandlerList;
-    getSender(): CommandSender;
     isCancelled(): boolean;
     setCancelled(cancelled: boolean): void;
-    getBuffer(): string;
-    setCompletions(completions: Array<any>): void;
     getCompletions(): Array<string>;
+    setCompletions(completions: Array<any>): void;
+    getBuffer(): string;
+    getSender(): CommandSender;
     getEventName(): string;
     isAsynchronous(): boolean;
 }

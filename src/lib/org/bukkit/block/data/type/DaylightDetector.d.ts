@@ -5,15 +5,15 @@ export default interface DaylightDetector extends AnaloguePowerable {
     isInverted(): boolean;
     setInverted(arg0: boolean): void;
     getPower(): number;
-    setPower(arg0: number): void;
     getMaximumPower(): number;
-    getMaterial(): Material;
-    getAsString(arg0: boolean): string;
-    getAsString(): string;
-    clone(): BlockData;
+    setPower(arg0: number): void;
     clone(): any;
+    clone(): BlockData;
     matches(arg0: BlockData): boolean;
     merge(arg0: BlockData): BlockData;
+    getMaterial(): Material;
+    getAsString(): string;
+    getAsString(arg0: boolean): string;
 }
 export default class DaylightDetector {
     static get $javaClass(): any;

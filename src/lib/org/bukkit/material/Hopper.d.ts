@@ -5,25 +5,25 @@ import Material from '../../../org/bukkit/Material.js';
 import MaterialData from '../../../org/bukkit/material/MaterialData.js';
 import Redstone from '../../../org/bukkit/material/Redstone.js';
 export default interface Hopper extends MaterialData, Directional, Redstone {
+    clone(): Hopper;
+    clone(): MaterialData;
+    clone(): any;
+    isActive(): boolean;
     getFacing(): BlockFace;
-    setFacingDirection(face: BlockFace): void;
     isPowered(): boolean;
     setActive(isActive: boolean): void;
-    isActive(): boolean;
-    clone(): Hopper;
-    clone(): any;
-    clone(): MaterialData;
-    getData(): number;
-    setData(data: number): void;
-    getItemType(): Material;
-    toItemStack(): ItemStack;
+    setFacingDirection(face: BlockFace): void;
     toItemStack(amount: number): ItemStack;
+    toItemStack(): ItemStack;
+    getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class Hopper {
     static get $javaClass(): any;
-    constructor();
-    constructor(facingDirection: BlockFace);
-    constructor(facingDirection: BlockFace, isActive: boolean);
-    constructor(type: Material);
     constructor(type: Material, data: number);
+    constructor(facingDirection: BlockFace, isActive: boolean);
+    constructor(facingDirection: BlockFace);
+    constructor();
+    constructor(type: Material);
 }

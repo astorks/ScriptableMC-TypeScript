@@ -7,8 +7,8 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import LivingEntity from '../../../../org/bukkit/entity/LivingEntity.js';
 export default interface AreaEffectCloudApplyEvent extends EntityEvent, Cancellable {
     getHandlers(): HandlerList;
-    getEntity(): Entity;
     getEntity(): AreaEffectCloud;
+    getEntity(): Entity;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
     getAffectedEntities(): Array<LivingEntity>;

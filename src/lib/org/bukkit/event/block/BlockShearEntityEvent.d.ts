@@ -7,9 +7,9 @@ import ItemStack from '../../../../org/bukkit/inventory/ItemStack.js';
 export default interface BlockShearEntityEvent extends BlockEvent, Cancellable {
     getHandlers(): HandlerList;
     getEntity(): Entity;
+    getTool(): ItemStack;
     isCancelled(): boolean;
     setCancelled(cancelled: boolean): void;
-    getTool(): ItemStack;
     getBlock(): Block;
     getEventName(): string;
     isAsynchronous(): boolean;

@@ -5,26 +5,26 @@ import MaterialData from '../../../org/bukkit/material/MaterialData.js';
 import Openable from '../../../org/bukkit/material/Openable.js';
 import SimpleAttachableMaterialData from '../../../org/bukkit/material/SimpleAttachableMaterialData.js';
 export default interface TrapDoor extends SimpleAttachableMaterialData, Openable {
-    getAttachedFace(): BlockFace;
+    clone(): TrapDoor;
+    clone(): MaterialData;
+    clone(): any;
+    clone(): SimpleAttachableMaterialData;
+    isOpen(): boolean;
     setFacingDirection(face: BlockFace): void;
+    getAttachedFace(): BlockFace;
     isInverted(): boolean;
     setInverted(inv: boolean): void;
     setOpen(isOpen: boolean): void;
-    clone(): any;
-    clone(): MaterialData;
-    clone(): SimpleAttachableMaterialData;
-    clone(): TrapDoor;
-    isOpen(): boolean;
     getFacing(): BlockFace;
-    getData(): number;
-    setData(data: number): void;
-    getItemType(): Material;
-    toItemStack(): ItemStack;
     toItemStack(amount: number): ItemStack;
+    toItemStack(): ItemStack;
+    getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class TrapDoor {
     static get $javaClass(): any;
-    constructor();
     constructor(type: Material, data: number);
     constructor(type: Material);
+    constructor();
 }

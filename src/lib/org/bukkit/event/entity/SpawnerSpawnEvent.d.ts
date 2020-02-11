@@ -6,10 +6,10 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import Location from '../../../../org/bukkit/Location.js';
 export default interface SpawnerSpawnEvent extends EntitySpawnEvent {
     getSpawner(): CreatureSpawner;
+    getLocation(): Location;
     getHandlers(): HandlerList;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getLocation(): Location;
     getEntity(): Entity;
     getEntityType(): EntityType;
     getEventName(): string;

@@ -10,18 +10,18 @@ import ProjectileHitEvent from '../../../../org/bukkit/event/entity/ProjectileHi
 import ThrownPotion from '../../../../org/bukkit/entity/ThrownPotion.js';
 export default interface PotionSplashEvent extends ProjectileHitEvent, Cancellable {
     getHandlers(): HandlerList;
-    getEntity(): ThrownPotion;
-    getEntity(): Projectile;
     getEntity(): Entity;
+    getEntity(): Projectile;
+    getEntity(): ThrownPotion;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getAffectedEntities(): any;
-    setIntensity(entity: LivingEntity, intensity: number): void;
     getPotion(): ThrownPotion;
     getIntensity(entity: LivingEntity): number;
-    getHitBlock(): Block;
+    setIntensity(entity: LivingEntity, intensity: number): void;
+    getAffectedEntities(): any;
     getHitBlockFace(): BlockFace;
     getHitEntity(): Entity;
+    getHitBlock(): Block;
     getEntityType(): EntityType;
     getEventName(): string;
     isAsynchronous(): boolean;

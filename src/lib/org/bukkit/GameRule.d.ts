@@ -35,6 +35,6 @@ export default class GameRule {
     static get SPAWN_RADIUS(): GameRule;
     static get MAX_ENTITY_CRAMMING(): GameRule;
     static get MAX_COMMAND_CHAIN_LENGTH(): GameRule;
-    static getByName(rule: string): GameRule;
     static values(): Array<GameRule>;
+    static getByName(rule: string): GameRule;
 }

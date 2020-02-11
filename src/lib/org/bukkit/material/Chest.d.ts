@@ -10,11 +10,11 @@ export default interface Chest extends DirectionalContainer {
     clone(): Chest;
     getFacing(): BlockFace;
     setFacingDirection(face: BlockFace): void;
-    getData(): number;
-    setData(data: number): void;
-    getItemType(): Material;
-    toItemStack(): ItemStack;
     toItemStack(amount: number): ItemStack;
+    toItemStack(): ItemStack;
+    getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class Chest {
     static get $javaClass(): any;

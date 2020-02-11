@@ -9,10 +9,10 @@ export default interface CauldronLevelChangeEvent extends BlockEvent, Cancellabl
     getEntity(): Entity;
     isCancelled(): boolean;
     setCancelled(cancelled: boolean): void;
-    getReason(): CauldronLevelChangeEvent$ChangeReason;
-    getOldLevel(): number;
     getNewLevel(): number;
     setNewLevel(newLevel: number): void;
+    getOldLevel(): number;
+    getReason(): CauldronLevelChangeEvent$ChangeReason;
     getBlock(): Block;
     getEventName(): string;
     isAsynchronous(): boolean;

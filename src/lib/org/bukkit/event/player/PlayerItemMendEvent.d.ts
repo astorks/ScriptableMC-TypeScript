@@ -9,8 +9,8 @@ export default interface PlayerItemMendEvent extends PlayerEvent, Cancellable {
     getItem(): ItemStack;
     isCancelled(): boolean;
     setCancelled(cancelled: boolean): void;
-    getRepairAmount(): number;
     getExperienceOrb(): ExperienceOrb;
+    getRepairAmount(): number;
     setRepairAmount(amount: number): void;
     getPlayer(): Player;
     getEventName(): string;

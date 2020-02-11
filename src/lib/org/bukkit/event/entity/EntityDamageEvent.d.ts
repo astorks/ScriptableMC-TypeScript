@@ -6,9 +6,10 @@ import EntityEvent from '../../../../org/bukkit/event/entity/EntityEvent.js';
 import EntityType from '../../../../org/bukkit/entity/EntityType.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 export default interface EntityDamageEvent extends EntityEvent, Cancellable {
+    getCause(): EntityDamageEvent$DamageCause;
     getHandlers(): HandlerList;
-    setDamage(damage: number): void;
     setDamage(type: EntityDamageEvent$DamageModifier, damage: number): void;
+    setDamage(damage: number): void;
     getDamage(): number;
     getDamage(type: EntityDamageEvent$DamageModifier): number;
     isApplicable(type: EntityDamageEvent$DamageModifier): boolean;
@@ -16,7 +17,6 @@ export default interface EntityDamageEvent extends EntityEvent, Cancellable {
     setCancelled(cancel: boolean): void;
     getOriginalDamage(type: EntityDamageEvent$DamageModifier): number;
     getFinalDamage(): number;
-    getCause(): EntityDamageEvent$DamageCause;
     getEntity(): Entity;
     getEntityType(): EntityType;
     getEventName(): string;

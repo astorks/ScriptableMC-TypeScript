@@ -7,6 +7,6 @@ export default interface PluginNameConversationPrefix extends ConversationPrefix
 }
 export default class PluginNameConversationPrefix {
     static get $javaClass(): any;
-    constructor(plugin: Plugin, separator: string, prefixColor: ChatColor);
     constructor(plugin: Plugin);
+    constructor(plugin: Plugin, separator: string, prefixColor: ChatColor);
 }

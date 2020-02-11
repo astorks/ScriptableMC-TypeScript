@@ -4,7 +4,7 @@ export default interface Villager$Type extends Keyed {
     getKey(): NamespacedKey;
     name(): string;
     compareTo(arg0: any): number;
-    compareTo(arg0: any): number;
+    compareTo(o: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }

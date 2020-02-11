@@ -13,26 +13,26 @@ export default interface PlayerInteractEvent extends PlayerEvent, Cancellable {
     getHandlers(): HandlerList;
     getMaterial(): Material;
     getItem(): ItemStack;
+    getHand(): EquipmentSlot;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
+    setUseInteractedBlock(useInteractedBlock: Event$Result): void;
     getAction(): Action;
-    getHand(): EquipmentSlot;
     getBlockFace(): BlockFace;
     useInteractedBlock(): Event$Result;
-    setUseInteractedBlock(useInteractedBlock: Event$Result): void;
-    hasItem(): boolean;
-    hasBlock(): boolean;
     isBlockInHand(): boolean;
-    getClickedBlock(): Block;
     setUseItemInHand(useItemInHand: Event$Result): void;
+    hasItem(): boolean;
+    getClickedBlock(): Block;
     useItemInHand(): Event$Result;
+    hasBlock(): boolean;
     getPlayer(): Player;
     getEventName(): string;
     isAsynchronous(): boolean;
 }
 export default class PlayerInteractEvent {
     static get $javaClass(): any;
-    constructor(who: Player, action: Action, item: ItemStack, clickedBlock: Block, clickedFace: BlockFace);
     constructor(who: Player, action: Action, item: ItemStack, clickedBlock: Block, clickedFace: BlockFace, hand: EquipmentSlot);
+    constructor(who: Player, action: Action, item: ItemStack, clickedBlock: Block, clickedFace: BlockFace);
     static getHandlerList(): HandlerList;
 }

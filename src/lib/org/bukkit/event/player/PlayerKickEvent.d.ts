@@ -6,8 +6,8 @@ export default interface PlayerKickEvent extends PlayerEvent, Cancellable {
     getHandlers(): HandlerList;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getReason(): string;
     setReason(kickReason: string): void;
+    getReason(): string;
     getLeaveMessage(): string;
     setLeaveMessage(leaveMessage: string): void;
     getPlayer(): Player;

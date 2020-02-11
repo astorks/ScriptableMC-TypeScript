@@ -4,13 +4,13 @@ import Material from '../../../../org/bukkit/Material.js';
 export default interface Rotatable extends BlockData {
     setRotation(arg0: BlockFace): void;
     getRotation(): BlockFace;
-    getMaterial(): Material;
-    getAsString(arg0: boolean): string;
-    getAsString(): string;
-    clone(): BlockData;
     clone(): any;
+    clone(): BlockData;
     matches(arg0: BlockData): boolean;
     merge(arg0: BlockData): BlockData;
+    getMaterial(): Material;
+    getAsString(): string;
+    getAsString(arg0: boolean): string;
 }
 export default class Rotatable {
     static get $javaClass(): any;

@@ -4,17 +4,17 @@ import CommandSender from '../../../org/bukkit/command/CommandSender.js';
 import Location from '../../../org/bukkit/Location.js';
 import Server from '../../../org/bukkit/Server.js';
 export default interface SimpleCommandMap extends CommandMap {
-    tabComplete(sender: CommandSender, cmdLine: string, location: Location): Array<string>;
-    tabComplete(sender: CommandSender, cmdLine: string): Array<string>;
-    getCommand(_name: string): Command;
+    dispatch(sender: CommandSender, commandLine: string): boolean;
+    register(label: string, fallbackPrefix: string, command: Command): boolean;
+    register(fallbackPrefix: string, command: Command): boolean;
     getCommands(): any;
+    getCommand(_name: string): Command;
+    tabComplete(sender: CommandSender, cmdLine: string): Array<string>;
+    tabComplete(sender: CommandSender, cmdLine: string, location: Location): Array<string>;
     registerAll(fallbackPrefix: string, commands: Array<any>): void;
     clearCommands(): void;
-    setFallbackCommands(): void;
     registerServerAliases(): void;
-    dispatch(sender: CommandSender, commandLine: string): boolean;
-    register(fallbackPrefix: string, command: Command): boolean;
-    register(label: string, fallbackPrefix: string, command: Command): boolean;
+    setFallbackCommands(): void;
 }
 export default class SimpleCommandMap {
     static get $javaClass(): any;

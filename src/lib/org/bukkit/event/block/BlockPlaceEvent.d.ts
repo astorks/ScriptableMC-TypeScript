@@ -8,23 +8,23 @@ import ItemStack from '../../../../org/bukkit/inventory/ItemStack.js';
 import Player from '../../../../org/bukkit/entity/Player.js';
 export default interface BlockPlaceEvent extends BlockEvent, Cancellable {
     getHandlers(): HandlerList;
-    getPlayer(): Player;
     getItemInHand(): ItemStack;
+    getPlayer(): Player;
+    getBlockPlaced(): Block;
+    setBuild(canBuild: boolean): void;
+    getBlockAgainst(): Block;
+    getHand(): EquipmentSlot;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
     canBuild(): boolean;
-    getBlockPlaced(): Block;
     getBlockReplacedState(): BlockState;
-    getBlockAgainst(): Block;
-    getHand(): EquipmentSlot;
-    setBuild(canBuild: boolean): void;
     getBlock(): Block;
     getEventName(): string;
     isAsynchronous(): boolean;
 }
 export default class BlockPlaceEvent {
     static get $javaClass(): any;
-    constructor(placedBlock: Block, replacedBlockState: BlockState, placedAgainst: Block, itemInHand: ItemStack, thePlayer: Player, canBuild: boolean);
     constructor(placedBlock: Block, replacedBlockState: BlockState, placedAgainst: Block, itemInHand: ItemStack, thePlayer: Player, canBuild: boolean, hand: EquipmentSlot);
+    constructor(placedBlock: Block, replacedBlockState: BlockState, placedAgainst: Block, itemInHand: ItemStack, thePlayer: Player, canBuild: boolean);
     static getHandlerList(): HandlerList;
 }

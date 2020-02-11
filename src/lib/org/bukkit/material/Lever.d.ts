@@ -5,24 +5,24 @@ import MaterialData from '../../../org/bukkit/material/MaterialData.js';
 import Redstone from '../../../org/bukkit/material/Redstone.js';
 import SimpleAttachableMaterialData from '../../../org/bukkit/material/SimpleAttachableMaterialData.js';
 export default interface Lever extends SimpleAttachableMaterialData, Redstone {
-    getAttachedFace(): BlockFace;
-    setFacingDirection(face: BlockFace): void;
+    clone(): any;
+    clone(): Lever;
+    clone(): SimpleAttachableMaterialData;
+    clone(): MaterialData;
     isPowered(): boolean;
     setPowered(isPowered: boolean): void;
-    clone(): MaterialData;
-    clone(): Lever;
-    clone(): any;
-    clone(): SimpleAttachableMaterialData;
+    setFacingDirection(face: BlockFace): void;
+    getAttachedFace(): BlockFace;
     getFacing(): BlockFace;
-    getData(): number;
-    setData(data: number): void;
-    getItemType(): Material;
-    toItemStack(): ItemStack;
     toItemStack(amount: number): ItemStack;
+    toItemStack(): ItemStack;
+    getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class Lever {
     static get $javaClass(): any;
+    constructor(type: Material, data: number);
     constructor(type: Material);
     constructor();
-    constructor(type: Material, data: number);
 }

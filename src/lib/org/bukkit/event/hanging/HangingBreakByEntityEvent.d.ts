@@ -5,17 +5,17 @@ import HangingBreakEvent from '../../../../org/bukkit/event/hanging/HangingBreak
 import HangingBreakEvent$RemoveCause from '../../../../org/bukkit/event/hanging/HangingBreakEvent$RemoveCause.js';
 export default interface HangingBreakByEntityEvent extends HangingBreakEvent {
     getRemover(): Entity;
+    getCause(): HangingBreakEvent$RemoveCause;
     getHandlers(): HandlerList;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getCause(): HangingBreakEvent$RemoveCause;
     getEntity(): Hanging;
     getEventName(): string;
     isAsynchronous(): boolean;
 }
 export default class HangingBreakByEntityEvent {
     static get $javaClass(): any;
-    constructor(hanging: Hanging, remover: Entity, cause: HangingBreakEvent$RemoveCause);
     constructor(hanging: Hanging, remover: Entity);
+    constructor(hanging: Hanging, remover: Entity, cause: HangingBreakEvent$RemoveCause);
     static getHandlerList(): HandlerList;
 }

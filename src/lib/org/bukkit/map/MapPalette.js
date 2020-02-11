@@ -47,13 +47,13 @@ export default class MapPalette {
     static getColor(...args) {
         return MapPalette.$javaClass.getColor(...args);
     }
-    static resizeImage(...args) {
-        return MapPalette.$javaClass.resizeImage(...args);
-    }
     static imageToBytes(...args) {
         return MapPalette.$javaClass.imageToBytes(...args);
     }
     static matchColor(...args) {
         return MapPalette.$javaClass.matchColor(...args);
+    }
+    static resizeImage(...args) {
+        return MapPalette.$javaClass.resizeImage(...args);
     }
 }

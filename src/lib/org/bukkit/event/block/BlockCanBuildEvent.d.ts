@@ -17,7 +17,7 @@ export default interface BlockCanBuildEvent extends BlockEvent {
 }
 export default class BlockCanBuildEvent {
     static get $javaClass(): any;
-    constructor(block: Block, type: BlockData, canBuild: boolean);
     constructor(block: Block, player: Player, type: BlockData, canBuild: boolean);
+    constructor(block: Block, type: BlockData, canBuild: boolean);
     static getHandlerList(): HandlerList;
 }

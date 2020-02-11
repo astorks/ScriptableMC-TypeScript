@@ -9,26 +9,26 @@ import InventoryType$SlotType from '../../../../org/bukkit/event/inventory/Inven
 import InventoryView from '../../../../org/bukkit/inventory/InventoryView.js';
 import ItemStack from '../../../../org/bukkit/inventory/ItemStack.js';
 export default interface InventoryClickEvent extends InventoryInteractEvent {
+    getSlot(): number;
     getHandlers(): HandlerList;
     setCursor(stack: ItemStack): void;
     getCursor(): ItemStack;
     getSlotType(): InventoryType$SlotType;
     getClickedInventory(): Inventory;
+    isShiftClick(): boolean;
+    getAction(): InventoryAction;
+    getHotbarButton(): number;
     getCurrentItem(): ItemStack;
     isRightClick(): boolean;
-    isLeftClick(): boolean;
-    isShiftClick(): boolean;
-    setCurrentItem(stack: ItemStack): void;
     getRawSlot(): number;
-    getHotbarButton(): number;
-    getAction(): InventoryAction;
+    isLeftClick(): boolean;
+    setCurrentItem(stack: ItemStack): void;
     getClick(): ClickType;
-    getSlot(): number;
+    setResult(newResult: Event$Result): void;
+    getResult(): Event$Result;
     isCancelled(): boolean;
     setCancelled(toCancel: boolean): void;
-    setResult(newResult: Event$Result): void;
     getWhoClicked(): HumanEntity;
-    getResult(): Event$Result;
     getInventory(): Inventory;
     getViewers(): Array<HumanEntity>;
     getView(): InventoryView;
@@ -37,7 +37,7 @@ export default interface InventoryClickEvent extends InventoryInteractEvent {
 }
 export default class InventoryClickEvent {
     static get $javaClass(): any;
-    constructor(view: InventoryView, type: InventoryType$SlotType, slot: number, click: ClickType, action: InventoryAction);
     constructor(view: InventoryView, type: InventoryType$SlotType, slot: number, click: ClickType, action: InventoryAction, key: number);
+    constructor(view: InventoryView, type: InventoryType$SlotType, slot: number, click: ClickType, action: InventoryAction);
     static getHandlerList(): HandlerList;
 }

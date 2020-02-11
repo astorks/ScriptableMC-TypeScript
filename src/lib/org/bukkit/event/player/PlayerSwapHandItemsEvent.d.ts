@@ -7,10 +7,10 @@ export default interface PlayerSwapHandItemsEvent extends PlayerEvent, Cancellab
     getHandlers(): HandlerList;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getOffHandItem(): ItemStack;
     getMainHandItem(): ItemStack;
-    setOffHandItem(offHandItem: ItemStack): void;
     setMainHandItem(mainHandItem: ItemStack): void;
+    getOffHandItem(): ItemStack;
+    setOffHandItem(offHandItem: ItemStack): void;
     getPlayer(): Player;
     getEventName(): string;
     isAsynchronous(): boolean;

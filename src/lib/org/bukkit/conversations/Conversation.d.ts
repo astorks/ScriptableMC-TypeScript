@@ -8,24 +8,24 @@ import ConversationPrefix from '../../../org/bukkit/conversations/ConversationPr
 import Plugin from '../../../org/bukkit/plugin/Plugin.js';
 import Prompt from '../../../org/bukkit/conversations/Prompt.js';
 export default interface Conversation {
-    getPrefix(): ConversationPrefix;
-    getForWhom(): Conversable;
-    isModal(): boolean;
-    isLocalEchoEnabled(): boolean;
-    setLocalEchoEnabled(localEchoEnabled: boolean): void;
-    getCancellers(): Array<ConversationCanceller>;
     begin(): void;
-    acceptInput(input: string): void;
-    abandon(details: ConversationAbandonedEvent): void;
-    abandon(): void;
-    outputNextPrompt(): void;
-    addConversationAbandonedListener(listener: ConversationAbandonedListener): void;
-    removeConversationAbandonedListener(listener: ConversationAbandonedListener): void;
     getContext(): ConversationContext;
     getState(): Conversation$ConversationState;
+    getPrefix(): ConversationPrefix;
+    removeConversationAbandonedListener(listener: ConversationAbandonedListener): void;
+    addConversationAbandonedListener(listener: ConversationAbandonedListener): void;
+    setLocalEchoEnabled(localEchoEnabled: boolean): void;
+    abandon(details: ConversationAbandonedEvent): void;
+    abandon(): void;
+    isModal(): boolean;
+    acceptInput(input: string): void;
+    isLocalEchoEnabled(): boolean;
+    getForWhom(): Conversable;
+    getCancellers(): Array<ConversationCanceller>;
+    outputNextPrompt(): void;
 }
 export default class Conversation {
     static get $javaClass(): any;
-    constructor(plugin: Plugin, forWhom: Conversable, firstPrompt: Prompt, initialSessionData: any);
     constructor(plugin: Plugin, forWhom: Conversable, firstPrompt: Prompt);
+    constructor(plugin: Plugin, forWhom: Conversable, firstPrompt: Prompt, initialSessionData: any);
 }

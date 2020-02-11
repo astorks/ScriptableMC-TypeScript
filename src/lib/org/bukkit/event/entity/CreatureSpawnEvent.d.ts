@@ -9,10 +9,10 @@ export default interface CreatureSpawnEvent extends EntitySpawnEvent {
     getEntity(): Entity;
     getEntity(): LivingEntity;
     getSpawnReason(): CreatureSpawnEvent$SpawnReason;
+    getLocation(): Location;
     getHandlers(): HandlerList;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getLocation(): Location;
     getEntityType(): EntityType;
     getEventName(): string;
     isAsynchronous(): boolean;

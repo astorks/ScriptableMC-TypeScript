@@ -8,9 +8,9 @@ export default interface SignChangeEvent extends BlockEvent, Cancellable {
     getPlayer(): Player;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getLine(index: number): string;
-    setLine(index: number, line: string): void;
     getLines(): Array<string>;
+    setLine(index: number, line: string): void;
+    getLine(index: number): string;
     getBlock(): Block;
     getEventName(): string;
     isAsynchronous(): boolean;

@@ -9,12 +9,12 @@ export default interface PlayerBucketFillEvent extends PlayerBucketEvent {
     getHandlers(): HandlerList;
     getItemStack(): ItemStack;
     getBlock(): Block;
+    setItemStack(itemStack: ItemStack): void;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    setItemStack(itemStack: ItemStack): void;
     getBlockFace(): BlockFace;
-    getBucket(): Material;
     getBlockClicked(): Block;
+    getBucket(): Material;
     getPlayer(): Player;
     getEventName(): string;
     isAsynchronous(): boolean;

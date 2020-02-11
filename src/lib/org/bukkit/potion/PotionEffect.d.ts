@@ -3,21 +3,21 @@ import ConfigurationSerializable from '../../../org/bukkit/configuration/seriali
 import LivingEntity from '../../../org/bukkit/entity/LivingEntity.js';
 import PotionEffectType from '../../../org/bukkit/potion/PotionEffectType.js';
 export default interface PotionEffect extends ConfigurationSerializable {
-    getColor(): Color;
-    serialize(): any;
-    getAmplifier(): number;
-    getDuration(): number;
-    isAmbient(): boolean;
-    hasParticles(): boolean;
-    hasIcon(): boolean;
     apply(entity: LivingEntity): boolean;
     getType(): PotionEffectType;
+    getColor(): Color;
+    serialize(): any;
+    isAmbient(): boolean;
+    hasParticles(): boolean;
+    getAmplifier(): number;
+    getDuration(): number;
+    hasIcon(): boolean;
 }
 export default class PotionEffect {
     static get $javaClass(): any;
-    constructor(type: PotionEffectType, duration: number, amplifier: number, ambient: boolean, particles: boolean, icon: boolean);
-    constructor(type: PotionEffectType, duration: number, amplifier: number, ambient: boolean, particles: boolean);
-    constructor(type: PotionEffectType, duration: number, amplifier: number, ambient: boolean);
     constructor(map: any);
     constructor(type: PotionEffectType, duration: number, amplifier: number);
+    constructor(type: PotionEffectType, duration: number, amplifier: number, ambient: boolean);
+    constructor(type: PotionEffectType, duration: number, amplifier: number, ambient: boolean, particles: boolean);
+    constructor(type: PotionEffectType, duration: number, amplifier: number, ambient: boolean, particles: boolean, icon: boolean);
 }

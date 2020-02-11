@@ -8,8 +8,8 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import Player from '../../../../org/bukkit/entity/Player.js';
 export default interface EntityPlaceEvent extends EntityEvent, Cancellable {
     getHandlers(): HandlerList;
-    getBlock(): Block;
     getPlayer(): Player;
+    getBlock(): Block;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
     getBlockFace(): BlockFace;

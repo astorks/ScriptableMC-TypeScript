@@ -23,10 +23,10 @@ export default class ChatPaginator {
     static get UNBOUNDED_PAGE_HEIGHT() {
         return ChatPaginator.$javaClass.UNBOUNDED_PAGE_HEIGHT;
     }
-    static paginate(...args) {
-        return ChatPaginator.$javaClass.paginate(...args);
-    }
     static wordWrap(...args) {
         return ChatPaginator.$javaClass.wordWrap(...args);
+    }
+    static paginate(...args) {
+        return ChatPaginator.$javaClass.paginate(...args);
     }
 }

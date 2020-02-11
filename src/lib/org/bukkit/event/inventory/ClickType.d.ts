@@ -1,12 +1,12 @@
 export default interface ClickType {
+    isShiftClick(): boolean;
     isRightClick(): boolean;
     isLeftClick(): boolean;
-    isShiftClick(): boolean;
-    isKeyboardClick(): boolean;
     isCreativeAction(): boolean;
+    isKeyboardClick(): boolean;
     name(): string;
     compareTo(arg0: any): number;
-    compareTo(arg0: any): number;
+    compareTo(o: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }

@@ -9,12 +9,12 @@ import PlayerEvent from '../../../../org/bukkit/event/player/PlayerEvent.js';
 export default interface PlayerBucketEvent extends PlayerEvent, Cancellable {
     getItemStack(): ItemStack;
     getBlock(): Block;
+    setItemStack(itemStack: ItemStack): void;
     isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    setItemStack(itemStack: ItemStack): void;
     getBlockFace(): BlockFace;
-    getBucket(): Material;
     getBlockClicked(): Block;
+    getBucket(): Material;
     getPlayer(): Player;
     getHandlers(): HandlerList;
     getEventName(): string;

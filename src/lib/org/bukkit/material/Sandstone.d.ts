@@ -3,21 +3,21 @@ import Material from '../../../org/bukkit/Material.js';
 import MaterialData from '../../../org/bukkit/material/MaterialData.js';
 import SandstoneType from '../../../org/bukkit/SandstoneType.js';
 export default interface Sandstone extends MaterialData {
-    setType(type: SandstoneType): void;
-    clone(): any;
     clone(): Sandstone;
     clone(): MaterialData;
+    clone(): any;
     getType(): SandstoneType;
-    getData(): number;
-    setData(data: number): void;
-    getItemType(): Material;
-    toItemStack(): ItemStack;
+    setType(type: SandstoneType): void;
     toItemStack(amount: number): ItemStack;
+    toItemStack(): ItemStack;
+    getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class Sandstone {
     static get $javaClass(): any;
-    constructor();
     constructor(type: Material, data: number);
     constructor(type: Material);
     constructor(type: SandstoneType);
+    constructor();
 }

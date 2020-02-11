@@ -7,13 +7,13 @@ import Powerable from '../../../../../org/bukkit/block/data/Powerable.js';
 export default interface TripwireHook extends Attachable, Directional, Powerable {
     isAttached(): boolean;
     setAttached(arg0: boolean): void;
-    getMaterial(): Material;
-    getAsString(arg0: boolean): string;
-    getAsString(): string;
-    clone(): BlockData;
     clone(): any;
+    clone(): BlockData;
     matches(arg0: BlockData): boolean;
     merge(arg0: BlockData): BlockData;
+    getMaterial(): Material;
+    getAsString(): string;
+    getAsString(arg0: boolean): string;
     getFacing(): BlockFace;
     setFacing(arg0: BlockFace): void;
     getFaces(): any;

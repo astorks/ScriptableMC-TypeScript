@@ -11,13 +11,13 @@ export default class PluginLogger {
     static get global() {
         return PluginLogger.$javaClass.global;
     }
+    static getLogger(...args) {
+        return PluginLogger.$javaClass.getLogger(...args);
+    }
     static getGlobal(...args) {
         return PluginLogger.$javaClass.getGlobal(...args);
     }
     static getAnonymousLogger(...args) {
         return PluginLogger.$javaClass.getAnonymousLogger(...args);
-    }
-    static getLogger(...args) {
-        return PluginLogger.$javaClass.getLogger(...args);
     }
 }

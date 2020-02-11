@@ -1,0 +1,54 @@
+import File from '../../java/io/File.js';
+import FilterOutputStream from '../../java/io/FilterOutputStream.js';
+import OutputStream from '../../java/io/OutputStream.js';
+export default interface PrintStream extends FilterOutputStream {
+    println(x: number): void;
+    println(x: number): void;
+    println(x: number): void;
+    println(x: any): void;
+    println(x: Array<string>): void;
+    println(x: string): void;
+    println(): void;
+    println(x: boolean): void;
+    println(x: string): void;
+    println(x: number): void;
+    append(csq: any): any;
+    append(csq: any): PrintStream;
+    append(c: string): any;
+    append(c: string): PrintStream;
+    append(csq: any, start: number, end: number): any;
+    append(csq: any, start: number, end: number): PrintStream;
+    format(l: any, format: string, args: Array<any>): PrintStream;
+    format(format: string, args: Array<any>): PrintStream;
+    write(b: number): void;
+    write(buf: Array<number>, off: number, len: number): void;
+    print(b: boolean): void;
+    print(i: number): void;
+    print(d: number): void;
+    print(f: number): void;
+    print(obj: any): void;
+    print(s: string): void;
+    print(s: Array<string>): void;
+    print(c: string): void;
+    print(l: number): void;
+    flush(): void;
+    close(): void;
+    checkError(): boolean;
+    printf(format: string, args: Array<any>): PrintStream;
+    printf(l: any, format: string, args: Array<any>): PrintStream;
+    write(b: Array<number>): void;
+}
+export default class PrintStream {
+    static get $javaClass(): any;
+    constructor(fileName: string, csn: string);
+    constructor(fileName: string);
+    constructor(out: OutputStream, autoFlush: boolean, charset: any);
+    constructor(out: OutputStream, autoFlush: boolean, encoding: string);
+    constructor(fileName: string, charset: any);
+    constructor(file: File, csn: string);
+    constructor(file: File, charset: any);
+    constructor(file: File);
+    constructor(out: OutputStream);
+    constructor(out: OutputStream, autoFlush: boolean);
+    static nullOutputStream(): OutputStream;
+}
