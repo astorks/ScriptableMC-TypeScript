@@ -5,14 +5,14 @@ import CauldronLevelChangeEvent$ChangeReason from '../../../../org/bukkit/event/
 import Entity from '../../../../org/bukkit/entity/Entity.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 export default interface CauldronLevelChangeEvent extends BlockEvent, Cancellable {
-    getEntity(): Entity;
-    setCancelled(cancelled: boolean): void;
-    isCancelled(): boolean;
     getHandlers(): HandlerList;
-    getReason(): CauldronLevelChangeEvent$ChangeReason;
+    getEntity(): Entity;
+    isCancelled(): boolean;
+    setCancelled(cancelled: boolean): void;
     getNewLevel(): number;
     setNewLevel(newLevel: number): void;
     getOldLevel(): number;
+    getReason(): CauldronLevelChangeEvent$ChangeReason;
     getBlock(): Block;
     getEventName(): string;
     isAsynchronous(): boolean;

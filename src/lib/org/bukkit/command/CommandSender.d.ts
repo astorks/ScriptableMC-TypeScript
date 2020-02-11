@@ -8,17 +8,17 @@ export default interface CommandSender extends Permissible {
     getServer(): Server;
     sendMessage(arg0: Array<string>): void;
     sendMessage(arg0: string): void;
-    recalculatePermissions(): void;
     getEffectivePermissions(): any;
-    addAttachment(arg0: Plugin, arg1: string, arg2: boolean, arg3: number): PermissionAttachment;
-    addAttachment(arg0: Plugin): PermissionAttachment;
-    addAttachment(arg0: Plugin, arg1: number): PermissionAttachment;
-    addAttachment(arg0: Plugin, arg1: string, arg2: boolean): PermissionAttachment;
-    isPermissionSet(arg0: Permission): boolean;
-    isPermissionSet(arg0: string): boolean;
-    removeAttachment(arg0: PermissionAttachment): void;
+    recalculatePermissions(): void;
     hasPermission(arg0: Permission): boolean;
     hasPermission(arg0: string): boolean;
+    removeAttachment(arg0: PermissionAttachment): void;
+    addAttachment(arg0: Plugin, arg1: string, arg2: boolean, arg3: number): PermissionAttachment;
+    addAttachment(arg0: Plugin, arg1: number): PermissionAttachment;
+    addAttachment(arg0: Plugin): PermissionAttachment;
+    addAttachment(arg0: Plugin, arg1: string, arg2: boolean): PermissionAttachment;
+    isPermissionSet(arg0: string): boolean;
+    isPermissionSet(arg0: Permission): boolean;
     isOp(): boolean;
     setOp(arg0: boolean): void;
 }

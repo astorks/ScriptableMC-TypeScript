@@ -17,8 +17,8 @@ export default interface Switch extends Directional, Powerable {
     getMaterial(): Material;
     getAsString(): string;
     getAsString(arg0: boolean): string;
-    setPowered(arg0: boolean): void;
     isPowered(): boolean;
+    setPowered(arg0: boolean): void;
 }
 export default class Switch {
     static get $javaClass(): any;

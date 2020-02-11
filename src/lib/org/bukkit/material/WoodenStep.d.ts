@@ -8,15 +8,15 @@ export default interface WoodenStep extends Wood {
     clone(): any;
     clone(): WoodenStep;
     clone(): MaterialData;
-    setInverted(inv: boolean): void;
     isInverted(): boolean;
+    setInverted(inv: boolean): void;
     getSpecies(): TreeSpecies;
     setSpecies(species: TreeSpecies): void;
-    setData(data: number): void;
-    getData(): number;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class WoodenStep {
     static get $javaClass(): any;

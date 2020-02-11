@@ -7,10 +7,10 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import Player from '../../../../org/bukkit/entity/Player.js';
 export default interface BlockIgniteEvent extends BlockEvent, Cancellable {
     getCause(): BlockIgniteEvent$IgniteCause;
-    getPlayer(): Player;
-    setCancelled(cancel: boolean): void;
-    isCancelled(): boolean;
     getHandlers(): HandlerList;
+    getPlayer(): Player;
+    isCancelled(): boolean;
+    setCancelled(cancel: boolean): void;
     getIgnitingBlock(): Block;
     getIgnitingEntity(): Entity;
     getBlock(): Block;

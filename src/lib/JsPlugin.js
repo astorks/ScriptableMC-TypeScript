@@ -1,3 +1,5 @@
+import MysqlWrapper from "./com/smc/utils/MysqlWrapper.js";
+import File from "./java/io/File.js";
 export default class JsPlugin {
     get pluginName() {
         return this.constructor.name;
@@ -30,10 +32,10 @@ export default class JsPlugin {
         this.context.unregisterOutgoingPluginChannel(channel);
     }
     getFile(pathName) {
-        return this.context.getFile(pathName);
+        return new File(pathName);
     }
     newMysqlInstance(host, port, database, username, password) {
-        return this.context.newMysqlInstance(host, port, database, username, password);
+        return new MysqlWrapper(host, port, database, username, password);
     }
     mysqlFromConfig(configObject) {
         return this.newMysqlInstance(configObject.host, configObject.port, configObject.database, configObject.username, configObject.password);

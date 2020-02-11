@@ -8,15 +8,15 @@ export default interface PistonExtensionMaterial extends MaterialData, Attachabl
     clone(): MaterialData;
     clone(): any;
     getFacing(): BlockFace;
-    setSticky(sticky: boolean): void;
+    isSticky(): boolean;
     setFacingDirection(face: BlockFace): void;
     getAttachedFace(): BlockFace;
-    isSticky(): boolean;
-    setData(data: number): void;
-    getData(): number;
+    setSticky(sticky: boolean): void;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class PistonExtensionMaterial {
     static get $javaClass(): any;

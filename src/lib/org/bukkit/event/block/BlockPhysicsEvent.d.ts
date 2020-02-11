@@ -5,11 +5,11 @@ import Cancellable from '../../../../org/bukkit/event/Cancellable.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import Material from '../../../../org/bukkit/Material.js';
 export default interface BlockPhysicsEvent extends BlockEvent, Cancellable {
-    setCancelled(cancel: boolean): void;
-    isCancelled(): boolean;
     getHandlers(): HandlerList;
     getSourceBlock(): Block;
     getChangedType(): Material;
+    isCancelled(): boolean;
+    setCancelled(cancel: boolean): void;
     getBlock(): Block;
     getEventName(): string;
     isAsynchronous(): boolean;

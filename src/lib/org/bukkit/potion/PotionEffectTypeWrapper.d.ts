@@ -4,8 +4,8 @@ import PotionEffectType from '../../../org/bukkit/potion/PotionEffectType.js';
 export default interface PotionEffectTypeWrapper extends PotionEffectType {
     getName(): string;
     getType(): PotionEffectType;
-    isInstant(): boolean;
     getColor(): Color;
+    isInstant(): boolean;
     getDurationModifier(): number;
     getId(): number;
     createEffect(duration: number, amplifier: number): PotionEffect;
@@ -46,7 +46,7 @@ export default class PotionEffectTypeWrapper {
     static get HERO_OF_THE_VILLAGE(): PotionEffectType;
     static values(): Array<PotionEffectType>;
     static getByName(_name: string): PotionEffectType;
-    static stopAcceptingRegistrations(): void;
     static getById(id: number): PotionEffectType;
+    static stopAcceptingRegistrations(): void;
     static registerPotionEffectType(type: PotionEffectType): void;
 }

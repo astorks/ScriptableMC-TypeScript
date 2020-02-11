@@ -56,10 +56,10 @@ export default class Color {
     static deserialize(...args) {
         return Color.$javaClass.deserialize(...args);
     }
-    static fromBGR(...args) {
-        return Color.$javaClass.fromBGR(...args);
-    }
     static fromRGB(...args) {
         return Color.$javaClass.fromRGB(...args);
+    }
+    static fromBGR(...args) {
+        return Color.$javaClass.fromBGR(...args);
     }
 }

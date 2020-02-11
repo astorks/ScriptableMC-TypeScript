@@ -3,9 +3,9 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import World from '../../../../org/bukkit/World.js';
 export default interface WeatherEvent extends Event {
     getWorld(): World;
+    getHandlers(): HandlerList;
     getEventName(): string;
     isAsynchronous(): boolean;
-    getHandlers(): HandlerList;
 }
 export default class WeatherEvent {
     static get $javaClass(): any;

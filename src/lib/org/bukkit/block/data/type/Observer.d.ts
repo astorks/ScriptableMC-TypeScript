@@ -14,8 +14,8 @@ export default interface Observer extends Directional, Powerable {
     getMaterial(): Material;
     getAsString(): string;
     getAsString(arg0: boolean): string;
-    setPowered(arg0: boolean): void;
     isPowered(): boolean;
+    setPowered(arg0: boolean): void;
 }
 export default class Observer {
     static get $javaClass(): any;

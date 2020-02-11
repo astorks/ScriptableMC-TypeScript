@@ -5,10 +5,10 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import Material from '../../../../org/bukkit/Material.js';
 import Player from '../../../../org/bukkit/entity/Player.js';
 export default interface BlockCanBuildEvent extends BlockEvent {
-    getMaterial(): Material;
-    getPlayer(): Player;
-    getBlockData(): BlockData;
     getHandlers(): HandlerList;
+    getPlayer(): Player;
+    getMaterial(): Material;
+    getBlockData(): BlockData;
     setBuildable(cancel: boolean): void;
     isBuildable(): boolean;
     getBlock(): Block;

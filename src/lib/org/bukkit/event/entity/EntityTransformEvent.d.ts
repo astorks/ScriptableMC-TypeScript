@@ -5,9 +5,9 @@ import EntityTransformEvent$TransformReason from '../../../../org/bukkit/event/e
 import EntityType from '../../../../org/bukkit/entity/EntityType.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 export default interface EntityTransformEvent extends EntityEvent, Cancellable {
-    setCancelled(cancel: boolean): void;
-    isCancelled(): boolean;
     getHandlers(): HandlerList;
+    isCancelled(): boolean;
+    setCancelled(cancel: boolean): void;
     getTransformReason(): EntityTransformEvent$TransformReason;
     getTransformedEntity(): Entity;
     getTransformedEntities(): Array<Entity>;

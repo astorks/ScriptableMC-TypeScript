@@ -18,12 +18,12 @@ export default class ByteStreams {
     static nullOutputStream(): OutputStream;
     static readFully(_in: InputStream, b: Array<number>): void;
     static readFully(_in: InputStream, b: Array<number>, off: number, len: number): void;
-    static exhaust(_in: InputStream): number;
+    static newDataOutput(byteArrayOutputSteam: ByteArrayOutputStream): ByteArrayDataOutput;
+    static newDataOutput(size: number): ByteArrayDataOutput;
+    static newDataOutput(): ByteArrayDataOutput;
     static newDataInput(bytes: Array<number>): ByteArrayDataInput;
     static newDataInput(bytes: Array<number>, start: number): ByteArrayDataInput;
     static newDataInput(byteArrayInputStream: ByteArrayInputStream): ByteArrayDataInput;
+    static exhaust(_in: InputStream): number;
     static skipFully(_in: InputStream, n: number): void;
-    static newDataOutput(size: number): ByteArrayDataOutput;
-    static newDataOutput(): ByteArrayDataOutput;
-    static newDataOutput(byteArrayOutputSteam: ByteArrayOutputStream): ByteArrayDataOutput;
 }

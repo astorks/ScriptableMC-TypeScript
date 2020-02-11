@@ -9,15 +9,15 @@ export default interface PistonBaseMaterial extends MaterialData, Directional, R
     clone(): MaterialData;
     clone(): any;
     getFacing(): BlockFace;
-    setPowered(powered: boolean): void;
-    isPowered(): boolean;
-    setFacingDirection(face: BlockFace): void;
     isSticky(): boolean;
-    setData(data: number): void;
-    getData(): number;
+    isPowered(): boolean;
+    setPowered(powered: boolean): void;
+    setFacingDirection(face: BlockFace): void;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class PistonBaseMaterial {
     static get $javaClass(): any;

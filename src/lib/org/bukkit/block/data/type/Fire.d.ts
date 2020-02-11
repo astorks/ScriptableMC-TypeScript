@@ -14,10 +14,10 @@ export default interface Fire extends Ageable, MultipleFacing {
     getMaterial(): Material;
     getAsString(): string;
     getAsString(arg0: boolean): string;
-    setFace(arg0: BlockFace, arg1: boolean): void;
-    getAllowedFaces(): any;
-    hasFace(arg0: BlockFace): boolean;
     getFaces(): any;
+    hasFace(arg0: BlockFace): boolean;
+    getAllowedFaces(): any;
+    setFace(arg0: BlockFace, arg1: boolean): void;
 }
 export default class Fire {
     static get $javaClass(): any;

@@ -4,8 +4,8 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import World from '../../../../org/bukkit/World.js';
 export default interface ChunkUnloadEvent extends ChunkEvent {
     getHandlers(): HandlerList;
-    isSaveChunk(): boolean;
     setSaveChunk(saveChunk: boolean): void;
+    isSaveChunk(): boolean;
     getChunk(): Chunk;
     getWorld(): World;
     getEventName(): string;

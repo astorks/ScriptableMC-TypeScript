@@ -10,17 +10,17 @@ export default interface TrapDoor extends SimpleAttachableMaterialData, Openable
     clone(): any;
     clone(): SimpleAttachableMaterialData;
     isOpen(): boolean;
-    setInverted(inv: boolean): void;
-    isInverted(): boolean;
-    setOpen(isOpen: boolean): void;
     setFacingDirection(face: BlockFace): void;
     getAttachedFace(): BlockFace;
+    isInverted(): boolean;
+    setInverted(inv: boolean): void;
+    setOpen(isOpen: boolean): void;
     getFacing(): BlockFace;
-    setData(data: number): void;
-    getData(): number;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class TrapDoor {
     static get $javaClass(): any;

@@ -5,13 +5,13 @@ import PotionEffectType from '../../../org/bukkit/potion/PotionEffectType.js';
 export default interface PotionEffect extends ConfigurationSerializable {
     apply(entity: LivingEntity): boolean;
     getType(): PotionEffectType;
-    serialize(): any;
     getColor(): Color;
-    getDuration(): number;
-    hasIcon(): boolean;
-    getAmplifier(): number;
+    serialize(): any;
     isAmbient(): boolean;
     hasParticles(): boolean;
+    getAmplifier(): number;
+    getDuration(): number;
+    hasIcon(): boolean;
 }
 export default class PotionEffect {
     static get $javaClass(): any;

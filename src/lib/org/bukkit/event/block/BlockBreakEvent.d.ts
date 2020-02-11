@@ -5,13 +5,13 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import Player from '../../../../org/bukkit/entity/Player.js';
 export default interface BlockBreakEvent extends BlockExpEvent, Cancellable {
     getPlayer(): Player;
-    setCancelled(cancel: boolean): void;
     isCancelled(): boolean;
-    setDropItems(dropItems: boolean): void;
+    setCancelled(cancel: boolean): void;
     isDropItems(): boolean;
+    setDropItems(dropItems: boolean): void;
     getHandlers(): HandlerList;
-    setExpToDrop(exp: number): void;
     getExpToDrop(): number;
+    setExpToDrop(exp: number): void;
     getBlock(): Block;
     getEventName(): string;
     isAsynchronous(): boolean;

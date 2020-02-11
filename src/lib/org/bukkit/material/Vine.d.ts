@@ -6,14 +6,14 @@ export default interface Vine extends MaterialData {
     clone(): any;
     clone(): Vine;
     clone(): MaterialData;
-    isOnFace(face: BlockFace): boolean;
-    removeFromFace(face: BlockFace): void;
     putOnFace(face: BlockFace): void;
-    setData(data: number): void;
-    getData(): number;
+    removeFromFace(face: BlockFace): void;
+    isOnFace(face: BlockFace): boolean;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class Vine {
     static get $javaClass(): any;

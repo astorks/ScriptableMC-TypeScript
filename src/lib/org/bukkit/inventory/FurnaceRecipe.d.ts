@@ -14,13 +14,13 @@ export default interface FurnaceRecipe extends CookingRecipe {
     getKey(): NamespacedKey;
     getResult(): ItemStack;
     getInput(): ItemStack;
-    getInputChoice(): RecipeChoice;
+    getExperience(): number;
+    setGroup(group: string): void;
+    getCookingTime(): number;
     setExperience(experience: number): void;
     setCookingTime(cookingTime: number): void;
     getGroup(): string;
-    getCookingTime(): number;
-    getExperience(): number;
-    setGroup(group: string): void;
+    getInputChoice(): RecipeChoice;
 }
 export default class FurnaceRecipe {
     static get $javaClass(): any;

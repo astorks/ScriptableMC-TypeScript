@@ -1,7 +1,7 @@
 import PotionEffectType from '../../../org/bukkit/potion/PotionEffectType.js';
 export default interface PotionType {
-    getMaxLevel(): number;
     isInstant(): boolean;
+    getMaxLevel(): number;
     getEffectType(): PotionEffectType;
     isUpgradeable(): boolean;
     isExtendable(): boolean;

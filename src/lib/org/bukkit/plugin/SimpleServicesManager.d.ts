@@ -7,14 +7,14 @@ export default interface SimpleServicesManager extends ServicesManager {
     load(service: any): any;
     unregister(provider: any): void;
     unregister(service: any, provider: any): void;
-    getKnownServices(): any;
-    getKnownServices(): any;
     getRegistration(service: any): RegisteredServiceProvider;
+    getKnownServices(): any;
+    getKnownServices(): any;
     unregisterAll(plugin: Plugin): void;
-    getRegistrations(service: any): any;
-    getRegistrations(service: any): Array<any>;
-    getRegistrations(plugin: Plugin): Array<any>;
     isProvidedFor(service: any): boolean;
+    getRegistrations(service: any): Array<any>;
+    getRegistrations(service: any): any;
+    getRegistrations(plugin: Plugin): Array<any>;
 }
 export default class SimpleServicesManager {
     static get $javaClass(): any;

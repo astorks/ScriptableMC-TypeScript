@@ -11,18 +11,18 @@ export default interface Door extends MaterialData, Directional, Openable {
     clone(): any;
     isOpen(): boolean;
     getFacing(): BlockFace;
+    setFacingDirection(face: BlockFace): void;
     setOpen(isOpen: boolean): void;
-    isTopHalf(): boolean;
-    getHinge(): boolean;
+    setTopHalf(isTopHalf: boolean): void;
     setHinge(isHingeRight: boolean): void;
     getHingeCorner(): BlockFace;
-    setTopHalf(isTopHalf: boolean): void;
-    setFacingDirection(face: BlockFace): void;
-    setData(data: number): void;
-    getData(): number;
+    getHinge(): boolean;
+    isTopHalf(): boolean;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class Door {
     static get $javaClass(): any;

@@ -10,9 +10,9 @@ import PotionEffect from '../../../../org/bukkit/potion/PotionEffect.js';
 import PotionEffectType from '../../../../org/bukkit/potion/PotionEffectType.js';
 export default interface EntityPotionEffectEvent extends EntityEvent, Cancellable {
     getCause(): EntityPotionEffectEvent$Cause;
-    setCancelled(cancel: boolean): void;
-    isCancelled(): boolean;
     getHandlers(): HandlerList;
+    isCancelled(): boolean;
+    setCancelled(cancel: boolean): void;
     getAction(): EntityPotionEffectEvent$Action;
     getModifiedType(): PotionEffectType;
     setOverride(override: boolean): void;

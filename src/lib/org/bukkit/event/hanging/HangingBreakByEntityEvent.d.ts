@@ -6,9 +6,9 @@ import HangingBreakEvent$RemoveCause from '../../../../org/bukkit/event/hanging/
 export default interface HangingBreakByEntityEvent extends HangingBreakEvent {
     getRemover(): Entity;
     getCause(): HangingBreakEvent$RemoveCause;
-    setCancelled(cancel: boolean): void;
-    isCancelled(): boolean;
     getHandlers(): HandlerList;
+    isCancelled(): boolean;
+    setCancelled(cancel: boolean): void;
     getEntity(): Hanging;
     getEventName(): string;
     isAsynchronous(): boolean;

@@ -1,8 +1,8 @@
 import ItemTagAdapterContext from '../../../../../org/bukkit/inventory/meta/tags/ItemTagAdapterContext.js';
 export default interface ItemTagType {
-    toPrimitive(arg0: any, arg1: ItemTagAdapterContext): any;
-    fromPrimitive(arg0: any, arg1: ItemTagAdapterContext): any;
     getComplexType(): any;
+    fromPrimitive(arg0: any, arg1: ItemTagAdapterContext): any;
+    toPrimitive(arg0: any, arg1: ItemTagAdapterContext): any;
     getPrimitiveType(): any;
 }
 export default class ItemTagType {

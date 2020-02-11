@@ -14,20 +14,20 @@ export default interface Chunk {
     isLoaded(): boolean;
     getWorld(): World;
     getBlock(arg0: number, arg1: number, arg2: number): Block;
-    removePluginChunkTicket(arg0: Plugin): boolean;
-    addPluginChunkTicket(arg0: Plugin): boolean;
     getPluginChunkTickets(): any;
+    addPluginChunkTicket(arg0: Plugin): boolean;
+    removePluginChunkTicket(arg0: Plugin): boolean;
+    getTileEntities(): Array<BlockState>;
     getChunkSnapshot(arg0: boolean, arg1: boolean, arg2: boolean): ChunkSnapshot;
     getChunkSnapshot(): ChunkSnapshot;
-    getTileEntities(): Array<BlockState>;
     isSlimeChunk(): boolean;
-    isForceLoaded(): boolean;
-    setForceLoaded(arg0: boolean): void;
     setInhabitedTime(arg0: number): void;
+    setForceLoaded(arg0: boolean): void;
+    isForceLoaded(): boolean;
     getInhabitedTime(): number;
     getEntities(): Array<Entity>;
-    getZ(): number;
     getX(): number;
+    getZ(): number;
 }
 export default class Chunk {
     static get $javaClass(): any;

@@ -4,8 +4,8 @@ import BlockState from '../../../../org/bukkit/block/BlockState.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 export default interface BlockFormEvent extends BlockGrowEvent {
     getHandlers(): HandlerList;
-    setCancelled(cancel: boolean): void;
     isCancelled(): boolean;
+    setCancelled(cancel: boolean): void;
     getNewState(): BlockState;
     getBlock(): Block;
     getEventName(): string;

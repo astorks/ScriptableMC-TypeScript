@@ -7,9 +7,9 @@ export default interface BlockPistonExtendEvent extends BlockPistonEvent {
     getHandlers(): HandlerList;
     getBlocks(): Array<Block>;
     getDirection(): BlockFace;
-    setCancelled(cancelled: boolean): void;
-    isCancelled(): boolean;
     isSticky(): boolean;
+    isCancelled(): boolean;
+    setCancelled(cancelled: boolean): void;
     getBlock(): Block;
     getEventName(): string;
     isAsynchronous(): boolean;

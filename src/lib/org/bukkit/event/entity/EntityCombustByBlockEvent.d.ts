@@ -5,11 +5,11 @@ import EntityType from '../../../../org/bukkit/entity/EntityType.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 export default interface EntityCombustByBlockEvent extends EntityCombustEvent {
     getCombuster(): Block;
-    setCancelled(cancel: boolean): void;
-    isCancelled(): boolean;
-    setDuration(duration: number): void;
     getHandlers(): HandlerList;
+    isCancelled(): boolean;
+    setCancelled(cancel: boolean): void;
     getDuration(): number;
+    setDuration(duration: number): void;
     getEntity(): Entity;
     getEntityType(): EntityType;
     getEventName(): string;

@@ -13,11 +13,11 @@ export default interface SmartInventory {
     getType(): InventoryType;
     getProvider(): InventoryProvider;
     getRows(): number;
-    getManager(): InventoryManager;
-    isCloseable(): boolean;
     getColumns(): number;
-    getTitle(): string;
+    isCloseable(): boolean;
+    getManager(): InventoryManager;
     setCloseable(closeable: boolean): void;
+    getTitle(): string;
 }
 export default class SmartInventory {
     static get $javaClass(): any;

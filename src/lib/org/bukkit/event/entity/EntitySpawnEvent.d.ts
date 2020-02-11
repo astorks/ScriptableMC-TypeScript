@@ -6,9 +6,9 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import Location from '../../../../org/bukkit/Location.js';
 export default interface EntitySpawnEvent extends EntityEvent, Cancellable {
     getLocation(): Location;
-    setCancelled(cancel: boolean): void;
-    isCancelled(): boolean;
     getHandlers(): HandlerList;
+    isCancelled(): boolean;
+    setCancelled(cancel: boolean): void;
     getEntity(): Entity;
     getEntityType(): EntityType;
     getEventName(): string;

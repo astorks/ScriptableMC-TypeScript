@@ -9,11 +9,11 @@ export default interface Wool extends MaterialData, Colorable {
     clone(): any;
     getColor(): DyeColor;
     setColor(color: DyeColor): void;
-    setData(data: number): void;
-    getData(): number;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class Wool {
     static get $javaClass(): any;

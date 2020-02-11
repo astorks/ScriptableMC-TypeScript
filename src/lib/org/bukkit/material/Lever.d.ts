@@ -9,16 +9,16 @@ export default interface Lever extends SimpleAttachableMaterialData, Redstone {
     clone(): Lever;
     clone(): SimpleAttachableMaterialData;
     clone(): MaterialData;
-    setPowered(isPowered: boolean): void;
     isPowered(): boolean;
+    setPowered(isPowered: boolean): void;
     setFacingDirection(face: BlockFace): void;
     getAttachedFace(): BlockFace;
     getFacing(): BlockFace;
-    setData(data: number): void;
-    getData(): number;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class Lever {
     static get $javaClass(): any;

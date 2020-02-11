@@ -3,8 +3,8 @@ import BlockEvent from '../../../../org/bukkit/event/block/BlockEvent.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 export default interface BlockExpEvent extends BlockEvent {
     getHandlers(): HandlerList;
-    setExpToDrop(exp: number): void;
     getExpToDrop(): number;
+    setExpToDrop(exp: number): void;
     getBlock(): Block;
     getEventName(): string;
     isAsynchronous(): boolean;

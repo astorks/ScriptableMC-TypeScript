@@ -8,11 +8,11 @@ export default interface Wood extends MaterialData {
     clone(): MaterialData;
     getSpecies(): TreeSpecies;
     setSpecies(species: TreeSpecies): void;
-    setData(data: number): void;
-    getData(): number;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class Wood {
     static get $javaClass(): any;

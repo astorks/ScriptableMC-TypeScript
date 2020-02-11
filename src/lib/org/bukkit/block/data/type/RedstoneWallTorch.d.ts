@@ -14,8 +14,8 @@ export default interface RedstoneWallTorch extends Directional, Lightable {
     getMaterial(): Material;
     getAsString(): string;
     getAsString(arg0: boolean): string;
-    setLit(arg0: boolean): void;
     isLit(): boolean;
+    setLit(arg0: boolean): void;
 }
 export default class RedstoneWallTorch {
     static get $javaClass(): any;

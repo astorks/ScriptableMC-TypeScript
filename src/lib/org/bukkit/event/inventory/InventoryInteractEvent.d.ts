@@ -8,12 +8,12 @@ import InventoryView from '../../../../org/bukkit/inventory/InventoryView.js';
 export default interface InventoryInteractEvent extends InventoryEvent, Cancellable {
     setResult(newResult: Event$Result): void;
     getResult(): Event$Result;
-    setCancelled(toCancel: boolean): void;
     isCancelled(): boolean;
+    setCancelled(toCancel: boolean): void;
     getWhoClicked(): HumanEntity;
+    getHandlers(): HandlerList;
     getInventory(): Inventory;
     getViewers(): Array<HumanEntity>;
-    getHandlers(): HandlerList;
     getView(): InventoryView;
     getEventName(): string;
     isAsynchronous(): boolean;

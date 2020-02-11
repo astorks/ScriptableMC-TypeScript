@@ -3,8 +3,8 @@ import Material from '../../../../../org/bukkit/Material.js';
 export default interface Leaves extends BlockData {
     setPersistent(arg0: boolean): void;
     isPersistent(): boolean;
-    getDistance(): number;
     setDistance(arg0: number): void;
+    getDistance(): number;
     clone(): any;
     clone(): BlockData;
     matches(arg0: BlockData): boolean;

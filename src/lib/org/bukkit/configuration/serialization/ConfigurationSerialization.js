@@ -5,6 +5,9 @@ export default class ConfigurationSerialization {
     static get SERIALIZED_TYPE_KEY() {
         return ConfigurationSerialization.$javaClass.SERIALIZED_TYPE_KEY;
     }
+    static deserializeObject(...args) {
+        return ConfigurationSerialization.$javaClass.deserializeObject(...args);
+    }
     static unregisterClass(...args) {
         return ConfigurationSerialization.$javaClass.unregisterClass(...args);
     }
@@ -16,8 +19,5 @@ export default class ConfigurationSerialization {
     }
     static registerClass(...args) {
         return ConfigurationSerialization.$javaClass.registerClass(...args);
-    }
-    static deserializeObject(...args) {
-        return ConfigurationSerialization.$javaClass.deserializeObject(...args);
     }
 }

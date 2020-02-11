@@ -1,6 +1,6 @@
 export default interface Sittable {
-    isSitting(): boolean;
     setSitting(arg0: boolean): void;
+    isSitting(): boolean;
 }
 export default class Sittable {
     static get $javaClass(): any;

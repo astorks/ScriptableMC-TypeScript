@@ -3,17 +3,17 @@ export default interface MinecraftVersion {
     compareTo(arg0: any): number;
     compareTo(that: MinecraftVersion): number;
     getVersion(): string;
-    getDevelopmentStage(): string;
-    getMinor(): number;
-    getBuild(): number;
-    isBefore(other: MinecraftVersion): boolean;
+    getMajor(): number;
+    isAfter(other: MinecraftVersion): boolean;
+    isAfterOrEq(other: MinecraftVersion): boolean;
     isBeforeOrEq(other: MinecraftVersion): boolean;
     isBetween(o1: MinecraftVersion, o2: MinecraftVersion): boolean;
-    isAfter(other: MinecraftVersion): boolean;
+    getBuild(): number;
     getSnapshot(): SnapshotVersion;
+    getMinor(): number;
     isSnapshot(): boolean;
-    isAfterOrEq(other: MinecraftVersion): boolean;
-    getMajor(): number;
+    isBefore(other: MinecraftVersion): boolean;
+    getDevelopmentStage(): string;
 }
 export default class MinecraftVersion {
     static get $javaClass(): any;

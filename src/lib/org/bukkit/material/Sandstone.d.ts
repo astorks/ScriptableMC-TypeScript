@@ -8,11 +8,11 @@ export default interface Sandstone extends MaterialData {
     clone(): any;
     getType(): SandstoneType;
     setType(type: SandstoneType): void;
-    setData(data: number): void;
-    getData(): number;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class Sandstone {
     static get $javaClass(): any;

@@ -11,10 +11,10 @@ export default class Potion {
     static fromItemStack(...args) {
         return Potion.$javaClass.fromItemStack(...args);
     }
-    static fromDamage(...args) {
-        return Potion.$javaClass.fromDamage(...args);
-    }
     static setPotionBrewer(...args) {
         return Potion.$javaClass.setPotionBrewer(...args);
+    }
+    static fromDamage(...args) {
+        return Potion.$javaClass.fromDamage(...args);
     }
 }

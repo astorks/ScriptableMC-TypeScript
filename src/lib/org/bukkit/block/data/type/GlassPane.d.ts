@@ -4,10 +4,10 @@ import Material from '../../../../../org/bukkit/Material.js';
 import MultipleFacing from '../../../../../org/bukkit/block/data/MultipleFacing.js';
 import Waterlogged from '../../../../../org/bukkit/block/data/Waterlogged.js';
 export default interface GlassPane extends MultipleFacing, Waterlogged {
-    setFace(arg0: BlockFace, arg1: boolean): void;
-    getAllowedFaces(): any;
-    hasFace(arg0: BlockFace): boolean;
     getFaces(): any;
+    hasFace(arg0: BlockFace): boolean;
+    getAllowedFaces(): any;
+    setFace(arg0: BlockFace, arg1: boolean): void;
     clone(): any;
     clone(): BlockData;
     matches(arg0: BlockData): boolean;

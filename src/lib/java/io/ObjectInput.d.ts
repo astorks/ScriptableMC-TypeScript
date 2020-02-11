@@ -10,9 +10,6 @@ export default interface ObjectInput {
     readInt(): number;
     readUTF(): string;
     readFloat(): number;
-    readFully(arg0: Array<number>): void;
-    readFully(arg0: Array<number>, arg1: number, arg2: number): void;
-    readChar(): string;
     skipBytes(arg0: number): number;
     readBoolean(): boolean;
     readByte(): number;
@@ -21,6 +18,9 @@ export default interface ObjectInput {
     readUnsignedShort(): number;
     readLong(): number;
     readDouble(): number;
+    readChar(): string;
+    readFully(arg0: Array<number>, arg1: number, arg2: number): void;
+    readFully(arg0: Array<number>): void;
 }
 export default class ObjectInput {
     static get $javaClass(): any;

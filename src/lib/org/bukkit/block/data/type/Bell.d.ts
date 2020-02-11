@@ -4,8 +4,8 @@ import BlockFace from '../../../../../org/bukkit/block/BlockFace.js';
 import Directional from '../../../../../org/bukkit/block/data/Directional.js';
 import Material from '../../../../../org/bukkit/Material.js';
 export default interface Bell extends Directional {
-    getAttachment(): Bell$Attachment;
     setAttachment(arg0: Bell$Attachment): void;
+    getAttachment(): Bell$Attachment;
     getFacing(): BlockFace;
     setFacing(arg0: BlockFace): void;
     getFaces(): any;

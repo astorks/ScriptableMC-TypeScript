@@ -7,11 +7,11 @@ export default interface PressurePlate extends MaterialData, PressureSensor {
     clone(): PressurePlate;
     clone(): MaterialData;
     isPressed(): boolean;
-    setData(data: number): void;
-    getData(): number;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class PressurePlate {
     static get $javaClass(): any;

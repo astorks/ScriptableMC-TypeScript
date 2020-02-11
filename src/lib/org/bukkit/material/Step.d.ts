@@ -7,16 +7,16 @@ export default interface Step extends TexturedMaterial {
     clone(): TexturedMaterial;
     clone(): any;
     clone(): MaterialData;
-    setInverted(inv: boolean): void;
-    isInverted(): boolean;
     getTextures(): Array<Material>;
+    isInverted(): boolean;
+    setInverted(inv: boolean): void;
     getMaterial(): Material;
     setMaterial(material: Material): void;
-    setData(data: number): void;
-    getData(): number;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class Step {
     static get $javaClass(): any;

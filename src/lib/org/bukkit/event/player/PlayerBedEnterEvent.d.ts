@@ -6,13 +6,13 @@ import Player from '../../../../org/bukkit/entity/Player.js';
 import PlayerBedEnterEvent$BedEnterResult from '../../../../org/bukkit/event/player/PlayerBedEnterEvent$BedEnterResult.js';
 import PlayerEvent from '../../../../org/bukkit/event/player/PlayerEvent.js';
 export default interface PlayerBedEnterEvent extends PlayerEvent, Cancellable {
-    setCancelled(cancel: boolean): void;
-    isCancelled(): boolean;
     getHandlers(): HandlerList;
-    useBed(): Event$Result;
+    isCancelled(): boolean;
+    setCancelled(cancel: boolean): void;
     getBedEnterResult(): PlayerBedEnterEvent$BedEnterResult;
-    setUseBed(useBed: Event$Result): void;
     getBed(): Block;
+    setUseBed(useBed: Event$Result): void;
+    useBed(): Event$Result;
     getPlayer(): Player;
     getEventName(): string;
     isAsynchronous(): boolean;

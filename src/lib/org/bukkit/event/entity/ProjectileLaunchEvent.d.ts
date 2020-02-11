@@ -8,8 +8,8 @@ import Projectile from '../../../../org/bukkit/entity/Projectile.js';
 export default interface ProjectileLaunchEvent extends EntitySpawnEvent, Cancellable {
     getEntity(): Projectile;
     getEntity(): Entity;
-    setCancelled(cancel: boolean): void;
     isCancelled(): boolean;
+    setCancelled(cancel: boolean): void;
     getLocation(): Location;
     getHandlers(): HandlerList;
     getEntityType(): EntityType;

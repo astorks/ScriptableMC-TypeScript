@@ -2,15 +2,15 @@ import Plugin from '../../../org/bukkit/plugin/Plugin.js';
 export default interface MetadataValue {
     value(): any;
     asString(): string;
-    asDouble(): number;
-    asByte(): number;
     asBoolean(): boolean;
     asShort(): number;
-    asFloat(): number;
     asLong(): number;
+    asDouble(): number;
     asInt(): number;
-    getOwningPlugin(): Plugin;
+    asFloat(): number;
+    asByte(): number;
     invalidate(): void;
+    getOwningPlugin(): Plugin;
 }
 export default class MetadataValue {
     static get $javaClass(): any;

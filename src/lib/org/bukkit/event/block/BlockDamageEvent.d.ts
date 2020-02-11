@@ -5,11 +5,11 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import ItemStack from '../../../../org/bukkit/inventory/ItemStack.js';
 import Player from '../../../../org/bukkit/entity/Player.js';
 export default interface BlockDamageEvent extends BlockEvent, Cancellable {
+    getHandlers(): HandlerList;
     getItemInHand(): ItemStack;
     getPlayer(): Player;
-    setCancelled(cancel: boolean): void;
     isCancelled(): boolean;
-    getHandlers(): HandlerList;
+    setCancelled(cancel: boolean): void;
     getInstaBreak(): boolean;
     setInstaBreak(bool: boolean): void;
     getBlock(): Block;

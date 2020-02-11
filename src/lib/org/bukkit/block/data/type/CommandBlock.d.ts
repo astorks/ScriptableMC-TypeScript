@@ -3,8 +3,8 @@ import BlockFace from '../../../../../org/bukkit/block/BlockFace.js';
 import Directional from '../../../../../org/bukkit/block/data/Directional.js';
 import Material from '../../../../../org/bukkit/Material.js';
 export default interface CommandBlock extends Directional {
-    setConditional(arg0: boolean): void;
     isConditional(): boolean;
+    setConditional(arg0: boolean): void;
     getFacing(): BlockFace;
     setFacing(arg0: BlockFace): void;
     getFaces(): any;

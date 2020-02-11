@@ -7,11 +7,11 @@ export default interface Cauldron extends MaterialData {
     clone(): any;
     isEmpty(): boolean;
     isFull(): boolean;
-    setData(data: number): void;
-    getData(): number;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class Cauldron {
     static get $javaClass(): any;

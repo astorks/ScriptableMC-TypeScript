@@ -11,23 +11,23 @@ export default interface BukkitCommand extends Command {
     getPermission(): string;
     setPermission(permission: string): void;
     unregister(commandMap: CommandMap): boolean;
-    getDescription(): string;
-    getUsage(): string;
-    testPermission(target: CommandSender): boolean;
+    getPermissionMessage(): string;
+    testPermissionSilent(target: CommandSender): boolean;
+    setPermissionMessage(permissionMessage: string): Command;
     setAliases(aliases: Array<any>): Command;
-    setDescription(description: string): Command;
-    tabComplete(sender: CommandSender, alias: string, args: Array<string>, location: Location): Array<string>;
+    getDescription(): string;
     tabComplete(sender: CommandSender, alias: string, args: Array<string>): Array<string>;
+    tabComplete(sender: CommandSender, alias: string, args: Array<string>, location: Location): Array<string>;
     getLabel(): string;
     setUsage(usage: string): Command;
-    getAliases(): Array<string>;
+    testPermission(target: CommandSender): boolean;
+    setDescription(description: string): Command;
     setLabel(_name: string): boolean;
-    testPermissionSilent(target: CommandSender): boolean;
-    getPermissionMessage(): string;
-    setPermissionMessage(permissionMessage: string): Command;
+    getUsage(): string;
+    getAliases(): Array<string>;
 }
 export default class BukkitCommand {
     static get $javaClass(): any;
-    static broadcastCommandMessage(source: CommandSender, message: string): void;
     static broadcastCommandMessage(source: CommandSender, message: string, sendToSource: boolean): void;
+    static broadcastCommandMessage(source: CommandSender, message: string): void;
 }

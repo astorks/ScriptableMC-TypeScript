@@ -10,13 +10,13 @@ export default interface Gate extends MaterialData, Directional, Openable {
     clone(): Gate;
     isOpen(): boolean;
     getFacing(): BlockFace;
-    setOpen(isOpen: boolean): void;
     setFacingDirection(face: BlockFace): void;
-    setData(data: number): void;
-    getData(): number;
+    setOpen(isOpen: boolean): void;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class Gate {
     static get $javaClass(): any;

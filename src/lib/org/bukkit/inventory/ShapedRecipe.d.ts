@@ -8,16 +8,16 @@ import RecipeChoice from '../../../org/bukkit/inventory/RecipeChoice.js';
 export default interface ShapedRecipe extends Recipe, Keyed {
     getKey(): NamespacedKey;
     getResult(): ItemStack;
-    getShape(): Array<string>;
-    getChoiceMap(): any;
-    getIngredientMap(): any;
-    shape(shape: Array<string>): ShapedRecipe;
-    getGroup(): string;
-    setGroup(group: string): void;
-    setIngredient(key: string, ingredient: RecipeChoice): ShapedRecipe;
-    setIngredient(key: string, ingredient: MaterialData): ShapedRecipe;
     setIngredient(key: string, ingredient: Material): ShapedRecipe;
+    setIngredient(key: string, ingredient: RecipeChoice): ShapedRecipe;
     setIngredient(key: string, ingredient: Material, raw: number): ShapedRecipe;
+    setIngredient(key: string, ingredient: MaterialData): ShapedRecipe;
+    setGroup(group: string): void;
+    getGroup(): string;
+    getShape(): Array<string>;
+    shape(shape: Array<string>): ShapedRecipe;
+    getIngredientMap(): any;
+    getChoiceMap(): any;
 }
 export default class ShapedRecipe {
     static get $javaClass(): any;

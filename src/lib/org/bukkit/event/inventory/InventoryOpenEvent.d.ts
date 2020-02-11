@@ -5,10 +5,10 @@ import Inventory from '../../../../org/bukkit/inventory/Inventory.js';
 import InventoryEvent from '../../../../org/bukkit/event/inventory/InventoryEvent.js';
 import InventoryView from '../../../../org/bukkit/inventory/InventoryView.js';
 export default interface InventoryOpenEvent extends InventoryEvent, Cancellable {
-    getPlayer(): HumanEntity;
-    setCancelled(cancel: boolean): void;
-    isCancelled(): boolean;
     getHandlers(): HandlerList;
+    getPlayer(): HumanEntity;
+    isCancelled(): boolean;
+    setCancelled(cancel: boolean): void;
     getInventory(): Inventory;
     getViewers(): Array<HumanEntity>;
     getView(): InventoryView;

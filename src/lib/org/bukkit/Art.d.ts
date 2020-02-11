@@ -3,8 +3,8 @@ import NamespacedKey from '../../org/bukkit/NamespacedKey.js';
 export default interface Art extends Keyed {
     getKey(): NamespacedKey;
     getId(): number;
-    getBlockHeight(): number;
     getBlockWidth(): number;
+    getBlockHeight(): number;
     name(): string;
     compareTo(arg0: any): number;
     compareTo(o: any): number;

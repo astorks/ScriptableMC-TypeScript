@@ -9,12 +9,12 @@ export default interface TimedRegisteredListener extends RegisteredListener {
     getCount(): number;
     callEvent(event: Event): void;
     hasMultiple(): boolean;
-    getEventClass(): any;
     getTotalTime(): number;
+    getEventClass(): any;
     getPriority(): EventPriority;
-    isIgnoringCancelled(): boolean;
     getPlugin(): Plugin;
     getListener(): Listener;
+    isIgnoringCancelled(): boolean;
 }
 export default class TimedRegisteredListener {
     static get $javaClass(): any;

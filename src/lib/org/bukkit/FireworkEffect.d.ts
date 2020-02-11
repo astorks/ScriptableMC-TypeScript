@@ -6,9 +6,9 @@ export default interface FireworkEffect extends ConfigurationSerializable {
     getType(): FireworkEffect$Type;
     serialize(): any;
     hasFlicker(): boolean;
+    getColors(): Array<Color>;
     hasTrail(): boolean;
     getFadeColors(): Array<Color>;
-    getColors(): Array<Color>;
 }
 export default class FireworkEffect {
     static get $javaClass(): any;

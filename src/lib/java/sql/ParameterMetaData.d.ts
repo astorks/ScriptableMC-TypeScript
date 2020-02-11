@@ -3,11 +3,11 @@ export default interface ParameterMetaData {
     isSigned(arg0: number): boolean;
     getScale(arg0: number): number;
     isNullable(arg0: number): number;
-    getPrecision(arg0: number): number;
-    getParameterMode(arg0: number): number;
     getParameterType(arg0: number): number;
-    getParameterClassName(arg0: number): string;
+    getParameterMode(arg0: number): number;
+    getPrecision(arg0: number): number;
     getParameterTypeName(arg0: number): string;
+    getParameterClassName(arg0: number): string;
     unwrap(arg0: any): any;
     isWrapperFor(arg0: any): boolean;
 }

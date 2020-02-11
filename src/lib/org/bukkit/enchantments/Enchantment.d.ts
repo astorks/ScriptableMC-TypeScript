@@ -5,13 +5,13 @@ import NamespacedKey from '../../../org/bukkit/NamespacedKey.js';
 export default interface Enchantment extends Keyed {
     getName(): string;
     getKey(): NamespacedKey;
-    getStartLevel(): number;
-    canEnchantItem(arg0: ItemStack): boolean;
     getMaxLevel(): number;
-    getItemTarget(): EnchantmentTarget;
+    canEnchantItem(arg0: ItemStack): boolean;
+    getStartLevel(): number;
+    conflictsWith(arg0: Enchantment): boolean;
     isTreasure(): boolean;
     isCursed(): boolean;
-    conflictsWith(arg0: Enchantment): boolean;
+    getItemTarget(): EnchantmentTarget;
 }
 export default class Enchantment {
     static get $javaClass(): any;
@@ -55,8 +55,8 @@ export default class Enchantment {
     static get VANISHING_CURSE(): Enchantment;
     static values(): Array<Enchantment>;
     static getByName(_name: string): Enchantment;
-    static isAcceptingRegistrations(): boolean;
     static registerEnchantment(enchantment: Enchantment): void;
+    static isAcceptingRegistrations(): boolean;
     static stopAcceptingRegistrations(): void;
     static getByKey(key: NamespacedKey): Enchantment;
 }

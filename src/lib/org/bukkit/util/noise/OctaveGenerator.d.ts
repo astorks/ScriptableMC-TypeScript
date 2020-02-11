@@ -8,12 +8,12 @@ export default interface OctaveGenerator {
     noise(x: number, y: number, frequency: number, amplitude: number, normalized: boolean): number;
     noise(x: number, y: number, z: number, frequency: number, amplitude: number): number;
     setXScale(scale: number): void;
-    setYScale(scale: number): void;
-    getYScale(): number;
+    setZScale(scale: number): void;
     getXScale(): number;
     getZScale(): number;
-    setZScale(scale: number): void;
+    getYScale(): number;
     getOctaves(): Array<NoiseGenerator>;
+    setYScale(scale: number): void;
 }
 export default class OctaveGenerator {
     static get $javaClass(): any;

@@ -6,16 +6,16 @@ export default interface AsyncPlayerPreLoginEvent extends Event {
     getName(): string;
     getAddress(): any;
     setResult(result: PlayerPreLoginEvent$Result): void;
-    getResult(): PlayerPreLoginEvent$Result;
-    getUniqueId(): string;
     getHandlers(): HandlerList;
+    getUniqueId(): string;
+    getResult(): PlayerPreLoginEvent$Result;
+    allow(): void;
+    getKickMessage(): string;
     setKickMessage(message: string): void;
+    getLoginResult(): AsyncPlayerPreLoginEvent$Result;
+    setLoginResult(result: AsyncPlayerPreLoginEvent$Result): void;
     disallow(result: AsyncPlayerPreLoginEvent$Result, message: string): void;
     disallow(result: PlayerPreLoginEvent$Result, message: string): void;
-    getKickMessage(): string;
-    getLoginResult(): AsyncPlayerPreLoginEvent$Result;
-    allow(): void;
-    setLoginResult(result: AsyncPlayerPreLoginEvent$Result): void;
     getEventName(): string;
     isAsynchronous(): boolean;
 }

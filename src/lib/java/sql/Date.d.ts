@@ -11,10 +11,10 @@ export default interface Date {
     clone(): any;
     compareTo(arg0: any): number;
     compareTo(anotherDate: any): number;
+    getYear(): number;
     before(when: any): boolean;
     after(when: any): boolean;
     getDate(): number;
-    getYear(): number;
     getTime(): number;
     setYear(year: number): void;
     getMonth(): number;

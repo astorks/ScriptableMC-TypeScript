@@ -1,9 +1,5 @@
 import com_pixlfox_scriptablemc_core_ScriptablePluginContext from './com/pixlfox/scriptablemc/core/ScriptablePluginContext.js';
-import com_smc_utils_FileWrapper from './com/smc/utils/FileWrapper.js';
-import com_pixlfox_scriptablemc_smartinvs_SmartItemBuilder from './com/pixlfox/scriptablemc/smartinvs/SmartItemBuilder.js';
-import org_bukkit_inventory_ItemStack from './org/bukkit/inventory/ItemStack.js';
-import org_bukkit_Material from './org/bukkit/Material.js';
-import org_bukkit_NamespacedKey from './org/bukkit/NamespacedKey.js';
+import org_bukkit_plugin_messaging_PluginMessageListenerRegistration from './org/bukkit/plugin/messaging/PluginMessageListenerRegistration.js';
 import org_bukkit_plugin_Plugin from './org/bukkit/plugin/Plugin.js';
 import java_io_InputStream from './java/io/InputStream.js';
 import java_io_OutputStream from './java/io/OutputStream.js';
@@ -11,21 +7,41 @@ import java_io_Closeable from './java/io/Closeable.js';
 import java_io_Flushable from './java/io/Flushable.js';
 import org_bukkit_Server from './org/bukkit/Server.js';
 import org_bukkit_UnsafeValues from './org/bukkit/UnsafeValues.js';
+import org_bukkit_Material from './org/bukkit/Material.js';
+import org_bukkit_NamespacedKey from './org/bukkit/NamespacedKey.js';
 import org_bukkit_block_data_BlockData from './org/bukkit/block/data/BlockData.js';
 import org_bukkit_material_MaterialData from './org/bukkit/material/MaterialData.js';
+import org_bukkit_inventory_ItemStack from './org/bukkit/inventory/ItemStack.js';
+import org_bukkit_inventory_meta_ItemMeta from './org/bukkit/inventory/meta/ItemMeta.js';
+import org_bukkit_enchantments_Enchantment from './org/bukkit/enchantments/Enchantment.js';
+import org_bukkit_enchantments_EnchantmentTarget from './org/bukkit/enchantments/EnchantmentTarget.js';
+import org_bukkit_Keyed from './org/bukkit/Keyed.js';
+import com_google_common_collect_Multimap from './com/google/common/collect/Multimap.js';
+import com_google_common_collect_Multiset from './com/google/common/collect/Multiset.js';
+import org_bukkit_inventory_EquipmentSlot from './org/bukkit/inventory/EquipmentSlot.js';
+import org_bukkit_attribute_Attribute from './org/bukkit/attribute/Attribute.js';
+import org_bukkit_attribute_AttributeModifier from './org/bukkit/attribute/AttributeModifier.js';
+import org_bukkit_attribute_AttributeModifier$Operation from './org/bukkit/attribute/AttributeModifier$Operation.js';
+import org_bukkit_configuration_serialization_ConfigurationSerializable from './org/bukkit/configuration/serialization/ConfigurationSerializable.js';
+import org_bukkit_inventory_meta_tags_CustomItemTagContainer from './org/bukkit/inventory/meta/tags/CustomItemTagContainer.js';
+import org_bukkit_inventory_meta_tags_ItemTagType from './org/bukkit/inventory/meta/tags/ItemTagType.js';
+import org_bukkit_inventory_meta_tags_ItemTagAdapterContext from './org/bukkit/inventory/meta/tags/ItemTagAdapterContext.js';
+import org_bukkit_inventory_ItemFlag from './org/bukkit/inventory/ItemFlag.js';
+import org_bukkit_persistence_PersistentDataContainer from './org/bukkit/persistence/PersistentDataContainer.js';
+import org_bukkit_persistence_PersistentDataType from './org/bukkit/persistence/PersistentDataType.js';
+import org_bukkit_persistence_PersistentDataAdapterContext from './org/bukkit/persistence/PersistentDataAdapterContext.js';
+import org_bukkit_persistence_PersistentDataHolder from './org/bukkit/persistence/PersistentDataHolder.js';
+import org_bukkit_advancement_Advancement from './org/bukkit/advancement/Advancement.js';
 import org_bukkit_plugin_PluginDescriptionFile from './org/bukkit/plugin/PluginDescriptionFile.js';
 import java_io_Writer from './java/io/Writer.js';
 import org_bukkit_plugin_PluginLoadOrder from './org/bukkit/plugin/PluginLoadOrder.js';
 import org_bukkit_permissions_PermissionDefault from './org/bukkit/permissions/PermissionDefault.js';
 import java_io_Reader from './java/io/Reader.js';
-import org_bukkit_advancement_Advancement from './org/bukkit/advancement/Advancement.js';
-import org_bukkit_Keyed from './org/bukkit/Keyed.js';
 import org_bukkit_map_MapView from './org/bukkit/map/MapView.js';
 import org_bukkit_World from './org/bukkit/World.js';
 import org_bukkit_Location from './org/bukkit/Location.js';
 import org_bukkit_util_Vector from './org/bukkit/util/Vector.js';
 import org_bukkit_util_BlockVector from './org/bukkit/util/BlockVector.js';
-import org_bukkit_configuration_serialization_ConfigurationSerializable from './org/bukkit/configuration/serialization/ConfigurationSerializable.js';
 import org_bukkit_block_Block from './org/bukkit/block/Block.js';
 import org_bukkit_block_BlockState from './org/bukkit/block/BlockState.js';
 import org_bukkit_Chunk from './org/bukkit/Chunk.js';
@@ -33,59 +49,54 @@ import org_bukkit_ChunkSnapshot from './org/bukkit/ChunkSnapshot.js';
 import org_bukkit_block_Biome from './org/bukkit/block/Biome.js';
 import org_bukkit_entity_Entity from './org/bukkit/entity/Entity.js';
 import org_bukkit_entity_EntityType from './org/bukkit/entity/EntityType.js';
-import org_bukkit_entity_Pose from './org/bukkit/entity/Pose.js';
+import org_bukkit_EntityEffect from './org/bukkit/EntityEffect.js';
+import org_bukkit_event_player_PlayerTeleportEvent$TeleportCause from './org/bukkit/event/player/PlayerTeleportEvent$TeleportCause.js';
 import org_bukkit_event_entity_EntityDamageEvent from './org/bukkit/event/entity/EntityDamageEvent.js';
 import org_bukkit_event_entity_EntityDamageEvent$DamageCause from './org/bukkit/event/entity/EntityDamageEvent$DamageCause.js';
-import org_bukkit_event_entity_EntityDamageEvent$DamageModifier from './org/bukkit/event/entity/EntityDamageEvent$DamageModifier.js';
 import org_bukkit_event_HandlerList from './org/bukkit/event/HandlerList.js';
 import org_bukkit_plugin_RegisteredListener from './org/bukkit/plugin/RegisteredListener.js';
 import org_bukkit_event_EventPriority from './org/bukkit/event/EventPriority.js';
 import org_bukkit_event_Listener from './org/bukkit/event/Listener.js';
 import org_bukkit_event_Event from './org/bukkit/event/Event.js';
 import org_bukkit_plugin_EventExecutor from './org/bukkit/plugin/EventExecutor.js';
+import org_bukkit_event_entity_EntityDamageEvent$DamageModifier from './org/bukkit/event/entity/EntityDamageEvent$DamageModifier.js';
 import org_bukkit_event_Cancellable from './org/bukkit/event/Cancellable.js';
 import org_bukkit_event_entity_EntityEvent from './org/bukkit/event/entity/EntityEvent.js';
 import org_bukkit_block_BlockFace from './org/bukkit/block/BlockFace.js';
+import org_bukkit_entity_Pose from './org/bukkit/entity/Pose.js';
 import org_bukkit_util_BoundingBox from './org/bukkit/util/BoundingBox.js';
 import org_bukkit_util_RayTraceResult from './org/bukkit/util/RayTraceResult.js';
-import org_bukkit_event_player_PlayerTeleportEvent$TeleportCause from './org/bukkit/event/player/PlayerTeleportEvent$TeleportCause.js';
-import org_bukkit_EntityEffect from './org/bukkit/EntityEffect.js';
 import org_bukkit_block_PistonMoveReaction from './org/bukkit/block/PistonMoveReaction.js';
 import org_bukkit_metadata_MetadataValue from './org/bukkit/metadata/MetadataValue.js';
-import org_bukkit_permissions_PermissionAttachment from './org/bukkit/permissions/PermissionAttachment.js';
 import org_bukkit_permissions_Permission from './org/bukkit/permissions/Permission.js';
+import org_bukkit_permissions_PermissionAttachment from './org/bukkit/permissions/PermissionAttachment.js';
+import org_bukkit_permissions_PermissionRemovedExecutor from './org/bukkit/permissions/PermissionRemovedExecutor.js';
 import org_bukkit_permissions_Permissible from './org/bukkit/permissions/Permissible.js';
 import org_bukkit_permissions_ServerOperator from './org/bukkit/permissions/ServerOperator.js';
-import org_bukkit_permissions_PermissionRemovedExecutor from './org/bukkit/permissions/PermissionRemovedExecutor.js';
-import org_bukkit_persistence_PersistentDataContainer from './org/bukkit/persistence/PersistentDataContainer.js';
-import org_bukkit_persistence_PersistentDataType from './org/bukkit/persistence/PersistentDataType.js';
-import org_bukkit_persistence_PersistentDataAdapterContext from './org/bukkit/persistence/PersistentDataAdapterContext.js';
 import org_bukkit_metadata_Metadatable from './org/bukkit/metadata/Metadatable.js';
 import org_bukkit_command_CommandSender from './org/bukkit/command/CommandSender.js';
 import org_bukkit_Nameable from './org/bukkit/Nameable.js';
-import org_bukkit_persistence_PersistentDataHolder from './org/bukkit/persistence/PersistentDataHolder.js';
 import org_bukkit_FluidCollisionMode from './org/bukkit/FluidCollisionMode.js';
-import org_bukkit_Sound from './org/bukkit/Sound.js';
 import org_bukkit_SoundCategory from './org/bukkit/SoundCategory.js';
+import org_bukkit_Sound from './org/bukkit/Sound.js';
 import org_bukkit_Effect from './org/bukkit/Effect.js';
 import org_bukkit_Effect$Type from './org/bukkit/Effect$Type.js';
-import org_bukkit_Particle from './org/bukkit/Particle.js';
 import org_bukkit_entity_LightningStrike from './org/bukkit/entity/LightningStrike.js';
+import org_bukkit_Particle from './org/bukkit/Particle.js';
+import org_bukkit_HeightMap from './org/bukkit/HeightMap.js';
+import org_bukkit_World$Environment from './org/bukkit/World$Environment.js';
 import org_bukkit_WorldType from './org/bukkit/WorldType.js';
 import org_bukkit_GameRule from './org/bukkit/GameRule.js';
 import org_bukkit_StructureType from './org/bukkit/StructureType.js';
 import org_bukkit_map_MapCursor$Type from './org/bukkit/map/MapCursor$Type.js';
-import org_bukkit_HeightMap from './org/bukkit/HeightMap.js';
-import org_bukkit_World$Environment from './org/bukkit/World$Environment.js';
-import org_bukkit_util_Consumer from './org/bukkit/util/Consumer.js';
+import org_bukkit_entity_Item from './org/bukkit/entity/Item.js';
 import org_bukkit_Difficulty from './org/bukkit/Difficulty.js';
+import org_bukkit_util_Consumer from './org/bukkit/util/Consumer.js';
+import org_bukkit_entity_FallingBlock from './org/bukkit/entity/FallingBlock.js';
 import java_io_File from './java/io/File.js';
 import java_io_FilenameFilter from './java/io/FilenameFilter.js';
 import java_io_FileFilter from './java/io/FileFilter.js';
 import java_io_Serializable from './java/io/Serializable.js';
-import org_bukkit_entity_Item from './org/bukkit/entity/Item.js';
-import org_bukkit_TreeType from './org/bukkit/TreeType.js';
-import org_bukkit_BlockChangeDelegate from './org/bukkit/BlockChangeDelegate.js';
 import org_bukkit_generator_ChunkGenerator from './org/bukkit/generator/ChunkGenerator.js';
 import org_bukkit_generator_ChunkGenerator$ChunkData from './org/bukkit/generator/ChunkGenerator$ChunkData.js';
 import org_bukkit_generator_ChunkGenerator$BiomeGrid from './org/bukkit/generator/ChunkGenerator$BiomeGrid.js';
@@ -96,48 +107,42 @@ import org_bukkit_entity_Projectile from './org/bukkit/entity/Projectile.js';
 import org_bukkit_entity_Arrow from './org/bukkit/entity/Arrow.js';
 import org_bukkit_Color from './org/bukkit/Color.js';
 import org_bukkit_DyeColor from './org/bukkit/DyeColor.js';
+import org_bukkit_potion_PotionEffectType from './org/bukkit/potion/PotionEffectType.js';
 import org_bukkit_potion_PotionEffect from './org/bukkit/potion/PotionEffect.js';
 import org_bukkit_entity_LivingEntity from './org/bukkit/entity/LivingEntity.js';
 import org_bukkit_entity_memory_MemoryKey from './org/bukkit/entity/memory/MemoryKey.js';
-import org_bukkit_potion_PotionEffectType from './org/bukkit/potion/PotionEffectType.js';
+import org_bukkit_inventory_EntityEquipment from './org/bukkit/inventory/EntityEquipment.js';
 import org_bukkit_entity_Player from './org/bukkit/entity/Player.js';
-import org_bukkit_advancement_AdvancementProgress from './org/bukkit/advancement/AdvancementProgress.js';
+import org_bukkit_Statistic from './org/bukkit/Statistic.js';
+import org_bukkit_Statistic$Type from './org/bukkit/Statistic$Type.js';
 import org_bukkit_Instrument from './org/bukkit/Instrument.js';
 import org_bukkit_Note from './org/bukkit/Note.js';
 import org_bukkit_Note$Tone from './org/bukkit/Note$Tone.js';
-import org_bukkit_WeatherType from './org/bukkit/WeatherType.js';
-import org_bukkit_Statistic from './org/bukkit/Statistic.js';
-import org_bukkit_Statistic$Type from './org/bukkit/Statistic$Type.js';
 import org_bukkit_scoreboard_Scoreboard from './org/bukkit/scoreboard/Scoreboard.js';
-import org_bukkit_scoreboard_Objective from './org/bukkit/scoreboard/Objective.js';
-import org_bukkit_scoreboard_RenderType from './org/bukkit/scoreboard/RenderType.js';
-import org_bukkit_scoreboard_Score from './org/bukkit/scoreboard/Score.js';
-import org_bukkit_OfflinePlayer from './org/bukkit/OfflinePlayer.js';
-import org_bukkit_entity_AnimalTamer from './org/bukkit/entity/AnimalTamer.js';
-import org_bukkit_scoreboard_DisplaySlot from './org/bukkit/scoreboard/DisplaySlot.js';
 import org_bukkit_scoreboard_Team from './org/bukkit/scoreboard/Team.js';
 import org_bukkit_ChatColor from './org/bukkit/ChatColor.js';
-import org_bukkit_scoreboard_Team$Option from './org/bukkit/scoreboard/Team$Option.js';
-import org_bukkit_scoreboard_Team$OptionStatus from './org/bukkit/scoreboard/Team$OptionStatus.js';
+import org_bukkit_OfflinePlayer from './org/bukkit/OfflinePlayer.js';
+import org_bukkit_entity_AnimalTamer from './org/bukkit/entity/AnimalTamer.js';
 import org_bukkit_scoreboard_NameTagVisibility from './org/bukkit/scoreboard/NameTagVisibility.js';
+import org_bukkit_scoreboard_Team$OptionStatus from './org/bukkit/scoreboard/Team$OptionStatus.js';
+import org_bukkit_scoreboard_Team$Option from './org/bukkit/scoreboard/Team$Option.js';
+import org_bukkit_scoreboard_DisplaySlot from './org/bukkit/scoreboard/DisplaySlot.js';
+import org_bukkit_scoreboard_Objective from './org/bukkit/scoreboard/Objective.js';
+import org_bukkit_scoreboard_Score from './org/bukkit/scoreboard/Score.js';
+import org_bukkit_scoreboard_RenderType from './org/bukkit/scoreboard/RenderType.js';
+import org_bukkit_WeatherType from './org/bukkit/WeatherType.js';
+import org_bukkit_advancement_AdvancementProgress from './org/bukkit/advancement/AdvancementProgress.js';
 import org_bukkit_inventory_InventoryView from './org/bukkit/inventory/InventoryView.js';
 import org_bukkit_inventory_InventoryView$Property from './org/bukkit/inventory/InventoryView$Property.js';
 import org_bukkit_event_inventory_InventoryType from './org/bukkit/event/inventory/InventoryType.js';
 import org_bukkit_inventory_Inventory from './org/bukkit/inventory/Inventory.js';
 import org_bukkit_inventory_InventoryHolder from './org/bukkit/inventory/InventoryHolder.js';
 import org_bukkit_entity_HumanEntity from './org/bukkit/entity/HumanEntity.js';
-import org_bukkit_inventory_PlayerInventory from './org/bukkit/inventory/PlayerInventory.js';
 import org_bukkit_inventory_MainHand from './org/bukkit/inventory/MainHand.js';
-import org_bukkit_GameMode from './org/bukkit/GameMode.js';
 import org_bukkit_entity_Villager from './org/bukkit/entity/Villager.js';
-import org_bukkit_entity_Villager$Type from './org/bukkit/entity/Villager$Type.js';
 import org_bukkit_entity_Villager$Profession from './org/bukkit/entity/Villager$Profession.js';
-import org_bukkit_inventory_EntityEquipment from './org/bukkit/inventory/EntityEquipment.js';
+import org_bukkit_entity_Villager$Type from './org/bukkit/entity/Villager$Type.js';
 import org_bukkit_attribute_AttributeInstance from './org/bukkit/attribute/AttributeInstance.js';
-import org_bukkit_attribute_Attribute from './org/bukkit/attribute/Attribute.js';
-import org_bukkit_attribute_AttributeModifier from './org/bukkit/attribute/AttributeModifier.js';
-import org_bukkit_inventory_EquipmentSlot from './org/bukkit/inventory/EquipmentSlot.js';
-import org_bukkit_attribute_AttributeModifier$Operation from './org/bukkit/attribute/AttributeModifier$Operation.js';
 import org_bukkit_loot_LootTable from './org/bukkit/loot/LootTable.js';
 import org_bukkit_loot_LootContext from './org/bukkit/loot/LootContext.js';
 import org_bukkit_inventory_MerchantRecipe from './org/bukkit/inventory/MerchantRecipe.js';
@@ -149,6 +154,8 @@ import org_bukkit_entity_Mob from './org/bukkit/entity/Mob.js';
 import org_bukkit_loot_Lootable from './org/bukkit/loot/Lootable.js';
 import org_bukkit_entity_NPC from './org/bukkit/entity/NPC.js';
 import org_bukkit_inventory_Merchant from './org/bukkit/inventory/Merchant.js';
+import org_bukkit_GameMode from './org/bukkit/GameMode.js';
+import org_bukkit_inventory_PlayerInventory from './org/bukkit/inventory/PlayerInventory.js';
 import org_bukkit_event_inventory_InventoryType$SlotType from './org/bukkit/event/inventory/InventoryType$SlotType.js';
 import org_bukkit_conversations_Conversation from './org/bukkit/conversations/Conversation.js';
 import org_bukkit_conversations_ConversationContext from './org/bukkit/conversations/ConversationContext.js';
@@ -164,37 +171,24 @@ import org_bukkit_attribute_Attributable from './org/bukkit/attribute/Attributab
 import org_bukkit_entity_Damageable from './org/bukkit/entity/Damageable.js';
 import org_bukkit_potion_PotionData from './org/bukkit/potion/PotionData.js';
 import org_bukkit_potion_PotionType from './org/bukkit/potion/PotionType.js';
-import org_bukkit_entity_FallingBlock from './org/bukkit/entity/FallingBlock.js';
+import org_bukkit_TreeType from './org/bukkit/TreeType.js';
+import org_bukkit_BlockChangeDelegate from './org/bukkit/BlockChangeDelegate.js';
 import org_bukkit_Raid from './org/bukkit/Raid.js';
 import org_bukkit_Raid$RaidStatus from './org/bukkit/Raid$RaidStatus.js';
 import org_bukkit_WorldBorder from './org/bukkit/WorldBorder.js';
 import org_bukkit_map_MapView$Scale from './org/bukkit/map/MapView$Scale.js';
 import org_bukkit_map_MapRenderer from './org/bukkit/map/MapRenderer.js';
 import org_bukkit_map_MapCanvas from './org/bukkit/map/MapCanvas.js';
-import org_bukkit_map_MapCursorCollection from './org/bukkit/map/MapCursorCollection.js';
-import org_bukkit_map_MapCursor from './org/bukkit/map/MapCursor.js';
 import org_bukkit_map_MapFont from './org/bukkit/map/MapFont.js';
 import org_bukkit_map_MapFont$CharacterSprite from './org/bukkit/map/MapFont$CharacterSprite.js';
+import org_bukkit_map_MapCursorCollection from './org/bukkit/map/MapCursorCollection.js';
+import org_bukkit_map_MapCursor from './org/bukkit/map/MapCursor.js';
+import org_bukkit_plugin_PluginManager from './org/bukkit/plugin/PluginManager.js';
 import org_bukkit_plugin_ServicesManager from './org/bukkit/plugin/ServicesManager.js';
 import org_bukkit_plugin_ServicePriority from './org/bukkit/plugin/ServicePriority.js';
 import org_bukkit_plugin_RegisteredServiceProvider from './org/bukkit/plugin/RegisteredServiceProvider.js';
-import org_bukkit_plugin_PluginManager from './org/bukkit/plugin/PluginManager.js';
 import org_bukkit_plugin_messaging_Messenger from './org/bukkit/plugin/messaging/Messenger.js';
 import org_bukkit_plugin_messaging_PluginMessageListener from './org/bukkit/plugin/messaging/PluginMessageListener.js';
-import org_bukkit_plugin_messaging_PluginMessageListenerRegistration from './org/bukkit/plugin/messaging/PluginMessageListenerRegistration.js';
-import org_bukkit_inventory_ItemFactory from './org/bukkit/inventory/ItemFactory.js';
-import org_bukkit_inventory_meta_ItemMeta from './org/bukkit/inventory/meta/ItemMeta.js';
-import org_bukkit_enchantments_Enchantment from './org/bukkit/enchantments/Enchantment.js';
-import org_bukkit_enchantments_EnchantmentTarget from './org/bukkit/enchantments/EnchantmentTarget.js';
-import org_bukkit_inventory_ItemFlag from './org/bukkit/inventory/ItemFlag.js';
-import com_google_common_collect_Multimap from './com/google/common/collect/Multimap.js';
-import com_google_common_collect_Multiset from './com/google/common/collect/Multiset.js';
-import org_bukkit_inventory_meta_tags_CustomItemTagContainer from './org/bukkit/inventory/meta/tags/CustomItemTagContainer.js';
-import org_bukkit_inventory_meta_tags_ItemTagAdapterContext from './org/bukkit/inventory/meta/tags/ItemTagAdapterContext.js';
-import org_bukkit_inventory_meta_tags_ItemTagType from './org/bukkit/inventory/meta/tags/ItemTagType.js';
-import org_bukkit_scheduler_BukkitScheduler from './org/bukkit/scheduler/BukkitScheduler.js';
-import org_bukkit_scheduler_BukkitTask from './org/bukkit/scheduler/BukkitTask.js';
-import org_bukkit_scheduler_BukkitRunnable from './org/bukkit/scheduler/BukkitRunnable.js';
 import org_bukkit_configuration_file_YamlConfiguration from './org/bukkit/configuration/file/YamlConfiguration.js';
 import org_bukkit_configuration_file_YamlConfigurationOptions from './org/bukkit/configuration/file/YamlConfigurationOptions.js';
 import org_bukkit_configuration_Configuration from './org/bukkit/configuration/Configuration.js';
@@ -205,41 +199,48 @@ import org_bukkit_configuration_MemoryConfigurationOptions from './org/bukkit/co
 import org_bukkit_configuration_MemorySection from './org/bukkit/configuration/MemorySection.js';
 import org_bukkit_configuration_file_FileConfiguration from './org/bukkit/configuration/file/FileConfiguration.js';
 import org_bukkit_configuration_file_FileConfigurationOptions from './org/bukkit/configuration/file/FileConfigurationOptions.js';
-import org_bukkit_Tag from './org/bukkit/Tag.js';
+import org_bukkit_WorldCreator from './org/bukkit/WorldCreator.js';
+import org_bukkit_scheduler_BukkitScheduler from './org/bukkit/scheduler/BukkitScheduler.js';
+import org_bukkit_scheduler_BukkitTask from './org/bukkit/scheduler/BukkitTask.js';
+import org_bukkit_scheduler_BukkitRunnable from './org/bukkit/scheduler/BukkitRunnable.js';
+import org_bukkit_util_CachedServerIcon from './org/bukkit/util/CachedServerIcon.js';
+import org_bukkit_Warning$WarningState from './org/bukkit/Warning$WarningState.js';
+import org_bukkit_Warning from './org/bukkit/Warning.js';
+import org_bukkit_help_HelpMap from './org/bukkit/help/HelpMap.js';
+import org_bukkit_help_HelpTopicFactory from './org/bukkit/help/HelpTopicFactory.js';
+import org_bukkit_help_HelpTopic from './org/bukkit/help/HelpTopic.js';
+import org_bukkit_command_Command from './org/bukkit/command/Command.js';
+import org_bukkit_command_CommandMap from './org/bukkit/command/CommandMap.js';
 import org_bukkit_boss_BossBar from './org/bukkit/boss/BossBar.js';
 import org_bukkit_boss_BarFlag from './org/bukkit/boss/BarFlag.js';
 import org_bukkit_boss_BarColor from './org/bukkit/boss/BarColor.js';
 import org_bukkit_boss_BarStyle from './org/bukkit/boss/BarStyle.js';
 import org_bukkit_boss_KeyedBossBar from './org/bukkit/boss/KeyedBossBar.js';
-import org_bukkit_command_PluginCommand from './org/bukkit/command/PluginCommand.js';
-import org_bukkit_command_CommandExecutor from './org/bukkit/command/CommandExecutor.js';
-import org_bukkit_command_Command from './org/bukkit/command/Command.js';
-import org_bukkit_command_CommandMap from './org/bukkit/command/CommandMap.js';
-import org_bukkit_command_TabCompleter from './org/bukkit/command/TabCompleter.js';
-import org_bukkit_command_PluginIdentifiableCommand from './org/bukkit/command/PluginIdentifiableCommand.js';
-import org_bukkit_WorldCreator from './org/bukkit/WorldCreator.js';
+import org_bukkit_inventory_ItemFactory from './org/bukkit/inventory/ItemFactory.js';
 import org_bukkit_BanList from './org/bukkit/BanList.js';
 import org_bukkit_BanEntry from './org/bukkit/BanEntry.js';
 import org_bukkit_BanList$Type from './org/bukkit/BanList$Type.js';
-import org_bukkit_help_HelpMap from './org/bukkit/help/HelpMap.js';
-import org_bukkit_help_HelpTopic from './org/bukkit/help/HelpTopic.js';
-import org_bukkit_help_HelpTopicFactory from './org/bukkit/help/HelpTopicFactory.js';
-import org_bukkit_util_CachedServerIcon from './org/bukkit/util/CachedServerIcon.js';
+import org_bukkit_Tag from './org/bukkit/Tag.js';
+import org_bukkit_command_PluginCommand from './org/bukkit/command/PluginCommand.js';
+import org_bukkit_command_CommandExecutor from './org/bukkit/command/CommandExecutor.js';
+import org_bukkit_command_TabCompleter from './org/bukkit/command/TabCompleter.js';
+import org_bukkit_command_PluginIdentifiableCommand from './org/bukkit/command/PluginIdentifiableCommand.js';
 import org_bukkit_command_ConsoleCommandSender from './org/bukkit/command/ConsoleCommandSender.js';
-import org_bukkit_Warning$WarningState from './org/bukkit/Warning$WarningState.js';
-import org_bukkit_Warning from './org/bukkit/Warning.js';
 import org_bukkit_scoreboard_ScoreboardManager from './org/bukkit/scoreboard/ScoreboardManager.js';
 import org_bukkit_plugin_PluginLoader from './org/bukkit/plugin/PluginLoader.js';
 import org_bukkit_command_TabExecutor from './org/bukkit/command/TabExecutor.js';
-import com_pixlfox_scriptablemc_smartinvs_SmartInventoryInterface from './com/pixlfox/scriptablemc/smartinvs/SmartInventoryInterface.js';
-import fr_minuskube_inv_SmartInventory$Builder from './fr/minuskube/inv/SmartInventory$Builder.js';
+import org_bukkit_plugin_java_JavaPlugin from './org/bukkit/plugin/java/JavaPlugin.js';
+import org_bukkit_plugin_PluginBase from './org/bukkit/plugin/PluginBase.js';
+import com_pixlfox_scriptablemc_core_ScriptablePluginEngine from './com/pixlfox/scriptablemc/core/ScriptablePluginEngine.js';
+import fr_minuskube_inv_InventoryManager from './fr/minuskube/inv/InventoryManager.js';
 import fr_minuskube_inv_SmartInventory from './fr/minuskube/inv/SmartInventory.js';
+import fr_minuskube_inv_SmartInventory$Builder from './fr/minuskube/inv/SmartInventory$Builder.js';
 import fr_minuskube_inv_content_InventoryProvider from './fr/minuskube/inv/content/InventoryProvider.js';
 import fr_minuskube_inv_content_InventoryContents from './fr/minuskube/inv/content/InventoryContents.js';
 import fr_minuskube_inv_ClickableItem from './fr/minuskube/inv/ClickableItem.js';
 import org_bukkit_event_inventory_InventoryClickEvent from './org/bukkit/event/inventory/InventoryClickEvent.js';
-import org_bukkit_event_inventory_ClickType from './org/bukkit/event/inventory/ClickType.js';
 import org_bukkit_event_inventory_InventoryAction from './org/bukkit/event/inventory/InventoryAction.js';
+import org_bukkit_event_inventory_ClickType from './org/bukkit/event/inventory/ClickType.js';
 import org_bukkit_event_Event$Result from './org/bukkit/event/Event$Result.js';
 import org_bukkit_event_inventory_InventoryInteractEvent from './org/bukkit/event/inventory/InventoryInteractEvent.js';
 import org_bukkit_event_inventory_InventoryEvent from './org/bukkit/event/inventory/InventoryEvent.js';
@@ -247,54 +248,52 @@ import fr_minuskube_inv_content_SlotPos from './fr/minuskube/inv/content/SlotPos
 import fr_minuskube_inv_content_Pagination from './fr/minuskube/inv/content/Pagination.js';
 import fr_minuskube_inv_content_SlotIterator from './fr/minuskube/inv/content/SlotIterator.js';
 import fr_minuskube_inv_content_SlotIterator$Type from './fr/minuskube/inv/content/SlotIterator$Type.js';
-import fr_minuskube_inv_InventoryManager from './fr/minuskube/inv/InventoryManager.js';
-import fr_minuskube_inv_opener_InventoryOpener from './fr/minuskube/inv/opener/InventoryOpener.js';
-import org_bukkit_plugin_java_JavaPlugin from './org/bukkit/plugin/java/JavaPlugin.js';
-import org_bukkit_plugin_PluginBase from './org/bukkit/plugin/PluginBase.js';
 import fr_minuskube_inv_InventoryListener from './fr/minuskube/inv/InventoryListener.js';
-import com_pixlfox_scriptablemc_smartinvs_SmartInventoryProvider from './com/pixlfox/scriptablemc/smartinvs/SmartInventoryProvider.js';
+import fr_minuskube_inv_opener_InventoryOpener from './fr/minuskube/inv/opener/InventoryOpener.js';
+import com_smc_utils_ItemBuilder from './com/smc/utils/ItemBuilder.js';
 import com_smc_utils_MysqlWrapper from './com/smc/utils/MysqlWrapper.js';
-import java_sql_Connection from './java/sql/Connection.js';
 import java_sql_Statement from './java/sql/Statement.js';
+import java_sql_Connection from './java/sql/Connection.js';
+import java_sql_PreparedStatement from './java/sql/PreparedStatement.js';
+import java_sql__Array from './java/sql/Array.js';
+import java_sql_ResultSet from './java/sql/ResultSet.js';
+import java_sql_Ref from './java/sql/Ref.js';
+import java_sql_Date from './java/sql/Date.js';
+import java_sql_Time from './java/sql/Time.js';
 import java_sql_SQLWarning from './java/sql/SQLWarning.js';
 import java_sql_SQLException from './java/sql/SQLException.js';
 import java_io_PrintStream from './java/io/PrintStream.js';
 import java_io_FilterOutputStream from './java/io/FilterOutputStream.js';
 import java_io_PrintWriter from './java/io/PrintWriter.js';
-import java_sql_ResultSet from './java/sql/ResultSet.js';
-import java_sql_Ref from './java/sql/Ref.js';
-import java_sql_Date from './java/sql/Date.js';
-import java_sql__Array from './java/sql/Array.js';
-import java_sql_Time from './java/sql/Time.js';
 import java_sql_ResultSetMetaData from './java/sql/ResultSetMetaData.js';
 import java_sql_Wrapper from './java/sql/Wrapper.js';
-import java_sql_NClob from './java/sql/NClob.js';
-import java_sql_Clob from './java/sql/Clob.js';
-import java_sql_Timestamp from './java/sql/Timestamp.js';
-import java_sql_SQLXML from './java/sql/SQLXML.js';
-import java_sql_RowId from './java/sql/RowId.js';
-import java_sql_Blob from './java/sql/Blob.js';
 import java_sql_SQLType from './java/sql/SQLType.js';
-import java_sql_PreparedStatement from './java/sql/PreparedStatement.js';
+import java_sql_Timestamp from './java/sql/Timestamp.js';
+import java_sql_Blob from './java/sql/Blob.js';
+import java_sql_Clob from './java/sql/Clob.js';
+import java_sql_NClob from './java/sql/NClob.js';
+import java_sql_RowId from './java/sql/RowId.js';
+import java_sql_SQLXML from './java/sql/SQLXML.js';
 import java_sql_ParameterMetaData from './java/sql/ParameterMetaData.js';
 import java_sql_ShardingKey from './java/sql/ShardingKey.js';
-import java_sql_Savepoint from './java/sql/Savepoint.js';
-import java_sql_Struct from './java/sql/Struct.js';
-import java_sql_CallableStatement from './java/sql/CallableStatement.js';
 import java_sql_DatabaseMetaData from './java/sql/DatabaseMetaData.js';
 import java_sql_RowIdLifetime from './java/sql/RowIdLifetime.js';
-import com_pixlfox_scriptablemc_core_ScriptablePluginEngine from './com/pixlfox/scriptablemc/core/ScriptablePluginEngine.js';
+import java_sql_Struct from './java/sql/Struct.js';
+import java_sql_CallableStatement from './java/sql/CallableStatement.js';
+import java_sql_Savepoint from './java/sql/Savepoint.js';
 import com_smc_version_MinecraftVersion from './com/smc/version/MinecraftVersion.js';
 import com_smc_version_SnapshotVersion from './com/smc/version/SnapshotVersion.js';
 import com_smc_version_MinecraftVersions from './com/smc/version/MinecraftVersions.js';
+import com_smc_smartinvs_SmartInventoryProvider from './com/smc/smartinvs/SmartInventoryProvider.js';
+import com_smc_smartinvs_SmartInventory from './com/smc/smartinvs/SmartInventory.js';
 import com_google_common_io_ByteStreams from './com/google/common/io/ByteStreams.js';
 import com_google_common_io_ByteProcessor from './com/google/common/io/ByteProcessor.js';
-import com_google_common_io_ByteArrayDataInput from './com/google/common/io/ByteArrayDataInput.js';
-import java_io_DataInput from './java/io/DataInput.js';
-import java_io_ByteArrayInputStream from './java/io/ByteArrayInputStream.js';
 import com_google_common_io_ByteArrayDataOutput from './com/google/common/io/ByteArrayDataOutput.js';
 import java_io_DataOutput from './java/io/DataOutput.js';
 import java_io_ByteArrayOutputStream from './java/io/ByteArrayOutputStream.js';
+import com_google_common_io_ByteArrayDataInput from './com/google/common/io/ByteArrayDataInput.js';
+import java_io_DataInput from './java/io/DataInput.js';
+import java_io_ByteArrayInputStream from './java/io/ByteArrayInputStream.js';
 import org_bukkit_entity_AbstractHorse from './org/bukkit/entity/AbstractHorse.js';
 import org_bukkit_entity_Horse$Variant from './org/bukkit/entity/Horse$Variant.js';
 import org_bukkit_inventory_AbstractHorseInventory from './org/bukkit/inventory/AbstractHorseInventory.js';
@@ -1062,147 +1061,26 @@ export var com;
         })(scriptablemc = pixlfox.scriptablemc || (pixlfox.scriptablemc = {}));
     })(pixlfox = com.pixlfox || (com.pixlfox = {}));
 })(com || (com = {}));
-(function (com) {
-    var smc;
-    (function (smc) {
-        var utils;
-        (function (utils) {
-            utils.FileWrapper = com_smc_utils_FileWrapper;
-            utils.MysqlWrapper = com_smc_utils_MysqlWrapper;
-        })(utils = smc.utils || (smc.utils = {}));
-    })(smc = com.smc || (com.smc = {}));
-})(com || (com = {}));
-(function (com) {
-    var pixlfox;
-    (function (pixlfox) {
-        var scriptablemc;
-        (function (scriptablemc) {
-            var smartinvs;
-            (function (smartinvs) {
-                smartinvs.SmartItemBuilder = com_pixlfox_scriptablemc_smartinvs_SmartItemBuilder;
-                smartinvs.SmartInventoryInterface = com_pixlfox_scriptablemc_smartinvs_SmartInventoryInterface;
-                smartinvs.SmartInventoryProvider = com_pixlfox_scriptablemc_smartinvs_SmartInventoryProvider;
-            })(smartinvs = scriptablemc.smartinvs || (scriptablemc.smartinvs = {}));
-        })(scriptablemc = pixlfox.scriptablemc || (pixlfox.scriptablemc = {}));
-    })(pixlfox = com.pixlfox || (com.pixlfox = {}));
-})(com || (com = {}));
 export var org;
 (function (org) {
     var bukkit;
     (function (bukkit) {
-        var inventory;
-        (function (inventory) {
-            inventory.ItemStack = org_bukkit_inventory_ItemStack;
-            inventory.InventoryView = org_bukkit_inventory_InventoryView;
-            inventory.InventoryView$Property = org_bukkit_inventory_InventoryView$Property;
-            inventory.Inventory = org_bukkit_inventory_Inventory;
-            inventory.InventoryHolder = org_bukkit_inventory_InventoryHolder;
-            inventory.PlayerInventory = org_bukkit_inventory_PlayerInventory;
-            inventory.MainHand = org_bukkit_inventory_MainHand;
-            inventory.EntityEquipment = org_bukkit_inventory_EntityEquipment;
-            inventory.EquipmentSlot = org_bukkit_inventory_EquipmentSlot;
-            inventory.MerchantRecipe = org_bukkit_inventory_MerchantRecipe;
-            inventory.Recipe = org_bukkit_inventory_Recipe;
-            inventory.Merchant = org_bukkit_inventory_Merchant;
-            inventory.ItemFactory = org_bukkit_inventory_ItemFactory;
-            inventory.ItemFlag = org_bukkit_inventory_ItemFlag;
-            inventory.AbstractHorseInventory = org_bukkit_inventory_AbstractHorseInventory;
-            inventory.AnvilInventory = org_bukkit_inventory_AnvilInventory;
-            inventory.BlockInventoryHolder = org_bukkit_inventory_BlockInventoryHolder;
-            inventory.BeaconInventory = org_bukkit_inventory_BeaconInventory;
-            inventory.FurnaceInventory = org_bukkit_inventory_FurnaceInventory;
-            inventory.BlastingRecipe = org_bukkit_inventory_BlastingRecipe;
-            inventory.CookingRecipe = org_bukkit_inventory_CookingRecipe;
-            inventory.RecipeChoice = org_bukkit_inventory_RecipeChoice;
-            inventory.BrewerInventory = org_bukkit_inventory_BrewerInventory;
-            inventory.CampfireRecipe = org_bukkit_inventory_CampfireRecipe;
-            inventory.CartographyInventory = org_bukkit_inventory_CartographyInventory;
-            inventory.ComplexRecipe = org_bukkit_inventory_ComplexRecipe;
-            inventory.CraftingInventory = org_bukkit_inventory_CraftingInventory;
-            inventory.DoubleChestInventory = org_bukkit_inventory_DoubleChestInventory;
-            inventory.EnchantingInventory = org_bukkit_inventory_EnchantingInventory;
-            inventory.FurnaceRecipe = org_bukkit_inventory_FurnaceRecipe;
-            inventory.GrindstoneInventory = org_bukkit_inventory_GrindstoneInventory;
-            inventory.HorseInventory = org_bukkit_inventory_HorseInventory;
-            inventory.LecternInventory = org_bukkit_inventory_LecternInventory;
-            inventory.LlamaInventory = org_bukkit_inventory_LlamaInventory;
-            inventory.LoomInventory = org_bukkit_inventory_LoomInventory;
-            inventory.MerchantInventory = org_bukkit_inventory_MerchantInventory;
-            inventory.ShapedRecipe = org_bukkit_inventory_ShapedRecipe;
-            inventory.ShapelessRecipe = org_bukkit_inventory_ShapelessRecipe;
-            inventory.SmokingRecipe = org_bukkit_inventory_SmokingRecipe;
-            inventory.StonecutterInventory = org_bukkit_inventory_StonecutterInventory;
-            inventory.StonecuttingRecipe = org_bukkit_inventory_StonecuttingRecipe;
-        })(inventory = bukkit.inventory || (bukkit.inventory = {}));
-    })(bukkit = org.bukkit || (org.bukkit = {}));
-})(org || (org = {}));
-(function (org) {
-    var bukkit;
-    (function (bukkit) {
-        bukkit.Material = org_bukkit_Material;
-        bukkit.NamespacedKey = org_bukkit_NamespacedKey;
-        bukkit.Server = org_bukkit_Server;
-        bukkit.UnsafeValues = org_bukkit_UnsafeValues;
-        bukkit.Keyed = org_bukkit_Keyed;
-        bukkit.World = org_bukkit_World;
-        bukkit.Location = org_bukkit_Location;
-        bukkit.Chunk = org_bukkit_Chunk;
-        bukkit.ChunkSnapshot = org_bukkit_ChunkSnapshot;
-        bukkit.EntityEffect = org_bukkit_EntityEffect;
-        bukkit.Nameable = org_bukkit_Nameable;
-        bukkit.FluidCollisionMode = org_bukkit_FluidCollisionMode;
-        bukkit.Sound = org_bukkit_Sound;
-        bukkit.SoundCategory = org_bukkit_SoundCategory;
-        bukkit.Effect = org_bukkit_Effect;
-        bukkit.Effect$Type = org_bukkit_Effect$Type;
-        bukkit.Particle = org_bukkit_Particle;
-        bukkit.WorldType = org_bukkit_WorldType;
-        bukkit.GameRule = org_bukkit_GameRule;
-        bukkit.StructureType = org_bukkit_StructureType;
-        bukkit.HeightMap = org_bukkit_HeightMap;
-        bukkit.World$Environment = org_bukkit_World$Environment;
-        bukkit.Difficulty = org_bukkit_Difficulty;
-        bukkit.TreeType = org_bukkit_TreeType;
-        bukkit.BlockChangeDelegate = org_bukkit_BlockChangeDelegate;
-        bukkit.Color = org_bukkit_Color;
-        bukkit.DyeColor = org_bukkit_DyeColor;
-        bukkit.Instrument = org_bukkit_Instrument;
-        bukkit.Note = org_bukkit_Note;
-        bukkit.Note$Tone = org_bukkit_Note$Tone;
-        bukkit.WeatherType = org_bukkit_WeatherType;
-        bukkit.Statistic = org_bukkit_Statistic;
-        bukkit.Statistic$Type = org_bukkit_Statistic$Type;
-        bukkit.OfflinePlayer = org_bukkit_OfflinePlayer;
-        bukkit.ChatColor = org_bukkit_ChatColor;
-        bukkit.GameMode = org_bukkit_GameMode;
-        bukkit.Raid = org_bukkit_Raid;
-        bukkit.Raid$RaidStatus = org_bukkit_Raid$RaidStatus;
-        bukkit.WorldBorder = org_bukkit_WorldBorder;
-        bukkit.Tag = org_bukkit_Tag;
-        bukkit.WorldCreator = org_bukkit_WorldCreator;
-        bukkit.BanList = org_bukkit_BanList;
-        bukkit.BanEntry = org_bukkit_BanEntry;
-        bukkit.BanList$Type = org_bukkit_BanList$Type;
-        bukkit.Warning$WarningState = org_bukkit_Warning$WarningState;
-        bukkit.Warning = org_bukkit_Warning;
-        bukkit.Art = org_bukkit_Art;
-        bukkit.Axis = org_bukkit_Axis;
-        bukkit.TreeSpecies = org_bukkit_TreeSpecies;
-        bukkit.Bukkit = org_bukkit_Bukkit;
-        bukkit.CoalType = org_bukkit_CoalType;
-        bukkit.CropState = org_bukkit_CropState;
-        bukkit.PortalType = org_bukkit_PortalType;
-        bukkit.FireworkEffect = org_bukkit_FireworkEffect;
-        bukkit.FireworkEffect$Builder = org_bukkit_FireworkEffect$Builder;
-        bukkit.FireworkEffect$Type = org_bukkit_FireworkEffect$Type;
-        bukkit.GrassSpecies = org_bukkit_GrassSpecies;
-        bukkit.Rotation = org_bukkit_Rotation;
-        bukkit.NetherWartsState = org_bukkit_NetherWartsState;
-        bukkit.Registry = org_bukkit_Registry;
-        bukkit.SandstoneType = org_bukkit_SandstoneType;
-        bukkit.SkullType = org_bukkit_SkullType;
-        bukkit.UndefinedNullability = org_bukkit_UndefinedNullability;
-        bukkit.Utility = org_bukkit_Utility;
+        var plugin;
+        (function (plugin) {
+            var messaging;
+            (function (messaging) {
+                messaging.PluginMessageListenerRegistration = org_bukkit_plugin_messaging_PluginMessageListenerRegistration;
+                messaging.PluginMessageRecipient = org_bukkit_plugin_messaging_PluginMessageRecipient;
+                messaging.Messenger = org_bukkit_plugin_messaging_Messenger;
+                messaging.PluginMessageListener = org_bukkit_plugin_messaging_PluginMessageListener;
+                messaging.ChannelNameTooLongException = org_bukkit_plugin_messaging_ChannelNameTooLongException;
+                messaging.ChannelNotRegisteredException = org_bukkit_plugin_messaging_ChannelNotRegisteredException;
+                messaging.MessageTooLargeException = org_bukkit_plugin_messaging_MessageTooLargeException;
+                messaging.PluginChannelDirection = org_bukkit_plugin_messaging_PluginChannelDirection;
+                messaging.ReservedChannelException = org_bukkit_plugin_messaging_ReservedChannelException;
+                messaging.StandardMessenger = org_bukkit_plugin_messaging_StandardMessenger;
+            })(messaging = plugin.messaging || (plugin.messaging = {}));
+        })(plugin = bukkit.plugin || (bukkit.plugin = {}));
     })(bukkit = org.bukkit || (org.bukkit = {}));
 })(org || (org = {}));
 (function (org) {
@@ -1215,10 +1093,10 @@ export var org;
             plugin.PluginLoadOrder = org_bukkit_plugin_PluginLoadOrder;
             plugin.RegisteredListener = org_bukkit_plugin_RegisteredListener;
             plugin.EventExecutor = org_bukkit_plugin_EventExecutor;
+            plugin.PluginManager = org_bukkit_plugin_PluginManager;
             plugin.ServicesManager = org_bukkit_plugin_ServicesManager;
             plugin.ServicePriority = org_bukkit_plugin_ServicePriority;
             plugin.RegisteredServiceProvider = org_bukkit_plugin_RegisteredServiceProvider;
-            plugin.PluginManager = org_bukkit_plugin_PluginManager;
             plugin.PluginLoader = org_bukkit_plugin_PluginLoader;
             plugin.PluginBase = org_bukkit_plugin_PluginBase;
             plugin.AuthorNagException = org_bukkit_plugin_AuthorNagException;
@@ -1251,10 +1129,10 @@ export var java;
         io.PrintStream = java_io_PrintStream;
         io.FilterOutputStream = java_io_FilterOutputStream;
         io.PrintWriter = java_io_PrintWriter;
-        io.DataInput = java_io_DataInput;
-        io.ByteArrayInputStream = java_io_ByteArrayInputStream;
         io.DataOutput = java_io_DataOutput;
         io.ByteArrayOutputStream = java_io_ByteArrayOutputStream;
+        io.DataInput = java_io_DataInput;
+        io.ByteArrayInputStream = java_io_ByteArrayInputStream;
         io.ObjectInputStream$GetField = java_io_ObjectInputStream$GetField;
         io.ObjectStreamClass = java_io_ObjectStreamClass;
         io.ObjectStreamField = java_io_ObjectStreamField;
@@ -1271,6 +1149,75 @@ export var java;
         io.ObjectOutputStream = java_io_ObjectOutputStream;
     })(io = java.io || (java.io = {}));
 })(java || (java = {}));
+(function (org) {
+    var bukkit;
+    (function (bukkit) {
+        bukkit.Server = org_bukkit_Server;
+        bukkit.UnsafeValues = org_bukkit_UnsafeValues;
+        bukkit.Material = org_bukkit_Material;
+        bukkit.NamespacedKey = org_bukkit_NamespacedKey;
+        bukkit.Keyed = org_bukkit_Keyed;
+        bukkit.World = org_bukkit_World;
+        bukkit.Location = org_bukkit_Location;
+        bukkit.Chunk = org_bukkit_Chunk;
+        bukkit.ChunkSnapshot = org_bukkit_ChunkSnapshot;
+        bukkit.EntityEffect = org_bukkit_EntityEffect;
+        bukkit.Nameable = org_bukkit_Nameable;
+        bukkit.FluidCollisionMode = org_bukkit_FluidCollisionMode;
+        bukkit.SoundCategory = org_bukkit_SoundCategory;
+        bukkit.Sound = org_bukkit_Sound;
+        bukkit.Effect = org_bukkit_Effect;
+        bukkit.Effect$Type = org_bukkit_Effect$Type;
+        bukkit.Particle = org_bukkit_Particle;
+        bukkit.HeightMap = org_bukkit_HeightMap;
+        bukkit.World$Environment = org_bukkit_World$Environment;
+        bukkit.WorldType = org_bukkit_WorldType;
+        bukkit.GameRule = org_bukkit_GameRule;
+        bukkit.StructureType = org_bukkit_StructureType;
+        bukkit.Difficulty = org_bukkit_Difficulty;
+        bukkit.Color = org_bukkit_Color;
+        bukkit.DyeColor = org_bukkit_DyeColor;
+        bukkit.Statistic = org_bukkit_Statistic;
+        bukkit.Statistic$Type = org_bukkit_Statistic$Type;
+        bukkit.Instrument = org_bukkit_Instrument;
+        bukkit.Note = org_bukkit_Note;
+        bukkit.Note$Tone = org_bukkit_Note$Tone;
+        bukkit.ChatColor = org_bukkit_ChatColor;
+        bukkit.OfflinePlayer = org_bukkit_OfflinePlayer;
+        bukkit.WeatherType = org_bukkit_WeatherType;
+        bukkit.GameMode = org_bukkit_GameMode;
+        bukkit.TreeType = org_bukkit_TreeType;
+        bukkit.BlockChangeDelegate = org_bukkit_BlockChangeDelegate;
+        bukkit.Raid = org_bukkit_Raid;
+        bukkit.Raid$RaidStatus = org_bukkit_Raid$RaidStatus;
+        bukkit.WorldBorder = org_bukkit_WorldBorder;
+        bukkit.WorldCreator = org_bukkit_WorldCreator;
+        bukkit.Warning$WarningState = org_bukkit_Warning$WarningState;
+        bukkit.Warning = org_bukkit_Warning;
+        bukkit.BanList = org_bukkit_BanList;
+        bukkit.BanEntry = org_bukkit_BanEntry;
+        bukkit.BanList$Type = org_bukkit_BanList$Type;
+        bukkit.Tag = org_bukkit_Tag;
+        bukkit.Art = org_bukkit_Art;
+        bukkit.Axis = org_bukkit_Axis;
+        bukkit.TreeSpecies = org_bukkit_TreeSpecies;
+        bukkit.Bukkit = org_bukkit_Bukkit;
+        bukkit.CoalType = org_bukkit_CoalType;
+        bukkit.CropState = org_bukkit_CropState;
+        bukkit.PortalType = org_bukkit_PortalType;
+        bukkit.FireworkEffect = org_bukkit_FireworkEffect;
+        bukkit.FireworkEffect$Builder = org_bukkit_FireworkEffect$Builder;
+        bukkit.FireworkEffect$Type = org_bukkit_FireworkEffect$Type;
+        bukkit.GrassSpecies = org_bukkit_GrassSpecies;
+        bukkit.Rotation = org_bukkit_Rotation;
+        bukkit.NetherWartsState = org_bukkit_NetherWartsState;
+        bukkit.Registry = org_bukkit_Registry;
+        bukkit.SandstoneType = org_bukkit_SandstoneType;
+        bukkit.SkullType = org_bukkit_SkullType;
+        bukkit.UndefinedNullability = org_bukkit_UndefinedNullability;
+        bukkit.Utility = org_bukkit_Utility;
+    })(bukkit = org.bukkit || (org.bukkit = {}));
+})(org || (org = {}));
 (function (org) {
     var bukkit;
     (function (bukkit) {
@@ -1378,17 +1325,163 @@ export var java;
 (function (org) {
     var bukkit;
     (function (bukkit) {
-        var permissions;
-        (function (permissions) {
-            permissions.PermissionDefault = org_bukkit_permissions_PermissionDefault;
-            permissions.PermissionAttachment = org_bukkit_permissions_PermissionAttachment;
-            permissions.Permission = org_bukkit_permissions_Permission;
-            permissions.Permissible = org_bukkit_permissions_Permissible;
-            permissions.ServerOperator = org_bukkit_permissions_ServerOperator;
-            permissions.PermissionRemovedExecutor = org_bukkit_permissions_PermissionRemovedExecutor;
-            permissions.PermissibleBase = org_bukkit_permissions_PermissibleBase;
-            permissions.PermissionAttachmentInfo = org_bukkit_permissions_PermissionAttachmentInfo;
-        })(permissions = bukkit.permissions || (bukkit.permissions = {}));
+        var inventory;
+        (function (inventory) {
+            inventory.ItemStack = org_bukkit_inventory_ItemStack;
+            inventory.EquipmentSlot = org_bukkit_inventory_EquipmentSlot;
+            inventory.ItemFlag = org_bukkit_inventory_ItemFlag;
+            inventory.EntityEquipment = org_bukkit_inventory_EntityEquipment;
+            inventory.InventoryView = org_bukkit_inventory_InventoryView;
+            inventory.InventoryView$Property = org_bukkit_inventory_InventoryView$Property;
+            inventory.Inventory = org_bukkit_inventory_Inventory;
+            inventory.InventoryHolder = org_bukkit_inventory_InventoryHolder;
+            inventory.MainHand = org_bukkit_inventory_MainHand;
+            inventory.MerchantRecipe = org_bukkit_inventory_MerchantRecipe;
+            inventory.Recipe = org_bukkit_inventory_Recipe;
+            inventory.Merchant = org_bukkit_inventory_Merchant;
+            inventory.PlayerInventory = org_bukkit_inventory_PlayerInventory;
+            inventory.ItemFactory = org_bukkit_inventory_ItemFactory;
+            inventory.AbstractHorseInventory = org_bukkit_inventory_AbstractHorseInventory;
+            inventory.AnvilInventory = org_bukkit_inventory_AnvilInventory;
+            inventory.BlockInventoryHolder = org_bukkit_inventory_BlockInventoryHolder;
+            inventory.BeaconInventory = org_bukkit_inventory_BeaconInventory;
+            inventory.FurnaceInventory = org_bukkit_inventory_FurnaceInventory;
+            inventory.BlastingRecipe = org_bukkit_inventory_BlastingRecipe;
+            inventory.CookingRecipe = org_bukkit_inventory_CookingRecipe;
+            inventory.RecipeChoice = org_bukkit_inventory_RecipeChoice;
+            inventory.BrewerInventory = org_bukkit_inventory_BrewerInventory;
+            inventory.CampfireRecipe = org_bukkit_inventory_CampfireRecipe;
+            inventory.CartographyInventory = org_bukkit_inventory_CartographyInventory;
+            inventory.ComplexRecipe = org_bukkit_inventory_ComplexRecipe;
+            inventory.CraftingInventory = org_bukkit_inventory_CraftingInventory;
+            inventory.DoubleChestInventory = org_bukkit_inventory_DoubleChestInventory;
+            inventory.EnchantingInventory = org_bukkit_inventory_EnchantingInventory;
+            inventory.FurnaceRecipe = org_bukkit_inventory_FurnaceRecipe;
+            inventory.GrindstoneInventory = org_bukkit_inventory_GrindstoneInventory;
+            inventory.HorseInventory = org_bukkit_inventory_HorseInventory;
+            inventory.LecternInventory = org_bukkit_inventory_LecternInventory;
+            inventory.LlamaInventory = org_bukkit_inventory_LlamaInventory;
+            inventory.LoomInventory = org_bukkit_inventory_LoomInventory;
+            inventory.MerchantInventory = org_bukkit_inventory_MerchantInventory;
+            inventory.ShapedRecipe = org_bukkit_inventory_ShapedRecipe;
+            inventory.ShapelessRecipe = org_bukkit_inventory_ShapelessRecipe;
+            inventory.SmokingRecipe = org_bukkit_inventory_SmokingRecipe;
+            inventory.StonecutterInventory = org_bukkit_inventory_StonecutterInventory;
+            inventory.StonecuttingRecipe = org_bukkit_inventory_StonecuttingRecipe;
+        })(inventory = bukkit.inventory || (bukkit.inventory = {}));
+    })(bukkit = org.bukkit || (org.bukkit = {}));
+})(org || (org = {}));
+(function (org) {
+    var bukkit;
+    (function (bukkit) {
+        var inventory;
+        (function (inventory) {
+            var meta;
+            (function (meta) {
+                meta.ItemMeta = org_bukkit_inventory_meta_ItemMeta;
+                meta.BannerMeta = org_bukkit_inventory_meta_BannerMeta;
+                meta.BlockDataMeta = org_bukkit_inventory_meta_BlockDataMeta;
+                meta.BlockStateMeta = org_bukkit_inventory_meta_BlockStateMeta;
+                meta.BookMeta = org_bukkit_inventory_meta_BookMeta;
+                meta.BookMeta$Generation = org_bukkit_inventory_meta_BookMeta$Generation;
+                meta.CrossbowMeta = org_bukkit_inventory_meta_CrossbowMeta;
+                meta.Damageable = org_bukkit_inventory_meta_Damageable;
+                meta.EnchantmentStorageMeta = org_bukkit_inventory_meta_EnchantmentStorageMeta;
+                meta.FireworkMeta = org_bukkit_inventory_meta_FireworkMeta;
+                meta.FireworkEffectMeta = org_bukkit_inventory_meta_FireworkEffectMeta;
+                meta.KnowledgeBookMeta = org_bukkit_inventory_meta_KnowledgeBookMeta;
+                meta.LeatherArmorMeta = org_bukkit_inventory_meta_LeatherArmorMeta;
+                meta.MapMeta = org_bukkit_inventory_meta_MapMeta;
+                meta.PotionMeta = org_bukkit_inventory_meta_PotionMeta;
+                meta.Repairable = org_bukkit_inventory_meta_Repairable;
+                meta.SkullMeta = org_bukkit_inventory_meta_SkullMeta;
+                meta.SpawnEggMeta = org_bukkit_inventory_meta_SpawnEggMeta;
+                meta.SuspiciousStewMeta = org_bukkit_inventory_meta_SuspiciousStewMeta;
+                meta.TropicalFishBucketMeta = org_bukkit_inventory_meta_TropicalFishBucketMeta;
+            })(meta = inventory.meta || (inventory.meta = {}));
+        })(inventory = bukkit.inventory || (bukkit.inventory = {}));
+    })(bukkit = org.bukkit || (org.bukkit = {}));
+})(org || (org = {}));
+(function (org) {
+    var bukkit;
+    (function (bukkit) {
+        var enchantments;
+        (function (enchantments) {
+            enchantments.Enchantment = org_bukkit_enchantments_Enchantment;
+            enchantments.EnchantmentTarget = org_bukkit_enchantments_EnchantmentTarget;
+            enchantments.EnchantmentOffer = org_bukkit_enchantments_EnchantmentOffer;
+            enchantments.EnchantmentWrapper = org_bukkit_enchantments_EnchantmentWrapper;
+        })(enchantments = bukkit.enchantments || (bukkit.enchantments = {}));
+    })(bukkit = org.bukkit || (org.bukkit = {}));
+})(org || (org = {}));
+(function (com) {
+    var google;
+    (function (google) {
+        var common;
+        (function (common) {
+            var collect;
+            (function (collect) {
+                collect.Multimap = com_google_common_collect_Multimap;
+                collect.Multiset = com_google_common_collect_Multiset;
+            })(collect = common.collect || (common.collect = {}));
+        })(common = google.common || (google.common = {}));
+    })(google = com.google || (com.google = {}));
+})(com || (com = {}));
+(function (org) {
+    var bukkit;
+    (function (bukkit) {
+        var attribute;
+        (function (attribute) {
+            attribute.Attribute = org_bukkit_attribute_Attribute;
+            attribute.AttributeModifier = org_bukkit_attribute_AttributeModifier;
+            attribute.AttributeModifier$Operation = org_bukkit_attribute_AttributeModifier$Operation;
+            attribute.AttributeInstance = org_bukkit_attribute_AttributeInstance;
+            attribute.Attributable = org_bukkit_attribute_Attributable;
+        })(attribute = bukkit.attribute || (bukkit.attribute = {}));
+    })(bukkit = org.bukkit || (org.bukkit = {}));
+})(org || (org = {}));
+(function (org) {
+    var bukkit;
+    (function (bukkit) {
+        var configuration;
+        (function (configuration) {
+            var serialization;
+            (function (serialization) {
+                serialization.ConfigurationSerializable = org_bukkit_configuration_serialization_ConfigurationSerializable;
+                serialization.ConfigurationSerialization = org_bukkit_configuration_serialization_ConfigurationSerialization;
+                serialization.DelegateDeserialization = org_bukkit_configuration_serialization_DelegateDeserialization;
+                serialization.SerializableAs = org_bukkit_configuration_serialization_SerializableAs;
+            })(serialization = configuration.serialization || (configuration.serialization = {}));
+        })(configuration = bukkit.configuration || (bukkit.configuration = {}));
+    })(bukkit = org.bukkit || (org.bukkit = {}));
+})(org || (org = {}));
+(function (org) {
+    var bukkit;
+    (function (bukkit) {
+        var inventory;
+        (function (inventory) {
+            var meta;
+            (function (meta) {
+                var tags;
+                (function (tags) {
+                    tags.CustomItemTagContainer = org_bukkit_inventory_meta_tags_CustomItemTagContainer;
+                    tags.ItemTagType = org_bukkit_inventory_meta_tags_ItemTagType;
+                    tags.ItemTagAdapterContext = org_bukkit_inventory_meta_tags_ItemTagAdapterContext;
+                })(tags = meta.tags || (meta.tags = {}));
+            })(meta = inventory.meta || (inventory.meta = {}));
+        })(inventory = bukkit.inventory || (bukkit.inventory = {}));
+    })(bukkit = org.bukkit || (org.bukkit = {}));
+})(org || (org = {}));
+(function (org) {
+    var bukkit;
+    (function (bukkit) {
+        var persistence;
+        (function (persistence) {
+            persistence.PersistentDataContainer = org_bukkit_persistence_PersistentDataContainer;
+            persistence.PersistentDataType = org_bukkit_persistence_PersistentDataType;
+            persistence.PersistentDataAdapterContext = org_bukkit_persistence_PersistentDataAdapterContext;
+            persistence.PersistentDataHolder = org_bukkit_persistence_PersistentDataHolder;
+        })(persistence = bukkit.persistence || (bukkit.persistence = {}));
     })(bukkit = org.bukkit || (org.bukkit = {}));
 })(org || (org = {}));
 (function (org) {
@@ -1404,6 +1497,22 @@ export var java;
 (function (org) {
     var bukkit;
     (function (bukkit) {
+        var permissions;
+        (function (permissions) {
+            permissions.PermissionDefault = org_bukkit_permissions_PermissionDefault;
+            permissions.Permission = org_bukkit_permissions_Permission;
+            permissions.PermissionAttachment = org_bukkit_permissions_PermissionAttachment;
+            permissions.PermissionRemovedExecutor = org_bukkit_permissions_PermissionRemovedExecutor;
+            permissions.Permissible = org_bukkit_permissions_Permissible;
+            permissions.ServerOperator = org_bukkit_permissions_ServerOperator;
+            permissions.PermissibleBase = org_bukkit_permissions_PermissibleBase;
+            permissions.PermissionAttachmentInfo = org_bukkit_permissions_PermissionAttachmentInfo;
+        })(permissions = bukkit.permissions || (bukkit.permissions = {}));
+    })(bukkit = org.bukkit || (org.bukkit = {}));
+})(org || (org = {}));
+(function (org) {
+    var bukkit;
+    (function (bukkit) {
         var map;
         (function (map) {
             map.MapView = org_bukkit_map_MapView;
@@ -1411,10 +1520,10 @@ export var java;
             map.MapView$Scale = org_bukkit_map_MapView$Scale;
             map.MapRenderer = org_bukkit_map_MapRenderer;
             map.MapCanvas = org_bukkit_map_MapCanvas;
-            map.MapCursorCollection = org_bukkit_map_MapCursorCollection;
-            map.MapCursor = org_bukkit_map_MapCursor;
             map.MapFont = org_bukkit_map_MapFont;
             map.MapFont$CharacterSprite = org_bukkit_map_MapFont$CharacterSprite;
+            map.MapCursorCollection = org_bukkit_map_MapCursorCollection;
+            map.MapCursor = org_bukkit_map_MapCursor;
             map.MapPalette = org_bukkit_map_MapPalette;
             map.MinecraftFont = org_bukkit_map_MinecraftFont;
         })(map = bukkit.map || (bukkit.map = {}));
@@ -1439,21 +1548,6 @@ export var java;
             util.NumberConversions = org_bukkit_util_NumberConversions;
             util.StringUtil = org_bukkit_util_StringUtil;
         })(util = bukkit.util || (bukkit.util = {}));
-    })(bukkit = org.bukkit || (org.bukkit = {}));
-})(org || (org = {}));
-(function (org) {
-    var bukkit;
-    (function (bukkit) {
-        var configuration;
-        (function (configuration) {
-            var serialization;
-            (function (serialization) {
-                serialization.ConfigurationSerializable = org_bukkit_configuration_serialization_ConfigurationSerializable;
-                serialization.ConfigurationSerialization = org_bukkit_configuration_serialization_ConfigurationSerialization;
-                serialization.DelegateDeserialization = org_bukkit_configuration_serialization_DelegateDeserialization;
-                serialization.SerializableAs = org_bukkit_configuration_serialization_SerializableAs;
-            })(serialization = configuration.serialization || (configuration.serialization = {}));
-        })(configuration = bukkit.configuration || (bukkit.configuration = {}));
     })(bukkit = org.bukkit || (org.bukkit = {}));
 })(org || (org = {}));
 (function (org) {
@@ -1514,6 +1608,7 @@ export var java;
             entity.Pose = org_bukkit_entity_Pose;
             entity.LightningStrike = org_bukkit_entity_LightningStrike;
             entity.Item = org_bukkit_entity_Item;
+            entity.FallingBlock = org_bukkit_entity_FallingBlock;
             entity.AbstractArrow = org_bukkit_entity_AbstractArrow;
             entity.AbstractArrow$PickupStatus = org_bukkit_entity_AbstractArrow$PickupStatus;
             entity.Projectile = org_bukkit_entity_Projectile;
@@ -1523,15 +1618,14 @@ export var java;
             entity.AnimalTamer = org_bukkit_entity_AnimalTamer;
             entity.HumanEntity = org_bukkit_entity_HumanEntity;
             entity.Villager = org_bukkit_entity_Villager;
-            entity.Villager$Type = org_bukkit_entity_Villager$Type;
             entity.Villager$Profession = org_bukkit_entity_Villager$Profession;
+            entity.Villager$Type = org_bukkit_entity_Villager$Type;
             entity.AbstractVillager = org_bukkit_entity_AbstractVillager;
             entity.Ageable = org_bukkit_entity_Ageable;
             entity.Creature = org_bukkit_entity_Creature;
             entity.Mob = org_bukkit_entity_Mob;
             entity.NPC = org_bukkit_entity_NPC;
             entity.Damageable = org_bukkit_entity_Damageable;
-            entity.FallingBlock = org_bukkit_entity_FallingBlock;
             entity.AbstractHorse = org_bukkit_entity_AbstractHorse;
             entity.Horse$Variant = org_bukkit_entity_Horse$Variant;
             entity.Animals = org_bukkit_entity_Animals;
@@ -1670,6 +1764,109 @@ export var java;
 (function (org) {
     var bukkit;
     (function (bukkit) {
+        var command;
+        (function (command) {
+            command.CommandSender = org_bukkit_command_CommandSender;
+            command.Command = org_bukkit_command_Command;
+            command.CommandMap = org_bukkit_command_CommandMap;
+            command.PluginCommand = org_bukkit_command_PluginCommand;
+            command.CommandExecutor = org_bukkit_command_CommandExecutor;
+            command.TabCompleter = org_bukkit_command_TabCompleter;
+            command.PluginIdentifiableCommand = org_bukkit_command_PluginIdentifiableCommand;
+            command.ConsoleCommandSender = org_bukkit_command_ConsoleCommandSender;
+            command.TabExecutor = org_bukkit_command_TabExecutor;
+            command.BlockCommandSender = org_bukkit_command_BlockCommandSender;
+            command.CommandException = org_bukkit_command_CommandException;
+            command.FormattedCommandAlias = org_bukkit_command_FormattedCommandAlias;
+            command.MultipleCommandAlias = org_bukkit_command_MultipleCommandAlias;
+            command.PluginCommandYamlParser = org_bukkit_command_PluginCommandYamlParser;
+            command.ProxiedCommandSender = org_bukkit_command_ProxiedCommandSender;
+            command.RemoteConsoleCommandSender = org_bukkit_command_RemoteConsoleCommandSender;
+            command.SimpleCommandMap = org_bukkit_command_SimpleCommandMap;
+        })(command = bukkit.command || (bukkit.command = {}));
+    })(bukkit = org.bukkit || (org.bukkit = {}));
+})(org || (org = {}));
+(function (org) {
+    var bukkit;
+    (function (bukkit) {
+        var event;
+        (function (event) {
+            var player;
+            (function (player) {
+                player.PlayerTeleportEvent$TeleportCause = org_bukkit_event_player_PlayerTeleportEvent$TeleportCause;
+                player.AsyncPlayerChatEvent = org_bukkit_event_player_AsyncPlayerChatEvent;
+                player.PlayerEvent = org_bukkit_event_player_PlayerEvent;
+                player.AsyncPlayerPreLoginEvent = org_bukkit_event_player_AsyncPlayerPreLoginEvent;
+                player.PlayerPreLoginEvent$Result = org_bukkit_event_player_PlayerPreLoginEvent$Result;
+                player.AsyncPlayerPreLoginEvent$Result = org_bukkit_event_player_AsyncPlayerPreLoginEvent$Result;
+                player.PlayerAdvancementDoneEvent = org_bukkit_event_player_PlayerAdvancementDoneEvent;
+                player.PlayerAnimationEvent = org_bukkit_event_player_PlayerAnimationEvent;
+                player.PlayerAnimationType = org_bukkit_event_player_PlayerAnimationType;
+                player.PlayerArmorStandManipulateEvent = org_bukkit_event_player_PlayerArmorStandManipulateEvent;
+                player.PlayerInteractEntityEvent = org_bukkit_event_player_PlayerInteractEntityEvent;
+                player.PlayerBedEnterEvent = org_bukkit_event_player_PlayerBedEnterEvent;
+                player.PlayerBedEnterEvent$BedEnterResult = org_bukkit_event_player_PlayerBedEnterEvent$BedEnterResult;
+                player.PlayerBedLeaveEvent = org_bukkit_event_player_PlayerBedLeaveEvent;
+                player.PlayerBucketEmptyEvent = org_bukkit_event_player_PlayerBucketEmptyEvent;
+                player.PlayerBucketEvent = org_bukkit_event_player_PlayerBucketEvent;
+                player.PlayerBucketFillEvent = org_bukkit_event_player_PlayerBucketFillEvent;
+                player.PlayerChangedMainHandEvent = org_bukkit_event_player_PlayerChangedMainHandEvent;
+                player.PlayerChangedWorldEvent = org_bukkit_event_player_PlayerChangedWorldEvent;
+                player.PlayerChannelEvent = org_bukkit_event_player_PlayerChannelEvent;
+                player.PlayerChatEvent = org_bukkit_event_player_PlayerChatEvent;
+                player.PlayerChatTabCompleteEvent = org_bukkit_event_player_PlayerChatTabCompleteEvent;
+                player.PlayerCommandPreprocessEvent = org_bukkit_event_player_PlayerCommandPreprocessEvent;
+                player.PlayerCommandSendEvent = org_bukkit_event_player_PlayerCommandSendEvent;
+                player.PlayerDropItemEvent = org_bukkit_event_player_PlayerDropItemEvent;
+                player.PlayerEditBookEvent = org_bukkit_event_player_PlayerEditBookEvent;
+                player.PlayerEggThrowEvent = org_bukkit_event_player_PlayerEggThrowEvent;
+                player.PlayerExpChangeEvent = org_bukkit_event_player_PlayerExpChangeEvent;
+                player.PlayerFishEvent = org_bukkit_event_player_PlayerFishEvent;
+                player.PlayerFishEvent$State = org_bukkit_event_player_PlayerFishEvent$State;
+                player.PlayerGameModeChangeEvent = org_bukkit_event_player_PlayerGameModeChangeEvent;
+                player.PlayerInteractAtEntityEvent = org_bukkit_event_player_PlayerInteractAtEntityEvent;
+                player.PlayerInteractEvent = org_bukkit_event_player_PlayerInteractEvent;
+                player.PlayerItemBreakEvent = org_bukkit_event_player_PlayerItemBreakEvent;
+                player.PlayerItemConsumeEvent = org_bukkit_event_player_PlayerItemConsumeEvent;
+                player.PlayerItemDamageEvent = org_bukkit_event_player_PlayerItemDamageEvent;
+                player.PlayerItemHeldEvent = org_bukkit_event_player_PlayerItemHeldEvent;
+                player.PlayerItemMendEvent = org_bukkit_event_player_PlayerItemMendEvent;
+                player.PlayerJoinEvent = org_bukkit_event_player_PlayerJoinEvent;
+                player.PlayerKickEvent = org_bukkit_event_player_PlayerKickEvent;
+                player.PlayerLevelChangeEvent = org_bukkit_event_player_PlayerLevelChangeEvent;
+                player.PlayerLocaleChangeEvent = org_bukkit_event_player_PlayerLocaleChangeEvent;
+                player.PlayerLoginEvent = org_bukkit_event_player_PlayerLoginEvent;
+                player.PlayerLoginEvent$Result = org_bukkit_event_player_PlayerLoginEvent$Result;
+                player.PlayerMoveEvent = org_bukkit_event_player_PlayerMoveEvent;
+                player.PlayerPickupArrowEvent = org_bukkit_event_player_PlayerPickupArrowEvent;
+                player.PlayerPickupItemEvent = org_bukkit_event_player_PlayerPickupItemEvent;
+                player.PlayerPortalEvent = org_bukkit_event_player_PlayerPortalEvent;
+                player.PlayerTeleportEvent = org_bukkit_event_player_PlayerTeleportEvent;
+                player.PlayerPreLoginEvent = org_bukkit_event_player_PlayerPreLoginEvent;
+                player.PlayerQuitEvent = org_bukkit_event_player_PlayerQuitEvent;
+                player.PlayerRecipeDiscoverEvent = org_bukkit_event_player_PlayerRecipeDiscoverEvent;
+                player.PlayerRegisterChannelEvent = org_bukkit_event_player_PlayerRegisterChannelEvent;
+                player.PlayerResourcePackStatusEvent = org_bukkit_event_player_PlayerResourcePackStatusEvent;
+                player.PlayerResourcePackStatusEvent$Status = org_bukkit_event_player_PlayerResourcePackStatusEvent$Status;
+                player.PlayerRespawnEvent = org_bukkit_event_player_PlayerRespawnEvent;
+                player.PlayerRiptideEvent = org_bukkit_event_player_PlayerRiptideEvent;
+                player.PlayerShearEntityEvent = org_bukkit_event_player_PlayerShearEntityEvent;
+                player.PlayerStatisticIncrementEvent = org_bukkit_event_player_PlayerStatisticIncrementEvent;
+                player.PlayerSwapHandItemsEvent = org_bukkit_event_player_PlayerSwapHandItemsEvent;
+                player.PlayerTakeLecternBookEvent = org_bukkit_event_player_PlayerTakeLecternBookEvent;
+                player.PlayerToggleFlightEvent = org_bukkit_event_player_PlayerToggleFlightEvent;
+                player.PlayerToggleSneakEvent = org_bukkit_event_player_PlayerToggleSneakEvent;
+                player.PlayerToggleSprintEvent = org_bukkit_event_player_PlayerToggleSprintEvent;
+                player.PlayerUnleashEntityEvent = org_bukkit_event_player_PlayerUnleashEntityEvent;
+                player.PlayerUnregisterChannelEvent = org_bukkit_event_player_PlayerUnregisterChannelEvent;
+                player.PlayerVelocityEvent = org_bukkit_event_player_PlayerVelocityEvent;
+            })(player = event.player || (event.player = {}));
+        })(event = bukkit.event || (bukkit.event = {}));
+    })(bukkit = org.bukkit || (org.bukkit = {}));
+})(org || (org = {}));
+(function (org) {
+    var bukkit;
+    (function (bukkit) {
         var event;
         (function (event) {
             var entity;
@@ -1772,109 +1969,6 @@ export var java;
 (function (org) {
     var bukkit;
     (function (bukkit) {
-        var event;
-        (function (event) {
-            var player;
-            (function (player) {
-                player.PlayerTeleportEvent$TeleportCause = org_bukkit_event_player_PlayerTeleportEvent$TeleportCause;
-                player.AsyncPlayerChatEvent = org_bukkit_event_player_AsyncPlayerChatEvent;
-                player.PlayerEvent = org_bukkit_event_player_PlayerEvent;
-                player.AsyncPlayerPreLoginEvent = org_bukkit_event_player_AsyncPlayerPreLoginEvent;
-                player.PlayerPreLoginEvent$Result = org_bukkit_event_player_PlayerPreLoginEvent$Result;
-                player.AsyncPlayerPreLoginEvent$Result = org_bukkit_event_player_AsyncPlayerPreLoginEvent$Result;
-                player.PlayerAdvancementDoneEvent = org_bukkit_event_player_PlayerAdvancementDoneEvent;
-                player.PlayerAnimationEvent = org_bukkit_event_player_PlayerAnimationEvent;
-                player.PlayerAnimationType = org_bukkit_event_player_PlayerAnimationType;
-                player.PlayerArmorStandManipulateEvent = org_bukkit_event_player_PlayerArmorStandManipulateEvent;
-                player.PlayerInteractEntityEvent = org_bukkit_event_player_PlayerInteractEntityEvent;
-                player.PlayerBedEnterEvent = org_bukkit_event_player_PlayerBedEnterEvent;
-                player.PlayerBedEnterEvent$BedEnterResult = org_bukkit_event_player_PlayerBedEnterEvent$BedEnterResult;
-                player.PlayerBedLeaveEvent = org_bukkit_event_player_PlayerBedLeaveEvent;
-                player.PlayerBucketEmptyEvent = org_bukkit_event_player_PlayerBucketEmptyEvent;
-                player.PlayerBucketEvent = org_bukkit_event_player_PlayerBucketEvent;
-                player.PlayerBucketFillEvent = org_bukkit_event_player_PlayerBucketFillEvent;
-                player.PlayerChangedMainHandEvent = org_bukkit_event_player_PlayerChangedMainHandEvent;
-                player.PlayerChangedWorldEvent = org_bukkit_event_player_PlayerChangedWorldEvent;
-                player.PlayerChannelEvent = org_bukkit_event_player_PlayerChannelEvent;
-                player.PlayerChatEvent = org_bukkit_event_player_PlayerChatEvent;
-                player.PlayerChatTabCompleteEvent = org_bukkit_event_player_PlayerChatTabCompleteEvent;
-                player.PlayerCommandPreprocessEvent = org_bukkit_event_player_PlayerCommandPreprocessEvent;
-                player.PlayerCommandSendEvent = org_bukkit_event_player_PlayerCommandSendEvent;
-                player.PlayerDropItemEvent = org_bukkit_event_player_PlayerDropItemEvent;
-                player.PlayerEditBookEvent = org_bukkit_event_player_PlayerEditBookEvent;
-                player.PlayerEggThrowEvent = org_bukkit_event_player_PlayerEggThrowEvent;
-                player.PlayerExpChangeEvent = org_bukkit_event_player_PlayerExpChangeEvent;
-                player.PlayerFishEvent = org_bukkit_event_player_PlayerFishEvent;
-                player.PlayerFishEvent$State = org_bukkit_event_player_PlayerFishEvent$State;
-                player.PlayerGameModeChangeEvent = org_bukkit_event_player_PlayerGameModeChangeEvent;
-                player.PlayerInteractAtEntityEvent = org_bukkit_event_player_PlayerInteractAtEntityEvent;
-                player.PlayerInteractEvent = org_bukkit_event_player_PlayerInteractEvent;
-                player.PlayerItemBreakEvent = org_bukkit_event_player_PlayerItemBreakEvent;
-                player.PlayerItemConsumeEvent = org_bukkit_event_player_PlayerItemConsumeEvent;
-                player.PlayerItemDamageEvent = org_bukkit_event_player_PlayerItemDamageEvent;
-                player.PlayerItemHeldEvent = org_bukkit_event_player_PlayerItemHeldEvent;
-                player.PlayerItemMendEvent = org_bukkit_event_player_PlayerItemMendEvent;
-                player.PlayerJoinEvent = org_bukkit_event_player_PlayerJoinEvent;
-                player.PlayerKickEvent = org_bukkit_event_player_PlayerKickEvent;
-                player.PlayerLevelChangeEvent = org_bukkit_event_player_PlayerLevelChangeEvent;
-                player.PlayerLocaleChangeEvent = org_bukkit_event_player_PlayerLocaleChangeEvent;
-                player.PlayerLoginEvent = org_bukkit_event_player_PlayerLoginEvent;
-                player.PlayerLoginEvent$Result = org_bukkit_event_player_PlayerLoginEvent$Result;
-                player.PlayerMoveEvent = org_bukkit_event_player_PlayerMoveEvent;
-                player.PlayerPickupArrowEvent = org_bukkit_event_player_PlayerPickupArrowEvent;
-                player.PlayerPickupItemEvent = org_bukkit_event_player_PlayerPickupItemEvent;
-                player.PlayerPortalEvent = org_bukkit_event_player_PlayerPortalEvent;
-                player.PlayerTeleportEvent = org_bukkit_event_player_PlayerTeleportEvent;
-                player.PlayerPreLoginEvent = org_bukkit_event_player_PlayerPreLoginEvent;
-                player.PlayerQuitEvent = org_bukkit_event_player_PlayerQuitEvent;
-                player.PlayerRecipeDiscoverEvent = org_bukkit_event_player_PlayerRecipeDiscoverEvent;
-                player.PlayerRegisterChannelEvent = org_bukkit_event_player_PlayerRegisterChannelEvent;
-                player.PlayerResourcePackStatusEvent = org_bukkit_event_player_PlayerResourcePackStatusEvent;
-                player.PlayerResourcePackStatusEvent$Status = org_bukkit_event_player_PlayerResourcePackStatusEvent$Status;
-                player.PlayerRespawnEvent = org_bukkit_event_player_PlayerRespawnEvent;
-                player.PlayerRiptideEvent = org_bukkit_event_player_PlayerRiptideEvent;
-                player.PlayerShearEntityEvent = org_bukkit_event_player_PlayerShearEntityEvent;
-                player.PlayerStatisticIncrementEvent = org_bukkit_event_player_PlayerStatisticIncrementEvent;
-                player.PlayerSwapHandItemsEvent = org_bukkit_event_player_PlayerSwapHandItemsEvent;
-                player.PlayerTakeLecternBookEvent = org_bukkit_event_player_PlayerTakeLecternBookEvent;
-                player.PlayerToggleFlightEvent = org_bukkit_event_player_PlayerToggleFlightEvent;
-                player.PlayerToggleSneakEvent = org_bukkit_event_player_PlayerToggleSneakEvent;
-                player.PlayerToggleSprintEvent = org_bukkit_event_player_PlayerToggleSprintEvent;
-                player.PlayerUnleashEntityEvent = org_bukkit_event_player_PlayerUnleashEntityEvent;
-                player.PlayerUnregisterChannelEvent = org_bukkit_event_player_PlayerUnregisterChannelEvent;
-                player.PlayerVelocityEvent = org_bukkit_event_player_PlayerVelocityEvent;
-            })(player = event.player || (event.player = {}));
-        })(event = bukkit.event || (bukkit.event = {}));
-    })(bukkit = org.bukkit || (org.bukkit = {}));
-})(org || (org = {}));
-(function (org) {
-    var bukkit;
-    (function (bukkit) {
-        var command;
-        (function (command) {
-            command.CommandSender = org_bukkit_command_CommandSender;
-            command.PluginCommand = org_bukkit_command_PluginCommand;
-            command.CommandExecutor = org_bukkit_command_CommandExecutor;
-            command.Command = org_bukkit_command_Command;
-            command.CommandMap = org_bukkit_command_CommandMap;
-            command.TabCompleter = org_bukkit_command_TabCompleter;
-            command.PluginIdentifiableCommand = org_bukkit_command_PluginIdentifiableCommand;
-            command.ConsoleCommandSender = org_bukkit_command_ConsoleCommandSender;
-            command.TabExecutor = org_bukkit_command_TabExecutor;
-            command.BlockCommandSender = org_bukkit_command_BlockCommandSender;
-            command.CommandException = org_bukkit_command_CommandException;
-            command.FormattedCommandAlias = org_bukkit_command_FormattedCommandAlias;
-            command.MultipleCommandAlias = org_bukkit_command_MultipleCommandAlias;
-            command.PluginCommandYamlParser = org_bukkit_command_PluginCommandYamlParser;
-            command.ProxiedCommandSender = org_bukkit_command_ProxiedCommandSender;
-            command.RemoteConsoleCommandSender = org_bukkit_command_RemoteConsoleCommandSender;
-            command.SimpleCommandMap = org_bukkit_command_SimpleCommandMap;
-        })(command = bukkit.command || (bukkit.command = {}));
-    })(bukkit = org.bukkit || (org.bukkit = {}));
-})(org || (org = {}));
-(function (org) {
-    var bukkit;
-    (function (bukkit) {
         var metadata;
         (function (metadata) {
             metadata.MetadataValue = org_bukkit_metadata_MetadataValue;
@@ -1888,18 +1982,6 @@ export var java;
             metadata.MetadataStore = org_bukkit_metadata_MetadataStore;
             metadata.MetadataStoreBase = org_bukkit_metadata_MetadataStoreBase;
         })(metadata = bukkit.metadata || (bukkit.metadata = {}));
-    })(bukkit = org.bukkit || (org.bukkit = {}));
-})(org || (org = {}));
-(function (org) {
-    var bukkit;
-    (function (bukkit) {
-        var persistence;
-        (function (persistence) {
-            persistence.PersistentDataContainer = org_bukkit_persistence_PersistentDataContainer;
-            persistence.PersistentDataType = org_bukkit_persistence_PersistentDataType;
-            persistence.PersistentDataAdapterContext = org_bukkit_persistence_PersistentDataAdapterContext;
-            persistence.PersistentDataHolder = org_bukkit_persistence_PersistentDataHolder;
-        })(persistence = bukkit.persistence || (bukkit.persistence = {}));
     })(bukkit = org.bukkit || (org.bukkit = {}));
 })(org || (org = {}));
 (function (org) {
@@ -1929,8 +2011,8 @@ export var java;
     (function (bukkit) {
         var potion;
         (function (potion) {
-            potion.PotionEffect = org_bukkit_potion_PotionEffect;
             potion.PotionEffectType = org_bukkit_potion_PotionEffectType;
+            potion.PotionEffect = org_bukkit_potion_PotionEffect;
             potion.PotionData = org_bukkit_potion_PotionData;
             potion.PotionType = org_bukkit_potion_PotionType;
             potion.Potion = org_bukkit_potion_Potion;
@@ -1957,14 +2039,14 @@ export var java;
         var scoreboard;
         (function (scoreboard) {
             scoreboard.Scoreboard = org_bukkit_scoreboard_Scoreboard;
-            scoreboard.Objective = org_bukkit_scoreboard_Objective;
-            scoreboard.RenderType = org_bukkit_scoreboard_RenderType;
-            scoreboard.Score = org_bukkit_scoreboard_Score;
-            scoreboard.DisplaySlot = org_bukkit_scoreboard_DisplaySlot;
             scoreboard.Team = org_bukkit_scoreboard_Team;
-            scoreboard.Team$Option = org_bukkit_scoreboard_Team$Option;
-            scoreboard.Team$OptionStatus = org_bukkit_scoreboard_Team$OptionStatus;
             scoreboard.NameTagVisibility = org_bukkit_scoreboard_NameTagVisibility;
+            scoreboard.Team$OptionStatus = org_bukkit_scoreboard_Team$OptionStatus;
+            scoreboard.Team$Option = org_bukkit_scoreboard_Team$Option;
+            scoreboard.DisplaySlot = org_bukkit_scoreboard_DisplaySlot;
+            scoreboard.Objective = org_bukkit_scoreboard_Objective;
+            scoreboard.Score = org_bukkit_scoreboard_Score;
+            scoreboard.RenderType = org_bukkit_scoreboard_RenderType;
             scoreboard.ScoreboardManager = org_bukkit_scoreboard_ScoreboardManager;
             scoreboard.Criterias = org_bukkit_scoreboard_Criterias;
         })(scoreboard = bukkit.scoreboard || (bukkit.scoreboard = {}));
@@ -1980,8 +2062,8 @@ export var java;
                 inventory.InventoryType = org_bukkit_event_inventory_InventoryType;
                 inventory.InventoryType$SlotType = org_bukkit_event_inventory_InventoryType$SlotType;
                 inventory.InventoryClickEvent = org_bukkit_event_inventory_InventoryClickEvent;
-                inventory.ClickType = org_bukkit_event_inventory_ClickType;
                 inventory.InventoryAction = org_bukkit_event_inventory_InventoryAction;
+                inventory.ClickType = org_bukkit_event_inventory_ClickType;
                 inventory.InventoryInteractEvent = org_bukkit_event_inventory_InventoryInteractEvent;
                 inventory.InventoryEvent = org_bukkit_event_inventory_InventoryEvent;
                 inventory.BrewEvent = org_bukkit_event_inventory_BrewEvent;
@@ -2002,19 +2084,6 @@ export var java;
                 inventory.TradeSelectEvent = org_bukkit_event_inventory_TradeSelectEvent;
             })(inventory = event.inventory || (event.inventory = {}));
         })(event = bukkit.event || (bukkit.event = {}));
-    })(bukkit = org.bukkit || (org.bukkit = {}));
-})(org || (org = {}));
-(function (org) {
-    var bukkit;
-    (function (bukkit) {
-        var attribute;
-        (function (attribute) {
-            attribute.AttributeInstance = org_bukkit_attribute_AttributeInstance;
-            attribute.Attribute = org_bukkit_attribute_Attribute;
-            attribute.AttributeModifier = org_bukkit_attribute_AttributeModifier;
-            attribute.AttributeModifier$Operation = org_bukkit_attribute_AttributeModifier$Operation;
-            attribute.Attributable = org_bukkit_attribute_Attributable;
-        })(attribute = bukkit.attribute || (bukkit.attribute = {}));
     })(bukkit = org.bukkit || (org.bukkit = {}));
 })(org || (org = {}));
 (function (org) {
@@ -2063,112 +2132,6 @@ export var java;
 (function (org) {
     var bukkit;
     (function (bukkit) {
-        var plugin;
-        (function (plugin) {
-            var messaging;
-            (function (messaging) {
-                messaging.PluginMessageRecipient = org_bukkit_plugin_messaging_PluginMessageRecipient;
-                messaging.Messenger = org_bukkit_plugin_messaging_Messenger;
-                messaging.PluginMessageListener = org_bukkit_plugin_messaging_PluginMessageListener;
-                messaging.PluginMessageListenerRegistration = org_bukkit_plugin_messaging_PluginMessageListenerRegistration;
-                messaging.ChannelNameTooLongException = org_bukkit_plugin_messaging_ChannelNameTooLongException;
-                messaging.ChannelNotRegisteredException = org_bukkit_plugin_messaging_ChannelNotRegisteredException;
-                messaging.MessageTooLargeException = org_bukkit_plugin_messaging_MessageTooLargeException;
-                messaging.PluginChannelDirection = org_bukkit_plugin_messaging_PluginChannelDirection;
-                messaging.ReservedChannelException = org_bukkit_plugin_messaging_ReservedChannelException;
-                messaging.StandardMessenger = org_bukkit_plugin_messaging_StandardMessenger;
-            })(messaging = plugin.messaging || (plugin.messaging = {}));
-        })(plugin = bukkit.plugin || (bukkit.plugin = {}));
-    })(bukkit = org.bukkit || (org.bukkit = {}));
-})(org || (org = {}));
-(function (org) {
-    var bukkit;
-    (function (bukkit) {
-        var inventory;
-        (function (inventory) {
-            var meta;
-            (function (meta) {
-                meta.ItemMeta = org_bukkit_inventory_meta_ItemMeta;
-                meta.BannerMeta = org_bukkit_inventory_meta_BannerMeta;
-                meta.BlockDataMeta = org_bukkit_inventory_meta_BlockDataMeta;
-                meta.BlockStateMeta = org_bukkit_inventory_meta_BlockStateMeta;
-                meta.BookMeta = org_bukkit_inventory_meta_BookMeta;
-                meta.BookMeta$Generation = org_bukkit_inventory_meta_BookMeta$Generation;
-                meta.CrossbowMeta = org_bukkit_inventory_meta_CrossbowMeta;
-                meta.Damageable = org_bukkit_inventory_meta_Damageable;
-                meta.EnchantmentStorageMeta = org_bukkit_inventory_meta_EnchantmentStorageMeta;
-                meta.FireworkMeta = org_bukkit_inventory_meta_FireworkMeta;
-                meta.FireworkEffectMeta = org_bukkit_inventory_meta_FireworkEffectMeta;
-                meta.KnowledgeBookMeta = org_bukkit_inventory_meta_KnowledgeBookMeta;
-                meta.LeatherArmorMeta = org_bukkit_inventory_meta_LeatherArmorMeta;
-                meta.MapMeta = org_bukkit_inventory_meta_MapMeta;
-                meta.PotionMeta = org_bukkit_inventory_meta_PotionMeta;
-                meta.Repairable = org_bukkit_inventory_meta_Repairable;
-                meta.SkullMeta = org_bukkit_inventory_meta_SkullMeta;
-                meta.SpawnEggMeta = org_bukkit_inventory_meta_SpawnEggMeta;
-                meta.SuspiciousStewMeta = org_bukkit_inventory_meta_SuspiciousStewMeta;
-                meta.TropicalFishBucketMeta = org_bukkit_inventory_meta_TropicalFishBucketMeta;
-            })(meta = inventory.meta || (inventory.meta = {}));
-        })(inventory = bukkit.inventory || (bukkit.inventory = {}));
-    })(bukkit = org.bukkit || (org.bukkit = {}));
-})(org || (org = {}));
-(function (org) {
-    var bukkit;
-    (function (bukkit) {
-        var enchantments;
-        (function (enchantments) {
-            enchantments.Enchantment = org_bukkit_enchantments_Enchantment;
-            enchantments.EnchantmentTarget = org_bukkit_enchantments_EnchantmentTarget;
-            enchantments.EnchantmentOffer = org_bukkit_enchantments_EnchantmentOffer;
-            enchantments.EnchantmentWrapper = org_bukkit_enchantments_EnchantmentWrapper;
-        })(enchantments = bukkit.enchantments || (bukkit.enchantments = {}));
-    })(bukkit = org.bukkit || (org.bukkit = {}));
-})(org || (org = {}));
-(function (com) {
-    var google;
-    (function (google) {
-        var common;
-        (function (common) {
-            var collect;
-            (function (collect) {
-                collect.Multimap = com_google_common_collect_Multimap;
-                collect.Multiset = com_google_common_collect_Multiset;
-            })(collect = common.collect || (common.collect = {}));
-        })(common = google.common || (google.common = {}));
-    })(google = com.google || (com.google = {}));
-})(com || (com = {}));
-(function (org) {
-    var bukkit;
-    (function (bukkit) {
-        var inventory;
-        (function (inventory) {
-            var meta;
-            (function (meta) {
-                var tags;
-                (function (tags) {
-                    tags.CustomItemTagContainer = org_bukkit_inventory_meta_tags_CustomItemTagContainer;
-                    tags.ItemTagAdapterContext = org_bukkit_inventory_meta_tags_ItemTagAdapterContext;
-                    tags.ItemTagType = org_bukkit_inventory_meta_tags_ItemTagType;
-                })(tags = meta.tags || (meta.tags = {}));
-            })(meta = inventory.meta || (inventory.meta = {}));
-        })(inventory = bukkit.inventory || (bukkit.inventory = {}));
-    })(bukkit = org.bukkit || (org.bukkit = {}));
-})(org || (org = {}));
-(function (org) {
-    var bukkit;
-    (function (bukkit) {
-        var scheduler;
-        (function (scheduler) {
-            scheduler.BukkitScheduler = org_bukkit_scheduler_BukkitScheduler;
-            scheduler.BukkitTask = org_bukkit_scheduler_BukkitTask;
-            scheduler.BukkitRunnable = org_bukkit_scheduler_BukkitRunnable;
-            scheduler.BukkitWorker = org_bukkit_scheduler_BukkitWorker;
-        })(scheduler = bukkit.scheduler || (bukkit.scheduler = {}));
-    })(bukkit = org.bukkit || (org.bukkit = {}));
-})(org || (org = {}));
-(function (org) {
-    var bukkit;
-    (function (bukkit) {
         var configuration;
         (function (configuration) {
             var file;
@@ -2201,6 +2164,33 @@ export var java;
 (function (org) {
     var bukkit;
     (function (bukkit) {
+        var scheduler;
+        (function (scheduler) {
+            scheduler.BukkitScheduler = org_bukkit_scheduler_BukkitScheduler;
+            scheduler.BukkitTask = org_bukkit_scheduler_BukkitTask;
+            scheduler.BukkitRunnable = org_bukkit_scheduler_BukkitRunnable;
+            scheduler.BukkitWorker = org_bukkit_scheduler_BukkitWorker;
+        })(scheduler = bukkit.scheduler || (bukkit.scheduler = {}));
+    })(bukkit = org.bukkit || (org.bukkit = {}));
+})(org || (org = {}));
+(function (org) {
+    var bukkit;
+    (function (bukkit) {
+        var help;
+        (function (help) {
+            help.HelpMap = org_bukkit_help_HelpMap;
+            help.HelpTopicFactory = org_bukkit_help_HelpTopicFactory;
+            help.HelpTopic = org_bukkit_help_HelpTopic;
+            help.GenericCommandHelpTopic = org_bukkit_help_GenericCommandHelpTopic;
+            help.HelpTopicComparator = org_bukkit_help_HelpTopicComparator;
+            help.HelpTopicComparator$TopicNameComparator = org_bukkit_help_HelpTopicComparator$TopicNameComparator;
+            help.IndexHelpTopic = org_bukkit_help_IndexHelpTopic;
+        })(help = bukkit.help || (bukkit.help = {}));
+    })(bukkit = org.bukkit || (org.bukkit = {}));
+})(org || (org = {}));
+(function (org) {
+    var bukkit;
+    (function (bukkit) {
         var boss;
         (function (boss) {
             boss.BossBar = org_bukkit_boss_BossBar;
@@ -2214,16 +2204,14 @@ export var java;
 (function (org) {
     var bukkit;
     (function (bukkit) {
-        var help;
-        (function (help) {
-            help.HelpMap = org_bukkit_help_HelpMap;
-            help.HelpTopic = org_bukkit_help_HelpTopic;
-            help.HelpTopicFactory = org_bukkit_help_HelpTopicFactory;
-            help.GenericCommandHelpTopic = org_bukkit_help_GenericCommandHelpTopic;
-            help.HelpTopicComparator = org_bukkit_help_HelpTopicComparator;
-            help.HelpTopicComparator$TopicNameComparator = org_bukkit_help_HelpTopicComparator$TopicNameComparator;
-            help.IndexHelpTopic = org_bukkit_help_IndexHelpTopic;
-        })(help = bukkit.help || (bukkit.help = {}));
+        var plugin;
+        (function (plugin) {
+            var java;
+            (function (java) {
+                java.JavaPlugin = org_bukkit_plugin_java_JavaPlugin;
+                java.JavaPluginLoader = org_bukkit_plugin_java_JavaPluginLoader;
+            })(java = plugin.java || (plugin.java = {}));
+        })(plugin = bukkit.plugin || (bukkit.plugin = {}));
     })(bukkit = org.bukkit || (org.bukkit = {}));
 })(org || (org = {}));
 export var fr;
@@ -2232,10 +2220,10 @@ export var fr;
     (function (minuskube) {
         var inv;
         (function (inv) {
-            inv.SmartInventory$Builder = fr_minuskube_inv_SmartInventory$Builder;
-            inv.SmartInventory = fr_minuskube_inv_SmartInventory;
-            inv.ClickableItem = fr_minuskube_inv_ClickableItem;
             inv.InventoryManager = fr_minuskube_inv_InventoryManager;
+            inv.SmartInventory = fr_minuskube_inv_SmartInventory;
+            inv.SmartInventory$Builder = fr_minuskube_inv_SmartInventory$Builder;
+            inv.ClickableItem = fr_minuskube_inv_ClickableItem;
             inv.InventoryListener = fr_minuskube_inv_InventoryListener;
         })(inv = minuskube.inv || (minuskube.inv = {}));
     })(minuskube = fr.minuskube || (fr.minuskube = {}));
@@ -2269,48 +2257,45 @@ export var fr;
         })(inv = minuskube.inv || (minuskube.inv = {}));
     })(minuskube = fr.minuskube || (fr.minuskube = {}));
 })(fr || (fr = {}));
-(function (org) {
-    var bukkit;
-    (function (bukkit) {
-        var plugin;
-        (function (plugin) {
-            var java;
-            (function (java) {
-                java.JavaPlugin = org_bukkit_plugin_java_JavaPlugin;
-                java.JavaPluginLoader = org_bukkit_plugin_java_JavaPluginLoader;
-            })(java = plugin.java || (plugin.java = {}));
-        })(plugin = bukkit.plugin || (bukkit.plugin = {}));
-    })(bukkit = org.bukkit || (org.bukkit = {}));
-})(org || (org = {}));
+(function (com) {
+    var smc;
+    (function (smc) {
+        var utils;
+        (function (utils) {
+            utils.ItemBuilder = com_smc_utils_ItemBuilder;
+            utils.MysqlWrapper = com_smc_utils_MysqlWrapper;
+        })(utils = smc.utils || (smc.utils = {}));
+    })(smc = com.smc || (com.smc = {}));
+})(com || (com = {}));
 (function (java) {
     var sql;
     (function (sql) {
-        sql.Connection = java_sql_Connection;
         sql.Statement = java_sql_Statement;
-        sql.SQLWarning = java_sql_SQLWarning;
-        sql.SQLException = java_sql_SQLException;
+        sql.Connection = java_sql_Connection;
+        sql.PreparedStatement = java_sql_PreparedStatement;
+        sql._Array = java_sql__Array;
         sql.ResultSet = java_sql_ResultSet;
         sql.Ref = java_sql_Ref;
         sql.Date = java_sql_Date;
-        sql._Array = java_sql__Array;
         sql.Time = java_sql_Time;
+        sql.SQLWarning = java_sql_SQLWarning;
+        sql.SQLException = java_sql_SQLException;
         sql.ResultSetMetaData = java_sql_ResultSetMetaData;
         sql.Wrapper = java_sql_Wrapper;
-        sql.NClob = java_sql_NClob;
-        sql.Clob = java_sql_Clob;
-        sql.Timestamp = java_sql_Timestamp;
-        sql.SQLXML = java_sql_SQLXML;
-        sql.RowId = java_sql_RowId;
-        sql.Blob = java_sql_Blob;
         sql.SQLType = java_sql_SQLType;
-        sql.PreparedStatement = java_sql_PreparedStatement;
+        sql.Timestamp = java_sql_Timestamp;
+        sql.Blob = java_sql_Blob;
+        sql.Clob = java_sql_Clob;
+        sql.NClob = java_sql_NClob;
+        sql.RowId = java_sql_RowId;
+        sql.SQLXML = java_sql_SQLXML;
         sql.ParameterMetaData = java_sql_ParameterMetaData;
         sql.ShardingKey = java_sql_ShardingKey;
-        sql.Savepoint = java_sql_Savepoint;
-        sql.Struct = java_sql_Struct;
-        sql.CallableStatement = java_sql_CallableStatement;
         sql.DatabaseMetaData = java_sql_DatabaseMetaData;
         sql.RowIdLifetime = java_sql_RowIdLifetime;
+        sql.Struct = java_sql_Struct;
+        sql.CallableStatement = java_sql_CallableStatement;
+        sql.Savepoint = java_sql_Savepoint;
     })(sql = java.sql || (java.sql = {}));
 })(java || (java = {}));
 (function (com) {
@@ -2325,6 +2310,16 @@ export var fr;
     })(smc = com.smc || (com.smc = {}));
 })(com || (com = {}));
 (function (com) {
+    var smc;
+    (function (smc) {
+        var smartinvs;
+        (function (smartinvs) {
+            smartinvs.SmartInventoryProvider = com_smc_smartinvs_SmartInventoryProvider;
+            smartinvs.SmartInventory = com_smc_smartinvs_SmartInventory;
+        })(smartinvs = smc.smartinvs || (smc.smartinvs = {}));
+    })(smc = com.smc || (com.smc = {}));
+})(com || (com = {}));
+(function (com) {
     var google;
     (function (google) {
         var common;
@@ -2333,8 +2328,8 @@ export var fr;
             (function (io) {
                 io.ByteStreams = com_google_common_io_ByteStreams;
                 io.ByteProcessor = com_google_common_io_ByteProcessor;
-                io.ByteArrayDataInput = com_google_common_io_ByteArrayDataInput;
                 io.ByteArrayDataOutput = com_google_common_io_ByteArrayDataOutput;
+                io.ByteArrayDataInput = com_google_common_io_ByteArrayDataInput;
             })(io = common.io || (common.io = {}));
         })(common = google.common || (google.common = {}));
     })(google = com.google || (com.google = {}));

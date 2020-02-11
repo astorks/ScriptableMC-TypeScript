@@ -9,11 +9,11 @@ import Material from '../../../../org/bukkit/Material.js';
 export default interface EntityBreakDoorEvent extends EntityChangeBlockEvent {
     getEntity(): LivingEntity;
     getEntity(): Entity;
+    getHandlers(): HandlerList;
     getBlock(): Block;
     getBlockData(): BlockData;
-    setCancelled(cancel: boolean): void;
     isCancelled(): boolean;
-    getHandlers(): HandlerList;
+    setCancelled(cancel: boolean): void;
     getTo(): Material;
     getEntityType(): EntityType;
     getEventName(): string;

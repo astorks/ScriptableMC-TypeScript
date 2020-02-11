@@ -122,11 +122,11 @@ export default class Enchantment {
     static getByName(...args) {
         return Enchantment.$javaClass.getByName(...args);
     }
-    static isAcceptingRegistrations(...args) {
-        return Enchantment.$javaClass.isAcceptingRegistrations(...args);
-    }
     static registerEnchantment(...args) {
         return Enchantment.$javaClass.registerEnchantment(...args);
+    }
+    static isAcceptingRegistrations(...args) {
+        return Enchantment.$javaClass.isAcceptingRegistrations(...args);
     }
     static stopAcceptingRegistrations(...args) {
         return Enchantment.$javaClass.stopAcceptingRegistrations(...args);

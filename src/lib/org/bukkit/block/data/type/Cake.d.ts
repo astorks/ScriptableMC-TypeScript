@@ -1,9 +1,9 @@
 import BlockData from '../../../../../org/bukkit/block/data/BlockData.js';
 import Material from '../../../../../org/bukkit/Material.js';
 export default interface Cake extends BlockData {
+    setBites(arg0: number): void;
     getMaximumBites(): number;
     getBites(): number;
-    setBites(arg0: number): void;
     clone(): any;
     clone(): BlockData;
     matches(arg0: BlockData): boolean;

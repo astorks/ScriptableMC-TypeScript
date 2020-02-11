@@ -3,9 +3,9 @@ import PrintWriter from '../../java/io/PrintWriter.js';
 export default interface SQLException {
     iterator(): any;
     getNextException(): SQLException;
+    getSQLState(): string;
     getErrorCode(): number;
     setNextException(ex: SQLException): void;
-    getSQLState(): string;
     printStackTrace(s: PrintStream): void;
     printStackTrace(): void;
     printStackTrace(s: PrintWriter): void;

@@ -4,19 +4,19 @@ import JavaPlugin from '../../../../org/bukkit/plugin/java/JavaPlugin.js';
 import Listener from '../../../../org/bukkit/event/Listener.js';
 import ScriptablePluginContext from '../../../../com/pixlfox/scriptablemc/core/ScriptablePluginContext.js';
 export default interface ScriptablePluginEngine extends Listener {
-    disablePlugin(pluginContext: ScriptablePluginContext): void;
-    enablePlugin(pluginContext: ScriptablePluginContext): void;
-    getExtractLibs(): boolean;
-    loadPlugin(scriptableClass: any): ScriptablePluginContext;
+    getRootScriptsFolder(): string;
+    evalCommandSenderJs(source: string, sender: CommandSender): any;
+    getDebugEnabled(): boolean;
+    getBootstrapPlugin(): JavaPlugin;
     evalFile(filePath: string): any;
     evalFile(scriptFile: File): any;
-    eval(source: any): any;
-    enableAllPlugins(): void;
+    loadPlugin(scriptableClass: any): ScriptablePluginContext;
+    enablePlugin(pluginContext: ScriptablePluginContext): void;
+    getExtractLibs(): boolean;
     evalJs(source: string): any;
-    getBootstrapPlugin(): JavaPlugin;
-    getDebugEnabled(): boolean;
-    evalCommandSenderJs(source: string, sender: CommandSender): any;
-    getRootScriptsFolder(): string;
+    eval(source: any): any;
+    disablePlugin(pluginContext: ScriptablePluginContext): void;
+    enableAllPlugins(): void;
 }
 export default class ScriptablePluginEngine {
     static get $javaClass(): any;

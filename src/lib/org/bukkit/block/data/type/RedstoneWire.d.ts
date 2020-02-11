@@ -5,11 +5,11 @@ import Material from '../../../../../org/bukkit/Material.js';
 import RedstoneWire$Connection from '../../../../../org/bukkit/block/data/type/RedstoneWire$Connection.js';
 export default interface RedstoneWire extends AnaloguePowerable {
     getFace(arg0: BlockFace): RedstoneWire$Connection;
-    setFace(arg0: BlockFace, arg1: RedstoneWire$Connection): void;
     getAllowedFaces(): any;
-    setPower(arg0: number): void;
-    getMaximumPower(): number;
+    setFace(arg0: BlockFace, arg1: RedstoneWire$Connection): void;
     getPower(): number;
+    getMaximumPower(): number;
+    setPower(arg0: number): void;
     clone(): any;
     clone(): BlockData;
     matches(arg0: BlockData): boolean;

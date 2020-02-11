@@ -10,9 +10,9 @@ export default interface StonecuttingRecipe extends Recipe, Keyed {
     getResult(): ItemStack;
     getInput(): ItemStack;
     setInputChoice(input: RecipeChoice): StonecuttingRecipe;
-    getInputChoice(): RecipeChoice;
-    getGroup(): string;
     setGroup(group: string): void;
+    getGroup(): string;
+    getInputChoice(): RecipeChoice;
 }
 export default class StonecuttingRecipe {
     static get $javaClass(): any;

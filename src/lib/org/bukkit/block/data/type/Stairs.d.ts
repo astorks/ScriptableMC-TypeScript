@@ -7,10 +7,10 @@ import Material from '../../../../../org/bukkit/Material.js';
 import Stairs$Shape from '../../../../../org/bukkit/block/data/type/Stairs$Shape.js';
 import Waterlogged from '../../../../../org/bukkit/block/data/Waterlogged.js';
 export default interface Stairs extends Bisected, Directional, Waterlogged {
-    setShape(arg0: Stairs$Shape): void;
     getShape(): Stairs$Shape;
-    setHalf(arg0: Bisected$Half): void;
+    setShape(arg0: Stairs$Shape): void;
     getHalf(): Bisected$Half;
+    setHalf(arg0: Bisected$Half): void;
     clone(): any;
     clone(): BlockData;
     matches(arg0: BlockData): boolean;

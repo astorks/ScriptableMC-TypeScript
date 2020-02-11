@@ -5,10 +5,10 @@ export default interface Score {
     getEntry(): string;
     getScoreboard(): Scoreboard;
     getPlayer(): OfflinePlayer;
-    getObjective(): Objective;
-    getScore(): number;
     isScoreSet(): boolean;
     setScore(arg0: number): void;
+    getObjective(): Objective;
+    getScore(): number;
 }
 export default class Score {
     static get $javaClass(): any;

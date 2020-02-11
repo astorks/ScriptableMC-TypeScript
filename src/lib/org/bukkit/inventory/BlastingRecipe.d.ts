@@ -9,13 +9,13 @@ export default interface BlastingRecipe extends CookingRecipe {
     getResult(): ItemStack;
     getInput(): ItemStack;
     setInputChoice(input: RecipeChoice): CookingRecipe;
-    getInputChoice(): RecipeChoice;
+    getExperience(): number;
+    setGroup(group: string): void;
+    getCookingTime(): number;
     setExperience(experience: number): void;
     setCookingTime(cookingTime: number): void;
     getGroup(): string;
-    getCookingTime(): number;
-    getExperience(): number;
-    setGroup(group: string): void;
+    getInputChoice(): RecipeChoice;
 }
 export default class BlastingRecipe {
     static get $javaClass(): any;

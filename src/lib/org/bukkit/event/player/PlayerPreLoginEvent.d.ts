@@ -5,13 +5,13 @@ export default interface PlayerPreLoginEvent extends Event {
     getName(): string;
     getAddress(): any;
     setResult(result: PlayerPreLoginEvent$Result): void;
-    getResult(): PlayerPreLoginEvent$Result;
-    getUniqueId(): string;
     getHandlers(): HandlerList;
+    getUniqueId(): string;
+    getResult(): PlayerPreLoginEvent$Result;
+    allow(): void;
+    getKickMessage(): string;
     setKickMessage(message: string): void;
     disallow(result: PlayerPreLoginEvent$Result, message: string): void;
-    getKickMessage(): string;
-    allow(): void;
     getEventName(): string;
     isAsynchronous(): boolean;
 }

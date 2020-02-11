@@ -1,9 +1,9 @@
 export default interface ClickType {
-    isCreativeAction(): boolean;
-    isKeyboardClick(): boolean;
+    isShiftClick(): boolean;
     isRightClick(): boolean;
     isLeftClick(): boolean;
-    isShiftClick(): boolean;
+    isCreativeAction(): boolean;
+    isKeyboardClick(): boolean;
     name(): string;
     compareTo(arg0: any): number;
     compareTo(o: any): number;

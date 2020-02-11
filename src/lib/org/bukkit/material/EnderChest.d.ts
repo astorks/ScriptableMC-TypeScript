@@ -10,11 +10,11 @@ export default interface EnderChest extends DirectionalContainer {
     clone(): EnderChest;
     getFacing(): BlockFace;
     setFacingDirection(face: BlockFace): void;
-    setData(data: number): void;
-    getData(): number;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class EnderChest {
     static get $javaClass(): any;

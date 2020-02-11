@@ -7,11 +7,11 @@ import Item from '../../../../org/bukkit/entity/Item.js';
 import Location from '../../../../org/bukkit/Location.js';
 export default interface ItemDespawnEvent extends EntityEvent, Cancellable {
     getLocation(): Location;
-    getEntity(): Item;
-    getEntity(): Entity;
-    setCancelled(cancel: boolean): void;
-    isCancelled(): boolean;
     getHandlers(): HandlerList;
+    getEntity(): Entity;
+    getEntity(): Item;
+    isCancelled(): boolean;
+    setCancelled(cancel: boolean): void;
     getEntityType(): EntityType;
     getEventName(): string;
     isAsynchronous(): boolean;

@@ -5,8 +5,8 @@ import PluginCommand from "./org/bukkit/command/PluginCommand.js";
 import Player from "./org/bukkit/entity/Player.js";
 import PluginMessageListenerRegistration from "./org/bukkit/plugin/messaging/PluginMessageListenerRegistration.js";
 import OfflinePlayer from "./org/bukkit/OfflinePlayer.js";
-import FileWrapper from "./com/smc/utils/FileWrapper.js";
 import MysqlWrapper from "./com/smc/utils/MysqlWrapper.js";
+import File from "./java/io/File.js";
 declare type Type<T> = {
     new (...args: any[]): T;
 };
@@ -22,7 +22,7 @@ export default class JsPlugin {
     unregisterIncomingPluginChannel(channel: string): void;
     registerOutgoingPluginChannel(channel: string): void;
     unregisterOutgoingPluginChannel(channel: string): void;
-    getFile(pathName: string): FileWrapper;
+    getFile(pathName: string): File;
     newMysqlInstance(host: string, port: number, database: string, username: string, password: string): MysqlWrapper;
     mysqlFromConfig(configObject: {
         host: string;

@@ -2,9 +2,9 @@ import BlockData from '../../../../org/bukkit/block/data/BlockData.js';
 import Material from '../../../../org/bukkit/Material.js';
 import Rail$Shape from '../../../../org/bukkit/block/data/Rail$Shape.js';
 export default interface Rail extends BlockData {
-    getShapes(): any;
-    setShape(arg0: Rail$Shape): void;
     getShape(): Rail$Shape;
+    setShape(arg0: Rail$Shape): void;
+    getShapes(): any;
     clone(): any;
     clone(): BlockData;
     matches(arg0: BlockData): boolean;

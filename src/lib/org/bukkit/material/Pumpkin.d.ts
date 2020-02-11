@@ -10,11 +10,11 @@ export default interface Pumpkin extends MaterialData, Directional {
     getFacing(): BlockFace;
     isLit(): boolean;
     setFacingDirection(face: BlockFace): void;
-    setData(data: number): void;
-    getData(): number;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class Pumpkin {
     static get $javaClass(): any;

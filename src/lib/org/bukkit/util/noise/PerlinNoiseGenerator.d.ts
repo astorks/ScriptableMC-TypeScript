@@ -13,15 +13,15 @@ export default interface PerlinNoiseGenerator extends NoiseGenerator {
 }
 export default class PerlinNoiseGenerator {
     static get $javaClass(): any;
-    constructor(seed: number);
-    constructor(world: World);
     constructor(rand: any);
+    constructor(world: World);
+    constructor(seed: number);
     static getInstance(): PerlinNoiseGenerator;
     static getNoise(x: number, y: number, z: number, octaves: number, frequency: number, amplitude: number): number;
-    static getNoise(x: number, octaves: number, frequency: number, amplitude: number): number;
     static getNoise(x: number, y: number, octaves: number, frequency: number, amplitude: number): number;
-    static getNoise(x: number): number;
+    static getNoise(x: number, octaves: number, frequency: number, amplitude: number): number;
     static getNoise(x: number, y: number, z: number): number;
     static getNoise(x: number, y: number): number;
+    static getNoise(x: number): number;
     static floor(x: number): number;
 }

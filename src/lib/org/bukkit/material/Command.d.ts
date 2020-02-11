@@ -6,13 +6,13 @@ export default interface Command extends MaterialData, Redstone {
     clone(): Command;
     clone(): MaterialData;
     clone(): any;
-    setPowered(bool: boolean): void;
     isPowered(): boolean;
-    setData(data: number): void;
-    getData(): number;
+    setPowered(bool: boolean): void;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class Command {
     static get $javaClass(): any;

@@ -9,19 +9,19 @@ export default interface TripwireHook extends SimpleAttachableMaterialData, Reds
     clone(): TripwireHook;
     clone(): any;
     clone(): MaterialData;
-    setConnected(connected: boolean): void;
-    isConnected(): boolean;
+    isPowered(): boolean;
     setActivated(act: boolean): void;
     isActivated(): boolean;
-    isPowered(): boolean;
+    isConnected(): boolean;
+    setConnected(connected: boolean): void;
     setFacingDirection(face: BlockFace): void;
     getAttachedFace(): BlockFace;
     getFacing(): BlockFace;
-    setData(data: number): void;
-    getData(): number;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class TripwireHook {
     static get $javaClass(): any;

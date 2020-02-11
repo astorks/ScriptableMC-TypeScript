@@ -2,13 +2,13 @@ import PrintStream from '../../java/io/PrintStream.js';
 import PrintWriter from '../../java/io/PrintWriter.js';
 import SQLException from '../../java/sql/SQLException.js';
 export default interface SQLWarning extends SQLException {
-    getNextWarning(): SQLWarning;
     setNextWarning(w: SQLWarning): void;
+    getNextWarning(): SQLWarning;
     iterator(): any;
     getNextException(): SQLException;
+    getSQLState(): string;
     getErrorCode(): number;
     setNextException(ex: SQLException): void;
-    getSQLState(): string;
     printStackTrace(s: PrintStream): void;
     printStackTrace(): void;
     printStackTrace(s: PrintWriter): void;

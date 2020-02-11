@@ -8,16 +8,16 @@ export default interface Stairs extends MaterialData, Directional {
     clone(): Stairs;
     clone(): any;
     getFacing(): BlockFace;
-    setInverted(inv: boolean): void;
-    isInverted(): boolean;
-    getDescendingDirection(): BlockFace;
-    getAscendingDirection(): BlockFace;
     setFacingDirection(face: BlockFace): void;
-    setData(data: number): void;
-    getData(): number;
+    getAscendingDirection(): BlockFace;
+    getDescendingDirection(): BlockFace;
+    isInverted(): boolean;
+    setInverted(inv: boolean): void;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class Stairs {
     static get $javaClass(): any;

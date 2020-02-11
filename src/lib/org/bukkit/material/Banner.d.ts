@@ -11,11 +11,11 @@ export default interface Banner extends MaterialData, Attachable {
     setFacingDirection(face: BlockFace): void;
     getAttachedFace(): BlockFace;
     isWallBanner(): boolean;
-    setData(data: number): void;
-    getData(): number;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class Banner {
     static get $javaClass(): any;

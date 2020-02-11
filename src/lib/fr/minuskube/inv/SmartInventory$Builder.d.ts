@@ -11,9 +11,9 @@ export default interface SmartInventory$Builder {
     provider(provider: InventoryProvider): SmartInventory$Builder;
     build(): SmartInventory;
     listener(listener: InventoryListener): SmartInventory$Builder;
+    title(title: string): SmartInventory$Builder;
     closeable(closeable: boolean): SmartInventory$Builder;
     manager(manager: InventoryManager): SmartInventory$Builder;
-    title(title: string): SmartInventory$Builder;
 }
 export default class SmartInventory$Builder {
     static get $javaClass(): any;

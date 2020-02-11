@@ -4,8 +4,8 @@ import Vehicle from '../../../../org/bukkit/entity/Vehicle.js';
 import VehicleEvent from '../../../../org/bukkit/event/vehicle/VehicleEvent.js';
 export default interface VehicleMoveEvent extends VehicleEvent {
     getHandlers(): HandlerList;
-    getTo(): Location;
     getFrom(): Location;
+    getTo(): Location;
     getVehicle(): Vehicle;
     getEventName(): string;
     isAsynchronous(): boolean;

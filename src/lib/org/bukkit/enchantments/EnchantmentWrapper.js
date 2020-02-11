@@ -122,11 +122,11 @@ export default class EnchantmentWrapper {
     static getByName(...args) {
         return EnchantmentWrapper.$javaClass.getByName(...args);
     }
-    static isAcceptingRegistrations(...args) {
-        return EnchantmentWrapper.$javaClass.isAcceptingRegistrations(...args);
-    }
     static registerEnchantment(...args) {
         return EnchantmentWrapper.$javaClass.registerEnchantment(...args);
+    }
+    static isAcceptingRegistrations(...args) {
+        return EnchantmentWrapper.$javaClass.isAcceptingRegistrations(...args);
     }
     static stopAcceptingRegistrations(...args) {
         return EnchantmentWrapper.$javaClass.stopAcceptingRegistrations(...args);

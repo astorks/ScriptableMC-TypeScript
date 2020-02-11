@@ -4,13 +4,13 @@ export default interface YamlRepresenter {
     addClassTag(arg0: any, arg1: any): any;
     setPropertyUtils(propertyUtils: any): void;
     addTypeDescription(td: any): any;
-    getDefaultFlowStyle(): any;
-    getDefaultScalarStyle(): any;
-    isExplicitPropertyUtils(): boolean;
-    setDefaultScalarStyle(defaultStyle: any): void;
-    represent(data: any): any;
     getPropertyUtils(): any;
+    represent(data: any): any;
     setDefaultFlowStyle(defaultFlowStyle: any): void;
+    setDefaultScalarStyle(defaultStyle: any): void;
+    getDefaultScalarStyle(): any;
+    getDefaultFlowStyle(): any;
+    isExplicitPropertyUtils(): boolean;
 }
 export default class YamlRepresenter {
     static get $javaClass(): any;

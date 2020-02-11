@@ -5,13 +5,13 @@ import Player from '../../../../org/bukkit/entity/Player.js';
 import PlayerEvent from '../../../../org/bukkit/event/player/PlayerEvent.js';
 export default interface PlayerEggThrowEvent extends PlayerEvent {
     getHandlers(): HandlerList;
+    getHatchingType(): EntityType;
     setHatching(hatching: boolean): void;
     setHatchingType(hatchType: EntityType): void;
-    getHatchingType(): EntityType;
-    setNumHatches(numHatches: number): void;
+    getNumHatches(): number;
     getEgg(): Egg;
     isHatching(): boolean;
-    getNumHatches(): number;
+    setNumHatches(numHatches: number): void;
     getPlayer(): Player;
     getEventName(): string;
     isAsynchronous(): boolean;

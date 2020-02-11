@@ -7,11 +7,11 @@ export default interface RedstoneWire extends MaterialData, Redstone {
     clone(): RedstoneWire;
     clone(): MaterialData;
     isPowered(): boolean;
-    setData(data: number): void;
-    getData(): number;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class RedstoneWire {
     static get $javaClass(): any;

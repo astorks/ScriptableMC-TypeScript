@@ -9,21 +9,21 @@ export default interface PluginDescriptionFile {
     getPermissions(): Array<Permission>;
     save(writer: Writer): void;
     getVersion(): string;
-    getDescription(): string;
-    getFullName(): string;
-    getMain(): string;
-    getLoad(): PluginLoadOrder;
     getAuthors(): Array<string>;
-    getWebsite(): string;
+    getAwareness(): any;
+    getClassLoaderOf(): string;
+    getCommands(): any;
+    getMain(): string;
     getDepend(): Array<string>;
     getLoadBefore(): Array<string>;
-    getRawName(): string;
-    getAPIVersion(): string;
-    getCommands(): any;
-    getAwareness(): any;
-    getSoftDepend(): Array<string>;
-    getClassLoaderOf(): string;
     getPrefix(): string;
+    getRawName(): string;
+    getLoad(): PluginLoadOrder;
+    getWebsite(): string;
+    getSoftDepend(): Array<string>;
+    getAPIVersion(): string;
+    getFullName(): string;
+    getDescription(): string;
     getPermissionDefault(): PermissionDefault;
 }
 export default class PluginDescriptionFile {

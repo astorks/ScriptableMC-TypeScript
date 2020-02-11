@@ -8,13 +8,13 @@ export default interface SlotIterator {
     previous(): SlotIterator;
     row(arg0: number): SlotIterator;
     row(): number;
-    allowOverride(arg0: boolean): SlotIterator;
-    blacklist(arg0: SlotPos): SlotIterator;
     blacklist(arg0: number, arg1: number): SlotIterator;
-    doesAllowOverride(): boolean;
+    blacklist(arg0: SlotPos): SlotIterator;
     ended(): boolean;
     column(): number;
     column(arg0: number): SlotIterator;
+    doesAllowOverride(): boolean;
+    allowOverride(arg0: boolean): SlotIterator;
 }
 export default class SlotIterator {
     static get $javaClass(): any;

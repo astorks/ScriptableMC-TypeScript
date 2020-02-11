@@ -16,9 +16,6 @@ export default interface ObjectInputStream extends InputStream {
     available(): number;
     readUTF(): string;
     readFloat(): number;
-    readFully(buf: Array<number>, off: number, len: number): void;
-    readFully(buf: Array<number>): void;
-    readChar(): string;
     skipBytes(len: number): number;
     readBoolean(): boolean;
     readByte(): number;
@@ -27,6 +24,9 @@ export default interface ObjectInputStream extends InputStream {
     readUnsignedShort(): number;
     readLong(): number;
     readDouble(): number;
+    readChar(): string;
+    readFully(buf: Array<number>, off: number, len: number): void;
+    readFully(buf: Array<number>): void;
     readUnshared(): any;
     registerValidation(obj: ObjectInputValidation, prio: number): void;
     getObjectInputFilter(): ObjectInputFilter;

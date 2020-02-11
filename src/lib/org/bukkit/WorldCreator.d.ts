@@ -16,14 +16,14 @@ export default interface WorldCreator {
     environment(env: World$Environment): WorldCreator;
     environment(): World$Environment;
     createWorld(): World;
-    generateStructures(): boolean;
-    generateStructures(generate: boolean): WorldCreator;
-    seed(seed: number): WorldCreator;
-    seed(): number;
-    generatorSettings(generatorSettings: string): WorldCreator;
-    generatorSettings(): string;
     hardcore(): boolean;
     hardcore(hardcore: boolean): WorldCreator;
+    generateStructures(): boolean;
+    generateStructures(generate: boolean): WorldCreator;
+    generatorSettings(): string;
+    generatorSettings(generatorSettings: string): WorldCreator;
+    seed(): number;
+    seed(seed: number): WorldCreator;
 }
 export default class WorldCreator {
     static get $javaClass(): any;

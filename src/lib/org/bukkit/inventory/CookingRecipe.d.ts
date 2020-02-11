@@ -10,13 +10,13 @@ export default interface CookingRecipe extends Recipe, Keyed {
     getResult(): ItemStack;
     getInput(): ItemStack;
     setInputChoice(input: RecipeChoice): CookingRecipe;
-    getInputChoice(): RecipeChoice;
+    getExperience(): number;
+    setGroup(group: string): void;
+    getCookingTime(): number;
     setExperience(experience: number): void;
     setCookingTime(cookingTime: number): void;
     getGroup(): string;
-    getCookingTime(): number;
-    getExperience(): number;
-    setGroup(group: string): void;
+    getInputChoice(): RecipeChoice;
 }
 export default class CookingRecipe {
     static get $javaClass(): any;

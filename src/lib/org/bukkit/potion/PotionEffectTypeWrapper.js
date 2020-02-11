@@ -104,11 +104,11 @@ export default class PotionEffectTypeWrapper {
     static getByName(...args) {
         return PotionEffectTypeWrapper.$javaClass.getByName(...args);
     }
-    static stopAcceptingRegistrations(...args) {
-        return PotionEffectTypeWrapper.$javaClass.stopAcceptingRegistrations(...args);
-    }
     static getById(...args) {
         return PotionEffectTypeWrapper.$javaClass.getById(...args);
+    }
+    static stopAcceptingRegistrations(...args) {
+        return PotionEffectTypeWrapper.$javaClass.stopAcceptingRegistrations(...args);
     }
     static registerPotionEffectType(...args) {
         return PotionEffectTypeWrapper.$javaClass.registerPotionEffectType(...args);

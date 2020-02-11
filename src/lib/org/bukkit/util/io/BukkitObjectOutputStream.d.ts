@@ -17,13 +17,13 @@ export default interface BukkitObjectOutputStream extends ObjectOutputStream {
     writeBytes(str: string): void;
     writeUTF(str: string): void;
     writeFloat(val: number): void;
-    writeChar(val: number): void;
     writeBoolean(val: boolean): void;
     writeByte(val: number): void;
     writeShort(val: number): void;
     writeLong(val: number): void;
     writeDouble(val: number): void;
     writeChars(str: string): void;
+    writeChar(val: number): void;
     useProtocolVersion(version: number): void;
     writeUnshared(obj: any): void;
 }

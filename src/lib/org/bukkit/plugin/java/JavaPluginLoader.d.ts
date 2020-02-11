@@ -5,11 +5,11 @@ import PluginDescriptionFile from '../../../../org/bukkit/plugin/PluginDescripti
 import PluginLoader from '../../../../org/bukkit/plugin/PluginLoader.js';
 import Server from '../../../../org/bukkit/Server.js';
 export default interface JavaPluginLoader extends PluginLoader {
-    disablePlugin(plugin: Plugin): void;
-    enablePlugin(plugin: Plugin): void;
     loadPlugin(file: File): Plugin;
-    getPluginDescription(file: File): PluginDescriptionFile;
+    enablePlugin(plugin: Plugin): void;
+    disablePlugin(plugin: Plugin): void;
     getPluginFileFilters(): Array<any>;
+    getPluginDescription(file: File): PluginDescriptionFile;
     createRegisteredListeners(listener: Listener, plugin: Plugin): any;
 }
 export default class JavaPluginLoader {

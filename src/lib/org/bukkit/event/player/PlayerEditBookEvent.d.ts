@@ -5,9 +5,9 @@ import Player from '../../../../org/bukkit/entity/Player.js';
 import PlayerEvent from '../../../../org/bukkit/event/player/PlayerEvent.js';
 export default interface PlayerEditBookEvent extends PlayerEvent, Cancellable {
     getSlot(): number;
-    setCancelled(cancel: boolean): void;
-    isCancelled(): boolean;
     getHandlers(): HandlerList;
+    isCancelled(): boolean;
+    setCancelled(cancel: boolean): void;
     getPreviousBookMeta(): BookMeta;
     getNewBookMeta(): BookMeta;
     isSigning(): boolean;

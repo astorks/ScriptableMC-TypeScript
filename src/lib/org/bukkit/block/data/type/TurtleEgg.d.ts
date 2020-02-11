@@ -1,13 +1,13 @@
 import BlockData from '../../../../../org/bukkit/block/data/BlockData.js';
 import Material from '../../../../../org/bukkit/Material.js';
 export default interface TurtleEgg extends BlockData {
+    setEggs(arg0: number): void;
+    getEggs(): number;
+    getHatch(): number;
     getMaximumHatch(): number;
     getMaximumEggs(): number;
-    getHatch(): number;
-    getEggs(): number;
-    setEggs(arg0: number): void;
-    getMinimumEggs(): number;
     setHatch(arg0: number): void;
+    getMinimumEggs(): number;
     clone(): any;
     clone(): BlockData;
     matches(arg0: BlockData): boolean;

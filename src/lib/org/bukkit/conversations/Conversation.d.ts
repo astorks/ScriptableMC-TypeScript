@@ -13,15 +13,15 @@ export default interface Conversation {
     getState(): Conversation$ConversationState;
     getPrefix(): ConversationPrefix;
     removeConversationAbandonedListener(listener: ConversationAbandonedListener): void;
-    setLocalEchoEnabled(localEchoEnabled: boolean): void;
     addConversationAbandonedListener(listener: ConversationAbandonedListener): void;
-    getCancellers(): Array<ConversationCanceller>;
-    isModal(): boolean;
-    abandon(): void;
+    setLocalEchoEnabled(localEchoEnabled: boolean): void;
     abandon(details: ConversationAbandonedEvent): void;
-    isLocalEchoEnabled(): boolean;
+    abandon(): void;
+    isModal(): boolean;
     acceptInput(input: string): void;
+    isLocalEchoEnabled(): boolean;
     getForWhom(): Conversable;
+    getCancellers(): Array<ConversationCanceller>;
     outputNextPrompt(): void;
 }
 export default class Conversation {

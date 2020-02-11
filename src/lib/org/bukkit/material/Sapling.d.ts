@@ -12,11 +12,11 @@ export default interface Sapling extends Wood {
     isInstantGrowable(): boolean;
     getSpecies(): TreeSpecies;
     setSpecies(species: TreeSpecies): void;
-    setData(data: number): void;
-    getData(): number;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class Sapling {
     static get $javaClass(): any;

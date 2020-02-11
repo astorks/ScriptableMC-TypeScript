@@ -9,11 +9,11 @@ export default interface DirectionalContainer extends MaterialData, Directional 
     clone(): MaterialData;
     getFacing(): BlockFace;
     setFacingDirection(face: BlockFace): void;
-    setData(data: number): void;
-    getData(): number;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class DirectionalContainer {
     static get $javaClass(): any;

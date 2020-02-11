@@ -7,11 +7,11 @@ export default interface FlowerPot extends MaterialData {
     clone(): any;
     setContents(materialData: MaterialData): void;
     getContents(): MaterialData;
-    setData(data: number): void;
-    getData(): number;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class FlowerPot {
     static get $javaClass(): any;

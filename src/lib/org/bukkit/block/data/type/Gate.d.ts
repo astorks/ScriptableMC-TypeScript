@@ -19,8 +19,8 @@ export default interface Gate extends Directional, Openable, Powerable {
     getAsString(arg0: boolean): string;
     isOpen(): boolean;
     setOpen(arg0: boolean): void;
-    setPowered(arg0: boolean): void;
     isPowered(): boolean;
+    setPowered(arg0: boolean): void;
 }
 export default class Gate {
     static get $javaClass(): any;

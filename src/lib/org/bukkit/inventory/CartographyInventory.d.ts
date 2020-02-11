@@ -24,20 +24,20 @@ export default interface CartographyInventory extends Inventory {
     getSize(): number;
     all(arg0: Material): any;
     all(arg0: ItemStack): any;
-    getMaxStackSize(): number;
     setContents(arg0: Array<ItemStack>): void;
+    getMaxStackSize(): number;
+    getHolder(): InventoryHolder;
+    containsAtLeast(arg0: ItemStack, arg1: number): boolean;
+    setItem(arg0: number, arg1: ItemStack): void;
     setMaxStackSize(arg0: number): void;
-    getItem(arg0: number): ItemStack;
     addItem(arg0: Array<ItemStack>): any;
-    removeItem(arg0: Array<ItemStack>): any;
     getContents(): Array<ItemStack>;
     getStorageContents(): Array<ItemStack>;
-    setItem(arg0: number, arg1: ItemStack): void;
-    setStorageContents(arg0: Array<ItemStack>): void;
-    containsAtLeast(arg0: ItemStack, arg1: number): boolean;
-    firstEmpty(): number;
-    getHolder(): InventoryHolder;
     getViewers(): Array<HumanEntity>;
+    removeItem(arg0: Array<ItemStack>): any;
+    firstEmpty(): number;
+    getItem(arg0: number): ItemStack;
+    setStorageContents(arg0: Array<ItemStack>): void;
     spliterator(): any;
     forEach(action: any): void;
 }

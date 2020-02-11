@@ -9,15 +9,15 @@ export default interface Diode extends MaterialData, Directional, Redstone {
     clone(): Diode;
     clone(): MaterialData;
     getFacing(): BlockFace;
-    setDelay(delay: number): void;
-    getDelay(): number;
     isPowered(): boolean;
     setFacingDirection(face: BlockFace): void;
-    setData(data: number): void;
-    getData(): number;
+    setDelay(delay: number): void;
+    getDelay(): number;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class Diode {
     static get $javaClass(): any;

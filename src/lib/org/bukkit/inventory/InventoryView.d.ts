@@ -8,18 +8,18 @@ export default interface InventoryView {
     setProperty(prop: InventoryView$Property, value: number): boolean;
     close(): void;
     getType(): InventoryType;
-    getTitle(): string;
     getInventory(rawSlot: number): Inventory;
+    getTitle(): string;
     getPlayer(): HumanEntity;
-    getItem(slot: number): ItemStack;
     setItem(slot: number, item: ItemStack): void;
-    countSlots(): number;
-    setCursor(item: ItemStack): void;
-    getTopInventory(): Inventory;
-    convertSlot(rawSlot: number): number;
+    getItem(slot: number): ItemStack;
     getBottomInventory(): Inventory;
-    getSlotType(slot: number): InventoryType$SlotType;
+    convertSlot(rawSlot: number): number;
+    setCursor(item: ItemStack): void;
     getCursor(): ItemStack;
+    countSlots(): number;
+    getSlotType(slot: number): InventoryType$SlotType;
+    getTopInventory(): Inventory;
 }
 export default class InventoryView {
     static get $javaClass(): any;

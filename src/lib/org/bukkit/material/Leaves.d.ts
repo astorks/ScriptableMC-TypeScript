@@ -8,17 +8,17 @@ export default interface Leaves extends Wood {
     clone(): Leaves;
     clone(): Wood;
     clone(): MaterialData;
-    setDecaying(isDecaying: boolean): void;
     isDecayable(): boolean;
     setDecayable(isDecayable: boolean): void;
     isDecaying(): boolean;
+    setDecaying(isDecaying: boolean): void;
     getSpecies(): TreeSpecies;
     setSpecies(species: TreeSpecies): void;
-    setData(data: number): void;
-    getData(): number;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class Leaves {
     static get $javaClass(): any;

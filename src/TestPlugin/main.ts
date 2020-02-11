@@ -23,6 +23,8 @@ import MysqlWrapper from '../lib/com/smc/utils/MysqlWrapper.js';
 import CONFIG from './config.js'
 import Sound from '../lib/org/bukkit/Sound.js';
 import MinecraftVersions from '../lib/com/smc/version/MinecraftVersions.js';
+import SmartInventory from '../lib/com/smc/smartinvs/SmartInventory.js';
+import ItemBuilder from '../lib/com/smc/utils/ItemBuilder.js';
 
 export default class TestPlugin extends JsPlugin {
 
@@ -122,7 +124,6 @@ export default class TestPlugin extends JsPlugin {
     }
 
     onHelloWorldCmdExecute(sender: (CommandSender | Player), command: Command, label: string, args: Array<string>) {
-        const SmartInventory = this.context.smartInventory();
         const plugin = this;
         
         let inventory = SmartInventory.builder()
@@ -132,7 +133,7 @@ export default class TestPlugin extends JsPlugin {
                     if(contents) {
                         contents.fillBorders(
                             SmartInventory.clickableItem(
-                                SmartInventory.itemBuilder(new ItemStack(Material.BEDROCK))
+                                new ItemBuilder(new ItemStack(Material.BEDROCK))
                                     .setDisplayName(" ")
                                     .setLore([" "])
                                     .build()
@@ -140,7 +141,7 @@ export default class TestPlugin extends JsPlugin {
                         );
 
                         contents.set(1, 1, SmartInventory.clickableItem(
-                            SmartInventory.itemBuilder(new ItemStack(Material.GOLD_NUGGET))
+                            new ItemBuilder(new ItemStack(Material.GOLD_NUGGET))
                                     .setDisplayName(ChatColor.DARK_AQUA + "Hello World")
                                     .setLore(["Test the hello world command"])
                                     .addEnchant(Enchantment.BINDING_CURSE, 1, true)
@@ -155,7 +156,7 @@ export default class TestPlugin extends JsPlugin {
                         ));
 
                         contents.set(1, 2, SmartInventory.clickableItem(
-                            SmartInventory.itemBuilder(new ItemStack(Material.DIAMOND))
+                            new ItemBuilder(new ItemStack(Material.DIAMOND))
                                     .setDisplayName(ChatColor.GREEN + "Hub Server")
                                     .setLore(["Connect to the hub server"])
                                     .build(),
@@ -168,7 +169,7 @@ export default class TestPlugin extends JsPlugin {
                         ));
 
                         contents.set(1, 3, SmartInventory.clickableItem(
-                            SmartInventory.itemBuilder(new ItemStack(Material.BEDROCK))
+                            new ItemBuilder(new ItemStack(Material.BEDROCK))
                                     .setDisplayName("Print Server Name")
                                     .build(),
                             () => {
@@ -180,7 +181,7 @@ export default class TestPlugin extends JsPlugin {
                         ));
 
                         contents.set(1, 4, SmartInventory.clickableItem(
-                            SmartInventory.itemBuilder(new ItemStack(Material.GOLD_INGOT))
+                            new ItemBuilder(new ItemStack(Material.GOLD_INGOT))
                                     .setDisplayName("Launch Firework")
                                     .build(),
                             () => {
@@ -199,7 +200,7 @@ export default class TestPlugin extends JsPlugin {
                         // Check if runtime version is 1.13+
                         if(MinecraftVersions.RUNTIME_VERSION.isAfterOrEq(MinecraftVersions.v1_13)) {
                             contents.set(1, 5, SmartInventory.clickableItem(
-                                SmartInventory.itemBuilder(new ItemStack(Material.TNT))
+                                new ItemBuilder(new ItemStack(Material.TNT))
                                     .setDisplayName("THUNDER")
                                     .build(),
                                 () => {

@@ -1,8 +1,8 @@
 import BlockData from '../../../../org/bukkit/block/data/BlockData.js';
 import Material from '../../../../org/bukkit/Material.js';
 export default interface Lightable extends BlockData {
-    setLit(arg0: boolean): void;
     isLit(): boolean;
+    setLit(arg0: boolean): void;
     clone(): any;
     clone(): BlockData;
     matches(arg0: BlockData): boolean;

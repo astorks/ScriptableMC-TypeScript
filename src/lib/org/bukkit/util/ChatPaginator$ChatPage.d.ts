@@ -1,7 +1,7 @@
 export default interface ChatPaginator$ChatPage {
+    getTotalPages(): number;
     getPageNumber(): number;
     getLines(): Array<string>;
-    getTotalPages(): number;
 }
 export default class ChatPaginator$ChatPage {
     static get $javaClass(): any;

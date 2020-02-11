@@ -1,6 +1,6 @@
 export default interface EntityEffect {
-    getApplicable(): any;
     getData(): number;
+    getApplicable(): any;
     name(): string;
     compareTo(arg0: any): number;
     compareTo(o: any): number;

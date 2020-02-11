@@ -5,10 +5,10 @@ import ItemStack from '../../../../org/bukkit/inventory/ItemStack.js';
 import Player from '../../../../org/bukkit/entity/Player.js';
 import PlayerEvent from '../../../../org/bukkit/event/player/PlayerEvent.js';
 export default interface PlayerItemMendEvent extends PlayerEvent, Cancellable {
-    getItem(): ItemStack;
-    setCancelled(cancelled: boolean): void;
-    isCancelled(): boolean;
     getHandlers(): HandlerList;
+    getItem(): ItemStack;
+    isCancelled(): boolean;
+    setCancelled(cancelled: boolean): void;
     getExperienceOrb(): ExperienceOrb;
     getRepairAmount(): number;
     setRepairAmount(amount: number): void;

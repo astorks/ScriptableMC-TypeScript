@@ -11,13 +11,13 @@ export default class StandardMessenger {
     static get MAX_CHANNEL_SIZE() {
         return StandardMessenger.$javaClass.MAX_CHANNEL_SIZE;
     }
+    static validateChannel(...args) {
+        return StandardMessenger.$javaClass.validateChannel(...args);
+    }
     static validateAndCorrectChannel(...args) {
         return StandardMessenger.$javaClass.validateAndCorrectChannel(...args);
     }
     static validatePluginMessage(...args) {
         return StandardMessenger.$javaClass.validatePluginMessage(...args);
-    }
-    static validateChannel(...args) {
-        return StandardMessenger.$javaClass.validateChannel(...args);
     }
 }

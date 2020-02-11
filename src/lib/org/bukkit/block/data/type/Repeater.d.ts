@@ -20,8 +20,8 @@ export default interface Repeater extends Directional, Powerable {
     getMaterial(): Material;
     getAsString(): string;
     getAsString(arg0: boolean): string;
-    setPowered(arg0: boolean): void;
     isPowered(): boolean;
+    setPowered(arg0: boolean): void;
 }
 export default class Repeater {
     static get $javaClass(): any;

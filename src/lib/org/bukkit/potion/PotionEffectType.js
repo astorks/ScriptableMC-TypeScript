@@ -104,11 +104,11 @@ export default class PotionEffectType {
     static getByName(...args) {
         return PotionEffectType.$javaClass.getByName(...args);
     }
-    static stopAcceptingRegistrations(...args) {
-        return PotionEffectType.$javaClass.stopAcceptingRegistrations(...args);
-    }
     static getById(...args) {
         return PotionEffectType.$javaClass.getById(...args);
+    }
+    static stopAcceptingRegistrations(...args) {
+        return PotionEffectType.$javaClass.stopAcceptingRegistrations(...args);
     }
     static registerPotionEffectType(...args) {
         return PotionEffectType.$javaClass.registerPotionEffectType(...args);

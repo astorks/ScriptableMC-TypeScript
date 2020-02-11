@@ -12,11 +12,11 @@ export default interface ExtendedRails extends Rails {
     isCurve(): boolean;
     getDirection(): BlockFace;
     isOnSlope(): boolean;
-    setData(data: number): void;
-    getData(): number;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class ExtendedRails {
     static get $javaClass(): any;

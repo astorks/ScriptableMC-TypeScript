@@ -7,14 +7,14 @@ import Villager from '../../../../org/bukkit/entity/Villager.js';
 import Villager$Profession from '../../../../org/bukkit/entity/Villager$Profession.js';
 import VillagerCareerChangeEvent$ChangeReason from '../../../../org/bukkit/event/entity/VillagerCareerChangeEvent$ChangeReason.js';
 export default interface VillagerCareerChangeEvent extends EntityEvent, Cancellable {
+    getHandlers(): HandlerList;
     getEntity(): Entity;
     getEntity(): Villager;
-    setCancelled(cancel: boolean): void;
     isCancelled(): boolean;
-    getHandlers(): HandlerList;
-    getReason(): VillagerCareerChangeEvent$ChangeReason;
-    setProfession(profession: Villager$Profession): void;
+    setCancelled(cancel: boolean): void;
     getProfession(): Villager$Profession;
+    setProfession(profession: Villager$Profession): void;
+    getReason(): VillagerCareerChangeEvent$ChangeReason;
     getEntityType(): EntityType;
     getEventName(): string;
     isAsynchronous(): boolean;

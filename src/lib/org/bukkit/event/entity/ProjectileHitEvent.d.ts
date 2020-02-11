@@ -6,22 +6,22 @@ import EntityType from '../../../../org/bukkit/entity/EntityType.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import Projectile from '../../../../org/bukkit/entity/Projectile.js';
 export default interface ProjectileHitEvent extends EntityEvent {
+    getHandlers(): HandlerList;
     getEntity(): Entity;
     getEntity(): Projectile;
-    getHitBlock(): Block;
     getHitBlockFace(): BlockFace;
     getHitEntity(): Entity;
-    getHandlers(): HandlerList;
+    getHitBlock(): Block;
     getEntityType(): EntityType;
     getEventName(): string;
     isAsynchronous(): boolean;
 }
 export default class ProjectileHitEvent {
     static get $javaClass(): any;
-    constructor(projectile: Projectile, hitEntity: Entity, hitBlock: Block);
     constructor(projectile: Projectile, hitEntity: Entity, hitBlock: Block, hitFace: BlockFace);
+    constructor(projectile: Projectile, hitBlock: Block);
     constructor(projectile: Projectile, hitEntity: Entity);
     constructor(projectile: Projectile);
-    constructor(projectile: Projectile, hitBlock: Block);
+    constructor(projectile: Projectile, hitEntity: Entity, hitBlock: Block);
     static getHandlerList(): HandlerList;
 }

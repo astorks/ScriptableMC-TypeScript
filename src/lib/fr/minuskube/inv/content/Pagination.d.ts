@@ -6,13 +6,13 @@ export default interface Pagination {
     first(): Pagination;
     previous(): Pagination;
     page(arg0: number): Pagination;
-    getPage(): number;
+    isFirst(): boolean;
     setItems(arg0: Array<ClickableItem>): Pagination;
     getPageItems(): Array<ClickableItem>;
-    setItemsPerPage(arg0: number): Pagination;
+    getPage(): number;
     addToIterator(arg0: SlotIterator): Pagination;
-    isFirst(): boolean;
     isLast(): boolean;
+    setItemsPerPage(arg0: number): Pagination;
 }
 export default class Pagination {
     static get $javaClass(): any;

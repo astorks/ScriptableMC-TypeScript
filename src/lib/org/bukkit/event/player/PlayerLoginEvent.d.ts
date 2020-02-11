@@ -5,14 +5,14 @@ import PlayerLoginEvent$Result from '../../../../org/bukkit/event/player/PlayerL
 export default interface PlayerLoginEvent extends PlayerEvent {
     getAddress(): any;
     setResult(result: PlayerLoginEvent$Result): void;
-    getResult(): PlayerLoginEvent$Result;
     getHandlers(): HandlerList;
-    getHostname(): string;
-    getRealAddress(): any;
+    getResult(): PlayerLoginEvent$Result;
+    allow(): void;
+    getKickMessage(): string;
     setKickMessage(message: string): void;
     disallow(result: PlayerLoginEvent$Result, message: string): void;
-    getKickMessage(): string;
-    allow(): void;
+    getRealAddress(): any;
+    getHostname(): string;
     getPlayer(): Player;
     getEventName(): string;
     isAsynchronous(): boolean;

@@ -1,7 +1,7 @@
 export default interface Time {
-    getDate(): number;
     toInstant(): any;
     getYear(): number;
+    getDate(): number;
     setTime(time: number): void;
     setYear(i: number): void;
     getMonth(): number;
@@ -12,9 +12,9 @@ export default interface Time {
     clone(): any;
     compareTo(arg0: any): number;
     compareTo(anotherDate: any): number;
+    getSeconds(): number;
     before(when: any): boolean;
     after(when: any): boolean;
-    getSeconds(): number;
     getTime(): number;
     getHours(): number;
     setHours(hours: number): void;

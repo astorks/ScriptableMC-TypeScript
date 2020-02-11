@@ -7,18 +7,18 @@ export default interface Mushroom extends MaterialData {
     clone(): Mushroom;
     clone(): MaterialData;
     clone(): any;
-    isFacePainted(face: BlockFace): boolean;
-    setFacePainted(face: BlockFace, painted: boolean): void;
     isStem(): boolean;
     setStem(): void;
-    getBlockTexture(): MushroomBlockTexture;
     setBlockTexture(texture: MushroomBlockTexture): void;
+    setFacePainted(face: BlockFace, painted: boolean): void;
     getPaintedFaces(): any;
-    setData(data: number): void;
-    getData(): number;
+    getBlockTexture(): MushroomBlockTexture;
+    isFacePainted(face: BlockFace): boolean;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class Mushroom {
     static get $javaClass(): any;

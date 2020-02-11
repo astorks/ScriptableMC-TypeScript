@@ -8,10 +8,10 @@ import Material from '../../../../../org/bukkit/Material.js';
 import Openable from '../../../../../org/bukkit/block/data/Openable.js';
 import Powerable from '../../../../../org/bukkit/block/data/Powerable.js';
 export default interface Door extends Bisected, Directional, Openable, Powerable {
-    getHinge(): Door$Hinge;
     setHinge(arg0: Door$Hinge): void;
-    setHalf(arg0: Bisected$Half): void;
+    getHinge(): Door$Hinge;
     getHalf(): Bisected$Half;
+    setHalf(arg0: Bisected$Half): void;
     clone(): any;
     clone(): BlockData;
     matches(arg0: BlockData): boolean;
@@ -24,8 +24,8 @@ export default interface Door extends Bisected, Directional, Openable, Powerable
     getFaces(): any;
     isOpen(): boolean;
     setOpen(arg0: boolean): void;
-    setPowered(arg0: boolean): void;
     isPowered(): boolean;
+    setPowered(arg0: boolean): void;
 }
 export default class Door {
     static get $javaClass(): any;

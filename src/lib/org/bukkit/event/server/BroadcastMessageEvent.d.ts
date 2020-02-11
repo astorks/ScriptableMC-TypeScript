@@ -3,11 +3,11 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import ServerEvent from '../../../../org/bukkit/event/server/ServerEvent.js';
 export default interface BroadcastMessageEvent extends ServerEvent, Cancellable {
     getMessage(): string;
-    setCancelled(cancelled: boolean): void;
-    isCancelled(): boolean;
     getHandlers(): HandlerList;
-    setMessage(message: string): void;
+    isCancelled(): boolean;
+    setCancelled(cancelled: boolean): void;
     getRecipients(): any;
+    setMessage(message: string): void;
     getEventName(): string;
     isAsynchronous(): boolean;
 }

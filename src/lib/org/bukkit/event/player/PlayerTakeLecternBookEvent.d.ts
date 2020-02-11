@@ -5,11 +5,11 @@ import Lectern from '../../../../org/bukkit/block/Lectern.js';
 import Player from '../../../../org/bukkit/entity/Player.js';
 import PlayerEvent from '../../../../org/bukkit/event/player/PlayerEvent.js';
 export default interface PlayerTakeLecternBookEvent extends PlayerEvent, Cancellable {
-    setCancelled(cancel: boolean): void;
-    isCancelled(): boolean;
     getHandlers(): HandlerList;
-    getBook(): ItemStack;
+    isCancelled(): boolean;
+    setCancelled(cancel: boolean): void;
     getLectern(): Lectern;
+    getBook(): ItemStack;
     getPlayer(): Player;
     getEventName(): string;
     isAsynchronous(): boolean;

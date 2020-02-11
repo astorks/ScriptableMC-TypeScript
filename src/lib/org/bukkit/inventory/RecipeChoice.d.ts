@@ -5,9 +5,9 @@ export default interface RecipeChoice {
     test(arg0: any): boolean;
     test(arg0: ItemStack): boolean;
     getItemStack(): ItemStack;
+    or(other: any): any;
     negate(): any;
     and(other: any): any;
-    or(other: any): any;
 }
 export default class RecipeChoice {
     static get $javaClass(): any;

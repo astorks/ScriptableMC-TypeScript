@@ -7,14 +7,14 @@ export default interface SimpleCommandMap extends CommandMap {
     dispatch(sender: CommandSender, commandLine: string): boolean;
     register(label: string, fallbackPrefix: string, command: Command): boolean;
     register(fallbackPrefix: string, command: Command): boolean;
-    getCommand(_name: string): Command;
-    tabComplete(sender: CommandSender, cmdLine: string, location: Location): Array<string>;
-    tabComplete(sender: CommandSender, cmdLine: string): Array<string>;
     getCommands(): any;
+    getCommand(_name: string): Command;
+    tabComplete(sender: CommandSender, cmdLine: string): Array<string>;
+    tabComplete(sender: CommandSender, cmdLine: string, location: Location): Array<string>;
     registerAll(fallbackPrefix: string, commands: Array<any>): void;
     clearCommands(): void;
-    setFallbackCommands(): void;
     registerServerAliases(): void;
+    setFallbackCommands(): void;
 }
 export default class SimpleCommandMap {
     static get $javaClass(): any;

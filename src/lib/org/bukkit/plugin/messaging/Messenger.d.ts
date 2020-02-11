@@ -7,20 +7,20 @@ export default interface Messenger {
     unregisterIncomingPluginChannel(arg0: Plugin, arg1: string): void;
     unregisterIncomingPluginChannel(arg0: Plugin, arg1: string, arg2: PluginMessageListener): void;
     registerOutgoingPluginChannel(arg0: Plugin, arg1: string): void;
-    registerIncomingPluginChannel(arg0: Plugin, arg1: string, arg2: PluginMessageListener): PluginMessageListenerRegistration;
     unregisterOutgoingPluginChannel(arg0: Plugin): void;
     unregisterOutgoingPluginChannel(arg0: Plugin, arg1: string): void;
+    registerIncomingPluginChannel(arg0: Plugin, arg1: string, arg2: PluginMessageListener): PluginMessageListenerRegistration;
     isRegistrationValid(arg0: PluginMessageListenerRegistration): boolean;
+    dispatchIncomingMessage(arg0: Player, arg1: string, arg2: Array<number>): void;
+    isOutgoingChannelRegistered(arg0: Plugin, arg1: string): boolean;
     getOutgoingChannels(arg0: Plugin): any;
     getOutgoingChannels(): any;
-    isIncomingChannelRegistered(arg0: Plugin, arg1: string): boolean;
-    dispatchIncomingMessage(arg0: Player, arg1: string, arg2: Array<number>): void;
-    getIncomingChannels(): any;
-    getIncomingChannels(arg0: Plugin): any;
     getIncomingChannelRegistrations(arg0: string): any;
-    getIncomingChannelRegistrations(arg0: Plugin): any;
     getIncomingChannelRegistrations(arg0: Plugin, arg1: string): any;
-    isOutgoingChannelRegistered(arg0: Plugin, arg1: string): boolean;
+    getIncomingChannelRegistrations(arg0: Plugin): any;
+    getIncomingChannels(arg0: Plugin): any;
+    getIncomingChannels(): any;
+    isIncomingChannelRegistered(arg0: Plugin, arg1: string): boolean;
     isReservedChannel(arg0: string): boolean;
 }
 export default class Messenger {

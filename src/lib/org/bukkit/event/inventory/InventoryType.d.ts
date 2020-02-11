@@ -1,7 +1,7 @@
 export default interface InventoryType {
-    getDefaultTitle(): string;
-    isCreatable(): boolean;
     getDefaultSize(): number;
+    isCreatable(): boolean;
+    getDefaultTitle(): string;
     name(): string;
     compareTo(arg0: any): number;
     compareTo(o: any): number;

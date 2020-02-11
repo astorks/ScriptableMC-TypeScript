@@ -8,14 +8,14 @@ export default interface Sign extends MaterialData, Attachable {
     clone(): Sign;
     clone(): any;
     getFacing(): BlockFace;
-    isWallSign(): boolean;
     setFacingDirection(face: BlockFace): void;
     getAttachedFace(): BlockFace;
-    setData(data: number): void;
-    getData(): number;
+    isWallSign(): boolean;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class Sign {
     static get $javaClass(): any;

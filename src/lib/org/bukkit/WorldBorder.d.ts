@@ -4,18 +4,18 @@ export default interface WorldBorder {
     reset(): void;
     setSize(arg0: number, arg1: number): void;
     setSize(arg0: number): void;
-    setDamageBuffer(arg0: number): void;
-    getDamageAmount(): number;
-    setWarningTime(arg0: number): void;
-    isInside(arg0: Location): boolean;
+    getCenter(): Location;
     setCenter(arg0: number, arg1: number): void;
     setCenter(arg0: Location): void;
+    getDamageBuffer(): number;
+    setDamageBuffer(arg0: number): void;
+    getDamageAmount(): number;
     setDamageAmount(arg0: number): void;
+    getWarningTime(): number;
+    setWarningTime(arg0: number): void;
     getWarningDistance(): number;
     setWarningDistance(arg0: number): void;
-    getDamageBuffer(): number;
-    getWarningTime(): number;
-    getCenter(): Location;
+    isInside(arg0: Location): boolean;
 }
 export default class WorldBorder {
     static get $javaClass(): any;

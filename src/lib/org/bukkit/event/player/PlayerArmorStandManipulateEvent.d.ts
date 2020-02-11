@@ -8,13 +8,13 @@ import PlayerInteractEntityEvent from '../../../../org/bukkit/event/player/Playe
 export default interface PlayerArmorStandManipulateEvent extends PlayerInteractEntityEvent {
     getSlot(): EquipmentSlot;
     getHandlers(): HandlerList;
+    getRightClicked(): Entity;
+    getRightClicked(): ArmorStand;
     getPlayerItem(): ItemStack;
     getArmorStandItem(): ItemStack;
-    getRightClicked(): ArmorStand;
-    getRightClicked(): Entity;
-    setCancelled(cancel: boolean): void;
-    isCancelled(): boolean;
     getHand(): EquipmentSlot;
+    isCancelled(): boolean;
+    setCancelled(cancel: boolean): void;
     getPlayer(): Player;
     getEventName(): string;
     isAsynchronous(): boolean;

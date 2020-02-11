@@ -5,12 +5,12 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import Location from '../../../../org/bukkit/Location.js';
 export default interface BlockPistonRetractEvent extends BlockPistonEvent {
     getHandlers(): HandlerList;
-    getBlocks(): Array<Block>;
     getRetractLocation(): Location;
+    getBlocks(): Array<Block>;
     getDirection(): BlockFace;
-    setCancelled(cancelled: boolean): void;
-    isCancelled(): boolean;
     isSticky(): boolean;
+    isCancelled(): boolean;
+    setCancelled(cancelled: boolean): void;
     getBlock(): Block;
     getEventName(): string;
     isAsynchronous(): boolean;

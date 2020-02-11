@@ -8,8 +8,8 @@ import Openable from '../../../../../org/bukkit/block/data/Openable.js';
 import Powerable from '../../../../../org/bukkit/block/data/Powerable.js';
 import Waterlogged from '../../../../../org/bukkit/block/data/Waterlogged.js';
 export default interface TrapDoor extends Bisected, Directional, Openable, Powerable, Waterlogged {
-    setHalf(arg0: Bisected$Half): void;
     getHalf(): Bisected$Half;
+    setHalf(arg0: Bisected$Half): void;
     clone(): any;
     clone(): BlockData;
     matches(arg0: BlockData): boolean;
@@ -22,8 +22,8 @@ export default interface TrapDoor extends Bisected, Directional, Openable, Power
     getFaces(): any;
     isOpen(): boolean;
     setOpen(arg0: boolean): void;
-    setPowered(arg0: boolean): void;
     isPowered(): boolean;
+    setPowered(arg0: boolean): void;
     setWaterlogged(arg0: boolean): void;
     isWaterlogged(): boolean;
 }

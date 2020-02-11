@@ -1,8 +1,8 @@
 import BlockData from '../../../../org/bukkit/block/data/BlockData.js';
 import Material from '../../../../org/bukkit/Material.js';
 export default interface Levelled extends BlockData {
-    getLevel(): number;
     setLevel(arg0: number): void;
+    getLevel(): number;
     getMaximumLevel(): number;
     clone(): any;
     clone(): BlockData;

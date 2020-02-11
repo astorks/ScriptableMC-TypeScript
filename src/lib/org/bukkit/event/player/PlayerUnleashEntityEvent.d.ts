@@ -7,8 +7,8 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import Player from '../../../../org/bukkit/entity/Player.js';
 export default interface PlayerUnleashEntityEvent extends EntityUnleashEvent, Cancellable {
     getPlayer(): Player;
-    setCancelled(cancel: boolean): void;
     isCancelled(): boolean;
+    setCancelled(cancel: boolean): void;
     getHandlers(): HandlerList;
     getReason(): EntityUnleashEvent$UnleashReason;
     getEntity(): Entity;

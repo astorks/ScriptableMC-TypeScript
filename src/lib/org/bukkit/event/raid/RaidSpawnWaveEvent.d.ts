@@ -4,8 +4,8 @@ import RaidEvent from '../../../../org/bukkit/event/raid/RaidEvent.js';
 import Raider from '../../../../org/bukkit/entity/Raider.js';
 import World from '../../../../org/bukkit/World.js';
 export default interface RaidSpawnWaveEvent extends RaidEvent {
-    getRaiders(): Array<Raider>;
     getHandlers(): HandlerList;
+    getRaiders(): Array<Raider>;
     getPatrolLeader(): Raider;
     getRaid(): Raid;
     getWorld(): World;

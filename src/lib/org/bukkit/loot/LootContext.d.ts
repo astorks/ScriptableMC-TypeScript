@@ -4,9 +4,9 @@ import Location from '../../../org/bukkit/Location.js';
 export default interface LootContext {
     getLocation(): Location;
     getKiller(): HumanEntity;
-    getLuck(): number;
     getLootingModifier(): number;
     getLootedEntity(): Entity;
+    getLuck(): number;
 }
 export default class LootContext {
     static get $javaClass(): any;

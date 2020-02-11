@@ -4,9 +4,9 @@ import BlockState from '../../../../org/bukkit/block/BlockState.js';
 import Cancellable from '../../../../org/bukkit/event/Cancellable.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 export default interface MoistureChangeEvent extends BlockEvent, Cancellable {
-    setCancelled(cancel: boolean): void;
-    isCancelled(): boolean;
     getHandlers(): HandlerList;
+    isCancelled(): boolean;
+    setCancelled(cancel: boolean): void;
     getNewState(): BlockState;
     getBlock(): Block;
     getEventName(): string;

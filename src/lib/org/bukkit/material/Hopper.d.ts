@@ -10,14 +10,14 @@ export default interface Hopper extends MaterialData, Directional, Redstone {
     clone(): any;
     isActive(): boolean;
     getFacing(): BlockFace;
-    setActive(isActive: boolean): void;
     isPowered(): boolean;
+    setActive(isActive: boolean): void;
     setFacingDirection(face: BlockFace): void;
-    setData(data: number): void;
-    getData(): number;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class Hopper {
     static get $javaClass(): any;

@@ -12,25 +12,25 @@ import Server from '../../../../org/bukkit/Server.js';
 export default interface JavaPlugin extends PluginBase {
     getResource(filename: string): InputStream;
     getLogger(): any;
-    getServer(): Server;
-    onDisable(): void;
     onLoad(): void;
+    onDisable(): void;
     onEnable(): void;
-    getDescription(): PluginDescriptionFile;
-    getConfig(): FileConfiguration;
-    onCommand(sender: CommandSender, command: Command, label: string, args: Array<string>): boolean;
-    setNaggable(canNag: boolean): void;
-    saveDefaultConfig(): void;
-    isEnabled(): boolean;
-    reloadConfig(): void;
+    getServer(): Server;
+    getDefaultWorldGenerator(worldName: string, id: string): ChunkGenerator;
     saveConfig(): void;
-    onTabComplete(sender: CommandSender, command: Command, alias: string, args: Array<string>): Array<string>;
+    isNaggable(): boolean;
     saveResource(resourcePath: string, replace: boolean): void;
     getPluginLoader(): PluginLoader;
     getCommand(_name: string): PluginCommand;
-    isNaggable(): boolean;
+    reloadConfig(): void;
     getDataFolder(): File;
-    getDefaultWorldGenerator(worldName: string, id: string): ChunkGenerator;
+    setNaggable(canNag: boolean): void;
+    getConfig(): FileConfiguration;
+    saveDefaultConfig(): void;
+    onTabComplete(sender: CommandSender, command: Command, alias: string, args: Array<string>): Array<string>;
+    getDescription(): PluginDescriptionFile;
+    isEnabled(): boolean;
+    onCommand(sender: CommandSender, command: Command, label: string, args: Array<string>): boolean;
     getName(): string;
 }
 export default class JavaPlugin {

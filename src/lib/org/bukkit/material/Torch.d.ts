@@ -11,11 +11,11 @@ export default interface Torch extends SimpleAttachableMaterialData {
     setFacingDirection(face: BlockFace): void;
     getAttachedFace(): BlockFace;
     getFacing(): BlockFace;
-    setData(data: number): void;
-    getData(): number;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class Torch {
     static get $javaClass(): any;

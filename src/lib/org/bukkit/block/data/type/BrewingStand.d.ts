@@ -1,10 +1,10 @@
 import BlockData from '../../../../../org/bukkit/block/data/BlockData.js';
 import Material from '../../../../../org/bukkit/Material.js';
 export default interface BrewingStand extends BlockData {
-    hasBottle(arg0: number): boolean;
     getBottles(): any;
-    getMaximumBottles(): number;
+    hasBottle(arg0: number): boolean;
     setBottle(arg0: number, arg1: boolean): void;
+    getMaximumBottles(): number;
     clone(): any;
     clone(): BlockData;
     matches(arg0: BlockData): boolean;

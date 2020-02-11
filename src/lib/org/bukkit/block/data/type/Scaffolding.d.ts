@@ -2,11 +2,11 @@ import BlockData from '../../../../../org/bukkit/block/data/BlockData.js';
 import Material from '../../../../../org/bukkit/Material.js';
 import Waterlogged from '../../../../../org/bukkit/block/data/Waterlogged.js';
 export default interface Scaffolding extends Waterlogged {
-    getDistance(): number;
     setDistance(arg0: number): void;
-    getMaximumDistance(): number;
-    setBottom(arg0: boolean): void;
+    getDistance(): number;
     isBottom(): boolean;
+    setBottom(arg0: boolean): void;
+    getMaximumDistance(): number;
     setWaterlogged(arg0: boolean): void;
     isWaterlogged(): boolean;
     clone(): any;

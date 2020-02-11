@@ -3,9 +3,9 @@ import BlockFace from '../../../../../org/bukkit/block/BlockFace.js';
 import Directional from '../../../../../org/bukkit/block/data/Directional.js';
 import Material from '../../../../../org/bukkit/Material.js';
 export default interface Beehive extends Directional {
-    getMaximumHoneyLevel(): number;
-    setHoneyLevel(arg0: number): void;
     getHoneyLevel(): number;
+    setHoneyLevel(arg0: number): void;
+    getMaximumHoneyLevel(): number;
     getFacing(): BlockFace;
     setFacing(arg0: BlockFace): void;
     getFaces(): any;

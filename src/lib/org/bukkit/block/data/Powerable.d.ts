@@ -1,8 +1,8 @@
 import BlockData from '../../../../org/bukkit/block/data/BlockData.js';
 import Material from '../../../../org/bukkit/Material.js';
 export default interface Powerable extends BlockData {
-    setPowered(arg0: boolean): void;
     isPowered(): boolean;
+    setPowered(arg0: boolean): void;
     clone(): any;
     clone(): BlockData;
     matches(arg0: BlockData): boolean;

@@ -9,15 +9,15 @@ export default interface Tree extends Wood {
     clone(): Tree;
     clone(): MaterialData;
     clone(): any;
-    setDirection(dir: BlockFace): void;
     getDirection(): BlockFace;
+    setDirection(dir: BlockFace): void;
     getSpecies(): TreeSpecies;
     setSpecies(species: TreeSpecies): void;
-    setData(data: number): void;
-    getData(): number;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class Tree {
     static get $javaClass(): any;

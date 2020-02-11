@@ -6,14 +6,14 @@ export default interface Cake extends MaterialData {
     clone(): MaterialData;
     clone(): any;
     setSlicesRemaining(n: number): void;
-    getSlicesEaten(): number;
-    setSlicesEaten(n: number): void;
     getSlicesRemaining(): number;
-    setData(data: number): void;
-    getData(): number;
+    setSlicesEaten(n: number): void;
+    getSlicesEaten(): number;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class Cake {
     static get $javaClass(): any;

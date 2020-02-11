@@ -15,8 +15,8 @@ export default interface Multiset {
     removeAll(arg0: any): boolean;
     forEachEntry(action: any): void;
     elementSet(): any;
-    setCount(arg0: any, arg1: number): number;
     setCount(arg0: any, arg1: number, arg2: number): boolean;
+    setCount(arg0: any, arg1: number): number;
     clear(): void;
     isEmpty(): boolean;
     toArray(generator: any): Array<any>;

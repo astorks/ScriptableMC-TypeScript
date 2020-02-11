@@ -8,11 +8,11 @@ export default interface Crops extends MaterialData {
     clone(): MaterialData;
     getState(): CropState;
     setState(state: CropState): void;
-    setData(data: number): void;
-    getData(): number;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class Crops {
     static get $javaClass(): any;

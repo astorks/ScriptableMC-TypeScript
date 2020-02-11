@@ -3,13 +3,13 @@ import CommandSender from '../../../../org/bukkit/command/CommandSender.js';
 import Event from '../../../../org/bukkit/event/Event.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 export default interface TabCompleteEvent extends Event, Cancellable {
-    getBuffer(): string;
-    setCancelled(cancelled: boolean): void;
-    isCancelled(): boolean;
     getHandlers(): HandlerList;
-    getSender(): CommandSender;
-    setCompletions(completions: Array<any>): void;
+    isCancelled(): boolean;
+    setCancelled(cancelled: boolean): void;
     getCompletions(): Array<string>;
+    setCompletions(completions: Array<any>): void;
+    getBuffer(): string;
+    getSender(): CommandSender;
     getEventName(): string;
     isAsynchronous(): boolean;
 }

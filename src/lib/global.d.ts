@@ -1,9 +1,5 @@
 import com_pixlfox_scriptablemc_core_ScriptablePluginContext from './com/pixlfox/scriptablemc/core/ScriptablePluginContext.js';
-import com_smc_utils_FileWrapper from './com/smc/utils/FileWrapper.js';
-import com_pixlfox_scriptablemc_smartinvs_SmartItemBuilder from './com/pixlfox/scriptablemc/smartinvs/SmartItemBuilder.js';
-import org_bukkit_inventory_ItemStack from './org/bukkit/inventory/ItemStack.js';
-import org_bukkit_Material from './org/bukkit/Material.js';
-import org_bukkit_NamespacedKey from './org/bukkit/NamespacedKey.js';
+import org_bukkit_plugin_messaging_PluginMessageListenerRegistration from './org/bukkit/plugin/messaging/PluginMessageListenerRegistration.js';
 import org_bukkit_plugin_Plugin from './org/bukkit/plugin/Plugin.js';
 import java_io_InputStream from './java/io/InputStream.js';
 import java_io_OutputStream from './java/io/OutputStream.js';
@@ -11,21 +7,41 @@ import java_io_Closeable from './java/io/Closeable.js';
 import java_io_Flushable from './java/io/Flushable.js';
 import org_bukkit_Server from './org/bukkit/Server.js';
 import org_bukkit_UnsafeValues from './org/bukkit/UnsafeValues.js';
+import org_bukkit_Material from './org/bukkit/Material.js';
+import org_bukkit_NamespacedKey from './org/bukkit/NamespacedKey.js';
 import org_bukkit_block_data_BlockData from './org/bukkit/block/data/BlockData.js';
 import org_bukkit_material_MaterialData from './org/bukkit/material/MaterialData.js';
+import org_bukkit_inventory_ItemStack from './org/bukkit/inventory/ItemStack.js';
+import org_bukkit_inventory_meta_ItemMeta from './org/bukkit/inventory/meta/ItemMeta.js';
+import org_bukkit_enchantments_Enchantment from './org/bukkit/enchantments/Enchantment.js';
+import org_bukkit_enchantments_EnchantmentTarget from './org/bukkit/enchantments/EnchantmentTarget.js';
+import org_bukkit_Keyed from './org/bukkit/Keyed.js';
+import com_google_common_collect_Multimap from './com/google/common/collect/Multimap.js';
+import com_google_common_collect_Multiset from './com/google/common/collect/Multiset.js';
+import org_bukkit_inventory_EquipmentSlot from './org/bukkit/inventory/EquipmentSlot.js';
+import org_bukkit_attribute_Attribute from './org/bukkit/attribute/Attribute.js';
+import org_bukkit_attribute_AttributeModifier from './org/bukkit/attribute/AttributeModifier.js';
+import org_bukkit_attribute_AttributeModifier$Operation from './org/bukkit/attribute/AttributeModifier$Operation.js';
+import org_bukkit_configuration_serialization_ConfigurationSerializable from './org/bukkit/configuration/serialization/ConfigurationSerializable.js';
+import org_bukkit_inventory_meta_tags_CustomItemTagContainer from './org/bukkit/inventory/meta/tags/CustomItemTagContainer.js';
+import org_bukkit_inventory_meta_tags_ItemTagType from './org/bukkit/inventory/meta/tags/ItemTagType.js';
+import org_bukkit_inventory_meta_tags_ItemTagAdapterContext from './org/bukkit/inventory/meta/tags/ItemTagAdapterContext.js';
+import org_bukkit_inventory_ItemFlag from './org/bukkit/inventory/ItemFlag.js';
+import org_bukkit_persistence_PersistentDataContainer from './org/bukkit/persistence/PersistentDataContainer.js';
+import org_bukkit_persistence_PersistentDataType from './org/bukkit/persistence/PersistentDataType.js';
+import org_bukkit_persistence_PersistentDataAdapterContext from './org/bukkit/persistence/PersistentDataAdapterContext.js';
+import org_bukkit_persistence_PersistentDataHolder from './org/bukkit/persistence/PersistentDataHolder.js';
+import org_bukkit_advancement_Advancement from './org/bukkit/advancement/Advancement.js';
 import org_bukkit_plugin_PluginDescriptionFile from './org/bukkit/plugin/PluginDescriptionFile.js';
 import java_io_Writer from './java/io/Writer.js';
 import org_bukkit_plugin_PluginLoadOrder from './org/bukkit/plugin/PluginLoadOrder.js';
 import org_bukkit_permissions_PermissionDefault from './org/bukkit/permissions/PermissionDefault.js';
 import java_io_Reader from './java/io/Reader.js';
-import org_bukkit_advancement_Advancement from './org/bukkit/advancement/Advancement.js';
-import org_bukkit_Keyed from './org/bukkit/Keyed.js';
 import org_bukkit_map_MapView from './org/bukkit/map/MapView.js';
 import org_bukkit_World from './org/bukkit/World.js';
 import org_bukkit_Location from './org/bukkit/Location.js';
 import org_bukkit_util_Vector from './org/bukkit/util/Vector.js';
 import org_bukkit_util_BlockVector from './org/bukkit/util/BlockVector.js';
-import org_bukkit_configuration_serialization_ConfigurationSerializable from './org/bukkit/configuration/serialization/ConfigurationSerializable.js';
 import org_bukkit_block_Block from './org/bukkit/block/Block.js';
 import org_bukkit_block_BlockState from './org/bukkit/block/BlockState.js';
 import org_bukkit_Chunk from './org/bukkit/Chunk.js';
@@ -33,59 +49,54 @@ import org_bukkit_ChunkSnapshot from './org/bukkit/ChunkSnapshot.js';
 import org_bukkit_block_Biome from './org/bukkit/block/Biome.js';
 import org_bukkit_entity_Entity from './org/bukkit/entity/Entity.js';
 import org_bukkit_entity_EntityType from './org/bukkit/entity/EntityType.js';
-import org_bukkit_entity_Pose from './org/bukkit/entity/Pose.js';
+import org_bukkit_EntityEffect from './org/bukkit/EntityEffect.js';
+import org_bukkit_event_player_PlayerTeleportEvent$TeleportCause from './org/bukkit/event/player/PlayerTeleportEvent$TeleportCause.js';
 import org_bukkit_event_entity_EntityDamageEvent from './org/bukkit/event/entity/EntityDamageEvent.js';
 import org_bukkit_event_entity_EntityDamageEvent$DamageCause from './org/bukkit/event/entity/EntityDamageEvent$DamageCause.js';
-import org_bukkit_event_entity_EntityDamageEvent$DamageModifier from './org/bukkit/event/entity/EntityDamageEvent$DamageModifier.js';
 import org_bukkit_event_HandlerList from './org/bukkit/event/HandlerList.js';
 import org_bukkit_plugin_RegisteredListener from './org/bukkit/plugin/RegisteredListener.js';
 import org_bukkit_event_EventPriority from './org/bukkit/event/EventPriority.js';
 import org_bukkit_event_Listener from './org/bukkit/event/Listener.js';
 import org_bukkit_event_Event from './org/bukkit/event/Event.js';
 import org_bukkit_plugin_EventExecutor from './org/bukkit/plugin/EventExecutor.js';
+import org_bukkit_event_entity_EntityDamageEvent$DamageModifier from './org/bukkit/event/entity/EntityDamageEvent$DamageModifier.js';
 import org_bukkit_event_Cancellable from './org/bukkit/event/Cancellable.js';
 import org_bukkit_event_entity_EntityEvent from './org/bukkit/event/entity/EntityEvent.js';
 import org_bukkit_block_BlockFace from './org/bukkit/block/BlockFace.js';
+import org_bukkit_entity_Pose from './org/bukkit/entity/Pose.js';
 import org_bukkit_util_BoundingBox from './org/bukkit/util/BoundingBox.js';
 import org_bukkit_util_RayTraceResult from './org/bukkit/util/RayTraceResult.js';
-import org_bukkit_event_player_PlayerTeleportEvent$TeleportCause from './org/bukkit/event/player/PlayerTeleportEvent$TeleportCause.js';
-import org_bukkit_EntityEffect from './org/bukkit/EntityEffect.js';
 import org_bukkit_block_PistonMoveReaction from './org/bukkit/block/PistonMoveReaction.js';
 import org_bukkit_metadata_MetadataValue from './org/bukkit/metadata/MetadataValue.js';
-import org_bukkit_permissions_PermissionAttachment from './org/bukkit/permissions/PermissionAttachment.js';
 import org_bukkit_permissions_Permission from './org/bukkit/permissions/Permission.js';
+import org_bukkit_permissions_PermissionAttachment from './org/bukkit/permissions/PermissionAttachment.js';
+import org_bukkit_permissions_PermissionRemovedExecutor from './org/bukkit/permissions/PermissionRemovedExecutor.js';
 import org_bukkit_permissions_Permissible from './org/bukkit/permissions/Permissible.js';
 import org_bukkit_permissions_ServerOperator from './org/bukkit/permissions/ServerOperator.js';
-import org_bukkit_permissions_PermissionRemovedExecutor from './org/bukkit/permissions/PermissionRemovedExecutor.js';
-import org_bukkit_persistence_PersistentDataContainer from './org/bukkit/persistence/PersistentDataContainer.js';
-import org_bukkit_persistence_PersistentDataType from './org/bukkit/persistence/PersistentDataType.js';
-import org_bukkit_persistence_PersistentDataAdapterContext from './org/bukkit/persistence/PersistentDataAdapterContext.js';
 import org_bukkit_metadata_Metadatable from './org/bukkit/metadata/Metadatable.js';
 import org_bukkit_command_CommandSender from './org/bukkit/command/CommandSender.js';
 import org_bukkit_Nameable from './org/bukkit/Nameable.js';
-import org_bukkit_persistence_PersistentDataHolder from './org/bukkit/persistence/PersistentDataHolder.js';
 import org_bukkit_FluidCollisionMode from './org/bukkit/FluidCollisionMode.js';
-import org_bukkit_Sound from './org/bukkit/Sound.js';
 import org_bukkit_SoundCategory from './org/bukkit/SoundCategory.js';
+import org_bukkit_Sound from './org/bukkit/Sound.js';
 import org_bukkit_Effect from './org/bukkit/Effect.js';
 import org_bukkit_Effect$Type from './org/bukkit/Effect$Type.js';
-import org_bukkit_Particle from './org/bukkit/Particle.js';
 import org_bukkit_entity_LightningStrike from './org/bukkit/entity/LightningStrike.js';
+import org_bukkit_Particle from './org/bukkit/Particle.js';
+import org_bukkit_HeightMap from './org/bukkit/HeightMap.js';
+import org_bukkit_World$Environment from './org/bukkit/World$Environment.js';
 import org_bukkit_WorldType from './org/bukkit/WorldType.js';
 import org_bukkit_GameRule from './org/bukkit/GameRule.js';
 import org_bukkit_StructureType from './org/bukkit/StructureType.js';
 import org_bukkit_map_MapCursor$Type from './org/bukkit/map/MapCursor$Type.js';
-import org_bukkit_HeightMap from './org/bukkit/HeightMap.js';
-import org_bukkit_World$Environment from './org/bukkit/World$Environment.js';
-import org_bukkit_util_Consumer from './org/bukkit/util/Consumer.js';
+import org_bukkit_entity_Item from './org/bukkit/entity/Item.js';
 import org_bukkit_Difficulty from './org/bukkit/Difficulty.js';
+import org_bukkit_util_Consumer from './org/bukkit/util/Consumer.js';
+import org_bukkit_entity_FallingBlock from './org/bukkit/entity/FallingBlock.js';
 import java_io_File from './java/io/File.js';
 import java_io_FilenameFilter from './java/io/FilenameFilter.js';
 import java_io_FileFilter from './java/io/FileFilter.js';
 import java_io_Serializable from './java/io/Serializable.js';
-import org_bukkit_entity_Item from './org/bukkit/entity/Item.js';
-import org_bukkit_TreeType from './org/bukkit/TreeType.js';
-import org_bukkit_BlockChangeDelegate from './org/bukkit/BlockChangeDelegate.js';
 import org_bukkit_generator_ChunkGenerator from './org/bukkit/generator/ChunkGenerator.js';
 import org_bukkit_generator_ChunkGenerator$ChunkData from './org/bukkit/generator/ChunkGenerator$ChunkData.js';
 import org_bukkit_generator_ChunkGenerator$BiomeGrid from './org/bukkit/generator/ChunkGenerator$BiomeGrid.js';
@@ -96,48 +107,42 @@ import org_bukkit_entity_Projectile from './org/bukkit/entity/Projectile.js';
 import org_bukkit_entity_Arrow from './org/bukkit/entity/Arrow.js';
 import org_bukkit_Color from './org/bukkit/Color.js';
 import org_bukkit_DyeColor from './org/bukkit/DyeColor.js';
+import org_bukkit_potion_PotionEffectType from './org/bukkit/potion/PotionEffectType.js';
 import org_bukkit_potion_PotionEffect from './org/bukkit/potion/PotionEffect.js';
 import org_bukkit_entity_LivingEntity from './org/bukkit/entity/LivingEntity.js';
 import org_bukkit_entity_memory_MemoryKey from './org/bukkit/entity/memory/MemoryKey.js';
-import org_bukkit_potion_PotionEffectType from './org/bukkit/potion/PotionEffectType.js';
+import org_bukkit_inventory_EntityEquipment from './org/bukkit/inventory/EntityEquipment.js';
 import org_bukkit_entity_Player from './org/bukkit/entity/Player.js';
-import org_bukkit_advancement_AdvancementProgress from './org/bukkit/advancement/AdvancementProgress.js';
+import org_bukkit_Statistic from './org/bukkit/Statistic.js';
+import org_bukkit_Statistic$Type from './org/bukkit/Statistic$Type.js';
 import org_bukkit_Instrument from './org/bukkit/Instrument.js';
 import org_bukkit_Note from './org/bukkit/Note.js';
 import org_bukkit_Note$Tone from './org/bukkit/Note$Tone.js';
-import org_bukkit_WeatherType from './org/bukkit/WeatherType.js';
-import org_bukkit_Statistic from './org/bukkit/Statistic.js';
-import org_bukkit_Statistic$Type from './org/bukkit/Statistic$Type.js';
 import org_bukkit_scoreboard_Scoreboard from './org/bukkit/scoreboard/Scoreboard.js';
-import org_bukkit_scoreboard_Objective from './org/bukkit/scoreboard/Objective.js';
-import org_bukkit_scoreboard_RenderType from './org/bukkit/scoreboard/RenderType.js';
-import org_bukkit_scoreboard_Score from './org/bukkit/scoreboard/Score.js';
-import org_bukkit_OfflinePlayer from './org/bukkit/OfflinePlayer.js';
-import org_bukkit_entity_AnimalTamer from './org/bukkit/entity/AnimalTamer.js';
-import org_bukkit_scoreboard_DisplaySlot from './org/bukkit/scoreboard/DisplaySlot.js';
 import org_bukkit_scoreboard_Team from './org/bukkit/scoreboard/Team.js';
 import org_bukkit_ChatColor from './org/bukkit/ChatColor.js';
-import org_bukkit_scoreboard_Team$Option from './org/bukkit/scoreboard/Team$Option.js';
-import org_bukkit_scoreboard_Team$OptionStatus from './org/bukkit/scoreboard/Team$OptionStatus.js';
+import org_bukkit_OfflinePlayer from './org/bukkit/OfflinePlayer.js';
+import org_bukkit_entity_AnimalTamer from './org/bukkit/entity/AnimalTamer.js';
 import org_bukkit_scoreboard_NameTagVisibility from './org/bukkit/scoreboard/NameTagVisibility.js';
+import org_bukkit_scoreboard_Team$OptionStatus from './org/bukkit/scoreboard/Team$OptionStatus.js';
+import org_bukkit_scoreboard_Team$Option from './org/bukkit/scoreboard/Team$Option.js';
+import org_bukkit_scoreboard_DisplaySlot from './org/bukkit/scoreboard/DisplaySlot.js';
+import org_bukkit_scoreboard_Objective from './org/bukkit/scoreboard/Objective.js';
+import org_bukkit_scoreboard_Score from './org/bukkit/scoreboard/Score.js';
+import org_bukkit_scoreboard_RenderType from './org/bukkit/scoreboard/RenderType.js';
+import org_bukkit_WeatherType from './org/bukkit/WeatherType.js';
+import org_bukkit_advancement_AdvancementProgress from './org/bukkit/advancement/AdvancementProgress.js';
 import org_bukkit_inventory_InventoryView from './org/bukkit/inventory/InventoryView.js';
 import org_bukkit_inventory_InventoryView$Property from './org/bukkit/inventory/InventoryView$Property.js';
 import org_bukkit_event_inventory_InventoryType from './org/bukkit/event/inventory/InventoryType.js';
 import org_bukkit_inventory_Inventory from './org/bukkit/inventory/Inventory.js';
 import org_bukkit_inventory_InventoryHolder from './org/bukkit/inventory/InventoryHolder.js';
 import org_bukkit_entity_HumanEntity from './org/bukkit/entity/HumanEntity.js';
-import org_bukkit_inventory_PlayerInventory from './org/bukkit/inventory/PlayerInventory.js';
 import org_bukkit_inventory_MainHand from './org/bukkit/inventory/MainHand.js';
-import org_bukkit_GameMode from './org/bukkit/GameMode.js';
 import org_bukkit_entity_Villager from './org/bukkit/entity/Villager.js';
-import org_bukkit_entity_Villager$Type from './org/bukkit/entity/Villager$Type.js';
 import org_bukkit_entity_Villager$Profession from './org/bukkit/entity/Villager$Profession.js';
-import org_bukkit_inventory_EntityEquipment from './org/bukkit/inventory/EntityEquipment.js';
+import org_bukkit_entity_Villager$Type from './org/bukkit/entity/Villager$Type.js';
 import org_bukkit_attribute_AttributeInstance from './org/bukkit/attribute/AttributeInstance.js';
-import org_bukkit_attribute_Attribute from './org/bukkit/attribute/Attribute.js';
-import org_bukkit_attribute_AttributeModifier from './org/bukkit/attribute/AttributeModifier.js';
-import org_bukkit_inventory_EquipmentSlot from './org/bukkit/inventory/EquipmentSlot.js';
-import org_bukkit_attribute_AttributeModifier$Operation from './org/bukkit/attribute/AttributeModifier$Operation.js';
 import org_bukkit_loot_LootTable from './org/bukkit/loot/LootTable.js';
 import org_bukkit_loot_LootContext from './org/bukkit/loot/LootContext.js';
 import org_bukkit_inventory_MerchantRecipe from './org/bukkit/inventory/MerchantRecipe.js';
@@ -149,6 +154,8 @@ import org_bukkit_entity_Mob from './org/bukkit/entity/Mob.js';
 import org_bukkit_loot_Lootable from './org/bukkit/loot/Lootable.js';
 import org_bukkit_entity_NPC from './org/bukkit/entity/NPC.js';
 import org_bukkit_inventory_Merchant from './org/bukkit/inventory/Merchant.js';
+import org_bukkit_GameMode from './org/bukkit/GameMode.js';
+import org_bukkit_inventory_PlayerInventory from './org/bukkit/inventory/PlayerInventory.js';
 import org_bukkit_event_inventory_InventoryType$SlotType from './org/bukkit/event/inventory/InventoryType$SlotType.js';
 import org_bukkit_conversations_Conversation from './org/bukkit/conversations/Conversation.js';
 import org_bukkit_conversations_ConversationContext from './org/bukkit/conversations/ConversationContext.js';
@@ -164,37 +171,24 @@ import org_bukkit_attribute_Attributable from './org/bukkit/attribute/Attributab
 import org_bukkit_entity_Damageable from './org/bukkit/entity/Damageable.js';
 import org_bukkit_potion_PotionData from './org/bukkit/potion/PotionData.js';
 import org_bukkit_potion_PotionType from './org/bukkit/potion/PotionType.js';
-import org_bukkit_entity_FallingBlock from './org/bukkit/entity/FallingBlock.js';
+import org_bukkit_TreeType from './org/bukkit/TreeType.js';
+import org_bukkit_BlockChangeDelegate from './org/bukkit/BlockChangeDelegate.js';
 import org_bukkit_Raid from './org/bukkit/Raid.js';
 import org_bukkit_Raid$RaidStatus from './org/bukkit/Raid$RaidStatus.js';
 import org_bukkit_WorldBorder from './org/bukkit/WorldBorder.js';
 import org_bukkit_map_MapView$Scale from './org/bukkit/map/MapView$Scale.js';
 import org_bukkit_map_MapRenderer from './org/bukkit/map/MapRenderer.js';
 import org_bukkit_map_MapCanvas from './org/bukkit/map/MapCanvas.js';
-import org_bukkit_map_MapCursorCollection from './org/bukkit/map/MapCursorCollection.js';
-import org_bukkit_map_MapCursor from './org/bukkit/map/MapCursor.js';
 import org_bukkit_map_MapFont from './org/bukkit/map/MapFont.js';
 import org_bukkit_map_MapFont$CharacterSprite from './org/bukkit/map/MapFont$CharacterSprite.js';
+import org_bukkit_map_MapCursorCollection from './org/bukkit/map/MapCursorCollection.js';
+import org_bukkit_map_MapCursor from './org/bukkit/map/MapCursor.js';
+import org_bukkit_plugin_PluginManager from './org/bukkit/plugin/PluginManager.js';
 import org_bukkit_plugin_ServicesManager from './org/bukkit/plugin/ServicesManager.js';
 import org_bukkit_plugin_ServicePriority from './org/bukkit/plugin/ServicePriority.js';
 import org_bukkit_plugin_RegisteredServiceProvider from './org/bukkit/plugin/RegisteredServiceProvider.js';
-import org_bukkit_plugin_PluginManager from './org/bukkit/plugin/PluginManager.js';
 import org_bukkit_plugin_messaging_Messenger from './org/bukkit/plugin/messaging/Messenger.js';
 import org_bukkit_plugin_messaging_PluginMessageListener from './org/bukkit/plugin/messaging/PluginMessageListener.js';
-import org_bukkit_plugin_messaging_PluginMessageListenerRegistration from './org/bukkit/plugin/messaging/PluginMessageListenerRegistration.js';
-import org_bukkit_inventory_ItemFactory from './org/bukkit/inventory/ItemFactory.js';
-import org_bukkit_inventory_meta_ItemMeta from './org/bukkit/inventory/meta/ItemMeta.js';
-import org_bukkit_enchantments_Enchantment from './org/bukkit/enchantments/Enchantment.js';
-import org_bukkit_enchantments_EnchantmentTarget from './org/bukkit/enchantments/EnchantmentTarget.js';
-import org_bukkit_inventory_ItemFlag from './org/bukkit/inventory/ItemFlag.js';
-import com_google_common_collect_Multimap from './com/google/common/collect/Multimap.js';
-import com_google_common_collect_Multiset from './com/google/common/collect/Multiset.js';
-import org_bukkit_inventory_meta_tags_CustomItemTagContainer from './org/bukkit/inventory/meta/tags/CustomItemTagContainer.js';
-import org_bukkit_inventory_meta_tags_ItemTagAdapterContext from './org/bukkit/inventory/meta/tags/ItemTagAdapterContext.js';
-import org_bukkit_inventory_meta_tags_ItemTagType from './org/bukkit/inventory/meta/tags/ItemTagType.js';
-import org_bukkit_scheduler_BukkitScheduler from './org/bukkit/scheduler/BukkitScheduler.js';
-import org_bukkit_scheduler_BukkitTask from './org/bukkit/scheduler/BukkitTask.js';
-import org_bukkit_scheduler_BukkitRunnable from './org/bukkit/scheduler/BukkitRunnable.js';
 import org_bukkit_configuration_file_YamlConfiguration from './org/bukkit/configuration/file/YamlConfiguration.js';
 import org_bukkit_configuration_file_YamlConfigurationOptions from './org/bukkit/configuration/file/YamlConfigurationOptions.js';
 import org_bukkit_configuration_Configuration from './org/bukkit/configuration/Configuration.js';
@@ -205,41 +199,48 @@ import org_bukkit_configuration_MemoryConfigurationOptions from './org/bukkit/co
 import org_bukkit_configuration_MemorySection from './org/bukkit/configuration/MemorySection.js';
 import org_bukkit_configuration_file_FileConfiguration from './org/bukkit/configuration/file/FileConfiguration.js';
 import org_bukkit_configuration_file_FileConfigurationOptions from './org/bukkit/configuration/file/FileConfigurationOptions.js';
-import org_bukkit_Tag from './org/bukkit/Tag.js';
+import org_bukkit_WorldCreator from './org/bukkit/WorldCreator.js';
+import org_bukkit_scheduler_BukkitScheduler from './org/bukkit/scheduler/BukkitScheduler.js';
+import org_bukkit_scheduler_BukkitTask from './org/bukkit/scheduler/BukkitTask.js';
+import org_bukkit_scheduler_BukkitRunnable from './org/bukkit/scheduler/BukkitRunnable.js';
+import org_bukkit_util_CachedServerIcon from './org/bukkit/util/CachedServerIcon.js';
+import org_bukkit_Warning$WarningState from './org/bukkit/Warning$WarningState.js';
+import org_bukkit_Warning from './org/bukkit/Warning.js';
+import org_bukkit_help_HelpMap from './org/bukkit/help/HelpMap.js';
+import org_bukkit_help_HelpTopicFactory from './org/bukkit/help/HelpTopicFactory.js';
+import org_bukkit_help_HelpTopic from './org/bukkit/help/HelpTopic.js';
+import org_bukkit_command_Command from './org/bukkit/command/Command.js';
+import org_bukkit_command_CommandMap from './org/bukkit/command/CommandMap.js';
 import org_bukkit_boss_BossBar from './org/bukkit/boss/BossBar.js';
 import org_bukkit_boss_BarFlag from './org/bukkit/boss/BarFlag.js';
 import org_bukkit_boss_BarColor from './org/bukkit/boss/BarColor.js';
 import org_bukkit_boss_BarStyle from './org/bukkit/boss/BarStyle.js';
 import org_bukkit_boss_KeyedBossBar from './org/bukkit/boss/KeyedBossBar.js';
-import org_bukkit_command_PluginCommand from './org/bukkit/command/PluginCommand.js';
-import org_bukkit_command_CommandExecutor from './org/bukkit/command/CommandExecutor.js';
-import org_bukkit_command_Command from './org/bukkit/command/Command.js';
-import org_bukkit_command_CommandMap from './org/bukkit/command/CommandMap.js';
-import org_bukkit_command_TabCompleter from './org/bukkit/command/TabCompleter.js';
-import org_bukkit_command_PluginIdentifiableCommand from './org/bukkit/command/PluginIdentifiableCommand.js';
-import org_bukkit_WorldCreator from './org/bukkit/WorldCreator.js';
+import org_bukkit_inventory_ItemFactory from './org/bukkit/inventory/ItemFactory.js';
 import org_bukkit_BanList from './org/bukkit/BanList.js';
 import org_bukkit_BanEntry from './org/bukkit/BanEntry.js';
 import org_bukkit_BanList$Type from './org/bukkit/BanList$Type.js';
-import org_bukkit_help_HelpMap from './org/bukkit/help/HelpMap.js';
-import org_bukkit_help_HelpTopic from './org/bukkit/help/HelpTopic.js';
-import org_bukkit_help_HelpTopicFactory from './org/bukkit/help/HelpTopicFactory.js';
-import org_bukkit_util_CachedServerIcon from './org/bukkit/util/CachedServerIcon.js';
+import org_bukkit_Tag from './org/bukkit/Tag.js';
+import org_bukkit_command_PluginCommand from './org/bukkit/command/PluginCommand.js';
+import org_bukkit_command_CommandExecutor from './org/bukkit/command/CommandExecutor.js';
+import org_bukkit_command_TabCompleter from './org/bukkit/command/TabCompleter.js';
+import org_bukkit_command_PluginIdentifiableCommand from './org/bukkit/command/PluginIdentifiableCommand.js';
 import org_bukkit_command_ConsoleCommandSender from './org/bukkit/command/ConsoleCommandSender.js';
-import org_bukkit_Warning$WarningState from './org/bukkit/Warning$WarningState.js';
-import org_bukkit_Warning from './org/bukkit/Warning.js';
 import org_bukkit_scoreboard_ScoreboardManager from './org/bukkit/scoreboard/ScoreboardManager.js';
 import org_bukkit_plugin_PluginLoader from './org/bukkit/plugin/PluginLoader.js';
 import org_bukkit_command_TabExecutor from './org/bukkit/command/TabExecutor.js';
-import com_pixlfox_scriptablemc_smartinvs_SmartInventoryInterface from './com/pixlfox/scriptablemc/smartinvs/SmartInventoryInterface.js';
-import fr_minuskube_inv_SmartInventory$Builder from './fr/minuskube/inv/SmartInventory$Builder.js';
+import org_bukkit_plugin_java_JavaPlugin from './org/bukkit/plugin/java/JavaPlugin.js';
+import org_bukkit_plugin_PluginBase from './org/bukkit/plugin/PluginBase.js';
+import com_pixlfox_scriptablemc_core_ScriptablePluginEngine from './com/pixlfox/scriptablemc/core/ScriptablePluginEngine.js';
+import fr_minuskube_inv_InventoryManager from './fr/minuskube/inv/InventoryManager.js';
 import fr_minuskube_inv_SmartInventory from './fr/minuskube/inv/SmartInventory.js';
+import fr_minuskube_inv_SmartInventory$Builder from './fr/minuskube/inv/SmartInventory$Builder.js';
 import fr_minuskube_inv_content_InventoryProvider from './fr/minuskube/inv/content/InventoryProvider.js';
 import fr_minuskube_inv_content_InventoryContents from './fr/minuskube/inv/content/InventoryContents.js';
 import fr_minuskube_inv_ClickableItem from './fr/minuskube/inv/ClickableItem.js';
 import org_bukkit_event_inventory_InventoryClickEvent from './org/bukkit/event/inventory/InventoryClickEvent.js';
-import org_bukkit_event_inventory_ClickType from './org/bukkit/event/inventory/ClickType.js';
 import org_bukkit_event_inventory_InventoryAction from './org/bukkit/event/inventory/InventoryAction.js';
+import org_bukkit_event_inventory_ClickType from './org/bukkit/event/inventory/ClickType.js';
 import org_bukkit_event_Event$Result from './org/bukkit/event/Event$Result.js';
 import org_bukkit_event_inventory_InventoryInteractEvent from './org/bukkit/event/inventory/InventoryInteractEvent.js';
 import org_bukkit_event_inventory_InventoryEvent from './org/bukkit/event/inventory/InventoryEvent.js';
@@ -247,54 +248,52 @@ import fr_minuskube_inv_content_SlotPos from './fr/minuskube/inv/content/SlotPos
 import fr_minuskube_inv_content_Pagination from './fr/minuskube/inv/content/Pagination.js';
 import fr_minuskube_inv_content_SlotIterator from './fr/minuskube/inv/content/SlotIterator.js';
 import fr_minuskube_inv_content_SlotIterator$Type from './fr/minuskube/inv/content/SlotIterator$Type.js';
-import fr_minuskube_inv_InventoryManager from './fr/minuskube/inv/InventoryManager.js';
-import fr_minuskube_inv_opener_InventoryOpener from './fr/minuskube/inv/opener/InventoryOpener.js';
-import org_bukkit_plugin_java_JavaPlugin from './org/bukkit/plugin/java/JavaPlugin.js';
-import org_bukkit_plugin_PluginBase from './org/bukkit/plugin/PluginBase.js';
 import fr_minuskube_inv_InventoryListener from './fr/minuskube/inv/InventoryListener.js';
-import com_pixlfox_scriptablemc_smartinvs_SmartInventoryProvider from './com/pixlfox/scriptablemc/smartinvs/SmartInventoryProvider.js';
+import fr_minuskube_inv_opener_InventoryOpener from './fr/minuskube/inv/opener/InventoryOpener.js';
+import com_smc_utils_ItemBuilder from './com/smc/utils/ItemBuilder.js';
 import com_smc_utils_MysqlWrapper from './com/smc/utils/MysqlWrapper.js';
-import java_sql_Connection from './java/sql/Connection.js';
 import java_sql_Statement from './java/sql/Statement.js';
+import java_sql_Connection from './java/sql/Connection.js';
+import java_sql_PreparedStatement from './java/sql/PreparedStatement.js';
+import java_sql__Array from './java/sql/Array.js';
+import java_sql_ResultSet from './java/sql/ResultSet.js';
+import java_sql_Ref from './java/sql/Ref.js';
+import java_sql_Date from './java/sql/Date.js';
+import java_sql_Time from './java/sql/Time.js';
 import java_sql_SQLWarning from './java/sql/SQLWarning.js';
 import java_sql_SQLException from './java/sql/SQLException.js';
 import java_io_PrintStream from './java/io/PrintStream.js';
 import java_io_FilterOutputStream from './java/io/FilterOutputStream.js';
 import java_io_PrintWriter from './java/io/PrintWriter.js';
-import java_sql_ResultSet from './java/sql/ResultSet.js';
-import java_sql_Ref from './java/sql/Ref.js';
-import java_sql_Date from './java/sql/Date.js';
-import java_sql__Array from './java/sql/Array.js';
-import java_sql_Time from './java/sql/Time.js';
 import java_sql_ResultSetMetaData from './java/sql/ResultSetMetaData.js';
 import java_sql_Wrapper from './java/sql/Wrapper.js';
-import java_sql_NClob from './java/sql/NClob.js';
-import java_sql_Clob from './java/sql/Clob.js';
-import java_sql_Timestamp from './java/sql/Timestamp.js';
-import java_sql_SQLXML from './java/sql/SQLXML.js';
-import java_sql_RowId from './java/sql/RowId.js';
-import java_sql_Blob from './java/sql/Blob.js';
 import java_sql_SQLType from './java/sql/SQLType.js';
-import java_sql_PreparedStatement from './java/sql/PreparedStatement.js';
+import java_sql_Timestamp from './java/sql/Timestamp.js';
+import java_sql_Blob from './java/sql/Blob.js';
+import java_sql_Clob from './java/sql/Clob.js';
+import java_sql_NClob from './java/sql/NClob.js';
+import java_sql_RowId from './java/sql/RowId.js';
+import java_sql_SQLXML from './java/sql/SQLXML.js';
 import java_sql_ParameterMetaData from './java/sql/ParameterMetaData.js';
 import java_sql_ShardingKey from './java/sql/ShardingKey.js';
-import java_sql_Savepoint from './java/sql/Savepoint.js';
-import java_sql_Struct from './java/sql/Struct.js';
-import java_sql_CallableStatement from './java/sql/CallableStatement.js';
 import java_sql_DatabaseMetaData from './java/sql/DatabaseMetaData.js';
 import java_sql_RowIdLifetime from './java/sql/RowIdLifetime.js';
-import com_pixlfox_scriptablemc_core_ScriptablePluginEngine from './com/pixlfox/scriptablemc/core/ScriptablePluginEngine.js';
+import java_sql_Struct from './java/sql/Struct.js';
+import java_sql_CallableStatement from './java/sql/CallableStatement.js';
+import java_sql_Savepoint from './java/sql/Savepoint.js';
 import com_smc_version_MinecraftVersion from './com/smc/version/MinecraftVersion.js';
 import com_smc_version_SnapshotVersion from './com/smc/version/SnapshotVersion.js';
 import com_smc_version_MinecraftVersions from './com/smc/version/MinecraftVersions.js';
+import com_smc_smartinvs_SmartInventoryProvider from './com/smc/smartinvs/SmartInventoryProvider.js';
+import com_smc_smartinvs_SmartInventory from './com/smc/smartinvs/SmartInventory.js';
 import com_google_common_io_ByteStreams from './com/google/common/io/ByteStreams.js';
 import com_google_common_io_ByteProcessor from './com/google/common/io/ByteProcessor.js';
-import com_google_common_io_ByteArrayDataInput from './com/google/common/io/ByteArrayDataInput.js';
-import java_io_DataInput from './java/io/DataInput.js';
-import java_io_ByteArrayInputStream from './java/io/ByteArrayInputStream.js';
 import com_google_common_io_ByteArrayDataOutput from './com/google/common/io/ByteArrayDataOutput.js';
 import java_io_DataOutput from './java/io/DataOutput.js';
 import java_io_ByteArrayOutputStream from './java/io/ByteArrayOutputStream.js';
+import com_google_common_io_ByteArrayDataInput from './com/google/common/io/ByteArrayDataInput.js';
+import java_io_DataInput from './java/io/DataInput.js';
+import java_io_ByteArrayInputStream from './java/io/ByteArrayInputStream.js';
 import org_bukkit_entity_AbstractHorse from './org/bukkit/entity/AbstractHorse.js';
 import org_bukkit_entity_Horse$Variant from './org/bukkit/entity/Horse$Variant.js';
 import org_bukkit_inventory_AbstractHorseInventory from './org/bukkit/inventory/AbstractHorseInventory.js';
@@ -1052,123 +1051,17 @@ export declare namespace com.pixlfox.scriptablemc.core {
     const ScriptablePluginContext: typeof com_pixlfox_scriptablemc_core_ScriptablePluginContext;
     const ScriptablePluginEngine: typeof com_pixlfox_scriptablemc_core_ScriptablePluginEngine;
 }
-export declare namespace com.smc.utils {
-    const FileWrapper: typeof com_smc_utils_FileWrapper;
-    const MysqlWrapper: typeof com_smc_utils_MysqlWrapper;
-}
-export declare namespace com.pixlfox.scriptablemc.smartinvs {
-    const SmartItemBuilder: typeof com_pixlfox_scriptablemc_smartinvs_SmartItemBuilder;
-    const SmartInventoryInterface: typeof com_pixlfox_scriptablemc_smartinvs_SmartInventoryInterface;
-    const SmartInventoryProvider: typeof com_pixlfox_scriptablemc_smartinvs_SmartInventoryProvider;
-}
-export declare namespace org.bukkit.inventory {
-    const ItemStack: typeof org_bukkit_inventory_ItemStack;
-    const InventoryView: typeof org_bukkit_inventory_InventoryView;
-    const InventoryView$Property: typeof org_bukkit_inventory_InventoryView$Property;
-    const Inventory: typeof org_bukkit_inventory_Inventory;
-    const InventoryHolder: typeof org_bukkit_inventory_InventoryHolder;
-    const PlayerInventory: typeof org_bukkit_inventory_PlayerInventory;
-    const MainHand: typeof org_bukkit_inventory_MainHand;
-    const EntityEquipment: typeof org_bukkit_inventory_EntityEquipment;
-    const EquipmentSlot: typeof org_bukkit_inventory_EquipmentSlot;
-    const MerchantRecipe: typeof org_bukkit_inventory_MerchantRecipe;
-    const Recipe: typeof org_bukkit_inventory_Recipe;
-    const Merchant: typeof org_bukkit_inventory_Merchant;
-    const ItemFactory: typeof org_bukkit_inventory_ItemFactory;
-    const ItemFlag: typeof org_bukkit_inventory_ItemFlag;
-    const AbstractHorseInventory: typeof org_bukkit_inventory_AbstractHorseInventory;
-    const AnvilInventory: typeof org_bukkit_inventory_AnvilInventory;
-    const BlockInventoryHolder: typeof org_bukkit_inventory_BlockInventoryHolder;
-    const BeaconInventory: typeof org_bukkit_inventory_BeaconInventory;
-    const FurnaceInventory: typeof org_bukkit_inventory_FurnaceInventory;
-    const BlastingRecipe: typeof org_bukkit_inventory_BlastingRecipe;
-    const CookingRecipe: typeof org_bukkit_inventory_CookingRecipe;
-    const RecipeChoice: typeof org_bukkit_inventory_RecipeChoice;
-    const BrewerInventory: typeof org_bukkit_inventory_BrewerInventory;
-    const CampfireRecipe: typeof org_bukkit_inventory_CampfireRecipe;
-    const CartographyInventory: typeof org_bukkit_inventory_CartographyInventory;
-    const ComplexRecipe: typeof org_bukkit_inventory_ComplexRecipe;
-    const CraftingInventory: typeof org_bukkit_inventory_CraftingInventory;
-    const DoubleChestInventory: typeof org_bukkit_inventory_DoubleChestInventory;
-    const EnchantingInventory: typeof org_bukkit_inventory_EnchantingInventory;
-    const FurnaceRecipe: typeof org_bukkit_inventory_FurnaceRecipe;
-    const GrindstoneInventory: typeof org_bukkit_inventory_GrindstoneInventory;
-    const HorseInventory: typeof org_bukkit_inventory_HorseInventory;
-    const LecternInventory: typeof org_bukkit_inventory_LecternInventory;
-    const LlamaInventory: typeof org_bukkit_inventory_LlamaInventory;
-    const LoomInventory: typeof org_bukkit_inventory_LoomInventory;
-    const MerchantInventory: typeof org_bukkit_inventory_MerchantInventory;
-    const ShapedRecipe: typeof org_bukkit_inventory_ShapedRecipe;
-    const ShapelessRecipe: typeof org_bukkit_inventory_ShapelessRecipe;
-    const SmokingRecipe: typeof org_bukkit_inventory_SmokingRecipe;
-    const StonecutterInventory: typeof org_bukkit_inventory_StonecutterInventory;
-    const StonecuttingRecipe: typeof org_bukkit_inventory_StonecuttingRecipe;
-}
-export declare namespace org.bukkit {
-    const Material: typeof org_bukkit_Material;
-    const NamespacedKey: typeof org_bukkit_NamespacedKey;
-    const Server: typeof org_bukkit_Server;
-    const UnsafeValues: typeof org_bukkit_UnsafeValues;
-    const Keyed: typeof org_bukkit_Keyed;
-    const World: typeof org_bukkit_World;
-    const Location: typeof org_bukkit_Location;
-    const Chunk: typeof org_bukkit_Chunk;
-    const ChunkSnapshot: typeof org_bukkit_ChunkSnapshot;
-    const EntityEffect: typeof org_bukkit_EntityEffect;
-    const Nameable: typeof org_bukkit_Nameable;
-    const FluidCollisionMode: typeof org_bukkit_FluidCollisionMode;
-    const Sound: typeof org_bukkit_Sound;
-    const SoundCategory: typeof org_bukkit_SoundCategory;
-    const Effect: typeof org_bukkit_Effect;
-    const Effect$Type: typeof org_bukkit_Effect$Type;
-    const Particle: typeof org_bukkit_Particle;
-    const WorldType: typeof org_bukkit_WorldType;
-    const GameRule: typeof org_bukkit_GameRule;
-    const StructureType: typeof org_bukkit_StructureType;
-    const HeightMap: typeof org_bukkit_HeightMap;
-    const World$Environment: typeof org_bukkit_World$Environment;
-    const Difficulty: typeof org_bukkit_Difficulty;
-    const TreeType: typeof org_bukkit_TreeType;
-    const BlockChangeDelegate: typeof org_bukkit_BlockChangeDelegate;
-    const Color: typeof org_bukkit_Color;
-    const DyeColor: typeof org_bukkit_DyeColor;
-    const Instrument: typeof org_bukkit_Instrument;
-    const Note: typeof org_bukkit_Note;
-    const Note$Tone: typeof org_bukkit_Note$Tone;
-    const WeatherType: typeof org_bukkit_WeatherType;
-    const Statistic: typeof org_bukkit_Statistic;
-    const Statistic$Type: typeof org_bukkit_Statistic$Type;
-    const OfflinePlayer: typeof org_bukkit_OfflinePlayer;
-    const ChatColor: typeof org_bukkit_ChatColor;
-    const GameMode: typeof org_bukkit_GameMode;
-    const Raid: typeof org_bukkit_Raid;
-    const Raid$RaidStatus: typeof org_bukkit_Raid$RaidStatus;
-    const WorldBorder: typeof org_bukkit_WorldBorder;
-    const Tag: typeof org_bukkit_Tag;
-    const WorldCreator: typeof org_bukkit_WorldCreator;
-    const BanList: typeof org_bukkit_BanList;
-    const BanEntry: typeof org_bukkit_BanEntry;
-    const BanList$Type: typeof org_bukkit_BanList$Type;
-    const Warning$WarningState: typeof org_bukkit_Warning$WarningState;
-    const Warning: typeof org_bukkit_Warning;
-    const Art: typeof org_bukkit_Art;
-    const Axis: typeof org_bukkit_Axis;
-    const TreeSpecies: typeof org_bukkit_TreeSpecies;
-    const Bukkit: typeof org_bukkit_Bukkit;
-    const CoalType: typeof org_bukkit_CoalType;
-    const CropState: typeof org_bukkit_CropState;
-    const PortalType: typeof org_bukkit_PortalType;
-    const FireworkEffect: typeof org_bukkit_FireworkEffect;
-    const FireworkEffect$Builder: typeof org_bukkit_FireworkEffect$Builder;
-    const FireworkEffect$Type: typeof org_bukkit_FireworkEffect$Type;
-    const GrassSpecies: typeof org_bukkit_GrassSpecies;
-    const Rotation: typeof org_bukkit_Rotation;
-    const NetherWartsState: typeof org_bukkit_NetherWartsState;
-    const Registry: typeof org_bukkit_Registry;
-    const SandstoneType: typeof org_bukkit_SandstoneType;
-    const SkullType: typeof org_bukkit_SkullType;
-    const UndefinedNullability: typeof org_bukkit_UndefinedNullability;
-    const Utility: typeof org_bukkit_Utility;
+export declare namespace org.bukkit.plugin.messaging {
+    const PluginMessageListenerRegistration: typeof org_bukkit_plugin_messaging_PluginMessageListenerRegistration;
+    const PluginMessageRecipient: typeof org_bukkit_plugin_messaging_PluginMessageRecipient;
+    const Messenger: typeof org_bukkit_plugin_messaging_Messenger;
+    const PluginMessageListener: typeof org_bukkit_plugin_messaging_PluginMessageListener;
+    const ChannelNameTooLongException: typeof org_bukkit_plugin_messaging_ChannelNameTooLongException;
+    const ChannelNotRegisteredException: typeof org_bukkit_plugin_messaging_ChannelNotRegisteredException;
+    const MessageTooLargeException: typeof org_bukkit_plugin_messaging_MessageTooLargeException;
+    const PluginChannelDirection: typeof org_bukkit_plugin_messaging_PluginChannelDirection;
+    const ReservedChannelException: typeof org_bukkit_plugin_messaging_ReservedChannelException;
+    const StandardMessenger: typeof org_bukkit_plugin_messaging_StandardMessenger;
 }
 export declare namespace org.bukkit.plugin {
     const Plugin: typeof org_bukkit_plugin_Plugin;
@@ -1176,10 +1069,10 @@ export declare namespace org.bukkit.plugin {
     const PluginLoadOrder: typeof org_bukkit_plugin_PluginLoadOrder;
     const RegisteredListener: typeof org_bukkit_plugin_RegisteredListener;
     const EventExecutor: typeof org_bukkit_plugin_EventExecutor;
+    const PluginManager: typeof org_bukkit_plugin_PluginManager;
     const ServicesManager: typeof org_bukkit_plugin_ServicesManager;
     const ServicePriority: typeof org_bukkit_plugin_ServicePriority;
     const RegisteredServiceProvider: typeof org_bukkit_plugin_RegisteredServiceProvider;
-    const PluginManager: typeof org_bukkit_plugin_PluginManager;
     const PluginLoader: typeof org_bukkit_plugin_PluginLoader;
     const PluginBase: typeof org_bukkit_plugin_PluginBase;
     const AuthorNagException: typeof org_bukkit_plugin_AuthorNagException;
@@ -1207,10 +1100,10 @@ export declare namespace java.io {
     const PrintStream: typeof java_io_PrintStream;
     const FilterOutputStream: typeof java_io_FilterOutputStream;
     const PrintWriter: typeof java_io_PrintWriter;
-    const DataInput: typeof java_io_DataInput;
-    const ByteArrayInputStream: typeof java_io_ByteArrayInputStream;
     const DataOutput: typeof java_io_DataOutput;
     const ByteArrayOutputStream: typeof java_io_ByteArrayOutputStream;
+    const DataInput: typeof java_io_DataInput;
+    const ByteArrayInputStream: typeof java_io_ByteArrayInputStream;
     const ObjectInputStream$GetField: typeof java_io_ObjectInputStream$GetField;
     const ObjectStreamClass: typeof java_io_ObjectStreamClass;
     const ObjectStreamField: typeof java_io_ObjectStreamField;
@@ -1225,6 +1118,72 @@ export declare namespace java.io {
     const ObjectOutputStream$PutField: typeof java_io_ObjectOutputStream$PutField;
     const ObjectOutput: typeof java_io_ObjectOutput;
     const ObjectOutputStream: typeof java_io_ObjectOutputStream;
+}
+export declare namespace org.bukkit {
+    const Server: typeof org_bukkit_Server;
+    const UnsafeValues: typeof org_bukkit_UnsafeValues;
+    const Material: typeof org_bukkit_Material;
+    const NamespacedKey: typeof org_bukkit_NamespacedKey;
+    const Keyed: typeof org_bukkit_Keyed;
+    const World: typeof org_bukkit_World;
+    const Location: typeof org_bukkit_Location;
+    const Chunk: typeof org_bukkit_Chunk;
+    const ChunkSnapshot: typeof org_bukkit_ChunkSnapshot;
+    const EntityEffect: typeof org_bukkit_EntityEffect;
+    const Nameable: typeof org_bukkit_Nameable;
+    const FluidCollisionMode: typeof org_bukkit_FluidCollisionMode;
+    const SoundCategory: typeof org_bukkit_SoundCategory;
+    const Sound: typeof org_bukkit_Sound;
+    const Effect: typeof org_bukkit_Effect;
+    const Effect$Type: typeof org_bukkit_Effect$Type;
+    const Particle: typeof org_bukkit_Particle;
+    const HeightMap: typeof org_bukkit_HeightMap;
+    const World$Environment: typeof org_bukkit_World$Environment;
+    const WorldType: typeof org_bukkit_WorldType;
+    const GameRule: typeof org_bukkit_GameRule;
+    const StructureType: typeof org_bukkit_StructureType;
+    const Difficulty: typeof org_bukkit_Difficulty;
+    const Color: typeof org_bukkit_Color;
+    const DyeColor: typeof org_bukkit_DyeColor;
+    const Statistic: typeof org_bukkit_Statistic;
+    const Statistic$Type: typeof org_bukkit_Statistic$Type;
+    const Instrument: typeof org_bukkit_Instrument;
+    const Note: typeof org_bukkit_Note;
+    const Note$Tone: typeof org_bukkit_Note$Tone;
+    const ChatColor: typeof org_bukkit_ChatColor;
+    const OfflinePlayer: typeof org_bukkit_OfflinePlayer;
+    const WeatherType: typeof org_bukkit_WeatherType;
+    const GameMode: typeof org_bukkit_GameMode;
+    const TreeType: typeof org_bukkit_TreeType;
+    const BlockChangeDelegate: typeof org_bukkit_BlockChangeDelegate;
+    const Raid: typeof org_bukkit_Raid;
+    const Raid$RaidStatus: typeof org_bukkit_Raid$RaidStatus;
+    const WorldBorder: typeof org_bukkit_WorldBorder;
+    const WorldCreator: typeof org_bukkit_WorldCreator;
+    const Warning$WarningState: typeof org_bukkit_Warning$WarningState;
+    const Warning: typeof org_bukkit_Warning;
+    const BanList: typeof org_bukkit_BanList;
+    const BanEntry: typeof org_bukkit_BanEntry;
+    const BanList$Type: typeof org_bukkit_BanList$Type;
+    const Tag: typeof org_bukkit_Tag;
+    const Art: typeof org_bukkit_Art;
+    const Axis: typeof org_bukkit_Axis;
+    const TreeSpecies: typeof org_bukkit_TreeSpecies;
+    const Bukkit: typeof org_bukkit_Bukkit;
+    const CoalType: typeof org_bukkit_CoalType;
+    const CropState: typeof org_bukkit_CropState;
+    const PortalType: typeof org_bukkit_PortalType;
+    const FireworkEffect: typeof org_bukkit_FireworkEffect;
+    const FireworkEffect$Builder: typeof org_bukkit_FireworkEffect$Builder;
+    const FireworkEffect$Type: typeof org_bukkit_FireworkEffect$Type;
+    const GrassSpecies: typeof org_bukkit_GrassSpecies;
+    const Rotation: typeof org_bukkit_Rotation;
+    const NetherWartsState: typeof org_bukkit_NetherWartsState;
+    const Registry: typeof org_bukkit_Registry;
+    const SandstoneType: typeof org_bukkit_SandstoneType;
+    const SkullType: typeof org_bukkit_SkullType;
+    const UndefinedNullability: typeof org_bukkit_UndefinedNullability;
+    const Utility: typeof org_bukkit_Utility;
 }
 export declare namespace org.bukkit.block.data {
     const BlockData: typeof org_bukkit_block_data_BlockData;
@@ -1315,19 +1274,118 @@ export declare namespace org.bukkit.material {
     const WoodenStep: typeof org_bukkit_material_WoodenStep;
     const Wool: typeof org_bukkit_material_Wool;
 }
-export declare namespace org.bukkit.permissions {
-    const PermissionDefault: typeof org_bukkit_permissions_PermissionDefault;
-    const PermissionAttachment: typeof org_bukkit_permissions_PermissionAttachment;
-    const Permission: typeof org_bukkit_permissions_Permission;
-    const Permissible: typeof org_bukkit_permissions_Permissible;
-    const ServerOperator: typeof org_bukkit_permissions_ServerOperator;
-    const PermissionRemovedExecutor: typeof org_bukkit_permissions_PermissionRemovedExecutor;
-    const PermissibleBase: typeof org_bukkit_permissions_PermissibleBase;
-    const PermissionAttachmentInfo: typeof org_bukkit_permissions_PermissionAttachmentInfo;
+export declare namespace org.bukkit.inventory {
+    const ItemStack: typeof org_bukkit_inventory_ItemStack;
+    const EquipmentSlot: typeof org_bukkit_inventory_EquipmentSlot;
+    const ItemFlag: typeof org_bukkit_inventory_ItemFlag;
+    const EntityEquipment: typeof org_bukkit_inventory_EntityEquipment;
+    const InventoryView: typeof org_bukkit_inventory_InventoryView;
+    const InventoryView$Property: typeof org_bukkit_inventory_InventoryView$Property;
+    const Inventory: typeof org_bukkit_inventory_Inventory;
+    const InventoryHolder: typeof org_bukkit_inventory_InventoryHolder;
+    const MainHand: typeof org_bukkit_inventory_MainHand;
+    const MerchantRecipe: typeof org_bukkit_inventory_MerchantRecipe;
+    const Recipe: typeof org_bukkit_inventory_Recipe;
+    const Merchant: typeof org_bukkit_inventory_Merchant;
+    const PlayerInventory: typeof org_bukkit_inventory_PlayerInventory;
+    const ItemFactory: typeof org_bukkit_inventory_ItemFactory;
+    const AbstractHorseInventory: typeof org_bukkit_inventory_AbstractHorseInventory;
+    const AnvilInventory: typeof org_bukkit_inventory_AnvilInventory;
+    const BlockInventoryHolder: typeof org_bukkit_inventory_BlockInventoryHolder;
+    const BeaconInventory: typeof org_bukkit_inventory_BeaconInventory;
+    const FurnaceInventory: typeof org_bukkit_inventory_FurnaceInventory;
+    const BlastingRecipe: typeof org_bukkit_inventory_BlastingRecipe;
+    const CookingRecipe: typeof org_bukkit_inventory_CookingRecipe;
+    const RecipeChoice: typeof org_bukkit_inventory_RecipeChoice;
+    const BrewerInventory: typeof org_bukkit_inventory_BrewerInventory;
+    const CampfireRecipe: typeof org_bukkit_inventory_CampfireRecipe;
+    const CartographyInventory: typeof org_bukkit_inventory_CartographyInventory;
+    const ComplexRecipe: typeof org_bukkit_inventory_ComplexRecipe;
+    const CraftingInventory: typeof org_bukkit_inventory_CraftingInventory;
+    const DoubleChestInventory: typeof org_bukkit_inventory_DoubleChestInventory;
+    const EnchantingInventory: typeof org_bukkit_inventory_EnchantingInventory;
+    const FurnaceRecipe: typeof org_bukkit_inventory_FurnaceRecipe;
+    const GrindstoneInventory: typeof org_bukkit_inventory_GrindstoneInventory;
+    const HorseInventory: typeof org_bukkit_inventory_HorseInventory;
+    const LecternInventory: typeof org_bukkit_inventory_LecternInventory;
+    const LlamaInventory: typeof org_bukkit_inventory_LlamaInventory;
+    const LoomInventory: typeof org_bukkit_inventory_LoomInventory;
+    const MerchantInventory: typeof org_bukkit_inventory_MerchantInventory;
+    const ShapedRecipe: typeof org_bukkit_inventory_ShapedRecipe;
+    const ShapelessRecipe: typeof org_bukkit_inventory_ShapelessRecipe;
+    const SmokingRecipe: typeof org_bukkit_inventory_SmokingRecipe;
+    const StonecutterInventory: typeof org_bukkit_inventory_StonecutterInventory;
+    const StonecuttingRecipe: typeof org_bukkit_inventory_StonecuttingRecipe;
+}
+export declare namespace org.bukkit.inventory.meta {
+    const ItemMeta: typeof org_bukkit_inventory_meta_ItemMeta;
+    const BannerMeta: typeof org_bukkit_inventory_meta_BannerMeta;
+    const BlockDataMeta: typeof org_bukkit_inventory_meta_BlockDataMeta;
+    const BlockStateMeta: typeof org_bukkit_inventory_meta_BlockStateMeta;
+    const BookMeta: typeof org_bukkit_inventory_meta_BookMeta;
+    const BookMeta$Generation: typeof org_bukkit_inventory_meta_BookMeta$Generation;
+    const CrossbowMeta: typeof org_bukkit_inventory_meta_CrossbowMeta;
+    const Damageable: typeof org_bukkit_inventory_meta_Damageable;
+    const EnchantmentStorageMeta: typeof org_bukkit_inventory_meta_EnchantmentStorageMeta;
+    const FireworkMeta: typeof org_bukkit_inventory_meta_FireworkMeta;
+    const FireworkEffectMeta: typeof org_bukkit_inventory_meta_FireworkEffectMeta;
+    const KnowledgeBookMeta: typeof org_bukkit_inventory_meta_KnowledgeBookMeta;
+    const LeatherArmorMeta: typeof org_bukkit_inventory_meta_LeatherArmorMeta;
+    const MapMeta: typeof org_bukkit_inventory_meta_MapMeta;
+    const PotionMeta: typeof org_bukkit_inventory_meta_PotionMeta;
+    const Repairable: typeof org_bukkit_inventory_meta_Repairable;
+    const SkullMeta: typeof org_bukkit_inventory_meta_SkullMeta;
+    const SpawnEggMeta: typeof org_bukkit_inventory_meta_SpawnEggMeta;
+    const SuspiciousStewMeta: typeof org_bukkit_inventory_meta_SuspiciousStewMeta;
+    const TropicalFishBucketMeta: typeof org_bukkit_inventory_meta_TropicalFishBucketMeta;
+}
+export declare namespace org.bukkit.enchantments {
+    const Enchantment: typeof org_bukkit_enchantments_Enchantment;
+    const EnchantmentTarget: typeof org_bukkit_enchantments_EnchantmentTarget;
+    const EnchantmentOffer: typeof org_bukkit_enchantments_EnchantmentOffer;
+    const EnchantmentWrapper: typeof org_bukkit_enchantments_EnchantmentWrapper;
+}
+export declare namespace com.google.common.collect {
+    const Multimap: typeof com_google_common_collect_Multimap;
+    const Multiset: typeof com_google_common_collect_Multiset;
+}
+export declare namespace org.bukkit.attribute {
+    const Attribute: typeof org_bukkit_attribute_Attribute;
+    const AttributeModifier: typeof org_bukkit_attribute_AttributeModifier;
+    const AttributeModifier$Operation: typeof org_bukkit_attribute_AttributeModifier$Operation;
+    const AttributeInstance: typeof org_bukkit_attribute_AttributeInstance;
+    const Attributable: typeof org_bukkit_attribute_Attributable;
+}
+export declare namespace org.bukkit.configuration.serialization {
+    const ConfigurationSerializable: typeof org_bukkit_configuration_serialization_ConfigurationSerializable;
+    const ConfigurationSerialization: typeof org_bukkit_configuration_serialization_ConfigurationSerialization;
+    const DelegateDeserialization: typeof org_bukkit_configuration_serialization_DelegateDeserialization;
+    const SerializableAs: typeof org_bukkit_configuration_serialization_SerializableAs;
+}
+export declare namespace org.bukkit.inventory.meta.tags {
+    const CustomItemTagContainer: typeof org_bukkit_inventory_meta_tags_CustomItemTagContainer;
+    const ItemTagType: typeof org_bukkit_inventory_meta_tags_ItemTagType;
+    const ItemTagAdapterContext: typeof org_bukkit_inventory_meta_tags_ItemTagAdapterContext;
+}
+export declare namespace org.bukkit.persistence {
+    const PersistentDataContainer: typeof org_bukkit_persistence_PersistentDataContainer;
+    const PersistentDataType: typeof org_bukkit_persistence_PersistentDataType;
+    const PersistentDataAdapterContext: typeof org_bukkit_persistence_PersistentDataAdapterContext;
+    const PersistentDataHolder: typeof org_bukkit_persistence_PersistentDataHolder;
 }
 export declare namespace org.bukkit.advancement {
     const Advancement: typeof org_bukkit_advancement_Advancement;
     const AdvancementProgress: typeof org_bukkit_advancement_AdvancementProgress;
+}
+export declare namespace org.bukkit.permissions {
+    const PermissionDefault: typeof org_bukkit_permissions_PermissionDefault;
+    const Permission: typeof org_bukkit_permissions_Permission;
+    const PermissionAttachment: typeof org_bukkit_permissions_PermissionAttachment;
+    const PermissionRemovedExecutor: typeof org_bukkit_permissions_PermissionRemovedExecutor;
+    const Permissible: typeof org_bukkit_permissions_Permissible;
+    const ServerOperator: typeof org_bukkit_permissions_ServerOperator;
+    const PermissibleBase: typeof org_bukkit_permissions_PermissibleBase;
+    const PermissionAttachmentInfo: typeof org_bukkit_permissions_PermissionAttachmentInfo;
 }
 export declare namespace org.bukkit.map {
     const MapView: typeof org_bukkit_map_MapView;
@@ -1335,10 +1393,10 @@ export declare namespace org.bukkit.map {
     const MapView$Scale: typeof org_bukkit_map_MapView$Scale;
     const MapRenderer: typeof org_bukkit_map_MapRenderer;
     const MapCanvas: typeof org_bukkit_map_MapCanvas;
-    const MapCursorCollection: typeof org_bukkit_map_MapCursorCollection;
-    const MapCursor: typeof org_bukkit_map_MapCursor;
     const MapFont: typeof org_bukkit_map_MapFont;
     const MapFont$CharacterSprite: typeof org_bukkit_map_MapFont$CharacterSprite;
+    const MapCursorCollection: typeof org_bukkit_map_MapCursorCollection;
+    const MapCursor: typeof org_bukkit_map_MapCursor;
     const MapPalette: typeof org_bukkit_map_MapPalette;
     const MinecraftFont: typeof org_bukkit_map_MinecraftFont;
 }
@@ -1356,12 +1414,6 @@ export declare namespace org.bukkit.util {
     const FileUtil: typeof org_bukkit_util_FileUtil;
     const NumberConversions: typeof org_bukkit_util_NumberConversions;
     const StringUtil: typeof org_bukkit_util_StringUtil;
-}
-export declare namespace org.bukkit.configuration.serialization {
-    const ConfigurationSerializable: typeof org_bukkit_configuration_serialization_ConfigurationSerializable;
-    const ConfigurationSerialization: typeof org_bukkit_configuration_serialization_ConfigurationSerialization;
-    const DelegateDeserialization: typeof org_bukkit_configuration_serialization_DelegateDeserialization;
-    const SerializableAs: typeof org_bukkit_configuration_serialization_SerializableAs;
 }
 export declare namespace org.bukkit.block {
     const Block: typeof org_bukkit_block_Block;
@@ -1411,6 +1463,7 @@ export declare namespace org.bukkit.entity {
     const Pose: typeof org_bukkit_entity_Pose;
     const LightningStrike: typeof org_bukkit_entity_LightningStrike;
     const Item: typeof org_bukkit_entity_Item;
+    const FallingBlock: typeof org_bukkit_entity_FallingBlock;
     const AbstractArrow: typeof org_bukkit_entity_AbstractArrow;
     const AbstractArrow$PickupStatus: typeof org_bukkit_entity_AbstractArrow$PickupStatus;
     const Projectile: typeof org_bukkit_entity_Projectile;
@@ -1420,15 +1473,14 @@ export declare namespace org.bukkit.entity {
     const AnimalTamer: typeof org_bukkit_entity_AnimalTamer;
     const HumanEntity: typeof org_bukkit_entity_HumanEntity;
     const Villager: typeof org_bukkit_entity_Villager;
-    const Villager$Type: typeof org_bukkit_entity_Villager$Type;
     const Villager$Profession: typeof org_bukkit_entity_Villager$Profession;
+    const Villager$Type: typeof org_bukkit_entity_Villager$Type;
     const AbstractVillager: typeof org_bukkit_entity_AbstractVillager;
     const Ageable: typeof org_bukkit_entity_Ageable;
     const Creature: typeof org_bukkit_entity_Creature;
     const Mob: typeof org_bukkit_entity_Mob;
     const NPC: typeof org_bukkit_entity_NPC;
     const Damageable: typeof org_bukkit_entity_Damageable;
-    const FallingBlock: typeof org_bukkit_entity_FallingBlock;
     const AbstractHorse: typeof org_bukkit_entity_AbstractHorse;
     const Horse$Variant: typeof org_bukkit_entity_Horse$Variant;
     const Animals: typeof org_bukkit_entity_Animals;
@@ -1562,6 +1614,94 @@ export declare namespace org.bukkit.entity {
     const ZombieHorse: typeof org_bukkit_entity_ZombieHorse;
     const ZombieVillager: typeof org_bukkit_entity_ZombieVillager;
 }
+export declare namespace org.bukkit.command {
+    const CommandSender: typeof org_bukkit_command_CommandSender;
+    const Command: typeof org_bukkit_command_Command;
+    const CommandMap: typeof org_bukkit_command_CommandMap;
+    const PluginCommand: typeof org_bukkit_command_PluginCommand;
+    const CommandExecutor: typeof org_bukkit_command_CommandExecutor;
+    const TabCompleter: typeof org_bukkit_command_TabCompleter;
+    const PluginIdentifiableCommand: typeof org_bukkit_command_PluginIdentifiableCommand;
+    const ConsoleCommandSender: typeof org_bukkit_command_ConsoleCommandSender;
+    const TabExecutor: typeof org_bukkit_command_TabExecutor;
+    const BlockCommandSender: typeof org_bukkit_command_BlockCommandSender;
+    const CommandException: typeof org_bukkit_command_CommandException;
+    const FormattedCommandAlias: typeof org_bukkit_command_FormattedCommandAlias;
+    const MultipleCommandAlias: typeof org_bukkit_command_MultipleCommandAlias;
+    const PluginCommandYamlParser: typeof org_bukkit_command_PluginCommandYamlParser;
+    const ProxiedCommandSender: typeof org_bukkit_command_ProxiedCommandSender;
+    const RemoteConsoleCommandSender: typeof org_bukkit_command_RemoteConsoleCommandSender;
+    const SimpleCommandMap: typeof org_bukkit_command_SimpleCommandMap;
+}
+export declare namespace org.bukkit.event.player {
+    const PlayerTeleportEvent$TeleportCause: typeof org_bukkit_event_player_PlayerTeleportEvent$TeleportCause;
+    const AsyncPlayerChatEvent: typeof org_bukkit_event_player_AsyncPlayerChatEvent;
+    const PlayerEvent: typeof org_bukkit_event_player_PlayerEvent;
+    const AsyncPlayerPreLoginEvent: typeof org_bukkit_event_player_AsyncPlayerPreLoginEvent;
+    const PlayerPreLoginEvent$Result: typeof org_bukkit_event_player_PlayerPreLoginEvent$Result;
+    const AsyncPlayerPreLoginEvent$Result: typeof org_bukkit_event_player_AsyncPlayerPreLoginEvent$Result;
+    const PlayerAdvancementDoneEvent: typeof org_bukkit_event_player_PlayerAdvancementDoneEvent;
+    const PlayerAnimationEvent: typeof org_bukkit_event_player_PlayerAnimationEvent;
+    const PlayerAnimationType: typeof org_bukkit_event_player_PlayerAnimationType;
+    const PlayerArmorStandManipulateEvent: typeof org_bukkit_event_player_PlayerArmorStandManipulateEvent;
+    const PlayerInteractEntityEvent: typeof org_bukkit_event_player_PlayerInteractEntityEvent;
+    const PlayerBedEnterEvent: typeof org_bukkit_event_player_PlayerBedEnterEvent;
+    const PlayerBedEnterEvent$BedEnterResult: typeof org_bukkit_event_player_PlayerBedEnterEvent$BedEnterResult;
+    const PlayerBedLeaveEvent: typeof org_bukkit_event_player_PlayerBedLeaveEvent;
+    const PlayerBucketEmptyEvent: typeof org_bukkit_event_player_PlayerBucketEmptyEvent;
+    const PlayerBucketEvent: typeof org_bukkit_event_player_PlayerBucketEvent;
+    const PlayerBucketFillEvent: typeof org_bukkit_event_player_PlayerBucketFillEvent;
+    const PlayerChangedMainHandEvent: typeof org_bukkit_event_player_PlayerChangedMainHandEvent;
+    const PlayerChangedWorldEvent: typeof org_bukkit_event_player_PlayerChangedWorldEvent;
+    const PlayerChannelEvent: typeof org_bukkit_event_player_PlayerChannelEvent;
+    const PlayerChatEvent: typeof org_bukkit_event_player_PlayerChatEvent;
+    const PlayerChatTabCompleteEvent: typeof org_bukkit_event_player_PlayerChatTabCompleteEvent;
+    const PlayerCommandPreprocessEvent: typeof org_bukkit_event_player_PlayerCommandPreprocessEvent;
+    const PlayerCommandSendEvent: typeof org_bukkit_event_player_PlayerCommandSendEvent;
+    const PlayerDropItemEvent: typeof org_bukkit_event_player_PlayerDropItemEvent;
+    const PlayerEditBookEvent: typeof org_bukkit_event_player_PlayerEditBookEvent;
+    const PlayerEggThrowEvent: typeof org_bukkit_event_player_PlayerEggThrowEvent;
+    const PlayerExpChangeEvent: typeof org_bukkit_event_player_PlayerExpChangeEvent;
+    const PlayerFishEvent: typeof org_bukkit_event_player_PlayerFishEvent;
+    const PlayerFishEvent$State: typeof org_bukkit_event_player_PlayerFishEvent$State;
+    const PlayerGameModeChangeEvent: typeof org_bukkit_event_player_PlayerGameModeChangeEvent;
+    const PlayerInteractAtEntityEvent: typeof org_bukkit_event_player_PlayerInteractAtEntityEvent;
+    const PlayerInteractEvent: typeof org_bukkit_event_player_PlayerInteractEvent;
+    const PlayerItemBreakEvent: typeof org_bukkit_event_player_PlayerItemBreakEvent;
+    const PlayerItemConsumeEvent: typeof org_bukkit_event_player_PlayerItemConsumeEvent;
+    const PlayerItemDamageEvent: typeof org_bukkit_event_player_PlayerItemDamageEvent;
+    const PlayerItemHeldEvent: typeof org_bukkit_event_player_PlayerItemHeldEvent;
+    const PlayerItemMendEvent: typeof org_bukkit_event_player_PlayerItemMendEvent;
+    const PlayerJoinEvent: typeof org_bukkit_event_player_PlayerJoinEvent;
+    const PlayerKickEvent: typeof org_bukkit_event_player_PlayerKickEvent;
+    const PlayerLevelChangeEvent: typeof org_bukkit_event_player_PlayerLevelChangeEvent;
+    const PlayerLocaleChangeEvent: typeof org_bukkit_event_player_PlayerLocaleChangeEvent;
+    const PlayerLoginEvent: typeof org_bukkit_event_player_PlayerLoginEvent;
+    const PlayerLoginEvent$Result: typeof org_bukkit_event_player_PlayerLoginEvent$Result;
+    const PlayerMoveEvent: typeof org_bukkit_event_player_PlayerMoveEvent;
+    const PlayerPickupArrowEvent: typeof org_bukkit_event_player_PlayerPickupArrowEvent;
+    const PlayerPickupItemEvent: typeof org_bukkit_event_player_PlayerPickupItemEvent;
+    const PlayerPortalEvent: typeof org_bukkit_event_player_PlayerPortalEvent;
+    const PlayerTeleportEvent: typeof org_bukkit_event_player_PlayerTeleportEvent;
+    const PlayerPreLoginEvent: typeof org_bukkit_event_player_PlayerPreLoginEvent;
+    const PlayerQuitEvent: typeof org_bukkit_event_player_PlayerQuitEvent;
+    const PlayerRecipeDiscoverEvent: typeof org_bukkit_event_player_PlayerRecipeDiscoverEvent;
+    const PlayerRegisterChannelEvent: typeof org_bukkit_event_player_PlayerRegisterChannelEvent;
+    const PlayerResourcePackStatusEvent: typeof org_bukkit_event_player_PlayerResourcePackStatusEvent;
+    const PlayerResourcePackStatusEvent$Status: typeof org_bukkit_event_player_PlayerResourcePackStatusEvent$Status;
+    const PlayerRespawnEvent: typeof org_bukkit_event_player_PlayerRespawnEvent;
+    const PlayerRiptideEvent: typeof org_bukkit_event_player_PlayerRiptideEvent;
+    const PlayerShearEntityEvent: typeof org_bukkit_event_player_PlayerShearEntityEvent;
+    const PlayerStatisticIncrementEvent: typeof org_bukkit_event_player_PlayerStatisticIncrementEvent;
+    const PlayerSwapHandItemsEvent: typeof org_bukkit_event_player_PlayerSwapHandItemsEvent;
+    const PlayerTakeLecternBookEvent: typeof org_bukkit_event_player_PlayerTakeLecternBookEvent;
+    const PlayerToggleFlightEvent: typeof org_bukkit_event_player_PlayerToggleFlightEvent;
+    const PlayerToggleSneakEvent: typeof org_bukkit_event_player_PlayerToggleSneakEvent;
+    const PlayerToggleSprintEvent: typeof org_bukkit_event_player_PlayerToggleSprintEvent;
+    const PlayerUnleashEntityEvent: typeof org_bukkit_event_player_PlayerUnleashEntityEvent;
+    const PlayerUnregisterChannelEvent: typeof org_bukkit_event_player_PlayerUnregisterChannelEvent;
+    const PlayerVelocityEvent: typeof org_bukkit_event_player_PlayerVelocityEvent;
+}
 export declare namespace org.bukkit.event.entity {
     const EntityDamageEvent: typeof org_bukkit_event_entity_EntityDamageEvent;
     const EntityDamageEvent$DamageCause: typeof org_bukkit_event_entity_EntityDamageEvent$DamageCause;
@@ -1649,94 +1789,6 @@ export declare namespace org.bukkit.event {
     const EventException: typeof org_bukkit_event_EventException;
     const EventHandler: typeof org_bukkit_event_EventHandler;
 }
-export declare namespace org.bukkit.event.player {
-    const PlayerTeleportEvent$TeleportCause: typeof org_bukkit_event_player_PlayerTeleportEvent$TeleportCause;
-    const AsyncPlayerChatEvent: typeof org_bukkit_event_player_AsyncPlayerChatEvent;
-    const PlayerEvent: typeof org_bukkit_event_player_PlayerEvent;
-    const AsyncPlayerPreLoginEvent: typeof org_bukkit_event_player_AsyncPlayerPreLoginEvent;
-    const PlayerPreLoginEvent$Result: typeof org_bukkit_event_player_PlayerPreLoginEvent$Result;
-    const AsyncPlayerPreLoginEvent$Result: typeof org_bukkit_event_player_AsyncPlayerPreLoginEvent$Result;
-    const PlayerAdvancementDoneEvent: typeof org_bukkit_event_player_PlayerAdvancementDoneEvent;
-    const PlayerAnimationEvent: typeof org_bukkit_event_player_PlayerAnimationEvent;
-    const PlayerAnimationType: typeof org_bukkit_event_player_PlayerAnimationType;
-    const PlayerArmorStandManipulateEvent: typeof org_bukkit_event_player_PlayerArmorStandManipulateEvent;
-    const PlayerInteractEntityEvent: typeof org_bukkit_event_player_PlayerInteractEntityEvent;
-    const PlayerBedEnterEvent: typeof org_bukkit_event_player_PlayerBedEnterEvent;
-    const PlayerBedEnterEvent$BedEnterResult: typeof org_bukkit_event_player_PlayerBedEnterEvent$BedEnterResult;
-    const PlayerBedLeaveEvent: typeof org_bukkit_event_player_PlayerBedLeaveEvent;
-    const PlayerBucketEmptyEvent: typeof org_bukkit_event_player_PlayerBucketEmptyEvent;
-    const PlayerBucketEvent: typeof org_bukkit_event_player_PlayerBucketEvent;
-    const PlayerBucketFillEvent: typeof org_bukkit_event_player_PlayerBucketFillEvent;
-    const PlayerChangedMainHandEvent: typeof org_bukkit_event_player_PlayerChangedMainHandEvent;
-    const PlayerChangedWorldEvent: typeof org_bukkit_event_player_PlayerChangedWorldEvent;
-    const PlayerChannelEvent: typeof org_bukkit_event_player_PlayerChannelEvent;
-    const PlayerChatEvent: typeof org_bukkit_event_player_PlayerChatEvent;
-    const PlayerChatTabCompleteEvent: typeof org_bukkit_event_player_PlayerChatTabCompleteEvent;
-    const PlayerCommandPreprocessEvent: typeof org_bukkit_event_player_PlayerCommandPreprocessEvent;
-    const PlayerCommandSendEvent: typeof org_bukkit_event_player_PlayerCommandSendEvent;
-    const PlayerDropItemEvent: typeof org_bukkit_event_player_PlayerDropItemEvent;
-    const PlayerEditBookEvent: typeof org_bukkit_event_player_PlayerEditBookEvent;
-    const PlayerEggThrowEvent: typeof org_bukkit_event_player_PlayerEggThrowEvent;
-    const PlayerExpChangeEvent: typeof org_bukkit_event_player_PlayerExpChangeEvent;
-    const PlayerFishEvent: typeof org_bukkit_event_player_PlayerFishEvent;
-    const PlayerFishEvent$State: typeof org_bukkit_event_player_PlayerFishEvent$State;
-    const PlayerGameModeChangeEvent: typeof org_bukkit_event_player_PlayerGameModeChangeEvent;
-    const PlayerInteractAtEntityEvent: typeof org_bukkit_event_player_PlayerInteractAtEntityEvent;
-    const PlayerInteractEvent: typeof org_bukkit_event_player_PlayerInteractEvent;
-    const PlayerItemBreakEvent: typeof org_bukkit_event_player_PlayerItemBreakEvent;
-    const PlayerItemConsumeEvent: typeof org_bukkit_event_player_PlayerItemConsumeEvent;
-    const PlayerItemDamageEvent: typeof org_bukkit_event_player_PlayerItemDamageEvent;
-    const PlayerItemHeldEvent: typeof org_bukkit_event_player_PlayerItemHeldEvent;
-    const PlayerItemMendEvent: typeof org_bukkit_event_player_PlayerItemMendEvent;
-    const PlayerJoinEvent: typeof org_bukkit_event_player_PlayerJoinEvent;
-    const PlayerKickEvent: typeof org_bukkit_event_player_PlayerKickEvent;
-    const PlayerLevelChangeEvent: typeof org_bukkit_event_player_PlayerLevelChangeEvent;
-    const PlayerLocaleChangeEvent: typeof org_bukkit_event_player_PlayerLocaleChangeEvent;
-    const PlayerLoginEvent: typeof org_bukkit_event_player_PlayerLoginEvent;
-    const PlayerLoginEvent$Result: typeof org_bukkit_event_player_PlayerLoginEvent$Result;
-    const PlayerMoveEvent: typeof org_bukkit_event_player_PlayerMoveEvent;
-    const PlayerPickupArrowEvent: typeof org_bukkit_event_player_PlayerPickupArrowEvent;
-    const PlayerPickupItemEvent: typeof org_bukkit_event_player_PlayerPickupItemEvent;
-    const PlayerPortalEvent: typeof org_bukkit_event_player_PlayerPortalEvent;
-    const PlayerTeleportEvent: typeof org_bukkit_event_player_PlayerTeleportEvent;
-    const PlayerPreLoginEvent: typeof org_bukkit_event_player_PlayerPreLoginEvent;
-    const PlayerQuitEvent: typeof org_bukkit_event_player_PlayerQuitEvent;
-    const PlayerRecipeDiscoverEvent: typeof org_bukkit_event_player_PlayerRecipeDiscoverEvent;
-    const PlayerRegisterChannelEvent: typeof org_bukkit_event_player_PlayerRegisterChannelEvent;
-    const PlayerResourcePackStatusEvent: typeof org_bukkit_event_player_PlayerResourcePackStatusEvent;
-    const PlayerResourcePackStatusEvent$Status: typeof org_bukkit_event_player_PlayerResourcePackStatusEvent$Status;
-    const PlayerRespawnEvent: typeof org_bukkit_event_player_PlayerRespawnEvent;
-    const PlayerRiptideEvent: typeof org_bukkit_event_player_PlayerRiptideEvent;
-    const PlayerShearEntityEvent: typeof org_bukkit_event_player_PlayerShearEntityEvent;
-    const PlayerStatisticIncrementEvent: typeof org_bukkit_event_player_PlayerStatisticIncrementEvent;
-    const PlayerSwapHandItemsEvent: typeof org_bukkit_event_player_PlayerSwapHandItemsEvent;
-    const PlayerTakeLecternBookEvent: typeof org_bukkit_event_player_PlayerTakeLecternBookEvent;
-    const PlayerToggleFlightEvent: typeof org_bukkit_event_player_PlayerToggleFlightEvent;
-    const PlayerToggleSneakEvent: typeof org_bukkit_event_player_PlayerToggleSneakEvent;
-    const PlayerToggleSprintEvent: typeof org_bukkit_event_player_PlayerToggleSprintEvent;
-    const PlayerUnleashEntityEvent: typeof org_bukkit_event_player_PlayerUnleashEntityEvent;
-    const PlayerUnregisterChannelEvent: typeof org_bukkit_event_player_PlayerUnregisterChannelEvent;
-    const PlayerVelocityEvent: typeof org_bukkit_event_player_PlayerVelocityEvent;
-}
-export declare namespace org.bukkit.command {
-    const CommandSender: typeof org_bukkit_command_CommandSender;
-    const PluginCommand: typeof org_bukkit_command_PluginCommand;
-    const CommandExecutor: typeof org_bukkit_command_CommandExecutor;
-    const Command: typeof org_bukkit_command_Command;
-    const CommandMap: typeof org_bukkit_command_CommandMap;
-    const TabCompleter: typeof org_bukkit_command_TabCompleter;
-    const PluginIdentifiableCommand: typeof org_bukkit_command_PluginIdentifiableCommand;
-    const ConsoleCommandSender: typeof org_bukkit_command_ConsoleCommandSender;
-    const TabExecutor: typeof org_bukkit_command_TabExecutor;
-    const BlockCommandSender: typeof org_bukkit_command_BlockCommandSender;
-    const CommandException: typeof org_bukkit_command_CommandException;
-    const FormattedCommandAlias: typeof org_bukkit_command_FormattedCommandAlias;
-    const MultipleCommandAlias: typeof org_bukkit_command_MultipleCommandAlias;
-    const PluginCommandYamlParser: typeof org_bukkit_command_PluginCommandYamlParser;
-    const ProxiedCommandSender: typeof org_bukkit_command_ProxiedCommandSender;
-    const RemoteConsoleCommandSender: typeof org_bukkit_command_RemoteConsoleCommandSender;
-    const SimpleCommandMap: typeof org_bukkit_command_SimpleCommandMap;
-}
 export declare namespace org.bukkit.metadata {
     const MetadataValue: typeof org_bukkit_metadata_MetadataValue;
     const Metadatable: typeof org_bukkit_metadata_Metadatable;
@@ -1749,12 +1801,6 @@ export declare namespace org.bukkit.metadata {
     const MetadataStore: typeof org_bukkit_metadata_MetadataStore;
     const MetadataStoreBase: typeof org_bukkit_metadata_MetadataStoreBase;
 }
-export declare namespace org.bukkit.persistence {
-    const PersistentDataContainer: typeof org_bukkit_persistence_PersistentDataContainer;
-    const PersistentDataType: typeof org_bukkit_persistence_PersistentDataType;
-    const PersistentDataAdapterContext: typeof org_bukkit_persistence_PersistentDataAdapterContext;
-    const PersistentDataHolder: typeof org_bukkit_persistence_PersistentDataHolder;
-}
 export declare namespace org.bukkit.generator {
     const ChunkGenerator: typeof org_bukkit_generator_ChunkGenerator;
     const ChunkGenerator$ChunkData: typeof org_bukkit_generator_ChunkGenerator$ChunkData;
@@ -1766,8 +1812,8 @@ export declare namespace org.bukkit.projectiles {
     const BlockProjectileSource: typeof org_bukkit_projectiles_BlockProjectileSource;
 }
 export declare namespace org.bukkit.potion {
-    const PotionEffect: typeof org_bukkit_potion_PotionEffect;
     const PotionEffectType: typeof org_bukkit_potion_PotionEffectType;
+    const PotionEffect: typeof org_bukkit_potion_PotionEffect;
     const PotionData: typeof org_bukkit_potion_PotionData;
     const PotionType: typeof org_bukkit_potion_PotionType;
     const Potion: typeof org_bukkit_potion_Potion;
@@ -1779,14 +1825,14 @@ export declare namespace org.bukkit.entity.memory {
 }
 export declare namespace org.bukkit.scoreboard {
     const Scoreboard: typeof org_bukkit_scoreboard_Scoreboard;
-    const Objective: typeof org_bukkit_scoreboard_Objective;
-    const RenderType: typeof org_bukkit_scoreboard_RenderType;
-    const Score: typeof org_bukkit_scoreboard_Score;
-    const DisplaySlot: typeof org_bukkit_scoreboard_DisplaySlot;
     const Team: typeof org_bukkit_scoreboard_Team;
-    const Team$Option: typeof org_bukkit_scoreboard_Team$Option;
-    const Team$OptionStatus: typeof org_bukkit_scoreboard_Team$OptionStatus;
     const NameTagVisibility: typeof org_bukkit_scoreboard_NameTagVisibility;
+    const Team$OptionStatus: typeof org_bukkit_scoreboard_Team$OptionStatus;
+    const Team$Option: typeof org_bukkit_scoreboard_Team$Option;
+    const DisplaySlot: typeof org_bukkit_scoreboard_DisplaySlot;
+    const Objective: typeof org_bukkit_scoreboard_Objective;
+    const Score: typeof org_bukkit_scoreboard_Score;
+    const RenderType: typeof org_bukkit_scoreboard_RenderType;
     const ScoreboardManager: typeof org_bukkit_scoreboard_ScoreboardManager;
     const Criterias: typeof org_bukkit_scoreboard_Criterias;
 }
@@ -1794,8 +1840,8 @@ export declare namespace org.bukkit.event.inventory {
     const InventoryType: typeof org_bukkit_event_inventory_InventoryType;
     const InventoryType$SlotType: typeof org_bukkit_event_inventory_InventoryType$SlotType;
     const InventoryClickEvent: typeof org_bukkit_event_inventory_InventoryClickEvent;
-    const ClickType: typeof org_bukkit_event_inventory_ClickType;
     const InventoryAction: typeof org_bukkit_event_inventory_InventoryAction;
+    const ClickType: typeof org_bukkit_event_inventory_ClickType;
     const InventoryInteractEvent: typeof org_bukkit_event_inventory_InventoryInteractEvent;
     const InventoryEvent: typeof org_bukkit_event_inventory_InventoryEvent;
     const BrewEvent: typeof org_bukkit_event_inventory_BrewEvent;
@@ -1814,13 +1860,6 @@ export declare namespace org.bukkit.event.inventory {
     const PrepareAnvilEvent: typeof org_bukkit_event_inventory_PrepareAnvilEvent;
     const PrepareItemCraftEvent: typeof org_bukkit_event_inventory_PrepareItemCraftEvent;
     const TradeSelectEvent: typeof org_bukkit_event_inventory_TradeSelectEvent;
-}
-export declare namespace org.bukkit.attribute {
-    const AttributeInstance: typeof org_bukkit_attribute_AttributeInstance;
-    const Attribute: typeof org_bukkit_attribute_Attribute;
-    const AttributeModifier: typeof org_bukkit_attribute_AttributeModifier;
-    const AttributeModifier$Operation: typeof org_bukkit_attribute_AttributeModifier$Operation;
-    const Attributable: typeof org_bukkit_attribute_Attributable;
 }
 export declare namespace org.bukkit.loot {
     const LootTable: typeof org_bukkit_loot_LootTable;
@@ -1853,61 +1892,6 @@ export declare namespace org.bukkit.conversations {
     const RegexPrompt: typeof org_bukkit_conversations_RegexPrompt;
     const StringPrompt: typeof org_bukkit_conversations_StringPrompt;
 }
-export declare namespace org.bukkit.plugin.messaging {
-    const PluginMessageRecipient: typeof org_bukkit_plugin_messaging_PluginMessageRecipient;
-    const Messenger: typeof org_bukkit_plugin_messaging_Messenger;
-    const PluginMessageListener: typeof org_bukkit_plugin_messaging_PluginMessageListener;
-    const PluginMessageListenerRegistration: typeof org_bukkit_plugin_messaging_PluginMessageListenerRegistration;
-    const ChannelNameTooLongException: typeof org_bukkit_plugin_messaging_ChannelNameTooLongException;
-    const ChannelNotRegisteredException: typeof org_bukkit_plugin_messaging_ChannelNotRegisteredException;
-    const MessageTooLargeException: typeof org_bukkit_plugin_messaging_MessageTooLargeException;
-    const PluginChannelDirection: typeof org_bukkit_plugin_messaging_PluginChannelDirection;
-    const ReservedChannelException: typeof org_bukkit_plugin_messaging_ReservedChannelException;
-    const StandardMessenger: typeof org_bukkit_plugin_messaging_StandardMessenger;
-}
-export declare namespace org.bukkit.inventory.meta {
-    const ItemMeta: typeof org_bukkit_inventory_meta_ItemMeta;
-    const BannerMeta: typeof org_bukkit_inventory_meta_BannerMeta;
-    const BlockDataMeta: typeof org_bukkit_inventory_meta_BlockDataMeta;
-    const BlockStateMeta: typeof org_bukkit_inventory_meta_BlockStateMeta;
-    const BookMeta: typeof org_bukkit_inventory_meta_BookMeta;
-    const BookMeta$Generation: typeof org_bukkit_inventory_meta_BookMeta$Generation;
-    const CrossbowMeta: typeof org_bukkit_inventory_meta_CrossbowMeta;
-    const Damageable: typeof org_bukkit_inventory_meta_Damageable;
-    const EnchantmentStorageMeta: typeof org_bukkit_inventory_meta_EnchantmentStorageMeta;
-    const FireworkMeta: typeof org_bukkit_inventory_meta_FireworkMeta;
-    const FireworkEffectMeta: typeof org_bukkit_inventory_meta_FireworkEffectMeta;
-    const KnowledgeBookMeta: typeof org_bukkit_inventory_meta_KnowledgeBookMeta;
-    const LeatherArmorMeta: typeof org_bukkit_inventory_meta_LeatherArmorMeta;
-    const MapMeta: typeof org_bukkit_inventory_meta_MapMeta;
-    const PotionMeta: typeof org_bukkit_inventory_meta_PotionMeta;
-    const Repairable: typeof org_bukkit_inventory_meta_Repairable;
-    const SkullMeta: typeof org_bukkit_inventory_meta_SkullMeta;
-    const SpawnEggMeta: typeof org_bukkit_inventory_meta_SpawnEggMeta;
-    const SuspiciousStewMeta: typeof org_bukkit_inventory_meta_SuspiciousStewMeta;
-    const TropicalFishBucketMeta: typeof org_bukkit_inventory_meta_TropicalFishBucketMeta;
-}
-export declare namespace org.bukkit.enchantments {
-    const Enchantment: typeof org_bukkit_enchantments_Enchantment;
-    const EnchantmentTarget: typeof org_bukkit_enchantments_EnchantmentTarget;
-    const EnchantmentOffer: typeof org_bukkit_enchantments_EnchantmentOffer;
-    const EnchantmentWrapper: typeof org_bukkit_enchantments_EnchantmentWrapper;
-}
-export declare namespace com.google.common.collect {
-    const Multimap: typeof com_google_common_collect_Multimap;
-    const Multiset: typeof com_google_common_collect_Multiset;
-}
-export declare namespace org.bukkit.inventory.meta.tags {
-    const CustomItemTagContainer: typeof org_bukkit_inventory_meta_tags_CustomItemTagContainer;
-    const ItemTagAdapterContext: typeof org_bukkit_inventory_meta_tags_ItemTagAdapterContext;
-    const ItemTagType: typeof org_bukkit_inventory_meta_tags_ItemTagType;
-}
-export declare namespace org.bukkit.scheduler {
-    const BukkitScheduler: typeof org_bukkit_scheduler_BukkitScheduler;
-    const BukkitTask: typeof org_bukkit_scheduler_BukkitTask;
-    const BukkitRunnable: typeof org_bukkit_scheduler_BukkitRunnable;
-    const BukkitWorker: typeof org_bukkit_scheduler_BukkitWorker;
-}
 export declare namespace org.bukkit.configuration.file {
     const YamlConfiguration: typeof org_bukkit_configuration_file_YamlConfiguration;
     const YamlConfigurationOptions: typeof org_bukkit_configuration_file_YamlConfigurationOptions;
@@ -1925,6 +1909,21 @@ export declare namespace org.bukkit.configuration {
     const MemorySection: typeof org_bukkit_configuration_MemorySection;
     const InvalidConfigurationException: typeof org_bukkit_configuration_InvalidConfigurationException;
 }
+export declare namespace org.bukkit.scheduler {
+    const BukkitScheduler: typeof org_bukkit_scheduler_BukkitScheduler;
+    const BukkitTask: typeof org_bukkit_scheduler_BukkitTask;
+    const BukkitRunnable: typeof org_bukkit_scheduler_BukkitRunnable;
+    const BukkitWorker: typeof org_bukkit_scheduler_BukkitWorker;
+}
+export declare namespace org.bukkit.help {
+    const HelpMap: typeof org_bukkit_help_HelpMap;
+    const HelpTopicFactory: typeof org_bukkit_help_HelpTopicFactory;
+    const HelpTopic: typeof org_bukkit_help_HelpTopic;
+    const GenericCommandHelpTopic: typeof org_bukkit_help_GenericCommandHelpTopic;
+    const HelpTopicComparator: typeof org_bukkit_help_HelpTopicComparator;
+    const HelpTopicComparator$TopicNameComparator: typeof org_bukkit_help_HelpTopicComparator$TopicNameComparator;
+    const IndexHelpTopic: typeof org_bukkit_help_IndexHelpTopic;
+}
 export declare namespace org.bukkit.boss {
     const BossBar: typeof org_bukkit_boss_BossBar;
     const BarFlag: typeof org_bukkit_boss_BarFlag;
@@ -1932,20 +1931,15 @@ export declare namespace org.bukkit.boss {
     const BarStyle: typeof org_bukkit_boss_BarStyle;
     const KeyedBossBar: typeof org_bukkit_boss_KeyedBossBar;
 }
-export declare namespace org.bukkit.help {
-    const HelpMap: typeof org_bukkit_help_HelpMap;
-    const HelpTopic: typeof org_bukkit_help_HelpTopic;
-    const HelpTopicFactory: typeof org_bukkit_help_HelpTopicFactory;
-    const GenericCommandHelpTopic: typeof org_bukkit_help_GenericCommandHelpTopic;
-    const HelpTopicComparator: typeof org_bukkit_help_HelpTopicComparator;
-    const HelpTopicComparator$TopicNameComparator: typeof org_bukkit_help_HelpTopicComparator$TopicNameComparator;
-    const IndexHelpTopic: typeof org_bukkit_help_IndexHelpTopic;
+export declare namespace org.bukkit.plugin.java {
+    const JavaPlugin: typeof org_bukkit_plugin_java_JavaPlugin;
+    const JavaPluginLoader: typeof org_bukkit_plugin_java_JavaPluginLoader;
 }
 export declare namespace fr.minuskube.inv {
-    const SmartInventory$Builder: typeof fr_minuskube_inv_SmartInventory$Builder;
-    const SmartInventory: typeof fr_minuskube_inv_SmartInventory;
-    const ClickableItem: typeof fr_minuskube_inv_ClickableItem;
     const InventoryManager: typeof fr_minuskube_inv_InventoryManager;
+    const SmartInventory: typeof fr_minuskube_inv_SmartInventory;
+    const SmartInventory$Builder: typeof fr_minuskube_inv_SmartInventory$Builder;
+    const ClickableItem: typeof fr_minuskube_inv_ClickableItem;
     const InventoryListener: typeof fr_minuskube_inv_InventoryListener;
 }
 export declare namespace fr.minuskube.inv.content {
@@ -1959,48 +1953,52 @@ export declare namespace fr.minuskube.inv.content {
 export declare namespace fr.minuskube.inv.opener {
     const InventoryOpener: typeof fr_minuskube_inv_opener_InventoryOpener;
 }
-export declare namespace org.bukkit.plugin.java {
-    const JavaPlugin: typeof org_bukkit_plugin_java_JavaPlugin;
-    const JavaPluginLoader: typeof org_bukkit_plugin_java_JavaPluginLoader;
+export declare namespace com.smc.utils {
+    const ItemBuilder: typeof com_smc_utils_ItemBuilder;
+    const MysqlWrapper: typeof com_smc_utils_MysqlWrapper;
 }
 export declare namespace java.sql {
-    const Connection: typeof java_sql_Connection;
     const Statement: typeof java_sql_Statement;
-    const SQLWarning: typeof java_sql_SQLWarning;
-    const SQLException: typeof java_sql_SQLException;
+    const Connection: typeof java_sql_Connection;
+    const PreparedStatement: typeof java_sql_PreparedStatement;
+    const _Array: typeof java_sql__Array;
     const ResultSet: typeof java_sql_ResultSet;
     const Ref: typeof java_sql_Ref;
     const Date: typeof java_sql_Date;
-    const _Array: typeof java_sql__Array;
     const Time: typeof java_sql_Time;
+    const SQLWarning: typeof java_sql_SQLWarning;
+    const SQLException: typeof java_sql_SQLException;
     const ResultSetMetaData: typeof java_sql_ResultSetMetaData;
     const Wrapper: typeof java_sql_Wrapper;
-    const NClob: typeof java_sql_NClob;
-    const Clob: typeof java_sql_Clob;
-    const Timestamp: typeof java_sql_Timestamp;
-    const SQLXML: typeof java_sql_SQLXML;
-    const RowId: typeof java_sql_RowId;
-    const Blob: typeof java_sql_Blob;
     const SQLType: typeof java_sql_SQLType;
-    const PreparedStatement: typeof java_sql_PreparedStatement;
+    const Timestamp: typeof java_sql_Timestamp;
+    const Blob: typeof java_sql_Blob;
+    const Clob: typeof java_sql_Clob;
+    const NClob: typeof java_sql_NClob;
+    const RowId: typeof java_sql_RowId;
+    const SQLXML: typeof java_sql_SQLXML;
     const ParameterMetaData: typeof java_sql_ParameterMetaData;
     const ShardingKey: typeof java_sql_ShardingKey;
-    const Savepoint: typeof java_sql_Savepoint;
-    const Struct: typeof java_sql_Struct;
-    const CallableStatement: typeof java_sql_CallableStatement;
     const DatabaseMetaData: typeof java_sql_DatabaseMetaData;
     const RowIdLifetime: typeof java_sql_RowIdLifetime;
+    const Struct: typeof java_sql_Struct;
+    const CallableStatement: typeof java_sql_CallableStatement;
+    const Savepoint: typeof java_sql_Savepoint;
 }
 export declare namespace com.smc.version {
     const MinecraftVersion: typeof com_smc_version_MinecraftVersion;
     const SnapshotVersion: typeof com_smc_version_SnapshotVersion;
     const MinecraftVersions: typeof com_smc_version_MinecraftVersions;
 }
+export declare namespace com.smc.smartinvs {
+    const SmartInventoryProvider: typeof com_smc_smartinvs_SmartInventoryProvider;
+    const SmartInventory: typeof com_smc_smartinvs_SmartInventory;
+}
 export declare namespace com.google.common.io {
     const ByteStreams: typeof com_google_common_io_ByteStreams;
     const ByteProcessor: typeof com_google_common_io_ByteProcessor;
-    const ByteArrayDataInput: typeof com_google_common_io_ByteArrayDataInput;
     const ByteArrayDataOutput: typeof com_google_common_io_ByteArrayDataOutput;
+    const ByteArrayDataInput: typeof com_google_common_io_ByteArrayDataInput;
 }
 export declare namespace org.bukkit.event.block {
     const Action: typeof org_bukkit_event_block_Action;

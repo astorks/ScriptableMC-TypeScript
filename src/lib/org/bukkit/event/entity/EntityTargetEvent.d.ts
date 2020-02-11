@@ -7,9 +7,9 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 export default interface EntityTargetEvent extends EntityEvent, Cancellable {
     getTarget(): Entity;
     setTarget(target: Entity): void;
-    setCancelled(cancel: boolean): void;
-    isCancelled(): boolean;
     getHandlers(): HandlerList;
+    isCancelled(): boolean;
+    setCancelled(cancel: boolean): void;
     getReason(): EntityTargetEvent$TargetReason;
     getEntity(): Entity;
     getEntityType(): EntityType;

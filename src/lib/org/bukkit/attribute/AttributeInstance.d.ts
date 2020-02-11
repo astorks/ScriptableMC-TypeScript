@@ -5,10 +5,10 @@ export default interface AttributeInstance {
     getValue(): number;
     getDefaultValue(): number;
     getAttribute(): Attribute;
-    getBaseValue(): number;
-    setBaseValue(arg0: number): void;
     addModifier(arg0: AttributeModifier): void;
+    setBaseValue(arg0: number): void;
     removeModifier(arg0: AttributeModifier): void;
+    getBaseValue(): number;
 }
 export default class AttributeInstance {
     static get $javaClass(): any;

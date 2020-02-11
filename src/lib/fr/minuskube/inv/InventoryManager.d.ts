@@ -8,8 +8,8 @@ export default interface InventoryManager {
     findOpener(type: InventoryType): any;
     getInventory(p: Player): any;
     getContents(p: Player): any;
-    registerOpeners(openers: Array<InventoryOpener>): void;
     getOpenedPlayers(inv: SmartInventory): Array<Player>;
+    registerOpeners(openers: Array<InventoryOpener>): void;
 }
 export default class InventoryManager {
     static get $javaClass(): any;

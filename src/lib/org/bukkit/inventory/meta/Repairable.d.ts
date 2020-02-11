@@ -1,8 +1,8 @@
 export default interface Repairable {
     clone(): any;
     clone(): Repairable;
-    setRepairCost(arg0: number): void;
     getRepairCost(): number;
+    setRepairCost(arg0: number): void;
     hasRepairCost(): boolean;
 }
 export default class Repairable {

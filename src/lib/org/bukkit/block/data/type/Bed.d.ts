@@ -4,9 +4,9 @@ import BlockFace from '../../../../../org/bukkit/block/BlockFace.js';
 import Directional from '../../../../../org/bukkit/block/data/Directional.js';
 import Material from '../../../../../org/bukkit/Material.js';
 export default interface Bed extends Directional {
-    setPart(arg0: Bed$Part): void;
-    isOccupied(): boolean;
     getPart(): Bed$Part;
+    isOccupied(): boolean;
+    setPart(arg0: Bed$Part): void;
     getFacing(): BlockFace;
     setFacing(arg0: BlockFace): void;
     getFaces(): any;

@@ -3,9 +3,9 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import WeatherEvent from '../../../../org/bukkit/event/weather/WeatherEvent.js';
 import World from '../../../../org/bukkit/World.js';
 export default interface WeatherChangeEvent extends WeatherEvent, Cancellable {
-    setCancelled(cancel: boolean): void;
-    isCancelled(): boolean;
     getHandlers(): HandlerList;
+    isCancelled(): boolean;
+    setCancelled(cancel: boolean): void;
     toWeatherState(): boolean;
     getWorld(): World;
     getEventName(): string;

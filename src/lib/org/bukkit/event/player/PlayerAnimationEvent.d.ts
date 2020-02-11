@@ -4,9 +4,9 @@ import Player from '../../../../org/bukkit/entity/Player.js';
 import PlayerAnimationType from '../../../../org/bukkit/event/player/PlayerAnimationType.js';
 import PlayerEvent from '../../../../org/bukkit/event/player/PlayerEvent.js';
 export default interface PlayerAnimationEvent extends PlayerEvent, Cancellable {
-    setCancelled(cancel: boolean): void;
-    isCancelled(): boolean;
     getHandlers(): HandlerList;
+    isCancelled(): boolean;
+    setCancelled(cancel: boolean): void;
     getAnimationType(): PlayerAnimationType;
     getPlayer(): Player;
     getEventName(): string;

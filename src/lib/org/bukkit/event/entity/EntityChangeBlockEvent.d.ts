@@ -7,11 +7,11 @@ import EntityType from '../../../../org/bukkit/entity/EntityType.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import Material from '../../../../org/bukkit/Material.js';
 export default interface EntityChangeBlockEvent extends EntityEvent, Cancellable {
+    getHandlers(): HandlerList;
     getBlock(): Block;
     getBlockData(): BlockData;
-    setCancelled(cancel: boolean): void;
     isCancelled(): boolean;
-    getHandlers(): HandlerList;
+    setCancelled(cancel: boolean): void;
     getTo(): Material;
     getEntity(): Entity;
     getEntityType(): EntityType;

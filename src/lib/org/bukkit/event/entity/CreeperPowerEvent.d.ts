@@ -8,11 +8,11 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import LightningStrike from '../../../../org/bukkit/entity/LightningStrike.js';
 export default interface CreeperPowerEvent extends EntityEvent, Cancellable {
     getCause(): CreeperPowerEvent$PowerCause;
-    getEntity(): Creeper;
-    getEntity(): Entity;
-    setCancelled(cancel: boolean): void;
-    isCancelled(): boolean;
     getHandlers(): HandlerList;
+    getEntity(): Entity;
+    getEntity(): Creeper;
+    isCancelled(): boolean;
+    setCancelled(cancel: boolean): void;
     getLightning(): LightningStrike;
     getEntityType(): EntityType;
     getEventName(): string;

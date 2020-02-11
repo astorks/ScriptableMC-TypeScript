@@ -5,9 +5,9 @@ import WorldEvent from '../../../../org/bukkit/event/world/WorldEvent.js';
 export default interface RaidEvent extends WorldEvent {
     getRaid(): Raid;
     getWorld(): World;
+    getHandlers(): HandlerList;
     getEventName(): string;
     isAsynchronous(): boolean;
-    getHandlers(): HandlerList;
 }
 export default class RaidEvent {
     static get $javaClass(): any;

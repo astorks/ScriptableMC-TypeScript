@@ -8,14 +8,14 @@ import Merchant from '../../../../org/bukkit/inventory/Merchant.js';
 import MerchantInventory from '../../../../org/bukkit/inventory/MerchantInventory.js';
 export default interface TradeSelectEvent extends InventoryInteractEvent {
     getIndex(): number;
+    getHandlers(): HandlerList;
     getInventory(): Inventory;
     getInventory(): MerchantInventory;
-    getHandlers(): HandlerList;
     getMerchant(): Merchant;
     setResult(newResult: Event$Result): void;
     getResult(): Event$Result;
-    setCancelled(toCancel: boolean): void;
     isCancelled(): boolean;
+    setCancelled(toCancel: boolean): void;
     getWhoClicked(): HumanEntity;
     getViewers(): Array<HumanEntity>;
     getView(): InventoryView;

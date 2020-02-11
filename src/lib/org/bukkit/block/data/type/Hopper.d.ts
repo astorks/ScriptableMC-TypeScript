@@ -3,8 +3,8 @@ import BlockFace from '../../../../../org/bukkit/block/BlockFace.js';
 import Directional from '../../../../../org/bukkit/block/data/Directional.js';
 import Material from '../../../../../org/bukkit/Material.js';
 export default interface Hopper extends Directional {
-    isEnabled(): boolean;
     setEnabled(arg0: boolean): void;
+    isEnabled(): boolean;
     getFacing(): BlockFace;
     setFacing(arg0: BlockFace): void;
     getFaces(): any;

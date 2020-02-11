@@ -6,14 +6,14 @@ import EntityEvent from '../../../../org/bukkit/event/entity/EntityEvent.js';
 import EntityType from '../../../../org/bukkit/entity/EntityType.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 export default interface EnderDragonChangePhaseEvent extends EntityEvent, Cancellable {
+    getHandlers(): HandlerList;
     getEntity(): Entity;
     getEntity(): EnderDragon;
-    setCancelled(cancel: boolean): void;
     isCancelled(): boolean;
-    getHandlers(): HandlerList;
+    setCancelled(cancel: boolean): void;
+    setNewPhase(newPhase: EnderDragon$Phase): void;
     getCurrentPhase(): EnderDragon$Phase;
     getNewPhase(): EnderDragon$Phase;
-    setNewPhase(newPhase: EnderDragon$Phase): void;
     getEntityType(): EntityType;
     getEventName(): string;
     isAsynchronous(): boolean;

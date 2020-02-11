@@ -14,28 +14,28 @@ export default class NumberConversions {
     static round(...args) {
         return NumberConversions.$javaClass.round(...args);
     }
-    static toByte(...args) {
-        return NumberConversions.$javaClass.toByte(...args);
+    static toInt(...args) {
+        return NumberConversions.$javaClass.toInt(...args);
     }
     static toDouble(...args) {
         return NumberConversions.$javaClass.toDouble(...args);
     }
-    static toFloat(...args) {
-        return NumberConversions.$javaClass.toFloat(...args);
-    }
     static toLong(...args) {
         return NumberConversions.$javaClass.toLong(...args);
-    }
-    static toInt(...args) {
-        return NumberConversions.$javaClass.toInt(...args);
-    }
-    static toShort(...args) {
-        return NumberConversions.$javaClass.toShort(...args);
     }
     static square(...args) {
         return NumberConversions.$javaClass.square(...args);
     }
+    static toFloat(...args) {
+        return NumberConversions.$javaClass.toFloat(...args);
+    }
     static checkFinite(...args) {
         return NumberConversions.$javaClass.checkFinite(...args);
+    }
+    static toShort(...args) {
+        return NumberConversions.$javaClass.toShort(...args);
+    }
+    static toByte(...args) {
+        return NumberConversions.$javaClass.toByte(...args);
     }
 }

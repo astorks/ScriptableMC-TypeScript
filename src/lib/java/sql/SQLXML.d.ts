@@ -3,15 +3,15 @@ import OutputStream from '../../java/io/OutputStream.js';
 import Reader from '../../java/io/Reader.js';
 import Writer from '../../java/io/Writer.js';
 export default interface SQLXML {
-    getString(): string;
     free(): void;
     setResult(arg0: any): any;
     getSource(arg0: any): any;
-    setBinaryStream(): OutputStream;
-    setCharacterStream(): Writer;
+    getString(): string;
     setString(arg0: string): void;
-    getBinaryStream(): InputStream;
+    setCharacterStream(): Writer;
+    setBinaryStream(): OutputStream;
     getCharacterStream(): Reader;
+    getBinaryStream(): InputStream;
 }
 export default class SQLXML {
     static get $javaClass(): any;

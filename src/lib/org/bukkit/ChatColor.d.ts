@@ -1,8 +1,8 @@
 export default interface ChatColor {
     getChar(): string;
     isColor(): boolean;
-    asBungee(): any;
     isFormat(): boolean;
+    asBungee(): any;
     name(): string;
     compareTo(arg0: any): number;
     compareTo(o: any): number;

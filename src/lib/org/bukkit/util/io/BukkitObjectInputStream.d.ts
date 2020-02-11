@@ -17,9 +17,6 @@ export default interface BukkitObjectInputStream extends ObjectInputStream {
     available(): number;
     readUTF(): string;
     readFloat(): number;
-    readFully(buf: Array<number>, off: number, len: number): void;
-    readFully(buf: Array<number>): void;
-    readChar(): string;
     skipBytes(len: number): number;
     readBoolean(): boolean;
     readByte(): number;
@@ -28,6 +25,9 @@ export default interface BukkitObjectInputStream extends ObjectInputStream {
     readUnsignedShort(): number;
     readLong(): number;
     readDouble(): number;
+    readChar(): string;
+    readFully(buf: Array<number>, off: number, len: number): void;
+    readFully(buf: Array<number>): void;
     readUnshared(): any;
     registerValidation(obj: ObjectInputValidation, prio: number): void;
     getObjectInputFilter(): ObjectInputFilter;

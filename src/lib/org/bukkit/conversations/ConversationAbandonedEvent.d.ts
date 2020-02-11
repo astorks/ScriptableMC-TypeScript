@@ -3,8 +3,8 @@ import ConversationCanceller from '../../../org/bukkit/conversations/Conversatio
 import ConversationContext from '../../../org/bukkit/conversations/ConversationContext.js';
 export default interface ConversationAbandonedEvent {
     getContext(): ConversationContext;
-    gracefulExit(): boolean;
     getCanceller(): ConversationCanceller;
+    gracefulExit(): boolean;
     getSource(): any;
 }
 export default class ConversationAbandonedEvent {

@@ -13,6 +13,6 @@ export default interface HelpTopicComparator {
 }
 export default class HelpTopicComparator {
     static get $javaClass(): any;
-    static helpTopicComparatorInstance(): HelpTopicComparator;
     static topicNameComparatorInstance(): HelpTopicComparator$TopicNameComparator;
+    static helpTopicComparatorInstance(): HelpTopicComparator;
 }

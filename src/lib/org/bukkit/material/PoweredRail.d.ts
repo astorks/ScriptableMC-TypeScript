@@ -11,17 +11,17 @@ export default interface PoweredRail extends ExtendedRails, Redstone {
     clone(): MaterialData;
     clone(): Rails;
     clone(): PoweredRail;
-    setPowered(isPowered: boolean): void;
     isPowered(): boolean;
+    setPowered(isPowered: boolean): void;
     setDirection(face: BlockFace, isOnSlope: boolean): void;
     isCurve(): boolean;
     getDirection(): BlockFace;
     isOnSlope(): boolean;
-    setData(data: number): void;
-    getData(): number;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class PoweredRail {
     static get $javaClass(): any;

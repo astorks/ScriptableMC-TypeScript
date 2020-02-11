@@ -2,11 +2,11 @@ import AnaloguePowerable from '../../../../../org/bukkit/block/data/AnaloguePowe
 import BlockData from '../../../../../org/bukkit/block/data/BlockData.js';
 import Material from '../../../../../org/bukkit/Material.js';
 export default interface DaylightDetector extends AnaloguePowerable {
-    setInverted(arg0: boolean): void;
     isInverted(): boolean;
-    setPower(arg0: number): void;
-    getMaximumPower(): number;
+    setInverted(arg0: boolean): void;
     getPower(): number;
+    getMaximumPower(): number;
+    setPower(arg0: number): void;
     clone(): any;
     clone(): BlockData;
     matches(arg0: BlockData): boolean;

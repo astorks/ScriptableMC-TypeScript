@@ -6,13 +6,13 @@ export default interface SpawnEgg extends MaterialData {
     clone(): SpawnEgg;
     clone(): MaterialData;
     clone(): any;
-    getSpawnedType(): EntityType;
     setSpawnedType(type: EntityType): void;
-    setData(data: number): void;
-    getData(): number;
+    getSpawnedType(): EntityType;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class SpawnEgg {
     static get $javaClass(): any;

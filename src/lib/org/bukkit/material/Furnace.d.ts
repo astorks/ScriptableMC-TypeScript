@@ -12,11 +12,11 @@ export default interface Furnace extends FurnaceAndDispenser {
     clone(): Furnace;
     getFacing(): BlockFace;
     setFacingDirection(face: BlockFace): void;
-    setData(data: number): void;
-    getData(): number;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class Furnace {
     static get $javaClass(): any;

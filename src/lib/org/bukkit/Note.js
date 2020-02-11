@@ -8,10 +8,10 @@ export default class Note {
     static natural(...args) {
         return Note.$javaClass.natural(...args);
     }
-    static flat(...args) {
-        return Note.$javaClass.flat(...args);
-    }
     static sharp(...args) {
         return Note.$javaClass.sharp(...args);
+    }
+    static flat(...args) {
+        return Note.$javaClass.flat(...args);
     }
 }

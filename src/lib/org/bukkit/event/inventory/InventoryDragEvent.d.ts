@@ -12,13 +12,13 @@ export default interface InventoryDragEvent extends InventoryInteractEvent {
     setCursor(newCursor: ItemStack): void;
     getCursor(): ItemStack;
     getInventorySlots(): any;
-    getRawSlots(): any;
     getNewItems(): any;
+    getRawSlots(): any;
     getOldCursor(): ItemStack;
     setResult(newResult: Event$Result): void;
     getResult(): Event$Result;
-    setCancelled(toCancel: boolean): void;
     isCancelled(): boolean;
+    setCancelled(toCancel: boolean): void;
     getWhoClicked(): HumanEntity;
     getInventory(): Inventory;
     getViewers(): Array<HumanEntity>;

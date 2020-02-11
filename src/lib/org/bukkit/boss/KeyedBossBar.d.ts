@@ -11,20 +11,20 @@ export default interface KeyedBossBar extends BossBar, Keyed {
     getTitle(): string;
     getColor(): BarColor;
     getPlayers(): Array<Player>;
-    getStyle(): BarStyle;
-    setTitle(arg0: string): void;
-    hasFlag(arg0: BarFlag): boolean;
-    setVisible(arg0: boolean): void;
-    hide(): void;
-    addPlayer(arg0: Player): void;
     setColor(arg0: BarColor): void;
-    removePlayer(arg0: Player): void;
-    show(): void;
+    getStyle(): BarStyle;
     setStyle(arg0: BarStyle): void;
     removeFlag(arg0: BarFlag): void;
-    getProgress(): number;
-    isVisible(): boolean;
+    hasFlag(arg0: BarFlag): boolean;
     setProgress(arg0: number): void;
+    setTitle(arg0: string): void;
+    getProgress(): number;
+    addPlayer(arg0: Player): void;
+    isVisible(): boolean;
+    show(): void;
+    hide(): void;
+    removePlayer(arg0: Player): void;
+    setVisible(arg0: boolean): void;
     getKey(): NamespacedKey;
 }
 export default class KeyedBossBar {

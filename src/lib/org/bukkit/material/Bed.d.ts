@@ -8,14 +8,14 @@ export default interface Bed extends MaterialData, Directional {
     clone(): Bed;
     clone(): MaterialData;
     getFacing(): BlockFace;
-    setFacingDirection(face: BlockFace): void;
-    isHeadOfBed(): boolean;
     setHeadOfBed(isHeadOfBed: boolean): void;
-    setData(data: number): void;
-    getData(): number;
+    isHeadOfBed(): boolean;
+    setFacingDirection(face: BlockFace): void;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class Bed {
     static get $javaClass(): any;

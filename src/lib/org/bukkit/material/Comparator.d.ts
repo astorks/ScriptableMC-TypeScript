@@ -9,16 +9,16 @@ export default interface Comparator extends MaterialData, Directional, Redstone 
     clone(): Comparator;
     clone(): MaterialData;
     getFacing(): BlockFace;
-    isBeingPowered(): boolean;
-    isSubtractionMode(): boolean;
-    setSubtractionMode(isSubtraction: boolean): void;
     isPowered(): boolean;
     setFacingDirection(face: BlockFace): void;
-    setData(data: number): void;
-    getData(): number;
+    isBeingPowered(): boolean;
+    setSubtractionMode(isSubtraction: boolean): void;
+    isSubtractionMode(): boolean;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class Comparator {
     static get $javaClass(): any;

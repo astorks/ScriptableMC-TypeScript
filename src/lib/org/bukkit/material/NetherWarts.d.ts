@@ -8,11 +8,11 @@ export default interface NetherWarts extends MaterialData {
     clone(): MaterialData;
     getState(): NetherWartsState;
     setState(state: NetherWartsState): void;
-    setData(data: number): void;
-    getData(): number;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class NetherWarts {
     static get $javaClass(): any;

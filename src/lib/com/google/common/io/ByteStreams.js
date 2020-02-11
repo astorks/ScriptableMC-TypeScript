@@ -23,16 +23,16 @@ export default class ByteStreams {
     static readFully(...args) {
         return ByteStreams.$javaClass.readFully(...args);
     }
-    static exhaust(...args) {
-        return ByteStreams.$javaClass.exhaust(...args);
+    static newDataOutput(...args) {
+        return ByteStreams.$javaClass.newDataOutput(...args);
     }
     static newDataInput(...args) {
         return ByteStreams.$javaClass.newDataInput(...args);
     }
+    static exhaust(...args) {
+        return ByteStreams.$javaClass.exhaust(...args);
+    }
     static skipFully(...args) {
         return ByteStreams.$javaClass.skipFully(...args);
-    }
-    static newDataOutput(...args) {
-        return ByteStreams.$javaClass.newDataOutput(...args);
     }
 }

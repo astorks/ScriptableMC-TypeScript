@@ -8,11 +8,11 @@ export default interface SimpleAttachableMaterialData extends MaterialData, Atta
     clone(): SimpleAttachableMaterialData;
     clone(): MaterialData;
     getFacing(): BlockFace;
-    setData(data: number): void;
-    getData(): number;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
     getAttachedFace(): BlockFace;
     setFacingDirection(arg0: BlockFace): void;
 }

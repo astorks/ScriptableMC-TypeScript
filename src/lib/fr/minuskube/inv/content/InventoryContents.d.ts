@@ -16,18 +16,18 @@ export default interface InventoryContents {
     all(): Array<Array<ClickableItem>>;
     pagination(): Pagination;
     firstEmpty(): any;
-    property(arg0: string, arg1: any): any;
-    property(arg0: string): any;
     inventory(): SmartInventory;
+    property(arg0: string): any;
+    property(arg0: string, arg1: any): any;
+    fillRect(arg0: number, arg1: number, arg2: number, arg3: number, arg4: ClickableItem): InventoryContents;
+    fillRect(arg0: SlotPos, arg1: SlotPos, arg2: ClickableItem): InventoryContents;
+    fillBorders(arg0: ClickableItem): InventoryContents;
+    newIterator(arg0: SlotIterator$Type, arg1: number, arg2: number): SlotIterator;
     newIterator(arg0: string, arg1: SlotIterator$Type, arg2: SlotPos): SlotIterator;
     newIterator(arg0: SlotIterator$Type, arg1: SlotPos): SlotIterator;
-    newIterator(arg0: SlotIterator$Type, arg1: number, arg2: number): SlotIterator;
     newIterator(arg0: string, arg1: SlotIterator$Type, arg2: number, arg3: number): SlotIterator;
     fillRow(arg0: number, arg1: ClickableItem): InventoryContents;
     fillColumn(arg0: number, arg1: ClickableItem): InventoryContents;
-    fillBorders(arg0: ClickableItem): InventoryContents;
-    fillRect(arg0: number, arg1: number, arg2: number, arg3: number, arg4: ClickableItem): InventoryContents;
-    fillRect(arg0: SlotPos, arg1: SlotPos, arg2: ClickableItem): InventoryContents;
 }
 export default class InventoryContents {
     static get $javaClass(): any;

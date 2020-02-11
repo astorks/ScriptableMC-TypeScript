@@ -2,14 +2,14 @@ import PermissionDefault from '../../../org/bukkit/permissions/PermissionDefault
 export default interface Permission {
     getName(): string;
     getDefault(): PermissionDefault;
-    recalculatePermissibles(): void;
-    getPermissibles(): any;
-    addParent(perm: Permission, value: boolean): void;
-    addParent(_name: string, value: boolean): Permission;
-    getChildren(): any;
     setDefault(value: PermissionDefault): void;
     getDescription(): string;
     setDescription(value: string): void;
+    recalculatePermissibles(): void;
+    getChildren(): any;
+    addParent(_name: string, value: boolean): Permission;
+    addParent(perm: Permission, value: boolean): void;
+    getPermissibles(): any;
 }
 export default class Permission {
     static get $javaClass(): any;
@@ -22,7 +22,7 @@ export default class Permission {
     constructor(_name: string, description: string);
     constructor(_name: string, defaultValue: PermissionDefault);
     static get DEFAULT_PERMISSION(): PermissionDefault;
-    static loadPermission(_name: string, data: any, def: PermissionDefault, output: Array<any>): Permission;
-    static loadPermission(_name: string, data: any): Permission;
     static loadPermissions(data: any, error: string, def: PermissionDefault): Array<Permission>;
+    static loadPermission(_name: string, data: any): Permission;
+    static loadPermission(_name: string, data: any, def: PermissionDefault, output: Array<any>): Permission;
 }

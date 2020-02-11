@@ -4,13 +4,13 @@ import Cancellable from '../../../../org/bukkit/event/Cancellable.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import Player from '../../../../org/bukkit/entity/Player.js';
 export default interface SignChangeEvent extends BlockEvent, Cancellable {
-    getPlayer(): Player;
-    setCancelled(cancel: boolean): void;
-    isCancelled(): boolean;
     getHandlers(): HandlerList;
+    getPlayer(): Player;
+    isCancelled(): boolean;
+    setCancelled(cancel: boolean): void;
+    getLines(): Array<string>;
     setLine(index: number, line: string): void;
     getLine(index: number): string;
-    getLines(): Array<string>;
     getBlock(): Block;
     getEventName(): string;
     isAsynchronous(): boolean;

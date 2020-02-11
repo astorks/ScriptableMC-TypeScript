@@ -9,16 +9,16 @@ export default interface Button extends SimpleAttachableMaterialData, Redstone {
     clone(): Button;
     clone(): SimpleAttachableMaterialData;
     clone(): MaterialData;
-    setPowered(bool: boolean): void;
     isPowered(): boolean;
+    setPowered(bool: boolean): void;
     setFacingDirection(face: BlockFace): void;
     getAttachedFace(): BlockFace;
     getFacing(): BlockFace;
-    setData(data: number): void;
-    getData(): number;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class Button {
     static get $javaClass(): any;

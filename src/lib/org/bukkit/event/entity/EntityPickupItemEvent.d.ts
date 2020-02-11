@@ -6,13 +6,13 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import Item from '../../../../org/bukkit/entity/Item.js';
 import LivingEntity from '../../../../org/bukkit/entity/LivingEntity.js';
 export default interface EntityPickupItemEvent extends EntityEvent, Cancellable {
+    getHandlers(): HandlerList;
     getRemaining(): number;
     getEntity(): Entity;
     getEntity(): LivingEntity;
     getItem(): Item;
-    setCancelled(cancel: boolean): void;
     isCancelled(): boolean;
-    getHandlers(): HandlerList;
+    setCancelled(cancel: boolean): void;
     getEntityType(): EntityType;
     getEventName(): string;
     isAsynchronous(): boolean;

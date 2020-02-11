@@ -17,8 +17,8 @@ export default interface TripwireHook extends Attachable, Directional, Powerable
     getFacing(): BlockFace;
     setFacing(arg0: BlockFace): void;
     getFaces(): any;
-    setPowered(arg0: boolean): void;
     isPowered(): boolean;
+    setPowered(arg0: boolean): void;
 }
 export default class TripwireHook {
     static get $javaClass(): any;

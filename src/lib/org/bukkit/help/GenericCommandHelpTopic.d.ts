@@ -4,9 +4,9 @@ import HelpTopic from '../../../org/bukkit/help/HelpTopic.js';
 export default interface GenericCommandHelpTopic extends HelpTopic {
     canSee(sender: CommandSender): boolean;
     getName(): string;
-    amendCanSee(amendedPermission: string): void;
-    getFullText(forWho: CommandSender): string;
     getShortText(): string;
+    getFullText(forWho: CommandSender): string;
+    amendCanSee(amendedPermission: string): void;
     amendTopic(amendedShortText: string, amendedFullText: string): void;
 }
 export default class GenericCommandHelpTopic {

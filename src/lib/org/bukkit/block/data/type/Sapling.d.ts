@@ -1,9 +1,9 @@
 import BlockData from '../../../../../org/bukkit/block/data/BlockData.js';
 import Material from '../../../../../org/bukkit/Material.js';
 export default interface Sapling extends BlockData {
-    getStage(): number;
-    setStage(arg0: number): void;
     getMaximumStage(): number;
+    setStage(arg0: number): void;
+    getStage(): number;
     clone(): any;
     clone(): BlockData;
     matches(arg0: BlockData): boolean;

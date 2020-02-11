@@ -1,8 +1,8 @@
 import HandlerList from '../../../org/bukkit/event/HandlerList.js';
 export default interface Event {
+    getHandlers(): HandlerList;
     getEventName(): string;
     isAsynchronous(): boolean;
-    getHandlers(): HandlerList;
 }
 export default class Event {
     static get $javaClass(): any;

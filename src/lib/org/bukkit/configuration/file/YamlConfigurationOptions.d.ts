@@ -20,12 +20,12 @@ export default interface YamlConfigurationOptions extends FileConfigurationOptio
     copyDefaults(value: boolean): MemoryConfigurationOptions;
     copyDefaults(value: boolean): YamlConfigurationOptions;
     copyDefaults(value: boolean): FileConfigurationOptions;
+    copyHeader(value: boolean): YamlConfigurationOptions;
+    copyHeader(value: boolean): FileConfigurationOptions;
     header(value: string): YamlConfigurationOptions;
     header(value: string): FileConfigurationOptions;
-    copyHeader(value: boolean): FileConfigurationOptions;
-    copyHeader(value: boolean): YamlConfigurationOptions;
-    header(): string;
     copyHeader(): boolean;
+    header(): string;
     pathSeparator(): string;
     copyDefaults(): boolean;
 }

@@ -8,24 +8,24 @@ import RecipeChoice from '../../../org/bukkit/inventory/RecipeChoice.js';
 export default interface ShapelessRecipe extends Recipe, Keyed {
     getKey(): NamespacedKey;
     getResult(): ItemStack;
-    removeIngredient(ingredient: Material): ShapelessRecipe;
-    removeIngredient(ingredient: MaterialData): ShapelessRecipe;
-    removeIngredient(count: number, ingredient: Material): ShapelessRecipe;
-    removeIngredient(count: number, ingredient: MaterialData): ShapelessRecipe;
-    removeIngredient(ingredient: Material, rawdata: number): ShapelessRecipe;
-    removeIngredient(count: number, ingredient: Material, rawdata: number): ShapelessRecipe;
-    removeIngredient(ingredient: RecipeChoice): ShapelessRecipe;
+    setGroup(group: string): void;
+    getGroup(): string;
     addIngredient(count: number, ingredient: MaterialData): ShapelessRecipe;
     addIngredient(ingredient: Material, rawdata: number): ShapelessRecipe;
-    addIngredient(ingredient: Material): ShapelessRecipe;
     addIngredient(ingredient: MaterialData): ShapelessRecipe;
+    addIngredient(ingredient: Material): ShapelessRecipe;
+    addIngredient(count: number, ingredient: Material): ShapelessRecipe;
     addIngredient(ingredient: RecipeChoice): ShapelessRecipe;
     addIngredient(count: number, ingredient: Material, rawdata: number): ShapelessRecipe;
-    addIngredient(count: number, ingredient: Material): ShapelessRecipe;
-    getIngredientList(): Array<ItemStack>;
+    removeIngredient(count: number, ingredient: Material, rawdata: number): ShapelessRecipe;
+    removeIngredient(ingredient: MaterialData): ShapelessRecipe;
+    removeIngredient(ingredient: Material): ShapelessRecipe;
+    removeIngredient(count: number, ingredient: Material): ShapelessRecipe;
+    removeIngredient(ingredient: RecipeChoice): ShapelessRecipe;
+    removeIngredient(ingredient: Material, rawdata: number): ShapelessRecipe;
+    removeIngredient(count: number, ingredient: MaterialData): ShapelessRecipe;
     getChoiceList(): Array<RecipeChoice>;
-    getGroup(): string;
-    setGroup(group: string): void;
+    getIngredientList(): Array<ItemStack>;
 }
 export default class ShapelessRecipe {
     static get $javaClass(): any;

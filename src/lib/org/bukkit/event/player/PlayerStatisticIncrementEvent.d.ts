@@ -6,12 +6,12 @@ import Player from '../../../../org/bukkit/entity/Player.js';
 import PlayerEvent from '../../../../org/bukkit/event/player/PlayerEvent.js';
 import Statistic from '../../../../org/bukkit/Statistic.js';
 export default interface PlayerStatisticIncrementEvent extends PlayerEvent, Cancellable {
-    getMaterial(): Material;
-    getStatistic(): Statistic;
-    setCancelled(cancel: boolean): void;
-    isCancelled(): boolean;
-    getEntityType(): EntityType;
     getHandlers(): HandlerList;
+    getStatistic(): Statistic;
+    getMaterial(): Material;
+    isCancelled(): boolean;
+    setCancelled(cancel: boolean): void;
+    getEntityType(): EntityType;
     getNewValue(): number;
     getPreviousValue(): number;
     getPlayer(): Player;

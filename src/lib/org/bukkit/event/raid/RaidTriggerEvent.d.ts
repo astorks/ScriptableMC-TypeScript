@@ -5,10 +5,10 @@ import Raid from '../../../../org/bukkit/Raid.js';
 import RaidEvent from '../../../../org/bukkit/event/raid/RaidEvent.js';
 import World from '../../../../org/bukkit/World.js';
 export default interface RaidTriggerEvent extends RaidEvent, Cancellable {
-    getPlayer(): Player;
-    setCancelled(cancel: boolean): void;
-    isCancelled(): boolean;
     getHandlers(): HandlerList;
+    getPlayer(): Player;
+    isCancelled(): boolean;
+    setCancelled(cancel: boolean): void;
     getRaid(): Raid;
     getWorld(): World;
     getEventName(): string;

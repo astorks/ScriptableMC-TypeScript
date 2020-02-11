@@ -8,9 +8,9 @@ export default interface EntityTargetLivingEntityEvent extends EntityTargetEvent
     getTarget(): Entity;
     getTarget(): LivingEntity;
     setTarget(target: Entity): void;
-    setCancelled(cancel: boolean): void;
-    isCancelled(): boolean;
     getHandlers(): HandlerList;
+    isCancelled(): boolean;
+    setCancelled(cancel: boolean): void;
     getReason(): EntityTargetEvent$TargetReason;
     getEntity(): Entity;
     getEntityType(): EntityType;

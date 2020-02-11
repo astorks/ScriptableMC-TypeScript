@@ -4,9 +4,9 @@ import EquipmentSlot from '../../../org/bukkit/inventory/EquipmentSlot.js';
 export default interface AttributeModifier extends ConfigurationSerializable {
     getName(): string;
     getSlot(): EquipmentSlot;
-    getAmount(): number;
     getUniqueId(): string;
     serialize(): any;
+    getAmount(): number;
     getOperation(): AttributeModifier$Operation;
 }
 export default class AttributeModifier {

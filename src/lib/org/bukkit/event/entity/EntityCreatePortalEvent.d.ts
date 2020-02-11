@@ -7,11 +7,11 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import LivingEntity from '../../../../org/bukkit/entity/LivingEntity.js';
 import PortalType from '../../../../org/bukkit/PortalType.js';
 export default interface EntityCreatePortalEvent extends EntityEvent, Cancellable {
+    getHandlers(): HandlerList;
     getEntity(): Entity;
     getEntity(): LivingEntity;
-    setCancelled(cancel: boolean): void;
     isCancelled(): boolean;
-    getHandlers(): HandlerList;
+    setCancelled(cancel: boolean): void;
     getPortalType(): PortalType;
     getBlocks(): Array<BlockState>;
     getEntityType(): EntityType;

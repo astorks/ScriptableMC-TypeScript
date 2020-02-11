@@ -6,19 +6,19 @@ export default interface Potion {
     apply(to: ItemStack): void;
     apply(to: LivingEntity): void;
     getType(): PotionType;
-    setType(type: PotionType): void;
-    getLevel(): number;
     setLevel(level: number): void;
+    getLevel(): number;
     toItemStack(amount: number): ItemStack;
-    getEffects(): any;
-    hasExtendedDuration(): boolean;
+    setType(type: PotionType): void;
     setHasExtendedDuration(isExtended: boolean): void;
-    getNameId(): number;
-    isSplash(): boolean;
-    extend(): Potion;
-    toDamageValue(): number;
+    hasExtendedDuration(): boolean;
+    getEffects(): any;
     splash(): Potion;
     setSplash(isSplash: boolean): void;
+    extend(): Potion;
+    toDamageValue(): number;
+    isSplash(): boolean;
+    getNameId(): number;
 }
 export default class Potion {
     static get $javaClass(): any;
@@ -28,6 +28,6 @@ export default class Potion {
     constructor(type: PotionType);
     static getBrewer(): PotionBrewer;
     static fromItemStack(item: ItemStack): Potion;
-    static fromDamage(damage: number): Potion;
     static setPotionBrewer(other: PotionBrewer): void;
+    static fromDamage(damage: number): Potion;
 }

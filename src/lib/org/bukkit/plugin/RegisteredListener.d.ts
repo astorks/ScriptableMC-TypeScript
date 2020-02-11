@@ -5,10 +5,10 @@ import Listener from '../../../org/bukkit/event/Listener.js';
 import Plugin from '../../../org/bukkit/plugin/Plugin.js';
 export default interface RegisteredListener {
     getPriority(): EventPriority;
-    isIgnoringCancelled(): boolean;
     getPlugin(): Plugin;
     getListener(): Listener;
     callEvent(event: Event): void;
+    isIgnoringCancelled(): boolean;
 }
 export default class RegisteredListener {
     static get $javaClass(): any;

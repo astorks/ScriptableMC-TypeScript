@@ -5,8 +5,8 @@ import Lightable from '../../../../../org/bukkit/block/data/Lightable.js';
 import Material from '../../../../../org/bukkit/Material.js';
 import Waterlogged from '../../../../../org/bukkit/block/data/Waterlogged.js';
 export default interface Campfire extends Directional, Lightable, Waterlogged {
-    isSignalFire(): boolean;
     setSignalFire(arg0: boolean): void;
+    isSignalFire(): boolean;
     getFacing(): BlockFace;
     setFacing(arg0: BlockFace): void;
     getFaces(): any;
@@ -17,8 +17,8 @@ export default interface Campfire extends Directional, Lightable, Waterlogged {
     getMaterial(): Material;
     getAsString(): string;
     getAsString(arg0: boolean): string;
-    setLit(arg0: boolean): void;
     isLit(): boolean;
+    setLit(arg0: boolean): void;
     setWaterlogged(arg0: boolean): void;
     isWaterlogged(): boolean;
 }

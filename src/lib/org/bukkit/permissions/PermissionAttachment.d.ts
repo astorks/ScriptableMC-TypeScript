@@ -7,12 +7,12 @@ export default interface PermissionAttachment {
     getPermissions(): any;
     setPermission(perm: Permission, value: boolean): void;
     setPermission(_name: string, value: boolean): void;
-    getPermissible(): Permissible;
-    unsetPermission(perm: Permission): void;
-    unsetPermission(_name: string): void;
-    setRemovalCallback(ex: PermissionRemovedExecutor): void;
-    getRemovalCallback(): PermissionRemovedExecutor;
     getPlugin(): Plugin;
+    setRemovalCallback(ex: PermissionRemovedExecutor): void;
+    getPermissible(): Permissible;
+    getRemovalCallback(): PermissionRemovedExecutor;
+    unsetPermission(_name: string): void;
+    unsetPermission(perm: Permission): void;
 }
 export default class PermissionAttachment {
     static get $javaClass(): any;

@@ -7,11 +7,11 @@ import Player from '../../../../org/bukkit/entity/Player.js';
 import PlayerBucketEvent from '../../../../org/bukkit/event/player/PlayerBucketEvent.js';
 export default interface PlayerBucketEmptyEvent extends PlayerBucketEvent {
     getHandlers(): HandlerList;
+    getItemStack(): ItemStack;
     getBlock(): Block;
     setItemStack(itemStack: ItemStack): void;
-    getItemStack(): ItemStack;
-    setCancelled(cancel: boolean): void;
     isCancelled(): boolean;
+    setCancelled(cancel: boolean): void;
     getBlockFace(): BlockFace;
     getBlockClicked(): Block;
     getBucket(): Material;

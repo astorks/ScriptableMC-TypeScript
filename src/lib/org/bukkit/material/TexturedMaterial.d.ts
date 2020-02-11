@@ -8,11 +8,11 @@ export default interface TexturedMaterial extends MaterialData {
     getMaterial(): Material;
     getTextures(): Array<Material>;
     setMaterial(material: Material): void;
-    setData(data: number): void;
-    getData(): number;
     toItemStack(amount: number): ItemStack;
     toItemStack(): ItemStack;
     getItemType(): Material;
+    setData(data: number): void;
+    getData(): number;
 }
 export default class TexturedMaterial {
     static get $javaClass(): any;

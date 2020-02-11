@@ -8,8 +8,8 @@ export default interface FurnaceExtractEvent extends BlockExpEvent {
     getItemType(): Material;
     getItemAmount(): number;
     getHandlers(): HandlerList;
-    setExpToDrop(exp: number): void;
     getExpToDrop(): number;
+    setExpToDrop(exp: number): void;
     getBlock(): Block;
     getEventName(): string;
     isAsynchronous(): boolean;
