@@ -8,16 +8,16 @@ export default class Vector {
     static deserialize(...args) {
         return Vector.$javaClass.deserialize(...args);
     }
-    static getEpsilon(...args) {
-        return Vector.$javaClass.getEpsilon(...args);
-    }
-    static getMinimum(...args) {
-        return Vector.$javaClass.getMinimum(...args);
-    }
     static getMaximum(...args) {
         return Vector.$javaClass.getMaximum(...args);
     }
     static getRandom(...args) {
         return Vector.$javaClass.getRandom(...args);
+    }
+    static getEpsilon(...args) {
+        return Vector.$javaClass.getEpsilon(...args);
+    }
+    static getMinimum(...args) {
+        return Vector.$javaClass.getMinimum(...args);
     }
 }

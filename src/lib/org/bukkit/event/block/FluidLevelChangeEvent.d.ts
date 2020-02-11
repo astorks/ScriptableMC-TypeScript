@@ -4,10 +4,10 @@ import BlockEvent from '../../../../org/bukkit/event/block/BlockEvent.js';
 import Cancellable from '../../../../org/bukkit/event/Cancellable.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 export default interface FluidLevelChangeEvent extends BlockEvent, Cancellable {
-    getHandlers(): HandlerList;
     getNewData(): BlockData;
-    isCancelled(): boolean;
     setCancelled(cancelled: boolean): void;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
     setNewData(newData: BlockData): void;
     getBlock(): Block;
     getEventName(): string;

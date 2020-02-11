@@ -4,12 +4,12 @@ import TimeSkipEvent$SkipReason from '../../../../org/bukkit/event/world/TimeSki
 import World from '../../../../org/bukkit/World.js';
 import WorldEvent from '../../../../org/bukkit/event/world/WorldEvent.js';
 export default interface TimeSkipEvent extends WorldEvent, Cancellable {
-    getHandlers(): HandlerList;
-    isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getSkipReason(): TimeSkipEvent$SkipReason;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
     getSkipAmount(): number;
     setSkipAmount(skipAmount: number): void;
+    getSkipReason(): TimeSkipEvent$SkipReason;
     getWorld(): World;
     getEventName(): string;
     isAsynchronous(): boolean;

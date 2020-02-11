@@ -2,20 +2,20 @@ import ItemStack from '../../../org/bukkit/inventory/ItemStack.js';
 import Material from '../../../org/bukkit/Material.js';
 import MaterialData from '../../../org/bukkit/material/MaterialData.js';
 export default interface FlowerPot extends MaterialData {
+    clone(): FlowerPot;
+    clone(): MaterialData;
+    clone(): any;
     setContents(materialData: MaterialData): void;
     getContents(): MaterialData;
-    clone(): any;
-    clone(): MaterialData;
-    clone(): FlowerPot;
-    getData(): number;
     setData(data: number): void;
-    getItemType(): Material;
-    toItemStack(): ItemStack;
+    getData(): number;
     toItemStack(amount: number): ItemStack;
+    toItemStack(): ItemStack;
+    getItemType(): Material;
 }
 export default class FlowerPot {
     static get $javaClass(): any;
-    constructor();
     constructor(type: Material, data: number);
     constructor(type: Material);
+    constructor();
 }

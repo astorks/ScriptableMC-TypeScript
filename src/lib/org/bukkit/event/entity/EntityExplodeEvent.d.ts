@@ -6,13 +6,13 @@ import EntityType from '../../../../org/bukkit/entity/EntityType.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import Location from '../../../../org/bukkit/Location.js';
 export default interface EntityExplodeEvent extends EntityEvent, Cancellable {
-    getHandlers(): HandlerList;
-    isCancelled(): boolean;
+    getLocation(): Location;
     setCancelled(cancel: boolean): void;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
     getYield(): number;
     blockList(): Array<Block>;
     setYield(_yield: number): void;
-    getLocation(): Location;
     getEntity(): Entity;
     getEntityType(): EntityType;
     getEventName(): string;

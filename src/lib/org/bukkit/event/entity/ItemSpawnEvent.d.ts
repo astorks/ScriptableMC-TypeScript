@@ -7,17 +7,17 @@ import Location from '../../../../org/bukkit/Location.js';
 export default interface ItemSpawnEvent extends EntitySpawnEvent {
     getEntity(): Entity;
     getEntity(): Item;
-    getHandlers(): HandlerList;
-    isCancelled(): boolean;
-    setCancelled(cancel: boolean): void;
     getLocation(): Location;
+    setCancelled(cancel: boolean): void;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
     getEntityType(): EntityType;
     getEventName(): string;
     isAsynchronous(): boolean;
 }
 export default class ItemSpawnEvent {
     static get $javaClass(): any;
-    constructor(spawnee: Item);
     constructor(spawnee: Item, loc: Location);
+    constructor(spawnee: Item);
     static getHandlerList(): HandlerList;
 }

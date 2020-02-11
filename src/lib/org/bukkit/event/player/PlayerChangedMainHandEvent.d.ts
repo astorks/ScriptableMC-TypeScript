@@ -3,8 +3,8 @@ import MainHand from '../../../../org/bukkit/inventory/MainHand.js';
 import Player from '../../../../org/bukkit/entity/Player.js';
 import PlayerEvent from '../../../../org/bukkit/event/player/PlayerEvent.js';
 export default interface PlayerChangedMainHandEvent extends PlayerEvent {
-    getHandlers(): HandlerList;
     getMainHand(): MainHand;
+    getHandlers(): HandlerList;
     getPlayer(): Player;
     getEventName(): string;
     isAsynchronous(): boolean;

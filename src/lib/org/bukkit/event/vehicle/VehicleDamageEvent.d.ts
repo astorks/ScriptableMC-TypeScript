@@ -4,11 +4,11 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import Vehicle from '../../../../org/bukkit/entity/Vehicle.js';
 import VehicleEvent from '../../../../org/bukkit/event/vehicle/VehicleEvent.js';
 export default interface VehicleDamageEvent extends VehicleEvent, Cancellable {
-    getHandlers(): HandlerList;
-    setDamage(damage: number): void;
     getDamage(): number;
-    isCancelled(): boolean;
+    setDamage(damage: number): void;
     setCancelled(cancel: boolean): void;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
     getAttacker(): Entity;
     getVehicle(): Vehicle;
     getEventName(): string;

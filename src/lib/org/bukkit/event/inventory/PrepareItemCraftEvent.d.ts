@@ -6,10 +6,10 @@ import InventoryEvent from '../../../../org/bukkit/event/inventory/InventoryEven
 import InventoryView from '../../../../org/bukkit/inventory/InventoryView.js';
 import Recipe from '../../../../org/bukkit/inventory/Recipe.js';
 export default interface PrepareItemCraftEvent extends InventoryEvent {
-    getHandlers(): HandlerList;
     getInventory(): CraftingInventory;
     getInventory(): Inventory;
     getRecipe(): Recipe;
+    getHandlers(): HandlerList;
     isRepair(): boolean;
     getViewers(): Array<HumanEntity>;
     getView(): InventoryView;

@@ -1,7 +1,7 @@
 export default interface UsageMode {
     name(): string;
     compareTo(arg0: any): number;
-    compareTo(arg0: any): number;
+    compareTo(o: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }

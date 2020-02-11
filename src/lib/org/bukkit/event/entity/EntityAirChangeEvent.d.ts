@@ -4,11 +4,11 @@ import EntityEvent from '../../../../org/bukkit/event/entity/EntityEvent.js';
 import EntityType from '../../../../org/bukkit/entity/EntityType.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 export default interface EntityAirChangeEvent extends EntityEvent, Cancellable {
-    getHandlers(): HandlerList;
-    getAmount(): number;
     setAmount(amount: number): void;
-    isCancelled(): boolean;
+    getAmount(): number;
     setCancelled(cancelled: boolean): void;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
     getEntity(): Entity;
     getEntityType(): EntityType;
     getEventName(): string;

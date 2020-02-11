@@ -1,14 +1,14 @@
 export default interface FileWrapper {
-    parentFile(): FileWrapper;
-    writeText(text: string): void;
-    readText(): string;
-    readLines(): Array<string>;
-    exists(): boolean;
     isDirectory(): boolean;
+    exists(): boolean;
     isFile(): boolean;
     createNewFile(): boolean;
     mkdir(): boolean;
     mkdirs(): boolean;
+    writeText(text: string): void;
+    parentFile(): FileWrapper;
+    readText(): string;
+    readLines(): Array<string>;
 }
 export default class FileWrapper {
     static get $javaClass(): any;

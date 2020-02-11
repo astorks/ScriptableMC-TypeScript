@@ -6,13 +6,13 @@ import EntityType from '../../../../org/bukkit/entity/EntityType.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import MerchantRecipe from '../../../../org/bukkit/inventory/MerchantRecipe.js';
 export default interface VillagerReplenishTradeEvent extends EntityEvent, Cancellable {
-    getHandlers(): HandlerList;
-    getEntity(): AbstractVillager;
     getEntity(): Entity;
+    getEntity(): AbstractVillager;
     getRecipe(): MerchantRecipe;
     setRecipe(recipe: MerchantRecipe): void;
-    isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
     getBonus(): number;
     setBonus(bonus: number): void;
     getEntityType(): EntityType;

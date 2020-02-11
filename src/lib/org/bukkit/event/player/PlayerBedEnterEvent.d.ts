@@ -6,20 +6,20 @@ import Player from '../../../../org/bukkit/entity/Player.js';
 import PlayerBedEnterEvent$BedEnterResult from '../../../../org/bukkit/event/player/PlayerBedEnterEvent$BedEnterResult.js';
 import PlayerEvent from '../../../../org/bukkit/event/player/PlayerEvent.js';
 export default interface PlayerBedEnterEvent extends PlayerEvent, Cancellable {
-    getHandlers(): HandlerList;
-    isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    setUseBed(useBed: Event$Result): void;
-    getBed(): Block;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
     useBed(): Event$Result;
     getBedEnterResult(): PlayerBedEnterEvent$BedEnterResult;
+    setUseBed(useBed: Event$Result): void;
+    getBed(): Block;
     getPlayer(): Player;
     getEventName(): string;
     isAsynchronous(): boolean;
 }
 export default class PlayerBedEnterEvent {
     static get $javaClass(): any;
-    constructor(who: Player, bed: Block, bedEnterResult: PlayerBedEnterEvent$BedEnterResult);
     constructor(who: Player, bed: Block);
+    constructor(who: Player, bed: Block, bedEnterResult: PlayerBedEnterEvent$BedEnterResult);
     static getHandlerList(): HandlerList;
 }

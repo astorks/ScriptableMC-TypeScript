@@ -1,6 +1,6 @@
 export default interface Nameable {
-    getCustomName(): string;
     setCustomName(arg0: string): void;
+    getCustomName(): string;
 }
 export default class Nameable {
     static get $javaClass(): any;

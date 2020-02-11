@@ -3,9 +3,9 @@ import BlockEvent from '../../../../org/bukkit/event/block/BlockEvent.js';
 import Cancellable from '../../../../org/bukkit/event/Cancellable.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 export default interface LeavesDecayEvent extends BlockEvent, Cancellable {
-    getHandlers(): HandlerList;
-    isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
     getBlock(): Block;
     getEventName(): string;
     isAsynchronous(): boolean;

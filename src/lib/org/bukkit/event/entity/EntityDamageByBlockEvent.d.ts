@@ -7,17 +7,17 @@ import EntityType from '../../../../org/bukkit/entity/EntityType.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 export default interface EntityDamageByBlockEvent extends EntityDamageEvent {
     getDamager(): Block;
-    getHandlers(): HandlerList;
-    setDamage(damage: number): void;
-    setDamage(type: EntityDamageEvent$DamageModifier, damage: number): void;
+    getCause(): EntityDamageEvent$DamageCause;
     getDamage(): number;
     getDamage(type: EntityDamageEvent$DamageModifier): number;
+    setDamage(type: EntityDamageEvent$DamageModifier, damage: number): void;
+    setDamage(damage: number): void;
     isApplicable(type: EntityDamageEvent$DamageModifier): boolean;
-    isCancelled(): boolean;
-    setCancelled(cancel: boolean): void;
-    getOriginalDamage(type: EntityDamageEvent$DamageModifier): number;
     getFinalDamage(): number;
-    getCause(): EntityDamageEvent$DamageCause;
+    getOriginalDamage(type: EntityDamageEvent$DamageModifier): number;
+    setCancelled(cancel: boolean): void;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
     getEntity(): Entity;
     getEntityType(): EntityType;
     getEventName(): string;
@@ -25,7 +25,7 @@ export default interface EntityDamageByBlockEvent extends EntityDamageEvent {
 }
 export default class EntityDamageByBlockEvent {
     static get $javaClass(): any;
-    constructor(damager: Block, damagee: Entity, cause: EntityDamageEvent$DamageCause, modifiers: any, modifierFunctions: any);
     constructor(damager: Block, damagee: Entity, cause: EntityDamageEvent$DamageCause, damage: number);
+    constructor(damager: Block, damagee: Entity, cause: EntityDamageEvent$DamageCause, modifiers: any, modifierFunctions: any);
     static getHandlerList(): HandlerList;
 }

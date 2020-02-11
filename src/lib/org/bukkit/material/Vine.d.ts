@@ -3,23 +3,23 @@ import ItemStack from '../../../org/bukkit/inventory/ItemStack.js';
 import Material from '../../../org/bukkit/Material.js';
 import MaterialData from '../../../org/bukkit/material/MaterialData.js';
 export default interface Vine extends MaterialData {
-    isOnFace(face: BlockFace): boolean;
-    putOnFace(face: BlockFace): void;
-    removeFromFace(face: BlockFace): void;
-    clone(): Vine;
     clone(): any;
+    clone(): Vine;
     clone(): MaterialData;
-    getData(): number;
+    isOnFace(face: BlockFace): boolean;
+    removeFromFace(face: BlockFace): void;
+    putOnFace(face: BlockFace): void;
     setData(data: number): void;
-    getItemType(): Material;
-    toItemStack(): ItemStack;
+    getData(): number;
     toItemStack(amount: number): ItemStack;
+    toItemStack(): ItemStack;
+    getItemType(): Material;
 }
 export default class Vine {
     static get $javaClass(): any;
+    constructor(faces: Array<BlockFace>);
+    constructor(data: number);
     constructor(type: Material, data: number);
     constructor();
-    constructor(data: number);
     constructor(faces: any);
-    constructor(faces: Array<BlockFace>);
 }

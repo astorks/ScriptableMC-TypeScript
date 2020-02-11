@@ -3,8 +3,8 @@ import DyeColor from '../../../../org/bukkit/DyeColor.js';
 import PatternType from '../../../../org/bukkit/block/banner/PatternType.js';
 export default interface Pattern extends ConfigurationSerializable {
     getPattern(): PatternType;
-    getColor(): DyeColor;
     serialize(): any;
+    getColor(): DyeColor;
 }
 export default class Pattern {
     static get $javaClass(): any;

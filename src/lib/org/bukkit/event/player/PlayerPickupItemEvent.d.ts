@@ -4,11 +4,11 @@ import Item from '../../../../org/bukkit/entity/Item.js';
 import Player from '../../../../org/bukkit/entity/Player.js';
 import PlayerEvent from '../../../../org/bukkit/event/player/PlayerEvent.js';
 export default interface PlayerPickupItemEvent extends PlayerEvent, Cancellable {
-    getHandlers(): HandlerList;
     getRemaining(): number;
     getItem(): Item;
-    isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
     getPlayer(): Player;
     getEventName(): string;
     isAsynchronous(): boolean;

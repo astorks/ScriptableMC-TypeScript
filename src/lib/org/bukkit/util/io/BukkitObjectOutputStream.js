@@ -86,10 +86,16 @@ export default class BukkitObjectOutputStream {
     static get SUBCLASS_IMPLEMENTATION_PERMISSION() {
         return BukkitObjectOutputStream.$javaClass.SUBCLASS_IMPLEMENTATION_PERMISSION;
     }
+    static get SERIAL_FILTER_PERMISSION() {
+        return BukkitObjectOutputStream.$javaClass.SERIAL_FILTER_PERMISSION;
+    }
     static get PROTOCOL_VERSION_1() {
         return BukkitObjectOutputStream.$javaClass.PROTOCOL_VERSION_1;
     }
     static get PROTOCOL_VERSION_2() {
         return BukkitObjectOutputStream.$javaClass.PROTOCOL_VERSION_2;
+    }
+    static nullOutputStream(...args) {
+        return BukkitObjectOutputStream.$javaClass.nullOutputStream(...args);
     }
 }

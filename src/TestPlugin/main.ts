@@ -1,4 +1,4 @@
-import JsPlugin from '../JsPlugin.js';
+import JsPlugin from '../lib/JsPlugin.js';
 import ChatColor from '../lib/org/bukkit/ChatColor.js';
 import CommandSender from '../lib/org/bukkit/command/CommandSender.js';
 import Command from '../lib/org/bukkit/command/Command.js';
@@ -19,10 +19,12 @@ import EntityType from '../lib/org/bukkit/entity/EntityType.js';
 import Firework from '../lib/org/bukkit/entity/Firework.js';
 import FireworkEffect from '../lib/org/bukkit/FireworkEffect.js';
 import Color from '../lib/org/bukkit/Color.js';
-import MysqlWrapper from '../lib/com/pixlfox/scriptablemc/utils/MysqlWrapper.js';
+import MysqlWrapper from '../lib/com/smc/utils/MysqlWrapper.js';
 import CONFIG from './config.js'
+import Sound from '../lib/org/bukkit/Sound.js';
+import MinecraftVersions from '../lib/com/smc/version/MinecraftVersions.js';
 
-export class TestPlugin extends JsPlugin {
+export default class TestPlugin extends JsPlugin {
 
     
     private mysqlConnection: MysqlWrapper;
@@ -30,6 +32,7 @@ export class TestPlugin extends JsPlugin {
     onLoad() {
         if(CONFIG.debug) {
             console.log("[" + this.pluginName + "] onLoad()");
+            console.log("[" + this.pluginName + "] Minecraft Version:", MinecraftVersions.RUNTIME_VERSION);
         }
 
         // MySQL example
@@ -129,17 +132,13 @@ export class TestPlugin extends JsPlugin {
                     if(contents) {
                         contents.fillBorders(
                             SmartInventory.clickableItem(
-                                SmartInventory.itemBuilder(new ItemStack(Material.LIGHT_GRAY_STAINED_GLASS_PANE))
+                                SmartInventory.itemBuilder(new ItemStack(Material.BEDROCK))
                                     .setDisplayName(" ")
                                     .setLore([" "])
                                     .build()
                             )
-                        )
+                        );
 
-                        let reloadItemStack = new ItemStack(Material.BARRIER)
-                        let reloadItemMeta = reloadItemStack.getItemMeta()
-                        reloadItemMeta.setDisplayName(ChatColor.DARK_AQUA + "Hello World")
-                        reloadItemStack.setItemMeta(reloadItemMeta)
                         contents.set(1, 1, SmartInventory.clickableItem(
                             SmartInventory.itemBuilder(new ItemStack(Material.GOLD_NUGGET))
                                     .setDisplayName(ChatColor.DARK_AQUA + "Hello World")
@@ -181,7 +180,7 @@ export class TestPlugin extends JsPlugin {
                         ));
 
                         contents.set(1, 4, SmartInventory.clickableItem(
-                            SmartInventory.itemBuilder(new ItemStack(Material.FIREWORK_ROCKET))
+                            SmartInventory.itemBuilder(new ItemStack(Material.GOLD_INGOT))
                                     .setDisplayName("Launch Firework")
                                     .build(),
                             () => {
@@ -195,6 +194,21 @@ export class TestPlugin extends JsPlugin {
                                 }
                             }
                         ));
+
+                        // Sound.ENTITY_LIGHTNING_BOLT_THUNDER only exists in minecraft 1.13+?
+                        // Check if runtime version is 1.13+
+                        if(MinecraftVersions.RUNTIME_VERSION.isAfterOrEq(MinecraftVersions.v1_13)) {
+                            contents.set(1, 5, SmartInventory.clickableItem(
+                                SmartInventory.itemBuilder(new ItemStack(Material.TNT))
+                                    .setDisplayName("THUNDER")
+                                    .build(),
+                                () => {
+                                    plugin.server.getOnlinePlayers().forEach((_player: Player) => {
+                                        _player.getWorld().playSound(_player.getLocation(), Sound.ENTITY_LIGHTNING_BOLT_THUNDER, 1, 1)
+                                    });
+                                }
+                            ));
+                        }
                     }
                 }
             }))

@@ -5,10 +5,10 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import ItemStack from '../../../../org/bukkit/inventory/ItemStack.js';
 import LivingEntity from '../../../../org/bukkit/entity/LivingEntity.js';
 export default interface EntityDeathEvent extends EntityEvent {
-    getHandlers(): HandlerList;
-    getEntity(): LivingEntity;
     getEntity(): Entity;
+    getEntity(): LivingEntity;
     getDrops(): Array<ItemStack>;
+    getHandlers(): HandlerList;
     getDroppedExp(): number;
     setDroppedExp(exp: number): void;
     getEntityType(): EntityType;
@@ -17,7 +17,7 @@ export default interface EntityDeathEvent extends EntityEvent {
 }
 export default class EntityDeathEvent {
     static get $javaClass(): any;
-    constructor(entity: LivingEntity, drops: Array<any>);
     constructor(what: LivingEntity, drops: Array<any>, droppedExp: number);
+    constructor(entity: LivingEntity, drops: Array<any>);
     static getHandlerList(): HandlerList;
 }

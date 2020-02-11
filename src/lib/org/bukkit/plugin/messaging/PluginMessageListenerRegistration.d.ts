@@ -2,10 +2,10 @@ import Messenger from '../../../../org/bukkit/plugin/messaging/Messenger.js';
 import Plugin from '../../../../org/bukkit/plugin/Plugin.js';
 import PluginMessageListener from '../../../../org/bukkit/plugin/messaging/PluginMessageListener.js';
 export default interface PluginMessageListenerRegistration {
-    isValid(): boolean;
-    getPlugin(): Plugin;
-    getListener(): PluginMessageListener;
     getChannel(): string;
+    getPlugin(): Plugin;
+    isValid(): boolean;
+    getListener(): PluginMessageListener;
 }
 export default class PluginMessageListenerRegistration {
     static get $javaClass(): any;

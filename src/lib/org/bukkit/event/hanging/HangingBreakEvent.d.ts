@@ -4,10 +4,10 @@ import Hanging from '../../../../org/bukkit/entity/Hanging.js';
 import HangingBreakEvent$RemoveCause from '../../../../org/bukkit/event/hanging/HangingBreakEvent$RemoveCause.js';
 import HangingEvent from '../../../../org/bukkit/event/hanging/HangingEvent.js';
 export default interface HangingBreakEvent extends HangingEvent, Cancellable {
-    getHandlers(): HandlerList;
-    isCancelled(): boolean;
-    setCancelled(cancel: boolean): void;
     getCause(): HangingBreakEvent$RemoveCause;
+    setCancelled(cancel: boolean): void;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
     getEntity(): Hanging;
     getEventName(): string;
     isAsynchronous(): boolean;

@@ -5,10 +5,10 @@ export default class ScriptablePluginEngine {
     constructor(...args) {
         return new ScriptablePluginEngine.$javaClass(...args);
     }
-    static access$getInst$cp(...args) {
-        return ScriptablePluginEngine.$javaClass.access$getInst$cp(...args);
-    }
     static access$setInst$cp(...args) {
         return ScriptablePluginEngine.$javaClass.access$setInst$cp(...args);
+    }
+    static access$getInst$cp(...args) {
+        return ScriptablePluginEngine.$javaClass.access$getInst$cp(...args);
     }
 }

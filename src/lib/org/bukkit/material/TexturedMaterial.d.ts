@@ -2,17 +2,17 @@ import ItemStack from '../../../org/bukkit/inventory/ItemStack.js';
 import Material from '../../../org/bukkit/Material.js';
 import MaterialData from '../../../org/bukkit/material/MaterialData.js';
 export default interface TexturedMaterial extends MaterialData {
-    getMaterial(): Material;
-    setMaterial(material: Material): void;
-    getTextures(): Array<Material>;
-    clone(): MaterialData;
     clone(): any;
     clone(): TexturedMaterial;
-    getData(): number;
+    clone(): MaterialData;
+    getMaterial(): Material;
+    getTextures(): Array<Material>;
+    setMaterial(material: Material): void;
     setData(data: number): void;
-    getItemType(): Material;
-    toItemStack(): ItemStack;
+    getData(): number;
     toItemStack(amount: number): ItemStack;
+    toItemStack(): ItemStack;
+    getItemType(): Material;
 }
 export default class TexturedMaterial {
     static get $javaClass(): any;

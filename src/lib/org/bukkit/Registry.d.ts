@@ -4,7 +4,7 @@ export default interface Registry {
     get(arg0: NamespacedKey): Keyed;
     iterator(): any;
     spliterator(): any;
-    forEach(arg0: any): void;
+    forEach(action: any): void;
 }
 export default class Registry {
     static get $javaClass(): any;

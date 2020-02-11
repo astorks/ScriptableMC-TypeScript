@@ -3,15 +3,15 @@ import Material from '../../../org/bukkit/Material.js';
 import MaterialData from '../../../org/bukkit/material/MaterialData.js';
 import Redstone from '../../../org/bukkit/material/Redstone.js';
 export default interface RedstoneWire extends MaterialData, Redstone {
-    isPowered(): boolean;
+    clone(): any;
     clone(): RedstoneWire;
     clone(): MaterialData;
-    clone(): any;
-    getData(): number;
+    isPowered(): boolean;
     setData(data: number): void;
-    getItemType(): Material;
-    toItemStack(): ItemStack;
+    getData(): number;
     toItemStack(amount: number): ItemStack;
+    toItemStack(): ItemStack;
+    getItemType(): Material;
 }
 export default class RedstoneWire {
     static get $javaClass(): any;

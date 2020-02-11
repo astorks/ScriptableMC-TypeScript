@@ -6,10 +6,10 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import Item from '../../../../org/bukkit/entity/Item.js';
 import Player from '../../../../org/bukkit/entity/Player.js';
 export default interface BlockDropItemEvent extends BlockEvent, Cancellable {
-    getHandlers(): HandlerList;
     getPlayer(): Player;
-    isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
     getBlockState(): BlockState;
     getItems(): Array<Item>;
     getBlock(): Block;

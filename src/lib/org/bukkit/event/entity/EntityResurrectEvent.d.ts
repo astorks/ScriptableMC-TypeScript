@@ -5,11 +5,11 @@ import EntityType from '../../../../org/bukkit/entity/EntityType.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import LivingEntity from '../../../../org/bukkit/entity/LivingEntity.js';
 export default interface EntityResurrectEvent extends EntityEvent, Cancellable {
-    getHandlers(): HandlerList;
-    getEntity(): LivingEntity;
     getEntity(): Entity;
-    isCancelled(): boolean;
+    getEntity(): LivingEntity;
     setCancelled(cancelled: boolean): void;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
     getEntityType(): EntityType;
     getEventName(): string;
     isAsynchronous(): boolean;

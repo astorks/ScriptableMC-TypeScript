@@ -5,22 +5,22 @@ import Material from '../../../org/bukkit/Material.js';
 import MaterialData from '../../../org/bukkit/material/MaterialData.js';
 import Redstone from '../../../org/bukkit/material/Redstone.js';
 export default interface Observer extends MaterialData, Directional, Redstone {
-    getFacing(): BlockFace;
-    setFacingDirection(face: BlockFace): void;
-    isPowered(): boolean;
+    clone(): MaterialData;
     clone(): Observer;
     clone(): any;
-    clone(): MaterialData;
-    getData(): number;
+    getFacing(): BlockFace;
+    isPowered(): boolean;
+    setFacingDirection(face: BlockFace): void;
     setData(data: number): void;
-    getItemType(): Material;
-    toItemStack(): ItemStack;
+    getData(): number;
     toItemStack(amount: number): ItemStack;
+    toItemStack(): ItemStack;
+    getItemType(): Material;
 }
 export default class Observer {
     static get $javaClass(): any;
-    constructor(direction: BlockFace);
-    constructor();
     constructor(type: Material, data: number);
     constructor(type: Material);
+    constructor(direction: BlockFace);
+    constructor();
 }

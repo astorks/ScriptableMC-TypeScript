@@ -5,14 +5,14 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import Location from '../../../../org/bukkit/Location.js';
 export default interface EntityPortalEvent extends EntityTeleportEvent {
     getHandlers(): HandlerList;
-    getSearchRadius(): number;
     setSearchRadius(searchRadius: number): void;
-    isCancelled(): boolean;
+    getSearchRadius(): number;
     setCancelled(cancel: boolean): void;
-    getFrom(): Location;
+    isCancelled(): boolean;
     getTo(): Location;
-    setFrom(from: Location): void;
     setTo(to: Location): void;
+    setFrom(from: Location): void;
+    getFrom(): Location;
     getEntity(): Entity;
     getEntityType(): EntityType;
     getEventName(): string;

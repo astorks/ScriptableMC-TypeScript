@@ -5,11 +5,11 @@ import LightningStrikeEvent$Cause from '../../../../org/bukkit/event/weather/Lig
 import WeatherEvent from '../../../../org/bukkit/event/weather/WeatherEvent.js';
 import World from '../../../../org/bukkit/World.js';
 export default interface LightningStrikeEvent extends WeatherEvent, Cancellable {
-    getHandlers(): HandlerList;
-    isCancelled(): boolean;
-    setCancelled(cancel: boolean): void;
-    getLightning(): LightningStrike;
     getCause(): LightningStrikeEvent$Cause;
+    setCancelled(cancel: boolean): void;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
+    getLightning(): LightningStrike;
     getWorld(): World;
     getEventName(): string;
     isAsynchronous(): boolean;

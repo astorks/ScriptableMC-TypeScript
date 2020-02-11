@@ -8,13 +8,13 @@ export default interface Hopper extends Directional {
     getFacing(): BlockFace;
     setFacing(arg0: BlockFace): void;
     getFaces(): any;
-    getMaterial(): Material;
-    getAsString(arg0: boolean): string;
-    getAsString(): string;
-    clone(): BlockData;
     clone(): any;
+    clone(): BlockData;
     matches(arg0: BlockData): boolean;
     merge(arg0: BlockData): BlockData;
+    getMaterial(): Material;
+    getAsString(): string;
+    getAsString(arg0: boolean): string;
 }
 export default class Hopper {
     static get $javaClass(): any;

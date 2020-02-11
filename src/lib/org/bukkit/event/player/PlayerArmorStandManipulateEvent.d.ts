@@ -6,14 +6,14 @@ import ItemStack from '../../../../org/bukkit/inventory/ItemStack.js';
 import Player from '../../../../org/bukkit/entity/Player.js';
 import PlayerInteractEntityEvent from '../../../../org/bukkit/event/player/PlayerInteractEntityEvent.js';
 export default interface PlayerArmorStandManipulateEvent extends PlayerInteractEntityEvent {
+    getSlot(): EquipmentSlot;
     getHandlers(): HandlerList;
     getPlayerItem(): ItemStack;
     getArmorStandItem(): ItemStack;
     getRightClicked(): ArmorStand;
     getRightClicked(): Entity;
-    getSlot(): EquipmentSlot;
-    isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
+    isCancelled(): boolean;
     getHand(): EquipmentSlot;
     getPlayer(): Player;
     getEventName(): string;

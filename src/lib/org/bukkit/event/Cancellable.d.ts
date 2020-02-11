@@ -1,6 +1,6 @@
 export default interface Cancellable {
-    isCancelled(): boolean;
     setCancelled(arg0: boolean): void;
+    isCancelled(): boolean;
 }
 export default class Cancellable {
     static get $javaClass(): any;

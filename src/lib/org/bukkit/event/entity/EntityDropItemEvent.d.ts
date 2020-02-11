@@ -5,9 +5,9 @@ import EntityType from '../../../../org/bukkit/entity/EntityType.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import Item from '../../../../org/bukkit/entity/Item.js';
 export default interface EntityDropItemEvent extends EntityEvent, Cancellable {
-    getHandlers(): HandlerList;
-    isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
     getItemDrop(): Item;
     getEntity(): Entity;
     getEntityType(): EntityType;

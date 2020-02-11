@@ -3,9 +3,9 @@ import RegisteredServiceProvider from '../../../../org/bukkit/plugin/RegisteredS
 import ServerEvent from '../../../../org/bukkit/event/server/ServerEvent.js';
 export default interface ServiceEvent extends ServerEvent {
     getProvider(): RegisteredServiceProvider;
-    getHandlers(): HandlerList;
     getEventName(): string;
     isAsynchronous(): boolean;
+    getHandlers(): HandlerList;
 }
 export default class ServiceEvent {
     static get $javaClass(): any;

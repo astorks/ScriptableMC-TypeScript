@@ -1,8 +1,8 @@
 import Plugin from '../../../org/bukkit/plugin/Plugin.js';
 export default interface BukkitTask {
     getOwner(): Plugin;
-    isCancelled(): boolean;
     cancel(): void;
+    isCancelled(): boolean;
     getTaskId(): number;
     isSync(): boolean;
 }

@@ -13,10 +13,10 @@ export default interface UnsafeValues {
     fromLegacy(arg0: Material): Material;
     getDataVersion(): number;
     getMaterial(arg0: string, arg1: number): Material;
-    removeAdvancement(arg0: NamespacedKey): boolean;
+    checkSupported(arg0: PluginDescriptionFile): void;
     processClass(arg0: PluginDescriptionFile, arg1: string, arg2: Array<number>): Array<number>;
     loadAdvancement(arg0: NamespacedKey, arg1: string): Advancement;
-    checkSupported(arg0: PluginDescriptionFile): void;
+    removeAdvancement(arg0: NamespacedKey): boolean;
     modifyItemStack(arg0: ItemStack, arg1: string): ItemStack;
 }
 export default class UnsafeValues {

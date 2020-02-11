@@ -1,7 +1,7 @@
 import Plugin from '../../org/bukkit/plugin/Plugin.js';
 export default interface NamespacedKey {
-    getNamespace(): string;
     getKey(): string;
+    getNamespace(): string;
 }
 export default class NamespacedKey {
     static get $javaClass(): any;

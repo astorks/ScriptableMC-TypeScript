@@ -98,19 +98,19 @@ export default class PotionEffectTypeWrapper {
     static get HERO_OF_THE_VILLAGE() {
         return PotionEffectTypeWrapper.$javaClass.HERO_OF_THE_VILLAGE;
     }
+    static values(...args) {
+        return PotionEffectTypeWrapper.$javaClass.values(...args);
+    }
     static getByName(...args) {
         return PotionEffectTypeWrapper.$javaClass.getByName(...args);
+    }
+    static stopAcceptingRegistrations(...args) {
+        return PotionEffectTypeWrapper.$javaClass.stopAcceptingRegistrations(...args);
     }
     static getById(...args) {
         return PotionEffectTypeWrapper.$javaClass.getById(...args);
     }
     static registerPotionEffectType(...args) {
         return PotionEffectTypeWrapper.$javaClass.registerPotionEffectType(...args);
-    }
-    static stopAcceptingRegistrations(...args) {
-        return PotionEffectTypeWrapper.$javaClass.stopAcceptingRegistrations(...args);
-    }
-    static values(...args) {
-        return PotionEffectTypeWrapper.$javaClass.values(...args);
     }
 }

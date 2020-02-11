@@ -3,12 +3,12 @@ import BlockCookEvent from '../../../../org/bukkit/event/block/BlockCookEvent.js
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import ItemStack from '../../../../org/bukkit/inventory/ItemStack.js';
 export default interface FurnaceSmeltEvent extends BlockCookEvent {
-    getHandlers(): HandlerList;
-    getSource(): ItemStack;
-    isCancelled(): boolean;
-    setCancelled(cancel: boolean): void;
     setResult(result: ItemStack): void;
     getResult(): ItemStack;
+    setCancelled(cancel: boolean): void;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
+    getSource(): ItemStack;
     getBlock(): Block;
     getEventName(): string;
     isAsynchronous(): boolean;

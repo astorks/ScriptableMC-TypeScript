@@ -4,13 +4,13 @@ import ItemStack from '../../../../org/bukkit/inventory/ItemStack.js';
 import Player from '../../../../org/bukkit/entity/Player.js';
 import PlayerEvent from '../../../../org/bukkit/event/player/PlayerEvent.js';
 export default interface PlayerSwapHandItemsEvent extends PlayerEvent, Cancellable {
-    getHandlers(): HandlerList;
-    isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getOffHandItem(): ItemStack;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
     getMainHandItem(): ItemStack;
-    setOffHandItem(offHandItem: ItemStack): void;
     setMainHandItem(mainHandItem: ItemStack): void;
+    getOffHandItem(): ItemStack;
+    setOffHandItem(offHandItem: ItemStack): void;
     getPlayer(): Player;
     getEventName(): string;
     isAsynchronous(): boolean;

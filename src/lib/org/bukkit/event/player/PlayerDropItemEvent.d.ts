@@ -4,9 +4,9 @@ import Item from '../../../../org/bukkit/entity/Item.js';
 import Player from '../../../../org/bukkit/entity/Player.js';
 import PlayerEvent from '../../../../org/bukkit/event/player/PlayerEvent.js';
 export default interface PlayerDropItemEvent extends PlayerEvent, Cancellable {
-    getHandlers(): HandlerList;
-    isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
     getItemDrop(): Item;
     getPlayer(): Player;
     getEventName(): string;

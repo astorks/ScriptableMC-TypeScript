@@ -2,16 +2,16 @@ import ConfigurationSerializable from '../../org/bukkit/configuration/serializat
 import DyeColor from '../../org/bukkit/DyeColor.js';
 export default interface Color extends ConfigurationSerializable {
     serialize(): any;
-    getRed(): number;
-    setRed(red: number): Color;
-    getGreen(): number;
-    getBlue(): number;
-    setGreen(green: number): Color;
     setBlue(blue: number): Color;
+    getGreen(): number;
     asRGB(): number;
     asBGR(): number;
-    mixDyes(colors: Array<DyeColor>): Color;
+    setRed(red: number): Color;
     mixColors(colors: Array<Color>): Color;
+    mixDyes(colors: Array<DyeColor>): Color;
+    getBlue(): number;
+    getRed(): number;
+    setGreen(green: number): Color;
 }
 export default class Color {
     static get $javaClass(): any;
@@ -33,8 +33,8 @@ export default class Color {
     static get PURPLE(): Color;
     static get ORANGE(): Color;
     static deserialize(map: any): Color;
-    static fromBGR(bgr: number): Color;
     static fromBGR(blue: number, green: number, red: number): Color;
+    static fromBGR(bgr: number): Color;
     static fromRGB(red: number, green: number, blue: number): Color;
     static fromRGB(rgb: number): Color;
 }

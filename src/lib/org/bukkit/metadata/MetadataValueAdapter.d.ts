@@ -2,16 +2,16 @@ import MetadataValue from '../../../org/bukkit/metadata/MetadataValue.js';
 import Plugin from '../../../org/bukkit/plugin/Plugin.js';
 export default interface MetadataValueAdapter extends MetadataValue {
     asString(): string;
-    asInt(): number;
-    asBoolean(): boolean;
-    asLong(): number;
     asDouble(): number;
-    asFloat(): number;
     asByte(): number;
+    asBoolean(): boolean;
     asShort(): number;
+    asFloat(): number;
+    asLong(): number;
+    asInt(): number;
     getOwningPlugin(): Plugin;
-    invalidate(): void;
     value(): any;
+    invalidate(): void;
 }
 export default class MetadataValueAdapter {
     static get $javaClass(): any;

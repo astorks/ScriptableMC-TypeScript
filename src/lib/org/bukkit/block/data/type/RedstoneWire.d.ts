@@ -7,16 +7,16 @@ export default interface RedstoneWire extends AnaloguePowerable {
     getFace(arg0: BlockFace): RedstoneWire$Connection;
     setFace(arg0: BlockFace, arg1: RedstoneWire$Connection): void;
     getAllowedFaces(): any;
-    getPower(): number;
     setPower(arg0: number): void;
     getMaximumPower(): number;
-    getMaterial(): Material;
-    getAsString(arg0: boolean): string;
-    getAsString(): string;
-    clone(): BlockData;
+    getPower(): number;
     clone(): any;
+    clone(): BlockData;
     matches(arg0: BlockData): boolean;
     merge(arg0: BlockData): BlockData;
+    getMaterial(): Material;
+    getAsString(): string;
+    getAsString(arg0: boolean): string;
 }
 export default class RedstoneWire {
     static get $javaClass(): any;

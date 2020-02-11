@@ -4,21 +4,21 @@ import ItemStack from '../../../org/bukkit/inventory/ItemStack.js';
 import Material from '../../../org/bukkit/Material.js';
 import MaterialData from '../../../org/bukkit/material/MaterialData.js';
 export default interface Skull extends MaterialData, Directional {
+    clone(): Skull;
+    clone(): MaterialData;
+    clone(): any;
     getFacing(): BlockFace;
     setFacingDirection(face: BlockFace): void;
-    clone(): Skull;
-    clone(): any;
-    clone(): MaterialData;
-    getData(): number;
     setData(data: number): void;
-    getItemType(): Material;
-    toItemStack(): ItemStack;
+    getData(): number;
     toItemStack(amount: number): ItemStack;
+    toItemStack(): ItemStack;
+    getItemType(): Material;
 }
 export default class Skull {
     static get $javaClass(): any;
-    constructor(direction: BlockFace);
-    constructor();
     constructor(type: Material, data: number);
     constructor(type: Material);
+    constructor(direction: BlockFace);
+    constructor();
 }

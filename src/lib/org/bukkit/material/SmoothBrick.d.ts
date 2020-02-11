@@ -3,22 +3,22 @@ import Material from '../../../org/bukkit/Material.js';
 import MaterialData from '../../../org/bukkit/material/MaterialData.js';
 import TexturedMaterial from '../../../org/bukkit/material/TexturedMaterial.js';
 export default interface SmoothBrick extends TexturedMaterial {
-    getTextures(): Array<Material>;
-    clone(): MaterialData;
     clone(): any;
     clone(): TexturedMaterial;
     clone(): SmoothBrick;
+    clone(): MaterialData;
+    getTextures(): Array<Material>;
     getMaterial(): Material;
     setMaterial(material: Material): void;
-    getData(): number;
     setData(data: number): void;
-    getItemType(): Material;
-    toItemStack(): ItemStack;
+    getData(): number;
     toItemStack(amount: number): ItemStack;
+    toItemStack(): ItemStack;
+    getItemType(): Material;
 }
 export default class SmoothBrick {
     static get $javaClass(): any;
-    constructor(type: Material, data: number);
     constructor(type: Material);
     constructor();
+    constructor(type: Material, data: number);
 }

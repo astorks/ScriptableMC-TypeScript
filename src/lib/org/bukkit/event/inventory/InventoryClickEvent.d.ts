@@ -9,26 +9,26 @@ import InventoryType$SlotType from '../../../../org/bukkit/event/inventory/Inven
 import InventoryView from '../../../../org/bukkit/inventory/InventoryView.js';
 import ItemStack from '../../../../org/bukkit/inventory/ItemStack.js';
 export default interface InventoryClickEvent extends InventoryInteractEvent {
+    getSlot(): number;
+    getClickedInventory(): Inventory;
     getHandlers(): HandlerList;
     setCursor(stack: ItemStack): void;
-    getCursor(): ItemStack;
     getSlotType(): InventoryType$SlotType;
-    getClickedInventory(): Inventory;
+    getCursor(): ItemStack;
+    getClick(): ClickType;
+    getHotbarButton(): number;
+    getAction(): InventoryAction;
+    getRawSlot(): number;
     getCurrentItem(): ItemStack;
     isRightClick(): boolean;
     isLeftClick(): boolean;
     isShiftClick(): boolean;
     setCurrentItem(stack: ItemStack): void;
-    getRawSlot(): number;
-    getHotbarButton(): number;
-    getAction(): InventoryAction;
-    getClick(): ClickType;
-    getSlot(): number;
-    isCancelled(): boolean;
-    setCancelled(toCancel: boolean): void;
     setResult(newResult: Event$Result): void;
-    getWhoClicked(): HumanEntity;
     getResult(): Event$Result;
+    setCancelled(toCancel: boolean): void;
+    isCancelled(): boolean;
+    getWhoClicked(): HumanEntity;
     getInventory(): Inventory;
     getViewers(): Array<HumanEntity>;
     getView(): InventoryView;
@@ -37,7 +37,7 @@ export default interface InventoryClickEvent extends InventoryInteractEvent {
 }
 export default class InventoryClickEvent {
     static get $javaClass(): any;
-    constructor(view: InventoryView, type: InventoryType$SlotType, slot: number, click: ClickType, action: InventoryAction);
     constructor(view: InventoryView, type: InventoryType$SlotType, slot: number, click: ClickType, action: InventoryAction, key: number);
+    constructor(view: InventoryView, type: InventoryType$SlotType, slot: number, click: ClickType, action: InventoryAction);
     static getHandlerList(): HandlerList;
 }

@@ -5,22 +5,22 @@ import Material from '../../../../../org/bukkit/Material.js';
 import Openable from '../../../../../org/bukkit/block/data/Openable.js';
 import Powerable from '../../../../../org/bukkit/block/data/Powerable.js';
 export default interface Gate extends Directional, Openable, Powerable {
-    isInWall(): boolean;
     setInWall(arg0: boolean): void;
+    isInWall(): boolean;
     getFacing(): BlockFace;
     setFacing(arg0: BlockFace): void;
     getFaces(): any;
-    getMaterial(): Material;
-    getAsString(arg0: boolean): string;
-    getAsString(): string;
-    clone(): BlockData;
     clone(): any;
+    clone(): BlockData;
     matches(arg0: BlockData): boolean;
     merge(arg0: BlockData): BlockData;
-    setOpen(arg0: boolean): void;
+    getMaterial(): Material;
+    getAsString(): string;
+    getAsString(arg0: boolean): string;
     isOpen(): boolean;
-    isPowered(): boolean;
+    setOpen(arg0: boolean): void;
     setPowered(arg0: boolean): void;
+    isPowered(): boolean;
 }
 export default class Gate {
     static get $javaClass(): any;

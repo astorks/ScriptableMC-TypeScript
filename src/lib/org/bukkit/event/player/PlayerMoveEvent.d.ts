@@ -4,13 +4,13 @@ import Location from '../../../../org/bukkit/Location.js';
 import Player from '../../../../org/bukkit/entity/Player.js';
 import PlayerEvent from '../../../../org/bukkit/event/player/PlayerEvent.js';
 export default interface PlayerMoveEvent extends PlayerEvent, Cancellable {
-    getHandlers(): HandlerList;
-    isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getFrom(): Location;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
     getTo(): Location;
-    setFrom(from: Location): void;
     setTo(to: Location): void;
+    setFrom(from: Location): void;
+    getFrom(): Location;
     getPlayer(): Player;
     getEventName(): string;
     isAsynchronous(): boolean;

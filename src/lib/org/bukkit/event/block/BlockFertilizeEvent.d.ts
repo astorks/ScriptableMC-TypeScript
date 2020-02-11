@@ -5,10 +5,10 @@ import Cancellable from '../../../../org/bukkit/event/Cancellable.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import Player from '../../../../org/bukkit/entity/Player.js';
 export default interface BlockFertilizeEvent extends BlockEvent, Cancellable {
-    getHandlers(): HandlerList;
     getPlayer(): Player;
-    isCancelled(): boolean;
     setCancelled(cancelled: boolean): void;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
     getBlocks(): Array<BlockState>;
     getBlock(): Block;
     getEventName(): string;

@@ -6,14 +6,14 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import HumanEntity from '../../../../org/bukkit/entity/HumanEntity.js';
 import ItemStack from '../../../../org/bukkit/inventory/ItemStack.js';
 export default interface FoodLevelChangeEvent extends EntityEvent, Cancellable {
-    getHandlers(): HandlerList;
-    getEntity(): Entity;
-    getEntity(): HumanEntity;
     getFoodLevel(): number;
     setFoodLevel(level: number): void;
+    getEntity(): Entity;
+    getEntity(): HumanEntity;
     getItem(): ItemStack;
-    isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
     getEntityType(): EntityType;
     getEventName(): string;
     isAsynchronous(): boolean;

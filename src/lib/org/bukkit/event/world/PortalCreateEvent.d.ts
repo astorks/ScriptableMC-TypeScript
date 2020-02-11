@@ -6,10 +6,10 @@ import PortalCreateEvent$CreateReason from '../../../../org/bukkit/event/world/P
 import World from '../../../../org/bukkit/World.js';
 import WorldEvent from '../../../../org/bukkit/event/world/WorldEvent.js';
 export default interface PortalCreateEvent extends WorldEvent, Cancellable {
-    getHandlers(): HandlerList;
     getEntity(): Entity;
-    isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
     getReason(): PortalCreateEvent$CreateReason;
     getBlocks(): Array<BlockState>;
     getWorld(): World;

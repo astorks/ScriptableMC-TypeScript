@@ -4,8 +4,8 @@ import Player from '../../../../org/bukkit/entity/Player.js';
 import PlayerEvent from '../../../../org/bukkit/event/player/PlayerEvent.js';
 export default interface PlayerRespawnEvent extends PlayerEvent {
     getHandlers(): HandlerList;
-    isBedSpawn(): boolean;
     getRespawnLocation(): Location;
+    isBedSpawn(): boolean;
     setRespawnLocation(respawnLocation: Location): void;
     getPlayer(): Player;
     getEventName(): string;

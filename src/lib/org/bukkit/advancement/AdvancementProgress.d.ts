@@ -1,11 +1,11 @@
 import Advancement from '../../../org/bukkit/advancement/Advancement.js';
 export default interface AdvancementProgress {
-    getAdvancement(): Advancement;
-    awardCriteria(arg0: string): boolean;
-    revokeCriteria(arg0: string): boolean;
-    getDateAwarded(arg0: string): any;
-    getRemainingCriteria(): any;
     isDone(): boolean;
+    getAdvancement(): Advancement;
+    getRemainingCriteria(): any;
+    getDateAwarded(arg0: string): any;
+    revokeCriteria(arg0: string): boolean;
+    awardCriteria(arg0: string): boolean;
     getAwardedCriteria(): any;
 }
 export default class AdvancementProgress {

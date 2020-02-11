@@ -3,9 +3,9 @@ import BlockEvent from '../../../../org/bukkit/event/block/BlockEvent.js';
 import Cancellable from '../../../../org/bukkit/event/Cancellable.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 export default interface BlockBurnEvent extends BlockEvent, Cancellable {
-    getHandlers(): HandlerList;
-    isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
     getIgnitingBlock(): Block;
     getBlock(): Block;
     getEventName(): string;
@@ -13,7 +13,7 @@ export default interface BlockBurnEvent extends BlockEvent, Cancellable {
 }
 export default class BlockBurnEvent {
     static get $javaClass(): any;
-    constructor(block: Block);
     constructor(block: Block, ignitingBlock: Block);
+    constructor(block: Block);
     static getHandlerList(): HandlerList;
 }

@@ -5,8 +5,8 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 export default interface BlockSpreadEvent extends BlockFormEvent {
     getHandlers(): HandlerList;
     getSource(): Block;
-    isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
+    isCancelled(): boolean;
     getNewState(): BlockState;
     getBlock(): Block;
     getEventName(): string;

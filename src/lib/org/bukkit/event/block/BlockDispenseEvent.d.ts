@@ -5,13 +5,13 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import ItemStack from '../../../../org/bukkit/inventory/ItemStack.js';
 import Vector from '../../../../org/bukkit/util/Vector.js';
 export default interface BlockDispenseEvent extends BlockEvent, Cancellable {
-    getHandlers(): HandlerList;
-    setVelocity(vel: Vector): void;
     getVelocity(): Vector;
-    setItem(item: ItemStack): void;
+    setVelocity(vel: Vector): void;
     getItem(): ItemStack;
-    isCancelled(): boolean;
+    setItem(item: ItemStack): void;
     setCancelled(cancel: boolean): void;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
     getBlock(): Block;
     getEventName(): string;
     isAsynchronous(): boolean;

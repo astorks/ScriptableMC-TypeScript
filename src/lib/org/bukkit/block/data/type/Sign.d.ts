@@ -6,13 +6,13 @@ import Waterlogged from '../../../../../org/bukkit/block/data/Waterlogged.js';
 export default interface Sign extends Rotatable, Waterlogged {
     setRotation(arg0: BlockFace): void;
     getRotation(): BlockFace;
-    getMaterial(): Material;
-    getAsString(arg0: boolean): string;
-    getAsString(): string;
-    clone(): BlockData;
     clone(): any;
+    clone(): BlockData;
     matches(arg0: BlockData): boolean;
     merge(arg0: BlockData): BlockData;
+    getMaterial(): Material;
+    getAsString(): string;
+    getAsString(arg0: boolean): string;
     setWaterlogged(arg0: boolean): void;
     isWaterlogged(): boolean;
 }

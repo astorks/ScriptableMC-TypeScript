@@ -3,9 +3,9 @@ import BlockEvent from '../../../../org/bukkit/event/block/BlockEvent.js';
 import Cancellable from '../../../../org/bukkit/event/Cancellable.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 export default interface BlockExplodeEvent extends BlockEvent, Cancellable {
-    getHandlers(): HandlerList;
-    isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
     getYield(): number;
     blockList(): Array<Block>;
     setYield(_yield: number): void;

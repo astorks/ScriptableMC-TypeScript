@@ -2,30 +2,6 @@ export default class NumberConversions {
     static get $javaClass() {
         return Java.type('org.bukkit.util.NumberConversions');
     }
-    static toInt(...args) {
-        return NumberConversions.$javaClass.toInt(...args);
-    }
-    static toDouble(...args) {
-        return NumberConversions.$javaClass.toDouble(...args);
-    }
-    static toLong(...args) {
-        return NumberConversions.$javaClass.toLong(...args);
-    }
-    static square(...args) {
-        return NumberConversions.$javaClass.square(...args);
-    }
-    static checkFinite(...args) {
-        return NumberConversions.$javaClass.checkFinite(...args);
-    }
-    static toFloat(...args) {
-        return NumberConversions.$javaClass.toFloat(...args);
-    }
-    static toByte(...args) {
-        return NumberConversions.$javaClass.toByte(...args);
-    }
-    static toShort(...args) {
-        return NumberConversions.$javaClass.toShort(...args);
-    }
     static isFinite(...args) {
         return NumberConversions.$javaClass.isFinite(...args);
     }
@@ -37,5 +13,29 @@ export default class NumberConversions {
     }
     static round(...args) {
         return NumberConversions.$javaClass.round(...args);
+    }
+    static toByte(...args) {
+        return NumberConversions.$javaClass.toByte(...args);
+    }
+    static toDouble(...args) {
+        return NumberConversions.$javaClass.toDouble(...args);
+    }
+    static toFloat(...args) {
+        return NumberConversions.$javaClass.toFloat(...args);
+    }
+    static toLong(...args) {
+        return NumberConversions.$javaClass.toLong(...args);
+    }
+    static toInt(...args) {
+        return NumberConversions.$javaClass.toInt(...args);
+    }
+    static toShort(...args) {
+        return NumberConversions.$javaClass.toShort(...args);
+    }
+    static square(...args) {
+        return NumberConversions.$javaClass.square(...args);
+    }
+    static checkFinite(...args) {
+        return NumberConversions.$javaClass.checkFinite(...args);
     }
 }

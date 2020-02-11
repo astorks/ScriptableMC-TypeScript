@@ -5,22 +5,22 @@ import Material from '../../../org/bukkit/Material.js';
 import MaterialData from '../../../org/bukkit/material/MaterialData.js';
 import Openable from '../../../org/bukkit/material/Openable.js';
 export default interface Gate extends MaterialData, Directional, Openable {
-    getFacing(): BlockFace;
-    setFacingDirection(face: BlockFace): void;
-    setOpen(isOpen: boolean): void;
-    clone(): Gate;
-    clone(): any;
     clone(): MaterialData;
+    clone(): any;
+    clone(): Gate;
     isOpen(): boolean;
-    getData(): number;
+    getFacing(): BlockFace;
+    setOpen(isOpen: boolean): void;
+    setFacingDirection(face: BlockFace): void;
     setData(data: number): void;
-    getItemType(): Material;
-    toItemStack(): ItemStack;
+    getData(): number;
     toItemStack(amount: number): ItemStack;
+    toItemStack(): ItemStack;
+    getItemType(): Material;
 }
 export default class Gate {
     static get $javaClass(): any;
-    constructor();
-    constructor(type: Material, data: number);
     constructor(data: number);
+    constructor(type: Material, data: number);
+    constructor();
 }

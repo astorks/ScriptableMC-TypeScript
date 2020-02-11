@@ -3,8 +3,8 @@ import BlockEvent from '../../../../org/bukkit/event/block/BlockEvent.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 export default interface BlockRedstoneEvent extends BlockEvent {
     getHandlers(): HandlerList;
-    getNewCurrent(): number;
     getOldCurrent(): number;
+    getNewCurrent(): number;
     setNewCurrent(newCurrent: number): void;
     getBlock(): Block;
     getEventName(): string;

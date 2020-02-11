@@ -11,8 +11,8 @@ export default interface RayTraceResult {
 export default class RayTraceResult {
     static get $javaClass(): any;
     constructor(hitPosition: Vector, hitEntity: Entity, hitBlockFace: BlockFace);
+    constructor(hitPosition: Vector, hitEntity: Entity);
+    constructor(hitPosition: Vector, hitBlock: Block, hitBlockFace: BlockFace);
     constructor(hitPosition: Vector);
     constructor(hitPosition: Vector, hitBlockFace: BlockFace);
-    constructor(hitPosition: Vector, hitBlock: Block, hitBlockFace: BlockFace);
-    constructor(hitPosition: Vector, hitEntity: Entity);
 }

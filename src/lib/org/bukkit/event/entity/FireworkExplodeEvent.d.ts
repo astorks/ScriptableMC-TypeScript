@@ -5,11 +5,11 @@ import EntityType from '../../../../org/bukkit/entity/EntityType.js';
 import Firework from '../../../../org/bukkit/entity/Firework.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 export default interface FireworkExplodeEvent extends EntityEvent, Cancellable {
-    getHandlers(): HandlerList;
-    getEntity(): Entity;
     getEntity(): Firework;
-    isCancelled(): boolean;
+    getEntity(): Entity;
     setCancelled(cancel: boolean): void;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
     getEntityType(): EntityType;
     getEventName(): string;
     isAsynchronous(): boolean;

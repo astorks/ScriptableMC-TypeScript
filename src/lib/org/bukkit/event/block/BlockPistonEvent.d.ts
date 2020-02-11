@@ -5,13 +5,13 @@ import Cancellable from '../../../../org/bukkit/event/Cancellable.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 export default interface BlockPistonEvent extends BlockEvent, Cancellable {
     getDirection(): BlockFace;
-    isCancelled(): boolean;
     setCancelled(cancelled: boolean): void;
+    isCancelled(): boolean;
     isSticky(): boolean;
     getBlock(): Block;
-    getHandlers(): HandlerList;
     getEventName(): string;
     isAsynchronous(): boolean;
+    getHandlers(): HandlerList;
 }
 export default class BlockPistonEvent {
     static get $javaClass(): any;

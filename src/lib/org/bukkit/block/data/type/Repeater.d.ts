@@ -5,23 +5,23 @@ import Material from '../../../../../org/bukkit/Material.js';
 import Powerable from '../../../../../org/bukkit/block/data/Powerable.js';
 export default interface Repeater extends Directional, Powerable {
     isLocked(): boolean;
-    getMinimumDelay(): number;
-    getMaximumDelay(): number;
     setLocked(arg0: boolean): void;
-    getDelay(): number;
     setDelay(arg0: number): void;
+    getDelay(): number;
+    getMaximumDelay(): number;
+    getMinimumDelay(): number;
     getFacing(): BlockFace;
     setFacing(arg0: BlockFace): void;
     getFaces(): any;
-    getMaterial(): Material;
-    getAsString(arg0: boolean): string;
-    getAsString(): string;
-    clone(): BlockData;
     clone(): any;
+    clone(): BlockData;
     matches(arg0: BlockData): boolean;
     merge(arg0: BlockData): BlockData;
-    isPowered(): boolean;
+    getMaterial(): Material;
+    getAsString(): string;
+    getAsString(arg0: boolean): string;
     setPowered(arg0: boolean): void;
+    isPowered(): boolean;
 }
 export default class Repeater {
     static get $javaClass(): any;

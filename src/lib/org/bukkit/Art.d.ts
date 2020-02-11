@@ -1,13 +1,13 @@
 import Keyed from '../../org/bukkit/Keyed.js';
 import NamespacedKey from '../../org/bukkit/NamespacedKey.js';
 export default interface Art extends Keyed {
-    getBlockWidth(): number;
-    getBlockHeight(): number;
     getKey(): NamespacedKey;
     getId(): number;
+    getBlockHeight(): number;
+    getBlockWidth(): number;
     name(): string;
     compareTo(arg0: any): number;
-    compareTo(arg0: any): number;
+    compareTo(o: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }

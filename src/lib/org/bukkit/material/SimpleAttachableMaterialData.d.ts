@@ -4,15 +4,15 @@ import ItemStack from '../../../org/bukkit/inventory/ItemStack.js';
 import Material from '../../../org/bukkit/Material.js';
 import MaterialData from '../../../org/bukkit/material/MaterialData.js';
 export default interface SimpleAttachableMaterialData extends MaterialData, Attachable {
-    getFacing(): BlockFace;
+    clone(): any;
     clone(): SimpleAttachableMaterialData;
     clone(): MaterialData;
-    clone(): any;
-    getData(): number;
+    getFacing(): BlockFace;
     setData(data: number): void;
-    getItemType(): Material;
-    toItemStack(): ItemStack;
+    getData(): number;
     toItemStack(amount: number): ItemStack;
+    toItemStack(): ItemStack;
+    getItemType(): Material;
     getAttachedFace(): BlockFace;
     setFacingDirection(arg0: BlockFace): void;
 }

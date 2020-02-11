@@ -95,10 +95,10 @@ export default class GameRule {
     static get MAX_COMMAND_CHAIN_LENGTH() {
         return GameRule.$javaClass.MAX_COMMAND_CHAIN_LENGTH;
     }
-    static getByName(...args) {
-        return GameRule.$javaClass.getByName(...args);
-    }
     static values(...args) {
         return GameRule.$javaClass.values(...args);
+    }
+    static getByName(...args) {
+        return GameRule.$javaClass.getByName(...args);
     }
 }

@@ -6,12 +6,12 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import Item from '../../../../org/bukkit/entity/Item.js';
 import Location from '../../../../org/bukkit/Location.js';
 export default interface ItemDespawnEvent extends EntityEvent, Cancellable {
-    getHandlers(): HandlerList;
-    getEntity(): Entity;
-    getEntity(): Item;
-    isCancelled(): boolean;
-    setCancelled(cancel: boolean): void;
     getLocation(): Location;
+    getEntity(): Item;
+    getEntity(): Entity;
+    setCancelled(cancel: boolean): void;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
     getEntityType(): EntityType;
     getEventName(): string;
     isAsynchronous(): boolean;

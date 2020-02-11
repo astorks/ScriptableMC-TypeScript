@@ -1,16 +1,16 @@
 export default interface YamlConstructor {
     getData(): any;
-    getPropertyUtils(): any;
-    addTypeDescription(definition: any): any;
-    setPropertyUtils(propertyUtils: any): void;
-    checkData(): boolean;
-    setComposer(composer: any): void;
-    getSingleData(type: any): any;
-    isAllowDuplicateKeys(): boolean;
     setAllowDuplicateKeys(allowDuplicateKeys: boolean): void;
+    isExplicitPropertyUtils(): boolean;
+    isAllowDuplicateKeys(): boolean;
     isWrappedToRootException(): boolean;
     setWrappedToRootException(wrappedToRootException: boolean): void;
-    isExplicitPropertyUtils(): boolean;
+    setPropertyUtils(propertyUtils: any): void;
+    addTypeDescription(definition: any): any;
+    getPropertyUtils(): any;
+    getSingleData(type: any): any;
+    setComposer(composer: any): void;
+    checkData(): boolean;
 }
 export default class YamlConstructor {
     static get $javaClass(): any;

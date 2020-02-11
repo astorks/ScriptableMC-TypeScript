@@ -4,13 +4,13 @@ export default interface Levelled extends BlockData {
     getLevel(): number;
     setLevel(arg0: number): void;
     getMaximumLevel(): number;
-    getMaterial(): Material;
-    getAsString(arg0: boolean): string;
-    getAsString(): string;
-    clone(): BlockData;
     clone(): any;
+    clone(): BlockData;
     matches(arg0: BlockData): boolean;
     merge(arg0: BlockData): BlockData;
+    getMaterial(): Material;
+    getAsString(): string;
+    getAsString(arg0: boolean): string;
 }
 export default class Levelled {
     static get $javaClass(): any;

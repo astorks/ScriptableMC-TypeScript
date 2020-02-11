@@ -4,8 +4,8 @@ import EntityType from '../../../../org/bukkit/entity/EntityType.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import Pose from '../../../../org/bukkit/entity/Pose.js';
 export default interface EntityPoseChangeEvent extends EntityEvent {
-    getHandlers(): HandlerList;
     getPose(): Pose;
+    getHandlers(): HandlerList;
     getEntity(): Entity;
     getEntityType(): EntityType;
     getEventName(): string;

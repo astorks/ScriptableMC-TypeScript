@@ -7,14 +7,14 @@ import Player from '../../../../org/bukkit/entity/Player.js';
 import PlayerBucketEvent from '../../../../org/bukkit/event/player/PlayerBucketEvent.js';
 export default interface PlayerBucketFillEvent extends PlayerBucketEvent {
     getHandlers(): HandlerList;
-    getItemStack(): ItemStack;
     getBlock(): Block;
-    isCancelled(): boolean;
-    setCancelled(cancel: boolean): void;
     setItemStack(itemStack: ItemStack): void;
+    getItemStack(): ItemStack;
+    setCancelled(cancel: boolean): void;
+    isCancelled(): boolean;
     getBlockFace(): BlockFace;
-    getBucket(): Material;
     getBlockClicked(): Block;
+    getBucket(): Material;
     getPlayer(): Player;
     getEventName(): string;
     isAsynchronous(): boolean;

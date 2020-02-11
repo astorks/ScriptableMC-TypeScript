@@ -1,12 +1,12 @@
 import Color from '../../../org/bukkit/Color.js';
 import PotionEffect from '../../../org/bukkit/potion/PotionEffect.js';
 export default interface PotionEffectType {
-    getColor(): Color;
-    isInstant(): boolean;
-    createEffect(duration: number, amplifier: number): PotionEffect;
-    getDurationModifier(): number;
     getName(): string;
     getId(): number;
+    isInstant(): boolean;
+    getColor(): Color;
+    getDurationModifier(): number;
+    createEffect(duration: number, amplifier: number): PotionEffect;
 }
 export default class PotionEffectType {
     static get $javaClass(): any;
@@ -42,9 +42,9 @@ export default class PotionEffectType {
     static get DOLPHINS_GRACE(): PotionEffectType;
     static get BAD_OMEN(): PotionEffectType;
     static get HERO_OF_THE_VILLAGE(): PotionEffectType;
+    static values(): Array<PotionEffectType>;
     static getByName(_name: string): PotionEffectType;
+    static stopAcceptingRegistrations(): void;
     static getById(id: number): PotionEffectType;
     static registerPotionEffectType(type: PotionEffectType): void;
-    static stopAcceptingRegistrations(): void;
-    static values(): Array<PotionEffectType>;
 }

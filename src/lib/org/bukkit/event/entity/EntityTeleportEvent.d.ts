@@ -5,13 +5,13 @@ import EntityType from '../../../../org/bukkit/entity/EntityType.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import Location from '../../../../org/bukkit/Location.js';
 export default interface EntityTeleportEvent extends EntityEvent, Cancellable {
-    getHandlers(): HandlerList;
-    isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getFrom(): Location;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
     getTo(): Location;
-    setFrom(from: Location): void;
     setTo(to: Location): void;
+    setFrom(from: Location): void;
+    getFrom(): Location;
     getEntity(): Entity;
     getEntityType(): EntityType;
     getEventName(): string;

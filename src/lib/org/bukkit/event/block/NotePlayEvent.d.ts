@@ -5,13 +5,13 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import Instrument from '../../../../org/bukkit/Instrument.js';
 import Note from '../../../../org/bukkit/Note.js';
 export default interface NotePlayEvent extends BlockEvent, Cancellable {
-    getHandlers(): HandlerList;
-    isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    setNote(note: Note): void;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
     getInstrument(): Instrument;
-    setInstrument(instrument: Instrument): void;
     getNote(): Note;
+    setNote(note: Note): void;
+    setInstrument(instrument: Instrument): void;
     getBlock(): Block;
     getEventName(): string;
     isAsynchronous(): boolean;

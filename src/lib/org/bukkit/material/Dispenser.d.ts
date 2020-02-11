@@ -5,23 +5,23 @@ import ItemStack from '../../../org/bukkit/inventory/ItemStack.js';
 import Material from '../../../org/bukkit/Material.js';
 import MaterialData from '../../../org/bukkit/material/MaterialData.js';
 export default interface Dispenser extends FurnaceAndDispenser {
-    getFacing(): BlockFace;
-    setFacingDirection(face: BlockFace): void;
+    clone(): any;
+    clone(): FurnaceAndDispenser;
     clone(): MaterialData;
     clone(): DirectionalContainer;
     clone(): Dispenser;
-    clone(): any;
-    clone(): FurnaceAndDispenser;
-    getData(): number;
+    getFacing(): BlockFace;
+    setFacingDirection(face: BlockFace): void;
     setData(data: number): void;
-    getItemType(): Material;
-    toItemStack(): ItemStack;
+    getData(): number;
     toItemStack(amount: number): ItemStack;
+    toItemStack(): ItemStack;
+    getItemType(): Material;
 }
 export default class Dispenser {
     static get $javaClass(): any;
-    constructor();
-    constructor(direction: BlockFace);
-    constructor(type: Material);
     constructor(type: Material, data: number);
+    constructor(type: Material);
+    constructor(direction: BlockFace);
+    constructor();
 }

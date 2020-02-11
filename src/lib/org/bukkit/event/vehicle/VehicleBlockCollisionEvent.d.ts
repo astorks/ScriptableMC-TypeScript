@@ -3,8 +3,8 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import Vehicle from '../../../../org/bukkit/entity/Vehicle.js';
 import VehicleCollisionEvent from '../../../../org/bukkit/event/vehicle/VehicleCollisionEvent.js';
 export default interface VehicleBlockCollisionEvent extends VehicleCollisionEvent {
-    getHandlers(): HandlerList;
     getBlock(): Block;
+    getHandlers(): HandlerList;
     getVehicle(): Vehicle;
     getEventName(): string;
     isAsynchronous(): boolean;

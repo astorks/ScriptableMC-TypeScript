@@ -3,13 +3,13 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import Player from '../../../../org/bukkit/entity/Player.js';
 import PlayerEvent from '../../../../org/bukkit/event/player/PlayerEvent.js';
 export default interface PlayerKickEvent extends PlayerEvent, Cancellable {
-    getHandlers(): HandlerList;
-    isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getReason(): string;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
     setReason(kickReason: string): void;
-    getLeaveMessage(): string;
+    getReason(): string;
     setLeaveMessage(leaveMessage: string): void;
+    getLeaveMessage(): string;
     getPlayer(): Player;
     getEventName(): string;
     isAsynchronous(): boolean;

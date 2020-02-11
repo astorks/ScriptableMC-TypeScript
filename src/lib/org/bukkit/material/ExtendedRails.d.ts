@@ -4,19 +4,19 @@ import Material from '../../../org/bukkit/Material.js';
 import MaterialData from '../../../org/bukkit/material/MaterialData.js';
 import Rails from '../../../org/bukkit/material/Rails.js';
 export default interface ExtendedRails extends Rails {
-    setDirection(face: BlockFace, isOnSlope: boolean): void;
-    isCurve(): boolean;
-    clone(): MaterialData;
-    clone(): any;
     clone(): Rails;
     clone(): ExtendedRails;
+    clone(): any;
+    clone(): MaterialData;
+    setDirection(face: BlockFace, isOnSlope: boolean): void;
+    isCurve(): boolean;
     getDirection(): BlockFace;
     isOnSlope(): boolean;
-    getData(): number;
     setData(data: number): void;
-    getItemType(): Material;
-    toItemStack(): ItemStack;
+    getData(): number;
     toItemStack(amount: number): ItemStack;
+    toItemStack(): ItemStack;
+    getItemType(): Material;
 }
 export default class ExtendedRails {
     static get $javaClass(): any;

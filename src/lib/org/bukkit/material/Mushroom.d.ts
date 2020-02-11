@@ -4,26 +4,26 @@ import Material from '../../../org/bukkit/Material.js';
 import MaterialData from '../../../org/bukkit/material/MaterialData.js';
 import MushroomBlockTexture from '../../../org/bukkit/material/types/MushroomBlockTexture.js';
 export default interface Mushroom extends MaterialData {
+    clone(): Mushroom;
+    clone(): MaterialData;
+    clone(): any;
+    isFacePainted(face: BlockFace): boolean;
+    setFacePainted(face: BlockFace, painted: boolean): void;
     isStem(): boolean;
     setStem(): void;
     getBlockTexture(): MushroomBlockTexture;
     setBlockTexture(texture: MushroomBlockTexture): void;
-    isFacePainted(face: BlockFace): boolean;
-    setFacePainted(face: BlockFace, painted: boolean): void;
     getPaintedFaces(): any;
-    clone(): MaterialData;
-    clone(): any;
-    clone(): Mushroom;
-    getData(): number;
     setData(data: number): void;
-    getItemType(): Material;
-    toItemStack(): ItemStack;
+    getData(): number;
     toItemStack(amount: number): ItemStack;
+    toItemStack(): ItemStack;
+    getItemType(): Material;
 }
 export default class Mushroom {
     static get $javaClass(): any;
-    constructor(shroom: Material);
     constructor(shroom: Material, data: number);
     constructor(shroom: Material, texture: MushroomBlockTexture);
     constructor(shroom: Material, capFace: BlockFace);
+    constructor(shroom: Material);
 }

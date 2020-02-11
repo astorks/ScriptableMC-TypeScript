@@ -1,15 +1,15 @@
 import Keyed from '../../../org/bukkit/Keyed.js';
 import NamespacedKey from '../../../org/bukkit/NamespacedKey.js';
 export default interface EntityType extends Keyed {
-    getEntityClass(): any;
-    getTypeId(): number;
-    isSpawnable(): boolean;
     getName(): string;
     getKey(): NamespacedKey;
     isAlive(): boolean;
+    isSpawnable(): boolean;
+    getTypeId(): number;
+    getEntityClass(): any;
     name(): string;
     compareTo(arg0: any): number;
-    compareTo(arg0: any): number;
+    compareTo(o: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }

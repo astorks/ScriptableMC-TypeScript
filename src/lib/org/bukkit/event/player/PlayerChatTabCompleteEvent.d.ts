@@ -4,8 +4,8 @@ import PlayerEvent from '../../../../org/bukkit/event/player/PlayerEvent.js';
 export default interface PlayerChatTabCompleteEvent extends PlayerEvent {
     getHandlers(): HandlerList;
     getChatMessage(): string;
-    getLastToken(): string;
     getTabCompletions(): any;
+    getLastToken(): string;
     getPlayer(): Player;
     getEventName(): string;
     isAsynchronous(): boolean;

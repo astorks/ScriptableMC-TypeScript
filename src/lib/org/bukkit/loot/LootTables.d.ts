@@ -2,11 +2,11 @@ import Keyed from '../../../org/bukkit/Keyed.js';
 import LootTable from '../../../org/bukkit/loot/LootTable.js';
 import NamespacedKey from '../../../org/bukkit/NamespacedKey.js';
 export default interface LootTables extends Keyed {
-    getLootTable(): LootTable;
     getKey(): NamespacedKey;
+    getLootTable(): LootTable;
     name(): string;
     compareTo(arg0: any): number;
-    compareTo(arg0: any): number;
+    compareTo(o: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }

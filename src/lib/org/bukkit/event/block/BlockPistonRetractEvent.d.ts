@@ -8,8 +8,8 @@ export default interface BlockPistonRetractEvent extends BlockPistonEvent {
     getBlocks(): Array<Block>;
     getRetractLocation(): Location;
     getDirection(): BlockFace;
-    isCancelled(): boolean;
     setCancelled(cancelled: boolean): void;
+    isCancelled(): boolean;
     isSticky(): boolean;
     getBlock(): Block;
     getEventName(): string;

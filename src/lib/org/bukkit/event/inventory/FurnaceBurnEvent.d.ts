@@ -4,14 +4,14 @@ import Cancellable from '../../../../org/bukkit/event/Cancellable.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import ItemStack from '../../../../org/bukkit/inventory/ItemStack.js';
 export default interface FurnaceBurnEvent extends BlockEvent, Cancellable {
-    getHandlers(): HandlerList;
-    isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
+    setBurning(burning: boolean): void;
+    isBurning(): boolean;
     getBurnTime(): number;
     setBurnTime(burnTime: number): void;
     getFuel(): ItemStack;
-    isBurning(): boolean;
-    setBurning(burning: boolean): void;
     getBlock(): Block;
     getEventName(): string;
     isAsynchronous(): boolean;

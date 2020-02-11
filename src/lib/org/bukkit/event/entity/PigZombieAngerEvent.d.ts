@@ -5,14 +5,14 @@ import EntityType from '../../../../org/bukkit/entity/EntityType.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import PigZombie from '../../../../org/bukkit/entity/PigZombie.js';
 export default interface PigZombieAngerEvent extends EntityEvent, Cancellable {
-    getHandlers(): HandlerList;
+    getTarget(): Entity;
     getEntity(): Entity;
     getEntity(): PigZombie;
-    isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
     getNewAnger(): number;
     setNewAnger(newAnger: number): void;
-    getTarget(): Entity;
     getEntityType(): EntityType;
     getEventName(): string;
     isAsynchronous(): boolean;

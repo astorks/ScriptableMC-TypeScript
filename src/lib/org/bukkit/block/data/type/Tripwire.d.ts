@@ -9,19 +9,19 @@ export default interface Tripwire extends Attachable, MultipleFacing, Powerable 
     isDisarmed(): boolean;
     isAttached(): boolean;
     setAttached(arg0: boolean): void;
-    getMaterial(): Material;
-    getAsString(arg0: boolean): string;
-    getAsString(): string;
-    clone(): BlockData;
     clone(): any;
+    clone(): BlockData;
     matches(arg0: BlockData): boolean;
     merge(arg0: BlockData): BlockData;
-    getFaces(): any;
-    hasFace(arg0: BlockFace): boolean;
+    getMaterial(): Material;
+    getAsString(): string;
+    getAsString(arg0: boolean): string;
     setFace(arg0: BlockFace, arg1: boolean): void;
     getAllowedFaces(): any;
-    isPowered(): boolean;
+    hasFace(arg0: BlockFace): boolean;
+    getFaces(): any;
     setPowered(arg0: boolean): void;
+    isPowered(): boolean;
 }
 export default class Tripwire {
     static get $javaClass(): any;

@@ -4,9 +4,9 @@ import InventoryType from '../../../../org/bukkit/event/inventory/InventoryType.
 import Player from '../../../../org/bukkit/entity/Player.js';
 import SmartInventory from '../../../../fr/minuskube/inv/SmartInventory.js';
 export default interface InventoryOpener {
-    supports(arg0: InventoryType): boolean;
     fill(handle: Inventory, contents: InventoryContents): void;
     open(arg0: SmartInventory, arg1: Player): Inventory;
+    supports(arg0: InventoryType): boolean;
 }
 export default class InventoryOpener {
     static get $javaClass(): any;

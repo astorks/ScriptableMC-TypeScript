@@ -4,9 +4,9 @@ import HumanEntity from '../../../../org/bukkit/entity/HumanEntity.js';
 import Inventory from '../../../../org/bukkit/inventory/Inventory.js';
 import InventoryView from '../../../../org/bukkit/inventory/InventoryView.js';
 export default interface InventoryEvent extends Event {
-    getHandlers(): HandlerList;
     getInventory(): Inventory;
     getViewers(): Array<HumanEntity>;
+    getHandlers(): HandlerList;
     getView(): InventoryView;
     getEventName(): string;
     isAsynchronous(): boolean;

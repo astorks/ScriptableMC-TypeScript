@@ -14,10 +14,10 @@ export default class StandardMessenger {
     static validateAndCorrectChannel(...args) {
         return StandardMessenger.$javaClass.validateAndCorrectChannel(...args);
     }
-    static validateChannel(...args) {
-        return StandardMessenger.$javaClass.validateChannel(...args);
-    }
     static validatePluginMessage(...args) {
         return StandardMessenger.$javaClass.validatePluginMessage(...args);
+    }
+    static validateChannel(...args) {
+        return StandardMessenger.$javaClass.validateChannel(...args);
     }
 }

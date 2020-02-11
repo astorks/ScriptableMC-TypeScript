@@ -11,10 +11,10 @@ export default class Time {
     static from(...args) {
         return Time.$javaClass.from(...args);
     }
-    static UTC(...args) {
-        return Time.$javaClass.UTC(...args);
-    }
     static parse(...args) {
         return Time.$javaClass.parse(...args);
+    }
+    static UTC(...args) {
+        return Time.$javaClass.UTC(...args);
     }
 }

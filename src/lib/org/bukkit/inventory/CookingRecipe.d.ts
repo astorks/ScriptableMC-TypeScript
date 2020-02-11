@@ -5,21 +5,21 @@ import NamespacedKey from '../../../org/bukkit/NamespacedKey.js';
 import Recipe from '../../../org/bukkit/inventory/Recipe.js';
 import RecipeChoice from '../../../org/bukkit/inventory/RecipeChoice.js';
 export default interface CookingRecipe extends Recipe, Keyed {
+    getKey(): NamespacedKey;
     setInput(input: Material): CookingRecipe;
+    getResult(): ItemStack;
+    getInput(): ItemStack;
     setInputChoice(input: RecipeChoice): CookingRecipe;
     getInputChoice(): RecipeChoice;
-    getInput(): ItemStack;
     setExperience(experience: number): void;
-    getExperience(): number;
     setCookingTime(cookingTime: number): void;
-    getCookingTime(): number;
     getGroup(): string;
+    getCookingTime(): number;
+    getExperience(): number;
     setGroup(group: string): void;
-    getKey(): NamespacedKey;
-    getResult(): ItemStack;
 }
 export default class CookingRecipe {
     static get $javaClass(): any;
-    constructor(key: NamespacedKey, result: ItemStack, input: RecipeChoice, experience: number, cookingTime: number);
     constructor(key: NamespacedKey, result: ItemStack, source: Material, experience: number, cookingTime: number);
+    constructor(key: NamespacedKey, result: ItemStack, input: RecipeChoice, experience: number, cookingTime: number);
 }

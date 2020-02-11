@@ -7,14 +7,14 @@ import TreeType from '../../../../org/bukkit/TreeType.js';
 import World from '../../../../org/bukkit/World.js';
 import WorldEvent from '../../../../org/bukkit/event/world/WorldEvent.js';
 export default interface StructureGrowEvent extends WorldEvent, Cancellable {
-    getHandlers(): HandlerList;
+    getLocation(): Location;
     getPlayer(): Player;
-    isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
-    getBlocks(): Array<BlockState>;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
     getSpecies(): TreeType;
     isFromBonemeal(): boolean;
-    getLocation(): Location;
+    getBlocks(): Array<BlockState>;
     getWorld(): World;
     getEventName(): string;
     isAsynchronous(): boolean;

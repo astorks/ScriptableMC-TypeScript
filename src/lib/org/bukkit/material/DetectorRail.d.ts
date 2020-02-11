@@ -6,26 +6,26 @@ import MaterialData from '../../../org/bukkit/material/MaterialData.js';
 import PressureSensor from '../../../org/bukkit/material/PressureSensor.js';
 import Rails from '../../../org/bukkit/material/Rails.js';
 export default interface DetectorRail extends ExtendedRails, PressureSensor {
-    setPressed(isPressed: boolean): void;
-    isPressed(): boolean;
-    clone(): MaterialData;
-    clone(): any;
-    clone(): Rails;
     clone(): ExtendedRails;
+    clone(): any;
+    clone(): MaterialData;
+    clone(): Rails;
     clone(): DetectorRail;
+    isPressed(): boolean;
+    setPressed(isPressed: boolean): void;
     setDirection(face: BlockFace, isOnSlope: boolean): void;
     isCurve(): boolean;
     getDirection(): BlockFace;
     isOnSlope(): boolean;
-    getData(): number;
     setData(data: number): void;
-    getItemType(): Material;
-    toItemStack(): ItemStack;
+    getData(): number;
     toItemStack(amount: number): ItemStack;
+    toItemStack(): ItemStack;
+    getItemType(): Material;
 }
 export default class DetectorRail {
     static get $javaClass(): any;
-    constructor();
     constructor(type: Material, data: number);
     constructor(type: Material);
+    constructor();
 }

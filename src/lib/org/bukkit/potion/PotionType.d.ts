@@ -3,11 +3,11 @@ export default interface PotionType {
     getMaxLevel(): number;
     isInstant(): boolean;
     getEffectType(): PotionEffectType;
-    isExtendable(): boolean;
     isUpgradeable(): boolean;
+    isExtendable(): boolean;
     name(): string;
     compareTo(arg0: any): number;
-    compareTo(arg0: any): number;
+    compareTo(o: any): number;
     getDeclaringClass(): any;
     ordinal(): number;
 }

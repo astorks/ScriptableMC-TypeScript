@@ -4,9 +4,9 @@ import LivingEntity from '../../../../org/bukkit/entity/LivingEntity.js';
 import Vehicle from '../../../../org/bukkit/entity/Vehicle.js';
 import VehicleEvent from '../../../../org/bukkit/event/vehicle/VehicleEvent.js';
 export default interface VehicleExitEvent extends VehicleEvent, Cancellable {
-    getHandlers(): HandlerList;
-    isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
     getExited(): LivingEntity;
     getVehicle(): Vehicle;
     getEventName(): string;

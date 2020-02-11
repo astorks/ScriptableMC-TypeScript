@@ -4,22 +4,22 @@ import Material from '../../../org/bukkit/Material.js';
 import MaterialData from '../../../org/bukkit/material/MaterialData.js';
 import SimpleAttachableMaterialData from '../../../org/bukkit/material/SimpleAttachableMaterialData.js';
 export default interface Ladder extends SimpleAttachableMaterialData {
-    getAttachedFace(): BlockFace;
-    setFacingDirection(face: BlockFace): void;
+    clone(): SimpleAttachableMaterialData;
+    clone(): any;
     clone(): MaterialData;
     clone(): Ladder;
-    clone(): any;
-    clone(): SimpleAttachableMaterialData;
+    setFacingDirection(face: BlockFace): void;
+    getAttachedFace(): BlockFace;
     getFacing(): BlockFace;
-    getData(): number;
     setData(data: number): void;
-    getItemType(): Material;
-    toItemStack(): ItemStack;
+    getData(): number;
     toItemStack(amount: number): ItemStack;
+    toItemStack(): ItemStack;
+    getItemType(): Material;
 }
 export default class Ladder {
     static get $javaClass(): any;
-    constructor();
     constructor(type: Material, data: number);
     constructor(type: Material);
+    constructor();
 }

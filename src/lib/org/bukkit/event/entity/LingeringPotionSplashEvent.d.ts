@@ -9,12 +9,12 @@ import Projectile from '../../../../org/bukkit/entity/Projectile.js';
 import ProjectileHitEvent from '../../../../org/bukkit/event/entity/ProjectileHitEvent.js';
 import ThrownPotion from '../../../../org/bukkit/entity/ThrownPotion.js';
 export default interface LingeringPotionSplashEvent extends ProjectileHitEvent, Cancellable {
-    getHandlers(): HandlerList;
     getEntity(): Entity;
-    getEntity(): ThrownPotion;
     getEntity(): Projectile;
-    isCancelled(): boolean;
+    getEntity(): ThrownPotion;
     setCancelled(cancel: boolean): void;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
     getAreaEffectCloud(): AreaEffectCloud;
     getHitBlock(): Block;
     getHitBlockFace(): BlockFace;

@@ -7,20 +7,20 @@ import EntityType from '../../../../org/bukkit/entity/EntityType.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import LightningStrike from '../../../../org/bukkit/entity/LightningStrike.js';
 export default interface CreeperPowerEvent extends EntityEvent, Cancellable {
-    getHandlers(): HandlerList;
-    getEntity(): Entity;
-    getEntity(): Creeper;
-    isCancelled(): boolean;
-    setCancelled(cancel: boolean): void;
-    getLightning(): LightningStrike;
     getCause(): CreeperPowerEvent$PowerCause;
+    getEntity(): Creeper;
+    getEntity(): Entity;
+    setCancelled(cancel: boolean): void;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
+    getLightning(): LightningStrike;
     getEntityType(): EntityType;
     getEventName(): string;
     isAsynchronous(): boolean;
 }
 export default class CreeperPowerEvent {
     static get $javaClass(): any;
-    constructor(creeper: Creeper, bolt: LightningStrike, cause: CreeperPowerEvent$PowerCause);
     constructor(creeper: Creeper, cause: CreeperPowerEvent$PowerCause);
+    constructor(creeper: Creeper, bolt: LightningStrike, cause: CreeperPowerEvent$PowerCause);
     static getHandlerList(): HandlerList;
 }

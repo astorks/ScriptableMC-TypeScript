@@ -7,14 +7,14 @@ import Projectile from '../../../../org/bukkit/entity/Projectile.js';
 import ProjectileHitEvent from '../../../../org/bukkit/event/entity/ProjectileHitEvent.js';
 import ThrownExpBottle from '../../../../org/bukkit/entity/ThrownExpBottle.js';
 export default interface ExpBottleEvent extends ProjectileHitEvent {
-    getHandlers(): HandlerList;
     getEntity(): Entity;
-    getEntity(): ThrownExpBottle;
     getEntity(): Projectile;
+    getEntity(): ThrownExpBottle;
+    getHandlers(): HandlerList;
+    setShowEffect(showEffect: boolean): void;
+    getShowEffect(): boolean;
     setExperience(exp: number): void;
     getExperience(): number;
-    getShowEffect(): boolean;
-    setShowEffect(showEffect: boolean): void;
     getHitBlock(): Block;
     getHitBlockFace(): BlockFace;
     getHitEntity(): Entity;

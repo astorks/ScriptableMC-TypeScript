@@ -1,6 +1,6 @@
 export default interface Openable {
-    setOpen(arg0: boolean): void;
     isOpen(): boolean;
+    setOpen(arg0: boolean): void;
 }
 export default class Openable {
     static get $javaClass(): any;

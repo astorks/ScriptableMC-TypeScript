@@ -9,15 +9,15 @@ import InventoryView from '../../../../org/bukkit/inventory/InventoryView.js';
 import ItemStack from '../../../../org/bukkit/inventory/ItemStack.js';
 import Player from '../../../../org/bukkit/entity/Player.js';
 export default interface PrepareItemEnchantEvent extends InventoryEvent, Cancellable {
-    getHandlers(): HandlerList;
     getItem(): ItemStack;
-    isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
     getEnchanter(): Player;
     getEnchantBlock(): Block;
+    getExpLevelCostsOffered(): Array<number>;
     getEnchantmentBonus(): number;
     getOffers(): Array<EnchantmentOffer>;
-    getExpLevelCostsOffered(): Array<number>;
     getInventory(): Inventory;
     getViewers(): Array<HumanEntity>;
     getView(): InventoryView;

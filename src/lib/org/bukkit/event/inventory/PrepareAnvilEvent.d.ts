@@ -6,11 +6,11 @@ import InventoryEvent from '../../../../org/bukkit/event/inventory/InventoryEven
 import InventoryView from '../../../../org/bukkit/inventory/InventoryView.js';
 import ItemStack from '../../../../org/bukkit/inventory/ItemStack.js';
 export default interface PrepareAnvilEvent extends InventoryEvent {
-    getHandlers(): HandlerList;
-    getInventory(): AnvilInventory;
-    getInventory(): Inventory;
     setResult(result: ItemStack): void;
     getResult(): ItemStack;
+    getInventory(): Inventory;
+    getInventory(): AnvilInventory;
+    getHandlers(): HandlerList;
     getViewers(): Array<HumanEntity>;
     getView(): InventoryView;
     getEventName(): string;

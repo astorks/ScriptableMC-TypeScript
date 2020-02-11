@@ -5,10 +5,10 @@ import Entity from '../../../../org/bukkit/entity/Entity.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 import ItemStack from '../../../../org/bukkit/inventory/ItemStack.js';
 export default interface BlockShearEntityEvent extends BlockEvent, Cancellable {
-    getHandlers(): HandlerList;
     getEntity(): Entity;
-    isCancelled(): boolean;
     setCancelled(cancelled: boolean): void;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
     getTool(): ItemStack;
     getBlock(): Block;
     getEventName(): string;

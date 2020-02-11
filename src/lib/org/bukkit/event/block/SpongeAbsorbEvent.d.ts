@@ -4,9 +4,9 @@ import BlockState from '../../../../org/bukkit/block/BlockState.js';
 import Cancellable from '../../../../org/bukkit/event/Cancellable.js';
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js';
 export default interface SpongeAbsorbEvent extends BlockEvent, Cancellable {
-    getHandlers(): HandlerList;
-    isCancelled(): boolean;
     setCancelled(cancel: boolean): void;
+    isCancelled(): boolean;
+    getHandlers(): HandlerList;
     getBlocks(): Array<BlockState>;
     getBlock(): Block;
     getEventName(): string;

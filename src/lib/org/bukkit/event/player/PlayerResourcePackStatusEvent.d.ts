@@ -3,8 +3,8 @@ import Player from '../../../../org/bukkit/entity/Player.js';
 import PlayerEvent from '../../../../org/bukkit/event/player/PlayerEvent.js';
 import PlayerResourcePackStatusEvent$Status from '../../../../org/bukkit/event/player/PlayerResourcePackStatusEvent$Status.js';
 export default interface PlayerResourcePackStatusEvent extends PlayerEvent {
-    getHandlers(): HandlerList;
     getStatus(): PlayerResourcePackStatusEvent$Status;
+    getHandlers(): HandlerList;
     getPlayer(): Player;
     getEventName(): string;
     isAsynchronous(): boolean;

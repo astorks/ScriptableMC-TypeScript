@@ -1,11 +1,12 @@
+import File from '../../../java/io/File.js';
 import Listener from '../../../org/bukkit/event/Listener.js';
 import Plugin from '../../../org/bukkit/plugin/Plugin.js';
 import PluginDescriptionFile from '../../../org/bukkit/plugin/PluginDescriptionFile.js';
 export default interface PluginLoader {
-    loadPlugin(arg0: any): Plugin;
-    enablePlugin(arg0: Plugin): void;
     disablePlugin(arg0: Plugin): void;
-    getPluginDescription(arg0: any): PluginDescriptionFile;
+    enablePlugin(arg0: Plugin): void;
+    loadPlugin(arg0: File): Plugin;
+    getPluginDescription(arg0: File): PluginDescriptionFile;
     getPluginFileFilters(): Array<any>;
     createRegisteredListeners(arg0: Listener, arg1: Plugin): any;
 }

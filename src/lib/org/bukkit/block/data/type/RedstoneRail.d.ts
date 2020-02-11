@@ -4,18 +4,18 @@ import Powerable from '../../../../../org/bukkit/block/data/Powerable.js';
 import Rail from '../../../../../org/bukkit/block/data/Rail.js';
 import Rail$Shape from '../../../../../org/bukkit/block/data/Rail$Shape.js';
 export default interface RedstoneRail extends Powerable, Rail {
-    isPowered(): boolean;
     setPowered(arg0: boolean): void;
-    getMaterial(): Material;
-    getAsString(arg0: boolean): string;
-    getAsString(): string;
-    clone(): BlockData;
+    isPowered(): boolean;
     clone(): any;
+    clone(): BlockData;
     matches(arg0: BlockData): boolean;
     merge(arg0: BlockData): BlockData;
-    getShape(): Rail$Shape;
-    setShape(arg0: Rail$Shape): void;
+    getMaterial(): Material;
+    getAsString(): string;
+    getAsString(arg0: boolean): string;
     getShapes(): any;
+    setShape(arg0: Rail$Shape): void;
+    getShape(): Rail$Shape;
 }
 export default class RedstoneRail {
     static get $javaClass(): any;
