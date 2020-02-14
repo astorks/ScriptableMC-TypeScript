@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>RegisteredListener | scriptablemc-typescript</title>
+	<title>RegisteredListener | ScriptableMC-TypeScript</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">scriptablemc-typescript</a>
+					<a href="../index.html" class="title">ScriptableMC-TypeScript</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -38,10 +38,6 @@
 							</div>
 							<input type="checkbox" id="tsd-filter-inherited" checked />
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
-							<input type="checkbox" id="tsd-filter-externals" checked />
-							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
-							<input type="checkbox" id="tsd-filter-only-exported" />
-							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -74,6 +70,11 @@
 				<ul class="tsd-hierarchy">
 					<li>
 						<span class="target">RegisteredListener</span>
+						<ul class="tsd-hierarchy">
+							<li>
+								<a href="_lib_org_bukkit_plugin_timedregisteredlistener_.timedregisteredlistener.html" class="tsd-signature-type">TimedRegisteredListener</a>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -93,6 +94,16 @@
 								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-static"><a href="_lib_org_bukkit_plugin_registeredlistener_.registeredlistener.html#_javaclass" class="tsd-kind-icon">$java<wbr>Class</a></li>
 							</ul>
 						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_org_bukkit_plugin_registeredlistener_.registeredlistener.html#callevent" class="tsd-kind-icon">call<wbr>Event</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_org_bukkit_plugin_registeredlistener_.registeredlistener.html#getlistener" class="tsd-kind-icon">get<wbr>Listener</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_org_bukkit_plugin_registeredlistener_.registeredlistener.html#getplugin" class="tsd-kind-icon">get<wbr>Plugin</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_org_bukkit_plugin_registeredlistener_.registeredlistener.html#getpriority" class="tsd-kind-icon">get<wbr>Priority</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_org_bukkit_plugin_registeredlistener_.registeredlistener.html#isignoringcancelled" class="tsd-kind-icon">is<wbr>Ignoring<wbr>Cancelled</a></li>
+							</ul>
+						</section>
 					</div>
 				</section>
 			</section>
@@ -102,19 +113,31 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Registered<wbr>Listener<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_plugin_registeredlistener_.registeredlistener.html" class="tsd-signature-type">RegisteredListener</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Registered<wbr>Listener<span class="tsd-signature-symbol">(</span>listener<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_event_listener_.listener.html" class="tsd-signature-type">Listener</a>, executor<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_plugin_eventexecutor_.eventexecutor.html" class="tsd-signature-type">EventExecutor</a>, priority<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_event_eventpriority_.eventpriority.html" class="tsd-signature-type">EventPriority</a>, plugin<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_plugin_plugin_.plugin.html" class="tsd-signature-type">Plugin</a>, ignoreCancelled<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_plugin_registeredlistener_.registeredlistener.html" class="tsd-signature-type">RegisteredListener</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/579e519/src/lib/org/bukkit/plugin/RegisteredListener.js#L4">lib/org/bukkit/plugin/RegisteredListener.js:4</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/plugin/RegisteredListener.ts#L19">lib/org/bukkit/plugin/RegisteredListener.ts:19</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>listener: <a href="_lib_org_bukkit_event_listener_.listener.html" class="tsd-signature-type">Listener</a></h5>
+								</li>
+								<li>
+									<h5>executor: <a href="_lib_org_bukkit_plugin_eventexecutor_.eventexecutor.html" class="tsd-signature-type">EventExecutor</a></h5>
+								</li>
+								<li>
+									<h5>priority: <a href="_lib_org_bukkit_event_eventpriority_.eventpriority.html" class="tsd-signature-type">EventPriority</a></h5>
+								</li>
+								<li>
+									<h5>plugin: <a href="_lib_org_bukkit_plugin_plugin_.plugin.html" class="tsd-signature-type">Plugin</a></h5>
+								</li>
+								<li>
+									<h5>ignoreCancelled: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_plugin_registeredlistener_.registeredlistener.html" class="tsd-signature-type">RegisteredListener</a></h4>
@@ -134,10 +157,104 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/579e519/src/lib/org/bukkit/plugin/RegisteredListener.js#L2">lib/org/bukkit/plugin/RegisteredListener.js:2</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/plugin/RegisteredListener.ts#L17">lib/org/bukkit/plugin/RegisteredListener.ts:17</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="callevent" class="tsd-anchor"></a>
+					<h3>call<wbr>Event</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">call<wbr>Event<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_event_event_.event.html" class="tsd-signature-type">Event</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/plugin/RegisteredListener.ts#L10">lib/org/bukkit/plugin/RegisteredListener.ts:10</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>event: <a href="_lib_org_bukkit_event_event_.event.html" class="tsd-signature-type">Event</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getlistener" class="tsd-anchor"></a>
+					<h3>get<wbr>Listener</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Listener<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_event_listener_.listener.html" class="tsd-signature-type">Listener</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/plugin/RegisteredListener.ts#L11">lib/org/bukkit/plugin/RegisteredListener.ts:11</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_event_listener_.listener.html" class="tsd-signature-type">Listener</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getplugin" class="tsd-anchor"></a>
+					<h3>get<wbr>Plugin</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Plugin<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_plugin_plugin_.plugin.html" class="tsd-signature-type">Plugin</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/plugin/RegisteredListener.ts#L9">lib/org/bukkit/plugin/RegisteredListener.ts:9</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_plugin_plugin_.plugin.html" class="tsd-signature-type">Plugin</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getpriority" class="tsd-anchor"></a>
+					<h3>get<wbr>Priority</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Priority<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_event_eventpriority_.eventpriority.html" class="tsd-signature-type">EventPriority</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/plugin/RegisteredListener.ts#L13">lib/org/bukkit/plugin/RegisteredListener.ts:13</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_event_eventpriority_.eventpriority.html" class="tsd-signature-type">EventPriority</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="isignoringcancelled" class="tsd-anchor"></a>
+					<h3>is<wbr>Ignoring<wbr>Cancelled</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Ignoring<wbr>Cancelled<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/plugin/RegisteredListener.ts#L12">lib/org/bukkit/plugin/RegisteredListener.ts:12</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -166,6 +283,21 @@
 							</li>
 							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-static">
 								<a href="_lib_org_bukkit_plugin_registeredlistener_.registeredlistener.html#_javaclass" class="tsd-kind-icon">$java<wbr>Class</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_lib_org_bukkit_plugin_registeredlistener_.registeredlistener.html#callevent" class="tsd-kind-icon">call<wbr>Event</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_lib_org_bukkit_plugin_registeredlistener_.registeredlistener.html#getlistener" class="tsd-kind-icon">get<wbr>Listener</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_lib_org_bukkit_plugin_registeredlistener_.registeredlistener.html#getplugin" class="tsd-kind-icon">get<wbr>Plugin</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_lib_org_bukkit_plugin_registeredlistener_.registeredlistener.html#getpriority" class="tsd-kind-icon">get<wbr>Priority</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_lib_org_bukkit_plugin_registeredlistener_.registeredlistener.html#isignoringcancelled" class="tsd-kind-icon">is<wbr>Ignoring<wbr>Cancelled</a>
 							</li>
 						</ul>
 					</li>

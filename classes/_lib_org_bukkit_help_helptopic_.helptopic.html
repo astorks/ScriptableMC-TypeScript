@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>HelpTopic | scriptablemc-typescript</title>
+	<title>HelpTopic | ScriptableMC-TypeScript</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">scriptablemc-typescript</a>
+					<a href="../index.html" class="title">ScriptableMC-TypeScript</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -38,10 +38,6 @@
 							</div>
 							<input type="checkbox" id="tsd-filter-inherited" checked />
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
-							<input type="checkbox" id="tsd-filter-externals" checked />
-							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
-							<input type="checkbox" id="tsd-filter-only-exported" />
-							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -74,6 +70,14 @@
 				<ul class="tsd-hierarchy">
 					<li>
 						<span class="target">HelpTopic</span>
+						<ul class="tsd-hierarchy">
+							<li>
+								<a href="_lib_org_bukkit_help_genericcommandhelptopic_.genericcommandhelptopic.html" class="tsd-signature-type">GenericCommandHelpTopic</a>
+							</li>
+							<li>
+								<a href="_lib_org_bukkit_help_indexhelptopic_.indexhelptopic.html" class="tsd-signature-type">IndexHelpTopic</a>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -93,6 +97,17 @@
 								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-static"><a href="_lib_org_bukkit_help_helptopic_.helptopic.html#_javaclass" class="tsd-kind-icon">$java<wbr>Class</a></li>
 							</ul>
 						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_org_bukkit_help_helptopic_.helptopic.html#amendcansee" class="tsd-kind-icon">amend<wbr>Can<wbr>See</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_org_bukkit_help_helptopic_.helptopic.html#amendtopic" class="tsd-kind-icon">amend<wbr>Topic</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_org_bukkit_help_helptopic_.helptopic.html#cansee" class="tsd-kind-icon">can<wbr>See</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_org_bukkit_help_helptopic_.helptopic.html#getfulltext" class="tsd-kind-icon">get<wbr>Full<wbr>Text</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_org_bukkit_help_helptopic_.helptopic.html#getname" class="tsd-kind-icon">get<wbr>Name</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_org_bukkit_help_helptopic_.helptopic.html#getshorttext" class="tsd-kind-icon">get<wbr>Short<wbr>Text</a></li>
+							</ul>
+						</section>
 					</div>
 				</section>
 			</section>
@@ -102,21 +117,15 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Help<wbr>Topic<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_help_helptopic_.helptopic.html" class="tsd-signature-type">HelpTopic</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Help<wbr>Topic<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_help_helptopic_.helptopic.html" class="tsd-signature-type">HelpTopic</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/579e519/src/lib/org/bukkit/help/HelpTopic.js#L4">lib/org/bukkit/help/HelpTopic.js:4</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/help/HelpTopic.ts#L16">lib/org/bukkit/help/HelpTopic.ts:16</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_help_helptopic_.helptopic.html" class="tsd-signature-type">HelpTopic</a></h4>
 						</li>
 					</ul>
@@ -134,10 +143,142 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/579e519/src/lib/org/bukkit/help/HelpTopic.js#L2">lib/org/bukkit/help/HelpTopic.js:2</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/help/HelpTopic.ts#L14">lib/org/bukkit/help/HelpTopic.ts:14</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="amendcansee" class="tsd-anchor"></a>
+					<h3>amend<wbr>Can<wbr>See</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">amend<wbr>Can<wbr>See<span class="tsd-signature-symbol">(</span>amendedPermission<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/help/HelpTopic.ts#L6">lib/org/bukkit/help/HelpTopic.ts:6</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>amendedPermission: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="amendtopic" class="tsd-anchor"></a>
+					<h3>amend<wbr>Topic</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">amend<wbr>Topic<span class="tsd-signature-symbol">(</span>amendedShortText<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, amendedFullText<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/help/HelpTopic.ts#L9">lib/org/bukkit/help/HelpTopic.ts:9</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>amendedShortText: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>amendedFullText: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="cansee" class="tsd-anchor"></a>
+					<h3>can<wbr>See</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">can<wbr>See<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_command_commandsender_.commandsender.html" class="tsd-signature-type">CommandSender</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/help/HelpTopic.ts#L5">lib/org/bukkit/help/HelpTopic.ts:5</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>arg0: <a href="_lib_org_bukkit_command_commandsender_.commandsender.html" class="tsd-signature-type">CommandSender</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getfulltext" class="tsd-anchor"></a>
+					<h3>get<wbr>Full<wbr>Text</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Full<wbr>Text<span class="tsd-signature-symbol">(</span>forWho<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_command_commandsender_.commandsender.html" class="tsd-signature-type">CommandSender</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/help/HelpTopic.ts#L8">lib/org/bukkit/help/HelpTopic.ts:8</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>forWho: <a href="_lib_org_bukkit_command_commandsender_.commandsender.html" class="tsd-signature-type">CommandSender</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getname" class="tsd-anchor"></a>
+					<h3>get<wbr>Name</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Name<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/help/HelpTopic.ts#L10">lib/org/bukkit/help/HelpTopic.ts:10</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getshorttext" class="tsd-anchor"></a>
+					<h3>get<wbr>Short<wbr>Text</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Short<wbr>Text<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/help/HelpTopic.ts#L7">lib/org/bukkit/help/HelpTopic.ts:7</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -166,6 +307,24 @@
 							</li>
 							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-static">
 								<a href="_lib_org_bukkit_help_helptopic_.helptopic.html#_javaclass" class="tsd-kind-icon">$java<wbr>Class</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_lib_org_bukkit_help_helptopic_.helptopic.html#amendcansee" class="tsd-kind-icon">amend<wbr>Can<wbr>See</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_lib_org_bukkit_help_helptopic_.helptopic.html#amendtopic" class="tsd-kind-icon">amend<wbr>Topic</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_lib_org_bukkit_help_helptopic_.helptopic.html#cansee" class="tsd-kind-icon">can<wbr>See</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_lib_org_bukkit_help_helptopic_.helptopic.html#getfulltext" class="tsd-kind-icon">get<wbr>Full<wbr>Text</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_lib_org_bukkit_help_helptopic_.helptopic.html#getname" class="tsd-kind-icon">get<wbr>Name</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_lib_org_bukkit_help_helptopic_.helptopic.html#getshorttext" class="tsd-kind-icon">get<wbr>Short<wbr>Text</a>
 							</li>
 						</ul>
 					</li>

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>InventoryOpener | scriptablemc-typescript</title>
+	<title>InventoryOpener | ScriptableMC-TypeScript</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">scriptablemc-typescript</a>
+					<a href="../index.html" class="title">ScriptableMC-TypeScript</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -38,10 +38,6 @@
 							</div>
 							<input type="checkbox" id="tsd-filter-inherited" checked />
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
-							<input type="checkbox" id="tsd-filter-externals" checked />
-							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
-							<input type="checkbox" id="tsd-filter-only-exported" />
-							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -87,6 +83,14 @@
 								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-static"><a href="_lib_fr_minuskube_inv_opener_inventoryopener_.inventoryopener.html#_javaclass" class="tsd-kind-icon">$java<wbr>Class</a></li>
 							</ul>
 						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_fr_minuskube_inv_opener_inventoryopener_.inventoryopener.html#fill" class="tsd-kind-icon">fill</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_fr_minuskube_inv_opener_inventoryopener_.inventoryopener.html#open" class="tsd-kind-icon">open</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_fr_minuskube_inv_opener_inventoryopener_.inventoryopener.html#supports" class="tsd-kind-icon">supports</a></li>
+							</ul>
+						</section>
 					</div>
 				</section>
 			</section>
@@ -102,10 +106,88 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/579e519/src/lib/fr/minuskube/inv/opener/InventoryOpener.js#L2">lib/fr/minuskube/inv/opener/InventoryOpener.js:2</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/fr/minuskube/inv/opener/InventoryOpener.ts#L15">lib/fr/minuskube/inv/opener/InventoryOpener.ts:15</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="fill" class="tsd-anchor"></a>
+					<h3>fill</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">fill<span class="tsd-signature-symbol">(</span>handle<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_inventory_inventory_.inventory.html" class="tsd-signature-type">Inventory</a>, contents<span class="tsd-signature-symbol">: </span><a href="_lib_fr_minuskube_inv_content_inventorycontents_.inventorycontents.html" class="tsd-signature-type">InventoryContents</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/fr/minuskube/inv/opener/InventoryOpener.ts#L10">lib/fr/minuskube/inv/opener/InventoryOpener.ts:10</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>handle: <a href="_lib_org_bukkit_inventory_inventory_.inventory.html" class="tsd-signature-type">Inventory</a></h5>
+								</li>
+								<li>
+									<h5>contents: <a href="_lib_fr_minuskube_inv_content_inventorycontents_.inventorycontents.html" class="tsd-signature-type">InventoryContents</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="open" class="tsd-anchor"></a>
+					<h3>open</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">open<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><a href="_lib_fr_minuskube_inv_smartinventory_.smartinventory.html" class="tsd-signature-type">SmartInventory</a>, arg1<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_entity_player_.player.html" class="tsd-signature-type">Player</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_inventory_inventory_.inventory.html" class="tsd-signature-type">Inventory</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/fr/minuskube/inv/opener/InventoryOpener.ts#L11">lib/fr/minuskube/inv/opener/InventoryOpener.ts:11</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>arg0: <a href="_lib_fr_minuskube_inv_smartinventory_.smartinventory.html" class="tsd-signature-type">SmartInventory</a></h5>
+								</li>
+								<li>
+									<h5>arg1: <a href="_lib_org_bukkit_entity_player_.player.html" class="tsd-signature-type">Player</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_inventory_inventory_.inventory.html" class="tsd-signature-type">Inventory</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="supports" class="tsd-anchor"></a>
+					<h3>supports</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">supports<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_event_inventory_inventorytype_.inventorytype.html" class="tsd-signature-type">InventoryType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/fr/minuskube/inv/opener/InventoryOpener.ts#L9">lib/fr/minuskube/inv/opener/InventoryOpener.ts:9</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>arg0: <a href="_lib_org_bukkit_event_inventory_inventorytype_.inventorytype.html" class="tsd-signature-type">InventoryType</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -131,6 +213,15 @@
 						<ul>
 							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-static">
 								<a href="_lib_fr_minuskube_inv_opener_inventoryopener_.inventoryopener.html#_javaclass" class="tsd-kind-icon">$java<wbr>Class</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_lib_fr_minuskube_inv_opener_inventoryopener_.inventoryopener.html#fill" class="tsd-kind-icon">fill</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_lib_fr_minuskube_inv_opener_inventoryopener_.inventoryopener.html#open" class="tsd-kind-icon">open</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_lib_fr_minuskube_inv_opener_inventoryopener_.inventoryopener.html#supports" class="tsd-kind-icon">supports</a>
 							</li>
 						</ul>
 					</li>

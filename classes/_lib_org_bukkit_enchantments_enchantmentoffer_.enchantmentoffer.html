@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>EnchantmentOffer | scriptablemc-typescript</title>
+	<title>EnchantmentOffer | ScriptableMC-TypeScript</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">scriptablemc-typescript</a>
+					<a href="../index.html" class="title">ScriptableMC-TypeScript</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -38,10 +38,6 @@
 							</div>
 							<input type="checkbox" id="tsd-filter-inherited" checked />
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
-							<input type="checkbox" id="tsd-filter-externals" checked />
-							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
-							<input type="checkbox" id="tsd-filter-only-exported" />
-							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -93,6 +89,17 @@
 								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-static"><a href="_lib_org_bukkit_enchantments_enchantmentoffer_.enchantmentoffer.html#_javaclass" class="tsd-kind-icon">$java<wbr>Class</a></li>
 							</ul>
 						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_org_bukkit_enchantments_enchantmentoffer_.enchantmentoffer.html#getcost" class="tsd-kind-icon">get<wbr>Cost</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_org_bukkit_enchantments_enchantmentoffer_.enchantmentoffer.html#getenchantment" class="tsd-kind-icon">get<wbr>Enchantment</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_org_bukkit_enchantments_enchantmentoffer_.enchantmentoffer.html#getenchantmentlevel" class="tsd-kind-icon">get<wbr>Enchantment<wbr>Level</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_org_bukkit_enchantments_enchantmentoffer_.enchantmentoffer.html#setcost" class="tsd-kind-icon">set<wbr>Cost</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_org_bukkit_enchantments_enchantmentoffer_.enchantmentoffer.html#setenchantment" class="tsd-kind-icon">set<wbr>Enchantment</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_org_bukkit_enchantments_enchantmentoffer_.enchantmentoffer.html#setenchantmentlevel" class="tsd-kind-icon">set<wbr>Enchantment<wbr>Level</a></li>
+							</ul>
+						</section>
 					</div>
 				</section>
 			</section>
@@ -102,19 +109,25 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Enchantment<wbr>Offer<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_enchantments_enchantmentoffer_.enchantmentoffer.html" class="tsd-signature-type">EnchantmentOffer</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Enchantment<wbr>Offer<span class="tsd-signature-symbol">(</span>enchantment<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_enchantments_enchantment_.enchantment.html" class="tsd-signature-type">Enchantment</a>, enchantmentLevel<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, cost<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_enchantments_enchantmentoffer_.enchantmentoffer.html" class="tsd-signature-type">EnchantmentOffer</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/579e519/src/lib/org/bukkit/enchantments/EnchantmentOffer.js#L4">lib/org/bukkit/enchantments/EnchantmentOffer.js:4</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/enchantments/EnchantmentOffer.ts#L16">lib/org/bukkit/enchantments/EnchantmentOffer.ts:16</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>enchantment: <a href="_lib_org_bukkit_enchantments_enchantment_.enchantment.html" class="tsd-signature-type">Enchantment</a></h5>
+								</li>
+								<li>
+									<h5>enchantmentLevel: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>cost: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_enchantments_enchantmentoffer_.enchantmentoffer.html" class="tsd-signature-type">EnchantmentOffer</a></h4>
@@ -134,10 +147,133 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/579e519/src/lib/org/bukkit/enchantments/EnchantmentOffer.js#L2">lib/org/bukkit/enchantments/EnchantmentOffer.js:2</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/enchantments/EnchantmentOffer.ts#L14">lib/org/bukkit/enchantments/EnchantmentOffer.ts:14</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getcost" class="tsd-anchor"></a>
+					<h3>get<wbr>Cost</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Cost<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/enchantments/EnchantmentOffer.ts#L9">lib/org/bukkit/enchantments/EnchantmentOffer.ts:9</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getenchantment" class="tsd-anchor"></a>
+					<h3>get<wbr>Enchantment</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Enchantment<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_enchantments_enchantment_.enchantment.html" class="tsd-signature-type">Enchantment</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/enchantments/EnchantmentOffer.ts#L6">lib/org/bukkit/enchantments/EnchantmentOffer.ts:6</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_enchantments_enchantment_.enchantment.html" class="tsd-signature-type">Enchantment</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getenchantmentlevel" class="tsd-anchor"></a>
+					<h3>get<wbr>Enchantment<wbr>Level</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Enchantment<wbr>Level<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/enchantments/EnchantmentOffer.ts#L5">lib/org/bukkit/enchantments/EnchantmentOffer.ts:5</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setcost" class="tsd-anchor"></a>
+					<h3>set<wbr>Cost</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Cost<span class="tsd-signature-symbol">(</span>cost<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/enchantments/EnchantmentOffer.ts#L8">lib/org/bukkit/enchantments/EnchantmentOffer.ts:8</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>cost: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setenchantment" class="tsd-anchor"></a>
+					<h3>set<wbr>Enchantment</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Enchantment<span class="tsd-signature-symbol">(</span>enchantment<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_enchantments_enchantment_.enchantment.html" class="tsd-signature-type">Enchantment</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/enchantments/EnchantmentOffer.ts#L10">lib/org/bukkit/enchantments/EnchantmentOffer.ts:10</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>enchantment: <a href="_lib_org_bukkit_enchantments_enchantment_.enchantment.html" class="tsd-signature-type">Enchantment</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setenchantmentlevel" class="tsd-anchor"></a>
+					<h3>set<wbr>Enchantment<wbr>Level</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Enchantment<wbr>Level<span class="tsd-signature-symbol">(</span>enchantmentLevel<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/enchantments/EnchantmentOffer.ts#L7">lib/org/bukkit/enchantments/EnchantmentOffer.ts:7</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>enchantmentLevel: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -166,6 +302,24 @@
 							</li>
 							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-static">
 								<a href="_lib_org_bukkit_enchantments_enchantmentoffer_.enchantmentoffer.html#_javaclass" class="tsd-kind-icon">$java<wbr>Class</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_lib_org_bukkit_enchantments_enchantmentoffer_.enchantmentoffer.html#getcost" class="tsd-kind-icon">get<wbr>Cost</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_lib_org_bukkit_enchantments_enchantmentoffer_.enchantmentoffer.html#getenchantment" class="tsd-kind-icon">get<wbr>Enchantment</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_lib_org_bukkit_enchantments_enchantmentoffer_.enchantmentoffer.html#getenchantmentlevel" class="tsd-kind-icon">get<wbr>Enchantment<wbr>Level</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_lib_org_bukkit_enchantments_enchantmentoffer_.enchantmentoffer.html#setcost" class="tsd-kind-icon">set<wbr>Cost</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_lib_org_bukkit_enchantments_enchantmentoffer_.enchantmentoffer.html#setenchantment" class="tsd-kind-icon">set<wbr>Enchantment</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_lib_org_bukkit_enchantments_enchantmentoffer_.enchantmentoffer.html#setenchantmentlevel" class="tsd-kind-icon">set<wbr>Enchantment<wbr>Level</a>
 							</li>
 						</ul>
 					</li>

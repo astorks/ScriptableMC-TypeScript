@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Scoreboard | scriptablemc-typescript</title>
+	<title>Scoreboard | ScriptableMC-TypeScript</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">scriptablemc-typescript</a>
+					<a href="../index.html" class="title">ScriptableMC-TypeScript</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -38,10 +38,6 @@
 							</div>
 							<input type="checkbox" id="tsd-filter-inherited" checked />
 							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
-							<input type="checkbox" id="tsd-filter-externals" checked />
-							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
-							<input type="checkbox" id="tsd-filter-only-exported" />
-							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
 						</div>
 					</div>
 					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
@@ -87,6 +83,25 @@
 								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-static"><a href="_lib_org_bukkit_scoreboard_scoreboard_.scoreboard.html#_javaclass" class="tsd-kind-icon">$java<wbr>Class</a></li>
 							</ul>
 						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_org_bukkit_scoreboard_scoreboard_.scoreboard.html#clearslot" class="tsd-kind-icon">clear<wbr>Slot</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_org_bukkit_scoreboard_scoreboard_.scoreboard.html#getentries" class="tsd-kind-icon">get<wbr>Entries</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_org_bukkit_scoreboard_scoreboard_.scoreboard.html#getentryteam" class="tsd-kind-icon">get<wbr>Entry<wbr>Team</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_org_bukkit_scoreboard_scoreboard_.scoreboard.html#getobjective" class="tsd-kind-icon">get<wbr>Objective</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_org_bukkit_scoreboard_scoreboard_.scoreboard.html#getobjectives" class="tsd-kind-icon">get<wbr>Objectives</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_org_bukkit_scoreboard_scoreboard_.scoreboard.html#getobjectivesbycriteria" class="tsd-kind-icon">get<wbr>Objectives<wbr>ByCriteria</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_org_bukkit_scoreboard_scoreboard_.scoreboard.html#getplayerteam" class="tsd-kind-icon">get<wbr>Player<wbr>Team</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_org_bukkit_scoreboard_scoreboard_.scoreboard.html#getplayers" class="tsd-kind-icon">get<wbr>Players</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_org_bukkit_scoreboard_scoreboard_.scoreboard.html#getscores" class="tsd-kind-icon">get<wbr>Scores</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_org_bukkit_scoreboard_scoreboard_.scoreboard.html#getteam" class="tsd-kind-icon">get<wbr>Team</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_org_bukkit_scoreboard_scoreboard_.scoreboard.html#getteams" class="tsd-kind-icon">get<wbr>Teams</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_org_bukkit_scoreboard_scoreboard_.scoreboard.html#registernewobjective" class="tsd-kind-icon">register<wbr>New<wbr>Objective</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_org_bukkit_scoreboard_scoreboard_.scoreboard.html#registernewteam" class="tsd-kind-icon">register<wbr>New<wbr>Team</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_org_bukkit_scoreboard_scoreboard_.scoreboard.html#resetscores" class="tsd-kind-icon">reset<wbr>Scores</a></li>
+							</ul>
+						</section>
 					</div>
 				</section>
 			</section>
@@ -102,10 +117,404 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/579e519/src/lib/org/bukkit/scoreboard/Scoreboard.js#L2">lib/org/bukkit/scoreboard/Scoreboard.js:2</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/scoreboard/Scoreboard.ts#L31">lib/org/bukkit/scoreboard/Scoreboard.ts:31</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="clearslot" class="tsd-anchor"></a>
+					<h3>clear<wbr>Slot</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">clear<wbr>Slot<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_scoreboard_displayslot_.displayslot.html" class="tsd-signature-type">DisplaySlot</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/scoreboard/Scoreboard.ts#L26">lib/org/bukkit/scoreboard/Scoreboard.ts:26</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>arg0: <a href="_lib_org_bukkit_scoreboard_displayslot_.displayslot.html" class="tsd-signature-type">DisplaySlot</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getentries" class="tsd-anchor"></a>
+					<h3>get<wbr>Entries</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Entries<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/scoreboard/Scoreboard.ts#L27">lib/org/bukkit/scoreboard/Scoreboard.ts:27</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getentryteam" class="tsd-anchor"></a>
+					<h3>get<wbr>Entry<wbr>Team</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Entry<wbr>Team<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_scoreboard_team_.team.html" class="tsd-signature-type">Team</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/scoreboard/Scoreboard.ts#L22">lib/org/bukkit/scoreboard/Scoreboard.ts:22</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>arg0: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_scoreboard_team_.team.html" class="tsd-signature-type">Team</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getobjective" class="tsd-anchor"></a>
+					<h3>get<wbr>Objective</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Objective<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_scoreboard_objective_.objective.html" class="tsd-signature-type">Objective</a></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Objective<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_scoreboard_displayslot_.displayslot.html" class="tsd-signature-type">DisplaySlot</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_scoreboard_objective_.objective.html" class="tsd-signature-type">Objective</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/scoreboard/Scoreboard.ts#L11">lib/org/bukkit/scoreboard/Scoreboard.ts:11</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>arg0: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_scoreboard_objective_.objective.html" class="tsd-signature-type">Objective</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/scoreboard/Scoreboard.ts#L12">lib/org/bukkit/scoreboard/Scoreboard.ts:12</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>arg0: <a href="_lib_org_bukkit_scoreboard_displayslot_.displayslot.html" class="tsd-signature-type">DisplaySlot</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_scoreboard_objective_.objective.html" class="tsd-signature-type">Objective</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getobjectives" class="tsd-anchor"></a>
+					<h3>get<wbr>Objectives</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Objectives<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/scoreboard/Scoreboard.ts#L10">lib/org/bukkit/scoreboard/Scoreboard.ts:10</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getobjectivesbycriteria" class="tsd-anchor"></a>
+					<h3>get<wbr>Objectives<wbr>ByCriteria</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Objectives<wbr>ByCriteria<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/scoreboard/Scoreboard.ts#L16">lib/org/bukkit/scoreboard/Scoreboard.ts:16</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>arg0: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getplayerteam" class="tsd-anchor"></a>
+					<h3>get<wbr>Player<wbr>Team</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Player<wbr>Team<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_offlineplayer_.offlineplayer.html" class="tsd-signature-type">OfflinePlayer</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_scoreboard_team_.team.html" class="tsd-signature-type">Team</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/scoreboard/Scoreboard.ts#L21">lib/org/bukkit/scoreboard/Scoreboard.ts:21</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>arg0: <a href="_lib_org_bukkit_offlineplayer_.offlineplayer.html" class="tsd-signature-type">OfflinePlayer</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_scoreboard_team_.team.html" class="tsd-signature-type">Team</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getplayers" class="tsd-anchor"></a>
+					<h3>get<wbr>Players</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Players<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/scoreboard/Scoreboard.ts#L9">lib/org/bukkit/scoreboard/Scoreboard.ts:9</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getscores" class="tsd-anchor"></a>
+					<h3>get<wbr>Scores</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Scores<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Scores<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_offlineplayer_.offlineplayer.html" class="tsd-signature-type">OfflinePlayer</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/scoreboard/Scoreboard.ts#L17">lib/org/bukkit/scoreboard/Scoreboard.ts:17</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>arg0: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/scoreboard/Scoreboard.ts#L18">lib/org/bukkit/scoreboard/Scoreboard.ts:18</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>arg0: <a href="_lib_org_bukkit_offlineplayer_.offlineplayer.html" class="tsd-signature-type">OfflinePlayer</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getteam" class="tsd-anchor"></a>
+					<h3>get<wbr>Team</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Team<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_scoreboard_team_.team.html" class="tsd-signature-type">Team</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/scoreboard/Scoreboard.ts#L23">lib/org/bukkit/scoreboard/Scoreboard.ts:23</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>arg0: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_scoreboard_team_.team.html" class="tsd-signature-type">Team</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getteams" class="tsd-anchor"></a>
+					<h3>get<wbr>Teams</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Teams<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/scoreboard/Scoreboard.ts#L24">lib/org/bukkit/scoreboard/Scoreboard.ts:24</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="registernewobjective" class="tsd-anchor"></a>
+					<h3>register<wbr>New<wbr>Objective</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>New<wbr>Objective<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, arg1<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_scoreboard_objective_.objective.html" class="tsd-signature-type">Objective</a></li>
+						<li class="tsd-signature tsd-kind-icon">register<wbr>New<wbr>Objective<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, arg1<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, arg2<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_scoreboard_objective_.objective.html" class="tsd-signature-type">Objective</a></li>
+						<li class="tsd-signature tsd-kind-icon">register<wbr>New<wbr>Objective<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, arg1<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, arg2<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, arg3<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_scoreboard_rendertype_.rendertype.html" class="tsd-signature-type">RenderType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_scoreboard_objective_.objective.html" class="tsd-signature-type">Objective</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/scoreboard/Scoreboard.ts#L13">lib/org/bukkit/scoreboard/Scoreboard.ts:13</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>arg0: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>arg1: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_scoreboard_objective_.objective.html" class="tsd-signature-type">Objective</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/scoreboard/Scoreboard.ts#L14">lib/org/bukkit/scoreboard/Scoreboard.ts:14</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>arg0: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>arg1: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>arg2: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_scoreboard_objective_.objective.html" class="tsd-signature-type">Objective</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/scoreboard/Scoreboard.ts#L15">lib/org/bukkit/scoreboard/Scoreboard.ts:15</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>arg0: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>arg1: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>arg2: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>arg3: <a href="_lib_org_bukkit_scoreboard_rendertype_.rendertype.html" class="tsd-signature-type">RenderType</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_scoreboard_objective_.objective.html" class="tsd-signature-type">Objective</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="registernewteam" class="tsd-anchor"></a>
+					<h3>register<wbr>New<wbr>Team</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">register<wbr>New<wbr>Team<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_scoreboard_team_.team.html" class="tsd-signature-type">Team</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/scoreboard/Scoreboard.ts#L25">lib/org/bukkit/scoreboard/Scoreboard.ts:25</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>arg0: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_scoreboard_team_.team.html" class="tsd-signature-type">Team</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="resetscores" class="tsd-anchor"></a>
+					<h3>reset<wbr>Scores</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">reset<wbr>Scores<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">reset<wbr>Scores<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_offlineplayer_.offlineplayer.html" class="tsd-signature-type">OfflinePlayer</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/scoreboard/Scoreboard.ts#L19">lib/org/bukkit/scoreboard/Scoreboard.ts:19</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>arg0: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/org/bukkit/scoreboard/Scoreboard.ts#L20">lib/org/bukkit/scoreboard/Scoreboard.ts:20</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>arg0: <a href="_lib_org_bukkit_offlineplayer_.offlineplayer.html" class="tsd-signature-type">OfflinePlayer</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -131,6 +540,48 @@
 						<ul>
 							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-static">
 								<a href="_lib_org_bukkit_scoreboard_scoreboard_.scoreboard.html#_javaclass" class="tsd-kind-icon">$java<wbr>Class</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_lib_org_bukkit_scoreboard_scoreboard_.scoreboard.html#clearslot" class="tsd-kind-icon">clear<wbr>Slot</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_lib_org_bukkit_scoreboard_scoreboard_.scoreboard.html#getentries" class="tsd-kind-icon">get<wbr>Entries</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_lib_org_bukkit_scoreboard_scoreboard_.scoreboard.html#getentryteam" class="tsd-kind-icon">get<wbr>Entry<wbr>Team</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_lib_org_bukkit_scoreboard_scoreboard_.scoreboard.html#getobjective" class="tsd-kind-icon">get<wbr>Objective</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_lib_org_bukkit_scoreboard_scoreboard_.scoreboard.html#getobjectives" class="tsd-kind-icon">get<wbr>Objectives</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_lib_org_bukkit_scoreboard_scoreboard_.scoreboard.html#getobjectivesbycriteria" class="tsd-kind-icon">get<wbr>Objectives<wbr>ByCriteria</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_lib_org_bukkit_scoreboard_scoreboard_.scoreboard.html#getplayerteam" class="tsd-kind-icon">get<wbr>Player<wbr>Team</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_lib_org_bukkit_scoreboard_scoreboard_.scoreboard.html#getplayers" class="tsd-kind-icon">get<wbr>Players</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_lib_org_bukkit_scoreboard_scoreboard_.scoreboard.html#getscores" class="tsd-kind-icon">get<wbr>Scores</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_lib_org_bukkit_scoreboard_scoreboard_.scoreboard.html#getteam" class="tsd-kind-icon">get<wbr>Team</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_lib_org_bukkit_scoreboard_scoreboard_.scoreboard.html#getteams" class="tsd-kind-icon">get<wbr>Teams</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_lib_org_bukkit_scoreboard_scoreboard_.scoreboard.html#registernewobjective" class="tsd-kind-icon">register<wbr>New<wbr>Objective</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_lib_org_bukkit_scoreboard_scoreboard_.scoreboard.html#registernewteam" class="tsd-kind-icon">register<wbr>New<wbr>Team</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_lib_org_bukkit_scoreboard_scoreboard_.scoreboard.html#resetscores" class="tsd-kind-icon">reset<wbr>Scores</a>
 							</li>
 						</ul>
 					</li>
