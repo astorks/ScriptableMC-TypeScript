@@ -25,10 +25,10 @@ import Sound from '../lib/org/bukkit/Sound.js';
 import MinecraftVersions from '../lib/com/smc/version/MinecraftVersions.js';
 import SmartInventory from '../lib/com/smc/smartinvs/SmartInventory.js';
 import ItemBuilder from '../lib/com/smc/utils/ItemBuilder.js';
+import SmartInventoryProvider from '../lib/com/smc/smartinvs/SmartInventoryProvider.js';
 
 export default class TestPlugin extends JsPlugin {
 
-    
     private mysqlConnection: MysqlWrapper;
 
     onLoad() {
@@ -128,7 +128,7 @@ export default class TestPlugin extends JsPlugin {
         
         let inventory = SmartInventory.builder()
             .id("hellojs")
-            .provider(SmartInventory.provider({
+            .provider(new SmartInventoryProvider({
                 init(player: Player, contents: InventoryContents): void {
                     if(contents) {
                         contents.fillBorders(
@@ -169,7 +169,7 @@ export default class TestPlugin extends JsPlugin {
                         ));
 
                         contents.set(1, 3, SmartInventory.clickableItem(
-                            new ItemBuilder(new ItemStack(Material.BEDROCK))
+                            new ItemBuilder(new ItemStack(Material.IRON_INGOT))
                                     .setDisplayName("Print Server Name")
                                     .build(),
                             () => {
