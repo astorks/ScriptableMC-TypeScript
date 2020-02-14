@@ -1,65 +1,76 @@
 declare var Java: any;
+import Charset from '../../java/nio/charset/Charset.js'
 import File from '../../java/io/File.js'
 import OutputStream from '../../java/io/OutputStream.js'
 import Writer from '../../java/io/Writer.js'
 
 export default interface PrintWriter extends Writer {
-	println(arg0: number): void;
-	println(arg0: Array<string>): void;
-	println(arg0: number): void;
-	println(arg0: string): void;
-	println(arg0: any): void;
-	println(arg0: number): void;
-	println(arg0: string): void;
-	println(arg0: boolean): void;
-	println(): void;
-	println(arg0: number): void;
-	append(arg0: any, arg1: number, arg2: number): PrintWriter;
-	append(arg0: any): PrintWriter;
-	append(arg0: any): any;
-	append(arg0: string): any;
-	append(arg0: any): Writer;
-	append(arg0: string): Writer;
-	append(arg0: any, arg1: number, arg2: number): Writer;
-	append(arg0: string): PrintWriter;
-	append(arg0: any, arg1: number, arg2: number): any;
-	format(arg0: any, arg1: string, arg2: Array<any>): PrintWriter;
-	format(arg0: string, arg1: Array<any>): PrintWriter;
-	write(arg0: Array<string>, arg1: number, arg2: number): void;
-	write(arg0: string, arg1: number, arg2: number): void;
-	write(arg0: Array<string>): void;
-	write(arg0: number): void;
-	write(arg0: string): void;
-	print(arg0: number): void;
-	print(arg0: number): void;
-	print(arg0: number): void;
-	print(arg0: string): void;
-	print(arg0: boolean): void;
-	print(arg0: any): void;
-	print(arg0: string): void;
-	print(arg0: Array<string>): void;
-	print(arg0: number): void;
-	flush(): void;
-	close(): void;
+	append(csq: any): PrintWriter;
+	append(csq: any): any;
+	append(csq: any): Writer;
+	append(c: string): any;
+	append(c: string): Writer;
+	append(c: string): PrintWriter;
+	append(csq: any, start: number, end: number): PrintWriter;
+	append(csq: any, start: number, end: number): Writer;
+	append(csq: any, start: number, end: number): any;
 	checkError(): boolean;
-	printf(arg0: any, arg1: string, arg2: Array<any>): PrintWriter;
-	printf(arg0: string, arg1: Array<any>): PrintWriter;
+	close(): void;
+	flush(): void;
+	format(format: string, args: Array<any>): PrintWriter;
+	format(l: any, format: string, args: Array<any>): PrintWriter;
+	print(f: number): void;
+	print(l: number): void;
+	print(i: number): void;
+	print(c: string): void;
+	print(b: boolean): void;
+	print(obj: any): void;
+	print(s: string): void;
+	print(s: Array<string>): void;
+	print(d: number): void;
+	printf(format: string, args: Array<any>): PrintWriter;
+	printf(l: any, format: string, args: Array<any>): PrintWriter;
+	println(): void;
+	println(x: Array<string>): void;
+	println(x: number): void;
+	println(x: number): void;
+	println(x: string): void;
+	println(x: any): void;
+	println(x: number): void;
+	println(x: string): void;
+	println(x: boolean): void;
+	println(x: number): void;
+	write(c: number): void;
+	write(buf: Array<string>): void;
+	write(s: string): void;
+	write(s: string, off: number, len: number): void;
+	write(buf: Array<string>, off: number, len: number): void;
 }
 
 export default class PrintWriter {
 	public static get $javaClass(): any {
 		return Java.type('java.io.PrintWriter');
 	}
-	constructor(arg0: OutputStream, arg1: boolean);
-	constructor(arg0: string);
-	constructor(arg0: File);
-	constructor(arg0: File, arg1: string);
-	constructor(arg0: string, arg1: string);
-	constructor(arg0: Writer);
-	constructor(arg0: OutputStream);
-	constructor(arg0: Writer, arg1: boolean);
+
+	constructor(fileName: string);
+	constructor(file: File);
+	constructor(out: Writer);
+	constructor(out: OutputStream);
+	constructor(fileName: string, csn: string);
+	constructor(fileName: string, charset: Charset);
+	constructor(file: File, csn: string);
+	constructor(file: File, charset: Charset);
+	constructor(out: Writer, autoFlush: boolean);
+	constructor(out: OutputStream, autoFlush: boolean);
+	constructor(out: OutputStream, autoFlush: boolean, charset: Charset);
 	constructor(...args: any[]) {
 		return new PrintWriter.$javaClass(...args);
 	}
+
+	public static nullWriter(): Writer;
+	public static nullWriter(...args: any[]): any {
+		return PrintWriter.$javaClass.nullWriter(...args);
+	}
+
 }
 

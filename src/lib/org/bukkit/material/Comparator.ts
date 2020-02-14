@@ -7,18 +7,18 @@ import MaterialData from '../../../org/bukkit/material/MaterialData.js'
 import Redstone from '../../../org/bukkit/material/Redstone.js'
 
 export default interface Comparator extends MaterialData, Directional, Redstone {
-	getFacing(): BlockFace;
-	setFacingDirection(face: BlockFace): void;
-	isPowered(): boolean;
-	setSubtractionMode(isSubtraction: boolean): void;
-	isSubtractionMode(): boolean;
-	isBeingPowered(): boolean;
-	clone(): Comparator;
 	clone(): any;
+	clone(): Comparator;
 	clone(): MaterialData;
 	getData(): number;
-	setData(data: number): void;
+	getFacing(): BlockFace;
 	getItemType(): Material;
+	isBeingPowered(): boolean;
+	isPowered(): boolean;
+	isSubtractionMode(): boolean;
+	setData(data: number): void;
+	setFacingDirection(face: BlockFace): void;
+	setSubtractionMode(isSubtraction: boolean): void;
 	toItemStack(): ItemStack;
 	toItemStack(amount: number): ItemStack;
 }
@@ -27,14 +27,16 @@ export default class Comparator {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.material.Comparator');
 	}
+
 	constructor();
+	constructor(type: Material);
 	constructor(facingDirection: BlockFace);
 	constructor(facingDirection: BlockFace, isSubtraction: boolean);
-	constructor(facingDirection: BlockFace, isSubtraction: boolean, state: boolean);
 	constructor(type: Material, data: number);
-	constructor(type: Material);
+	constructor(facingDirection: BlockFace, isSubtraction: boolean, state: boolean);
 	constructor(...args: any[]) {
 		return new Comparator.$javaClass(...args);
 	}
+
 }
 

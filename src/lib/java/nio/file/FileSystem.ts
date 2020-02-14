@@ -7,23 +7,24 @@ import UserPrincipalLookupService from '../../../java/nio/file/attribute/UserPri
 import WatchService from '../../../java/nio/file/WatchService.js'
 
 export default interface FileSystem {
-	newWatchService(): WatchService;
-	supportedFileAttributeViews(): any;
-	getRootDirectories(): any;
-	getFileStores(): any;
-	getPathMatcher(arg0: string): PathMatcher;
-	getUserPrincipalLookupService(): UserPrincipalLookupService;
-	provider(): FileSystemProvider;
 	close(): void;
+	getFileStores(): any;
 	getPath(arg0: string, arg1: Array<string>): Path;
+	getPathMatcher(arg0: string): PathMatcher;
+	getRootDirectories(): any;
 	getSeparator(): string;
-	isReadOnly(): boolean;
+	getUserPrincipalLookupService(): UserPrincipalLookupService;
 	isOpen(): boolean;
+	isReadOnly(): boolean;
+	newWatchService(): WatchService;
+	provider(): FileSystemProvider;
+	supportedFileAttributeViews(): any;
 }
 
 export default class FileSystem {
 	public static get $javaClass(): any {
 		return Java.type('java.nio.file.FileSystem');
 	}
+
 }
 

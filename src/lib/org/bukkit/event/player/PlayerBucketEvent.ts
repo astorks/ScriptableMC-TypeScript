@@ -9,28 +9,30 @@ import Player from '../../../../org/bukkit/entity/Player.js'
 import PlayerEvent from '../../../../org/bukkit/event/player/PlayerEvent.js'
 
 export default interface PlayerBucketEvent extends PlayerEvent, Cancellable {
-	isCancelled(): boolean;
 	getBlock(): Block;
-	getItemStack(): ItemStack;
-	setItemStack(itemStack: ItemStack): void;
-	setCancelled(cancel: boolean): void;
-	getBlockFace(): BlockFace;
 	getBlockClicked(): Block;
+	getBlockFace(): BlockFace;
 	getBucket(): Material;
-	getPlayer(): Player;
-	getHandlers(): HandlerList;
 	getEventName(): string;
+	getHandlers(): HandlerList;
+	getItemStack(): ItemStack;
+	getPlayer(): Player;
 	isAsynchronous(): boolean;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
+	setItemStack(itemStack: ItemStack): void;
 }
 
 export default class PlayerBucketEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.player.PlayerBucketEvent');
 	}
-	constructor(who: Player, block: Block, blockClicked: Block, blockFace: BlockFace, bucket: Material, itemInHand: ItemStack);
+
 	constructor(who: Player, blockClicked: Block, blockFace: BlockFace, bucket: Material, itemInHand: ItemStack);
+	constructor(who: Player, block: Block, blockClicked: Block, blockFace: BlockFace, bucket: Material, itemInHand: ItemStack);
 	constructor(...args: any[]) {
 		return new PlayerBucketEvent.$javaClass(...args);
 	}
+
 }
 

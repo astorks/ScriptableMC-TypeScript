@@ -9,37 +9,40 @@ import InventoryView from '../../../../org/bukkit/inventory/InventoryView.js'
 import ItemStack from '../../../../org/bukkit/inventory/ItemStack.js'
 
 export default interface InventoryDragEvent extends InventoryInteractEvent {
-	getHandlers(): HandlerList;
-	setCursor(newCursor: ItemStack): void;
 	getCursor(): ItemStack;
-	getRawSlots(): any;
+	getEventName(): string;
+	getHandlers(): HandlerList;
+	getInventory(): Inventory;
 	getInventorySlots(): any;
-	getOldCursor(): ItemStack;
 	getNewItems(): any;
+	getOldCursor(): ItemStack;
+	getRawSlots(): any;
+	getResult(): Event$Result;
 	getType(): DragType;
+	getView(): InventoryView;
+	getViewers(): Array<HumanEntity>;
+	getWhoClicked(): HumanEntity;
+	isAsynchronous(): boolean;
 	isCancelled(): boolean;
 	setCancelled(toCancel: boolean): void;
-	getWhoClicked(): HumanEntity;
+	setCursor(newCursor: ItemStack): void;
 	setResult(newResult: Event$Result): void;
-	getResult(): Event$Result;
-	getInventory(): Inventory;
-	getViewers(): Array<HumanEntity>;
-	getView(): InventoryView;
-	getEventName(): string;
-	isAsynchronous(): boolean;
 }
 
 export default class InventoryDragEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.inventory.InventoryDragEvent');
 	}
+
 	constructor(what: InventoryView, newCursor: ItemStack, oldCursor: ItemStack, right: boolean, slots: any);
 	constructor(...args: any[]) {
 		return new InventoryDragEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return InventoryDragEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

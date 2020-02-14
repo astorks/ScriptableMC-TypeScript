@@ -8,28 +8,31 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import LivingEntity from '../../../../org/bukkit/entity/LivingEntity.js'
 
 export default interface EntityTameEvent extends EntityEvent, Cancellable {
-	isCancelled(): boolean;
-	getHandlers(): HandlerList;
-	getOwner(): AnimalTamer;
 	getEntity(): Entity;
 	getEntity(): LivingEntity;
-	setCancelled(cancel: boolean): void;
 	getEntityType(): EntityType;
 	getEventName(): string;
+	getHandlers(): HandlerList;
+	getOwner(): AnimalTamer;
 	isAsynchronous(): boolean;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 }
 
 export default class EntityTameEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.entity.EntityTameEvent');
 	}
+
 	constructor(entity: LivingEntity, owner: AnimalTamer);
 	constructor(...args: any[]) {
 		return new EntityTameEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return EntityTameEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

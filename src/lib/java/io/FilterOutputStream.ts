@@ -2,20 +2,27 @@ declare var Java: any;
 import OutputStream from '../../java/io/OutputStream.js'
 
 export default interface FilterOutputStream extends OutputStream {
-	write(arg0: Array<number>, arg1: number, arg2: number): void;
-	write(arg0: Array<number>): void;
-	write(arg0: number): void;
-	flush(): void;
 	close(): void;
+	flush(): void;
+	write(b: Array<number>): void;
+	write(b: number): void;
+	write(b: Array<number>, off: number, len: number): void;
 }
 
 export default class FilterOutputStream {
 	public static get $javaClass(): any {
 		return Java.type('java.io.FilterOutputStream');
 	}
-	constructor(arg0: OutputStream);
+
+	constructor(out: OutputStream);
 	constructor(...args: any[]) {
 		return new FilterOutputStream.$javaClass(...args);
 	}
+
+	public static nullOutputStream(): OutputStream;
+	public static nullOutputStream(...args: any[]): any {
+		return FilterOutputStream.$javaClass.nullOutputStream(...args);
+	}
+
 }
 

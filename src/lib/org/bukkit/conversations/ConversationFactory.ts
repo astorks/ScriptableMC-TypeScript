@@ -9,12 +9,12 @@ import Prompt from '../../../org/bukkit/conversations/Prompt.js'
 
 export default interface ConversationFactory {
 	addConversationAbandonedListener(listener: ConversationAbandonedListener): ConversationFactory;
-	withConversationCanceller(canceller: ConversationCanceller): ConversationFactory;
-	withInitialSessionData(initialSessionData: any): ConversationFactory;
-	withEscapeSequence(escapeSequence: string): ConversationFactory;
-	thatExcludesNonPlayersWithMessage(playerOnlyMessage: string): ConversationFactory;
 	buildConversation(forWhom: Conversable): Conversation;
+	thatExcludesNonPlayersWithMessage(playerOnlyMessage: string): ConversationFactory;
+	withConversationCanceller(canceller: ConversationCanceller): ConversationFactory;
+	withEscapeSequence(escapeSequence: string): ConversationFactory;
 	withFirstPrompt(firstPrompt: Prompt): ConversationFactory;
+	withInitialSessionData(initialSessionData: any): ConversationFactory;
 	withLocalEcho(localEchoEnabled: boolean): ConversationFactory;
 	withModality(modal: boolean): ConversationFactory;
 	withPrefix(prefix: ConversationPrefix): ConversationFactory;
@@ -25,9 +25,11 @@ export default class ConversationFactory {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.conversations.ConversationFactory');
 	}
+
 	constructor(plugin: Plugin);
 	constructor(...args: any[]) {
 		return new ConversationFactory.$javaClass(...args);
 	}
+
 }
 

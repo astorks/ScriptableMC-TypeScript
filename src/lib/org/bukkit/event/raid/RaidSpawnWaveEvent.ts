@@ -6,12 +6,12 @@ import Raider from '../../../../org/bukkit/entity/Raider.js'
 import World from '../../../../org/bukkit/World.js'
 
 export default interface RaidSpawnWaveEvent extends RaidEvent {
+	getEventName(): string;
 	getHandlers(): HandlerList;
-	getRaiders(): Array<Raider>;
 	getPatrolLeader(): Raider;
 	getRaid(): Raid;
+	getRaiders(): Array<Raider>;
 	getWorld(): World;
-	getEventName(): string;
 	isAsynchronous(): boolean;
 }
 
@@ -19,13 +19,16 @@ export default class RaidSpawnWaveEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.raid.RaidSpawnWaveEvent');
 	}
+
 	constructor(raid: Raid, world: World, leader: Raider, raiders: Array<any>);
 	constructor(...args: any[]) {
 		return new RaidSpawnWaveEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return RaidSpawnWaveEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

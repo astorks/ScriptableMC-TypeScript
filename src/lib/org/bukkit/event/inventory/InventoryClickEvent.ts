@@ -11,45 +11,48 @@ import InventoryView from '../../../../org/bukkit/inventory/InventoryView.js'
 import ItemStack from '../../../../org/bukkit/inventory/ItemStack.js'
 
 export default interface InventoryClickEvent extends InventoryInteractEvent {
-	getHandlers(): HandlerList;
-	setCursor(stack: ItemStack): void;
-	getCursor(): ItemStack;
-	getSlotType(): InventoryType$SlotType;
-	getClickedInventory(): Inventory;
-	getCurrentItem(): ItemStack;
-	isRightClick(): boolean;
-	isLeftClick(): boolean;
-	isShiftClick(): boolean;
-	setCurrentItem(stack: ItemStack): void;
-	getRawSlot(): number;
-	getHotbarButton(): number;
 	getAction(): InventoryAction;
 	getClick(): ClickType;
-	getSlot(): number;
-	isCancelled(): boolean;
-	setCancelled(toCancel: boolean): void;
-	getWhoClicked(): HumanEntity;
-	setResult(newResult: Event$Result): void;
-	getResult(): Event$Result;
-	getInventory(): Inventory;
-	getViewers(): Array<HumanEntity>;
-	getView(): InventoryView;
+	getClickedInventory(): Inventory;
+	getCurrentItem(): ItemStack;
+	getCursor(): ItemStack;
 	getEventName(): string;
+	getHandlers(): HandlerList;
+	getHotbarButton(): number;
+	getInventory(): Inventory;
+	getRawSlot(): number;
+	getResult(): Event$Result;
+	getSlot(): number;
+	getSlotType(): InventoryType$SlotType;
+	getView(): InventoryView;
+	getViewers(): Array<HumanEntity>;
+	getWhoClicked(): HumanEntity;
 	isAsynchronous(): boolean;
+	isCancelled(): boolean;
+	isLeftClick(): boolean;
+	isRightClick(): boolean;
+	isShiftClick(): boolean;
+	setCancelled(toCancel: boolean): void;
+	setCurrentItem(stack: ItemStack): void;
+	setCursor(stack: ItemStack): void;
+	setResult(newResult: Event$Result): void;
 }
 
 export default class InventoryClickEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.inventory.InventoryClickEvent');
 	}
-	constructor(view: InventoryView, type: InventoryType$SlotType, slot: number, click: ClickType, action: InventoryAction, key: number);
+
 	constructor(view: InventoryView, type: InventoryType$SlotType, slot: number, click: ClickType, action: InventoryAction);
+	constructor(view: InventoryView, type: InventoryType$SlotType, slot: number, click: ClickType, action: InventoryAction, key: number);
 	constructor(...args: any[]) {
 		return new InventoryClickEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return InventoryClickEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

@@ -1,21 +1,22 @@
 declare var Java: any;
 
 export default interface BanEntry {
-	getSource(): string;
-	getExpiration(): any;
 	getCreated(): any;
-	setCreated(arg0: any): void;
-	setSource(arg0: string): void;
-	setExpiration(arg0: any): void;
+	getExpiration(): any;
 	getReason(): string;
-	setReason(arg0: string): void;
-	save(): void;
+	getSource(): string;
 	getTarget(): string;
+	save(): void;
+	setCreated(arg0: any): void;
+	setExpiration(arg0: any): void;
+	setReason(arg0: string): void;
+	setSource(arg0: string): void;
 }
 
 export default class BanEntry {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.BanEntry');
 	}
+
 }
 

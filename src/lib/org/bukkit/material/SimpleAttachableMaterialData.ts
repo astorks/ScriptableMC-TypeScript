@@ -6,28 +6,30 @@ import Material from '../../../org/bukkit/Material.js'
 import MaterialData from '../../../org/bukkit/material/MaterialData.js'
 
 export default interface SimpleAttachableMaterialData extends MaterialData, Attachable {
-	getFacing(): BlockFace;
+	clone(): any;
 	clone(): SimpleAttachableMaterialData;
 	clone(): MaterialData;
-	clone(): any;
+	getAttachedFace(): BlockFace;
 	getData(): number;
-	setData(data: number): void;
+	getFacing(): BlockFace;
 	getItemType(): Material;
+	setData(data: number): void;
+	setFacingDirection(arg0: BlockFace): void;
 	toItemStack(): ItemStack;
 	toItemStack(amount: number): ItemStack;
-	getAttachedFace(): BlockFace;
-	setFacingDirection(arg0: BlockFace): void;
 }
 
 export default class SimpleAttachableMaterialData {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.material.SimpleAttachableMaterialData');
 	}
-	constructor(type: Material, data: number);
+
 	constructor(type: Material);
+	constructor(type: Material, data: number);
 	constructor(type: Material, direction: BlockFace);
 	constructor(...args: any[]) {
 		return new SimpleAttachableMaterialData.$javaClass(...args);
 	}
+
 }
 

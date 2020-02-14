@@ -10,5 +10,6 @@ export default class InterruptibleChannel {
 	public static get $javaClass(): any {
 		return Java.type('java.nio.channels.InterruptibleChannel');
 	}
+
 }
 

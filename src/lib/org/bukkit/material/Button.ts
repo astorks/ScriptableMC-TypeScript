@@ -7,18 +7,18 @@ import Redstone from '../../../org/bukkit/material/Redstone.js'
 import SimpleAttachableMaterialData from '../../../org/bukkit/material/SimpleAttachableMaterialData.js'
 
 export default interface Button extends SimpleAttachableMaterialData, Redstone {
-	getAttachedFace(): BlockFace;
-	setFacingDirection(face: BlockFace): void;
-	isPowered(): boolean;
-	setPowered(bool: boolean): void;
-	clone(): MaterialData;
-	clone(): Button;
 	clone(): any;
+	clone(): Button;
 	clone(): SimpleAttachableMaterialData;
-	getFacing(): BlockFace;
+	clone(): MaterialData;
+	getAttachedFace(): BlockFace;
 	getData(): number;
-	setData(data: number): void;
+	getFacing(): BlockFace;
 	getItemType(): Material;
+	isPowered(): boolean;
+	setData(data: number): void;
+	setFacingDirection(face: BlockFace): void;
+	setPowered(bool: boolean): void;
 	toItemStack(): ItemStack;
 	toItemStack(amount: number): ItemStack;
 }
@@ -27,11 +27,13 @@ export default class Button {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.material.Button');
 	}
-	constructor(type: Material);
+
 	constructor();
+	constructor(type: Material);
 	constructor(type: Material, data: number);
 	constructor(...args: any[]) {
 		return new Button.$javaClass(...args);
 	}
+
 }
 

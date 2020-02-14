@@ -13,12 +13,15 @@ export default class FixedSetPrompt {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.conversations.FixedSetPrompt');
 	}
+
 	constructor(fixedSet: Array<string>);
 	constructor(...args: any[]) {
 		return new FixedSetPrompt.$javaClass(...args);
 	}
+
 	public static get END_OF_CONVERSATION(): Prompt {
 		return FixedSetPrompt.$javaClass.END_OF_CONVERSATION;
 	}
+
 }
 

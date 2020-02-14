@@ -7,28 +7,31 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import Location from '../../../../org/bukkit/Location.js'
 
 export default interface SpawnerSpawnEvent extends EntitySpawnEvent {
-	getSpawner(): CreatureSpawner;
-	isCancelled(): boolean;
-	getHandlers(): HandlerList;
-	setCancelled(cancel: boolean): void;
-	getLocation(): Location;
 	getEntity(): Entity;
 	getEntityType(): EntityType;
 	getEventName(): string;
+	getHandlers(): HandlerList;
+	getLocation(): Location;
+	getSpawner(): CreatureSpawner;
 	isAsynchronous(): boolean;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 }
 
 export default class SpawnerSpawnEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.entity.SpawnerSpawnEvent');
 	}
+
 	constructor(spawnee: Entity, spawner: CreatureSpawner);
 	constructor(...args: any[]) {
 		return new SpawnerSpawnEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return SpawnerSpawnEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

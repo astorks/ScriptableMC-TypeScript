@@ -9,30 +9,33 @@ import Villager$Profession from '../../../../org/bukkit/entity/Villager$Professi
 import VillagerCareerChangeEvent$ChangeReason from '../../../../org/bukkit/event/entity/VillagerCareerChangeEvent$ChangeReason.js'
 
 export default interface VillagerCareerChangeEvent extends EntityEvent, Cancellable {
-	isCancelled(): boolean;
-	getHandlers(): HandlerList;
-	getEntity(): Villager;
 	getEntity(): Entity;
-	setCancelled(cancel: boolean): void;
-	setProfession(profession: Villager$Profession): void;
-	getProfession(): Villager$Profession;
-	getReason(): VillagerCareerChangeEvent$ChangeReason;
+	getEntity(): Villager;
 	getEntityType(): EntityType;
 	getEventName(): string;
+	getHandlers(): HandlerList;
+	getProfession(): Villager$Profession;
+	getReason(): VillagerCareerChangeEvent$ChangeReason;
 	isAsynchronous(): boolean;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
+	setProfession(profession: Villager$Profession): void;
 }
 
 export default class VillagerCareerChangeEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.entity.VillagerCareerChangeEvent');
 	}
+
 	constructor(what: Villager, profession: Villager$Profession, reason: VillagerCareerChangeEvent$ChangeReason);
 	constructor(...args: any[]) {
 		return new VillagerCareerChangeEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return VillagerCareerChangeEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

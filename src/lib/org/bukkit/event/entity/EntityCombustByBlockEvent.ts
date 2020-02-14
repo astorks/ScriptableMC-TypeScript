@@ -8,27 +8,30 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 export default interface EntityCombustByBlockEvent extends EntityCombustEvent {
 	getCombuster(): Block;
 	getDuration(): number;
-	isCancelled(): boolean;
-	getHandlers(): HandlerList;
-	setCancelled(cancel: boolean): void;
-	setDuration(duration: number): void;
 	getEntity(): Entity;
 	getEntityType(): EntityType;
 	getEventName(): string;
+	getHandlers(): HandlerList;
 	isAsynchronous(): boolean;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
+	setDuration(duration: number): void;
 }
 
 export default class EntityCombustByBlockEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.entity.EntityCombustByBlockEvent');
 	}
+
 	constructor(combuster: Block, combustee: Entity, duration: number);
 	constructor(...args: any[]) {
 		return new EntityCombustByBlockEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return EntityCombustByBlockEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

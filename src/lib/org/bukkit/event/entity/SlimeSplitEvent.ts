@@ -7,29 +7,32 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import Slime from '../../../../org/bukkit/entity/Slime.js'
 
 export default interface SlimeSplitEvent extends EntityEvent, Cancellable {
-	isCancelled(): boolean;
-	getHandlers(): HandlerList;
-	getEntity(): Slime;
-	getEntity(): Entity;
-	setCancelled(cancel: boolean): void;
 	getCount(): number;
-	setCount(count: number): void;
+	getEntity(): Entity;
+	getEntity(): Slime;
 	getEntityType(): EntityType;
 	getEventName(): string;
+	getHandlers(): HandlerList;
 	isAsynchronous(): boolean;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
+	setCount(count: number): void;
 }
 
 export default class SlimeSplitEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.entity.SlimeSplitEvent');
 	}
+
 	constructor(slime: Slime, count: number);
 	constructor(...args: any[]) {
 		return new SlimeSplitEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return SlimeSplitEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

@@ -8,24 +8,26 @@ export default interface SimpleServicesManager extends ServicesManager {
 	getKnownServices(): any;
 	getKnownServices(): any;
 	getRegistration(service: any): RegisteredServiceProvider;
-	unregister(service: any, provider: any): void;
-	unregister(provider: any): void;
-	unregisterAll(plugin: Plugin): void;
 	getRegistrations(service: any): Array<any>;
 	getRegistrations(service: any): any;
 	getRegistrations(plugin: Plugin): Array<any>;
 	isProvidedFor(service: any): boolean;
-	register(service: any, provider: any, plugin: Plugin, priority: ServicePriority): void;
 	load(service: any): any;
+	register(service: any, provider: any, plugin: Plugin, priority: ServicePriority): void;
+	unregister(provider: any): void;
+	unregister(service: any, provider: any): void;
+	unregisterAll(plugin: Plugin): void;
 }
 
 export default class SimpleServicesManager {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.plugin.SimpleServicesManager');
 	}
+
 	constructor();
 	constructor(...args: any[]) {
 		return new SimpleServicesManager.$javaClass(...args);
 	}
+
 }
 

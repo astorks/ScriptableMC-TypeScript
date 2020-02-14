@@ -8,43 +8,46 @@ import LivingEntity from '../../../../org/bukkit/entity/LivingEntity.js'
 import Player from '../../../../org/bukkit/entity/Player.js'
 
 export default interface PlayerDeathEvent extends EntityDeathEvent {
-	getEntity(): Entity;
-	getEntity(): LivingEntity;
-	getEntity(): Player;
-	getNewLevel(): number;
-	setNewLevel(level: number): void;
-	setDeathMessage(deathMessage: string): void;
 	getDeathMessage(): string;
-	getNewExp(): number;
-	setNewExp(exp: number): void;
-	getNewTotalExp(): number;
-	setNewTotalExp(totalExp: number): void;
-	getKeepLevel(): boolean;
-	setKeepLevel(keepLevel: boolean): void;
-	setKeepInventory(keepInventory: boolean): void;
-	getKeepInventory(): boolean;
-	getHandlers(): HandlerList;
-	getDrops(): Array<ItemStack>;
-	setDroppedExp(exp: number): void;
 	getDroppedExp(): number;
+	getDrops(): Array<ItemStack>;
+	getEntity(): LivingEntity;
+	getEntity(): Entity;
+	getEntity(): Player;
 	getEntityType(): EntityType;
 	getEventName(): string;
+	getHandlers(): HandlerList;
+	getKeepInventory(): boolean;
+	getKeepLevel(): boolean;
+	getNewExp(): number;
+	getNewLevel(): number;
+	getNewTotalExp(): number;
 	isAsynchronous(): boolean;
+	setDeathMessage(deathMessage: string): void;
+	setDroppedExp(exp: number): void;
+	setKeepInventory(keepInventory: boolean): void;
+	setKeepLevel(keepLevel: boolean): void;
+	setNewExp(exp: number): void;
+	setNewLevel(level: number): void;
+	setNewTotalExp(totalExp: number): void;
 }
 
 export default class PlayerDeathEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.entity.PlayerDeathEvent');
 	}
-	constructor(player: Player, drops: Array<any>, droppedExp: number, newExp: number, deathMessage: string);
+
 	constructor(player: Player, drops: Array<any>, droppedExp: number, deathMessage: string);
+	constructor(player: Player, drops: Array<any>, droppedExp: number, newExp: number, deathMessage: string);
 	constructor(player: Player, drops: Array<any>, droppedExp: number, newExp: number, newTotalExp: number, newLevel: number, deathMessage: string);
 	constructor(...args: any[]) {
 		return new PlayerDeathEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return PlayerDeathEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

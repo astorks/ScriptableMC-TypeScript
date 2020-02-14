@@ -7,19 +7,19 @@ import Material from '../../../../../org/bukkit/Material.js'
 import Waterlogged from '../../../../../org/bukkit/block/data/Waterlogged.js'
 
 export default interface Chest extends Directional, Waterlogged {
-	setType(arg0: Chest$Type): void;
-	getType(): Chest$Type;
-	getFacing(): BlockFace;
-	setFacing(arg0: BlockFace): void;
-	getFaces(): any;
-	getMaterial(): Material;
-	getAsString(arg0: boolean): string;
-	getAsString(): string;
-	clone(): BlockData;
 	clone(): any;
+	clone(): BlockData;
+	getAsString(): string;
+	getAsString(arg0: boolean): string;
+	getFaces(): any;
+	getFacing(): BlockFace;
+	getMaterial(): Material;
+	getType(): Chest$Type;
+	isWaterlogged(): boolean;
 	matches(arg0: BlockData): boolean;
 	merge(arg0: BlockData): BlockData;
-	isWaterlogged(): boolean;
+	setFacing(arg0: BlockFace): void;
+	setType(arg0: Chest$Type): void;
 	setWaterlogged(arg0: boolean): void;
 }
 
@@ -27,5 +27,6 @@ export default class Chest {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.block.data.type.Chest');
 	}
+
 }
 

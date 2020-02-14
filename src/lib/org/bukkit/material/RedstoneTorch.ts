@@ -8,18 +8,18 @@ import SimpleAttachableMaterialData from '../../../org/bukkit/material/SimpleAtt
 import Torch from '../../../org/bukkit/material/Torch.js'
 
 export default interface RedstoneTorch extends Torch, Redstone {
-	isPowered(): boolean;
-	clone(): SimpleAttachableMaterialData;
 	clone(): MaterialData;
 	clone(): any;
+	clone(): SimpleAttachableMaterialData;
 	clone(): Torch;
 	clone(): RedstoneTorch;
 	getAttachedFace(): BlockFace;
-	setFacingDirection(face: BlockFace): void;
-	getFacing(): BlockFace;
 	getData(): number;
-	setData(data: number): void;
+	getFacing(): BlockFace;
 	getItemType(): Material;
+	isPowered(): boolean;
+	setData(data: number): void;
+	setFacingDirection(face: BlockFace): void;
 	toItemStack(): ItemStack;
 	toItemStack(amount: number): ItemStack;
 }
@@ -28,11 +28,13 @@ export default class RedstoneTorch {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.material.RedstoneTorch');
 	}
-	constructor(type: Material, data: number);
-	constructor(type: Material);
+
 	constructor();
+	constructor(type: Material);
+	constructor(type: Material, data: number);
 	constructor(...args: any[]) {
 		return new RedstoneTorch.$javaClass(...args);
 	}
+
 }
 

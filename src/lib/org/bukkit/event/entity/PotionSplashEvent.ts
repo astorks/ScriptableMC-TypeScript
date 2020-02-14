@@ -11,35 +11,38 @@ import ProjectileHitEvent from '../../../../org/bukkit/event/entity/ProjectileHi
 import ThrownPotion from '../../../../org/bukkit/entity/ThrownPotion.js'
 
 export default interface PotionSplashEvent extends ProjectileHitEvent, Cancellable {
-	isCancelled(): boolean;
-	getHandlers(): HandlerList;
-	getEntity(): Entity;
-	getEntity(): ThrownPotion;
-	getEntity(): Projectile;
-	setCancelled(cancel: boolean): void;
 	getAffectedEntities(): any;
-	getIntensity(entity: LivingEntity): number;
-	setIntensity(entity: LivingEntity, intensity: number): void;
-	getPotion(): ThrownPotion;
+	getEntity(): Entity;
+	getEntity(): Projectile;
+	getEntity(): ThrownPotion;
+	getEntityType(): EntityType;
+	getEventName(): string;
+	getHandlers(): HandlerList;
 	getHitBlock(): Block;
 	getHitBlockFace(): BlockFace;
 	getHitEntity(): Entity;
-	getEntityType(): EntityType;
-	getEventName(): string;
+	getIntensity(entity: LivingEntity): number;
+	getPotion(): ThrownPotion;
 	isAsynchronous(): boolean;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
+	setIntensity(entity: LivingEntity, intensity: number): void;
 }
 
 export default class PotionSplashEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.entity.PotionSplashEvent');
 	}
+
 	constructor(potion: ThrownPotion, affectedEntities: any);
 	constructor(...args: any[]) {
 		return new PotionSplashEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return PotionSplashEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

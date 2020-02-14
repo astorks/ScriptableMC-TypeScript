@@ -7,24 +7,26 @@ import Recipe from '../../../org/bukkit/inventory/Recipe.js'
 import RecipeChoice from '../../../org/bukkit/inventory/RecipeChoice.js'
 
 export default interface StonecuttingRecipe extends Recipe, Keyed {
-	setInput(input: Material): StonecuttingRecipe;
-	setInputChoice(input: RecipeChoice): StonecuttingRecipe;
-	getInputChoice(): RecipeChoice;
-	getInput(): ItemStack;
 	getGroup(): string;
-	setGroup(group: string): void;
+	getInput(): ItemStack;
+	getInputChoice(): RecipeChoice;
 	getKey(): NamespacedKey;
 	getResult(): ItemStack;
+	setGroup(group: string): void;
+	setInput(input: Material): StonecuttingRecipe;
+	setInputChoice(input: RecipeChoice): StonecuttingRecipe;
 }
 
 export default class StonecuttingRecipe {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.inventory.StonecuttingRecipe');
 	}
+
 	constructor(key: NamespacedKey, result: ItemStack, source: Material);
 	constructor(key: NamespacedKey, result: ItemStack, input: RecipeChoice);
 	constructor(...args: any[]) {
 		return new StonecuttingRecipe.$javaClass(...args);
 	}
+
 }
 

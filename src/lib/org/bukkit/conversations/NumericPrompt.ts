@@ -13,12 +13,15 @@ export default class NumericPrompt {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.conversations.NumericPrompt');
 	}
+
 	constructor();
 	constructor(...args: any[]) {
 		return new NumericPrompt.$javaClass(...args);
 	}
+
 	public static get END_OF_CONVERSATION(): Prompt {
 		return NumericPrompt.$javaClass.END_OF_CONVERSATION;
 	}
+
 }
 

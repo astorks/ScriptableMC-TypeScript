@@ -15,46 +15,47 @@ import TileState from '../../../org/bukkit/block/TileState.js'
 import World from '../../../org/bukkit/World.js'
 
 export default interface Skull extends TileState {
-	setOwner(arg0: string): boolean;
-	getOwner(): string;
-	setRotation(arg0: BlockFace): void;
-	getRotation(): BlockFace;
-	hasOwner(): boolean;
-	setOwningPlayer(arg0: OfflinePlayer): void;
-	getOwningPlayer(): OfflinePlayer;
-	getSkullType(): SkullType;
-	setSkullType(arg0: SkullType): void;
-	getPersistentDataContainer(): PersistentDataContainer;
-	getData(): MaterialData;
 	getBlock(): Block;
-	getWorld(): World;
-	setType(arg0: Material): void;
-	setData(arg0: MaterialData): void;
+	getBlockData(): BlockData;
 	getChunk(): Chunk;
+	getData(): MaterialData;
+	getLightLevel(): number;
+	getLocation(): Location;
+	getLocation(arg0: Location): Location;
+	getMetadata(arg0: string): Array<MetadataValue>;
+	getOwner(): string;
+	getOwningPlayer(): OfflinePlayer;
+	getPersistentDataContainer(): PersistentDataContainer;
+	getRawData(): number;
+	getRotation(): BlockFace;
+	getSkullType(): SkullType;
+	getType(): Material;
+	getWorld(): World;
 	getX(): number;
 	getY(): number;
 	getZ(): number;
-	getBlockData(): BlockData;
-	setRawData(arg0: number): void;
-	getRawData(): number;
-	isPlaced(): boolean;
-	setBlockData(arg0: BlockData): void;
-	getLightLevel(): number;
-	update(arg0: boolean, arg1: boolean): boolean;
-	update(arg0: boolean): boolean;
-	update(): boolean;
-	getLocation(arg0: Location): Location;
-	getLocation(): Location;
-	getType(): Material;
-	setMetadata(arg0: string, arg1: MetadataValue): void;
-	getMetadata(arg0: string): Array<MetadataValue>;
 	hasMetadata(arg0: string): boolean;
+	hasOwner(): boolean;
+	isPlaced(): boolean;
 	removeMetadata(arg0: string, arg1: Plugin): void;
+	setBlockData(arg0: BlockData): void;
+	setData(arg0: MaterialData): void;
+	setMetadata(arg0: string, arg1: MetadataValue): void;
+	setOwner(arg0: string): boolean;
+	setOwningPlayer(arg0: OfflinePlayer): void;
+	setRawData(arg0: number): void;
+	setRotation(arg0: BlockFace): void;
+	setSkullType(arg0: SkullType): void;
+	setType(arg0: Material): void;
+	update(): boolean;
+	update(arg0: boolean): boolean;
+	update(arg0: boolean, arg1: boolean): boolean;
 }
 
 export default class Skull {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.block.Skull');
 	}
+
 }
 

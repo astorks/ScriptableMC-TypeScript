@@ -11,5 +11,6 @@ export default class BukkitWorker {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.scheduler.BukkitWorker');
 	}
+
 }
 

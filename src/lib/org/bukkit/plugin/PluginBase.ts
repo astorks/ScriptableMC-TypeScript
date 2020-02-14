@@ -11,36 +11,38 @@ import PluginLoader from '../../../org/bukkit/plugin/PluginLoader.js'
 import Server from '../../../org/bukkit/Server.js'
 
 export default interface PluginBase extends Plugin {
-	getName(): string;
-	getLogger(): any;
-	getServer(): Server;
-	onLoad(): void;
-	onEnable(): void;
-	onDisable(): void;
-	isEnabled(): boolean;
-	getDescription(): PluginDescriptionFile;
-	getDataFolder(): File;
-	getPluginLoader(): PluginLoader;
 	getConfig(): FileConfiguration;
+	getDataFolder(): File;
+	getDefaultWorldGenerator(arg0: string, arg1: string): ChunkGenerator;
+	getDescription(): PluginDescriptionFile;
+	getLogger(): any;
+	getName(): string;
+	getPluginLoader(): PluginLoader;
+	getResource(arg0: string): InputStream;
+	getServer(): Server;
+	isEnabled(): boolean;
+	isNaggable(): boolean;
+	onCommand(arg0: CommandSender, arg1: Command, arg2: string, arg3: Array<string>): boolean;
+	onDisable(): void;
+	onEnable(): void;
+	onLoad(): void;
+	onTabComplete(arg0: CommandSender, arg1: Command, arg2: string, arg3: Array<string>): Array<string>;
 	reloadConfig(): void;
 	saveConfig(): void;
 	saveDefaultConfig(): void;
 	saveResource(arg0: string, arg1: boolean): void;
-	getDefaultWorldGenerator(arg0: string, arg1: string): ChunkGenerator;
-	isNaggable(): boolean;
 	setNaggable(arg0: boolean): void;
-	getResource(arg0: string): InputStream;
-	onTabComplete(arg0: CommandSender, arg1: Command, arg2: string, arg3: Array<string>): Array<string>;
-	onCommand(arg0: CommandSender, arg1: Command, arg2: string, arg3: Array<string>): boolean;
 }
 
 export default class PluginBase {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.plugin.PluginBase');
 	}
+
 	constructor();
 	constructor(...args: any[]) {
 		return new PluginBase.$javaClass(...args);
 	}
+
 }
 

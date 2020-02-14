@@ -6,15 +6,15 @@ import Material from '../../../org/bukkit/Material.js'
 import MaterialData from '../../../org/bukkit/material/MaterialData.js'
 
 export default interface Pumpkin extends MaterialData, Directional {
-	getFacing(): BlockFace;
-	setFacingDirection(face: BlockFace): void;
-	isLit(): boolean;
+	clone(): MaterialData;
 	clone(): Pumpkin;
 	clone(): any;
-	clone(): MaterialData;
 	getData(): number;
-	setData(data: number): void;
+	getFacing(): BlockFace;
 	getItemType(): Material;
+	isLit(): boolean;
+	setData(data: number): void;
+	setFacingDirection(face: BlockFace): void;
 	toItemStack(): ItemStack;
 	toItemStack(amount: number): ItemStack;
 }
@@ -23,12 +23,14 @@ export default class Pumpkin {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.material.Pumpkin');
 	}
-	constructor(direction: BlockFace);
+
 	constructor();
-	constructor(type: Material, data: number);
 	constructor(type: Material);
+	constructor(direction: BlockFace);
+	constructor(type: Material, data: number);
 	constructor(...args: any[]) {
 		return new Pumpkin.$javaClass(...args);
 	}
+
 }
 

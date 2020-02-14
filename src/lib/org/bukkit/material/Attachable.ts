@@ -12,5 +12,6 @@ export default class Attachable {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.material.Attachable');
 	}
+
 }
 

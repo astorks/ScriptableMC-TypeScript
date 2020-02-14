@@ -12,12 +12,15 @@ export default class MessagePrompt {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.conversations.MessagePrompt');
 	}
+
 	constructor();
 	constructor(...args: any[]) {
 		return new MessagePrompt.$javaClass(...args);
 	}
+
 	public static get END_OF_CONVERSATION(): Prompt {
 		return MessagePrompt.$javaClass.END_OF_CONVERSATION;
 	}
+
 }
 

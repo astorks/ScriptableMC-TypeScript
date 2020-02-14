@@ -10,23 +10,23 @@ import Powerable from '../../../../../org/bukkit/block/data/Powerable.js'
 import Waterlogged from '../../../../../org/bukkit/block/data/Waterlogged.js'
 
 export default interface TrapDoor extends Bisected, Directional, Openable, Powerable, Waterlogged {
-	getHalf(): Bisected$Half;
-	setHalf(arg0: Bisected$Half): void;
-	getMaterial(): Material;
-	getAsString(arg0: boolean): string;
-	getAsString(): string;
-	clone(): BlockData;
 	clone(): any;
-	matches(arg0: BlockData): boolean;
-	merge(arg0: BlockData): BlockData;
-	getFacing(): BlockFace;
-	setFacing(arg0: BlockFace): void;
+	clone(): BlockData;
+	getAsString(): string;
+	getAsString(arg0: boolean): string;
 	getFaces(): any;
-	setOpen(arg0: boolean): void;
+	getFacing(): BlockFace;
+	getHalf(): Bisected$Half;
+	getMaterial(): Material;
 	isOpen(): boolean;
 	isPowered(): boolean;
-	setPowered(arg0: boolean): void;
 	isWaterlogged(): boolean;
+	matches(arg0: BlockData): boolean;
+	merge(arg0: BlockData): BlockData;
+	setFacing(arg0: BlockFace): void;
+	setHalf(arg0: Bisected$Half): void;
+	setOpen(arg0: boolean): void;
+	setPowered(arg0: boolean): void;
 	setWaterlogged(arg0: boolean): void;
 }
 
@@ -34,5 +34,6 @@ export default class TrapDoor {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.block.data.type.TrapDoor');
 	}
+
 }
 

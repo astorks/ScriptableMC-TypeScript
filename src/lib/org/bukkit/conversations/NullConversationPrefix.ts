@@ -10,9 +10,11 @@ export default class NullConversationPrefix {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.conversations.NullConversationPrefix');
 	}
+
 	constructor();
 	constructor(...args: any[]) {
 		return new NullConversationPrefix.$javaClass(...args);
 	}
+
 }
 

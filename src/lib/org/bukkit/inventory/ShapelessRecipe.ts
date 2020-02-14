@@ -8,36 +8,38 @@ import Recipe from '../../../org/bukkit/inventory/Recipe.js'
 import RecipeChoice from '../../../org/bukkit/inventory/RecipeChoice.js'
 
 export default interface ShapelessRecipe extends Recipe, Keyed {
-	getChoiceList(): Array<RecipeChoice>;
-	getIngredientList(): Array<ItemStack>;
-	addIngredient(count: number, ingredient: Material): ShapelessRecipe;
-	addIngredient(count: number, ingredient: MaterialData): ShapelessRecipe;
-	addIngredient(count: number, ingredient: Material, rawdata: number): ShapelessRecipe;
 	addIngredient(ingredient: RecipeChoice): ShapelessRecipe;
 	addIngredient(ingredient: MaterialData): ShapelessRecipe;
 	addIngredient(ingredient: Material): ShapelessRecipe;
+	addIngredient(count: number, ingredient: Material): ShapelessRecipe;
 	addIngredient(ingredient: Material, rawdata: number): ShapelessRecipe;
-	removeIngredient(count: number, ingredient: Material): ShapelessRecipe;
-	removeIngredient(count: number, ingredient: MaterialData): ShapelessRecipe;
-	removeIngredient(ingredient: Material, rawdata: number): ShapelessRecipe;
-	removeIngredient(count: number, ingredient: Material, rawdata: number): ShapelessRecipe;
+	addIngredient(count: number, ingredient: MaterialData): ShapelessRecipe;
+	addIngredient(count: number, ingredient: Material, rawdata: number): ShapelessRecipe;
+	getChoiceList(): Array<RecipeChoice>;
+	getGroup(): string;
+	getIngredientList(): Array<ItemStack>;
+	getKey(): NamespacedKey;
+	getResult(): ItemStack;
 	removeIngredient(ingredient: RecipeChoice): ShapelessRecipe;
 	removeIngredient(ingredient: Material): ShapelessRecipe;
 	removeIngredient(ingredient: MaterialData): ShapelessRecipe;
-	getGroup(): string;
+	removeIngredient(ingredient: Material, rawdata: number): ShapelessRecipe;
+	removeIngredient(count: number, ingredient: MaterialData): ShapelessRecipe;
+	removeIngredient(count: number, ingredient: Material): ShapelessRecipe;
+	removeIngredient(count: number, ingredient: Material, rawdata: number): ShapelessRecipe;
 	setGroup(group: string): void;
-	getKey(): NamespacedKey;
-	getResult(): ItemStack;
 }
 
 export default class ShapelessRecipe {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.inventory.ShapelessRecipe');
 	}
+
 	constructor(result: ItemStack);
 	constructor(key: NamespacedKey, result: ItemStack);
 	constructor(...args: any[]) {
 		return new ShapelessRecipe.$javaClass(...args);
 	}
+
 }
 

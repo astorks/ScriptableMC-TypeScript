@@ -3,11 +3,11 @@ import Keyed from '../../../org/bukkit/Keyed.js'
 import NamespacedKey from '../../../org/bukkit/NamespacedKey.js'
 
 export default interface Villager$Profession extends Keyed {
+	compareTo(arg0: any): number;
+	compareTo(o: any): number;
+	getDeclaringClass(): any;
 	getKey(): NamespacedKey;
 	name(): string;
-	compareTo(arg0: any): number;
-	compareTo(arg0: any): number;
-	getDeclaringClass(): any;
 	ordinal(): number;
 }
 
@@ -16,9 +16,6 @@ export default class Villager$Profession {
 		return Java.type('org.bukkit.entity.Villager$Profession');
 	}
 
-	public static get NONE(): Villager$Profession {
-		return this.$javaClass.NONE;
-	}
 	public static get ARMORER(): Villager$Profession {
 		return this.$javaClass.ARMORER;
 	}
@@ -51,6 +48,9 @@ export default class Villager$Profession {
 	}
 	public static get NITWIT(): Villager$Profession {
 		return this.$javaClass.NITWIT;
+	}
+	public static get NONE(): Villager$Profession {
+		return this.$javaClass.NONE;
 	}
 	public static get SHEPHERD(): Villager$Profession {
 		return this.$javaClass.SHEPHERD;

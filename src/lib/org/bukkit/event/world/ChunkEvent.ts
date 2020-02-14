@@ -6,9 +6,9 @@ import WorldEvent from '../../../../org/bukkit/event/world/WorldEvent.js'
 
 export default interface ChunkEvent extends WorldEvent {
 	getChunk(): Chunk;
-	getWorld(): World;
-	getHandlers(): HandlerList;
 	getEventName(): string;
+	getHandlers(): HandlerList;
+	getWorld(): World;
 	isAsynchronous(): boolean;
 }
 
@@ -16,5 +16,6 @@ export default class ChunkEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.world.ChunkEvent');
 	}
+
 }
 

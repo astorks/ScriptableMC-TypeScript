@@ -8,65 +8,72 @@ import PreparedStatement from '../../java/sql/PreparedStatement.js'
 import SQLWarning from '../../java/sql/SQLWarning.js'
 import SQLXML from '../../java/sql/SQLXML.js'
 import Savepoint from '../../java/sql/Savepoint.js'
+import ShardingKey from '../../java/sql/ShardingKey.js'
 import Statement from '../../java/sql/Statement.js'
 import Struct from '../../java/sql/Struct.js'
 import Wrapper from '../../java/sql/Wrapper.js'
 import _Array from '../../java/sql/Array.js'
 
 export default interface Connection {
-	isValid(arg0: number): boolean;
-	prepareCall(arg0: string, arg1: number, arg2: number): CallableStatement;
-	prepareCall(arg0: string): CallableStatement;
-	prepareCall(arg0: string, arg1: number, arg2: number, arg3: number): CallableStatement;
-	nativeSQL(arg0: string): string;
-	setAutoCommit(arg0: boolean): void;
-	getAutoCommit(): boolean;
-	commit(): void;
-	rollback(arg0: Savepoint): void;
-	rollback(): void;
-	getMetaData(): DatabaseMetaData;
-	setCatalog(arg0: string): void;
-	getCatalog(): string;
-	setTransactionIsolation(arg0: number): void;
-	getTransactionIsolation(): number;
-	getWarnings(): SQLWarning;
+	abort(arg0: any): void;
+	beginRequest(): void;
 	clearWarnings(): void;
-	getTypeMap(): any;
-	setTypeMap(arg0: any): void;
-	setHoldability(arg0: number): void;
-	getHoldability(): number;
-	setSavepoint(arg0: string): Savepoint;
-	setSavepoint(): Savepoint;
-	releaseSavepoint(arg0: Savepoint): void;
-	createClob(): Clob;
+	close(): void;
+	commit(): void;
+	createArrayOf(arg0: string, arg1: Array<any>): _Array;
 	createBlob(): Blob;
+	createClob(): Clob;
 	createNClob(): NClob;
 	createSQLXML(): SQLXML;
-	setClientInfo(arg0: string, arg1: string): void;
-	setClientInfo(arg0: any): void;
+	createStatement(): Statement;
+	createStatement(arg0: number, arg1: number): Statement;
+	createStatement(arg0: number, arg1: number, arg2: number): Statement;
+	createStruct(arg0: string, arg1: Array<any>): Struct;
+	endRequest(): void;
+	getAutoCommit(): boolean;
+	getCatalog(): string;
 	getClientInfo(): any;
 	getClientInfo(arg0: string): string;
-	createArrayOf(arg0: string, arg1: Array<any>): _Array;
-	createStruct(arg0: string, arg1: Array<any>): Struct;
-	setSchema(arg0: string): void;
-	getSchema(): string;
-	setNetworkTimeout(arg0: any, arg1: number): void;
+	getHoldability(): number;
+	getMetaData(): DatabaseMetaData;
 	getNetworkTimeout(): number;
-	abort(arg0: any): void;
-	createStatement(): Statement;
-	createStatement(arg0: number, arg1: number, arg2: number): Statement;
-	createStatement(arg0: number, arg1: number): Statement;
-	prepareStatement(arg0: string, arg1: Array<number>): PreparedStatement;
-	prepareStatement(arg0: string, arg1: Array<string>): PreparedStatement;
+	getSchema(): string;
+	getTransactionIsolation(): number;
+	getTypeMap(): any;
+	getWarnings(): SQLWarning;
+	isClosed(): boolean;
+	isReadOnly(): boolean;
+	isValid(arg0: number): boolean;
+	isWrapperFor(arg0: any): boolean;
+	nativeSQL(arg0: string): string;
+	prepareCall(arg0: string): CallableStatement;
+	prepareCall(arg0: string, arg1: number, arg2: number): CallableStatement;
+	prepareCall(arg0: string, arg1: number, arg2: number, arg3: number): CallableStatement;
 	prepareStatement(arg0: string): PreparedStatement;
 	prepareStatement(arg0: string, arg1: number): PreparedStatement;
+	prepareStatement(arg0: string, arg1: Array<string>): PreparedStatement;
+	prepareStatement(arg0: string, arg1: Array<number>): PreparedStatement;
 	prepareStatement(arg0: string, arg1: number, arg2: number): PreparedStatement;
 	prepareStatement(arg0: string, arg1: number, arg2: number, arg3: number): PreparedStatement;
-	isClosed(): boolean;
+	releaseSavepoint(arg0: Savepoint): void;
+	rollback(): void;
+	rollback(arg0: Savepoint): void;
+	setAutoCommit(arg0: boolean): void;
+	setCatalog(arg0: string): void;
+	setClientInfo(arg0: any): void;
+	setClientInfo(arg0: string, arg1: string): void;
+	setHoldability(arg0: number): void;
+	setNetworkTimeout(arg0: any, arg1: number): void;
 	setReadOnly(arg0: boolean): void;
-	close(): void;
-	isReadOnly(): boolean;
-	isWrapperFor(arg0: any): boolean;
+	setSavepoint(): Savepoint;
+	setSavepoint(arg0: string): Savepoint;
+	setSchema(arg0: string): void;
+	setShardingKey(shardingKey: ShardingKey): void;
+	setShardingKey(shardingKey: ShardingKey, superShardingKey: ShardingKey): void;
+	setShardingKeyIfValid(shardingKey: ShardingKey, timeout: number): boolean;
+	setShardingKeyIfValid(shardingKey: ShardingKey, superShardingKey: ShardingKey, timeout: number): boolean;
+	setTransactionIsolation(arg0: number): void;
+	setTypeMap(arg0: any): void;
 	unwrap(arg0: any): any;
 }
 
@@ -74,20 +81,26 @@ export default class Connection {
 	public static get $javaClass(): any {
 		return Java.type('java.sql.Connection');
 	}
+
 	public static get TRANSACTION_NONE(): number {
 		return Connection.$javaClass.TRANSACTION_NONE;
 	}
-	public static get TRANSACTION_READ_UNCOMMITTED(): number {
-		return Connection.$javaClass.TRANSACTION_READ_UNCOMMITTED;
-	}
+
 	public static get TRANSACTION_READ_COMMITTED(): number {
 		return Connection.$javaClass.TRANSACTION_READ_COMMITTED;
 	}
+
+	public static get TRANSACTION_READ_UNCOMMITTED(): number {
+		return Connection.$javaClass.TRANSACTION_READ_UNCOMMITTED;
+	}
+
 	public static get TRANSACTION_REPEATABLE_READ(): number {
 		return Connection.$javaClass.TRANSACTION_REPEATABLE_READ;
 	}
+
 	public static get TRANSACTION_SERIALIZABLE(): number {
 		return Connection.$javaClass.TRANSACTION_SERIALIZABLE;
 	}
+
 }
 

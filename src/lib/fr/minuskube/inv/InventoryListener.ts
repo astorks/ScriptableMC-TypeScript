@@ -9,9 +9,11 @@ export default class InventoryListener {
 	public static get $javaClass(): any {
 		return Java.type('fr.minuskube.inv.InventoryListener');
 	}
+
 	constructor(type: any, consumer: any);
 	constructor(...args: any[]) {
 		return new InventoryListener.$javaClass(...args);
 	}
+
 }
 

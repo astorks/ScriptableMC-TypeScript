@@ -7,27 +7,30 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import Player from '../../../../org/bukkit/entity/Player.js'
 
 export default interface BlockFertilizeEvent extends BlockEvent, Cancellable {
-	isCancelled(): boolean;
+	getBlock(): Block;
+	getBlocks(): Array<BlockState>;
+	getEventName(): string;
 	getHandlers(): HandlerList;
 	getPlayer(): Player;
-	setCancelled(cancelled: boolean): void;
-	getBlocks(): Array<BlockState>;
-	getBlock(): Block;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	isCancelled(): boolean;
+	setCancelled(cancelled: boolean): void;
 }
 
 export default class BlockFertilizeEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.block.BlockFertilizeEvent');
 	}
+
 	constructor(theBlock: Block, player: Player, blocks: Array<any>);
 	constructor(...args: any[]) {
 		return new BlockFertilizeEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return BlockFertilizeEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

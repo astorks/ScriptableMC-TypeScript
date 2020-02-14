@@ -4,30 +4,31 @@ import MapView$Scale from '../../../org/bukkit/map/MapView$Scale.js'
 import World from '../../../org/bukkit/World.js'
 
 export default interface MapView {
-	isLocked(): boolean;
-	getWorld(): World;
-	setWorld(arg0: World): void;
-	getScale(): MapView$Scale;
-	setScale(arg0: MapView$Scale): void;
+	addRenderer(arg0: MapRenderer): void;
 	getCenterX(): number;
 	getCenterZ(): number;
+	getId(): number;
+	getRenderers(): Array<MapRenderer>;
+	getScale(): MapView$Scale;
+	getWorld(): World;
+	isLocked(): boolean;
+	isTrackingPosition(): boolean;
+	isUnlimitedTracking(): boolean;
+	isVirtual(): boolean;
+	removeRenderer(arg0: MapRenderer): boolean;
 	setCenterX(arg0: number): void;
 	setCenterZ(arg0: number): void;
-	getRenderers(): Array<MapRenderer>;
-	addRenderer(arg0: MapRenderer): void;
-	removeRenderer(arg0: MapRenderer): boolean;
-	isTrackingPosition(): boolean;
-	setTrackingPosition(arg0: boolean): void;
-	isUnlimitedTracking(): boolean;
-	setUnlimitedTracking(arg0: boolean): void;
 	setLocked(arg0: boolean): void;
-	isVirtual(): boolean;
-	getId(): number;
+	setScale(arg0: MapView$Scale): void;
+	setTrackingPosition(arg0: boolean): void;
+	setUnlimitedTracking(arg0: boolean): void;
+	setWorld(arg0: World): void;
 }
 
 export default class MapView {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.map.MapView');
 	}
+
 }
 

@@ -9,5 +9,6 @@ export default class FilenameFilter {
 	public static get $javaClass(): any {
 		return Java.type('java.io.FilenameFilter');
 	}
+
 }
 

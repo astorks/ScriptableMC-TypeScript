@@ -8,28 +8,31 @@ import Location from '../../../../org/bukkit/Location.js'
 import Projectile from '../../../../org/bukkit/entity/Projectile.js'
 
 export default interface ProjectileLaunchEvent extends EntitySpawnEvent, Cancellable {
-	isCancelled(): boolean;
-	getEntity(): Entity;
 	getEntity(): Projectile;
-	setCancelled(cancel: boolean): void;
-	getHandlers(): HandlerList;
-	getLocation(): Location;
+	getEntity(): Entity;
 	getEntityType(): EntityType;
 	getEventName(): string;
+	getHandlers(): HandlerList;
+	getLocation(): Location;
 	isAsynchronous(): boolean;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 }
 
 export default class ProjectileLaunchEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.entity.ProjectileLaunchEvent');
 	}
+
 	constructor(what: Entity);
 	constructor(...args: any[]) {
 		return new ProjectileLaunchEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return ProjectileLaunchEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

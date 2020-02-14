@@ -9,5 +9,6 @@ export default class PluginIdentifiableCommand {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.command.PluginIdentifiableCommand');
 	}
+
 }
 

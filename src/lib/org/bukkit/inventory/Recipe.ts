@@ -9,5 +9,6 @@ export default class Recipe {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.inventory.Recipe');
 	}
+
 }
 

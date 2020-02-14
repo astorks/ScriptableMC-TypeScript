@@ -11,33 +11,36 @@ import ItemStack from '../../../../org/bukkit/inventory/ItemStack.js'
 import Player from '../../../../org/bukkit/entity/Player.js'
 
 export default interface PrepareItemEnchantEvent extends InventoryEvent, Cancellable {
-	isCancelled(): boolean;
-	getHandlers(): HandlerList;
-	getItem(): ItemStack;
-	setCancelled(cancel: boolean): void;
-	getEnchanter(): Player;
 	getEnchantBlock(): Block;
-	getOffers(): Array<EnchantmentOffer>;
-	getExpLevelCostsOffered(): Array<number>;
+	getEnchanter(): Player;
 	getEnchantmentBonus(): number;
-	getInventory(): Inventory;
-	getViewers(): Array<HumanEntity>;
-	getView(): InventoryView;
 	getEventName(): string;
+	getExpLevelCostsOffered(): Array<number>;
+	getHandlers(): HandlerList;
+	getInventory(): Inventory;
+	getItem(): ItemStack;
+	getOffers(): Array<EnchantmentOffer>;
+	getView(): InventoryView;
+	getViewers(): Array<HumanEntity>;
 	isAsynchronous(): boolean;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 }
 
 export default class PrepareItemEnchantEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.enchantment.PrepareItemEnchantEvent');
 	}
+
 	constructor(enchanter: Player, view: InventoryView, table: Block, item: ItemStack, offers: Array<EnchantmentOffer>, bonus: number);
 	constructor(...args: any[]) {
 		return new PrepareItemEnchantEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return PrepareItemEnchantEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

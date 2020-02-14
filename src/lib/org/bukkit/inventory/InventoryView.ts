@@ -7,33 +7,36 @@ import InventoryView$Property from '../../../org/bukkit/inventory/InventoryView$
 import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
 
 export default interface InventoryView {
-	getTitle(): string;
-	getInventory(rawSlot: number): Inventory;
-	getPlayer(): HumanEntity;
-	getItem(slot: number): ItemStack;
-	setItem(slot: number, item: ItemStack): void;
-	getBottomInventory(): Inventory;
-	getTopInventory(): Inventory;
-	convertSlot(rawSlot: number): number;
-	setCursor(item: ItemStack): void;
-	getCursor(): ItemStack;
-	countSlots(): number;
-	getSlotType(slot: number): InventoryType$SlotType;
-	setProperty(prop: InventoryView$Property, value: number): boolean;
 	close(): void;
+	convertSlot(rawSlot: number): number;
+	countSlots(): number;
+	getBottomInventory(): Inventory;
+	getCursor(): ItemStack;
+	getInventory(rawSlot: number): Inventory;
+	getItem(slot: number): ItemStack;
+	getPlayer(): HumanEntity;
+	getSlotType(slot: number): InventoryType$SlotType;
+	getTitle(): string;
+	getTopInventory(): Inventory;
 	getType(): InventoryType;
+	setCursor(item: ItemStack): void;
+	setItem(slot: number, item: ItemStack): void;
+	setProperty(prop: InventoryView$Property, value: number): boolean;
 }
 
 export default class InventoryView {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.inventory.InventoryView');
 	}
+
 	constructor();
 	constructor(...args: any[]) {
 		return new InventoryView.$javaClass(...args);
 	}
+
 	public static get OUTSIDE(): number {
 		return InventoryView.$javaClass.OUTSIDE;
 	}
+
 }
 

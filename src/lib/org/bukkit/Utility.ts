@@ -8,5 +8,6 @@ export default class Utility {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.Utility');
 	}
+
 }
 

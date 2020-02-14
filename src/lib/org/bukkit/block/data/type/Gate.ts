@@ -7,21 +7,21 @@ import Openable from '../../../../../org/bukkit/block/data/Openable.js'
 import Powerable from '../../../../../org/bukkit/block/data/Powerable.js'
 
 export default interface Gate extends Directional, Openable, Powerable {
-	isInWall(): boolean;
-	setInWall(arg0: boolean): void;
-	getFacing(): BlockFace;
-	setFacing(arg0: BlockFace): void;
-	getFaces(): any;
-	getMaterial(): Material;
-	getAsString(arg0: boolean): string;
-	getAsString(): string;
-	clone(): BlockData;
 	clone(): any;
-	matches(arg0: BlockData): boolean;
-	merge(arg0: BlockData): BlockData;
-	setOpen(arg0: boolean): void;
+	clone(): BlockData;
+	getAsString(): string;
+	getAsString(arg0: boolean): string;
+	getFaces(): any;
+	getFacing(): BlockFace;
+	getMaterial(): Material;
+	isInWall(): boolean;
 	isOpen(): boolean;
 	isPowered(): boolean;
+	matches(arg0: BlockData): boolean;
+	merge(arg0: BlockData): BlockData;
+	setFacing(arg0: BlockFace): void;
+	setInWall(arg0: boolean): void;
+	setOpen(arg0: boolean): void;
 	setPowered(arg0: boolean): void;
 }
 
@@ -29,5 +29,6 @@ export default class Gate {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.block.data.type.Gate');
 	}
+
 }
 

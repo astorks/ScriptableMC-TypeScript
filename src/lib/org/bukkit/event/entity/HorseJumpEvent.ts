@@ -7,29 +7,32 @@ import EntityType from '../../../../org/bukkit/entity/EntityType.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 
 export default interface HorseJumpEvent extends EntityEvent, Cancellable {
-	isCancelled(): boolean;
-	getHandlers(): HandlerList;
-	getEntity(): AbstractHorse;
 	getEntity(): Entity;
-	setCancelled(cancel: boolean): void;
-	getPower(): number;
-	setPower(power: number): void;
+	getEntity(): AbstractHorse;
 	getEntityType(): EntityType;
 	getEventName(): string;
+	getHandlers(): HandlerList;
+	getPower(): number;
 	isAsynchronous(): boolean;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
+	setPower(power: number): void;
 }
 
 export default class HorseJumpEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.entity.HorseJumpEvent');
 	}
+
 	constructor(horse: AbstractHorse, power: number);
 	constructor(...args: any[]) {
 		return new HorseJumpEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return HorseJumpEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

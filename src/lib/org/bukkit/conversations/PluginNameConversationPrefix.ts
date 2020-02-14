@@ -12,10 +12,12 @@ export default class PluginNameConversationPrefix {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.conversations.PluginNameConversationPrefix');
 	}
-	constructor(plugin: Plugin, separator: string, prefixColor: ChatColor);
+
 	constructor(plugin: Plugin);
+	constructor(plugin: Plugin, separator: string, prefixColor: ChatColor);
 	constructor(...args: any[]) {
 		return new PluginNameConversationPrefix.$javaClass(...args);
 	}
+
 }
 

@@ -9,5 +9,6 @@ export default class CompletionHandler {
 	public static get $javaClass(): any {
 		return Java.type('java.nio.channels.CompletionHandler');
 	}
+
 }
 

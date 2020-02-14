@@ -11,5 +11,6 @@ export default class Advancement {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.advancement.Advancement');
 	}
+
 }
 

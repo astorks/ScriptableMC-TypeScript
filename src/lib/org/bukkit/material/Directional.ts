@@ -10,5 +10,6 @@ export default class Directional {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.material.Directional');
 	}
+
 }
 

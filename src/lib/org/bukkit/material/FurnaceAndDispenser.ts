@@ -10,11 +10,11 @@ export default interface FurnaceAndDispenser extends DirectionalContainer {
 	clone(): MaterialData;
 	clone(): DirectionalContainer;
 	clone(): FurnaceAndDispenser;
-	getFacing(): BlockFace;
-	setFacingDirection(face: BlockFace): void;
 	getData(): number;
-	setData(data: number): void;
+	getFacing(): BlockFace;
 	getItemType(): Material;
+	setData(data: number): void;
+	setFacingDirection(face: BlockFace): void;
 	toItemStack(): ItemStack;
 	toItemStack(amount: number): ItemStack;
 }
@@ -23,10 +23,12 @@ export default class FurnaceAndDispenser {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.material.FurnaceAndDispenser');
 	}
+
 	constructor(type: Material);
 	constructor(type: Material, data: number);
 	constructor(...args: any[]) {
 		return new FurnaceAndDispenser.$javaClass(...args);
 	}
+
 }
 

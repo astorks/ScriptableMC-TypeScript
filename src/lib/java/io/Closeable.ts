@@ -8,5 +8,6 @@ export default class Closeable {
 	public static get $javaClass(): any {
 		return Java.type('java.io.Closeable');
 	}
+
 }
 

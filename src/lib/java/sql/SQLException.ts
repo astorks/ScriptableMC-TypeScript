@@ -3,41 +3,43 @@ import PrintStream from '../../java/io/PrintStream.js'
 import PrintWriter from '../../java/io/PrintWriter.js'
 
 export default interface SQLException {
-	getSQLState(): string;
-	getErrorCode(): number;
-	getNextException(): SQLException;
-	setNextException(arg0: SQLException): void;
-	iterator(): any;
-	printStackTrace(arg0: PrintStream): void;
-	printStackTrace(): void;
-	printStackTrace(arg0: PrintWriter): void;
+	addSuppressed(exception: any): void;
 	fillInStackTrace(): any;
+	forEach(action: any): void;
 	getCause(): any;
-	initCause(arg0: any): any;
-	getMessage(): string;
+	getErrorCode(): number;
 	getLocalizedMessage(): string;
+	getMessage(): string;
+	getNextException(): SQLException;
+	getSQLState(): string;
 	getStackTrace(): Array<any>;
-	setStackTrace(arg0: Array<any>): void;
-	addSuppressed(arg0: any): void;
 	getSuppressed(): Array<any>;
+	initCause(cause: any): any;
+	iterator(): any;
+	printStackTrace(): void;
+	printStackTrace(s: PrintStream): void;
+	printStackTrace(s: PrintWriter): void;
+	setNextException(ex: SQLException): void;
+	setStackTrace(stackTrace: Array<any>): void;
 	spliterator(): any;
-	forEach(arg0: any): void;
 }
 
 export default class SQLException {
 	public static get $javaClass(): any {
 		return Java.type('java.sql.SQLException');
 	}
-	constructor(arg0: string, arg1: string, arg2: number, arg3: any);
-	constructor(arg0: string, arg1: string, arg2: any);
-	constructor(arg0: string, arg1: string, arg2: number);
-	constructor(arg0: string, arg1: string);
-	constructor(arg0: string);
-	constructor(arg0: string, arg1: any);
-	constructor(arg0: any);
+
 	constructor();
+	constructor(cause: any);
+	constructor(reason: string);
+	constructor(reason: string, cause: any);
+	constructor(reason: string, SQLState: string);
+	constructor(reason: string, sqlState: string, cause: any);
+	constructor(reason: string, SQLState: string, vendorCode: number);
+	constructor(reason: string, sqlState: string, vendorCode: number, cause: any);
 	constructor(...args: any[]) {
 		return new SQLException.$javaClass(...args);
 	}
+
 }
 

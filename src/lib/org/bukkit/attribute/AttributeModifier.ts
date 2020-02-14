@@ -4,27 +4,30 @@ import ConfigurationSerializable from '../../../org/bukkit/configuration/seriali
 import EquipmentSlot from '../../../org/bukkit/inventory/EquipmentSlot.js'
 
 export default interface AttributeModifier extends ConfigurationSerializable {
+	getAmount(): number;
+	getName(): string;
+	getOperation(): AttributeModifier$Operation;
+	getSlot(): EquipmentSlot;
 	getUniqueId(): string;
 	serialize(): any;
-	getAmount(): number;
-	getOperation(): AttributeModifier$Operation;
-	getName(): string;
-	getSlot(): EquipmentSlot;
 }
 
 export default class AttributeModifier {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.attribute.AttributeModifier');
 	}
+
+	constructor(_name: string, amount: number, operation: AttributeModifier$Operation);
 	constructor(uuid: string, _name: string, amount: number, operation: AttributeModifier$Operation);
 	constructor(uuid: string, _name: string, amount: number, operation: AttributeModifier$Operation, slot: EquipmentSlot);
-	constructor(_name: string, amount: number, operation: AttributeModifier$Operation);
 	constructor(...args: any[]) {
 		return new AttributeModifier.$javaClass(...args);
 	}
+
 	public static deserialize(args: any): AttributeModifier;
 	public static deserialize(...args: any[]): any {
 		return AttributeModifier.$javaClass.deserialize(...args);
 	}
+
 }
 

@@ -40,7 +40,7 @@ export default class TestPlugin extends JsPlugin {
         // MySQL example
         if(CONFIG.mysql.enabled) {
             this.mysqlConnection = this.mysqlFromConfig(CONFIG.mysql);
-            this.mysqlConnection.openConnectionAsync(() => {
+            this.mysqlConnection.openConnectionAsync(this.context.getJavaPlugin(), () => {
                 let selectStatement = this.mysqlConnection.prepareStatement("SELECT * FROM Testing WHERE enabled = ?;");
                 selectStatement.setBoolean(1, true);
                 let result = selectStatement.executeQuery();
@@ -126,7 +126,7 @@ export default class TestPlugin extends JsPlugin {
     onHelloWorldCmdExecute(sender: (CommandSender | Player), command: Command, label: string, args: Array<string>) {
         const plugin = this;
         
-        let inventory = SmartInventory.builder()
+        let inventory = SmartInventory.builder(this.context.getInventoryManager())
             .id("hellojs")
             .provider(new SmartInventoryProvider({
                 init(player: Player, contents: InventoryContents): void {

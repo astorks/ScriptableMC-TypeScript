@@ -1,5 +1,6 @@
 declare var Java: any;
 import EventExecutor from '../../../../org/bukkit/plugin/EventExecutor.js'
+import InventoryManager from '../../../../fr/minuskube/inv/InventoryManager.js'
 import JavaPlugin from '../../../../org/bukkit/plugin/java/JavaPlugin.js'
 import Listener from '../../../../org/bukkit/event/Listener.js'
 import OfflinePlayer from '../../../../org/bukkit/OfflinePlayer.js'
@@ -12,32 +13,40 @@ import Server from '../../../../org/bukkit/Server.js'
 import ServicesManager from '../../../../org/bukkit/plugin/ServicesManager.js'
 
 export default interface ScriptablePluginContext extends Listener {
-	getServer(): Server;
-	getPluginName(): string;
+	disable(): void;
+	enable(): void;
+	getBukkitServiceRegistration(className: string): any;
+	getBukkitServiceRegistration(_class: any): any;
+	getCommands(): Array<PluginCommand>;
+	getEngine(): ScriptablePluginEngine;
+	getInventoryManager(): InventoryManager;
+	getJavaPlugin(): JavaPlugin;
 	getPluginInstance(): any;
-	unregisterIncomingPluginChannel(channel: string): void;
-	registerOutgoingPluginChannel(channel: string): void;
-	unregisterOutgoingPluginChannel(channel: string): void;
+	getPluginName(): string;
+	getServer(): Server;
+	getServicesManager(): ServicesManager;
+	load(): void;
 	newCommand(_name: string): PluginCommand;
 	registerCommand(command: PluginCommand): void;
+	registerEvent(eventClass: any, executor: EventExecutor): void;
 	registerIncomingPluginChannel(channelName: string, listener: PluginMessageListener): PluginMessageListenerRegistration;
+	registerOutgoingPluginChannel(channel: string): void;
 	setPlaceholders(player: OfflinePlayer, placeholderText: string): string;
 	setPlaceholders(player: Player, placeholderText: string): string;
-	getBukkitServiceRegistration(_class: any): any;
-	getBukkitServiceRegistration(className: string): any;
-	getJavaPlugin(): JavaPlugin;
-	getServicesManager(): ServicesManager;
 	unregisterCommand(command: PluginCommand): void;
-	registerEvent(eventClass: any, executor: EventExecutor): void;
+	unregisterIncomingPluginChannel(channel: string): void;
+	unregisterOutgoingPluginChannel(channel: string): void;
 }
 
 export default class ScriptablePluginContext {
 	public static get $javaClass(): any {
 		return Java.type('com.pixlfox.scriptablemc.core.ScriptablePluginContext');
 	}
-	constructor(engine: ScriptablePluginEngine, pluginName: string, pluginInstance: any);
+
+	constructor();
 	constructor(...args: any[]) {
 		return new ScriptablePluginContext.$javaClass(...args);
 	}
+
 }
 

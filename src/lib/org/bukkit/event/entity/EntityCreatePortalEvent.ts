@@ -9,29 +9,32 @@ import LivingEntity from '../../../../org/bukkit/entity/LivingEntity.js'
 import PortalType from '../../../../org/bukkit/PortalType.js'
 
 export default interface EntityCreatePortalEvent extends EntityEvent, Cancellable {
-	isCancelled(): boolean;
-	getHandlers(): HandlerList;
+	getBlocks(): Array<BlockState>;
 	getEntity(): Entity;
 	getEntity(): LivingEntity;
-	setCancelled(cancel: boolean): void;
-	getBlocks(): Array<BlockState>;
-	getPortalType(): PortalType;
 	getEntityType(): EntityType;
 	getEventName(): string;
+	getHandlers(): HandlerList;
+	getPortalType(): PortalType;
 	isAsynchronous(): boolean;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 }
 
 export default class EntityCreatePortalEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.entity.EntityCreatePortalEvent');
 	}
+
 	constructor(what: LivingEntity, blocks: Array<any>, type: PortalType);
 	constructor(...args: any[]) {
 		return new EntityCreatePortalEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return EntityCreatePortalEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

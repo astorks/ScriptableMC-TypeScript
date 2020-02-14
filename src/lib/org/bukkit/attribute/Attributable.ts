@@ -10,5 +10,6 @@ export default class Attributable {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.attribute.Attributable');
 	}
+
 }
 

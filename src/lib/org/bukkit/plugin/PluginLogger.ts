@@ -2,90 +2,99 @@ declare var Java: any;
 import Plugin from '../../../org/bukkit/plugin/Plugin.js'
 
 export default interface PluginLogger {
-	log(logRecord: any): void;
-	warning(arg0: any): void;
-	warning(arg0: string): void;
-	getResourceBundle(): any;
-	getResourceBundleName(): string;
-	setFilter(arg0: any): void;
+	addHandler(handler: any): void;
+	config(msg: string): void;
+	config(msgSupplier: any): void;
+	entering(sourceClass: string, sourceMethod: string): void;
+	entering(sourceClass: string, sourceMethod: string, param1: any): void;
+	entering(sourceClass: string, sourceMethod: string, params: Array<any>): void;
+	exiting(sourceClass: string, sourceMethod: string): void;
+	exiting(sourceClass: string, sourceMethod: string, result: any): void;
+	fine(msg: string): void;
+	fine(msgSupplier: any): void;
+	finer(msgSupplier: any): void;
+	finer(msg: string): void;
+	finest(msg: string): void;
+	finest(msgSupplier: any): void;
 	getFilter(): any;
-	logp(arg0: any, arg1: string, arg2: string, arg3: string, arg4: any): void;
-	logp(arg0: any, arg1: string, arg2: string, arg3: any): void;
-	logp(arg0: any, arg1: string, arg2: string, arg3: string): void;
-	logp(arg0: any, arg1: string, arg2: string, arg3: any, arg4: any): void;
-	logp(arg0: any, arg1: string, arg2: string, arg3: string, arg4: any): void;
-	logp(arg0: any, arg1: string, arg2: string, arg3: string, arg4: Array<any>): void;
-	logrb(arg0: any, arg1: string, arg2: string, arg3: string, arg4: string): void;
-	logrb(arg0: any, arg1: string, arg2: string, arg3: any, arg4: string, arg5: any): void;
-	logrb(arg0: any, arg1: string, arg2: string, arg3: string, arg4: string, arg5: any): void;
-	logrb(arg0: any, arg1: string, arg2: string, arg3: any, arg4: string, arg5: Array<any>): void;
-	logrb(arg0: any, arg1: string, arg2: string, arg3: string, arg4: string, arg5: Array<any>): void;
-	logrb(arg0: any, arg1: string, arg2: string, arg3: string, arg4: string, arg5: any): void;
-	entering(arg0: string, arg1: string, arg2: Array<any>): void;
-	entering(arg0: string, arg1: string, arg2: any): void;
-	entering(arg0: string, arg1: string): void;
-	exiting(arg0: string, arg1: string): void;
-	exiting(arg0: string, arg1: string, arg2: any): void;
-	throwing(arg0: string, arg1: string, arg2: any): void;
-	severe(arg0: string): void;
-	severe(arg0: any): void;
-	config(arg0: any): void;
-	config(arg0: string): void;
-	fine(arg0: string): void;
-	fine(arg0: any): void;
-	finer(arg0: any): void;
-	finer(arg0: string): void;
-	finest(arg0: string): void;
-	finest(arg0: any): void;
-	isLoggable(arg0: any): boolean;
-	addHandler(arg0: any): void;
-	removeHandler(arg0: any): void;
 	getHandlers(): Array<any>;
-	setUseParentHandlers(arg0: boolean): void;
-	getUseParentHandlers(): boolean;
-	setResourceBundle(arg0: any): void;
-	info(arg0: any): void;
-	info(arg0: string): void;
 	getLevel(): any;
-	setLevel(arg0: any): void;
-	log(arg0: any, arg1: any, arg2: any): void;
-	log(arg0: any, arg1: string, arg2: any): void;
-	log(arg0: any, arg1: string, arg2: Array<any>): void;
-	log(arg0: any, arg1: string, arg2: any): void;
-	log(arg0: any, arg1: any): void;
-	log(arg0: any, arg1: string): void;
 	getName(): string;
 	getParent(): any;
-	setParent(arg0: any): void;
+	getResourceBundle(): any;
+	getResourceBundleName(): string;
+	getUseParentHandlers(): boolean;
+	info(msg: string): void;
+	info(msgSupplier: any): void;
+	isLoggable(level: any): boolean;
+	log(logRecord: any): void;
+	log(level: any, msg: string): void;
+	log(level: any, msgSupplier: any): void;
+	log(level: any, thrown: any, msgSupplier: any): void;
+	log(level: any, msg: string, thrown: any): void;
+	log(level: any, msg: string, param1: any): void;
+	log(level: any, msg: string, params: Array<any>): void;
+	logp(level: any, sourceClass: string, sourceMethod: string, msg: string): void;
+	logp(level: any, sourceClass: string, sourceMethod: string, msgSupplier: any): void;
+	logp(level: any, sourceClass: string, sourceMethod: string, msg: string, param1: any): void;
+	logp(level: any, sourceClass: string, sourceMethod: string, thrown: any, msgSupplier: any): void;
+	logp(level: any, sourceClass: string, sourceMethod: string, msg: string, thrown: any): void;
+	logp(level: any, sourceClass: string, sourceMethod: string, msg: string, params: Array<any>): void;
+	logrb(level: any, bundle: any, msg: string, thrown: any): void;
+	logrb(level: any, bundle: any, msg: string, params: Array<any>): void;
+	logrb(level: any, sourceClass: string, sourceMethod: string, bundleName: string, msg: string): void;
+	logrb(level: any, sourceClass: string, sourceMethod: string, bundle: any, msg: string, params: Array<any>): void;
+	logrb(level: any, sourceClass: string, sourceMethod: string, bundleName: string, msg: string, params: Array<any>): void;
+	logrb(level: any, sourceClass: string, sourceMethod: string, bundle: any, msg: string, thrown: any): void;
+	logrb(level: any, sourceClass: string, sourceMethod: string, bundleName: string, msg: string, thrown: any): void;
+	logrb(level: any, sourceClass: string, sourceMethod: string, bundleName: string, msg: string, param1: any): void;
+	removeHandler(handler: any): void;
+	setFilter(newFilter: any): void;
+	setLevel(newLevel: any): void;
+	setParent(parent: any): void;
+	setResourceBundle(bundle: any): void;
+	setUseParentHandlers(useParentHandlers: boolean): void;
+	severe(msgSupplier: any): void;
+	severe(msg: string): void;
+	throwing(sourceClass: string, sourceMethod: string, thrown: any): void;
+	warning(msg: string): void;
+	warning(msgSupplier: any): void;
 }
 
 export default class PluginLogger {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.plugin.PluginLogger');
 	}
+
 	constructor(context: Plugin);
 	constructor(...args: any[]) {
 		return new PluginLogger.$javaClass(...args);
 	}
+
 	public static get GLOBAL_LOGGER_NAME(): string {
 		return PluginLogger.$javaClass.GLOBAL_LOGGER_NAME;
 	}
+
 	public static get global(): any {
 		return PluginLogger.$javaClass.global;
 	}
-	public static getLogger(arg0: string): any;
-	public static getLogger(arg0: string, arg1: string): any;
-	public static getLogger(...args: any[]): any {
-		return PluginLogger.$javaClass.getLogger(...args);
+
+	public static getAnonymousLogger(): any;
+	public static getAnonymousLogger(resourceBundleName: string): any;
+	public static getAnonymousLogger(...args: any[]): any {
+		return PluginLogger.$javaClass.getAnonymousLogger(...args);
 	}
+
 	public static getGlobal(): any;
 	public static getGlobal(...args: any[]): any {
 		return PluginLogger.$javaClass.getGlobal(...args);
 	}
-	public static getAnonymousLogger(arg0: string): any;
-	public static getAnonymousLogger(): any;
-	public static getAnonymousLogger(...args: any[]): any {
-		return PluginLogger.$javaClass.getAnonymousLogger(...args);
+
+	public static getLogger(_name: string): any;
+	public static getLogger(_name: string, resourceBundleName: string): any;
+	public static getLogger(...args: any[]): any {
+		return PluginLogger.$javaClass.getLogger(...args);
 	}
+
 }
 

@@ -9,5 +9,6 @@ export default class InventoryHolder {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.inventory.InventoryHolder');
 	}
+
 }
 

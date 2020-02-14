@@ -4,27 +4,29 @@ import MetadataValueAdapter from '../../../org/bukkit/metadata/MetadataValueAdap
 import Plugin from '../../../org/bukkit/plugin/Plugin.js'
 
 export default interface LazyMetadataValue extends MetadataValueAdapter {
-	invalidate(): void;
-	value(): any;
-	asString(): string;
-	asInt(): number;
 	asBoolean(): boolean;
-	asLong(): number;
+	asByte(): number;
 	asDouble(): number;
 	asFloat(): number;
-	asByte(): number;
+	asInt(): number;
+	asLong(): number;
 	asShort(): number;
+	asString(): string;
 	getOwningPlugin(): Plugin;
+	invalidate(): void;
+	value(): any;
 }
 
 export default class LazyMetadataValue {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.metadata.LazyMetadataValue');
 	}
+
 	constructor(owningPlugin: Plugin, lazyValue: any);
 	constructor(owningPlugin: Plugin, cacheStrategy: LazyMetadataValue$CacheStrategy, lazyValue: any);
 	constructor(...args: any[]) {
 		return new LazyMetadataValue.$javaClass(...args);
 	}
+
 }
 

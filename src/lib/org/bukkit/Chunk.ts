@@ -8,33 +8,34 @@ import Plugin from '../../org/bukkit/plugin/Plugin.js'
 import World from '../../org/bukkit/World.js'
 
 export default interface Chunk {
-	isLoaded(): boolean;
-	getBlock(arg0: number, arg1: number, arg2: number): Block;
-	getWorld(): World;
 	addPluginChunkTicket(arg0: Plugin): boolean;
-	removePluginChunkTicket(arg0: Plugin): boolean;
-	getPluginChunkTickets(): any;
-	getEntities(): Array<Entity>;
-	getX(): number;
-	getZ(): number;
+	contains(arg0: BlockData): boolean;
+	getBlock(arg0: number, arg1: number, arg2: number): Block;
 	getChunkSnapshot(): ChunkSnapshot;
 	getChunkSnapshot(arg0: boolean, arg1: boolean, arg2: boolean): ChunkSnapshot;
-	getTileEntities(): Array<BlockState>;
-	isSlimeChunk(): boolean;
-	isForceLoaded(): boolean;
-	setForceLoaded(arg0: boolean): void;
+	getEntities(): Array<Entity>;
 	getInhabitedTime(): number;
-	setInhabitedTime(arg0: number): void;
-	contains(arg0: BlockData): boolean;
-	load(arg0: boolean): boolean;
+	getPluginChunkTickets(): any;
+	getTileEntities(): Array<BlockState>;
+	getWorld(): World;
+	getX(): number;
+	getZ(): number;
+	isForceLoaded(): boolean;
+	isLoaded(): boolean;
+	isSlimeChunk(): boolean;
 	load(): boolean;
-	unload(arg0: boolean): boolean;
+	load(arg0: boolean): boolean;
+	removePluginChunkTicket(arg0: Plugin): boolean;
+	setForceLoaded(arg0: boolean): void;
+	setInhabitedTime(arg0: number): void;
 	unload(): boolean;
+	unload(arg0: boolean): boolean;
 }
 
 export default class Chunk {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.Chunk');
 	}
+
 }
 

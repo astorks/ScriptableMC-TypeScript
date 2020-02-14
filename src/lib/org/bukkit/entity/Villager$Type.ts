@@ -3,11 +3,11 @@ import Keyed from '../../../org/bukkit/Keyed.js'
 import NamespacedKey from '../../../org/bukkit/NamespacedKey.js'
 
 export default interface Villager$Type extends Keyed {
+	compareTo(arg0: any): number;
+	compareTo(o: any): number;
+	getDeclaringClass(): any;
 	getKey(): NamespacedKey;
 	name(): string;
-	compareTo(arg0: any): number;
-	compareTo(arg0: any): number;
-	getDeclaringClass(): any;
 	ordinal(): number;
 }
 

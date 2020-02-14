@@ -14,42 +14,43 @@ import World from '../../../org/bukkit/World.js'
 
 export default interface Jukebox extends TileState {
 	eject(): boolean;
-	getPlaying(): Material;
-	setPlaying(arg0: Material): void;
-	getRecord(): ItemStack;
-	isPlaying(): boolean;
-	setRecord(arg0: ItemStack): void;
-	getPersistentDataContainer(): PersistentDataContainer;
-	getData(): MaterialData;
 	getBlock(): Block;
-	getWorld(): World;
-	setType(arg0: Material): void;
-	setData(arg0: MaterialData): void;
+	getBlockData(): BlockData;
 	getChunk(): Chunk;
+	getData(): MaterialData;
+	getLightLevel(): number;
+	getLocation(): Location;
+	getLocation(arg0: Location): Location;
+	getMetadata(arg0: string): Array<MetadataValue>;
+	getPersistentDataContainer(): PersistentDataContainer;
+	getPlaying(): Material;
+	getRawData(): number;
+	getRecord(): ItemStack;
+	getType(): Material;
+	getWorld(): World;
 	getX(): number;
 	getY(): number;
 	getZ(): number;
-	getBlockData(): BlockData;
-	setRawData(arg0: number): void;
-	getRawData(): number;
-	isPlaced(): boolean;
-	setBlockData(arg0: BlockData): void;
-	getLightLevel(): number;
-	update(arg0: boolean, arg1: boolean): boolean;
-	update(arg0: boolean): boolean;
-	update(): boolean;
-	getLocation(arg0: Location): Location;
-	getLocation(): Location;
-	getType(): Material;
-	setMetadata(arg0: string, arg1: MetadataValue): void;
-	getMetadata(arg0: string): Array<MetadataValue>;
 	hasMetadata(arg0: string): boolean;
+	isPlaced(): boolean;
+	isPlaying(): boolean;
 	removeMetadata(arg0: string, arg1: Plugin): void;
+	setBlockData(arg0: BlockData): void;
+	setData(arg0: MaterialData): void;
+	setMetadata(arg0: string, arg1: MetadataValue): void;
+	setPlaying(arg0: Material): void;
+	setRawData(arg0: number): void;
+	setRecord(arg0: ItemStack): void;
+	setType(arg0: Material): void;
+	update(): boolean;
+	update(arg0: boolean): boolean;
+	update(arg0: boolean, arg1: boolean): boolean;
 }
 
 export default class Jukebox {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.block.Jukebox');
 	}
+
 }
 

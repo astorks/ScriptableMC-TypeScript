@@ -14,40 +14,42 @@ import SeekableByteChannel from '../../../java/nio/channels/SeekableByteChannel.
 import WritableByteChannel from '../../../java/nio/channels/WritableByteChannel.js'
 
 export default interface FileChannel extends AbstractInterruptibleChannel {
-	transferFrom(arg0: ReadableByteChannel, arg1: number, arg2: number): number;
+	close(): void;
 	force(arg0: boolean): void;
-	tryLock(arg0: number, arg1: number, arg2: boolean): FileLock;
-	tryLock(): FileLock;
-	transferTo(arg0: number, arg1: number, arg2: WritableByteChannel): number;
+	isOpen(): boolean;
 	lock(): FileLock;
 	lock(arg0: number, arg1: number, arg2: boolean): FileLock;
-	size(): number;
-	position(arg0: number): FileChannel;
+	map(arg0: FileChannel$MapMode, arg1: number, arg2: number): MappedByteBuffer;
 	position(): number;
+	position(arg0: number): FileChannel;
 	position(arg0: number): SeekableByteChannel;
-	write(arg0: ByteBuffer): number;
-	write(arg0: ByteBuffer, arg1: number): number;
-	write(arg0: Array<ByteBuffer>, arg1: number, arg2: number): number;
-	write(arg0: Array<ByteBuffer>): number;
-	read(arg0: ByteBuffer, arg1: number): number;
 	read(arg0: ByteBuffer): number;
+	read(dsts: Array<ByteBuffer>): number;
+	read(arg0: ByteBuffer, arg1: number): number;
 	read(arg0: Array<ByteBuffer>, arg1: number, arg2: number): number;
-	read(arg0: Array<ByteBuffer>): number;
+	size(): number;
+	transferFrom(arg0: ReadableByteChannel, arg1: number, arg2: number): number;
+	transferTo(arg0: number, arg1: number, arg2: WritableByteChannel): number;
 	truncate(arg0: number): FileChannel;
 	truncate(arg0: number): SeekableByteChannel;
-	map(arg0: FileChannel$MapMode, arg1: number, arg2: number): MappedByteBuffer;
-	close(): void;
-	isOpen(): boolean;
+	tryLock(): FileLock;
+	tryLock(arg0: number, arg1: number, arg2: boolean): FileLock;
+	write(arg0: ByteBuffer): number;
+	write(srcs: Array<ByteBuffer>): number;
+	write(arg0: ByteBuffer, arg1: number): number;
+	write(arg0: Array<ByteBuffer>, arg1: number, arg2: number): number;
 }
 
 export default class FileChannel {
 	public static get $javaClass(): any {
 		return Java.type('java.nio.channels.FileChannel');
 	}
-	public static open(arg0: Path, arg1: Array<OpenOption>): FileChannel;
-	public static open(arg0: Path, arg1: any, arg2: Array<FileAttribute>): FileChannel;
+
+	public static open(path: Path, options: Array<OpenOption>): FileChannel;
+	public static open(path: Path, options: any, attrs: Array<FileAttribute>): FileChannel;
 	public static open(...args: any[]): any {
 		return FileChannel.$javaClass.open(...args);
 	}
+
 }
 

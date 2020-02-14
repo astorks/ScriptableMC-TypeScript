@@ -6,28 +6,31 @@ import HangingBreakEvent from '../../../../org/bukkit/event/hanging/HangingBreak
 import HangingBreakEvent$RemoveCause from '../../../../org/bukkit/event/hanging/HangingBreakEvent$RemoveCause.js'
 
 export default interface HangingBreakByEntityEvent extends HangingBreakEvent {
-	getRemover(): Entity;
-	isCancelled(): boolean;
-	getHandlers(): HandlerList;
-	setCancelled(cancel: boolean): void;
 	getCause(): HangingBreakEvent$RemoveCause;
 	getEntity(): Hanging;
 	getEventName(): string;
+	getHandlers(): HandlerList;
+	getRemover(): Entity;
 	isAsynchronous(): boolean;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 }
 
 export default class HangingBreakByEntityEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.hanging.HangingBreakByEntityEvent');
 	}
-	constructor(hanging: Hanging, remover: Entity, cause: HangingBreakEvent$RemoveCause);
+
 	constructor(hanging: Hanging, remover: Entity);
+	constructor(hanging: Hanging, remover: Entity, cause: HangingBreakEvent$RemoveCause);
 	constructor(...args: any[]) {
 		return new HangingBreakByEntityEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return HangingBreakByEntityEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

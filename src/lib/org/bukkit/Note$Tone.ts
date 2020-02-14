@@ -1,14 +1,14 @@
 declare var Java: any;
 
 export default interface Note$Tone {
-	isSharpable(): boolean;
-	isSharped(id: number): boolean;
+	compareTo(arg0: any): number;
+	compareTo(o: any): number;
+	getDeclaringClass(): any;
 	getId(): number;
 	getId(sharped: boolean): number;
+	isSharpable(): boolean;
+	isSharped(id: number): boolean;
 	name(): string;
-	compareTo(arg0: any): number;
-	compareTo(arg0: any): number;
-	getDeclaringClass(): any;
 	ordinal(): number;
 }
 
@@ -17,9 +17,6 @@ export default class Note$Tone {
 		return Java.type('org.bukkit.Note$Tone');
 	}
 
-	public static get G(): Note$Tone {
-		return this.$javaClass.G;
-	}
 	public static get A(): Note$Tone {
 		return this.$javaClass.A;
 	}
@@ -37,6 +34,9 @@ export default class Note$Tone {
 	}
 	public static get F(): Note$Tone {
 		return this.$javaClass.F;
+	}
+	public static get G(): Note$Tone {
+		return this.$javaClass.G;
 	}
 }
 

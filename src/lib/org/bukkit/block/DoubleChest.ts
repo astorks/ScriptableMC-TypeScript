@@ -7,22 +7,24 @@ import World from '../../../org/bukkit/World.js'
 
 export default interface DoubleChest extends InventoryHolder {
 	getInventory(): Inventory;
+	getLeftSide(): InventoryHolder;
+	getLocation(): Location;
+	getRightSide(): InventoryHolder;
 	getWorld(): World;
 	getX(): number;
 	getY(): number;
 	getZ(): number;
-	getRightSide(): InventoryHolder;
-	getLeftSide(): InventoryHolder;
-	getLocation(): Location;
 }
 
 export default class DoubleChest {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.block.DoubleChest');
 	}
+
 	constructor(chest: DoubleChestInventory);
 	constructor(...args: any[]) {
 		return new DoubleChest.$javaClass(...args);
 	}
+
 }
 

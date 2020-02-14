@@ -7,22 +7,22 @@ import MultipleFacing from '../../../../../org/bukkit/block/data/MultipleFacing.
 import Powerable from '../../../../../org/bukkit/block/data/Powerable.js'
 
 export default interface Tripwire extends Attachable, MultipleFacing, Powerable {
-	setDisarmed(arg0: boolean): void;
-	isDisarmed(): boolean;
-	isAttached(): boolean;
-	setAttached(arg0: boolean): void;
-	getMaterial(): Material;
-	getAsString(arg0: boolean): string;
-	getAsString(): string;
-	clone(): BlockData;
 	clone(): any;
+	clone(): BlockData;
+	getAllowedFaces(): any;
+	getAsString(): string;
+	getAsString(arg0: boolean): string;
+	getFaces(): any;
+	getMaterial(): Material;
+	hasFace(arg0: BlockFace): boolean;
+	isAttached(): boolean;
+	isDisarmed(): boolean;
+	isPowered(): boolean;
 	matches(arg0: BlockData): boolean;
 	merge(arg0: BlockData): BlockData;
-	getFaces(): any;
-	hasFace(arg0: BlockFace): boolean;
+	setAttached(arg0: boolean): void;
+	setDisarmed(arg0: boolean): void;
 	setFace(arg0: BlockFace, arg1: boolean): void;
-	getAllowedFaces(): any;
-	isPowered(): boolean;
 	setPowered(arg0: boolean): void;
 }
 
@@ -30,5 +30,6 @@ export default class Tripwire {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.block.data.type.Tripwire');
 	}
+
 }
 

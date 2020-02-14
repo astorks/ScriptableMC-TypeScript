@@ -6,18 +6,18 @@ import Material from '../../../../../org/bukkit/Material.js'
 import Powerable from '../../../../../org/bukkit/block/data/Powerable.js'
 
 export default interface Lectern extends Directional, Powerable {
-	hasBook(): boolean;
-	getFacing(): BlockFace;
-	setFacing(arg0: BlockFace): void;
-	getFaces(): any;
-	getMaterial(): Material;
-	getAsString(arg0: boolean): string;
-	getAsString(): string;
-	clone(): BlockData;
 	clone(): any;
+	clone(): BlockData;
+	getAsString(): string;
+	getAsString(arg0: boolean): string;
+	getFaces(): any;
+	getFacing(): BlockFace;
+	getMaterial(): Material;
+	hasBook(): boolean;
+	isPowered(): boolean;
 	matches(arg0: BlockData): boolean;
 	merge(arg0: BlockData): BlockData;
-	isPowered(): boolean;
+	setFacing(arg0: BlockFace): void;
 	setPowered(arg0: boolean): void;
 }
 
@@ -25,5 +25,6 @@ export default class Lectern {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.block.data.type.Lectern');
 	}
+
 }
 

@@ -6,20 +6,22 @@ import Listener from '../../../org/bukkit/event/Listener.js'
 import Plugin from '../../../org/bukkit/plugin/Plugin.js'
 
 export default interface RegisteredListener {
-	getPlugin(): Plugin;
 	callEvent(event: Event): void;
 	getListener(): Listener;
-	isIgnoringCancelled(): boolean;
+	getPlugin(): Plugin;
 	getPriority(): EventPriority;
+	isIgnoringCancelled(): boolean;
 }
 
 export default class RegisteredListener {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.plugin.RegisteredListener');
 	}
+
 	constructor(listener: Listener, executor: EventExecutor, priority: EventPriority, plugin: Plugin, ignoreCancelled: boolean);
 	constructor(...args: any[]) {
 		return new RegisteredListener.$javaClass(...args);
 	}
+
 }
 

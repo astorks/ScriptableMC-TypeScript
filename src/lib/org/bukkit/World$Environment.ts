@@ -1,11 +1,11 @@
 declare var Java: any;
 
 export default interface World$Environment {
+	compareTo(arg0: any): number;
+	compareTo(o: any): number;
+	getDeclaringClass(): any;
 	getId(): number;
 	name(): string;
-	compareTo(arg0: any): number;
-	compareTo(arg0: any): number;
-	getDeclaringClass(): any;
 	ordinal(): number;
 }
 
@@ -14,11 +14,11 @@ export default class World$Environment {
 		return Java.type('org.bukkit.World$Environment');
 	}
 
-	public static get NORMAL(): World$Environment {
-		return this.$javaClass.NORMAL;
-	}
 	public static get NETHER(): World$Environment {
 		return this.$javaClass.NETHER;
+	}
+	public static get NORMAL(): World$Environment {
+		return this.$javaClass.NORMAL;
 	}
 	public static get THE_END(): World$Environment {
 		return this.$javaClass.THE_END;

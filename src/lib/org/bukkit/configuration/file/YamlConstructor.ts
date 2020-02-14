@@ -1,30 +1,33 @@
 declare var Java: any;
 
 export default interface YamlConstructor {
-	getData(): any;
 	addTypeDescription(definition: any): any;
-	setPropertyUtils(propertyUtils: any): void;
-	getPropertyUtils(): any;
 	checkData(): boolean;
-	setComposer(composer: any): void;
+	getData(): any;
+	getPropertyUtils(): any;
 	getSingleData(type: any): any;
 	isAllowDuplicateKeys(): boolean;
-	setAllowDuplicateKeys(allowDuplicateKeys: boolean): void;
-	isWrappedToRootException(): boolean;
-	setWrappedToRootException(wrappedToRootException: boolean): void;
 	isExplicitPropertyUtils(): boolean;
+	isWrappedToRootException(): boolean;
+	setAllowDuplicateKeys(allowDuplicateKeys: boolean): void;
+	setComposer(composer: any): void;
+	setPropertyUtils(propertyUtils: any): void;
+	setWrappedToRootException(wrappedToRootException: boolean): void;
 }
 
 export default class YamlConstructor {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.configuration.file.YamlConstructor');
 	}
+
 	constructor();
 	constructor(...args: any[]) {
 		return new YamlConstructor.$javaClass(...args);
 	}
+
 	public static get undefinedConstructor(): any {
 		return YamlConstructor.$javaClass.undefinedConstructor;
 	}
+
 }
 

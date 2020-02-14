@@ -18,9 +18,11 @@ export default class ObjectOutputStream$PutField {
 	public static get $javaClass(): any {
 		return Java.type('java.io.ObjectOutputStream$PutField');
 	}
+
 	constructor();
 	constructor(...args: any[]) {
 		return new ObjectOutputStream$PutField.$javaClass(...args);
 	}
+
 }
 

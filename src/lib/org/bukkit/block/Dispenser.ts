@@ -17,51 +17,52 @@ import Plugin from '../../../org/bukkit/plugin/Plugin.js'
 import World from '../../../org/bukkit/World.js'
 
 export default interface Dispenser extends Container, Nameable, Lootable {
-	getBlockProjectileSource(): BlockProjectileSource;
 	dispense(): boolean;
-	getInventory(): Inventory;
-	getSnapshotInventory(): Inventory;
-	getPersistentDataContainer(): PersistentDataContainer;
-	getData(): MaterialData;
 	getBlock(): Block;
-	getWorld(): World;
-	setType(arg0: Material): void;
-	setData(arg0: MaterialData): void;
+	getBlock(): Block;
+	getBlockData(): BlockData;
+	getBlockProjectileSource(): BlockProjectileSource;
 	getChunk(): Chunk;
+	getCustomName(): string;
+	getData(): MaterialData;
+	getInventory(): Inventory;
+	getLightLevel(): number;
+	getLocation(): Location;
+	getLocation(arg0: Location): Location;
+	getLock(): string;
+	getLootTable(): LootTable;
+	getMetadata(arg0: string): Array<MetadataValue>;
+	getPersistentDataContainer(): PersistentDataContainer;
+	getRawData(): number;
+	getSeed(): number;
+	getSnapshotInventory(): Inventory;
+	getType(): Material;
+	getWorld(): World;
 	getX(): number;
 	getY(): number;
 	getZ(): number;
-	getBlockData(): BlockData;
-	setRawData(arg0: number): void;
-	getRawData(): number;
-	isPlaced(): boolean;
-	setBlockData(arg0: BlockData): void;
-	getLightLevel(): number;
-	update(arg0: boolean, arg1: boolean): boolean;
-	update(arg0: boolean): boolean;
-	update(): boolean;
-	getLocation(arg0: Location): Location;
-	getLocation(): Location;
-	getType(): Material;
-	setMetadata(arg0: string, arg1: MetadataValue): void;
-	getMetadata(arg0: string): Array<MetadataValue>;
 	hasMetadata(arg0: string): boolean;
-	removeMetadata(arg0: string, arg1: Plugin): void;
-	getBlock(): Block;
 	isLocked(): boolean;
-	getLock(): string;
-	setLock(arg0: string): void;
-	getCustomName(): string;
+	isPlaced(): boolean;
+	removeMetadata(arg0: string, arg1: Plugin): void;
+	setBlockData(arg0: BlockData): void;
 	setCustomName(arg0: string): void;
-	setSeed(arg0: number): void;
-	getLootTable(): LootTable;
-	getSeed(): number;
+	setData(arg0: MaterialData): void;
+	setLock(arg0: string): void;
 	setLootTable(arg0: LootTable): void;
+	setMetadata(arg0: string, arg1: MetadataValue): void;
+	setRawData(arg0: number): void;
+	setSeed(arg0: number): void;
+	setType(arg0: Material): void;
+	update(): boolean;
+	update(arg0: boolean): boolean;
+	update(arg0: boolean, arg1: boolean): boolean;
 }
 
 export default class Dispenser {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.block.Dispenser');
 	}
+
 }
 

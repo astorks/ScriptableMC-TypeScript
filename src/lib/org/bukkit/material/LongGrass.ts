@@ -5,14 +5,14 @@ import Material from '../../../org/bukkit/Material.js'
 import MaterialData from '../../../org/bukkit/material/MaterialData.js'
 
 export default interface LongGrass extends MaterialData {
-	getSpecies(): GrassSpecies;
-	setSpecies(species: GrassSpecies): void;
-	clone(): any;
-	clone(): MaterialData;
 	clone(): LongGrass;
+	clone(): MaterialData;
+	clone(): any;
 	getData(): number;
-	setData(data: number): void;
 	getItemType(): Material;
+	getSpecies(): GrassSpecies;
+	setData(data: number): void;
+	setSpecies(species: GrassSpecies): void;
 	toItemStack(): ItemStack;
 	toItemStack(amount: number): ItemStack;
 }
@@ -21,12 +21,14 @@ export default class LongGrass {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.material.LongGrass');
 	}
+
 	constructor();
-	constructor(type: Material, data: number);
 	constructor(type: Material);
 	constructor(species: GrassSpecies);
+	constructor(type: Material, data: number);
 	constructor(...args: any[]) {
 		return new LongGrass.$javaClass(...args);
 	}
+
 }
 

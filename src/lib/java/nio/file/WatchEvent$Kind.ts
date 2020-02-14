@@ -9,5 +9,6 @@ export default class WatchEvent$Kind {
 	public static get $javaClass(): any {
 		return Java.type('java.nio.file.WatchEvent$Kind');
 	}
+
 }
 

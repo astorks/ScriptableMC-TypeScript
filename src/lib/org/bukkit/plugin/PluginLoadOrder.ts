@@ -1,10 +1,10 @@
 declare var Java: any;
 
 export default interface PluginLoadOrder {
-	name(): string;
 	compareTo(arg0: any): number;
-	compareTo(arg0: any): number;
+	compareTo(o: any): number;
 	getDeclaringClass(): any;
+	name(): string;
 	ordinal(): number;
 }
 
@@ -13,11 +13,11 @@ export default class PluginLoadOrder {
 		return Java.type('org.bukkit.plugin.PluginLoadOrder');
 	}
 
-	public static get STARTUP(): PluginLoadOrder {
-		return this.$javaClass.STARTUP;
-	}
 	public static get POSTWORLD(): PluginLoadOrder {
 		return this.$javaClass.POSTWORLD;
+	}
+	public static get STARTUP(): PluginLoadOrder {
+		return this.$javaClass.STARTUP;
 	}
 }
 

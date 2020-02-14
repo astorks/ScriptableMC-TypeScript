@@ -7,27 +7,30 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import Location from '../../../../org/bukkit/Location.js'
 
 export default interface EntitySpawnEvent extends EntityEvent, Cancellable {
-	isCancelled(): boolean;
-	getHandlers(): HandlerList;
-	setCancelled(cancel: boolean): void;
-	getLocation(): Location;
 	getEntity(): Entity;
 	getEntityType(): EntityType;
 	getEventName(): string;
+	getHandlers(): HandlerList;
+	getLocation(): Location;
 	isAsynchronous(): boolean;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 }
 
 export default class EntitySpawnEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.entity.EntitySpawnEvent');
 	}
+
 	constructor(spawnee: Entity);
 	constructor(...args: any[]) {
 		return new EntitySpawnEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return EntitySpawnEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

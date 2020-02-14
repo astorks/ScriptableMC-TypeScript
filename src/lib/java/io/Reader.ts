@@ -1,23 +1,31 @@
 declare var Java: any;
 import CharBuffer from '../../java/nio/CharBuffer.js'
 import Closeable from '../../java/io/Closeable.js'
+import Writer from '../../java/io/Writer.js'
 
 export default interface Reader {
-	read(arg0: Array<string>): number;
-	read(arg0: Array<string>, arg1: number, arg2: number): number;
-	read(): number;
-	read(arg0: CharBuffer): number;
 	close(): void;
-	mark(arg0: number): void;
-	skip(arg0: number): number;
+	mark(readAheadLimit: number): void;
 	markSupported(): boolean;
-	reset(): void;
+	read(): number;
+	read(cbuf: Array<string>): number;
+	read(target: CharBuffer): number;
+	read(arg0: Array<string>, arg1: number, arg2: number): number;
 	ready(): boolean;
+	reset(): void;
+	skip(n: number): number;
+	transferTo(out: Writer): number;
 }
 
 export default class Reader {
 	public static get $javaClass(): any {
 		return Java.type('java.io.Reader');
 	}
+
+	public static nullReader(): Reader;
+	public static nullReader(...args: any[]): any {
+		return Reader.$javaClass.nullReader(...args);
+	}
+
 }
 

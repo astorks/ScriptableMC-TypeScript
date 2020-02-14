@@ -16,48 +16,49 @@ import TileState from '../../../org/bukkit/block/TileState.js'
 import World from '../../../org/bukkit/World.js'
 
 export default interface Beacon extends TileState, Lockable, Nameable {
-	getTier(): number;
-	getEntitiesInRange(): any;
-	getSecondaryEffect(): PotionEffect;
-	setSecondaryEffect(arg0: PotionEffectType): void;
-	getPrimaryEffect(): PotionEffect;
-	setPrimaryEffect(arg0: PotionEffectType): void;
-	getPersistentDataContainer(): PersistentDataContainer;
-	getData(): MaterialData;
 	getBlock(): Block;
-	getWorld(): World;
-	setType(arg0: Material): void;
-	setData(arg0: MaterialData): void;
+	getBlockData(): BlockData;
 	getChunk(): Chunk;
+	getCustomName(): string;
+	getData(): MaterialData;
+	getEntitiesInRange(): any;
+	getLightLevel(): number;
+	getLocation(): Location;
+	getLocation(arg0: Location): Location;
+	getLock(): string;
+	getMetadata(arg0: string): Array<MetadataValue>;
+	getPersistentDataContainer(): PersistentDataContainer;
+	getPrimaryEffect(): PotionEffect;
+	getRawData(): number;
+	getSecondaryEffect(): PotionEffect;
+	getTier(): number;
+	getType(): Material;
+	getWorld(): World;
 	getX(): number;
 	getY(): number;
 	getZ(): number;
-	getBlockData(): BlockData;
-	setRawData(arg0: number): void;
-	getRawData(): number;
-	isPlaced(): boolean;
-	setBlockData(arg0: BlockData): void;
-	getLightLevel(): number;
-	update(arg0: boolean, arg1: boolean): boolean;
-	update(arg0: boolean): boolean;
-	update(): boolean;
-	getLocation(arg0: Location): Location;
-	getLocation(): Location;
-	getType(): Material;
-	setMetadata(arg0: string, arg1: MetadataValue): void;
-	getMetadata(arg0: string): Array<MetadataValue>;
 	hasMetadata(arg0: string): boolean;
-	removeMetadata(arg0: string, arg1: Plugin): void;
 	isLocked(): boolean;
-	getLock(): string;
-	setLock(arg0: string): void;
-	getCustomName(): string;
+	isPlaced(): boolean;
+	removeMetadata(arg0: string, arg1: Plugin): void;
+	setBlockData(arg0: BlockData): void;
 	setCustomName(arg0: string): void;
+	setData(arg0: MaterialData): void;
+	setLock(arg0: string): void;
+	setMetadata(arg0: string, arg1: MetadataValue): void;
+	setPrimaryEffect(arg0: PotionEffectType): void;
+	setRawData(arg0: number): void;
+	setSecondaryEffect(arg0: PotionEffectType): void;
+	setType(arg0: Material): void;
+	update(): boolean;
+	update(arg0: boolean): boolean;
+	update(arg0: boolean, arg1: boolean): boolean;
 }
 
 export default class Beacon {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.block.Beacon');
 	}
+
 }
 

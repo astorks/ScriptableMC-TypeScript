@@ -7,30 +7,33 @@ import Entity from '../../../../org/bukkit/entity/Entity.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 
 export default interface CauldronLevelChangeEvent extends BlockEvent, Cancellable {
-	isCancelled(): boolean;
-	getHandlers(): HandlerList;
-	getEntity(): Entity;
-	setCancelled(cancelled: boolean): void;
-	getReason(): CauldronLevelChangeEvent$ChangeReason;
-	getOldLevel(): number;
-	getNewLevel(): number;
-	setNewLevel(newLevel: number): void;
 	getBlock(): Block;
+	getEntity(): Entity;
 	getEventName(): string;
+	getHandlers(): HandlerList;
+	getNewLevel(): number;
+	getOldLevel(): number;
+	getReason(): CauldronLevelChangeEvent$ChangeReason;
 	isAsynchronous(): boolean;
+	isCancelled(): boolean;
+	setCancelled(cancelled: boolean): void;
+	setNewLevel(newLevel: number): void;
 }
 
 export default class CauldronLevelChangeEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.block.CauldronLevelChangeEvent');
 	}
+
 	constructor(block: Block, entity: Entity, reason: CauldronLevelChangeEvent$ChangeReason, oldLevel: number, newLevel: number);
 	constructor(...args: any[]) {
 		return new CauldronLevelChangeEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return CauldronLevelChangeEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

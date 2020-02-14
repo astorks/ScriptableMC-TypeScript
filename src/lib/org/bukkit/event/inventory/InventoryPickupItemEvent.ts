@@ -6,26 +6,29 @@ import Inventory from '../../../../org/bukkit/inventory/Inventory.js'
 import Item from '../../../../org/bukkit/entity/Item.js'
 
 export default interface InventoryPickupItemEvent extends Event, Cancellable {
-	isCancelled(): boolean;
+	getEventName(): string;
 	getHandlers(): HandlerList;
 	getInventory(): Inventory;
 	getItem(): Item;
-	setCancelled(cancel: boolean): void;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 }
 
 export default class InventoryPickupItemEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.inventory.InventoryPickupItemEvent');
 	}
+
 	constructor(inventory: Inventory, item: Item);
 	constructor(...args: any[]) {
 		return new InventoryPickupItemEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return InventoryPickupItemEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

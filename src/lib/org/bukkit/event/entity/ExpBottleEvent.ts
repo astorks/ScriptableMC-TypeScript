@@ -9,33 +9,36 @@ import ProjectileHitEvent from '../../../../org/bukkit/event/entity/ProjectileHi
 import ThrownExpBottle from '../../../../org/bukkit/entity/ThrownExpBottle.js'
 
 export default interface ExpBottleEvent extends ProjectileHitEvent {
-	getHandlers(): HandlerList;
 	getEntity(): Entity;
-	getEntity(): ThrownExpBottle;
 	getEntity(): Projectile;
-	setExperience(exp: number): void;
+	getEntity(): ThrownExpBottle;
+	getEntityType(): EntityType;
+	getEventName(): string;
 	getExperience(): number;
-	getShowEffect(): boolean;
-	setShowEffect(showEffect: boolean): void;
+	getHandlers(): HandlerList;
 	getHitBlock(): Block;
 	getHitBlockFace(): BlockFace;
 	getHitEntity(): Entity;
-	getEntityType(): EntityType;
-	getEventName(): string;
+	getShowEffect(): boolean;
 	isAsynchronous(): boolean;
+	setExperience(exp: number): void;
+	setShowEffect(showEffect: boolean): void;
 }
 
 export default class ExpBottleEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.entity.ExpBottleEvent');
 	}
+
 	constructor(bottle: ThrownExpBottle, exp: number);
 	constructor(...args: any[]) {
 		return new ExpBottleEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return ExpBottleEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

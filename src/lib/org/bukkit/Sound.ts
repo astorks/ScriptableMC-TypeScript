@@ -1,10 +1,10 @@
 declare var Java: any;
 
 export default interface Sound {
-	name(): string;
 	compareTo(arg0: any): number;
-	compareTo(arg0: any): number;
+	compareTo(o: any): number;
 	getDeclaringClass(): any;
+	name(): string;
 	ordinal(): number;
 }
 

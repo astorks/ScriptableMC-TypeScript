@@ -6,26 +6,27 @@ import Material from '../../../../../org/bukkit/Material.js'
 import Sapling from '../../../../../org/bukkit/block/data/type/Sapling.js'
 
 export default interface Bamboo extends Ageable, Sapling {
-	getLeaves(): Bamboo$Leaves;
-	setLeaves(arg0: Bamboo$Leaves): void;
-	getAge(): number;
-	setAge(arg0: number): void;
-	getMaximumAge(): number;
-	getMaterial(): Material;
-	getAsString(arg0: boolean): string;
-	getAsString(): string;
-	clone(): BlockData;
 	clone(): any;
+	clone(): BlockData;
+	getAge(): number;
+	getAsString(): string;
+	getAsString(arg0: boolean): string;
+	getLeaves(): Bamboo$Leaves;
+	getMaterial(): Material;
+	getMaximumAge(): number;
+	getMaximumStage(): number;
+	getStage(): number;
 	matches(arg0: BlockData): boolean;
 	merge(arg0: BlockData): BlockData;
-	getStage(): number;
+	setAge(arg0: number): void;
+	setLeaves(arg0: Bamboo$Leaves): void;
 	setStage(arg0: number): void;
-	getMaximumStage(): number;
 }
 
 export default class Bamboo {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.block.data.type.Bamboo');
 	}
+
 }
 

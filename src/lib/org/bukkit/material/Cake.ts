@@ -4,16 +4,16 @@ import Material from '../../../org/bukkit/Material.js'
 import MaterialData from '../../../org/bukkit/material/MaterialData.js'
 
 export default interface Cake extends MaterialData {
-	getSlicesEaten(): number;
-	setSlicesEaten(n: number): void;
-	getSlicesRemaining(): number;
-	setSlicesRemaining(n: number): void;
-	clone(): any;
-	clone(): MaterialData;
 	clone(): Cake;
+	clone(): MaterialData;
+	clone(): any;
 	getData(): number;
-	setData(data: number): void;
 	getItemType(): Material;
+	getSlicesEaten(): number;
+	getSlicesRemaining(): number;
+	setData(data: number): void;
+	setSlicesEaten(n: number): void;
+	setSlicesRemaining(n: number): void;
 	toItemStack(): ItemStack;
 	toItemStack(amount: number): ItemStack;
 }
@@ -22,11 +22,13 @@ export default class Cake {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.material.Cake');
 	}
+
 	constructor();
-	constructor(type: Material, data: number);
 	constructor(type: Material);
+	constructor(type: Material, data: number);
 	constructor(...args: any[]) {
 		return new Cake.$javaClass(...args);
 	}
+
 }
 

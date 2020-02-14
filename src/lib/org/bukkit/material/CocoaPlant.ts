@@ -8,17 +8,17 @@ import Material from '../../../org/bukkit/Material.js'
 import MaterialData from '../../../org/bukkit/material/MaterialData.js'
 
 export default interface CocoaPlant extends MaterialData, Directional, Attachable {
-	getFacing(): BlockFace;
-	getAttachedFace(): BlockFace;
-	setFacingDirection(face: BlockFace): void;
-	clone(): MaterialData;
-	clone(): any;
 	clone(): CocoaPlant;
-	getSize(): CocoaPlant$CocoaPlantSize;
-	setSize(sz: CocoaPlant$CocoaPlantSize): void;
+	clone(): any;
+	clone(): MaterialData;
+	getAttachedFace(): BlockFace;
 	getData(): number;
-	setData(data: number): void;
+	getFacing(): BlockFace;
 	getItemType(): Material;
+	getSize(): CocoaPlant$CocoaPlantSize;
+	setData(data: number): void;
+	setFacingDirection(face: BlockFace): void;
+	setSize(sz: CocoaPlant$CocoaPlantSize): void;
 	toItemStack(): ItemStack;
 	toItemStack(amount: number): ItemStack;
 }
@@ -27,12 +27,14 @@ export default class CocoaPlant {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.material.CocoaPlant');
 	}
-	constructor(type: Material, data: number);
+
+	constructor();
 	constructor(sz: CocoaPlant$CocoaPlantSize);
 	constructor(sz: CocoaPlant$CocoaPlantSize, dir: BlockFace);
-	constructor();
+	constructor(type: Material, data: number);
 	constructor(...args: any[]) {
 		return new CocoaPlant.$javaClass(...args);
 	}
+
 }
 
