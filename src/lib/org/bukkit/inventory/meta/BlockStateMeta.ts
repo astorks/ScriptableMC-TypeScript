@@ -17,8 +17,8 @@ export default interface BlockStateMeta extends ItemMeta {
 	clone(): ItemMeta;
 	clone(): any;
 	getAttributeModifiers(): Multimap;
-	getAttributeModifiers(arg0: Attribute): any;
 	getAttributeModifiers(arg0: EquipmentSlot): Multimap;
+	getAttributeModifiers(arg0: Attribute): any;
 	getBlockState(): BlockState;
 	getCustomModelData(): number;
 	getCustomTagContainer(): CustomItemTagContainer;
@@ -40,8 +40,8 @@ export default interface BlockStateMeta extends ItemMeta {
 	hasLocalizedName(): boolean;
 	hasLore(): boolean;
 	isUnbreakable(): boolean;
-	removeAttributeModifier(arg0: EquipmentSlot): boolean;
 	removeAttributeModifier(arg0: Attribute): boolean;
+	removeAttributeModifier(arg0: EquipmentSlot): boolean;
 	removeAttributeModifier(arg0: Attribute, arg1: AttributeModifier): boolean;
 	removeEnchant(arg0: Enchantment): boolean;
 	removeItemFlags(arg0: Array<ItemFlag>): void;

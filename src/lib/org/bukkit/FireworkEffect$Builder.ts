@@ -11,9 +11,9 @@ export default interface FireworkEffect$Builder {
 	withColor(color: Color): FireworkEffect$Builder;
 	withColor(colors: any): FireworkEffect$Builder;
 	withColor(colors: Array<Color>): FireworkEffect$Builder;
-	withFade(color: Color): FireworkEffect$Builder;
 	withFade(colors: any): FireworkEffect$Builder;
 	withFade(colors: Array<Color>): FireworkEffect$Builder;
+	withFade(color: Color): FireworkEffect$Builder;
 	withFlicker(): FireworkEffect$Builder;
 	withTrail(): FireworkEffect$Builder;
 }

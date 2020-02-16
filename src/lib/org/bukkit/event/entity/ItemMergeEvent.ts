@@ -7,8 +7,8 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import Item from '../../../../org/bukkit/entity/Item.js'
 
 export default interface ItemMergeEvent extends EntityEvent, Cancellable {
-	getEntity(): Entity;
 	getEntity(): Item;
+	getEntity(): Entity;
 	getEntityType(): EntityType;
 	getEventName(): string;
 	getHandlers(): HandlerList;

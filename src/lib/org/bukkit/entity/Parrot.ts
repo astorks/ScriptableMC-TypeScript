@@ -207,10 +207,10 @@ export default interface Parrot extends Animals, Tameable, Sittable {
 	setTicksLived(arg0: number): void;
 	setVariant(arg0: Parrot$Variant): void;
 	setVelocity(arg0: Vector): void;
-	teleport(arg0: Entity): boolean;
 	teleport(arg0: Location): boolean;
-	teleport(arg0: Entity, arg1: PlayerTeleportEvent$TeleportCause): boolean;
+	teleport(arg0: Entity): boolean;
 	teleport(arg0: Location, arg1: PlayerTeleportEvent$TeleportCause): boolean;
+	teleport(arg0: Entity, arg1: PlayerTeleportEvent$TeleportCause): boolean;
 }
 
 export default class Parrot {

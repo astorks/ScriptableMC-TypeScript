@@ -31,8 +31,8 @@ export default interface PluginManager {
 	registerEvent(arg0: any, arg1: Listener, arg2: EventPriority, arg3: EventExecutor, arg4: Plugin, arg5: boolean): void;
 	registerEvents(arg0: Listener, arg1: Plugin): void;
 	registerInterface(arg0: any): void;
-	removePermission(arg0: Permission): void;
 	removePermission(arg0: string): void;
+	removePermission(arg0: Permission): void;
 	subscribeToDefaultPerms(arg0: boolean, arg1: Permissible): void;
 	subscribeToPermission(arg0: string, arg1: Permissible): void;
 	unsubscribeFromDefaultPerms(arg0: boolean, arg1: Permissible): void;

@@ -222,10 +222,10 @@ export default interface Llama extends ChestedHorse {
 	setTicksLived(arg0: number): void;
 	setVariant(arg0: Horse$Variant): void;
 	setVelocity(arg0: Vector): void;
-	teleport(arg0: Entity): boolean;
 	teleport(arg0: Location): boolean;
-	teleport(arg0: Entity, arg1: PlayerTeleportEvent$TeleportCause): boolean;
+	teleport(arg0: Entity): boolean;
 	teleport(arg0: Location, arg1: PlayerTeleportEvent$TeleportCause): boolean;
+	teleport(arg0: Entity, arg1: PlayerTeleportEvent$TeleportCause): boolean;
 }
 
 export default class Llama {

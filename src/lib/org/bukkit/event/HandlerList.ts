@@ -8,9 +8,9 @@ export default interface HandlerList {
 	getRegisteredListeners(): Array<RegisteredListener>;
 	register(listener: RegisteredListener): void;
 	registerAll(listeners: any): void;
-	unregister(plugin: Plugin): void;
-	unregister(listener: RegisteredListener): void;
 	unregister(listener: Listener): void;
+	unregister(listener: RegisteredListener): void;
+	unregister(plugin: Plugin): void;
 }
 
 export default class HandlerList {
@@ -39,8 +39,8 @@ export default class HandlerList {
 	}
 
 	public static unregisterAll(): void;
-	public static unregisterAll(listener: Listener): void;
 	public static unregisterAll(plugin: Plugin): void;
+	public static unregisterAll(listener: Listener): void;
 	public static unregisterAll(...args: any[]): any {
 		return HandlerList.$javaClass.unregisterAll(...args);
 	}

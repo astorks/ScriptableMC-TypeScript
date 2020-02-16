@@ -14,8 +14,8 @@ export default interface PlayerArmorStandManipulateEvent extends PlayerInteractE
 	getHandlers(): HandlerList;
 	getPlayer(): Player;
 	getPlayerItem(): ItemStack;
-	getRightClicked(): Entity;
 	getRightClicked(): ArmorStand;
+	getRightClicked(): Entity;
 	getSlot(): EquipmentSlot;
 	isAsynchronous(): boolean;
 	isCancelled(): boolean;

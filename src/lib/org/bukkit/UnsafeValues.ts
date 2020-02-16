@@ -9,8 +9,8 @@ import PluginDescriptionFile from '../../org/bukkit/plugin/PluginDescriptionFile
 
 export default interface UnsafeValues {
 	checkSupported(arg0: PluginDescriptionFile): void;
-	fromLegacy(arg0: Material): Material;
 	fromLegacy(arg0: MaterialData): Material;
+	fromLegacy(arg0: Material): Material;
 	fromLegacy(arg0: Material, arg1: number): BlockData;
 	fromLegacy(arg0: MaterialData, arg1: boolean): Material;
 	getDataVersion(): number;

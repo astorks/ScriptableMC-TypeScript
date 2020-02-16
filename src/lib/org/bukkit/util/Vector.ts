@@ -30,8 +30,8 @@ export default interface Vector extends ConfigurationSerializable {
 	length(): number;
 	lengthSquared(): number;
 	midpoint(other: Vector): Vector;
-	multiply(m: number): Vector;
 	multiply(vec: Vector): Vector;
+	multiply(m: number): Vector;
 	multiply(m: number): Vector;
 	multiply(m: number): Vector;
 	normalize(): Vector;

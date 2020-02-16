@@ -198,10 +198,10 @@ export default interface MushroomCow extends Cow {
 	setTicksLived(arg0: number): void;
 	setVariant(arg0: MushroomCow$Variant): void;
 	setVelocity(arg0: Vector): void;
-	teleport(arg0: Entity): boolean;
 	teleport(arg0: Location): boolean;
-	teleport(arg0: Entity, arg1: PlayerTeleportEvent$TeleportCause): boolean;
+	teleport(arg0: Entity): boolean;
 	teleport(arg0: Location, arg1: PlayerTeleportEvent$TeleportCause): boolean;
+	teleport(arg0: Entity, arg1: PlayerTeleportEvent$TeleportCause): boolean;
 }
 
 export default class MushroomCow {

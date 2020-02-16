@@ -7,8 +7,8 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import PigZombie from '../../../../org/bukkit/entity/PigZombie.js'
 
 export default interface PigZombieAngerEvent extends EntityEvent, Cancellable {
-	getEntity(): PigZombie;
 	getEntity(): Entity;
+	getEntity(): PigZombie;
 	getEntityType(): EntityType;
 	getEventName(): string;
 	getHandlers(): HandlerList;

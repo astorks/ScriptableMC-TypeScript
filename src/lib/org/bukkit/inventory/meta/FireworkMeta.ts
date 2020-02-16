@@ -13,17 +13,17 @@ import PersistentDataContainer from '../../../../org/bukkit/persistence/Persiste
 export default interface FireworkMeta extends ItemMeta {
 	addAttributeModifier(arg0: Attribute, arg1: AttributeModifier): boolean;
 	addEffect(arg0: FireworkEffect): void;
-	addEffects(arg0: Array<FireworkEffect>): void;
 	addEffects(arg0: any): void;
+	addEffects(arg0: Array<FireworkEffect>): void;
 	addEnchant(arg0: Enchantment, arg1: number, arg2: boolean): boolean;
 	addItemFlags(arg0: Array<ItemFlag>): void;
 	clearEffects(): void;
-	clone(): ItemMeta;
 	clone(): FireworkMeta;
+	clone(): ItemMeta;
 	clone(): any;
 	getAttributeModifiers(): Multimap;
-	getAttributeModifiers(arg0: Attribute): any;
 	getAttributeModifiers(arg0: EquipmentSlot): Multimap;
+	getAttributeModifiers(arg0: Attribute): any;
 	getCustomModelData(): number;
 	getCustomTagContainer(): CustomItemTagContainer;
 	getDisplayName(): string;
@@ -47,8 +47,8 @@ export default interface FireworkMeta extends ItemMeta {
 	hasLocalizedName(): boolean;
 	hasLore(): boolean;
 	isUnbreakable(): boolean;
-	removeAttributeModifier(arg0: EquipmentSlot): boolean;
 	removeAttributeModifier(arg0: Attribute): boolean;
+	removeAttributeModifier(arg0: EquipmentSlot): boolean;
 	removeAttributeModifier(arg0: Attribute, arg1: AttributeModifier): boolean;
 	removeEffect(arg0: number): void;
 	removeEnchant(arg0: Enchantment): boolean;

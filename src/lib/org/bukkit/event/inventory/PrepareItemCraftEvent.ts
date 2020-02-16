@@ -10,8 +10,8 @@ import Recipe from '../../../../org/bukkit/inventory/Recipe.js'
 export default interface PrepareItemCraftEvent extends InventoryEvent {
 	getEventName(): string;
 	getHandlers(): HandlerList;
-	getInventory(): Inventory;
 	getInventory(): CraftingInventory;
+	getInventory(): Inventory;
 	getRecipe(): Recipe;
 	getView(): InventoryView;
 	getViewers(): Array<HumanEntity>;

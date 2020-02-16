@@ -36,8 +36,8 @@ export default class ConfigurationSerialization {
 		return ConfigurationSerialization.$javaClass.registerClass(...args);
 	}
 
-	public static unregisterClass(clazz: any): void;
 	public static unregisterClass(alias: string): void;
+	public static unregisterClass(clazz: any): void;
 	public static unregisterClass(...args: any[]): any {
 		return ConfigurationSerialization.$javaClass.unregisterClass(...args);
 	}

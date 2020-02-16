@@ -25,8 +25,8 @@ export default class ProjectileHitEvent {
 	}
 
 	constructor(projectile: Projectile);
-	constructor(projectile: Projectile, hitBlock: Block);
 	constructor(projectile: Projectile, hitEntity: Entity);
+	constructor(projectile: Projectile, hitBlock: Block);
 	constructor(projectile: Projectile, hitEntity: Entity, hitBlock: Block);
 	constructor(projectile: Projectile, hitEntity: Entity, hitBlock: Block, hitFace: BlockFace);
 	constructor(...args: any[]) {

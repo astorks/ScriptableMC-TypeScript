@@ -15,8 +15,8 @@ export default interface ShapedRecipe extends Recipe, Keyed {
 	getResult(): ItemStack;
 	getShape(): Array<string>;
 	setGroup(group: string): void;
-	setIngredient(key: string, ingredient: MaterialData): ShapedRecipe;
 	setIngredient(key: string, ingredient: RecipeChoice): ShapedRecipe;
+	setIngredient(key: string, ingredient: MaterialData): ShapedRecipe;
 	setIngredient(key: string, ingredient: Material): ShapedRecipe;
 	setIngredient(key: string, ingredient: Material, raw: number): ShapedRecipe;
 	shape(shape: Array<string>): ShapedRecipe;

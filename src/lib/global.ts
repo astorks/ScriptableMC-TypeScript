@@ -397,15 +397,19 @@ import java_nio_channels_FileChannel from './java/nio/channels/FileChannel.js'
 import java_nio_channels_FileChannel$MapMode from './java/nio/channels/FileChannel$MapMode.js'
 import org_bukkit_configuration_file_FileConfiguration from './org/bukkit/configuration/file/FileConfiguration.js'
 import org_bukkit_configuration_file_FileConfigurationOptions from './org/bukkit/configuration/file/FileConfigurationOptions.js'
+import java_io_FileDescriptor from './java/io/FileDescriptor.js'
 import java_io_FileFilter from './java/io/FileFilter.js'
+import java_io_FileInputStream from './java/io/FileInputStream.js'
 import khttp_structures_files_FileLike from './khttp/structures/files/FileLike.js'
 import java_nio_channels_FileLock from './java/nio/channels/FileLock.js'
+import java_io_FileOutputStream from './java/io/FileOutputStream.js'
 import java_nio_file_FileStore from './java/nio/file/FileStore.js'
 import java_nio_file_attribute_FileStoreAttributeView from './java/nio/file/attribute/FileStoreAttributeView.js'
 import java_nio_file_FileSystem from './java/nio/file/FileSystem.js'
 import java_nio_file_spi_FileSystemProvider from './java/nio/file/spi/FileSystemProvider.js'
 import java_nio_file_attribute_FileTime from './java/nio/file/attribute/FileTime.js'
 import org_bukkit_util_FileUtil from './org/bukkit/util/FileUtil.js'
+import org_apache_commons_io_FileUtils from './org/apache/commons/io/FileUtils.js'
 import java_io_FilenameFilter from './java/io/FilenameFilter.js'
 import java_io_FilterOutputStream from './java/io/FilterOutputStream.js'
 import org_bukkit_block_data_type_Fire from './org/bukkit/block/data/type/Fire.js'
@@ -483,6 +487,7 @@ import org_bukkit_event_entity_HorseJumpEvent from './org/bukkit/event/entity/Ho
 import com_smc_utils_Http from './com/smc/utils/Http.js'
 import org_bukkit_entity_HumanEntity from './org/bukkit/entity/HumanEntity.js'
 import org_bukkit_entity_Husk from './org/bukkit/entity/Husk.js'
+import org_apache_commons_io_filefilter_IOFileFilter from './org/apache/commons/io/filefilter/IOFileFilter.js'
 import org_bukkit_entity_Illager from './org/bukkit/entity/Illager.js'
 import org_bukkit_plugin_IllegalPluginAccessException from './org/bukkit/plugin/IllegalPluginAccessException.js'
 import org_bukkit_entity_Illusioner from './org/bukkit/entity/Illusioner.js'
@@ -557,6 +562,7 @@ import org_bukkit_block_data_Lightable from './org/bukkit/block/data/Lightable.j
 import org_bukkit_entity_LightningStrike from './org/bukkit/entity/LightningStrike.js'
 import org_bukkit_event_weather_LightningStrikeEvent from './org/bukkit/event/weather/LightningStrikeEvent.js'
 import org_bukkit_event_weather_LightningStrikeEvent$Cause from './org/bukkit/event/weather/LightningStrikeEvent$Cause.js'
+import org_apache_commons_io_LineIterator from './org/apache/commons/io/LineIterator.js'
 import org_bukkit_entity_LingeringPotion from './org/bukkit/entity/LingeringPotion.js'
 import org_bukkit_event_entity_LingeringPotionSplashEvent from './org/bukkit/event/entity/LingeringPotionSplashEvent.js'
 import java_nio_file_LinkOption from './java/nio/file/LinkOption.js'
@@ -2065,7 +2071,10 @@ export namespace java.io {
 	export const DataInput = java_io_DataInput;
 	export const DataOutput = java_io_DataOutput;
 	export const File = java_io_File;
+	export const FileDescriptor = java_io_FileDescriptor;
 	export const FileFilter = java_io_FileFilter;
+	export const FileInputStream = java_io_FileInputStream;
+	export const FileOutputStream = java_io_FileOutputStream;
 	export const FilenameFilter = java_io_FilenameFilter;
 	export const FilterOutputStream = java_io_FilterOutputStream;
 	export const Flushable = java_io_Flushable;
@@ -2217,6 +2226,10 @@ export namespace khttp.structures.files {
 export namespace java.nio.file.spi {
 	export const FileSystemProvider = java_nio_file_spi_FileSystemProvider;
 }
+export namespace org.apache.commons.io {
+	export const FileUtils = org_apache_commons_io_FileUtils;
+	export const LineIterator = org_apache_commons_io_LineIterator;
+}
 export namespace org.bukkit.metadata {
 	export const FixedMetadataValue = org_bukkit_metadata_FixedMetadataValue;
 	export const LazyMetadataValue = org_bukkit_metadata_LazyMetadataValue;
@@ -2257,6 +2270,9 @@ export namespace com.smc.utils {
 	export const Http = com_smc_utils_Http;
 	export const ItemBuilder = com_smc_utils_ItemBuilder;
 	export const MysqlWrapper = com_smc_utils_MysqlWrapper;
+}
+export namespace org.apache.commons.io.filefilter {
+	export const IOFileFilter = org_apache_commons_io_filefilter_IOFileFilter;
 }
 export namespace fr.minuskube.inv.content {
 	export const InventoryContents = fr_minuskube_inv_content_InventoryContents;

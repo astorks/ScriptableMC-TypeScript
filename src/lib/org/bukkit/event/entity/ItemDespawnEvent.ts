@@ -8,8 +8,8 @@ import Item from '../../../../org/bukkit/entity/Item.js'
 import Location from '../../../../org/bukkit/Location.js'
 
 export default interface ItemDespawnEvent extends EntityEvent, Cancellable {
-	getEntity(): Entity;
 	getEntity(): Item;
+	getEntity(): Entity;
 	getEntityType(): EntityType;
 	getEventName(): string;
 	getHandlers(): HandlerList;

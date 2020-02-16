@@ -8,8 +8,8 @@ import HumanEntity from '../../../../org/bukkit/entity/HumanEntity.js'
 import ItemStack from '../../../../org/bukkit/inventory/ItemStack.js'
 
 export default interface FoodLevelChangeEvent extends EntityEvent, Cancellable {
-	getEntity(): Entity;
 	getEntity(): HumanEntity;
+	getEntity(): Entity;
 	getEntityType(): EntityType;
 	getEventName(): string;
 	getFoodLevel(): number;

@@ -7,8 +7,8 @@ import EntityType from '../../../../org/bukkit/entity/EntityType.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 
 export default interface HorseJumpEvent extends EntityEvent, Cancellable {
-	getEntity(): Entity;
 	getEntity(): AbstractHorse;
+	getEntity(): Entity;
 	getEntityType(): EntityType;
 	getEventName(): string;
 	getHandlers(): HandlerList;

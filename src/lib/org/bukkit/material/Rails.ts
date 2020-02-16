@@ -6,8 +6,8 @@ import MaterialData from '../../../org/bukkit/material/MaterialData.js'
 
 export default interface Rails extends MaterialData {
 	clone(): MaterialData;
-	clone(): Rails;
 	clone(): any;
+	clone(): Rails;
 	getData(): number;
 	getDirection(): BlockFace;
 	getItemType(): Material;

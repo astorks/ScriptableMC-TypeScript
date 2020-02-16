@@ -1,5 +1,4 @@
-import TestPlugin from "./TestPlugin/main.js";
-
+import TestPlugin from "./TestPlugin/main";
 
 // Return an array of plugin types that should be loaded and enabled.
 // Add any scriptable plugins you want to load and enable to this array.

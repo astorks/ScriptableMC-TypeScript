@@ -23,8 +23,8 @@ export default interface PotionMeta extends ItemMeta {
 	clone(): ItemMeta;
 	clone(): any;
 	getAttributeModifiers(): Multimap;
-	getAttributeModifiers(arg0: Attribute): any;
 	getAttributeModifiers(arg0: EquipmentSlot): Multimap;
+	getAttributeModifiers(arg0: Attribute): any;
 	getBasePotionData(): PotionData;
 	getColor(): Color;
 	getCustomEffects(): Array<PotionEffect>;
@@ -50,8 +50,8 @@ export default interface PotionMeta extends ItemMeta {
 	hasLocalizedName(): boolean;
 	hasLore(): boolean;
 	isUnbreakable(): boolean;
-	removeAttributeModifier(arg0: EquipmentSlot): boolean;
 	removeAttributeModifier(arg0: Attribute): boolean;
+	removeAttributeModifier(arg0: EquipmentSlot): boolean;
 	removeAttributeModifier(arg0: Attribute, arg1: AttributeModifier): boolean;
 	removeCustomEffect(arg0: PotionEffectType): boolean;
 	removeEnchant(arg0: Enchantment): boolean;

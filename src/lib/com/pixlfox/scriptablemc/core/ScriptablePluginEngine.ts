@@ -2,25 +2,26 @@ declare var Java: any;
 import CommandSender from '../../../../org/bukkit/command/CommandSender.js'
 import File from '../../../../java/io/File.js'
 import InventoryManager from '../../../../fr/minuskube/inv/InventoryManager.js'
-import JavaPlugin from '../../../../org/bukkit/plugin/java/JavaPlugin.js'
+import ScriptEngineMain from '../../../../com/pixlfox/scriptablemc/ScriptEngineMain.js'
 import ScriptablePluginContext from '../../../../com/pixlfox/scriptablemc/core/ScriptablePluginContext.js'
+import Version from '../../../../com/smc/version/Version.js'
 
 export default interface ScriptablePluginEngine {
 	close(): void;
 	disablePlugin(pluginContext: ScriptablePluginContext): void;
 	enableAllPlugins(): void;
 	enablePlugin(pluginContext: ScriptablePluginContext): void;
-	eval(source: any): any;
 	eval(source: string): any;
+	eval(source: any): any;
 	evalCommandSender(source: string, sender: CommandSender): any;
 	evalFile(scriptFile: File): any;
 	evalFile(filePath: string): any;
-	getBootstrapPlugin(): JavaPlugin;
+	getBootstrapPlugin(): ScriptEngineMain;
 	getDebugEnabled(): boolean;
 	getGlobalBindings(): any;
 	getGraalContext(): any;
 	getInventoryManager(): InventoryManager;
-	getPluginVersion(): string;
+	getPluginVersion(): Version;
 	getScriptablePlugins(): Array<ScriptablePluginContext>;
 	loadAllHelperClasses(): void;
 	loadPlugin(scriptableClass: any): ScriptablePluginContext;

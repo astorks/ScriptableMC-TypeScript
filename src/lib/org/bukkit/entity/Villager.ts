@@ -212,10 +212,10 @@ export default interface Villager extends AbstractVillager {
 	setVillagerLevel(arg0: number): void;
 	setVillagerType(arg0: Villager$Type): void;
 	sleep(arg0: Location): boolean;
-	teleport(arg0: Entity): boolean;
 	teleport(arg0: Location): boolean;
-	teleport(arg0: Entity, arg1: PlayerTeleportEvent$TeleportCause): boolean;
+	teleport(arg0: Entity): boolean;
 	teleport(arg0: Location, arg1: PlayerTeleportEvent$TeleportCause): boolean;
+	teleport(arg0: Entity, arg1: PlayerTeleportEvent$TeleportCause): boolean;
 	wakeup(): void;
 }
 

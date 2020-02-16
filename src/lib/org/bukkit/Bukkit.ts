@@ -79,10 +79,10 @@ export default class Bukkit {
 		return Bukkit.$javaClass.clearRecipes(...args);
 	}
 
-	public static createBlockData(data: string): BlockData;
 	public static createBlockData(material: Material): BlockData;
-	public static createBlockData(material: Material, data: string): BlockData;
+	public static createBlockData(data: string): BlockData;
 	public static createBlockData(material: Material, consumer: any): BlockData;
+	public static createBlockData(material: Material, data: string): BlockData;
 	public static createBlockData(...args: any[]): any {
 		return Bukkit.$javaClass.createBlockData(...args);
 	}
@@ -106,8 +106,8 @@ export default class Bukkit {
 
 	public static createInventory(owner: InventoryHolder, size: number): Inventory;
 	public static createInventory(owner: InventoryHolder, type: InventoryType): Inventory;
-	public static createInventory(owner: InventoryHolder, type: InventoryType, title: string): Inventory;
 	public static createInventory(owner: InventoryHolder, size: number, title: string): Inventory;
+	public static createInventory(owner: InventoryHolder, type: InventoryType, title: string): Inventory;
 	public static createInventory(...args: any[]): any {
 		return Bukkit.$javaClass.createInventory(...args);
 	}
@@ -434,8 +434,8 @@ export default class Bukkit {
 		return Bukkit.$javaClass.getWhitelistedPlayers(...args);
 	}
 
-	public static getWorld(_name: string): World;
 	public static getWorld(uid: string): World;
+	public static getWorld(_name: string): World;
 	public static getWorld(...args: any[]): any {
 		return Bukkit.$javaClass.getWorld(...args);
 	}
@@ -470,8 +470,8 @@ export default class Bukkit {
 		return Bukkit.$javaClass.isPrimaryThread(...args);
 	}
 
-	public static loadServerIcon(image: any): CachedServerIcon;
 	public static loadServerIcon(file: File): CachedServerIcon;
+	public static loadServerIcon(image: any): CachedServerIcon;
 	public static loadServerIcon(...args: any[]): any {
 		return Bukkit.$javaClass.loadServerIcon(...args);
 	}

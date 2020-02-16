@@ -11,6 +11,7 @@ import PluginDescriptionFile from '../../../org/bukkit/plugin/PluginDescriptionF
 import PluginLoader from '../../../org/bukkit/plugin/PluginLoader.js'
 import ScriptablePluginEngine from '../../../com/pixlfox/scriptablemc/core/ScriptablePluginEngine.js'
 import Server from '../../../org/bukkit/Server.js'
+import Version from '../../../com/smc/version/Version.js'
 
 export default interface ScriptEngineMain extends JavaPlugin {
 	getChatMessagePrefix(): string;
@@ -23,8 +24,10 @@ export default interface ScriptEngineMain extends JavaPlugin {
 	getLogger(): any;
 	getName(): string;
 	getPluginLoader(): PluginLoader;
+	getPluginVersion(): Version;
 	getResource(filename: string): InputStream;
 	getScriptEngine(): ScriptablePluginEngine;
+	getScriptLanguage(): string;
 	getServer(): Server;
 	isEnabled(): boolean;
 	isNaggable(): boolean;
@@ -77,6 +80,11 @@ export default class ScriptEngineMain {
 	public static registerScriptEngine(language: string, scriptEngineMain: ScriptEngineMain): void;
 	public static registerScriptEngine(...args: any[]): any {
 		return ScriptEngineMain.$javaClass.registerScriptEngine(...args);
+	}
+
+	public static releaseScriptEngine(language: string): void;
+	public static releaseScriptEngine(...args: any[]): any {
+		return ScriptEngineMain.$javaClass.releaseScriptEngine(...args);
 	}
 
 	public static reloadAllScriptEngines(): void;

@@ -12,8 +12,8 @@ export default interface CookieJar {
 	containsValue(value: string): boolean;
 	entrySet(): any;
 	forEach(action: any): void;
-	get(arg0: any): any;
 	get(key: string): string;
+	get(arg0: any): any;
 	getCookie(key: string): Cookie;
 	getCookies(): Array<Cookie>;
 	getEntries(): any;
@@ -28,8 +28,8 @@ export default interface CookieJar {
 	put(key: string, value: string): string;
 	putAll(from: any): void;
 	putIfAbsent(key: any, value: any): any;
-	remove(key: string): string;
 	remove(arg0: any): any;
+	remove(key: string): string;
 	remove(key: any, value: any): boolean;
 	replace(key: any, value: any): any;
 	replace(key: any, oldValue: any, newValue: any): boolean;

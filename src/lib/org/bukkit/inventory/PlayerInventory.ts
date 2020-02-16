@@ -29,8 +29,8 @@ export default interface PlayerInventory extends Inventory {
 	getExtraContents(): Array<ItemStack>;
 	getHeldItemSlot(): number;
 	getHelmet(): ItemStack;
-	getHolder(): InventoryHolder;
 	getHolder(): HumanEntity;
+	getHolder(): InventoryHolder;
 	getItem(arg0: number): ItemStack;
 	getItemInHand(): ItemStack;
 	getItemInMainHand(): ItemStack;

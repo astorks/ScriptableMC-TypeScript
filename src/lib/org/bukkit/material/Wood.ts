@@ -5,9 +5,9 @@ import MaterialData from '../../../org/bukkit/material/MaterialData.js'
 import TreeSpecies from '../../../org/bukkit/TreeSpecies.js'
 
 export default interface Wood extends MaterialData {
-	clone(): MaterialData;
 	clone(): Wood;
 	clone(): any;
+	clone(): MaterialData;
 	getData(): number;
 	getItemType(): Material;
 	getSpecies(): TreeSpecies;

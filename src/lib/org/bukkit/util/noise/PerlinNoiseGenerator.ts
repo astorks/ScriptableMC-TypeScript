@@ -7,8 +7,8 @@ export default interface PerlinNoiseGenerator extends NoiseGenerator {
 	noise(x: number, y: number): number;
 	noise(x: number, y: number, z: number): number;
 	noise(x: number, octaves: number, frequency: number, amplitude: number): number;
-	noise(x: number, y: number, octaves: number, frequency: number, amplitude: number): number;
 	noise(x: number, octaves: number, frequency: number, amplitude: number, normalized: boolean): number;
+	noise(x: number, y: number, octaves: number, frequency: number, amplitude: number): number;
 	noise(x: number, y: number, octaves: number, frequency: number, amplitude: number, normalized: boolean): number;
 	noise(x: number, y: number, z: number, octaves: number, frequency: number, amplitude: number): number;
 	noise(x: number, y: number, z: number, octaves: number, frequency: number, amplitude: number, normalized: boolean): number;

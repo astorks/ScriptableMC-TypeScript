@@ -25,8 +25,8 @@ export default interface FurnaceInventory extends Inventory {
 	forEach(action: any): void;
 	getContents(): Array<ItemStack>;
 	getFuel(): ItemStack;
-	getHolder(): Furnace;
 	getHolder(): InventoryHolder;
+	getHolder(): Furnace;
 	getItem(arg0: number): ItemStack;
 	getLocation(): Location;
 	getMaxStackSize(): number;
