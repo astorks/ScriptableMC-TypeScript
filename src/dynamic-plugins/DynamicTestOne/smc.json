@@ -1,0 +1,7 @@
+{
+    "name": "dynamic-test-one",
+    "enabled": true,
+    "version": "0.0.1",
+    "description": "ScriptableMC dynamic test one.",
+    "main": "main.js"
+}

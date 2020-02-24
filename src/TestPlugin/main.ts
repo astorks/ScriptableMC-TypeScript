@@ -63,19 +63,19 @@ export default class TestPlugin extends JsPlugin {
         // Register incoming bungee message channel
         this.registerIncomingPluginChannel('BungeeCord', this.onBungeeMessageReceived);
 
-        // no-op event handler, this will cancel any event that is registered to it.
-        let noop = (l: any, e: any) => e.setCancelled(true);
 
         // Register PlayerJoinEvent to a local method
         this.registerEvent(PlayerJoinEvent, this.onPlayerJoin);
 
-        // Register a bunch of block break / entity interact events and no-op them
-        this.registerEvent(EntityDamageEvent, noop);
-        this.registerEvent(BlockBreakEvent, noop);
-        this.registerEvent(BlockPlaceEvent, noop);
-        this.registerEvent(PlayerInteractEvent, noop);
-        this.registerEvent(PlayerInteractAtEntityEvent, noop);
-        this.registerEvent(PlayerInteractEntityEvent, noop);
+        // // no-op event handler, this will cancel any event that is registered to it.
+        // let noop = (l: any, e: any) => e.setCancelled(true);
+        // // Register a bunch of block break / entity interact events and no-op them
+        // this.registerEvent(EntityDamageEvent, noop);
+        // this.registerEvent(BlockBreakEvent, noop);
+        // this.registerEvent(BlockPlaceEvent, noop);
+        // this.registerEvent(PlayerInteractEvent, noop);
+        // this.registerEvent(PlayerInteractAtEntityEvent, noop);
+        // this.registerEvent(PlayerInteractEntityEvent, noop);
 
         // Create a new command /hellojs
         let cmd = this.newCommand("hellojs");
