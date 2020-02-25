@@ -8,8 +8,8 @@ import LivingEntity from '../../../../org/bukkit/entity/LivingEntity.js'
 import Location from '../../../../org/bukkit/Location.js'
 
 export default interface CreatureSpawnEvent extends EntitySpawnEvent {
-	getEntity(): Entity;
 	getEntity(): LivingEntity;
+	getEntity(): Entity;
 	getEntityType(): EntityType;
 	getEventName(): string;
 	getHandlers(): HandlerList;

@@ -9,8 +9,8 @@ import MerchantRecipe from '../../../../org/bukkit/inventory/MerchantRecipe.js'
 
 export default interface VillagerReplenishTradeEvent extends EntityEvent, Cancellable {
 	getBonus(): number;
-	getEntity(): Entity;
 	getEntity(): AbstractVillager;
+	getEntity(): Entity;
 	getEntityType(): EntityType;
 	getEventName(): string;
 	getHandlers(): HandlerList;

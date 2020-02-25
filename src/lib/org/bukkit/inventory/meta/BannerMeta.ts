@@ -16,8 +16,8 @@ export default interface BannerMeta extends ItemMeta {
 	addEnchant(arg0: Enchantment, arg1: number, arg2: boolean): boolean;
 	addItemFlags(arg0: Array<ItemFlag>): void;
 	addPattern(arg0: Pattern): void;
-	clone(): ItemMeta;
 	clone(): any;
+	clone(): ItemMeta;
 	getAttributeModifiers(): Multimap;
 	getAttributeModifiers(arg0: EquipmentSlot): Multimap;
 	getAttributeModifiers(arg0: Attribute): any;

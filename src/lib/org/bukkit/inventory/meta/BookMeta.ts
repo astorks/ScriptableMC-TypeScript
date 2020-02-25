@@ -15,8 +15,8 @@ export default interface BookMeta extends ItemMeta {
 	addEnchant(arg0: Enchantment, arg1: number, arg2: boolean): boolean;
 	addItemFlags(arg0: Array<ItemFlag>): void;
 	addPage(arg0: Array<string>): void;
-	clone(): BookMeta;
 	clone(): ItemMeta;
+	clone(): BookMeta;
 	clone(): any;
 	getAttributeModifiers(): Multimap;
 	getAttributeModifiers(arg0: EquipmentSlot): Multimap;

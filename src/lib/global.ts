@@ -896,6 +896,8 @@ import java_nio_channels_ScatteringByteChannel from './java/nio/channels/Scatter
 import org_bukkit_scoreboard_Score from './org/bukkit/scoreboard/Score.js'
 import org_bukkit_scoreboard_Scoreboard from './org/bukkit/scoreboard/Scoreboard.js'
 import org_bukkit_scoreboard_ScoreboardManager from './org/bukkit/scoreboard/ScoreboardManager.js'
+import com_pixlfox_scriptablemc_ScriptEngineConfig from './com/pixlfox/scriptablemc/ScriptEngineConfig.js'
+import com_pixlfox_scriptablemc_ScriptEngineDebuggerConfig from './com/pixlfox/scriptablemc/ScriptEngineDebuggerConfig.js'
 import com_pixlfox_scriptablemc_ScriptEngineMain from './com/pixlfox/scriptablemc/ScriptEngineMain.js'
 import com_pixlfox_scriptablemc_core_ScriptablePluginContext from './com/pixlfox/scriptablemc/core/ScriptablePluginContext.js'
 import com_pixlfox_scriptablemc_core_ScriptablePluginEngine from './com/pixlfox/scriptablemc/core/ScriptablePluginEngine.js'
@@ -938,6 +940,7 @@ import org_bukkit_plugin_SimpleServicesManager from './org/bukkit/plugin/SimpleS
 import org_bukkit_util_noise_SimplexNoiseGenerator from './org/bukkit/util/noise/SimplexNoiseGenerator.js'
 import org_bukkit_util_noise_SimplexOctaveGenerator from './org/bukkit/util/noise/SimplexOctaveGenerator.js'
 import org_bukkit_entity_Sittable from './org/bukkit/entity/Sittable.js'
+import org_bukkit_entity_SizedFireball from './org/bukkit/entity/SizedFireball.js'
 import org_bukkit_entity_Skeleton from './org/bukkit/entity/Skeleton.js'
 import org_bukkit_entity_Skeleton$SkeletonType from './org/bukkit/entity/Skeleton$SkeletonType.js'
 import org_bukkit_entity_SkeletonHorse from './org/bukkit/entity/SkeletonHorse.js'
@@ -1015,6 +1018,7 @@ import org_bukkit_scoreboard_Team$OptionStatus from './org/bukkit/scoreboard/Tea
 import org_bukkit_block_data_type_TechnicalPiston from './org/bukkit/block/data/type/TechnicalPiston.js'
 import org_bukkit_block_data_type_TechnicalPiston$Type from './org/bukkit/block/data/type/TechnicalPiston$Type.js'
 import org_bukkit_material_TexturedMaterial from './org/bukkit/material/TexturedMaterial.js'
+import org_bukkit_entity_ThrowableProjectile from './org/bukkit/entity/ThrowableProjectile.js'
 import org_bukkit_entity_ThrownExpBottle from './org/bukkit/entity/ThrownExpBottle.js'
 import org_bukkit_entity_ThrownPotion from './org/bukkit/entity/ThrownPotion.js'
 import org_bukkit_event_weather_ThunderChangeEvent from './org/bukkit/event/weather/ThunderChangeEvent.js'
@@ -1236,6 +1240,7 @@ export namespace org.bukkit.entity {
 	export const ShulkerBullet = org_bukkit_entity_ShulkerBullet;
 	export const Silverfish = org_bukkit_entity_Silverfish;
 	export const Sittable = org_bukkit_entity_Sittable;
+	export const SizedFireball = org_bukkit_entity_SizedFireball;
 	export const Skeleton = org_bukkit_entity_Skeleton;
 	export const Skeleton$SkeletonType = org_bukkit_entity_Skeleton$SkeletonType;
 	export const SkeletonHorse = org_bukkit_entity_SkeletonHorse;
@@ -1252,6 +1257,7 @@ export namespace org.bukkit.entity {
 	export const Stray = org_bukkit_entity_Stray;
 	export const TNTPrimed = org_bukkit_entity_TNTPrimed;
 	export const Tameable = org_bukkit_entity_Tameable;
+	export const ThrowableProjectile = org_bukkit_entity_ThrowableProjectile;
 	export const ThrownExpBottle = org_bukkit_entity_ThrownExpBottle;
 	export const ThrownPotion = org_bukkit_entity_ThrownPotion;
 	export const TippedArrow = org_bukkit_entity_TippedArrow;
@@ -2383,6 +2389,8 @@ export namespace org.bukkit.event.raid {
 	export const RaidTriggerEvent = org_bukkit_event_raid_RaidTriggerEvent;
 }
 export namespace com.pixlfox.scriptablemc {
+	export const ScriptEngineConfig = com_pixlfox_scriptablemc_ScriptEngineConfig;
+	export const ScriptEngineDebuggerConfig = com_pixlfox_scriptablemc_ScriptEngineDebuggerConfig;
 	export const ScriptEngineMain = com_pixlfox_scriptablemc_ScriptEngineMain;
 }
 export namespace com.pixlfox.scriptablemc.core {

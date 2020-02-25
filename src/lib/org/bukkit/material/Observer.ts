@@ -7,9 +7,9 @@ import MaterialData from '../../../org/bukkit/material/MaterialData.js'
 import Redstone from '../../../org/bukkit/material/Redstone.js'
 
 export default interface Observer extends MaterialData, Directional, Redstone {
-	clone(): MaterialData;
-	clone(): Observer;
 	clone(): any;
+	clone(): Observer;
+	clone(): MaterialData;
 	getData(): number;
 	getFacing(): BlockFace;
 	getItemType(): Material;

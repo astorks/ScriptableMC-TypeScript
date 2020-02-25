@@ -4,8 +4,8 @@ import Material from '../../../org/bukkit/Material.js'
 import MaterialData from '../../../org/bukkit/material/MaterialData.js'
 
 export default interface Tripwire extends MaterialData {
-	clone(): MaterialData;
 	clone(): Tripwire;
+	clone(): MaterialData;
 	clone(): any;
 	getData(): number;
 	getItemType(): Material;

@@ -5,7 +5,7 @@ import Entity from '../../../org/bukkit/entity/Entity.js'
 import EntityDamageEvent from '../../../org/bukkit/event/entity/EntityDamageEvent.js'
 import EntityEffect from '../../../org/bukkit/EntityEffect.js'
 import EntityType from '../../../org/bukkit/entity/EntityType.js'
-import Fireball from '../../../org/bukkit/entity/Fireball.js'
+import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
 import Location from '../../../org/bukkit/Location.js'
 import MetadataValue from '../../../org/bukkit/metadata/MetadataValue.js'
 import Permission from '../../../org/bukkit/permissions/Permission.js'
@@ -17,10 +17,11 @@ import Plugin from '../../../org/bukkit/plugin/Plugin.js'
 import Pose from '../../../org/bukkit/entity/Pose.js'
 import ProjectileSource from '../../../org/bukkit/projectiles/ProjectileSource.js'
 import Server from '../../../org/bukkit/Server.js'
+import SizedFireball from '../../../org/bukkit/entity/SizedFireball.js'
 import Vector from '../../../org/bukkit/util/Vector.js'
 import World from '../../../org/bukkit/World.js'
 
-export default interface SmallFireball extends Fireball {
+export default interface SmallFireball extends SizedFireball {
 	addAttachment(arg0: Plugin): PermissionAttachment;
 	addAttachment(arg0: Plugin, arg1: number): PermissionAttachment;
 	addAttachment(arg0: Plugin, arg1: string, arg2: boolean): PermissionAttachment;
@@ -32,6 +33,7 @@ export default interface SmallFireball extends Fireball {
 	getBoundingBox(): BoundingBox;
 	getCustomName(): string;
 	getDirection(): Vector;
+	getDisplayItem(): ItemStack;
 	getEffectivePermissions(): any;
 	getEntityId(): number;
 	getFacing(): BlockFace;
@@ -94,6 +96,7 @@ export default interface SmallFireball extends Fireball {
 	setCustomName(arg0: string): void;
 	setCustomNameVisible(arg0: boolean): void;
 	setDirection(arg0: Vector): void;
+	setDisplayItem(arg0: ItemStack): void;
 	setFallDistance(arg0: number): void;
 	setFireTicks(arg0: number): void;
 	setGlowing(arg0: boolean): void;
@@ -112,8 +115,8 @@ export default interface SmallFireball extends Fireball {
 	setTicksLived(arg0: number): void;
 	setVelocity(arg0: Vector): void;
 	setYield(arg0: number): void;
-	teleport(arg0: Location): boolean;
 	teleport(arg0: Entity): boolean;
+	teleport(arg0: Location): boolean;
 	teleport(arg0: Location, arg1: PlayerTeleportEvent$TeleportCause): boolean;
 	teleport(arg0: Entity, arg1: PlayerTeleportEvent$TeleportCause): boolean;
 }

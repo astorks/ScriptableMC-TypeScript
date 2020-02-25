@@ -42,6 +42,7 @@ export default interface LivingEntity extends Attributable, Damageable, Projecti
 	addPotionEffect(arg0: PotionEffect, arg1: boolean): boolean;
 	addPotionEffects(arg0: any): boolean;
 	addScoreboardTag(arg0: string): boolean;
+	attack(arg0: Entity): void;
 	damage(arg0: number): void;
 	damage(arg0: number, arg1: Entity): void;
 	eject(): boolean;
@@ -175,8 +176,10 @@ export default interface LivingEntity extends Attributable, Damageable, Projecti
 	setSwimming(arg0: boolean): void;
 	setTicksLived(arg0: number): void;
 	setVelocity(arg0: Vector): void;
-	teleport(arg0: Location): boolean;
+	swingMainHand(): void;
+	swingOffHand(): void;
 	teleport(arg0: Entity): boolean;
+	teleport(arg0: Location): boolean;
 	teleport(arg0: Location, arg1: PlayerTeleportEvent$TeleportCause): boolean;
 	teleport(arg0: Entity, arg1: PlayerTeleportEvent$TeleportCause): boolean;
 }

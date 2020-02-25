@@ -7,8 +7,8 @@ export default interface OctaveGenerator {
 	getYScale(): number;
 	getZScale(): number;
 	noise(x: number, frequency: number, amplitude: number): number;
-	noise(x: number, frequency: number, amplitude: number, normalized: boolean): number;
 	noise(x: number, y: number, frequency: number, amplitude: number): number;
+	noise(x: number, frequency: number, amplitude: number, normalized: boolean): number;
 	noise(x: number, y: number, frequency: number, amplitude: number, normalized: boolean): number;
 	noise(x: number, y: number, z: number, frequency: number, amplitude: number): number;
 	noise(x: number, y: number, z: number, frequency: number, amplitude: number, normalized: boolean): number;

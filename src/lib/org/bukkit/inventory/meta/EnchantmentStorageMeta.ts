@@ -14,9 +14,9 @@ export default interface EnchantmentStorageMeta extends ItemMeta {
 	addEnchant(arg0: Enchantment, arg1: number, arg2: boolean): boolean;
 	addItemFlags(arg0: Array<ItemFlag>): void;
 	addStoredEnchant(arg0: Enchantment, arg1: number, arg2: boolean): boolean;
-	clone(): EnchantmentStorageMeta;
-	clone(): ItemMeta;
 	clone(): any;
+	clone(): ItemMeta;
+	clone(): EnchantmentStorageMeta;
 	getAttributeModifiers(): Multimap;
 	getAttributeModifiers(arg0: EquipmentSlot): Multimap;
 	getAttributeModifiers(arg0: Attribute): any;

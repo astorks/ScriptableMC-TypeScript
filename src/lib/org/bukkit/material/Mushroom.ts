@@ -6,9 +6,9 @@ import MaterialData from '../../../org/bukkit/material/MaterialData.js'
 import MushroomBlockTexture from '../../../org/bukkit/material/types/MushroomBlockTexture.js'
 
 export default interface Mushroom extends MaterialData {
-	clone(): Mushroom;
-	clone(): MaterialData;
 	clone(): any;
+	clone(): MaterialData;
+	clone(): Mushroom;
 	getBlockTexture(): MushroomBlockTexture;
 	getData(): number;
 	getItemType(): Material;
@@ -29,9 +29,9 @@ export default class Mushroom {
 	}
 
 	constructor(shroom: Material);
-	constructor(shroom: Material, data: number);
-	constructor(shroom: Material, texture: MushroomBlockTexture);
 	constructor(shroom: Material, capFace: BlockFace);
+	constructor(shroom: Material, texture: MushroomBlockTexture);
+	constructor(shroom: Material, data: number);
 	constructor(...args: any[]) {
 		return new Mushroom.$javaClass(...args);
 	}

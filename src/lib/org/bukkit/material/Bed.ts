@@ -6,9 +6,9 @@ import Material from '../../../org/bukkit/Material.js'
 import MaterialData from '../../../org/bukkit/material/MaterialData.js'
 
 export default interface Bed extends MaterialData, Directional {
-	clone(): any;
-	clone(): Bed;
 	clone(): MaterialData;
+	clone(): Bed;
+	clone(): any;
 	getData(): number;
 	getFacing(): BlockFace;
 	getItemType(): Material;
@@ -26,8 +26,8 @@ export default class Bed {
 	}
 
 	constructor();
-	constructor(type: Material);
 	constructor(direction: BlockFace);
+	constructor(type: Material);
 	constructor(type: Material, data: number);
 	constructor(...args: any[]) {
 		return new Bed.$javaClass(...args);

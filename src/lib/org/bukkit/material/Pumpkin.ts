@@ -6,9 +6,9 @@ import Material from '../../../org/bukkit/Material.js'
 import MaterialData from '../../../org/bukkit/material/MaterialData.js'
 
 export default interface Pumpkin extends MaterialData, Directional {
-	clone(): MaterialData;
-	clone(): Pumpkin;
 	clone(): any;
+	clone(): Pumpkin;
+	clone(): MaterialData;
 	getData(): number;
 	getFacing(): BlockFace;
 	getItemType(): Material;

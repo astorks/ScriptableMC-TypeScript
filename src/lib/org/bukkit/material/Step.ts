@@ -5,10 +5,10 @@ import MaterialData from '../../../org/bukkit/material/MaterialData.js'
 import TexturedMaterial from '../../../org/bukkit/material/TexturedMaterial.js'
 
 export default interface Step extends TexturedMaterial {
-	clone(): Step;
-	clone(): TexturedMaterial;
-	clone(): any;
 	clone(): MaterialData;
+	clone(): any;
+	clone(): TexturedMaterial;
+	clone(): Step;
 	getData(): number;
 	getItemType(): Material;
 	getMaterial(): Material;

@@ -6,9 +6,9 @@ import TreeSpecies from '../../../org/bukkit/TreeSpecies.js'
 import Wood from '../../../org/bukkit/material/Wood.js'
 
 export default interface Sapling extends Wood {
-	clone(): Sapling;
 	clone(): Wood;
 	clone(): any;
+	clone(): Sapling;
 	clone(): MaterialData;
 	getData(): number;
 	getItemType(): Material;
@@ -27,8 +27,8 @@ export default class Sapling {
 	}
 
 	constructor();
-	constructor(type: Material);
 	constructor(species: TreeSpecies);
+	constructor(type: Material);
 	constructor(type: Material, species: TreeSpecies);
 	constructor(type: Material, data: number);
 	constructor(species: TreeSpecies, isInstantGrowable: boolean);

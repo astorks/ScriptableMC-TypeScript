@@ -27,6 +27,7 @@ export default interface ScriptablePluginContext extends Listener {
 	getPluginVersion(): Version;
 	getServer(): Server;
 	getServicesManager(): ServicesManager;
+	isEnabled(): boolean;
 	load(): void;
 	newCommand(_name: string): PluginCommand;
 	registerCommand(command: PluginCommand): void;

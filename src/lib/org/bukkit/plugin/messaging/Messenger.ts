@@ -6,8 +6,8 @@ import PluginMessageListenerRegistration from '../../../../org/bukkit/plugin/mes
 
 export default interface Messenger {
 	dispatchIncomingMessage(arg0: Player, arg1: string, arg2: Array<number>): void;
-	getIncomingChannelRegistrations(arg0: string): any;
 	getIncomingChannelRegistrations(arg0: Plugin): any;
+	getIncomingChannelRegistrations(arg0: string): any;
 	getIncomingChannelRegistrations(arg0: Plugin, arg1: string): any;
 	getIncomingChannels(): any;
 	getIncomingChannels(arg0: Plugin): any;

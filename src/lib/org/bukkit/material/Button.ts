@@ -7,10 +7,10 @@ import Redstone from '../../../org/bukkit/material/Redstone.js'
 import SimpleAttachableMaterialData from '../../../org/bukkit/material/SimpleAttachableMaterialData.js'
 
 export default interface Button extends SimpleAttachableMaterialData, Redstone {
-	clone(): any;
-	clone(): Button;
-	clone(): SimpleAttachableMaterialData;
 	clone(): MaterialData;
+	clone(): any;
+	clone(): SimpleAttachableMaterialData;
+	clone(): Button;
 	getAttachedFace(): BlockFace;
 	getData(): number;
 	getFacing(): BlockFace;

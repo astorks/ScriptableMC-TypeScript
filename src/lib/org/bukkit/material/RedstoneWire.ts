@@ -5,9 +5,9 @@ import MaterialData from '../../../org/bukkit/material/MaterialData.js'
 import Redstone from '../../../org/bukkit/material/Redstone.js'
 
 export default interface RedstoneWire extends MaterialData, Redstone {
-	clone(): any;
 	clone(): RedstoneWire;
 	clone(): MaterialData;
+	clone(): any;
 	getData(): number;
 	getItemType(): Material;
 	isPowered(): boolean;

@@ -15,8 +15,8 @@ export default interface CrossbowMeta extends ItemMeta {
 	addChargedProjectile(arg0: ItemStack): void;
 	addEnchant(arg0: Enchantment, arg1: number, arg2: boolean): boolean;
 	addItemFlags(arg0: Array<ItemFlag>): void;
-	clone(): ItemMeta;
 	clone(): any;
+	clone(): ItemMeta;
 	getAttributeModifiers(): Multimap;
 	getAttributeModifiers(arg0: EquipmentSlot): Multimap;
 	getAttributeModifiers(arg0: Attribute): any;

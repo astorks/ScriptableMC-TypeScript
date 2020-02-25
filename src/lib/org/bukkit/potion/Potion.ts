@@ -5,8 +5,8 @@ import PotionBrewer from '../../../org/bukkit/potion/PotionBrewer.js'
 import PotionType from '../../../org/bukkit/potion/PotionType.js'
 
 export default interface Potion {
-	apply(to: ItemStack): void;
 	apply(to: LivingEntity): void;
+	apply(to: ItemStack): void;
 	extend(): Potion;
 	getEffects(): any;
 	getLevel(): number;

@@ -3,8 +3,8 @@ import Buffer from '../../java/nio/Buffer.js'
 import ByteOrder from '../../java/nio/ByteOrder.js'
 
 export default interface ShortBuffer extends Buffer {
-	array(): Array<number>;
 	array(): any;
+	array(): Array<number>;
 	arrayOffset(): number;
 	asReadOnlyBuffer(): ShortBuffer;
 	capacity(): number;
@@ -15,29 +15,29 @@ export default interface ShortBuffer extends Buffer {
 	compareTo(that: ShortBuffer): number;
 	duplicate(): Buffer;
 	duplicate(): ShortBuffer;
-	flip(): Buffer;
 	flip(): ShortBuffer;
+	flip(): Buffer;
 	get(): number;
-	get(arg0: number): number;
 	get(dst: Array<number>): ShortBuffer;
+	get(arg0: number): number;
 	get(dst: Array<number>, offset: number, length: number): ShortBuffer;
 	hasArray(): boolean;
 	hasRemaining(): boolean;
 	isDirect(): boolean;
 	isReadOnly(): boolean;
 	limit(): number;
-	limit(newLimit: number): ShortBuffer;
 	limit(newLimit: number): Buffer;
-	mark(): ShortBuffer;
+	limit(newLimit: number): ShortBuffer;
 	mark(): Buffer;
+	mark(): ShortBuffer;
 	mismatch(that: ShortBuffer): number;
 	order(): ByteOrder;
 	position(): number;
-	position(newPosition: number): Buffer;
 	position(newPosition: number): ShortBuffer;
-	put(arg0: number): ShortBuffer;
-	put(src: ShortBuffer): ShortBuffer;
+	position(newPosition: number): Buffer;
 	put(src: Array<number>): ShortBuffer;
+	put(src: ShortBuffer): ShortBuffer;
+	put(arg0: number): ShortBuffer;
 	put(arg0: number, arg1: number): ShortBuffer;
 	put(src: Array<number>, offset: number, length: number): ShortBuffer;
 	remaining(): number;

@@ -6,9 +6,9 @@ import Material from '../../../org/bukkit/Material.js'
 import MaterialData from '../../../org/bukkit/material/MaterialData.js'
 
 export default interface Skull extends MaterialData, Directional {
+	clone(): any;
 	clone(): Skull;
 	clone(): MaterialData;
-	clone(): any;
 	getData(): number;
 	getFacing(): BlockFace;
 	getItemType(): Material;

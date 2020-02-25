@@ -16,14 +16,18 @@ import InventoryInteractEvent from '../../lib/org/bukkit/event/inventory/Invento
 import CraftItemEvent from '../../lib/org/bukkit/event/inventory/CraftItemEvent.js';
 import EntityDamageByEntityEvent from '../../lib/org/bukkit/event/entity/EntityDamageByEntityEvent.js';
 import EntityDamageEvent from '../../lib/org/bukkit/event/entity/EntityDamageEvent.js';
+import ItemBuilder from '../../lib/com/smc/utils/ItemBuilder.js';
+import Vector from '../../lib/org/bukkit/util/Vector.js';
+import PlayerCommandPreprocessEvent from '../../lib/org/bukkit/event/player/PlayerCommandPreprocessEvent.js';
+import ChatColor from '../../lib/org/bukkit/ChatColor.js';
 
 const mainWorld = Bukkit.getServer().getWorld("world");
 const spawnPoint = new Location(mainWorld, 360, 226, -220);
+const commandBlacklist = ["/fly", "/tp", "/warp"]
 
 export default class ElytraMinigame extends JsPlugin {
     private players: {} = {};
-    private savedInventories: {} = {};
-    private savedLocations: {} = {};
+    private playerData: {} = {};
 
     onLoad() {
         console.log("[" + this.pluginName + "] onLoad()");
@@ -39,6 +43,7 @@ export default class ElytraMinigame extends JsPlugin {
         this.registerEvent(PlayerInteractEvent, this.onPlayerInteract);
         this.registerEvent(PlayerInteractAtEntityEvent, this.onPlayerInteract);
         this.registerEvent(PlayerInteractEntityEvent, this.onPlayerInteract);
+        this.registerEvent(PlayerCommandPreprocessEvent, this.onPlayerCommandPreprocess);
         this.registerEvent(InventoryInteractEvent, this.onInventoryInteract)
         this.registerEvent(EntityDamageEvent, this.onEntityDamage)
         this.registerEvent(CraftItemEvent, this.onCraftItem)
@@ -71,6 +76,10 @@ export default class ElytraMinigame extends JsPlugin {
             player.getInventory().setItem(38, new ItemStack(Material.ELYTRA));
             player.setHealth(20);
             player.setFoodLevel(20);
+
+            if(player.getLocation().getBlockY() < 5) {
+                player.teleport(spawnPoint);
+            }
         }
     }
 
@@ -95,6 +104,42 @@ export default class ElytraMinigame extends JsPlugin {
 
         if(this.isPlayerHere(player)) {
             event.setCancelled(true);
+
+            let itemInHand = player.getItemInHand();
+
+            if(itemInHand.getType() == Material.ELYTRA) {
+                player.teleport(spawnPoint);
+            }
+
+            if(itemInHand.getType() == Material.FIREWORK_ROCKET) {
+                if(player.getLocation().getBlockY() < 230) {
+                    player.setVelocity(player.getLocation().getDirection().multiply(1.5));
+                }
+                
+            }
+
+            if(itemInHand.getType() == Material.BARRIER) {
+                this.leave(player);
+            }
+        }
+    }
+
+    onPlayerCommandPreprocess(listener: any, event: PlayerCommandPreprocessEvent) {
+        let player = event.getPlayer();
+        
+        if(this.isPlayerUidHere(player.getUniqueId())) {
+            let commandMessage = event.getMessage();
+            let cancelled = false;
+
+            for(let i = 0; i < commandBlacklist.length; i++) {
+                if(commandMessage.startsWith(commandBlacklist[i])) {
+                    cancelled = true;
+                    player.sendMessage(ChatColor.RED + "Please leave the elytra minigame before using this command.");
+                    break;
+                }
+            }
+
+            event.setCancelled(cancelled);
         }
     }
 
@@ -141,11 +186,22 @@ export default class ElytraMinigame extends JsPlugin {
         }
 
         this.players[player.getUniqueId()] = player;
-        this.savedInventories[player.getUniqueId()] = player.getInventory().getContents();
+        this.playerData[player.getUniqueId()] = {
+            savedInventory: player.getInventory().getContents(),
+            savedLocation: player.getLocation(),
+            canFly: player.getAllowFlight()
+        }
         player.getInventory().clear();
-        this.savedLocations[player.getUniqueId()] = player.getLocation();
         player.getInventory().setItem(38, new ItemStack(Material.ELYTRA));
+        player.getInventory().setItem(0, new ItemBuilder(Material.ELYTRA).setDisplayName("Respawn").build());
+        player.getInventory().setItem(1, new ItemBuilder(Material.FIREWORK_ROCKET).setDisplayName("Boost").build());
+        player.getInventory().setItem(8, new ItemBuilder(Material.BARRIER).setDisplayName("Leave Minigame").build());
         player.teleport(spawnPoint);
+
+        if(player.getAllowFlight()) {
+            player.performCommand("fly")
+        }
+
         return true;
     }
 
@@ -159,11 +215,16 @@ export default class ElytraMinigame extends JsPlugin {
         }
 
         let player = this.players[uid];
-        player.getInventory().setContents(this.savedInventories[uid]);
-        player.teleport(this.savedLocations[uid]);
+        let playerData = this.playerData[uid];
+        player.getInventory().setContents(playerData.savedInventory);
+        player.teleport(playerData.savedLocation);
+        
+        if(playerData.canFly) {
+            player.performCommand("fly")
+        }
+
         delete this.players[uid];
-        delete this.savedInventories[uid];
-        delete this.savedLocations[uid];
+        delete this.playerData[uid];
         return true;
     }
 

@@ -7,10 +7,10 @@ import Redstone from '../../../org/bukkit/material/Redstone.js'
 import SimpleAttachableMaterialData from '../../../org/bukkit/material/SimpleAttachableMaterialData.js'
 
 export default interface TripwireHook extends SimpleAttachableMaterialData, Redstone {
-	clone(): SimpleAttachableMaterialData;
-	clone(): TripwireHook;
 	clone(): any;
 	clone(): MaterialData;
+	clone(): SimpleAttachableMaterialData;
+	clone(): TripwireHook;
 	getAttachedFace(): BlockFace;
 	getData(): number;
 	getFacing(): BlockFace;

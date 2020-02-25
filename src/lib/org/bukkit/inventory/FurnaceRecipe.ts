@@ -32,10 +32,10 @@ export default class FurnaceRecipe {
 
 	constructor(result: ItemStack, source: Material);
 	constructor(result: ItemStack, source: MaterialData);
-	constructor(result: ItemStack, source: Material, data: number);
 	constructor(result: ItemStack, source: MaterialData, experience: number);
-	constructor(key: NamespacedKey, result: ItemStack, source: Material, experience: number, cookingTime: number);
+	constructor(result: ItemStack, source: Material, data: number);
 	constructor(key: NamespacedKey, result: ItemStack, input: RecipeChoice, experience: number, cookingTime: number);
+	constructor(key: NamespacedKey, result: ItemStack, source: Material, experience: number, cookingTime: number);
 	constructor(key: NamespacedKey, result: ItemStack, source: Material, data: number, experience: number, cookingTime: number);
 	constructor(...args: any[]) {
 		return new FurnaceRecipe.$javaClass(...args);

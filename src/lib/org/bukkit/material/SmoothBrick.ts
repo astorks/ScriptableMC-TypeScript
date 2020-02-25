@@ -5,10 +5,10 @@ import MaterialData from '../../../org/bukkit/material/MaterialData.js'
 import TexturedMaterial from '../../../org/bukkit/material/TexturedMaterial.js'
 
 export default interface SmoothBrick extends TexturedMaterial {
+	clone(): MaterialData;
 	clone(): any;
 	clone(): TexturedMaterial;
 	clone(): SmoothBrick;
-	clone(): MaterialData;
 	getData(): number;
 	getItemType(): Material;
 	getMaterial(): Material;

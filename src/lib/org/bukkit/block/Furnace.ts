@@ -23,8 +23,8 @@ export default interface Furnace extends Container {
 	getCookTimeTotal(): number;
 	getCustomName(): string;
 	getData(): MaterialData;
-	getInventory(): FurnaceInventory;
 	getInventory(): Inventory;
+	getInventory(): FurnaceInventory;
 	getLightLevel(): number;
 	getLocation(): Location;
 	getLocation(arg0: Location): Location;

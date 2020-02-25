@@ -12,8 +12,8 @@ import ShortBuffer from '../../java/nio/ShortBuffer.js'
 export default interface MappedByteBuffer extends ByteBuffer {
 	alignedSlice(unitSize: number): ByteBuffer;
 	alignmentOffset(index: number, unitSize: number): number;
-	array(): Array<number>;
 	array(): any;
+	array(): Array<number>;
 	arrayOffset(): number;
 	asCharBuffer(): CharBuffer;
 	asDoubleBuffer(): DoubleBuffer;
@@ -29,15 +29,15 @@ export default interface MappedByteBuffer extends ByteBuffer {
 	compact(): ByteBuffer;
 	compareTo(that: ByteBuffer): number;
 	compareTo(arg0: any): number;
-	duplicate(): Buffer;
 	duplicate(): ByteBuffer;
+	duplicate(): Buffer;
 	flip(): Buffer;
 	flip(): MappedByteBuffer;
 	flip(): ByteBuffer;
 	force(): MappedByteBuffer;
 	get(): number;
-	get(arg0: number): number;
 	get(dst: Array<number>): ByteBuffer;
+	get(arg0: number): number;
 	get(dst: Array<number>, offset: number, length: number): ByteBuffer;
 	getChar(): string;
 	getChar(arg0: number): string;
@@ -71,9 +71,9 @@ export default interface MappedByteBuffer extends ByteBuffer {
 	position(newPosition: number): MappedByteBuffer;
 	position(newPosition: number): ByteBuffer;
 	position(newPosition: number): Buffer;
-	put(src: ByteBuffer): ByteBuffer;
 	put(arg0: number): ByteBuffer;
 	put(src: Array<number>): ByteBuffer;
+	put(src: ByteBuffer): ByteBuffer;
 	put(arg0: number, arg1: number): ByteBuffer;
 	put(src: Array<number>, offset: number, length: number): ByteBuffer;
 	putChar(arg0: string): ByteBuffer;
@@ -95,8 +95,8 @@ export default interface MappedByteBuffer extends ByteBuffer {
 	rewind(): MappedByteBuffer;
 	rewind(): Buffer;
 	rewind(): ByteBuffer;
-	slice(): Buffer;
 	slice(): ByteBuffer;
+	slice(): Buffer;
 }
 
 export default class MappedByteBuffer {

@@ -14,8 +14,8 @@ export default class ByteStreams {
 		return Java.type('com.google.common.io.ByteStreams');
 	}
 
-	public static copy(from: InputStream, to: OutputStream): number;
 	public static copy(from: ReadableByteChannel, to: WritableByteChannel): number;
+	public static copy(from: InputStream, to: OutputStream): number;
 	public static copy(...args: any[]): any {
 		return ByteStreams.$javaClass.copy(...args);
 	}
@@ -30,8 +30,8 @@ export default class ByteStreams {
 		return ByteStreams.$javaClass.limit(...args);
 	}
 
-	public static newDataInput(bytes: Array<number>): ByteArrayDataInput;
 	public static newDataInput(byteArrayInputStream: ByteArrayInputStream): ByteArrayDataInput;
+	public static newDataInput(bytes: Array<number>): ByteArrayDataInput;
 	public static newDataInput(bytes: Array<number>, start: number): ByteArrayDataInput;
 	public static newDataInput(...args: any[]): any {
 		return ByteStreams.$javaClass.newDataInput(...args);

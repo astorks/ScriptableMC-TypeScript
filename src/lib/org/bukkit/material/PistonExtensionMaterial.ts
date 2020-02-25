@@ -6,9 +6,9 @@ import Material from '../../../org/bukkit/Material.js'
 import MaterialData from '../../../org/bukkit/material/MaterialData.js'
 
 export default interface PistonExtensionMaterial extends MaterialData, Attachable {
+	clone(): any;
 	clone(): PistonExtensionMaterial;
 	clone(): MaterialData;
-	clone(): any;
 	getAttachedFace(): BlockFace;
 	getData(): number;
 	getFacing(): BlockFace;

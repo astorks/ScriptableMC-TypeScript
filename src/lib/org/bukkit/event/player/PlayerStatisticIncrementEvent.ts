@@ -27,8 +27,8 @@ export default class PlayerStatisticIncrementEvent {
 	}
 
 	constructor(player: Player, statistic: Statistic, initialValue: number, newValue: number);
-	constructor(player: Player, statistic: Statistic, initialValue: number, newValue: number, entityType: EntityType);
 	constructor(player: Player, statistic: Statistic, initialValue: number, newValue: number, material: Material);
+	constructor(player: Player, statistic: Statistic, initialValue: number, newValue: number, entityType: EntityType);
 	constructor(...args: any[]) {
 		return new PlayerStatisticIncrementEvent.$javaClass(...args);
 	}

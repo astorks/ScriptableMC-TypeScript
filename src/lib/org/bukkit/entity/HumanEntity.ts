@@ -53,6 +53,7 @@ export default interface HumanEntity extends LivingEntity, AnimalTamer, Inventor
 	addPotionEffect(arg0: PotionEffect, arg1: boolean): boolean;
 	addPotionEffects(arg0: any): boolean;
 	addScoreboardTag(arg0: string): boolean;
+	attack(arg0: Entity): void;
 	closeInventory(): void;
 	damage(arg0: number): void;
 	damage(arg0: number, arg1: Entity): void;
@@ -163,10 +164,10 @@ export default interface HumanEntity extends LivingEntity, AnimalTamer, Inventor
 	launchProjectile(arg0: any, arg1: Vector): Projectile;
 	leaveVehicle(): boolean;
 	openEnchanting(arg0: Location, arg1: boolean): InventoryView;
-	openInventory(arg0: InventoryView): void;
 	openInventory(arg0: Inventory): InventoryView;
-	openMerchant(arg0: Villager, arg1: boolean): InventoryView;
+	openInventory(arg0: InventoryView): void;
 	openMerchant(arg0: Merchant, arg1: boolean): InventoryView;
+	openMerchant(arg0: Villager, arg1: boolean): InventoryView;
 	openWorkbench(arg0: Location, arg1: boolean): InventoryView;
 	playEffect(arg0: EntityEffect): void;
 	rayTraceBlocks(arg0: number): RayTraceResult;
@@ -224,8 +225,10 @@ export default interface HumanEntity extends LivingEntity, AnimalTamer, Inventor
 	setVelocity(arg0: Vector): void;
 	setWindowProperty(arg0: InventoryView$Property, arg1: number): boolean;
 	sleep(arg0: Location, arg1: boolean): boolean;
-	teleport(arg0: Location): boolean;
+	swingMainHand(): void;
+	swingOffHand(): void;
 	teleport(arg0: Entity): boolean;
+	teleport(arg0: Location): boolean;
 	teleport(arg0: Location, arg1: PlayerTeleportEvent$TeleportCause): boolean;
 	teleport(arg0: Entity, arg1: PlayerTeleportEvent$TeleportCause): boolean;
 	undiscoverRecipe(arg0: NamespacedKey): boolean;

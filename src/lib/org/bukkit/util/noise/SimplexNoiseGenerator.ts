@@ -20,8 +20,8 @@ export default class SimplexNoiseGenerator {
 		return Java.type('org.bukkit.util.noise.SimplexNoiseGenerator');
 	}
 
-	constructor(seed: number);
 	constructor(world: World);
+	constructor(seed: number);
 	constructor(rand: any);
 	constructor(...args: any[]) {
 		return new SimplexNoiseGenerator.$javaClass(...args);

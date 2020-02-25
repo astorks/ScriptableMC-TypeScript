@@ -5,9 +5,9 @@ import Material from '../../../org/bukkit/Material.js'
 import MaterialData from '../../../org/bukkit/material/MaterialData.js'
 
 export default interface LongGrass extends MaterialData {
-	clone(): LongGrass;
-	clone(): MaterialData;
 	clone(): any;
+	clone(): MaterialData;
+	clone(): LongGrass;
 	getData(): number;
 	getItemType(): Material;
 	getSpecies(): GrassSpecies;

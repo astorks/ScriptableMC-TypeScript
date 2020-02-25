@@ -3,8 +3,8 @@ import Buffer from '../../java/nio/Buffer.js'
 import ByteOrder from '../../java/nio/ByteOrder.js'
 
 export default interface FloatBuffer extends Buffer {
-	array(): Array<number>;
 	array(): any;
+	array(): Array<number>;
 	arrayOffset(): number;
 	asReadOnlyBuffer(): FloatBuffer;
 	capacity(): number;
@@ -15,29 +15,29 @@ export default interface FloatBuffer extends Buffer {
 	compareTo(that: FloatBuffer): number;
 	duplicate(): Buffer;
 	duplicate(): FloatBuffer;
-	flip(): Buffer;
 	flip(): FloatBuffer;
+	flip(): Buffer;
 	get(): number;
-	get(arg0: number): number;
 	get(dst: Array<number>): FloatBuffer;
+	get(arg0: number): number;
 	get(dst: Array<number>, offset: number, length: number): FloatBuffer;
 	hasArray(): boolean;
 	hasRemaining(): boolean;
 	isDirect(): boolean;
 	isReadOnly(): boolean;
 	limit(): number;
-	limit(newLimit: number): FloatBuffer;
 	limit(newLimit: number): Buffer;
-	mark(): FloatBuffer;
+	limit(newLimit: number): FloatBuffer;
 	mark(): Buffer;
+	mark(): FloatBuffer;
 	mismatch(that: FloatBuffer): number;
 	order(): ByteOrder;
 	position(): number;
-	position(newPosition: number): Buffer;
 	position(newPosition: number): FloatBuffer;
-	put(arg0: number): FloatBuffer;
-	put(src: FloatBuffer): FloatBuffer;
+	position(newPosition: number): Buffer;
 	put(src: Array<number>): FloatBuffer;
+	put(src: FloatBuffer): FloatBuffer;
+	put(arg0: number): FloatBuffer;
 	put(arg0: number, arg1: number): FloatBuffer;
 	put(src: Array<number>, offset: number, length: number): FloatBuffer;
 	remaining(): number;

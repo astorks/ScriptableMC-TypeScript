@@ -11,8 +11,8 @@ import ShortBuffer from '../../java/nio/ShortBuffer.js'
 export default interface ByteBuffer extends Buffer {
 	alignedSlice(unitSize: number): ByteBuffer;
 	alignmentOffset(index: number, unitSize: number): number;
-	array(): Array<number>;
 	array(): any;
+	array(): Array<number>;
 	arrayOffset(): number;
 	asCharBuffer(): CharBuffer;
 	asDoubleBuffer(): DoubleBuffer;
@@ -27,13 +27,13 @@ export default interface ByteBuffer extends Buffer {
 	compact(): ByteBuffer;
 	compareTo(that: ByteBuffer): number;
 	compareTo(arg0: any): number;
-	duplicate(): Buffer;
 	duplicate(): ByteBuffer;
-	flip(): Buffer;
+	duplicate(): Buffer;
 	flip(): ByteBuffer;
+	flip(): Buffer;
 	get(): number;
-	get(arg0: number): number;
 	get(dst: Array<number>): ByteBuffer;
+	get(arg0: number): number;
 	get(dst: Array<number>, offset: number, length: number): ByteBuffer;
 	getChar(): string;
 	getChar(arg0: number): string;
@@ -52,19 +52,19 @@ export default interface ByteBuffer extends Buffer {
 	isDirect(): boolean;
 	isReadOnly(): boolean;
 	limit(): number;
-	limit(newLimit: number): Buffer;
 	limit(newLimit: number): ByteBuffer;
-	mark(): Buffer;
+	limit(newLimit: number): Buffer;
 	mark(): ByteBuffer;
+	mark(): Buffer;
 	mismatch(that: ByteBuffer): number;
 	order(): ByteOrder;
 	order(bo: ByteOrder): ByteBuffer;
 	position(): number;
-	position(newPosition: number): Buffer;
 	position(newPosition: number): ByteBuffer;
-	put(src: ByteBuffer): ByteBuffer;
+	position(newPosition: number): Buffer;
 	put(arg0: number): ByteBuffer;
 	put(src: Array<number>): ByteBuffer;
+	put(src: ByteBuffer): ByteBuffer;
 	put(arg0: number, arg1: number): ByteBuffer;
 	put(src: Array<number>, offset: number, length: number): ByteBuffer;
 	putChar(arg0: string): ByteBuffer;
@@ -80,12 +80,12 @@ export default interface ByteBuffer extends Buffer {
 	putShort(arg0: number): ByteBuffer;
 	putShort(arg0: number, arg1: number): ByteBuffer;
 	remaining(): number;
-	reset(): ByteBuffer;
 	reset(): Buffer;
+	reset(): ByteBuffer;
 	rewind(): Buffer;
 	rewind(): ByteBuffer;
-	slice(): Buffer;
 	slice(): ByteBuffer;
+	slice(): Buffer;
 }
 
 export default class ByteBuffer {

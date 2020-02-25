@@ -7,9 +7,9 @@ import MaterialData from '../../../org/bukkit/material/MaterialData.js'
 import Redstone from '../../../org/bukkit/material/Redstone.js'
 
 export default interface Comparator extends MaterialData, Directional, Redstone {
-	clone(): any;
-	clone(): Comparator;
 	clone(): MaterialData;
+	clone(): Comparator;
+	clone(): any;
 	getData(): number;
 	getFacing(): BlockFace;
 	getItemType(): Material;

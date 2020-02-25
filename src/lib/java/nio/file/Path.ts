@@ -28,8 +28,8 @@ export default interface Path {
 	relativize(arg0: Path): Path;
 	resolve(other: string): Path;
 	resolve(arg0: Path): Path;
-	resolveSibling(other: Path): Path;
 	resolveSibling(other: string): Path;
+	resolveSibling(other: Path): Path;
 	spliterator(): any;
 	startsWith(other: string): boolean;
 	startsWith(arg0: Path): boolean;

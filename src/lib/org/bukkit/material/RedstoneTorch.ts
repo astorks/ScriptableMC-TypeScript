@@ -8,9 +8,9 @@ import SimpleAttachableMaterialData from '../../../org/bukkit/material/SimpleAtt
 import Torch from '../../../org/bukkit/material/Torch.js'
 
 export default interface RedstoneTorch extends Torch, Redstone {
+	clone(): SimpleAttachableMaterialData;
 	clone(): MaterialData;
 	clone(): any;
-	clone(): SimpleAttachableMaterialData;
 	clone(): Torch;
 	clone(): RedstoneTorch;
 	getAttachedFace(): BlockFace;

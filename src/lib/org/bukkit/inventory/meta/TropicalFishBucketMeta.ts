@@ -15,9 +15,9 @@ export default interface TropicalFishBucketMeta extends ItemMeta {
 	addAttributeModifier(arg0: Attribute, arg1: AttributeModifier): boolean;
 	addEnchant(arg0: Enchantment, arg1: number, arg2: boolean): boolean;
 	addItemFlags(arg0: Array<ItemFlag>): void;
-	clone(): TropicalFishBucketMeta;
-	clone(): ItemMeta;
 	clone(): any;
+	clone(): ItemMeta;
+	clone(): TropicalFishBucketMeta;
 	getAttributeModifiers(): Multimap;
 	getAttributeModifiers(arg0: EquipmentSlot): Multimap;
 	getAttributeModifiers(arg0: Attribute): any;

@@ -4,8 +4,8 @@ export default interface Time {
 	after(when: any): boolean;
 	before(when: any): boolean;
 	clone(): any;
-	compareTo(arg0: any): number;
 	compareTo(anotherDate: any): number;
+	compareTo(arg0: any): number;
 	getDate(): number;
 	getDay(): number;
 	getHours(): number;

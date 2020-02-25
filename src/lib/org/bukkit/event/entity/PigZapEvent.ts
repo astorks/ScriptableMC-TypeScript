@@ -10,8 +10,8 @@ import Pig from '../../../../org/bukkit/entity/Pig.js'
 import PigZombie from '../../../../org/bukkit/entity/PigZombie.js'
 
 export default interface PigZapEvent extends EntityTransformEvent, Cancellable {
-	getEntity(): Pig;
 	getEntity(): Entity;
+	getEntity(): Pig;
 	getEntityType(): EntityType;
 	getEventName(): string;
 	getHandlers(): HandlerList;

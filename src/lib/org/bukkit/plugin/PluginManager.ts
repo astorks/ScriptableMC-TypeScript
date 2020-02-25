@@ -22,8 +22,8 @@ export default interface PluginManager {
 	getPermissions(): any;
 	getPlugin(arg0: string): Plugin;
 	getPlugins(): Array<Plugin>;
-	isPluginEnabled(arg0: string): boolean;
 	isPluginEnabled(arg0: Plugin): boolean;
+	isPluginEnabled(arg0: string): boolean;
 	loadPlugin(arg0: File): Plugin;
 	loadPlugins(arg0: File): Array<Plugin>;
 	recalculatePermissionDefaults(arg0: Permission): void;

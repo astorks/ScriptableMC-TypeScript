@@ -7,9 +7,9 @@ import MaterialData from '../../../org/bukkit/material/MaterialData.js'
 import Redstone from '../../../org/bukkit/material/Redstone.js'
 
 export default interface PistonBaseMaterial extends MaterialData, Directional, Redstone {
+	clone(): any;
 	clone(): PistonBaseMaterial;
 	clone(): MaterialData;
-	clone(): any;
 	getData(): number;
 	getFacing(): BlockFace;
 	getItemType(): Material;

@@ -4,9 +4,9 @@ import Material from '../../../org/bukkit/Material.js'
 import MaterialData from '../../../org/bukkit/material/MaterialData.js'
 
 export default interface Cake extends MaterialData {
-	clone(): Cake;
-	clone(): MaterialData;
 	clone(): any;
+	clone(): MaterialData;
+	clone(): Cake;
 	getData(): number;
 	getItemType(): Material;
 	getSlicesEaten(): number;

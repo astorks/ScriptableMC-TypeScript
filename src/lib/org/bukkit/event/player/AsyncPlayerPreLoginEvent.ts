@@ -6,8 +6,8 @@ import PlayerPreLoginEvent$Result from '../../../../org/bukkit/event/player/Play
 
 export default interface AsyncPlayerPreLoginEvent extends Event {
 	allow(): void;
-	disallow(result: AsyncPlayerPreLoginEvent$Result, message: string): void;
 	disallow(result: PlayerPreLoginEvent$Result, message: string): void;
+	disallow(result: AsyncPlayerPreLoginEvent$Result, message: string): void;
 	getAddress(): any;
 	getEventName(): string;
 	getHandlers(): HandlerList;

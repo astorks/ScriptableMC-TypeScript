@@ -6,9 +6,9 @@ import Material from '../../../org/bukkit/Material.js'
 import MaterialData from '../../../org/bukkit/material/MaterialData.js'
 
 export default interface DirectionalContainer extends MaterialData, Directional {
+	clone(): MaterialData;
 	clone(): DirectionalContainer;
 	clone(): any;
-	clone(): MaterialData;
 	getData(): number;
 	getFacing(): BlockFace;
 	getItemType(): Material;

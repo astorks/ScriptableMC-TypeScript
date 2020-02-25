@@ -7,9 +7,9 @@ import MaterialData from '../../../org/bukkit/material/MaterialData.js'
 import Openable from '../../../org/bukkit/material/Openable.js'
 
 export default interface Gate extends MaterialData, Directional, Openable {
-	clone(): MaterialData;
-	clone(): any;
 	clone(): Gate;
+	clone(): any;
+	clone(): MaterialData;
 	getData(): number;
 	getFacing(): BlockFace;
 	getItemType(): Material;

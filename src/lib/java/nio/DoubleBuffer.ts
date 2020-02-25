@@ -3,8 +3,8 @@ import Buffer from '../../java/nio/Buffer.js'
 import ByteOrder from '../../java/nio/ByteOrder.js'
 
 export default interface DoubleBuffer extends Buffer {
-	array(): Array<number>;
 	array(): any;
+	array(): Array<number>;
 	arrayOffset(): number;
 	asReadOnlyBuffer(): DoubleBuffer;
 	capacity(): number;
@@ -15,29 +15,29 @@ export default interface DoubleBuffer extends Buffer {
 	compareTo(that: DoubleBuffer): number;
 	duplicate(): Buffer;
 	duplicate(): DoubleBuffer;
-	flip(): Buffer;
 	flip(): DoubleBuffer;
+	flip(): Buffer;
 	get(): number;
-	get(arg0: number): number;
 	get(dst: Array<number>): DoubleBuffer;
+	get(arg0: number): number;
 	get(dst: Array<number>, offset: number, length: number): DoubleBuffer;
 	hasArray(): boolean;
 	hasRemaining(): boolean;
 	isDirect(): boolean;
 	isReadOnly(): boolean;
 	limit(): number;
-	limit(newLimit: number): DoubleBuffer;
 	limit(newLimit: number): Buffer;
-	mark(): DoubleBuffer;
+	limit(newLimit: number): DoubleBuffer;
 	mark(): Buffer;
+	mark(): DoubleBuffer;
 	mismatch(that: DoubleBuffer): number;
 	order(): ByteOrder;
 	position(): number;
-	position(newPosition: number): Buffer;
 	position(newPosition: number): DoubleBuffer;
-	put(arg0: number): DoubleBuffer;
-	put(src: DoubleBuffer): DoubleBuffer;
+	position(newPosition: number): Buffer;
 	put(src: Array<number>): DoubleBuffer;
+	put(src: DoubleBuffer): DoubleBuffer;
+	put(arg0: number): DoubleBuffer;
 	put(arg0: number, arg1: number): DoubleBuffer;
 	put(src: Array<number>, offset: number, length: number): DoubleBuffer;
 	remaining(): number;

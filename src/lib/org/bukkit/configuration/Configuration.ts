@@ -10,8 +10,8 @@ import Vector from '../../../org/bukkit/util/Vector.js'
 
 export default interface Configuration extends ConfigurationSection {
 	addDefault(arg0: string, arg1: any): void;
-	addDefaults(arg0: any): void;
 	addDefaults(arg0: Configuration): void;
+	addDefaults(arg0: any): void;
 	contains(arg0: string): boolean;
 	contains(arg0: string, arg1: boolean): boolean;
 	createSection(arg0: string): ConfigurationSection;

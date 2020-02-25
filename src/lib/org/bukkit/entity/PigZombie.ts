@@ -43,6 +43,7 @@ export default interface PigZombie extends Zombie {
 	addPotionEffect(arg0: PotionEffect, arg1: boolean): boolean;
 	addPotionEffects(arg0: any): boolean;
 	addScoreboardTag(arg0: string): boolean;
+	attack(arg0: Entity): void;
 	damage(arg0: number): void;
 	damage(arg0: number, arg1: Entity): void;
 	eject(): boolean;
@@ -115,6 +116,7 @@ export default interface PigZombie extends Zombie {
 	hasPermission(arg0: Permission): boolean;
 	hasPotionEffect(arg0: PotionEffectType): boolean;
 	isAngry(): boolean;
+	isAware(): boolean;
 	isBaby(): boolean;
 	isCollidable(): boolean;
 	isConverting(): boolean;
@@ -157,6 +159,7 @@ export default interface PigZombie extends Zombie {
 	setAbsorptionAmount(arg0: number): void;
 	setAnger(arg0: number): void;
 	setAngry(arg0: boolean): void;
+	setAware(arg0: boolean): void;
 	setBaby(arg0: boolean): void;
 	setCanPickupItems(arg0: boolean): void;
 	setCollidable(arg0: boolean): void;
@@ -195,8 +198,10 @@ export default interface PigZombie extends Zombie {
 	setVelocity(arg0: Vector): void;
 	setVillager(arg0: boolean): void;
 	setVillagerProfession(arg0: Villager$Profession): void;
-	teleport(arg0: Location): boolean;
+	swingMainHand(): void;
+	swingOffHand(): void;
 	teleport(arg0: Entity): boolean;
+	teleport(arg0: Location): boolean;
 	teleport(arg0: Location, arg1: PlayerTeleportEvent$TeleportCause): boolean;
 	teleport(arg0: Entity, arg1: PlayerTeleportEvent$TeleportCause): boolean;
 }

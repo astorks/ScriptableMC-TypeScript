@@ -8,10 +8,10 @@ import Rails from '../../../org/bukkit/material/Rails.js'
 import Redstone from '../../../org/bukkit/material/Redstone.js'
 
 export default interface PoweredRail extends ExtendedRails, Redstone {
-	clone(): ExtendedRails;
-	clone(): any;
 	clone(): MaterialData;
+	clone(): any;
 	clone(): Rails;
+	clone(): ExtendedRails;
 	clone(): PoweredRail;
 	getData(): number;
 	getDirection(): BlockFace;

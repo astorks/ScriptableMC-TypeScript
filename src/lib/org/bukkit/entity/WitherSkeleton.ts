@@ -43,6 +43,7 @@ export default interface WitherSkeleton extends Skeleton {
 	addPotionEffect(arg0: PotionEffect, arg1: boolean): boolean;
 	addPotionEffects(arg0: any): boolean;
 	addScoreboardTag(arg0: string): boolean;
+	attack(arg0: Entity): void;
 	damage(arg0: number): void;
 	damage(arg0: number, arg1: Entity): void;
 	eject(): boolean;
@@ -112,6 +113,7 @@ export default interface WitherSkeleton extends Skeleton {
 	hasPermission(arg0: string): boolean;
 	hasPermission(arg0: Permission): boolean;
 	hasPotionEffect(arg0: PotionEffectType): boolean;
+	isAware(): boolean;
 	isCollidable(): boolean;
 	isCustomNameVisible(): boolean;
 	isDead(): boolean;
@@ -149,6 +151,7 @@ export default interface WitherSkeleton extends Skeleton {
 	sendMessage(arg0: string): void;
 	setAI(arg0: boolean): void;
 	setAbsorptionAmount(arg0: number): void;
+	setAware(arg0: boolean): void;
 	setCanPickupItems(arg0: boolean): void;
 	setCollidable(arg0: boolean): void;
 	setCustomName(arg0: string): void;
@@ -184,8 +187,10 @@ export default interface WitherSkeleton extends Skeleton {
 	setTarget(arg0: LivingEntity): void;
 	setTicksLived(arg0: number): void;
 	setVelocity(arg0: Vector): void;
-	teleport(arg0: Location): boolean;
+	swingMainHand(): void;
+	swingOffHand(): void;
 	teleport(arg0: Entity): boolean;
+	teleport(arg0: Location): boolean;
 	teleport(arg0: Location, arg1: PlayerTeleportEvent$TeleportCause): boolean;
 	teleport(arg0: Entity, arg1: PlayerTeleportEvent$TeleportCause): boolean;
 }

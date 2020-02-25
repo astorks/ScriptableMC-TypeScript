@@ -6,9 +6,9 @@ import MaterialData from '../../../org/bukkit/material/MaterialData.js'
 import SimpleAttachableMaterialData from '../../../org/bukkit/material/SimpleAttachableMaterialData.js'
 
 export default interface Ladder extends SimpleAttachableMaterialData {
-	clone(): SimpleAttachableMaterialData;
 	clone(): any;
 	clone(): MaterialData;
+	clone(): SimpleAttachableMaterialData;
 	clone(): Ladder;
 	getAttachedFace(): BlockFace;
 	getData(): number;

@@ -6,8 +6,8 @@ import ServicePriority from '../../../org/bukkit/plugin/ServicePriority.js'
 export default interface ServicesManager {
 	getKnownServices(): any;
 	getRegistration(arg0: any): RegisteredServiceProvider;
-	getRegistrations(arg0: Plugin): Array<any>;
 	getRegistrations(arg0: any): any;
+	getRegistrations(arg0: Plugin): Array<any>;
 	isProvidedFor(arg0: any): boolean;
 	load(arg0: any): any;
 	register(arg0: any, arg1: any, arg2: Plugin, arg3: ServicePriority): void;

@@ -19,8 +19,8 @@ export default class PerlinNoiseGenerator {
 		return Java.type('org.bukkit.util.noise.PerlinNoiseGenerator');
 	}
 
-	constructor(rand: any);
 	constructor(world: World);
+	constructor(rand: any);
 	constructor(seed: number);
 	constructor(...args: any[]) {
 		return new PerlinNoiseGenerator.$javaClass(...args);

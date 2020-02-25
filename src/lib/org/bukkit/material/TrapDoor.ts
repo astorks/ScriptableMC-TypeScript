@@ -7,10 +7,10 @@ import Openable from '../../../org/bukkit/material/Openable.js'
 import SimpleAttachableMaterialData from '../../../org/bukkit/material/SimpleAttachableMaterialData.js'
 
 export default interface TrapDoor extends SimpleAttachableMaterialData, Openable {
-	clone(): TrapDoor;
-	clone(): MaterialData;
 	clone(): any;
 	clone(): SimpleAttachableMaterialData;
+	clone(): MaterialData;
+	clone(): TrapDoor;
 	getAttachedFace(): BlockFace;
 	getData(): number;
 	getFacing(): BlockFace;

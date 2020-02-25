@@ -5,8 +5,8 @@ import MaterialData from '../../../org/bukkit/material/MaterialData.js'
 
 export default interface TexturedMaterial extends MaterialData {
 	clone(): any;
-	clone(): TexturedMaterial;
 	clone(): MaterialData;
+	clone(): TexturedMaterial;
 	getData(): number;
 	getItemType(): Material;
 	getMaterial(): Material;

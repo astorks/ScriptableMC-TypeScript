@@ -3,32 +3,32 @@ import Buffer from '../../java/nio/Buffer.js'
 import ByteOrder from '../../java/nio/ByteOrder.js'
 
 export default interface CharBuffer extends Buffer {
-	append(csq: any): CharBuffer;
-	append(csq: any): any;
 	append(c: string): CharBuffer;
 	append(c: string): any;
+	append(csq: any): CharBuffer;
+	append(csq: any): any;
 	append(csq: any, start: number, end: number): CharBuffer;
 	append(csq: any, start: number, end: number): any;
-	array(): any;
 	array(): Array<string>;
+	array(): any;
 	arrayOffset(): number;
 	asReadOnlyBuffer(): CharBuffer;
 	capacity(): number;
 	charAt(index: number): string;
 	chars(): any;
-	clear(): Buffer;
 	clear(): CharBuffer;
+	clear(): Buffer;
 	codePoints(): any;
 	compact(): CharBuffer;
 	compareTo(that: CharBuffer): number;
 	compareTo(arg0: any): number;
-	duplicate(): Buffer;
 	duplicate(): CharBuffer;
+	duplicate(): Buffer;
 	flip(): Buffer;
 	flip(): CharBuffer;
 	get(): string;
-	get(arg0: number): string;
 	get(dst: Array<string>): CharBuffer;
+	get(arg0: number): string;
 	get(dst: Array<string>, offset: number, length: number): CharBuffer;
 	hasArray(): boolean;
 	hasRemaining(): boolean;
@@ -45,10 +45,10 @@ export default interface CharBuffer extends Buffer {
 	position(): number;
 	position(newPosition: number): CharBuffer;
 	position(newPosition: number): Buffer;
-	put(arg0: string): CharBuffer;
 	put(src: string): CharBuffer;
 	put(src: CharBuffer): CharBuffer;
 	put(src: Array<string>): CharBuffer;
+	put(arg0: string): CharBuffer;
 	put(arg0: number, arg1: string): CharBuffer;
 	put(src: Array<string>, offset: number, length: number): CharBuffer;
 	put(src: string, start: number, end: number): CharBuffer;
@@ -74,10 +74,10 @@ export default class CharBuffer {
 		return CharBuffer.$javaClass.allocate(...args);
 	}
 
-	public static wrap(array: Array<string>): CharBuffer;
 	public static wrap(csq: any): CharBuffer;
-	public static wrap(csq: any, start: number, end: number): CharBuffer;
+	public static wrap(array: Array<string>): CharBuffer;
 	public static wrap(array: Array<string>, offset: number, length: number): CharBuffer;
+	public static wrap(csq: any, start: number, end: number): CharBuffer;
 	public static wrap(...args: any[]): any {
 		return CharBuffer.$javaClass.wrap(...args);
 	}

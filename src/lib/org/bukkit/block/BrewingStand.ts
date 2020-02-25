@@ -22,8 +22,8 @@ export default interface BrewingStand extends Container {
 	getCustomName(): string;
 	getData(): MaterialData;
 	getFuelLevel(): number;
-	getInventory(): BrewerInventory;
 	getInventory(): Inventory;
+	getInventory(): BrewerInventory;
 	getLightLevel(): number;
 	getLocation(): Location;
 	getLocation(arg0: Location): Location;
@@ -31,8 +31,8 @@ export default interface BrewingStand extends Container {
 	getMetadata(arg0: string): Array<MetadataValue>;
 	getPersistentDataContainer(): PersistentDataContainer;
 	getRawData(): number;
-	getSnapshotInventory(): Inventory;
 	getSnapshotInventory(): BrewerInventory;
+	getSnapshotInventory(): Inventory;
 	getType(): Material;
 	getWorld(): World;
 	getX(): number;

@@ -8,8 +8,8 @@ import World from '../../../org/bukkit/World.js'
 export default interface BlockIterator {
 	forEachRemaining(action: any): void;
 	hasNext(): boolean;
-	next(): Block;
 	next(): any;
+	next(): Block;
 	remove(): void;
 }
 

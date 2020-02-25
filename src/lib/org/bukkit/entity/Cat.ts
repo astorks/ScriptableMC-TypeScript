@@ -47,6 +47,7 @@ export default interface Cat extends Animals, Tameable, Sittable {
 	addPotionEffect(arg0: PotionEffect, arg1: boolean): boolean;
 	addPotionEffects(arg0: any): boolean;
 	addScoreboardTag(arg0: string): boolean;
+	attack(arg0: Entity): void;
 	canBreed(): boolean;
 	damage(arg0: number): void;
 	damage(arg0: number, arg1: Entity): void;
@@ -124,6 +125,7 @@ export default interface Cat extends Animals, Tameable, Sittable {
 	hasPermission(arg0: Permission): boolean;
 	hasPotionEffect(arg0: PotionEffectType): boolean;
 	isAdult(): boolean;
+	isAware(): boolean;
 	isCollidable(): boolean;
 	isCustomNameVisible(): boolean;
 	isDead(): boolean;
@@ -167,6 +169,7 @@ export default interface Cat extends Animals, Tameable, Sittable {
 	setAdult(): void;
 	setAge(arg0: number): void;
 	setAgeLock(arg0: boolean): void;
+	setAware(arg0: boolean): void;
 	setBaby(): void;
 	setBreed(arg0: boolean): void;
 	setBreedCause(arg0: string): void;
@@ -210,8 +213,10 @@ export default interface Cat extends Animals, Tameable, Sittable {
 	setTarget(arg0: LivingEntity): void;
 	setTicksLived(arg0: number): void;
 	setVelocity(arg0: Vector): void;
-	teleport(arg0: Location): boolean;
+	swingMainHand(): void;
+	swingOffHand(): void;
 	teleport(arg0: Entity): boolean;
+	teleport(arg0: Location): boolean;
 	teleport(arg0: Location, arg1: PlayerTeleportEvent$TeleportCause): boolean;
 	teleport(arg0: Entity, arg1: PlayerTeleportEvent$TeleportCause): boolean;
 }

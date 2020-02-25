@@ -8,8 +8,8 @@ import Redstone from '../../../org/bukkit/material/Redstone.js'
 
 export default interface Diode extends MaterialData, Directional, Redstone {
 	clone(): any;
-	clone(): Diode;
 	clone(): MaterialData;
+	clone(): Diode;
 	getData(): number;
 	getDelay(): number;
 	getFacing(): BlockFace;
@@ -30,8 +30,8 @@ export default class Diode {
 	constructor();
 	constructor(type: Material);
 	constructor(facingDirection: BlockFace);
-	constructor(facingDirection: BlockFace, delay: number);
 	constructor(type: Material, data: number);
+	constructor(facingDirection: BlockFace, delay: number);
 	constructor(facingDirection: BlockFace, delay: number, state: boolean);
 	constructor(...args: any[]) {
 		return new Diode.$javaClass(...args);

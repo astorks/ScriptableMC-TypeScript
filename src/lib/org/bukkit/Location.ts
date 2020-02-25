@@ -10,8 +10,8 @@ export default interface Location extends ConfigurationSerializable {
 	add(vec: Location): Location;
 	add(x: number, y: number, z: number): Location;
 	checkFinite(): void;
-	clone(): Location;
 	clone(): any;
+	clone(): Location;
 	distance(o: Location): number;
 	distanceSquared(o: Location): number;
 	getBlock(): Block;
@@ -38,8 +38,8 @@ export default interface Location extends ConfigurationSerializable {
 	setY(y: number): void;
 	setYaw(yaw: number): void;
 	setZ(z: number): void;
-	subtract(vec: Vector): Location;
 	subtract(vec: Location): Location;
+	subtract(vec: Vector): Location;
 	subtract(x: number, y: number, z: number): Location;
 	toVector(): Vector;
 	zero(): Location;

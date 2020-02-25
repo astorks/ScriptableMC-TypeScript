@@ -112,8 +112,8 @@ export default interface Boat extends Vehicle {
 	setVelocity(arg0: Vector): void;
 	setWoodType(arg0: TreeSpecies): void;
 	setWorkOnLand(arg0: boolean): void;
-	teleport(arg0: Location): boolean;
 	teleport(arg0: Entity): boolean;
+	teleport(arg0: Location): boolean;
 	teleport(arg0: Location, arg1: PlayerTeleportEvent$TeleportCause): boolean;
 	teleport(arg0: Entity, arg1: PlayerTeleportEvent$TeleportCause): boolean;
 }
