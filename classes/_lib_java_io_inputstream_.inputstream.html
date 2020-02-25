@@ -77,6 +77,9 @@
 							<li>
 								<a href="_lib_java_io_objectinputstream_.objectinputstream.html" class="tsd-signature-type">ObjectInputStream</a>
 							</li>
+							<li>
+								<a href="_lib_java_io_fileinputstream_.fileinputstream.html" class="tsd-signature-type">FileInputStream</a>
+							</li>
 						</ul>
 					</li>
 				</ul>
@@ -105,8 +108,12 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_java_io_inputstream_.inputstream.html#mark" class="tsd-kind-icon">mark</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_java_io_inputstream_.inputstream.html#marksupported" class="tsd-kind-icon">mark<wbr>Supported</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_java_io_inputstream_.inputstream.html#read" class="tsd-kind-icon">read</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_java_io_inputstream_.inputstream.html#readallbytes" class="tsd-kind-icon">read<wbr>All<wbr>Bytes</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_java_io_inputstream_.inputstream.html#readnbytes" class="tsd-kind-icon">readNBytes</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_java_io_inputstream_.inputstream.html#reset" class="tsd-kind-icon">reset</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_java_io_inputstream_.inputstream.html#skip" class="tsd-kind-icon">skip</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_java_io_inputstream_.inputstream.html#transferto" class="tsd-kind-icon">transfer<wbr>To</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_lib_java_io_inputstream_.inputstream.html#nullinputstream" class="tsd-kind-icon">null<wbr>Input<wbr>Stream</a></li>
 							</ul>
 						</section>
 					</div>
@@ -124,7 +131,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/InputStream.ts#L19">lib/java/io/InputStream.ts:19</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/InputStream.ts#L24">lib/java/io/InputStream.ts:24</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="_lib_java_io_inputstream_.inputstream.html" class="tsd-signature-type">InputStream</a></h4>
@@ -144,7 +151,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/InputStream.ts#L17">lib/java/io/InputStream.ts:17</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/InputStream.ts#L22">lib/java/io/InputStream.ts:22</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -164,7 +171,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/InputStream.ts#L11">lib/java/io/InputStream.ts:11</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/InputStream.ts#L6">lib/java/io/InputStream.ts:6</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -181,7 +188,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/InputStream.ts#L8">lib/java/io/InputStream.ts:8</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/InputStream.ts#L7">lib/java/io/InputStream.ts:7</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -192,19 +199,19 @@
 					<a name="mark" class="tsd-anchor"></a>
 					<h3>mark</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">mark<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">mark<span class="tsd-signature-symbol">(</span>readlimit<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/InputStream.ts#L9">lib/java/io/InputStream.ts:9</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/InputStream.ts#L8">lib/java/io/InputStream.ts:8</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">number</span></h5>
+									<h5>readlimit: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -221,7 +228,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/InputStream.ts#L12">lib/java/io/InputStream.ts:12</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/InputStream.ts#L9">lib/java/io/InputStream.ts:9</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -232,27 +239,29 @@
 					<a name="read" class="tsd-anchor"></a>
 					<h3>read</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">read<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span>, arg1<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, arg2<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
-						<li class="tsd-signature tsd-kind-icon">read<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 						<li class="tsd-signature tsd-kind-icon">read<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">read<span class="tsd-signature-symbol">(</span>b<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">read<span class="tsd-signature-symbol">(</span>b<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span>, off<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, len<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/InputStream.ts#L5">lib/java/io/InputStream.ts:5</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/InputStream.ts#L10">lib/java/io/InputStream.ts:10</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/InputStream.ts#L11">lib/java/io/InputStream.ts:11</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h5>
-								</li>
-								<li>
-									<h5>arg1: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5>arg2: <span class="tsd-signature-type">number</span></h5>
+									<h5>b: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -260,23 +269,82 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/InputStream.ts#L6">lib/java/io/InputStream.ts:6</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/InputStream.ts#L12">lib/java/io/InputStream.ts:12</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>b: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>off: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>len: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="readallbytes" class="tsd-anchor"></a>
+					<h3>read<wbr>All<wbr>Bytes</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">read<wbr>All<wbr>Bytes<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/InputStream.ts#L7">lib/java/io/InputStream.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/InputStream.ts#L13">lib/java/io/InputStream.ts:13</a></li>
 								</ul>
 							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="readnbytes" class="tsd-anchor"></a>
+					<h3>readNBytes</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">readNBytes<span class="tsd-signature-symbol">(</span>len<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">readNBytes<span class="tsd-signature-symbol">(</span>b<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span>, off<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, len<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/InputStream.ts#L14">lib/java/io/InputStream.ts:14</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>len: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/InputStream.ts#L15">lib/java/io/InputStream.ts:15</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>b: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>off: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>len: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 						</li>
 					</ul>
@@ -291,7 +359,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/InputStream.ts#L13">lib/java/io/InputStream.ts:13</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/InputStream.ts#L16">lib/java/io/InputStream.ts:16</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -302,22 +370,62 @@
 					<a name="skip" class="tsd-anchor"></a>
 					<h3>skip</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">skip<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">skip<span class="tsd-signature-symbol">(</span>n<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/InputStream.ts#L10">lib/java/io/InputStream.ts:10</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/InputStream.ts#L17">lib/java/io/InputStream.ts:17</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">number</span></h5>
+									<h5>n: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="transferto" class="tsd-anchor"></a>
+					<h3>transfer<wbr>To</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">transfer<wbr>To<span class="tsd-signature-symbol">(</span>out<span class="tsd-signature-symbol">: </span><a href="_lib_java_io_outputstream_.outputstream.html" class="tsd-signature-type">OutputStream</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/InputStream.ts#L18">lib/java/io/InputStream.ts:18</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>out: <a href="_lib_java_io_outputstream_.outputstream.html" class="tsd-signature-type">OutputStream</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="nullinputstream" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> null<wbr>Input<wbr>Stream</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">null<wbr>Input<wbr>Stream<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_java_io_inputstream_.inputstream.html" class="tsd-signature-type">InputStream</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/InputStream.ts#L31">lib/java/io/InputStream.ts:31</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="_lib_java_io_inputstream_.inputstream.html" class="tsd-signature-type">InputStream</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -363,10 +471,22 @@
 								<a href="_lib_java_io_inputstream_.inputstream.html#read" class="tsd-kind-icon">read</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_lib_java_io_inputstream_.inputstream.html#readallbytes" class="tsd-kind-icon">read<wbr>All<wbr>Bytes</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_lib_java_io_inputstream_.inputstream.html#readnbytes" class="tsd-kind-icon">readNBytes</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_lib_java_io_inputstream_.inputstream.html#reset" class="tsd-kind-icon">reset</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_lib_java_io_inputstream_.inputstream.html#skip" class="tsd-kind-icon">skip</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_lib_java_io_inputstream_.inputstream.html#transferto" class="tsd-kind-icon">transfer<wbr>To</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_lib_java_io_inputstream_.inputstream.html#nullinputstream" class="tsd-kind-icon">null<wbr>Input<wbr>Stream</a>
 							</li>
 						</ul>
 					</li>

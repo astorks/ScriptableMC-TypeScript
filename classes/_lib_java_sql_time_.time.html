@@ -131,26 +131,20 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Time<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, arg1<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, arg2<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_java_sql_time_.time.html" class="tsd-signature-type">Time</a></li>
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Time<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_java_sql_time_.time.html" class="tsd-signature-type">Time</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Time<span class="tsd-signature-symbol">(</span>time<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_java_sql_time_.time.html" class="tsd-signature-type">Time</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Time<span class="tsd-signature-symbol">(</span>hour<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, minute<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, second<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_java_sql_time_.time.html" class="tsd-signature-type">Time</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/sql/Time.ts#L34">lib/java/sql/Time.ts:34</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/sql/Time.ts#L34">lib/java/sql/Time.ts:34</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5>arg1: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5>arg2: <span class="tsd-signature-type">number</span></h5>
+									<h5>time: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_lib_java_sql_time_.time.html" class="tsd-signature-type">Time</a></h4>
@@ -158,13 +152,19 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/sql/Time.ts#L35">lib/java/sql/Time.ts:35</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/sql/Time.ts#L36">lib/java/sql/Time.ts:36</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">number</span></h5>
+									<h5>hour: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>minute: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>second: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_lib_java_sql_time_.time.html" class="tsd-signature-type">Time</a></h4>
@@ -184,7 +184,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/sql/Time.ts#L32">lib/java/sql/Time.ts:32</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/sql/Time.ts#L32">lib/java/sql/Time.ts:32</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -198,19 +198,19 @@
 					<a name="after" class="tsd-anchor"></a>
 					<h3>after</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">after<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">after<span class="tsd-signature-symbol">(</span>when<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/sql/Time.ts#L28">lib/java/sql/Time.ts:28</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/sql/Time.ts#L4">lib/java/sql/Time.ts:4</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">any</span></h5>
+									<h5>when: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -221,19 +221,19 @@
 					<a name="before" class="tsd-anchor"></a>
 					<h3>before</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">before<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">before<span class="tsd-signature-symbol">(</span>when<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/sql/Time.ts#L27">lib/java/sql/Time.ts:27</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/sql/Time.ts#L5">lib/java/sql/Time.ts:5</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">any</span></h5>
+									<h5>when: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -250,7 +250,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/sql/Time.ts#L24">lib/java/sql/Time.ts:24</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/sql/Time.ts#L6">lib/java/sql/Time.ts:6</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -261,20 +261,20 @@
 					<a name="compareto" class="tsd-anchor"></a>
 					<h3>compare<wbr>To</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">compare<wbr>To<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">compare<wbr>To<span class="tsd-signature-symbol">(</span>anotherDate<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 						<li class="tsd-signature tsd-kind-icon">compare<wbr>To<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/sql/Time.ts#L25">lib/java/sql/Time.ts:25</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/sql/Time.ts#L7">lib/java/sql/Time.ts:7</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">any</span></h5>
+									<h5>anotherDate: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -282,7 +282,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/sql/Time.ts#L26">lib/java/sql/Time.ts:26</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/sql/Time.ts#L8">lib/java/sql/Time.ts:8</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -305,7 +305,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/sql/Time.ts#L12">lib/java/sql/Time.ts:12</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/sql/Time.ts#L9">lib/java/sql/Time.ts:9</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -322,7 +322,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/sql/Time.ts#L10">lib/java/sql/Time.ts:10</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/sql/Time.ts#L10">lib/java/sql/Time.ts:10</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -339,7 +339,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/sql/Time.ts#L15">lib/java/sql/Time.ts:15</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/sql/Time.ts#L11">lib/java/sql/Time.ts:11</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -356,7 +356,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/sql/Time.ts#L17">lib/java/sql/Time.ts:17</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/sql/Time.ts#L12">lib/java/sql/Time.ts:12</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -373,7 +373,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/sql/Time.ts#L7">lib/java/sql/Time.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/sql/Time.ts#L13">lib/java/sql/Time.ts:13</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -390,7 +390,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/sql/Time.ts#L14">lib/java/sql/Time.ts:14</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/sql/Time.ts#L14">lib/java/sql/Time.ts:14</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -407,7 +407,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/sql/Time.ts#L23">lib/java/sql/Time.ts:23</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/sql/Time.ts#L15">lib/java/sql/Time.ts:15</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -424,7 +424,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/sql/Time.ts#L22">lib/java/sql/Time.ts:22</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/sql/Time.ts#L16">lib/java/sql/Time.ts:16</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -441,7 +441,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/sql/Time.ts#L5">lib/java/sql/Time.ts:5</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/sql/Time.ts#L17">lib/java/sql/Time.ts:17</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -452,19 +452,19 @@
 					<a name="setdate" class="tsd-anchor"></a>
 					<h3>set<wbr>Date</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Date<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Date<span class="tsd-signature-symbol">(</span>i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/sql/Time.ts#L9">lib/java/sql/Time.ts:9</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/sql/Time.ts#L18">lib/java/sql/Time.ts:18</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">number</span></h5>
+									<h5>i: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -475,19 +475,19 @@
 					<a name="sethours" class="tsd-anchor"></a>
 					<h3>set<wbr>Hours</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Hours<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Hours<span class="tsd-signature-symbol">(</span>hours<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/sql/Time.ts#L16">lib/java/sql/Time.ts:16</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/sql/Time.ts#L19">lib/java/sql/Time.ts:19</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">number</span></h5>
+									<h5>hours: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -498,19 +498,19 @@
 					<a name="setminutes" class="tsd-anchor"></a>
 					<h3>set<wbr>Minutes</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Minutes<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Minutes<span class="tsd-signature-symbol">(</span>minutes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/sql/Time.ts#L18">lib/java/sql/Time.ts:18</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/sql/Time.ts#L20">lib/java/sql/Time.ts:20</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">number</span></h5>
+									<h5>minutes: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -521,19 +521,19 @@
 					<a name="setmonth" class="tsd-anchor"></a>
 					<h3>set<wbr>Month</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Month<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Month<span class="tsd-signature-symbol">(</span>i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/sql/Time.ts#L8">lib/java/sql/Time.ts:8</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/sql/Time.ts#L21">lib/java/sql/Time.ts:21</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">number</span></h5>
+									<h5>i: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -544,19 +544,19 @@
 					<a name="setseconds" class="tsd-anchor"></a>
 					<h3>set<wbr>Seconds</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Seconds<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Seconds<span class="tsd-signature-symbol">(</span>seconds<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/sql/Time.ts#L19">lib/java/sql/Time.ts:19</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/sql/Time.ts#L22">lib/java/sql/Time.ts:22</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">number</span></h5>
+									<h5>seconds: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -567,19 +567,19 @@
 					<a name="settime" class="tsd-anchor"></a>
 					<h3>set<wbr>Time</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Time<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Time<span class="tsd-signature-symbol">(</span>time<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/sql/Time.ts#L11">lib/java/sql/Time.ts:11</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/sql/Time.ts#L23">lib/java/sql/Time.ts:23</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">number</span></h5>
+									<h5>time: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -590,19 +590,19 @@
 					<a name="setyear" class="tsd-anchor"></a>
 					<h3>set<wbr>Year</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Year<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Year<span class="tsd-signature-symbol">(</span>i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/sql/Time.ts#L6">lib/java/sql/Time.ts:6</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/sql/Time.ts#L24">lib/java/sql/Time.ts:24</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">number</span></h5>
+									<h5>i: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -619,7 +619,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/sql/Time.ts#L21">lib/java/sql/Time.ts:21</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/sql/Time.ts#L25">lib/java/sql/Time.ts:25</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -636,7 +636,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/sql/Time.ts#L4">lib/java/sql/Time.ts:4</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/sql/Time.ts#L26">lib/java/sql/Time.ts:26</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -653,7 +653,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/sql/Time.ts#L13">lib/java/sql/Time.ts:13</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/sql/Time.ts#L27">lib/java/sql/Time.ts:27</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -670,7 +670,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/sql/Time.ts#L20">lib/java/sql/Time.ts:20</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/sql/Time.ts#L28">lib/java/sql/Time.ts:28</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -681,34 +681,34 @@
 					<a name="utc" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> UTC</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">UTC<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, arg1<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, arg2<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, arg3<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, arg4<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, arg5<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">UTC<span class="tsd-signature-symbol">(</span>year<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, month<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, date<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, hrs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, min<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, sec<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/sql/Time.ts#L45">lib/java/sql/Time.ts:45</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/sql/Time.ts#L42">lib/java/sql/Time.ts:42</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">number</span></h5>
+									<h5>year: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>arg1: <span class="tsd-signature-type">number</span></h5>
+									<h5>month: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>arg2: <span class="tsd-signature-type">number</span></h5>
+									<h5>date: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>arg3: <span class="tsd-signature-type">number</span></h5>
+									<h5>hrs: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>arg4: <span class="tsd-signature-type">number</span></h5>
+									<h5>min: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>arg5: <span class="tsd-signature-type">number</span></h5>
+									<h5>sec: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -719,19 +719,19 @@
 					<a name="from" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> from</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">from<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">from<span class="tsd-signature-symbol">(</span>instant<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/sql/Time.ts#L49">lib/java/sql/Time.ts:49</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/sql/Time.ts#L47">lib/java/sql/Time.ts:47</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">any</span></h5>
+									<h5>instant: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -742,19 +742,19 @@
 					<a name="parse" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> parse</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">parse<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">parse<span class="tsd-signature-symbol">(</span>s<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/sql/Time.ts#L53">lib/java/sql/Time.ts:53</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/sql/Time.ts#L52">lib/java/sql/Time.ts:52</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">string</span></h5>
+									<h5>s: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -765,20 +765,20 @@
 					<a name="valueof" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagStatic">Static</span> value<wbr>Of</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">value<wbr>Of<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_java_sql_time_.time.html" class="tsd-signature-type">Time</a></li>
-						<li class="tsd-signature tsd-kind-icon">value<wbr>Of<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_java_sql_time_.time.html" class="tsd-signature-type">Time</a></li>
+						<li class="tsd-signature tsd-kind-icon">value<wbr>Of<span class="tsd-signature-symbol">(</span>s<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_java_sql_time_.time.html" class="tsd-signature-type">Time</a></li>
+						<li class="tsd-signature tsd-kind-icon">value<wbr>Of<span class="tsd-signature-symbol">(</span>time<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_java_sql_time_.time.html" class="tsd-signature-type">Time</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/sql/Time.ts#L40">lib/java/sql/Time.ts:40</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/sql/Time.ts#L57">lib/java/sql/Time.ts:57</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">any</span></h5>
+									<h5>s: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_lib_java_sql_time_.time.html" class="tsd-signature-type">Time</a></h4>
@@ -786,13 +786,13 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/sql/Time.ts#L41">lib/java/sql/Time.ts:41</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/sql/Time.ts#L58">lib/java/sql/Time.ts:58</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">string</span></h5>
+									<h5>time: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_lib_java_sql_time_.time.html" class="tsd-signature-type">Time</a></h4>

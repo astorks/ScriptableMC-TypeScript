@@ -100,6 +100,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_com_smc_utils_itembuilder_.itembuilder.html#removeenchantment" class="tsd-kind-icon">remove<wbr>Enchantment</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_com_smc_utils_itembuilder_.itembuilder.html#setdisplayname" class="tsd-kind-icon">set<wbr>Display<wbr>Name</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_com_smc_utils_itembuilder_.itembuilder.html#setlore" class="tsd-kind-icon">set<wbr>Lore</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_lib_com_smc_utils_itembuilder_.itembuilder.html#addenchant_default" class="tsd-kind-icon">add<wbr>Enchant$default</a></li>
 							</ul>
 						</section>
 					</div>
@@ -111,20 +112,20 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Item<wbr>Builder<span class="tsd-signature-symbol">(</span>material<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_material_.material.html" class="tsd-signature-type">Material</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_com_smc_utils_itembuilder_.itembuilder.html" class="tsd-signature-type">ItemBuilder</a></li>
 						<li class="tsd-signature tsd-kind-icon">new <wbr>Item<wbr>Builder<span class="tsd-signature-symbol">(</span>itemStack<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_inventory_itemstack_.itemstack.html" class="tsd-signature-type">ItemStack</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_com_smc_utils_itembuilder_.itembuilder.html" class="tsd-signature-type">ItemBuilder</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Item<wbr>Builder<span class="tsd-signature-symbol">(</span>material<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_material_.material.html" class="tsd-signature-type">Material</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_com_smc_utils_itembuilder_.itembuilder.html" class="tsd-signature-type">ItemBuilder</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/com/smc/utils/ItemBuilder.ts#L20">lib/com/smc/utils/ItemBuilder.ts:20</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/com/smc/utils/ItemBuilder.ts#L22">lib/com/smc/utils/ItemBuilder.ts:22</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>material: <a href="_lib_org_bukkit_material_.material.html" class="tsd-signature-type">Material</a></h5>
+									<h5>itemStack: <a href="_lib_org_bukkit_inventory_itemstack_.itemstack.html" class="tsd-signature-type">ItemStack</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_lib_com_smc_utils_itembuilder_.itembuilder.html" class="tsd-signature-type">ItemBuilder</a></h4>
@@ -132,13 +133,13 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/com/smc/utils/ItemBuilder.ts#L21">lib/com/smc/utils/ItemBuilder.ts:21</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/com/smc/utils/ItemBuilder.ts#L24">lib/com/smc/utils/ItemBuilder.ts:24</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>itemStack: <a href="_lib_org_bukkit_inventory_itemstack_.itemstack.html" class="tsd-signature-type">ItemStack</a></h5>
+									<h5>material: <a href="_lib_org_bukkit_material_.material.html" class="tsd-signature-type">Material</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_lib_com_smc_utils_itembuilder_.itembuilder.html" class="tsd-signature-type">ItemBuilder</a></h4>
@@ -158,7 +159,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/com/smc/utils/ItemBuilder.ts#L18">lib/com/smc/utils/ItemBuilder.ts:18</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/com/smc/utils/ItemBuilder.ts#L20">lib/com/smc/utils/ItemBuilder.ts:20</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -172,13 +173,46 @@
 					<a name="addenchant" class="tsd-anchor"></a>
 					<h3>add<wbr>Enchant</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Enchant<span class="tsd-signature-symbol">(</span>enchantment<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_enchantments_enchantment_.enchantment.html" class="tsd-signature-type">Enchantment</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_com_smc_utils_itembuilder_.itembuilder.html" class="tsd-signature-type">ItemBuilder</a></li>
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Enchant<span class="tsd-signature-symbol">(</span>enchantment<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_enchantments_enchantment_.enchantment.html" class="tsd-signature-type">Enchantment</a>, level<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_com_smc_utils_itembuilder_.itembuilder.html" class="tsd-signature-type">ItemBuilder</a></li>
 						<li class="tsd-signature tsd-kind-icon">add<wbr>Enchant<span class="tsd-signature-symbol">(</span>enchantment<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_enchantments_enchantment_.enchantment.html" class="tsd-signature-type">Enchantment</a>, level<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, ignoreLevelRestriction<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_com_smc_utils_itembuilder_.itembuilder.html" class="tsd-signature-type">ItemBuilder</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/com/smc/utils/ItemBuilder.ts#L9">lib/com/smc/utils/ItemBuilder.ts:9</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/com/smc/utils/ItemBuilder.ts#L7">lib/com/smc/utils/ItemBuilder.ts:7</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>enchantment: <a href="_lib_org_bukkit_enchantments_enchantment_.enchantment.html" class="tsd-signature-type">Enchantment</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_lib_com_smc_utils_itembuilder_.itembuilder.html" class="tsd-signature-type">ItemBuilder</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/com/smc/utils/ItemBuilder.ts#L8">lib/com/smc/utils/ItemBuilder.ts:8</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>enchantment: <a href="_lib_org_bukkit_enchantments_enchantment_.enchantment.html" class="tsd-signature-type">Enchantment</a></h5>
+								</li>
+								<li>
+									<h5>level: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_lib_com_smc_utils_itembuilder_.itembuilder.html" class="tsd-signature-type">ItemBuilder</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/com/smc/utils/ItemBuilder.ts#L9">lib/com/smc/utils/ItemBuilder.ts:9</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -207,7 +241,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/com/smc/utils/ItemBuilder.ts#L12">lib/com/smc/utils/ItemBuilder.ts:12</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/com/smc/utils/ItemBuilder.ts#L10">lib/com/smc/utils/ItemBuilder.ts:10</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="_lib_org_bukkit_inventory_itemstack_.itemstack.html" class="tsd-signature-type">ItemStack</a></h4>
@@ -224,7 +258,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/com/smc/utils/ItemBuilder.ts#L14">lib/com/smc/utils/ItemBuilder.ts:14</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/com/smc/utils/ItemBuilder.ts#L11">lib/com/smc/utils/ItemBuilder.ts:11</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -241,7 +275,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/com/smc/utils/ItemBuilder.ts#L7">lib/com/smc/utils/ItemBuilder.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/com/smc/utils/ItemBuilder.ts#L12">lib/com/smc/utils/ItemBuilder.ts:12</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -258,7 +292,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/com/smc/utils/ItemBuilder.ts#L8">lib/com/smc/utils/ItemBuilder.ts:8</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/com/smc/utils/ItemBuilder.ts#L13">lib/com/smc/utils/ItemBuilder.ts:13</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -281,7 +315,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/com/smc/utils/ItemBuilder.ts#L10">lib/com/smc/utils/ItemBuilder.ts:10</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/com/smc/utils/ItemBuilder.ts#L14">lib/com/smc/utils/ItemBuilder.ts:14</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -304,7 +338,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/com/smc/utils/ItemBuilder.ts#L13">lib/com/smc/utils/ItemBuilder.ts:13</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/com/smc/utils/ItemBuilder.ts#L15">lib/com/smc/utils/ItemBuilder.ts:15</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -327,13 +361,51 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/com/smc/utils/ItemBuilder.ts#L11">lib/com/smc/utils/ItemBuilder.ts:11</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/com/smc/utils/ItemBuilder.ts#L16">lib/com/smc/utils/ItemBuilder.ts:16</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>lore: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_lib_com_smc_utils_itembuilder_.itembuilder.html" class="tsd-signature-type">ItemBuilder</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="addenchant_default" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> add<wbr>Enchant$default</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Enchant$default<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><a href="_lib_com_smc_utils_itembuilder_.itembuilder.html" class="tsd-signature-type">ItemBuilder</a>, arg1<span class="tsd-signature-symbol">: </span><a href="_lib_org_bukkit_enchantments_enchantment_.enchantment.html" class="tsd-signature-type">Enchantment</a>, arg2<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, arg3<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, arg4<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, arg5<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_com_smc_utils_itembuilder_.itembuilder.html" class="tsd-signature-type">ItemBuilder</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/com/smc/utils/ItemBuilder.ts#L30">lib/com/smc/utils/ItemBuilder.ts:30</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>arg0: <a href="_lib_com_smc_utils_itembuilder_.itembuilder.html" class="tsd-signature-type">ItemBuilder</a></h5>
+								</li>
+								<li>
+									<h5>arg1: <a href="_lib_org_bukkit_enchantments_enchantment_.enchantment.html" class="tsd-signature-type">Enchantment</a></h5>
+								</li>
+								<li>
+									<h5>arg2: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>arg3: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+								<li>
+									<h5>arg4: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>arg5: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_lib_com_smc_utils_itembuilder_.itembuilder.html" class="tsd-signature-type">ItemBuilder</a></h4>
@@ -389,6 +461,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_lib_com_smc_utils_itembuilder_.itembuilder.html#setlore" class="tsd-kind-icon">set<wbr>Lore</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="_lib_com_smc_utils_itembuilder_.itembuilder.html#addenchant_default" class="tsd-kind-icon">add<wbr>Enchant$default</a>
 							</li>
 						</ul>
 					</li>

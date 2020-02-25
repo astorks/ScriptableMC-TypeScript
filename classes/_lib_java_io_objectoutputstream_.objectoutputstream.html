@@ -104,6 +104,7 @@
 								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-static"><a href="_lib_java_io_objectoutputstream_.objectoutputstream.html#sc_externalizable" class="tsd-kind-icon">SC_<wbr>EXTERNALIZABLE</a></li>
 								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-static"><a href="_lib_java_io_objectoutputstream_.objectoutputstream.html#sc_serializable" class="tsd-kind-icon">SC_<wbr>SERIALIZABLE</a></li>
 								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-static"><a href="_lib_java_io_objectoutputstream_.objectoutputstream.html#sc_write_method" class="tsd-kind-icon">SC_<wbr>WRITE_<wbr>METHOD</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-static"><a href="_lib_java_io_objectoutputstream_.objectoutputstream.html#serial_filter_permission" class="tsd-kind-icon">SERIAL_<wbr>FILTER_<wbr>PERMISSION</a></li>
 								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-static"><a href="_lib_java_io_objectoutputstream_.objectoutputstream.html#stream_magic" class="tsd-kind-icon">STREAM_<wbr>MAGIC</a></li>
 								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-static"><a href="_lib_java_io_objectoutputstream_.objectoutputstream.html#stream_version" class="tsd-kind-icon">STREAM_<wbr>VERSION</a></li>
 								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-static"><a href="_lib_java_io_objectoutputstream_.objectoutputstream.html#subclass_implementation_permission" class="tsd-kind-icon">SUBCLASS_<wbr>IMPLEMENTATION_<wbr>PERMISSION</a></li>
@@ -152,6 +153,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_java_io_objectoutputstream_.objectoutputstream.html#writeshort" class="tsd-kind-icon">write<wbr>Short</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_java_io_objectoutputstream_.objectoutputstream.html#writeutf" class="tsd-kind-icon">writeUTF</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_lib_java_io_objectoutputstream_.objectoutputstream.html#writeunshared" class="tsd-kind-icon">write<wbr>Unshared</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_lib_java_io_objectoutputstream_.objectoutputstream.html#nulloutputstream" class="tsd-kind-icon">null<wbr>Output<wbr>Stream</a></li>
 							</ul>
 						</section>
 					</div>
@@ -164,14 +166,14 @@
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">new <wbr>Object<wbr>Output<wbr>Stream<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_java_io_objectoutputstream_.objectoutputstream.html" class="tsd-signature-type">ObjectOutputStream</a></li>
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Object<wbr>Output<wbr>Stream<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><a href="_lib_java_io_outputstream_.outputstream.html" class="tsd-signature-type">OutputStream</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_java_io_objectoutputstream_.objectoutputstream.html" class="tsd-signature-type">ObjectOutputStream</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Object<wbr>Output<wbr>Stream<span class="tsd-signature-symbol">(</span>out<span class="tsd-signature-symbol">: </span><a href="_lib_java_io_outputstream_.outputstream.html" class="tsd-signature-type">OutputStream</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_java_io_objectoutputstream_.objectoutputstream.html" class="tsd-signature-type">ObjectOutputStream</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_lib_java_io_outputstream_.outputstream.html">OutputStream</a>.<a href="_lib_java_io_outputstream_.outputstream.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/OutputStream.ts#L16">lib/java/io/OutputStream.ts:16</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/OutputStream.ts#L16">lib/java/io/OutputStream.ts:16</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="_lib_java_io_objectoutputstream_.objectoutputstream.html" class="tsd-signature-type">ObjectOutputStream</a></h4>
@@ -180,13 +182,13 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_lib_java_io_outputstream_.outputstream.html">OutputStream</a>.<a href="_lib_java_io_outputstream_.outputstream.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L37">lib/java/io/ObjectOutputStream.ts:37</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L37">lib/java/io/ObjectOutputStream.ts:37</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <a href="_lib_java_io_outputstream_.outputstream.html" class="tsd-signature-type">OutputStream</a></h5>
+									<h5>out: <a href="_lib_java_io_outputstream_.outputstream.html" class="tsd-signature-type">OutputStream</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_lib_java_io_objectoutputstream_.objectoutputstream.html" class="tsd-signature-type">ObjectOutputStream</a></h4>
@@ -207,7 +209,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_lib_java_io_outputstream_.outputstream.html">OutputStream</a>.<a href="_lib_java_io_outputstream_.outputstream.html#_javaclass">$javaClass</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L35">lib/java/io/ObjectOutputStream.ts:35</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L35">lib/java/io/ObjectOutputStream.ts:35</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -224,7 +226,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L123">lib/java/io/ObjectOutputStream.ts:123</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L44">lib/java/io/ObjectOutputStream.ts:44</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -241,7 +243,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L126">lib/java/io/ObjectOutputStream.ts:126</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L48">lib/java/io/ObjectOutputStream.ts:48</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -258,7 +260,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L105">lib/java/io/ObjectOutputStream.ts:105</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L52">lib/java/io/ObjectOutputStream.ts:52</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -275,7 +277,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L114">lib/java/io/ObjectOutputStream.ts:114</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L56">lib/java/io/ObjectOutputStream.ts:56</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -292,7 +294,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L111">lib/java/io/ObjectOutputStream.ts:111</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L60">lib/java/io/ObjectOutputStream.ts:60</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -309,7 +311,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L108">lib/java/io/ObjectOutputStream.ts:108</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L64">lib/java/io/ObjectOutputStream.ts:64</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -326,10 +328,27 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L102">lib/java/io/ObjectOutputStream.ts:102</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L68">lib/java/io/ObjectOutputStream.ts:68</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-static">
+					<a name="serial_filter_permission" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> SERIAL_<wbr>FILTER_<wbr>PERMISSION</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> SERIAL_FILTER_PERMISSION<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_java_io_serializablepermission_.serializablepermission.html" class="tsd-signature-type">SerializablePermission</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L72">lib/java/io/ObjectOutputStream.ts:72</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="_lib_java_io_serializablepermission_.serializablepermission.html" class="tsd-signature-type">SerializablePermission</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -343,7 +362,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L42">lib/java/io/ObjectOutputStream.ts:42</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L76">lib/java/io/ObjectOutputStream.ts:76</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -360,7 +379,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L45">lib/java/io/ObjectOutputStream.ts:45</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L80">lib/java/io/ObjectOutputStream.ts:80</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -377,7 +396,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L120">lib/java/io/ObjectOutputStream.ts:120</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L84">lib/java/io/ObjectOutputStream.ts:84</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="_lib_java_io_serializablepermission_.serializablepermission.html" class="tsd-signature-type">SerializablePermission</a></h4>
@@ -394,7 +413,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L117">lib/java/io/ObjectOutputStream.ts:117</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L88">lib/java/io/ObjectOutputStream.ts:88</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="_lib_java_io_serializablepermission_.serializablepermission.html" class="tsd-signature-type">SerializablePermission</a></h4>
@@ -411,7 +430,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L66">lib/java/io/ObjectOutputStream.ts:66</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L92">lib/java/io/ObjectOutputStream.ts:92</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -428,7 +447,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L48">lib/java/io/ObjectOutputStream.ts:48</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L96">lib/java/io/ObjectOutputStream.ts:96</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -445,7 +464,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L72">lib/java/io/ObjectOutputStream.ts:72</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L100">lib/java/io/ObjectOutputStream.ts:100</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -462,7 +481,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L81">lib/java/io/ObjectOutputStream.ts:81</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L104">lib/java/io/ObjectOutputStream.ts:104</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -479,7 +498,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L69">lib/java/io/ObjectOutputStream.ts:69</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L108">lib/java/io/ObjectOutputStream.ts:108</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -496,7 +515,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L57">lib/java/io/ObjectOutputStream.ts:57</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L112">lib/java/io/ObjectOutputStream.ts:112</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -513,7 +532,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L75">lib/java/io/ObjectOutputStream.ts:75</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L116">lib/java/io/ObjectOutputStream.ts:116</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -530,7 +549,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L93">lib/java/io/ObjectOutputStream.ts:93</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L120">lib/java/io/ObjectOutputStream.ts:120</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -547,7 +566,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L84">lib/java/io/ObjectOutputStream.ts:84</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L124">lib/java/io/ObjectOutputStream.ts:124</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -564,7 +583,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L87">lib/java/io/ObjectOutputStream.ts:87</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L128">lib/java/io/ObjectOutputStream.ts:128</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -581,7 +600,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L96">lib/java/io/ObjectOutputStream.ts:96</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L132">lib/java/io/ObjectOutputStream.ts:132</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -598,7 +617,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L51">lib/java/io/ObjectOutputStream.ts:51</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L136">lib/java/io/ObjectOutputStream.ts:136</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -615,7 +634,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L60">lib/java/io/ObjectOutputStream.ts:60</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L140">lib/java/io/ObjectOutputStream.ts:140</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -632,7 +651,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L90">lib/java/io/ObjectOutputStream.ts:90</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L144">lib/java/io/ObjectOutputStream.ts:144</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -649,7 +668,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L54">lib/java/io/ObjectOutputStream.ts:54</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L148">lib/java/io/ObjectOutputStream.ts:148</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -666,7 +685,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L78">lib/java/io/ObjectOutputStream.ts:78</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L152">lib/java/io/ObjectOutputStream.ts:152</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -683,7 +702,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L63">lib/java/io/ObjectOutputStream.ts:63</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L156">lib/java/io/ObjectOutputStream.ts:156</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -700,7 +719,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L99">lib/java/io/ObjectOutputStream.ts:99</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L160">lib/java/io/ObjectOutputStream.ts:160</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -721,7 +740,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_lib_java_io_outputstream_.outputstream.html">OutputStream</a>.<a href="_lib_java_io_outputstream_.outputstream.html#close">close</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L24">lib/java/io/ObjectOutputStream.ts:24</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L9">lib/java/io/ObjectOutputStream.ts:9</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -738,7 +757,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L22">lib/java/io/ObjectOutputStream.ts:22</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L10">lib/java/io/ObjectOutputStream.ts:10</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -756,7 +775,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_lib_java_io_outputstream_.outputstream.html">OutputStream</a>.<a href="_lib_java_io_outputstream_.outputstream.html#flush">flush</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L23">lib/java/io/ObjectOutputStream.ts:23</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L11">lib/java/io/ObjectOutputStream.ts:11</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -773,7 +792,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L26">lib/java/io/ObjectOutputStream.ts:26</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L12">lib/java/io/ObjectOutputStream.ts:12</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="_lib_java_io_objectoutputstream_putfield_.objectoutputstream_putfield.html" class="tsd-signature-type">ObjectOutputStream$PutField</a></h4>
@@ -790,7 +809,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L28">lib/java/io/ObjectOutputStream.ts:28</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L13">lib/java/io/ObjectOutputStream.ts:13</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -801,19 +820,19 @@
 					<a name="useprotocolversion" class="tsd-anchor"></a>
 					<h3>use<wbr>Protocol<wbr>Version</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">use<wbr>Protocol<wbr>Version<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">use<wbr>Protocol<wbr>Version<span class="tsd-signature-symbol">(</span>version<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L12">lib/java/io/ObjectOutputStream.ts:12</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L14">lib/java/io/ObjectOutputStream.ts:14</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">number</span></h5>
+									<h5>version: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -824,22 +843,22 @@
 					<a name="write" class="tsd-anchor"></a>
 					<h3>write</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">write<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-						<li class="tsd-signature tsd-kind-icon">write<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span>, arg1<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, arg2<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-						<li class="tsd-signature tsd-kind-icon">write<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">write<span class="tsd-signature-symbol">(</span>buf<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">write<span class="tsd-signature-symbol">(</span>val<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">write<span class="tsd-signature-symbol">(</span>buf<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span>, off<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, len<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_lib_java_io_outputstream_.outputstream.html">OutputStream</a>.<a href="_lib_java_io_outputstream_.outputstream.html#write">write</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L18">lib/java/io/ObjectOutputStream.ts:18</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L15">lib/java/io/ObjectOutputStream.ts:15</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">number</span></h5>
+									<h5>buf: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -848,19 +867,13 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_lib_java_io_outputstream_.outputstream.html">OutputStream</a>.<a href="_lib_java_io_outputstream_.outputstream.html#write">write</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L19">lib/java/io/ObjectOutputStream.ts:19</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L16">lib/java/io/ObjectOutputStream.ts:16</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h5>
-								</li>
-								<li>
-									<h5>arg1: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5>arg2: <span class="tsd-signature-type">number</span></h5>
+									<h5>val: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -869,13 +882,19 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_lib_java_io_outputstream_.outputstream.html">OutputStream</a>.<a href="_lib_java_io_outputstream_.outputstream.html#write">write</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L20">lib/java/io/ObjectOutputStream.ts:20</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L17">lib/java/io/ObjectOutputStream.ts:17</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>buf: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>off: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>len: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -886,19 +905,19 @@
 					<a name="writeboolean" class="tsd-anchor"></a>
 					<h3>write<wbr>Boolean</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">write<wbr>Boolean<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">write<wbr>Boolean<span class="tsd-signature-symbol">(</span>val<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L14">lib/java/io/ObjectOutputStream.ts:14</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L18">lib/java/io/ObjectOutputStream.ts:18</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">boolean</span></h5>
+									<h5>val: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -909,19 +928,19 @@
 					<a name="writebyte" class="tsd-anchor"></a>
 					<h3>write<wbr>Byte</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">write<wbr>Byte<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">write<wbr>Byte<span class="tsd-signature-symbol">(</span>val<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L11">lib/java/io/ObjectOutputStream.ts:11</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L19">lib/java/io/ObjectOutputStream.ts:19</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">number</span></h5>
+									<h5>val: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -932,19 +951,19 @@
 					<a name="writebytes" class="tsd-anchor"></a>
 					<h3>write<wbr>Bytes</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">write<wbr>Bytes<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">write<wbr>Bytes<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L30">lib/java/io/ObjectOutputStream.ts:30</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L20">lib/java/io/ObjectOutputStream.ts:20</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">string</span></h5>
+									<h5>str: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -955,19 +974,19 @@
 					<a name="writechar" class="tsd-anchor"></a>
 					<h3>write<wbr>Char</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">write<wbr>Char<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">write<wbr>Char<span class="tsd-signature-symbol">(</span>val<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L29">lib/java/io/ObjectOutputStream.ts:29</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L21">lib/java/io/ObjectOutputStream.ts:21</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">number</span></h5>
+									<h5>val: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -978,19 +997,19 @@
 					<a name="writechars" class="tsd-anchor"></a>
 					<h3>write<wbr>Chars</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">write<wbr>Chars<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">write<wbr>Chars<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L17">lib/java/io/ObjectOutputStream.ts:17</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L22">lib/java/io/ObjectOutputStream.ts:22</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">string</span></h5>
+									<h5>str: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1001,19 +1020,19 @@
 					<a name="writedouble" class="tsd-anchor"></a>
 					<h3>write<wbr>Double</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">write<wbr>Double<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">write<wbr>Double<span class="tsd-signature-symbol">(</span>val<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L16">lib/java/io/ObjectOutputStream.ts:16</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L23">lib/java/io/ObjectOutputStream.ts:23</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">number</span></h5>
+									<h5>val: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1030,7 +1049,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L27">lib/java/io/ObjectOutputStream.ts:27</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L24">lib/java/io/ObjectOutputStream.ts:24</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1041,19 +1060,19 @@
 					<a name="writefloat" class="tsd-anchor"></a>
 					<h3>write<wbr>Float</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">write<wbr>Float<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">write<wbr>Float<span class="tsd-signature-symbol">(</span>val<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L10">lib/java/io/ObjectOutputStream.ts:10</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L25">lib/java/io/ObjectOutputStream.ts:25</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">number</span></h5>
+									<h5>val: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1064,19 +1083,19 @@
 					<a name="writeint" class="tsd-anchor"></a>
 					<h3>write<wbr>Int</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">write<wbr>Int<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">write<wbr>Int<span class="tsd-signature-symbol">(</span>val<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L25">lib/java/io/ObjectOutputStream.ts:25</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L26">lib/java/io/ObjectOutputStream.ts:26</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">number</span></h5>
+									<h5>val: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1087,19 +1106,19 @@
 					<a name="writelong" class="tsd-anchor"></a>
 					<h3>write<wbr>Long</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">write<wbr>Long<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">write<wbr>Long<span class="tsd-signature-symbol">(</span>val<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L9">lib/java/io/ObjectOutputStream.ts:9</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L27">lib/java/io/ObjectOutputStream.ts:27</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">number</span></h5>
+									<h5>val: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1110,19 +1129,19 @@
 					<a name="writeobject" class="tsd-anchor"></a>
 					<h3>write<wbr>Object</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">write<wbr>Object<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">write<wbr>Object<span class="tsd-signature-symbol">(</span>obj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L21">lib/java/io/ObjectOutputStream.ts:21</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L28">lib/java/io/ObjectOutputStream.ts:28</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">any</span></h5>
+									<h5>obj: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1133,19 +1152,19 @@
 					<a name="writeshort" class="tsd-anchor"></a>
 					<h3>write<wbr>Short</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">write<wbr>Short<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">write<wbr>Short<span class="tsd-signature-symbol">(</span>val<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L15">lib/java/io/ObjectOutputStream.ts:15</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L29">lib/java/io/ObjectOutputStream.ts:29</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">number</span></h5>
+									<h5>val: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1156,19 +1175,19 @@
 					<a name="writeutf" class="tsd-anchor"></a>
 					<h3>writeUTF</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">writeUTF<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">writeUTF<span class="tsd-signature-symbol">(</span>str<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L31">lib/java/io/ObjectOutputStream.ts:31</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L30">lib/java/io/ObjectOutputStream.ts:30</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">string</span></h5>
+									<h5>str: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1179,22 +1198,50 @@
 					<a name="writeunshared" class="tsd-anchor"></a>
 					<h3>write<wbr>Unshared</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">write<wbr>Unshared<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">write<wbr>Unshared<span class="tsd-signature-symbol">(</span>obj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ObjectOutputStream.ts#L13">lib/java/io/ObjectOutputStream.ts:13</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L31">lib/java/io/ObjectOutputStream.ts:31</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">any</span></h5>
+									<h5>obj: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+					<a name="nulloutputstream" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> null<wbr>Output<wbr>Stream</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">null<wbr>Output<wbr>Stream<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_java_io_outputstream_.outputstream.html" class="tsd-signature-type">OutputStream</a></li>
+						<li class="tsd-signature tsd-kind-icon">null<wbr>Output<wbr>Stream<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_java_io_outputstream_.outputstream.html" class="tsd-signature-type">OutputStream</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_lib_java_io_outputstream_.outputstream.html">OutputStream</a>.<a href="_lib_java_io_outputstream_.outputstream.html#nulloutputstream">nullOutputStream</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/OutputStream.ts#L23">lib/java/io/OutputStream.ts:23</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="_lib_java_io_outputstream_.outputstream.html" class="tsd-signature-type">OutputStream</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_lib_java_io_outputstream_.outputstream.html">OutputStream</a>.<a href="_lib_java_io_outputstream_.outputstream.html#nulloutputstream">nullOutputStream</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ObjectOutputStream.ts#L164">lib/java/io/ObjectOutputStream.ts:164</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="_lib_java_io_outputstream_.outputstream.html" class="tsd-signature-type">OutputStream</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -1244,6 +1291,9 @@
 							</li>
 							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-static">
 								<a href="_lib_java_io_objectoutputstream_.objectoutputstream.html#sc_write_method" class="tsd-kind-icon">SC_<wbr>WRITE_<wbr>METHOD</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-static">
+								<a href="_lib_java_io_objectoutputstream_.objectoutputstream.html#serial_filter_permission" class="tsd-kind-icon">SERIAL_<wbr>FILTER_<wbr>PERMISSION</a>
 							</li>
 							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-static">
 								<a href="_lib_java_io_objectoutputstream_.objectoutputstream.html#stream_magic" class="tsd-kind-icon">STREAM_<wbr>MAGIC</a>
@@ -1373,6 +1423,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="_lib_java_io_objectoutputstream_.objectoutputstream.html#writeunshared" class="tsd-kind-icon">write<wbr>Unshared</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+								<a href="_lib_java_io_objectoutputstream_.objectoutputstream.html#nulloutputstream" class="tsd-kind-icon">null<wbr>Output<wbr>Stream</a>
 							</li>
 						</ul>
 					</li>

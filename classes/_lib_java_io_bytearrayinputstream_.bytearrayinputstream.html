@@ -102,8 +102,12 @@
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="_lib_java_io_bytearrayinputstream_.bytearrayinputstream.html#mark" class="tsd-kind-icon">mark</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="_lib_java_io_bytearrayinputstream_.bytearrayinputstream.html#marksupported" class="tsd-kind-icon">mark<wbr>Supported</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="_lib_java_io_bytearrayinputstream_.bytearrayinputstream.html#read" class="tsd-kind-icon">read</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="_lib_java_io_bytearrayinputstream_.bytearrayinputstream.html#readallbytes" class="tsd-kind-icon">read<wbr>All<wbr>Bytes</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="_lib_java_io_bytearrayinputstream_.bytearrayinputstream.html#readnbytes" class="tsd-kind-icon">readNBytes</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="_lib_java_io_bytearrayinputstream_.bytearrayinputstream.html#reset" class="tsd-kind-icon">reset</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="_lib_java_io_bytearrayinputstream_.bytearrayinputstream.html#skip" class="tsd-kind-icon">skip</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="_lib_java_io_bytearrayinputstream_.bytearrayinputstream.html#transferto" class="tsd-kind-icon">transfer<wbr>To</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_lib_java_io_bytearrayinputstream_.bytearrayinputstream.html#nullinputstream" class="tsd-kind-icon">null<wbr>Input<wbr>Stream</a></li>
 							</ul>
 						</section>
 					</div>
@@ -116,15 +120,15 @@
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited">
 						<li class="tsd-signature tsd-kind-icon">new <wbr>Byte<wbr>Array<wbr>Input<wbr>Stream<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_java_io_bytearrayinputstream_.bytearrayinputstream.html" class="tsd-signature-type">ByteArrayInputStream</a></li>
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Byte<wbr>Array<wbr>Input<wbr>Stream<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_java_io_bytearrayinputstream_.bytearrayinputstream.html" class="tsd-signature-type">ByteArrayInputStream</a></li>
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Byte<wbr>Array<wbr>Input<wbr>Stream<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span>, arg1<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, arg2<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_java_io_bytearrayinputstream_.bytearrayinputstream.html" class="tsd-signature-type">ByteArrayInputStream</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Byte<wbr>Array<wbr>Input<wbr>Stream<span class="tsd-signature-symbol">(</span>buf<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_java_io_bytearrayinputstream_.bytearrayinputstream.html" class="tsd-signature-type">ByteArrayInputStream</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Byte<wbr>Array<wbr>Input<wbr>Stream<span class="tsd-signature-symbol">(</span>buf<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span>, offset<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, length<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_java_io_bytearrayinputstream_.bytearrayinputstream.html" class="tsd-signature-type">ByteArrayInputStream</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_lib_java_io_inputstream_.inputstream.html">InputStream</a>.<a href="_lib_java_io_inputstream_.inputstream.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/InputStream.ts#L19">lib/java/io/InputStream.ts:19</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/InputStream.ts#L24">lib/java/io/InputStream.ts:24</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="_lib_java_io_bytearrayinputstream_.bytearrayinputstream.html" class="tsd-signature-type">ByteArrayInputStream</a></h4>
@@ -133,13 +137,13 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_lib_java_io_inputstream_.inputstream.html">InputStream</a>.<a href="_lib_java_io_inputstream_.inputstream.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ByteArrayInputStream.ts#L19">lib/java/io/ByteArrayInputStream.ts:19</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ByteArrayInputStream.ts#L24">lib/java/io/ByteArrayInputStream.ts:24</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>buf: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_lib_java_io_bytearrayinputstream_.bytearrayinputstream.html" class="tsd-signature-type">ByteArrayInputStream</a></h4>
@@ -148,19 +152,19 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_lib_java_io_inputstream_.inputstream.html">InputStream</a>.<a href="_lib_java_io_inputstream_.inputstream.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ByteArrayInputStream.ts#L20">lib/java/io/ByteArrayInputStream.ts:20</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ByteArrayInputStream.ts#L26">lib/java/io/ByteArrayInputStream.ts:26</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>buf: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 								<li>
-									<h5>arg1: <span class="tsd-signature-type">number</span></h5>
+									<h5>offset: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>arg2: <span class="tsd-signature-type">number</span></h5>
+									<h5>length: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_lib_java_io_bytearrayinputstream_.bytearrayinputstream.html" class="tsd-signature-type">ByteArrayInputStream</a></h4>
@@ -181,7 +185,7 @@
 							<aside class="tsd-sources">
 								<p>Inherited from <a href="_lib_java_io_inputstream_.inputstream.html">InputStream</a>.<a href="_lib_java_io_inputstream_.inputstream.html#_javaclass">$javaClass</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ByteArrayInputStream.ts#L17">lib/java/io/ByteArrayInputStream.ts:17</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ByteArrayInputStream.ts#L22">lib/java/io/ByteArrayInputStream.ts:22</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
@@ -202,7 +206,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_lib_java_io_inputstream_.inputstream.html">InputStream</a>.<a href="_lib_java_io_inputstream_.inputstream.html#available">available</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ByteArrayInputStream.ts#L10">lib/java/io/ByteArrayInputStream.ts:10</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ByteArrayInputStream.ts#L6">lib/java/io/ByteArrayInputStream.ts:6</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -220,7 +224,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_lib_java_io_inputstream_.inputstream.html">InputStream</a>.<a href="_lib_java_io_inputstream_.inputstream.html#close">close</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ByteArrayInputStream.ts#L7">lib/java/io/ByteArrayInputStream.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ByteArrayInputStream.ts#L7">lib/java/io/ByteArrayInputStream.ts:7</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -231,20 +235,20 @@
 					<a name="mark" class="tsd-anchor"></a>
 					<h3>mark</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">mark<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">mark<span class="tsd-signature-symbol">(</span>readAheadLimit<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_lib_java_io_inputstream_.inputstream.html">InputStream</a>.<a href="_lib_java_io_inputstream_.inputstream.html#mark">mark</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ByteArrayInputStream.ts#L8">lib/java/io/ByteArrayInputStream.ts:8</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ByteArrayInputStream.ts#L8">lib/java/io/ByteArrayInputStream.ts:8</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">number</span></h5>
+									<h5>readAheadLimit: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -262,7 +266,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_lib_java_io_inputstream_.inputstream.html">InputStream</a>.<a href="_lib_java_io_inputstream_.inputstream.html#marksupported">markSupported</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ByteArrayInputStream.ts#L11">lib/java/io/ByteArrayInputStream.ts:11</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ByteArrayInputStream.ts#L9">lib/java/io/ByteArrayInputStream.ts:9</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -273,28 +277,31 @@
 					<a name="read" class="tsd-anchor"></a>
 					<h3>read</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">read<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span>, arg1<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, arg2<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 						<li class="tsd-signature tsd-kind-icon">read<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
-						<li class="tsd-signature tsd-kind-icon">read<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">read<span class="tsd-signature-symbol">(</span>b<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">read<span class="tsd-signature-symbol">(</span>b<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span>, off<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, len<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_lib_java_io_inputstream_.inputstream.html">InputStream</a>.<a href="_lib_java_io_inputstream_.inputstream.html#read">read</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ByteArrayInputStream.ts#L5">lib/java/io/ByteArrayInputStream.ts:5</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ByteArrayInputStream.ts#L10">lib/java/io/ByteArrayInputStream.ts:10</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="_lib_java_io_inputstream_.inputstream.html">InputStream</a>.<a href="_lib_java_io_inputstream_.inputstream.html#read">read</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ByteArrayInputStream.ts#L11">lib/java/io/ByteArrayInputStream.ts:11</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h5>
-								</li>
-								<li>
-									<h5>arg1: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5>arg2: <span class="tsd-signature-type">number</span></h5>
+									<h5>b: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -303,22 +310,83 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_lib_java_io_inputstream_.inputstream.html">InputStream</a>.<a href="_lib_java_io_inputstream_.inputstream.html#read">read</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ByteArrayInputStream.ts#L6">lib/java/io/ByteArrayInputStream.ts:6</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
-						</li>
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Overrides <a href="_lib_java_io_inputstream_.inputstream.html">InputStream</a>.<a href="_lib_java_io_inputstream_.inputstream.html#read">read</a></p>
-								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ByteArrayInputStream.ts#L13">lib/java/io/ByteArrayInputStream.ts:13</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ByteArrayInputStream.ts#L12">lib/java/io/ByteArrayInputStream.ts:12</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>b: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>off: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>len: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+					<a name="readallbytes" class="tsd-anchor"></a>
+					<h3>read<wbr>All<wbr>Bytes</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">read<wbr>All<wbr>Bytes<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="_lib_java_io_inputstream_.inputstream.html">InputStream</a>.<a href="_lib_java_io_inputstream_.inputstream.html#readallbytes">readAllBytes</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ByteArrayInputStream.ts#L13">lib/java/io/ByteArrayInputStream.ts:13</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+					<a name="readnbytes" class="tsd-anchor"></a>
+					<h3>readNBytes</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">readNBytes<span class="tsd-signature-symbol">(</span>len<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">readNBytes<span class="tsd-signature-symbol">(</span>b<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span>, off<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, len<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="_lib_java_io_inputstream_.inputstream.html">InputStream</a>.<a href="_lib_java_io_inputstream_.inputstream.html#readnbytes">readNBytes</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ByteArrayInputStream.ts#L14">lib/java/io/ByteArrayInputStream.ts:14</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>len: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="_lib_java_io_inputstream_.inputstream.html">InputStream</a>.<a href="_lib_java_io_inputstream_.inputstream.html#readnbytes">readNBytes</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ByteArrayInputStream.ts#L15">lib/java/io/ByteArrayInputStream.ts:15</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>b: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+								<li>
+									<h5>off: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>len: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -336,7 +404,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_lib_java_io_inputstream_.inputstream.html">InputStream</a>.<a href="_lib_java_io_inputstream_.inputstream.html#reset">reset</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ByteArrayInputStream.ts#L12">lib/java/io/ByteArrayInputStream.ts:12</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ByteArrayInputStream.ts#L16">lib/java/io/ByteArrayInputStream.ts:16</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -347,23 +415,75 @@
 					<a name="skip" class="tsd-anchor"></a>
 					<h3>skip</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">skip<span class="tsd-signature-symbol">(</span>arg0<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">skip<span class="tsd-signature-symbol">(</span>n<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_lib_java_io_inputstream_.inputstream.html">InputStream</a>.<a href="_lib_java_io_inputstream_.inputstream.html#skip">skip</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/417bbe8/src/lib/java/io/ByteArrayInputStream.ts#L9">lib/java/io/ByteArrayInputStream.ts:9</a></li>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ByteArrayInputStream.ts#L17">lib/java/io/ByteArrayInputStream.ts:17</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>arg0: <span class="tsd-signature-type">number</span></h5>
+									<h5>n: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+					<a name="transferto" class="tsd-anchor"></a>
+					<h3>transfer<wbr>To</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">transfer<wbr>To<span class="tsd-signature-symbol">(</span>out<span class="tsd-signature-symbol">: </span><a href="_lib_java_io_outputstream_.outputstream.html" class="tsd-signature-type">OutputStream</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="_lib_java_io_inputstream_.inputstream.html">InputStream</a>.<a href="_lib_java_io_inputstream_.inputstream.html#transferto">transferTo</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ByteArrayInputStream.ts#L18">lib/java/io/ByteArrayInputStream.ts:18</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>out: <a href="_lib_java_io_outputstream_.outputstream.html" class="tsd-signature-type">OutputStream</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+					<a name="nullinputstream" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> null<wbr>Input<wbr>Stream</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">null<wbr>Input<wbr>Stream<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_java_io_inputstream_.inputstream.html" class="tsd-signature-type">InputStream</a></li>
+						<li class="tsd-signature tsd-kind-icon">null<wbr>Input<wbr>Stream<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_lib_java_io_inputstream_.inputstream.html" class="tsd-signature-type">InputStream</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_lib_java_io_inputstream_.inputstream.html">InputStream</a>.<a href="_lib_java_io_inputstream_.inputstream.html#nullinputstream">nullInputStream</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/InputStream.ts#L31">lib/java/io/InputStream.ts:31</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="_lib_java_io_inputstream_.inputstream.html" class="tsd-signature-type">InputStream</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_lib_java_io_inputstream_.inputstream.html">InputStream</a>.<a href="_lib_java_io_inputstream_.inputstream.html#nullinputstream">nullInputStream</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/astorks/ScriptableMC-TypeScript/blob/3d8fcb5/src/lib/java/io/ByteArrayInputStream.ts#L32">lib/java/io/ByteArrayInputStream.ts:32</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="_lib_java_io_inputstream_.inputstream.html" class="tsd-signature-type">InputStream</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -409,10 +529,22 @@
 								<a href="_lib_java_io_bytearrayinputstream_.bytearrayinputstream.html#read" class="tsd-kind-icon">read</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+								<a href="_lib_java_io_bytearrayinputstream_.bytearrayinputstream.html#readallbytes" class="tsd-kind-icon">read<wbr>All<wbr>Bytes</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+								<a href="_lib_java_io_bytearrayinputstream_.bytearrayinputstream.html#readnbytes" class="tsd-kind-icon">readNBytes</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 								<a href="_lib_java_io_bytearrayinputstream_.bytearrayinputstream.html#reset" class="tsd-kind-icon">reset</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
 								<a href="_lib_java_io_bytearrayinputstream_.bytearrayinputstream.html#skip" class="tsd-kind-icon">skip</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+								<a href="_lib_java_io_bytearrayinputstream_.bytearrayinputstream.html#transferto" class="tsd-kind-icon">transfer<wbr>To</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+								<a href="_lib_java_io_bytearrayinputstream_.bytearrayinputstream.html#nullinputstream" class="tsd-kind-icon">null<wbr>Input<wbr>Stream</a>
 							</li>
 						</ul>
 					</li>
