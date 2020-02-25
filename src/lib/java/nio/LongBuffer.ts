@@ -3,54 +3,67 @@ import Buffer from '../../java/nio/Buffer.js'
 import ByteOrder from '../../java/nio/ByteOrder.js'
 
 export default interface LongBuffer extends Buffer {
-	get(arg0: Array<number>, arg1: number, arg2: number): LongBuffer;
-	get(arg0: Array<number>): LongBuffer;
-	get(): number;
-	get(arg0: number): number;
-	put(arg0: Array<number>): LongBuffer;
-	put(arg0: Array<number>, arg1: number, arg2: number): LongBuffer;
-	put(arg0: number, arg1: number): LongBuffer;
-	put(arg0: LongBuffer): LongBuffer;
-	put(arg0: number): LongBuffer;
-	compareTo(arg0: any): number;
-	compareTo(arg0: LongBuffer): number;
-	isDirect(): boolean;
-	hasArray(): boolean;
-	array(): Array<number>;
 	array(): any;
+	array(): Array<number>;
 	arrayOffset(): number;
-	duplicate(): LongBuffer;
-	slice(): LongBuffer;
 	asReadOnlyBuffer(): LongBuffer;
-	compact(): LongBuffer;
-	order(): ByteOrder;
-	limit(arg0: number): Buffer;
-	limit(): number;
-	clear(): Buffer;
-	remaining(): number;
-	position(arg0: number): Buffer;
-	position(): number;
 	capacity(): number;
-	mark(): Buffer;
-	reset(): Buffer;
+	clear(): LongBuffer;
+	clear(): Buffer;
+	compact(): LongBuffer;
+	compareTo(arg0: any): number;
+	compareTo(that: LongBuffer): number;
+	duplicate(): Buffer;
+	duplicate(): LongBuffer;
+	flip(): LongBuffer;
 	flip(): Buffer;
-	rewind(): Buffer;
+	get(): number;
+	get(dst: Array<number>): LongBuffer;
+	get(arg0: number): number;
+	get(dst: Array<number>, offset: number, length: number): LongBuffer;
+	hasArray(): boolean;
 	hasRemaining(): boolean;
+	isDirect(): boolean;
 	isReadOnly(): boolean;
+	limit(): number;
+	limit(newLimit: number): Buffer;
+	limit(newLimit: number): LongBuffer;
+	mark(): Buffer;
+	mark(): LongBuffer;
+	mismatch(that: LongBuffer): number;
+	order(): ByteOrder;
+	position(): number;
+	position(newPosition: number): LongBuffer;
+	position(newPosition: number): Buffer;
+	put(src: Array<number>): LongBuffer;
+	put(src: LongBuffer): LongBuffer;
+	put(arg0: number): LongBuffer;
+	put(arg0: number, arg1: number): LongBuffer;
+	put(src: Array<number>, offset: number, length: number): LongBuffer;
+	remaining(): number;
+	reset(): Buffer;
+	reset(): LongBuffer;
+	rewind(): Buffer;
+	rewind(): LongBuffer;
+	slice(): LongBuffer;
+	slice(): Buffer;
 }
 
 export default class LongBuffer {
 	public static get $javaClass(): any {
 		return Java.type('java.nio.LongBuffer');
 	}
-	public static wrap(arg0: Array<number>, arg1: number, arg2: number): LongBuffer;
-	public static wrap(arg0: Array<number>): LongBuffer;
-	public static wrap(...args: any[]): any {
-		return LongBuffer.$javaClass.wrap(...args);
-	}
-	public static allocate(arg0: number): LongBuffer;
+
+	public static allocate(capacity: number): LongBuffer;
 	public static allocate(...args: any[]): any {
 		return LongBuffer.$javaClass.allocate(...args);
 	}
+
+	public static wrap(array: Array<number>): LongBuffer;
+	public static wrap(array: Array<number>, offset: number, length: number): LongBuffer;
+	public static wrap(...args: any[]): any {
+		return LongBuffer.$javaClass.wrap(...args);
+	}
+
 }
 

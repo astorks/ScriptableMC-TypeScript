@@ -13,5 +13,6 @@ export default class PotionBrewer {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.potion.PotionBrewer');
 	}
+
 }
 

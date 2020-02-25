@@ -1,25 +1,37 @@
 declare var Java: any;
 import Closeable from '../../java/io/Closeable.js'
+import OutputStream from '../../java/io/OutputStream.js'
 
 export default interface InputStream {
-	read(arg0: Array<number>, arg1: number, arg2: number): number;
-	read(arg0: Array<number>): number;
-	read(): number;
-	close(): void;
-	mark(arg0: number): void;
-	skip(arg0: number): number;
 	available(): number;
+	close(): void;
+	mark(readlimit: number): void;
 	markSupported(): boolean;
+	read(): number;
+	read(b: Array<number>): number;
+	read(b: Array<number>, off: number, len: number): number;
+	readAllBytes(): Array<number>;
+	readNBytes(len: number): Array<number>;
+	readNBytes(b: Array<number>, off: number, len: number): number;
 	reset(): void;
+	skip(n: number): number;
+	transferTo(out: OutputStream): number;
 }
 
 export default class InputStream {
 	public static get $javaClass(): any {
 		return Java.type('java.io.InputStream');
 	}
+
 	constructor();
 	constructor(...args: any[]) {
 		return new InputStream.$javaClass(...args);
 	}
+
+	public static nullInputStream(): InputStream;
+	public static nullInputStream(...args: any[]): any {
+		return InputStream.$javaClass.nullInputStream(...args);
+	}
+
 }
 

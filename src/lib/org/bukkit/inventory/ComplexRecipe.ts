@@ -5,13 +5,14 @@ import NamespacedKey from '../../../org/bukkit/NamespacedKey.js'
 import Recipe from '../../../org/bukkit/inventory/Recipe.js'
 
 export default interface ComplexRecipe extends Recipe, Keyed {
-	getResult(): ItemStack;
 	getKey(): NamespacedKey;
+	getResult(): ItemStack;
 }
 
 export default class ComplexRecipe {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.inventory.ComplexRecipe');
 	}
+
 }
 

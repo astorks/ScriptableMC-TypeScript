@@ -18,42 +18,44 @@ import Path from '../../../../java/nio/file/Path.js'
 import SeekableByteChannel from '../../../../java/nio/channels/SeekableByteChannel.js'
 
 export default interface FileSystemProvider {
-	setAttribute(arg0: Path, arg1: string, arg2: any, arg3: Array<LinkOption>): void;
-	deleteIfExists(arg0: Path): boolean;
-	newInputStream(arg0: Path, arg1: Array<OpenOption>): InputStream;
-	newOutputStream(arg0: Path, arg1: Array<OpenOption>): OutputStream;
-	newDirectoryStream(arg0: Path, arg1: DirectoryStream$Filter): DirectoryStream;
-	newFileSystem(arg0: Path, arg1: any): FileSystem;
-	newFileSystem(arg0: any, arg1: any): FileSystem;
-	getFileStore(arg0: Path): FileStore;
+	checkAccess(arg0: Path, arg1: Array<AccessMode>): void;
+	copy(arg0: Path, arg1: Path, arg2: Array<CopyOption>): void;
+	createDirectory(arg0: Path, arg1: Array<FileAttribute>): void;
+	createLink(link: Path, existing: Path): void;
+	createSymbolicLink(link: Path, target: Path, attrs: Array<FileAttribute>): void;
+	delete(arg0: Path): void;
+	deleteIfExists(path: Path): boolean;
 	getFileAttributeView(arg0: Path, arg1: any, arg2: Array<LinkOption>): FileAttributeView;
+	getFileStore(arg0: Path): FileStore;
+	getFileSystem(arg0: any): FileSystem;
+	getPath(arg0: any): Path;
+	getScheme(): string;
+	isHidden(arg0: Path): boolean;
+	isSameFile(arg0: Path, arg1: Path): boolean;
+	move(arg0: Path, arg1: Path, arg2: Array<CopyOption>): void;
+	newAsynchronousFileChannel(path: Path, options: any, executor: any, attrs: Array<FileAttribute>): AsynchronousFileChannel;
+	newByteChannel(arg0: Path, arg1: any, arg2: Array<FileAttribute>): SeekableByteChannel;
+	newDirectoryStream(arg0: Path, arg1: DirectoryStream$Filter): DirectoryStream;
+	newFileChannel(path: Path, options: any, attrs: Array<FileAttribute>): FileChannel;
+	newFileSystem(path: Path, env: any): FileSystem;
+	newFileSystem(arg0: any, arg1: any): FileSystem;
+	newInputStream(path: Path, options: Array<OpenOption>): InputStream;
+	newOutputStream(path: Path, options: Array<OpenOption>): OutputStream;
 	readAttributes(arg0: Path, arg1: any, arg2: Array<LinkOption>): BasicFileAttributes;
 	readAttributes(arg0: Path, arg1: string, arg2: Array<LinkOption>): any;
-	newFileChannel(arg0: Path, arg1: any, arg2: Array<FileAttribute>): FileChannel;
-	newAsynchronousFileChannel(arg0: Path, arg1: any, arg2: any, arg3: Array<FileAttribute>): AsynchronousFileChannel;
-	newByteChannel(arg0: Path, arg1: any, arg2: Array<FileAttribute>): SeekableByteChannel;
-	move(arg0: Path, arg1: Path, arg2: Array<CopyOption>): void;
-	isSameFile(arg0: Path, arg1: Path): boolean;
-	createSymbolicLink(arg0: Path, arg1: Path, arg2: Array<FileAttribute>): void;
-	createLink(arg0: Path, arg1: Path): void;
-	readSymbolicLink(arg0: Path): Path;
-	checkAccess(arg0: Path, arg1: Array<AccessMode>): void;
-	delete(arg0: Path): void;
-	copy(arg0: Path, arg1: Path, arg2: Array<CopyOption>): void;
-	getPath(arg0: any): Path;
-	isHidden(arg0: Path): boolean;
-	getScheme(): string;
-	createDirectory(arg0: Path, arg1: Array<FileAttribute>): void;
-	getFileSystem(arg0: any): FileSystem;
+	readSymbolicLink(link: Path): Path;
+	setAttribute(arg0: Path, arg1: string, arg2: any, arg3: Array<LinkOption>): void;
 }
 
 export default class FileSystemProvider {
 	public static get $javaClass(): any {
 		return Java.type('java.nio.file.spi.FileSystemProvider');
 	}
+
 	public static installedProviders(): Array<FileSystemProvider>;
 	public static installedProviders(...args: any[]): any {
 		return FileSystemProvider.$javaClass.installedProviders(...args);
 	}
+
 }
 

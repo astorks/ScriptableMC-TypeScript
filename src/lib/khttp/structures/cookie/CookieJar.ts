@@ -2,53 +2,55 @@ declare var Java: any;
 import Cookie from '../../../khttp/structures/cookie/Cookie.js'
 
 export default interface CookieJar {
-	setCookie(cookie: Cookie): void;
-	getCookies(): Array<Cookie>;
-	getCookie(key: string): Cookie;
-	getValues(): any;
-	remove(key: string): string;
-	remove(arg0: any): any;
-	get(key: string): string;
-	get(arg0: any): any;
-	put(arg0: any, arg1: any): any;
-	put(key: string, value: string): string;
-	values(): any;
 	clear(): void;
-	isEmpty(): boolean;
-	size(): number;
-	entrySet(): any;
-	putAll(from: any): void;
-	keySet(): any;
-	containsValue(arg0: any): boolean;
-	containsValue(value: string): boolean;
+	compute(key: any, remappingFunction: any): any;
+	computeIfAbsent(key: any, mappingFunction: any): any;
+	computeIfPresent(key: any, remappingFunction: any): any;
 	containsKey(key: string): boolean;
 	containsKey(arg0: any): boolean;
-	getSize(): number;
+	containsValue(arg0: any): boolean;
+	containsValue(value: string): boolean;
+	entrySet(): any;
+	forEach(action: any): void;
+	get(arg0: any): any;
+	get(key: string): string;
+	getCookie(key: string): Cookie;
+	getCookies(): Array<Cookie>;
 	getEntries(): any;
 	getKeys(): any;
-	remove(arg0: any, arg1: any): boolean;
-	replace(arg0: any, arg1: any): any;
-	replace(arg0: any, arg1: any, arg2: any): boolean;
-	replaceAll(arg0: any): void;
-	putIfAbsent(arg0: any, arg1: any): any;
-	forEach(arg0: any): void;
-	getOrDefault(arg0: any, arg1: any): any;
-	computeIfAbsent(arg0: any, arg1: any): any;
-	computeIfPresent(arg0: any, arg1: any): any;
-	compute(arg0: any, arg1: any): any;
-	merge(arg0: any, arg1: any, arg2: any): any;
+	getOrDefault(key: any, defaultValue: any): any;
+	getSize(): number;
+	getValues(): any;
+	isEmpty(): boolean;
+	keySet(): any;
+	merge(key: any, value: any, remappingFunction: any): any;
+	put(arg0: any, arg1: any): any;
+	put(key: string, value: string): string;
+	putAll(from: any): void;
+	putIfAbsent(key: any, value: any): any;
+	remove(key: string): string;
+	remove(arg0: any): any;
+	remove(key: any, value: any): boolean;
+	replace(key: any, value: any): any;
+	replace(key: any, oldValue: any, newValue: any): boolean;
+	replaceAll(_function: any): void;
+	setCookie(cookie: Cookie): void;
+	size(): number;
+	values(): any;
 }
 
 export default class CookieJar {
 	public static get $javaClass(): any {
 		return Java.type('khttp.structures.cookie.CookieJar');
 	}
-	constructor(cookies: any);
+
 	constructor();
-	constructor(elements$iv: Array<Cookie>, arg1: number, arg2: any);
 	constructor(cookies: Array<Cookie>);
+	constructor(cookies: any);
+	constructor(elements$iv: Array<Cookie>, arg1: number, arg2: any);
 	constructor(...args: any[]) {
 		return new CookieJar.$javaClass(...args);
 	}
+
 }
 

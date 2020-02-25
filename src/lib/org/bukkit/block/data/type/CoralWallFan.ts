@@ -6,17 +6,17 @@ import Material from '../../../../../org/bukkit/Material.js'
 import Waterlogged from '../../../../../org/bukkit/block/data/Waterlogged.js'
 
 export default interface CoralWallFan extends Directional, Waterlogged {
-	getFacing(): BlockFace;
-	setFacing(arg0: BlockFace): void;
-	getFaces(): any;
-	getMaterial(): Material;
-	getAsString(arg0: boolean): string;
-	getAsString(): string;
-	clone(): BlockData;
 	clone(): any;
+	clone(): BlockData;
+	getAsString(): string;
+	getAsString(arg0: boolean): string;
+	getFaces(): any;
+	getFacing(): BlockFace;
+	getMaterial(): Material;
+	isWaterlogged(): boolean;
 	matches(arg0: BlockData): boolean;
 	merge(arg0: BlockData): BlockData;
-	isWaterlogged(): boolean;
+	setFacing(arg0: BlockFace): void;
 	setWaterlogged(arg0: boolean): void;
 }
 
@@ -24,5 +24,6 @@ export default class CoralWallFan {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.block.data.type.CoralWallFan');
 	}
+
 }
 

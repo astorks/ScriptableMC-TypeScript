@@ -13,48 +13,50 @@ import Server from '../../../org/bukkit/Server.js'
 import SimpleCommandMap from '../../../org/bukkit/command/SimpleCommandMap.js'
 
 export default interface SimplePluginManager extends PluginManager {
-	getPlugin(_name: string): Plugin;
-	registerEvent(event: any, listener: Listener, priority: EventPriority, executor: EventExecutor, plugin: Plugin): void;
-	registerEvent(event: any, listener: Listener, priority: EventPriority, executor: EventExecutor, plugin: Plugin, ignoreCancelled: boolean): void;
-	loadPlugin(file: File): Plugin;
-	enablePlugin(plugin: Plugin): void;
-	disablePlugin(plugin: Plugin): void;
-	getPlugins(): Array<Plugin>;
-	registerInterface(loader: any): void;
-	isPluginEnabled(plugin: Plugin): boolean;
-	isPluginEnabled(_name: string): boolean;
-	loadPlugins(directory: File): Array<Plugin>;
-	disablePlugins(): void;
-	clearPlugins(): void;
-	callEvent(event: Event): void;
-	registerEvents(listener: Listener, plugin: Plugin): void;
-	getDefaultPermissions(op: boolean): any;
-	getPermissionSubscriptions(permission: string): any;
 	addPermission(perm: Permission): void;
 	addPermission(perm: Permission, dirty: boolean): void;
-	removePermission(perm: Permission): void;
-	removePermission(_name: string): void;
-	recalculatePermissionDefaults(perm: Permission): void;
-	subscribeToPermission(permission: string, permissible: Permissible): void;
-	unsubscribeFromPermission(permission: string, permissible: Permissible): void;
-	subscribeToDefaultPerms(op: boolean, permissible: Permissible): void;
-	unsubscribeFromDefaultPerms(op: boolean, permissible: Permissible): void;
-	getDefaultPermSubscriptions(op: boolean): any;
-	useTimings(use: boolean): void;
-	useTimings(): boolean;
+	callEvent(event: Event): void;
+	clearPlugins(): void;
 	dirtyPermissibles(): void;
-	isTransitiveDepend(plugin: PluginDescriptionFile, depend: PluginDescriptionFile): boolean;
-	getPermissions(): any;
+	disablePlugin(plugin: Plugin): void;
+	disablePlugins(): void;
+	enablePlugin(plugin: Plugin): void;
+	getDefaultPermSubscriptions(op: boolean): any;
+	getDefaultPermissions(op: boolean): any;
 	getPermission(_name: string): Permission;
+	getPermissionSubscriptions(permission: string): any;
+	getPermissions(): any;
+	getPlugin(_name: string): Plugin;
+	getPlugins(): Array<Plugin>;
+	isPluginEnabled(plugin: Plugin): boolean;
+	isPluginEnabled(_name: string): boolean;
+	isTransitiveDepend(plugin: PluginDescriptionFile, depend: PluginDescriptionFile): boolean;
+	loadPlugin(file: File): Plugin;
+	loadPlugins(directory: File): Array<Plugin>;
+	recalculatePermissionDefaults(perm: Permission): void;
+	registerEvent(event: any, listener: Listener, priority: EventPriority, executor: EventExecutor, plugin: Plugin): void;
+	registerEvent(event: any, listener: Listener, priority: EventPriority, executor: EventExecutor, plugin: Plugin, ignoreCancelled: boolean): void;
+	registerEvents(listener: Listener, plugin: Plugin): void;
+	registerInterface(loader: any): void;
+	removePermission(_name: string): void;
+	removePermission(perm: Permission): void;
+	subscribeToDefaultPerms(op: boolean, permissible: Permissible): void;
+	subscribeToPermission(permission: string, permissible: Permissible): void;
+	unsubscribeFromDefaultPerms(op: boolean, permissible: Permissible): void;
+	unsubscribeFromPermission(permission: string, permissible: Permissible): void;
+	useTimings(): boolean;
+	useTimings(use: boolean): void;
 }
 
 export default class SimplePluginManager {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.plugin.SimplePluginManager');
 	}
+
 	constructor(instance: Server, commandMap: SimpleCommandMap);
 	constructor(...args: any[]) {
 		return new SimplePluginManager.$javaClass(...args);
 	}
+
 }
 

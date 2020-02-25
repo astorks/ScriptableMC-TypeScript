@@ -6,24 +6,25 @@ import Directional from '../../../../../org/bukkit/block/data/Directional.js'
 import Material from '../../../../../org/bukkit/Material.js'
 
 export default interface Cocoa extends Ageable, Directional {
-	getAge(): number;
-	setAge(arg0: number): void;
-	getMaximumAge(): number;
-	getMaterial(): Material;
-	getAsString(arg0: boolean): string;
-	getAsString(): string;
-	clone(): BlockData;
 	clone(): any;
+	clone(): BlockData;
+	getAge(): number;
+	getAsString(): string;
+	getAsString(arg0: boolean): string;
+	getFaces(): any;
+	getFacing(): BlockFace;
+	getMaterial(): Material;
+	getMaximumAge(): number;
 	matches(arg0: BlockData): boolean;
 	merge(arg0: BlockData): BlockData;
-	getFacing(): BlockFace;
+	setAge(arg0: number): void;
 	setFacing(arg0: BlockFace): void;
-	getFaces(): any;
 }
 
 export default class Cocoa {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.block.data.type.Cocoa');
 	}
+
 }
 

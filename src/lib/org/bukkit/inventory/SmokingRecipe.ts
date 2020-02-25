@@ -6,28 +6,30 @@ import NamespacedKey from '../../../org/bukkit/NamespacedKey.js'
 import RecipeChoice from '../../../org/bukkit/inventory/RecipeChoice.js'
 
 export default interface SmokingRecipe extends CookingRecipe {
-	setInput(input: Material): CookingRecipe;
-	setInputChoice(input: RecipeChoice): CookingRecipe;
-	getInputChoice(): RecipeChoice;
-	getInput(): ItemStack;
-	setExperience(experience: number): void;
-	getExperience(): number;
-	setCookingTime(cookingTime: number): void;
 	getCookingTime(): number;
+	getExperience(): number;
 	getGroup(): string;
-	setGroup(group: string): void;
+	getInput(): ItemStack;
+	getInputChoice(): RecipeChoice;
 	getKey(): NamespacedKey;
 	getResult(): ItemStack;
+	setCookingTime(cookingTime: number): void;
+	setExperience(experience: number): void;
+	setGroup(group: string): void;
+	setInput(input: Material): CookingRecipe;
+	setInputChoice(input: RecipeChoice): CookingRecipe;
 }
 
 export default class SmokingRecipe {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.inventory.SmokingRecipe');
 	}
+
 	constructor(key: NamespacedKey, result: ItemStack, source: Material, experience: number, cookingTime: number);
 	constructor(key: NamespacedKey, result: ItemStack, input: RecipeChoice, experience: number, cookingTime: number);
 	constructor(...args: any[]) {
 		return new SmokingRecipe.$javaClass(...args);
 	}
+
 }
 

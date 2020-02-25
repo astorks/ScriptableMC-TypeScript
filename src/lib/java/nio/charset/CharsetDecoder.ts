@@ -6,27 +6,28 @@ import CoderResult from '../../../java/nio/charset/CoderResult.js'
 import CodingErrorAction from '../../../java/nio/charset/CodingErrorAction.js'
 
 export default interface CharsetDecoder {
-	charset(): Charset;
-	decode(arg0: ByteBuffer, arg1: CharBuffer, arg2: boolean): CoderResult;
-	decode(arg0: ByteBuffer): CharBuffer;
-	flush(arg0: CharBuffer): CoderResult;
-	reset(): CharsetDecoder;
-	onMalformedInput(arg0: CodingErrorAction): CharsetDecoder;
-	onUnmappableCharacter(arg0: CodingErrorAction): CharsetDecoder;
-	maxCharsPerByte(): number;
-	malformedInputAction(): CodingErrorAction;
-	replacement(): string;
 	averageCharsPerByte(): number;
-	unmappableCharacterAction(): CodingErrorAction;
-	replaceWith(arg0: string): CharsetDecoder;
+	charset(): Charset;
+	decode(_in: ByteBuffer): CharBuffer;
+	decode(_in: ByteBuffer, out: CharBuffer, endOfInput: boolean): CoderResult;
+	detectedCharset(): Charset;
+	flush(out: CharBuffer): CoderResult;
 	isAutoDetecting(): boolean;
 	isCharsetDetected(): boolean;
-	detectedCharset(): Charset;
+	malformedInputAction(): CodingErrorAction;
+	maxCharsPerByte(): number;
+	onMalformedInput(newAction: CodingErrorAction): CharsetDecoder;
+	onUnmappableCharacter(newAction: CodingErrorAction): CharsetDecoder;
+	replaceWith(newReplacement: string): CharsetDecoder;
+	replacement(): string;
+	reset(): CharsetDecoder;
+	unmappableCharacterAction(): CodingErrorAction;
 }
 
 export default class CharsetDecoder {
 	public static get $javaClass(): any {
 		return Java.type('java.nio.charset.CharsetDecoder');
 	}
+
 }
 

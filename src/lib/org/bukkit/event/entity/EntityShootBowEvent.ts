@@ -8,31 +8,34 @@ import ItemStack from '../../../../org/bukkit/inventory/ItemStack.js'
 import LivingEntity from '../../../../org/bukkit/entity/LivingEntity.js'
 
 export default interface EntityShootBowEvent extends EntityEvent, Cancellable {
-	isCancelled(): boolean;
-	getHandlers(): HandlerList;
-	getEntity(): LivingEntity;
-	getEntity(): Entity;
-	setCancelled(cancel: boolean): void;
 	getBow(): ItemStack;
-	getProjectile(): Entity;
-	setProjectile(projectile: Entity): void;
-	getForce(): number;
+	getEntity(): Entity;
+	getEntity(): LivingEntity;
 	getEntityType(): EntityType;
 	getEventName(): string;
+	getForce(): number;
+	getHandlers(): HandlerList;
+	getProjectile(): Entity;
 	isAsynchronous(): boolean;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
+	setProjectile(projectile: Entity): void;
 }
 
 export default class EntityShootBowEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.entity.EntityShootBowEvent');
 	}
+
 	constructor(shooter: LivingEntity, bow: ItemStack, projectile: Entity, force: number);
 	constructor(...args: any[]) {
 		return new EntityShootBowEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return EntityShootBowEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

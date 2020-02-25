@@ -6,14 +6,14 @@ import Material from '../../../org/bukkit/Material.js'
 import MaterialData from '../../../org/bukkit/material/MaterialData.js'
 
 export default interface Dye extends MaterialData, Colorable {
-	getColor(): DyeColor;
-	setColor(color: DyeColor): void;
-	clone(): any;
-	clone(): MaterialData;
 	clone(): Dye;
+	clone(): MaterialData;
+	clone(): any;
+	getColor(): DyeColor;
 	getData(): number;
-	setData(data: number): void;
 	getItemType(): Material;
+	setColor(color: DyeColor): void;
+	setData(data: number): void;
 	toItemStack(): ItemStack;
 	toItemStack(amount: number): ItemStack;
 }
@@ -22,12 +22,14 @@ export default class Dye {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.material.Dye');
 	}
+
 	constructor();
 	constructor(color: DyeColor);
-	constructor(type: Material, data: number);
 	constructor(type: Material);
+	constructor(type: Material, data: number);
 	constructor(...args: any[]) {
 		return new Dye.$javaClass(...args);
 	}
+
 }
 

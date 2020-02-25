@@ -8,31 +8,33 @@ import OpenOption from '../../../java/nio/file/OpenOption.js'
 import Path from '../../../java/nio/file/Path.js'
 
 export default interface AsynchronousFileChannel {
+	close(): void;
 	force(arg0: boolean): void;
-	tryLock(arg0: number, arg1: number, arg2: boolean): FileLock;
-	tryLock(): FileLock;
+	isOpen(): boolean;
 	lock(): any;
-	lock(arg0: any, arg1: CompletionHandler): void;
+	lock(attachment: any, handler: CompletionHandler): void;
 	lock(arg0: number, arg1: number, arg2: boolean): any;
 	lock(arg0: number, arg1: number, arg2: boolean, arg3: any, arg4: CompletionHandler): void;
-	size(): number;
-	write(arg0: ByteBuffer, arg1: number, arg2: any, arg3: CompletionHandler): void;
-	write(arg0: ByteBuffer, arg1: number): any;
-	read(arg0: ByteBuffer, arg1: number, arg2: any, arg3: CompletionHandler): void;
 	read(arg0: ByteBuffer, arg1: number): any;
+	read(arg0: ByteBuffer, arg1: number, arg2: any, arg3: CompletionHandler): void;
+	size(): number;
 	truncate(arg0: number): AsynchronousFileChannel;
-	close(): void;
-	isOpen(): boolean;
+	tryLock(): FileLock;
+	tryLock(arg0: number, arg1: number, arg2: boolean): FileLock;
+	write(arg0: ByteBuffer, arg1: number): any;
+	write(arg0: ByteBuffer, arg1: number, arg2: any, arg3: CompletionHandler): void;
 }
 
 export default class AsynchronousFileChannel {
 	public static get $javaClass(): any {
 		return Java.type('java.nio.channels.AsynchronousFileChannel');
 	}
-	public static open(arg0: Path, arg1: Array<OpenOption>): AsynchronousFileChannel;
-	public static open(arg0: Path, arg1: any, arg2: any, arg3: Array<FileAttribute>): AsynchronousFileChannel;
+
+	public static open(file: Path, options: Array<OpenOption>): AsynchronousFileChannel;
+	public static open(file: Path, options: any, executor: any, attrs: Array<FileAttribute>): AsynchronousFileChannel;
 	public static open(...args: any[]): any {
 		return AsynchronousFileChannel.$javaClass.open(...args);
 	}
+
 }
 

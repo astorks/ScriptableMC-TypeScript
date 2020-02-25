@@ -9,5 +9,6 @@ export default class ItemTagAdapterContext {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.inventory.meta.tags.ItemTagAdapterContext');
 	}
+
 }
 

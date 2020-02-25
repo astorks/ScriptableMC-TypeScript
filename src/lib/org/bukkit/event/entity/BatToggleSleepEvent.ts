@@ -7,27 +7,30 @@ import EntityType from '../../../../org/bukkit/entity/EntityType.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 
 export default interface BatToggleSleepEvent extends EntityEvent, Cancellable {
-	isCancelled(): boolean;
-	getHandlers(): HandlerList;
-	setCancelled(cancel: boolean): void;
-	isAwake(): boolean;
 	getEntity(): Entity;
 	getEntityType(): EntityType;
 	getEventName(): string;
+	getHandlers(): HandlerList;
 	isAsynchronous(): boolean;
+	isAwake(): boolean;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 }
 
 export default class BatToggleSleepEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.entity.BatToggleSleepEvent');
 	}
+
 	constructor(what: Bat, awake: boolean);
 	constructor(...args: any[]) {
 		return new BatToggleSleepEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return BatToggleSleepEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

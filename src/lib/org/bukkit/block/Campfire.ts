@@ -13,44 +13,45 @@ import TileState from '../../../org/bukkit/block/TileState.js'
 import World from '../../../org/bukkit/World.js'
 
 export default interface Campfire extends TileState {
-	getItem(arg0: number): ItemStack;
-	setItem(arg0: number, arg1: ItemStack): void;
-	getCookTime(arg0: number): number;
-	setCookTime(arg0: number, arg1: number): void;
-	getCookTimeTotal(arg0: number): number;
-	setCookTimeTotal(arg0: number, arg1: number): void;
-	getSize(): number;
-	getPersistentDataContainer(): PersistentDataContainer;
-	getData(): MaterialData;
 	getBlock(): Block;
-	getWorld(): World;
-	setType(arg0: Material): void;
-	setData(arg0: MaterialData): void;
+	getBlockData(): BlockData;
 	getChunk(): Chunk;
+	getCookTime(arg0: number): number;
+	getCookTimeTotal(arg0: number): number;
+	getData(): MaterialData;
+	getItem(arg0: number): ItemStack;
+	getLightLevel(): number;
+	getLocation(): Location;
+	getLocation(arg0: Location): Location;
+	getMetadata(arg0: string): Array<MetadataValue>;
+	getPersistentDataContainer(): PersistentDataContainer;
+	getRawData(): number;
+	getSize(): number;
+	getType(): Material;
+	getWorld(): World;
 	getX(): number;
 	getY(): number;
 	getZ(): number;
-	getBlockData(): BlockData;
-	setRawData(arg0: number): void;
-	getRawData(): number;
-	isPlaced(): boolean;
-	setBlockData(arg0: BlockData): void;
-	getLightLevel(): number;
-	update(arg0: boolean, arg1: boolean): boolean;
-	update(arg0: boolean): boolean;
-	update(): boolean;
-	getLocation(arg0: Location): Location;
-	getLocation(): Location;
-	getType(): Material;
-	setMetadata(arg0: string, arg1: MetadataValue): void;
-	getMetadata(arg0: string): Array<MetadataValue>;
 	hasMetadata(arg0: string): boolean;
+	isPlaced(): boolean;
 	removeMetadata(arg0: string, arg1: Plugin): void;
+	setBlockData(arg0: BlockData): void;
+	setCookTime(arg0: number, arg1: number): void;
+	setCookTimeTotal(arg0: number, arg1: number): void;
+	setData(arg0: MaterialData): void;
+	setItem(arg0: number, arg1: ItemStack): void;
+	setMetadata(arg0: string, arg1: MetadataValue): void;
+	setRawData(arg0: number): void;
+	setType(arg0: Material): void;
+	update(): boolean;
+	update(arg0: boolean): boolean;
+	update(arg0: boolean, arg1: boolean): boolean;
 }
 
 export default class Campfire {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.block.Campfire');
 	}
+
 }
 

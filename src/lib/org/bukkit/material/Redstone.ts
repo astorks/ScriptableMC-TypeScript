@@ -8,5 +8,6 @@ export default class Redstone {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.material.Redstone');
 	}
+
 }
 

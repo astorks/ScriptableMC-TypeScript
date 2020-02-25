@@ -6,23 +6,24 @@ import Material from '../../../../../org/bukkit/Material.js'
 import TechnicalPiston$Type from '../../../../../org/bukkit/block/data/type/TechnicalPiston$Type.js'
 
 export default interface TechnicalPiston extends Directional {
-	setType(arg0: TechnicalPiston$Type): void;
-	getType(): TechnicalPiston$Type;
-	getFacing(): BlockFace;
-	setFacing(arg0: BlockFace): void;
-	getFaces(): any;
-	getMaterial(): Material;
-	getAsString(arg0: boolean): string;
-	getAsString(): string;
-	clone(): BlockData;
 	clone(): any;
+	clone(): BlockData;
+	getAsString(): string;
+	getAsString(arg0: boolean): string;
+	getFaces(): any;
+	getFacing(): BlockFace;
+	getMaterial(): Material;
+	getType(): TechnicalPiston$Type;
 	matches(arg0: BlockData): boolean;
 	merge(arg0: BlockData): BlockData;
+	setFacing(arg0: BlockFace): void;
+	setType(arg0: TechnicalPiston$Type): void;
 }
 
 export default class TechnicalPiston {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.block.data.type.TechnicalPiston');
 	}
+
 }
 

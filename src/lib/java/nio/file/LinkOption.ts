@@ -3,10 +3,10 @@ import CopyOption from '../../../java/nio/file/CopyOption.js'
 import OpenOption from '../../../java/nio/file/OpenOption.js'
 
 export default interface LinkOption {
-	name(): string;
 	compareTo(arg0: any): number;
-	compareTo(arg0: any): number;
+	compareTo(o: any): number;
 	getDeclaringClass(): any;
+	name(): string;
 	ordinal(): number;
 }
 

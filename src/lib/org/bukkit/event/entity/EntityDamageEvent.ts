@@ -8,35 +8,38 @@ import EntityType from '../../../../org/bukkit/entity/EntityType.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 
 export default interface EntityDamageEvent extends EntityEvent, Cancellable {
-	isCancelled(): boolean;
-	getHandlers(): HandlerList;
-	setDamage(damage: number): void;
-	setDamage(type: EntityDamageEvent$DamageModifier, damage: number): void;
+	getCause(): EntityDamageEvent$DamageCause;
 	getDamage(): number;
 	getDamage(type: EntityDamageEvent$DamageModifier): number;
-	isApplicable(type: EntityDamageEvent$DamageModifier): boolean;
-	setCancelled(cancel: boolean): void;
-	getOriginalDamage(type: EntityDamageEvent$DamageModifier): number;
-	getFinalDamage(): number;
-	getCause(): EntityDamageEvent$DamageCause;
 	getEntity(): Entity;
 	getEntityType(): EntityType;
 	getEventName(): string;
+	getFinalDamage(): number;
+	getHandlers(): HandlerList;
+	getOriginalDamage(type: EntityDamageEvent$DamageModifier): number;
+	isApplicable(type: EntityDamageEvent$DamageModifier): boolean;
 	isAsynchronous(): boolean;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
+	setDamage(damage: number): void;
+	setDamage(type: EntityDamageEvent$DamageModifier, damage: number): void;
 }
 
 export default class EntityDamageEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.entity.EntityDamageEvent');
 	}
-	constructor(damagee: Entity, cause: EntityDamageEvent$DamageCause, modifiers: any, modifierFunctions: any);
+
 	constructor(damagee: Entity, cause: EntityDamageEvent$DamageCause, damage: number);
+	constructor(damagee: Entity, cause: EntityDamageEvent$DamageCause, modifiers: any, modifierFunctions: any);
 	constructor(...args: any[]) {
 		return new EntityDamageEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return EntityDamageEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

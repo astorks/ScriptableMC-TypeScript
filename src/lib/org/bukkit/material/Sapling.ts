@@ -6,17 +6,17 @@ import TreeSpecies from '../../../org/bukkit/TreeSpecies.js'
 import Wood from '../../../org/bukkit/material/Wood.js'
 
 export default interface Sapling extends Wood {
-	isInstantGrowable(): boolean;
-	setIsInstantGrowable(isInstantGrowable: boolean): void;
-	clone(): MaterialData;
-	clone(): any;
 	clone(): Wood;
+	clone(): any;
 	clone(): Sapling;
-	getSpecies(): TreeSpecies;
-	setSpecies(species: TreeSpecies): void;
+	clone(): MaterialData;
 	getData(): number;
-	setData(data: number): void;
 	getItemType(): Material;
+	getSpecies(): TreeSpecies;
+	isInstantGrowable(): boolean;
+	setData(data: number): void;
+	setIsInstantGrowable(isInstantGrowable: boolean): void;
+	setSpecies(species: TreeSpecies): void;
 	toItemStack(): ItemStack;
 	toItemStack(amount: number): ItemStack;
 }
@@ -25,15 +25,17 @@ export default class Sapling {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.material.Sapling');
 	}
-	constructor(type: Material, data: number);
-	constructor(type: Material, species: TreeSpecies, isInstantGrowable: boolean);
+
 	constructor();
 	constructor(species: TreeSpecies);
-	constructor(species: TreeSpecies, isInstantGrowable: boolean);
 	constructor(type: Material);
 	constructor(type: Material, species: TreeSpecies);
+	constructor(type: Material, data: number);
+	constructor(species: TreeSpecies, isInstantGrowable: boolean);
+	constructor(type: Material, species: TreeSpecies, isInstantGrowable: boolean);
 	constructor(...args: any[]) {
 		return new Sapling.$javaClass(...args);
 	}
+
 }
 

@@ -11,33 +11,36 @@ import PotionEffect from '../../../../org/bukkit/potion/PotionEffect.js'
 import PotionEffectType from '../../../../org/bukkit/potion/PotionEffectType.js'
 
 export default interface EntityPotionEffectEvent extends EntityEvent, Cancellable {
-	isCancelled(): boolean;
-	getHandlers(): HandlerList;
-	setCancelled(cancel: boolean): void;
 	getAction(): EntityPotionEffectEvent$Action;
-	getNewEffect(): PotionEffect;
-	getOldEffect(): PotionEffect;
-	getModifiedType(): PotionEffectType;
-	isOverride(): boolean;
-	setOverride(override: boolean): void;
 	getCause(): EntityPotionEffectEvent$Cause;
 	getEntity(): Entity;
 	getEntityType(): EntityType;
 	getEventName(): string;
+	getHandlers(): HandlerList;
+	getModifiedType(): PotionEffectType;
+	getNewEffect(): PotionEffect;
+	getOldEffect(): PotionEffect;
 	isAsynchronous(): boolean;
+	isCancelled(): boolean;
+	isOverride(): boolean;
+	setCancelled(cancel: boolean): void;
+	setOverride(override: boolean): void;
 }
 
 export default class EntityPotionEffectEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.entity.EntityPotionEffectEvent');
 	}
+
 	constructor(livingEntity: LivingEntity, oldEffect: PotionEffect, newEffect: PotionEffect, cause: EntityPotionEffectEvent$Cause, action: EntityPotionEffectEvent$Action, override: boolean);
 	constructor(...args: any[]) {
 		return new EntityPotionEffectEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return EntityPotionEffectEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

@@ -7,17 +7,17 @@ import TreeSpecies from '../../../org/bukkit/TreeSpecies.js'
 import Wood from '../../../org/bukkit/material/Wood.js'
 
 export default interface Tree extends Wood {
-	getDirection(): BlockFace;
-	setDirection(dir: BlockFace): void;
+	clone(): Wood;
 	clone(): Tree;
 	clone(): MaterialData;
 	clone(): any;
-	clone(): Wood;
-	getSpecies(): TreeSpecies;
-	setSpecies(species: TreeSpecies): void;
 	getData(): number;
-	setData(data: number): void;
+	getDirection(): BlockFace;
 	getItemType(): Material;
+	getSpecies(): TreeSpecies;
+	setData(data: number): void;
+	setDirection(dir: BlockFace): void;
+	setSpecies(species: TreeSpecies): void;
 	toItemStack(): ItemStack;
 	toItemStack(amount: number): ItemStack;
 }
@@ -26,15 +26,17 @@ export default class Tree {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.material.Tree');
 	}
-	constructor(type: Material, species: TreeSpecies, dir: BlockFace);
-	constructor(type: Material, data: number);
-	constructor(species: TreeSpecies);
+
 	constructor();
-	constructor(species: TreeSpecies, dir: BlockFace);
 	constructor(type: Material);
+	constructor(species: TreeSpecies);
+	constructor(species: TreeSpecies, dir: BlockFace);
 	constructor(type: Material, species: TreeSpecies);
+	constructor(type: Material, data: number);
+	constructor(type: Material, species: TreeSpecies, dir: BlockFace);
 	constructor(...args: any[]) {
 		return new Tree.$javaClass(...args);
 	}
+
 }
 

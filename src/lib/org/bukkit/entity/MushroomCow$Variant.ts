@@ -1,10 +1,10 @@
 declare var Java: any;
 
 export default interface MushroomCow$Variant {
-	name(): string;
 	compareTo(arg0: any): number;
-	compareTo(arg0: any): number;
+	compareTo(o: any): number;
 	getDeclaringClass(): any;
+	name(): string;
 	ordinal(): number;
 }
 
@@ -13,11 +13,11 @@ export default class MushroomCow$Variant {
 		return Java.type('org.bukkit.entity.MushroomCow$Variant');
 	}
 
-	public static get RED(): MushroomCow$Variant {
-		return this.$javaClass.RED;
-	}
 	public static get BROWN(): MushroomCow$Variant {
 		return this.$javaClass.BROWN;
+	}
+	public static get RED(): MushroomCow$Variant {
+		return this.$javaClass.RED;
 	}
 }
 

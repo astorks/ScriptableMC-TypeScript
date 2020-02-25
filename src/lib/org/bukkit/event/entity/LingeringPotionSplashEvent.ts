@@ -11,32 +11,35 @@ import ProjectileHitEvent from '../../../../org/bukkit/event/entity/ProjectileHi
 import ThrownPotion from '../../../../org/bukkit/entity/ThrownPotion.js'
 
 export default interface LingeringPotionSplashEvent extends ProjectileHitEvent, Cancellable {
-	isCancelled(): boolean;
-	getHandlers(): HandlerList;
-	getEntity(): Entity;
-	getEntity(): ThrownPotion;
-	getEntity(): Projectile;
-	setCancelled(cancel: boolean): void;
 	getAreaEffectCloud(): AreaEffectCloud;
+	getEntity(): Entity;
+	getEntity(): Projectile;
+	getEntity(): ThrownPotion;
+	getEntityType(): EntityType;
+	getEventName(): string;
+	getHandlers(): HandlerList;
 	getHitBlock(): Block;
 	getHitBlockFace(): BlockFace;
 	getHitEntity(): Entity;
-	getEntityType(): EntityType;
-	getEventName(): string;
 	isAsynchronous(): boolean;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 }
 
 export default class LingeringPotionSplashEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.entity.LingeringPotionSplashEvent');
 	}
+
 	constructor(potion: ThrownPotion, entity: AreaEffectCloud);
 	constructor(...args: any[]) {
 		return new LingeringPotionSplashEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return LingeringPotionSplashEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

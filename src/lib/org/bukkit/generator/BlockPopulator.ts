@@ -10,9 +10,11 @@ export default class BlockPopulator {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.generator.BlockPopulator');
 	}
+
 	constructor();
 	constructor(...args: any[]) {
 		return new BlockPopulator.$javaClass(...args);
 	}
+
 }
 

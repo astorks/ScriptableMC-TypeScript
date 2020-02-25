@@ -9,29 +9,32 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import Material from '../../../../org/bukkit/Material.js'
 
 export default interface EntityChangeBlockEvent extends EntityEvent, Cancellable {
-	isCancelled(): boolean;
-	getHandlers(): HandlerList;
 	getBlock(): Block;
 	getBlockData(): BlockData;
-	setCancelled(cancel: boolean): void;
-	getTo(): Material;
 	getEntity(): Entity;
 	getEntityType(): EntityType;
 	getEventName(): string;
+	getHandlers(): HandlerList;
+	getTo(): Material;
 	isAsynchronous(): boolean;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 }
 
 export default class EntityChangeBlockEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.entity.EntityChangeBlockEvent');
 	}
+
 	constructor(what: Entity, block: Block, to: BlockData);
 	constructor(...args: any[]) {
 		return new EntityChangeBlockEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return EntityChangeBlockEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

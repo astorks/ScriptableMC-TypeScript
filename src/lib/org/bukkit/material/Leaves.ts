@@ -6,19 +6,19 @@ import TreeSpecies from '../../../org/bukkit/TreeSpecies.js'
 import Wood from '../../../org/bukkit/material/Wood.js'
 
 export default interface Leaves extends Wood {
-	isDecayable(): boolean;
-	setDecayable(isDecayable: boolean): void;
-	isDecaying(): boolean;
-	setDecaying(isDecaying: boolean): void;
 	clone(): any;
 	clone(): MaterialData;
 	clone(): Wood;
 	clone(): Leaves;
-	getSpecies(): TreeSpecies;
-	setSpecies(species: TreeSpecies): void;
 	getData(): number;
-	setData(data: number): void;
 	getItemType(): Material;
+	getSpecies(): TreeSpecies;
+	isDecayable(): boolean;
+	isDecaying(): boolean;
+	setData(data: number): void;
+	setDecayable(isDecayable: boolean): void;
+	setDecaying(isDecaying: boolean): void;
+	setSpecies(species: TreeSpecies): void;
 	toItemStack(): ItemStack;
 	toItemStack(amount: number): ItemStack;
 }
@@ -27,15 +27,17 @@ export default class Leaves {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.material.Leaves');
 	}
-	constructor(type: Material, data: number);
+
 	constructor();
-	constructor(type: Material, species: TreeSpecies);
-	constructor(species: TreeSpecies, isDecayable: boolean);
 	constructor(type: Material);
 	constructor(species: TreeSpecies);
+	constructor(type: Material, data: number);
+	constructor(type: Material, species: TreeSpecies);
+	constructor(species: TreeSpecies, isDecayable: boolean);
 	constructor(type: Material, species: TreeSpecies, isDecayable: boolean);
 	constructor(...args: any[]) {
 		return new Leaves.$javaClass(...args);
 	}
+
 }
 

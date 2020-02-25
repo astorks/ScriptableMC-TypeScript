@@ -12,59 +12,60 @@ import PersistentDataContainer from '../../../../org/bukkit/persistence/Persiste
 import TropicalFish$Pattern from '../../../../org/bukkit/entity/TropicalFish$Pattern.js'
 
 export default interface TropicalFishBucketMeta extends ItemMeta {
-	getPattern(): TropicalFish$Pattern;
-	setPattern(arg0: TropicalFish$Pattern): void;
-	setBodyColor(arg0: DyeColor): void;
-	hasVariant(): boolean;
-	getBodyColor(): DyeColor;
-	setPatternColor(arg0: DyeColor): void;
-	getPatternColor(): DyeColor;
+	addAttributeModifier(arg0: Attribute, arg1: AttributeModifier): boolean;
+	addEnchant(arg0: Enchantment, arg1: number, arg2: boolean): boolean;
+	addItemFlags(arg0: Array<ItemFlag>): void;
 	clone(): any;
 	clone(): ItemMeta;
 	clone(): TropicalFishBucketMeta;
-	getLore(): Array<string>;
-	isUnbreakable(): boolean;
-	setUnbreakable(arg0: boolean): void;
-	addEnchant(arg0: Enchantment, arg1: number, arg2: boolean): boolean;
-	removeEnchant(arg0: Enchantment): boolean;
-	setLore(arg0: Array<any>): void;
-	setDisplayName(arg0: string): void;
-	hasEnchant(arg0: Enchantment): boolean;
+	getAttributeModifiers(): Multimap;
+	getAttributeModifiers(arg0: EquipmentSlot): Multimap;
+	getAttributeModifiers(arg0: Attribute): any;
+	getBodyColor(): DyeColor;
+	getCustomModelData(): number;
+	getCustomTagContainer(): CustomItemTagContainer;
+	getDisplayName(): string;
 	getEnchantLevel(arg0: Enchantment): number;
 	getEnchants(): any;
-	setVersion(arg0: number): void;
-	setLocalizedName(arg0: string): void;
-	hasLore(): boolean;
-	hasCustomModelData(): boolean;
-	getCustomModelData(): number;
-	setCustomModelData(arg0: any): void;
-	hasEnchants(): boolean;
-	hasConflictingEnchant(arg0: Enchantment): boolean;
-	addItemFlags(arg0: Array<ItemFlag>): void;
-	removeItemFlags(arg0: Array<ItemFlag>): void;
 	getItemFlags(): any;
-	hasItemFlag(arg0: ItemFlag): boolean;
+	getLocalizedName(): string;
+	getLore(): Array<string>;
+	getPattern(): TropicalFish$Pattern;
+	getPatternColor(): DyeColor;
+	getPersistentDataContainer(): PersistentDataContainer;
 	hasAttributeModifiers(): boolean;
-	getAttributeModifiers(arg0: EquipmentSlot): Multimap;
-	getAttributeModifiers(): Multimap;
-	getAttributeModifiers(arg0: Attribute): any;
-	addAttributeModifier(arg0: Attribute, arg1: AttributeModifier): boolean;
-	setAttributeModifiers(arg0: Multimap): void;
+	hasConflictingEnchant(arg0: Enchantment): boolean;
+	hasCustomModelData(): boolean;
+	hasDisplayName(): boolean;
+	hasEnchant(arg0: Enchantment): boolean;
+	hasEnchants(): boolean;
+	hasItemFlag(arg0: ItemFlag): boolean;
+	hasLocalizedName(): boolean;
+	hasLore(): boolean;
+	hasVariant(): boolean;
+	isUnbreakable(): boolean;
 	removeAttributeModifier(arg0: Attribute): boolean;
 	removeAttributeModifier(arg0: EquipmentSlot): boolean;
 	removeAttributeModifier(arg0: Attribute, arg1: AttributeModifier): boolean;
-	getCustomTagContainer(): CustomItemTagContainer;
-	hasLocalizedName(): boolean;
-	hasDisplayName(): boolean;
-	getLocalizedName(): string;
-	getDisplayName(): string;
+	removeEnchant(arg0: Enchantment): boolean;
+	removeItemFlags(arg0: Array<ItemFlag>): void;
 	serialize(): any;
-	getPersistentDataContainer(): PersistentDataContainer;
+	setAttributeModifiers(arg0: Multimap): void;
+	setBodyColor(arg0: DyeColor): void;
+	setCustomModelData(arg0: any): void;
+	setDisplayName(arg0: string): void;
+	setLocalizedName(arg0: string): void;
+	setLore(arg0: Array<any>): void;
+	setPattern(arg0: TropicalFish$Pattern): void;
+	setPatternColor(arg0: DyeColor): void;
+	setUnbreakable(arg0: boolean): void;
+	setVersion(arg0: number): void;
 }
 
 export default class TropicalFishBucketMeta {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.inventory.meta.TropicalFishBucketMeta');
 	}
+
 }
 

@@ -1,15 +1,16 @@
 declare var Java: any;
 
 export default interface Ref {
-	setObject(arg0: any): void;
 	getBaseTypeName(): string;
-	getObject(arg0: any): any;
 	getObject(): any;
+	getObject(arg0: any): any;
+	setObject(arg0: any): void;
 }
 
 export default class Ref {
 	public static get $javaClass(): any {
 		return Java.type('java.sql.Ref');
 	}
+
 }
 

@@ -8,5 +8,6 @@ export default class RowId {
 	public static get $javaClass(): any {
 		return Java.type('java.sql.RowId');
 	}
+
 }
 

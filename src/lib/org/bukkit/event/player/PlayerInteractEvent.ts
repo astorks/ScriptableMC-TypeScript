@@ -12,39 +12,42 @@ import Player from '../../../../org/bukkit/entity/Player.js'
 import PlayerEvent from '../../../../org/bukkit/event/player/PlayerEvent.js'
 
 export default interface PlayerInteractEvent extends PlayerEvent, Cancellable {
-	isCancelled(): boolean;
-	getHandlers(): HandlerList;
-	getMaterial(): Material;
-	getItem(): ItemStack;
-	setCancelled(cancel: boolean): void;
 	getAction(): Action;
-	getHand(): EquipmentSlot;
 	getBlockFace(): BlockFace;
-	useInteractedBlock(): Event$Result;
-	setUseInteractedBlock(useInteractedBlock: Event$Result): void;
-	hasItem(): boolean;
-	hasBlock(): boolean;
-	isBlockInHand(): boolean;
 	getClickedBlock(): Block;
-	setUseItemInHand(useItemInHand: Event$Result): void;
-	useItemInHand(): Event$Result;
-	getPlayer(): Player;
 	getEventName(): string;
+	getHand(): EquipmentSlot;
+	getHandlers(): HandlerList;
+	getItem(): ItemStack;
+	getMaterial(): Material;
+	getPlayer(): Player;
+	hasBlock(): boolean;
+	hasItem(): boolean;
 	isAsynchronous(): boolean;
+	isBlockInHand(): boolean;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
+	setUseInteractedBlock(useInteractedBlock: Event$Result): void;
+	setUseItemInHand(useItemInHand: Event$Result): void;
+	useInteractedBlock(): Event$Result;
+	useItemInHand(): Event$Result;
 }
 
 export default class PlayerInteractEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.player.PlayerInteractEvent');
 	}
+
 	constructor(who: Player, action: Action, item: ItemStack, clickedBlock: Block, clickedFace: BlockFace);
 	constructor(who: Player, action: Action, item: ItemStack, clickedBlock: Block, clickedFace: BlockFace, hand: EquipmentSlot);
 	constructor(...args: any[]) {
 		return new PlayerInteractEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return PlayerInteractEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

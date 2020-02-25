@@ -5,20 +5,21 @@ import Reader from '../../java/io/Reader.js'
 import Writer from '../../java/io/Writer.js'
 
 export default interface SQLXML {
-	getSource(arg0: any): any;
-	setString(arg0: string): void;
-	setBinaryStream(): OutputStream;
-	setCharacterStream(): Writer;
-	getCharacterStream(): Reader;
 	free(): void;
 	getBinaryStream(): InputStream;
+	getCharacterStream(): Reader;
+	getSource(arg0: any): any;
 	getString(): string;
+	setBinaryStream(): OutputStream;
+	setCharacterStream(): Writer;
 	setResult(arg0: any): any;
+	setString(arg0: string): void;
 }
 
 export default class SQLXML {
 	public static get $javaClass(): any {
 		return Java.type('java.sql.SQLXML');
 	}
+
 }
 

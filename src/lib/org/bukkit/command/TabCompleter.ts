@@ -10,5 +10,6 @@ export default class TabCompleter {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.command.TabCompleter');
 	}
+
 }
 

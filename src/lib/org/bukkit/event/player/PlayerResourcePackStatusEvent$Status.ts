@@ -1,10 +1,10 @@
 declare var Java: any;
 
 export default interface PlayerResourcePackStatusEvent$Status {
-	name(): string;
 	compareTo(arg0: any): number;
-	compareTo(arg0: any): number;
+	compareTo(o: any): number;
 	getDeclaringClass(): any;
+	name(): string;
 	ordinal(): number;
 }
 
@@ -13,8 +13,8 @@ export default class PlayerResourcePackStatusEvent$Status {
 		return Java.type('org.bukkit.event.player.PlayerResourcePackStatusEvent$Status');
 	}
 
-	public static get SUCCESSFULLY_LOADED(): PlayerResourcePackStatusEvent$Status {
-		return this.$javaClass.SUCCESSFULLY_LOADED;
+	public static get ACCEPTED(): PlayerResourcePackStatusEvent$Status {
+		return this.$javaClass.ACCEPTED;
 	}
 	public static get DECLINED(): PlayerResourcePackStatusEvent$Status {
 		return this.$javaClass.DECLINED;
@@ -22,8 +22,8 @@ export default class PlayerResourcePackStatusEvent$Status {
 	public static get FAILED_DOWNLOAD(): PlayerResourcePackStatusEvent$Status {
 		return this.$javaClass.FAILED_DOWNLOAD;
 	}
-	public static get ACCEPTED(): PlayerResourcePackStatusEvent$Status {
-		return this.$javaClass.ACCEPTED;
+	public static get SUCCESSFULLY_LOADED(): PlayerResourcePackStatusEvent$Status {
+		return this.$javaClass.SUCCESSFULLY_LOADED;
 	}
 }
 

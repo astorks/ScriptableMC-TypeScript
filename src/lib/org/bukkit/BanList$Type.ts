@@ -1,10 +1,10 @@
 declare var Java: any;
 
 export default interface BanList$Type {
-	name(): string;
 	compareTo(arg0: any): number;
-	compareTo(arg0: any): number;
+	compareTo(o: any): number;
 	getDeclaringClass(): any;
+	name(): string;
 	ordinal(): number;
 }
 
@@ -13,11 +13,11 @@ export default class BanList$Type {
 		return Java.type('org.bukkit.BanList$Type');
 	}
 
-	public static get NAME(): BanList$Type {
-		return this.$javaClass.NAME;
-	}
 	public static get IP(): BanList$Type {
 		return this.$javaClass.IP;
+	}
+	public static get NAME(): BanList$Type {
+		return this.$javaClass.NAME;
 	}
 }
 

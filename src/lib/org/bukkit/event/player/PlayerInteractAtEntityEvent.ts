@@ -7,29 +7,32 @@ import PlayerInteractEntityEvent from '../../../../org/bukkit/event/player/Playe
 import Vector from '../../../../org/bukkit/util/Vector.js'
 
 export default interface PlayerInteractAtEntityEvent extends PlayerInteractEntityEvent {
-	getHandlers(): HandlerList;
 	getClickedPosition(): Vector;
+	getEventName(): string;
+	getHand(): EquipmentSlot;
+	getHandlers(): HandlerList;
+	getPlayer(): Player;
+	getRightClicked(): Entity;
+	isAsynchronous(): boolean;
 	isCancelled(): boolean;
 	setCancelled(cancel: boolean): void;
-	getHand(): EquipmentSlot;
-	getRightClicked(): Entity;
-	getPlayer(): Player;
-	getEventName(): string;
-	isAsynchronous(): boolean;
 }
 
 export default class PlayerInteractAtEntityEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.player.PlayerInteractAtEntityEvent');
 	}
-	constructor(who: Player, clickedEntity: Entity, position: Vector, hand: EquipmentSlot);
+
 	constructor(who: Player, clickedEntity: Entity, position: Vector);
+	constructor(who: Player, clickedEntity: Entity, position: Vector, hand: EquipmentSlot);
 	constructor(...args: any[]) {
 		return new PlayerInteractAtEntityEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return PlayerInteractAtEntityEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

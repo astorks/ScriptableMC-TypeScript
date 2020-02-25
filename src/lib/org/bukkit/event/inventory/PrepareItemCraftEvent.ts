@@ -8,28 +8,31 @@ import InventoryView from '../../../../org/bukkit/inventory/InventoryView.js'
 import Recipe from '../../../../org/bukkit/inventory/Recipe.js'
 
 export default interface PrepareItemCraftEvent extends InventoryEvent {
-	getHandlers(): HandlerList;
-	getInventory(): CraftingInventory;
-	getInventory(): Inventory;
-	getRecipe(): Recipe;
-	isRepair(): boolean;
-	getViewers(): Array<HumanEntity>;
-	getView(): InventoryView;
 	getEventName(): string;
+	getHandlers(): HandlerList;
+	getInventory(): Inventory;
+	getInventory(): CraftingInventory;
+	getRecipe(): Recipe;
+	getView(): InventoryView;
+	getViewers(): Array<HumanEntity>;
 	isAsynchronous(): boolean;
+	isRepair(): boolean;
 }
 
 export default class PrepareItemCraftEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.inventory.PrepareItemCraftEvent');
 	}
+
 	constructor(what: CraftingInventory, view: InventoryView, isRepair: boolean);
 	constructor(...args: any[]) {
 		return new PrepareItemCraftEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return PrepareItemCraftEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

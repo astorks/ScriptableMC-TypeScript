@@ -7,17 +7,17 @@ import MaterialData from '../../../org/bukkit/material/MaterialData.js'
 import Redstone from '../../../org/bukkit/material/Redstone.js'
 
 export default interface Diode extends MaterialData, Directional, Redstone {
-	getFacing(): BlockFace;
-	setFacingDirection(face: BlockFace): void;
-	isPowered(): boolean;
-	getDelay(): number;
-	setDelay(delay: number): void;
 	clone(): any;
-	clone(): Diode;
 	clone(): MaterialData;
+	clone(): Diode;
 	getData(): number;
-	setData(data: number): void;
+	getDelay(): number;
+	getFacing(): BlockFace;
 	getItemType(): Material;
+	isPowered(): boolean;
+	setData(data: number): void;
+	setDelay(delay: number): void;
+	setFacingDirection(face: BlockFace): void;
 	toItemStack(): ItemStack;
 	toItemStack(amount: number): ItemStack;
 }
@@ -26,14 +26,16 @@ export default class Diode {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.material.Diode');
 	}
-	constructor(facingDirection: BlockFace, delay: number);
+
 	constructor();
-	constructor(facingDirection: BlockFace);
-	constructor(facingDirection: BlockFace, delay: number, state: boolean);
-	constructor(type: Material, data: number);
 	constructor(type: Material);
+	constructor(facingDirection: BlockFace);
+	constructor(type: Material, data: number);
+	constructor(facingDirection: BlockFace, delay: number);
+	constructor(facingDirection: BlockFace, delay: number, state: boolean);
 	constructor(...args: any[]) {
 		return new Diode.$javaClass(...args);
 	}
+
 }
 

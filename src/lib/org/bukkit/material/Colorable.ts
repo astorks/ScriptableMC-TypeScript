@@ -10,5 +10,6 @@ export default class Colorable {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.material.Colorable');
 	}
+
 }
 

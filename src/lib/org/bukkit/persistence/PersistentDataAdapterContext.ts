@@ -9,5 +9,6 @@ export default class PersistentDataAdapterContext {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.persistence.PersistentDataAdapterContext');
 	}
+
 }
 

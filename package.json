@@ -1,6 +1,6 @@
 {
   "name": "scriptablemc-typescript",
-  "version": "1.1.10",
+  "version": "1.2.1",
   "description": "Typescript plugin example and libraries for Minecraft 1.15",
   "main": "src/main.js",
   "directories": {
@@ -12,6 +12,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "docs": "npx typedoc --exclude \"**/*.js\" --categorizeByGroup true --name \"ScriptableMC-TypeScript\" --mode modules --includeDeclarations --excludeNotExported --excludePrivate --excludeProtected --excludeExternals --out docs src",
     "compile": "npx tsc",
+    "postcompile": "npx copyfiles -u 1 \"src/**/*.json\" \"dist\"",
     "watch": "npx tsc --watch"
   },
   "repository": {
@@ -27,6 +28,7 @@
   "dependencies": {},
   "devDependencies": {
     "chai": "^4.2.0",
+    "copyfiles": "^2.2.0",
     "mocha": "^7.0.0",
     "nyc": "^15.0.0",
     "ts-node": "^8.6.2",

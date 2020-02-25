@@ -1,10 +1,10 @@
 declare var Java: any;
 
 export default interface HangingBreakEvent$RemoveCause {
-	name(): string;
 	compareTo(arg0: any): number;
-	compareTo(arg0: any): number;
+	compareTo(o: any): number;
 	getDeclaringClass(): any;
+	name(): string;
 	ordinal(): number;
 }
 
@@ -13,6 +13,9 @@ export default class HangingBreakEvent$RemoveCause {
 		return Java.type('org.bukkit.event.hanging.HangingBreakEvent$RemoveCause');
 	}
 
+	public static get DEFAULT(): HangingBreakEvent$RemoveCause {
+		return this.$javaClass.DEFAULT;
+	}
 	public static get ENTITY(): HangingBreakEvent$RemoveCause {
 		return this.$javaClass.ENTITY;
 	}
@@ -24,9 +27,6 @@ export default class HangingBreakEvent$RemoveCause {
 	}
 	public static get PHYSICS(): HangingBreakEvent$RemoveCause {
 		return this.$javaClass.PHYSICS;
-	}
-	public static get DEFAULT(): HangingBreakEvent$RemoveCause {
-		return this.$javaClass.DEFAULT;
 	}
 }
 

@@ -6,26 +6,29 @@ import PlayerAnimationType from '../../../../org/bukkit/event/player/PlayerAnima
 import PlayerEvent from '../../../../org/bukkit/event/player/PlayerEvent.js'
 
 export default interface PlayerAnimationEvent extends PlayerEvent, Cancellable {
-	isCancelled(): boolean;
-	getHandlers(): HandlerList;
-	setCancelled(cancel: boolean): void;
 	getAnimationType(): PlayerAnimationType;
-	getPlayer(): Player;
 	getEventName(): string;
+	getHandlers(): HandlerList;
+	getPlayer(): Player;
 	isAsynchronous(): boolean;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 }
 
 export default class PlayerAnimationEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.player.PlayerAnimationEvent');
 	}
+
 	constructor(player: Player);
 	constructor(...args: any[]) {
 		return new PlayerAnimationEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return PlayerAnimationEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

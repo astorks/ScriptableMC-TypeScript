@@ -8,5 +8,6 @@ export default class DirectoryStream$Filter {
 	public static get $javaClass(): any {
 		return Java.type('java.nio.file.DirectoryStream$Filter');
 	}
+
 }
 

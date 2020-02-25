@@ -5,14 +5,14 @@ import Material from '../../../org/bukkit/Material.js'
 import MaterialData from '../../../org/bukkit/material/MaterialData.js'
 
 export default interface SpawnEgg extends MaterialData {
-	getSpawnedType(): EntityType;
-	setSpawnedType(type: EntityType): void;
 	clone(): any;
 	clone(): MaterialData;
 	clone(): SpawnEgg;
 	getData(): number;
-	setData(data: number): void;
 	getItemType(): Material;
+	getSpawnedType(): EntityType;
+	setData(data: number): void;
+	setSpawnedType(type: EntityType): void;
 	toItemStack(): ItemStack;
 	toItemStack(amount: number): ItemStack;
 }
@@ -21,6 +21,7 @@ export default class SpawnEgg {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.material.SpawnEgg');
 	}
+
 	constructor();
 	constructor(type: EntityType);
 	constructor(data: number);
@@ -28,5 +29,6 @@ export default class SpawnEgg {
 	constructor(...args: any[]) {
 		return new SpawnEgg.$javaClass(...args);
 	}
+
 }
 

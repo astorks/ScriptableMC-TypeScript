@@ -8,30 +8,33 @@ import InventoryEvent from '../../../../org/bukkit/event/inventory/InventoryEven
 import InventoryView from '../../../../org/bukkit/inventory/InventoryView.js'
 
 export default interface InventoryInteractEvent extends InventoryEvent, Cancellable {
-	isCancelled(): boolean;
-	setCancelled(toCancel: boolean): void;
-	getWhoClicked(): HumanEntity;
-	setResult(newResult: Event$Result): void;
-	getResult(): Event$Result;
+	getEventName(): string;
 	getHandlers(): HandlerList;
 	getInventory(): Inventory;
-	getViewers(): Array<HumanEntity>;
+	getResult(): Event$Result;
 	getView(): InventoryView;
-	getEventName(): string;
+	getViewers(): Array<HumanEntity>;
+	getWhoClicked(): HumanEntity;
 	isAsynchronous(): boolean;
+	isCancelled(): boolean;
+	setCancelled(toCancel: boolean): void;
+	setResult(newResult: Event$Result): void;
 }
 
 export default class InventoryInteractEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.inventory.InventoryInteractEvent');
 	}
+
 	constructor(transaction: InventoryView);
 	constructor(...args: any[]) {
 		return new InventoryInteractEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return InventoryInteractEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

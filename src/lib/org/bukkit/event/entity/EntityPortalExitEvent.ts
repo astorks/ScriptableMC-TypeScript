@@ -7,33 +7,36 @@ import Location from '../../../../org/bukkit/Location.js'
 import Vector from '../../../../org/bukkit/util/Vector.js'
 
 export default interface EntityPortalExitEvent extends EntityTeleportEvent {
-	getHandlers(): HandlerList;
-	getBefore(): Vector;
 	getAfter(): Vector;
-	setAfter(after: Vector): void;
-	getFrom(): Location;
-	isCancelled(): boolean;
-	setCancelled(cancel: boolean): void;
-	getTo(): Location;
-	setFrom(from: Location): void;
-	setTo(to: Location): void;
+	getBefore(): Vector;
 	getEntity(): Entity;
 	getEntityType(): EntityType;
 	getEventName(): string;
+	getFrom(): Location;
+	getHandlers(): HandlerList;
+	getTo(): Location;
 	isAsynchronous(): boolean;
+	isCancelled(): boolean;
+	setAfter(after: Vector): void;
+	setCancelled(cancel: boolean): void;
+	setFrom(from: Location): void;
+	setTo(to: Location): void;
 }
 
 export default class EntityPortalExitEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.entity.EntityPortalExitEvent');
 	}
+
 	constructor(entity: Entity, from: Location, to: Location, before: Vector, after: Vector);
 	constructor(...args: any[]) {
 		return new EntityPortalExitEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return EntityPortalExitEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

@@ -6,16 +6,16 @@ import Material from '../../../org/bukkit/Material.js'
 import MaterialData from '../../../org/bukkit/material/MaterialData.js'
 
 export default interface Bed extends MaterialData, Directional {
-	getFacing(): BlockFace;
-	setFacingDirection(face: BlockFace): void;
-	isHeadOfBed(): boolean;
-	setHeadOfBed(isHeadOfBed: boolean): void;
+	clone(): MaterialData;
 	clone(): Bed;
 	clone(): any;
-	clone(): MaterialData;
 	getData(): number;
-	setData(data: number): void;
+	getFacing(): BlockFace;
 	getItemType(): Material;
+	isHeadOfBed(): boolean;
+	setData(data: number): void;
+	setFacingDirection(face: BlockFace): void;
+	setHeadOfBed(isHeadOfBed: boolean): void;
 	toItemStack(): ItemStack;
 	toItemStack(amount: number): ItemStack;
 }
@@ -24,12 +24,14 @@ export default class Bed {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.material.Bed');
 	}
-	constructor(direction: BlockFace);
+
 	constructor();
+	constructor(direction: BlockFace);
 	constructor(type: Material);
 	constructor(type: Material, data: number);
 	constructor(...args: any[]) {
 		return new Bed.$javaClass(...args);
 	}
+
 }
 

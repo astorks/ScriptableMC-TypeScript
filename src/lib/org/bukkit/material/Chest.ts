@@ -10,11 +10,11 @@ export default interface Chest extends DirectionalContainer {
 	clone(): MaterialData;
 	clone(): DirectionalContainer;
 	clone(): Chest;
-	getFacing(): BlockFace;
-	setFacingDirection(face: BlockFace): void;
 	getData(): number;
-	setData(data: number): void;
+	getFacing(): BlockFace;
 	getItemType(): Material;
+	setData(data: number): void;
+	setFacingDirection(face: BlockFace): void;
 	toItemStack(): ItemStack;
 	toItemStack(amount: number): ItemStack;
 }
@@ -23,12 +23,14 @@ export default class Chest {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.material.Chest');
 	}
-	constructor(type: Material, data: number);
+
+	constructor();
 	constructor(type: Material);
 	constructor(direction: BlockFace);
-	constructor();
+	constructor(type: Material, data: number);
 	constructor(...args: any[]) {
 		return new Chest.$javaClass(...args);
 	}
+
 }
 

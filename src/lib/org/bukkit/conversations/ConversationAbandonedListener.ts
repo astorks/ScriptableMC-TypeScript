@@ -9,5 +9,6 @@ export default class ConversationAbandonedListener {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.conversations.ConversationAbandonedListener');
 	}
+
 }
 

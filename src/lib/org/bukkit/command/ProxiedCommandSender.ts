@@ -6,30 +6,31 @@ import Plugin from '../../../org/bukkit/plugin/Plugin.js'
 import Server from '../../../org/bukkit/Server.js'
 
 export default interface ProxiedCommandSender extends CommandSender {
-	getCaller(): CommandSender;
+	addAttachment(arg0: Plugin): PermissionAttachment;
+	addAttachment(arg0: Plugin, arg1: number): PermissionAttachment;
+	addAttachment(arg0: Plugin, arg1: string, arg2: boolean): PermissionAttachment;
+	addAttachment(arg0: Plugin, arg1: string, arg2: boolean, arg3: number): PermissionAttachment;
 	getCallee(): CommandSender;
-	getServer(): Server;
-	sendMessage(arg0: string): void;
-	sendMessage(arg0: Array<string>): void;
+	getCaller(): CommandSender;
+	getEffectivePermissions(): any;
 	getName(): string;
+	getServer(): Server;
 	hasPermission(arg0: string): boolean;
 	hasPermission(arg0: Permission): boolean;
-	recalculatePermissions(): void;
+	isOp(): boolean;
 	isPermissionSet(arg0: string): boolean;
 	isPermissionSet(arg0: Permission): boolean;
-	addAttachment(arg0: Plugin, arg1: number): PermissionAttachment;
-	addAttachment(arg0: Plugin, arg1: string, arg2: boolean, arg3: number): PermissionAttachment;
-	addAttachment(arg0: Plugin, arg1: string, arg2: boolean): PermissionAttachment;
-	addAttachment(arg0: Plugin): PermissionAttachment;
+	recalculatePermissions(): void;
 	removeAttachment(arg0: PermissionAttachment): void;
-	getEffectivePermissions(): any;
+	sendMessage(arg0: Array<string>): void;
+	sendMessage(arg0: string): void;
 	setOp(arg0: boolean): void;
-	isOp(): boolean;
 }
 
 export default class ProxiedCommandSender {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.command.ProxiedCommandSender');
 	}
+
 }
 

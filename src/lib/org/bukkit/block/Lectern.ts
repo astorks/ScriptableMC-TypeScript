@@ -14,42 +14,43 @@ import TileState from '../../../org/bukkit/block/TileState.js'
 import World from '../../../org/bukkit/World.js'
 
 export default interface Lectern extends TileState, BlockInventoryHolder {
-	getInventory(): Inventory;
-	getPage(): number;
-	getSnapshotInventory(): Inventory;
-	setPage(arg0: number): void;
-	getPersistentDataContainer(): PersistentDataContainer;
-	getData(): MaterialData;
 	getBlock(): Block;
-	getWorld(): World;
-	setType(arg0: Material): void;
-	setData(arg0: MaterialData): void;
+	getBlock(): Block;
+	getBlockData(): BlockData;
 	getChunk(): Chunk;
+	getData(): MaterialData;
+	getInventory(): Inventory;
+	getLightLevel(): number;
+	getLocation(): Location;
+	getLocation(arg0: Location): Location;
+	getMetadata(arg0: string): Array<MetadataValue>;
+	getPage(): number;
+	getPersistentDataContainer(): PersistentDataContainer;
+	getRawData(): number;
+	getSnapshotInventory(): Inventory;
+	getType(): Material;
+	getWorld(): World;
 	getX(): number;
 	getY(): number;
 	getZ(): number;
-	getBlockData(): BlockData;
-	setRawData(arg0: number): void;
-	getRawData(): number;
-	isPlaced(): boolean;
-	setBlockData(arg0: BlockData): void;
-	getLightLevel(): number;
-	update(arg0: boolean, arg1: boolean): boolean;
-	update(arg0: boolean): boolean;
-	update(): boolean;
-	getLocation(arg0: Location): Location;
-	getLocation(): Location;
-	getType(): Material;
-	setMetadata(arg0: string, arg1: MetadataValue): void;
-	getMetadata(arg0: string): Array<MetadataValue>;
 	hasMetadata(arg0: string): boolean;
+	isPlaced(): boolean;
 	removeMetadata(arg0: string, arg1: Plugin): void;
-	getBlock(): Block;
+	setBlockData(arg0: BlockData): void;
+	setData(arg0: MaterialData): void;
+	setMetadata(arg0: string, arg1: MetadataValue): void;
+	setPage(arg0: number): void;
+	setRawData(arg0: number): void;
+	setType(arg0: Material): void;
+	update(): boolean;
+	update(arg0: boolean): boolean;
+	update(arg0: boolean, arg1: boolean): boolean;
 }
 
 export default class Lectern {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.block.Lectern');
 	}
+
 }
 

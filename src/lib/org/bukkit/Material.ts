@@ -5,35 +5,35 @@ import MaterialData from '../../org/bukkit/material/MaterialData.js'
 import NamespacedKey from '../../org/bukkit/NamespacedKey.js'
 
 export default interface Material extends Keyed {
-	getData(): any;
-	createBlockData(consumer: any): BlockData;
+	compareTo(arg0: any): number;
+	compareTo(o: any): number;
 	createBlockData(): BlockData;
+	createBlockData(consumer: any): BlockData;
 	createBlockData(data: string): BlockData;
-	hasGravity(): boolean;
-	isLegacy(): boolean;
-	getNewData(raw: number): MaterialData;
-	getMaxStackSize(): number;
+	getBlastResistance(): number;
+	getData(): any;
+	getDeclaringClass(): any;
+	getHardness(): number;
+	getId(): number;
+	getKey(): NamespacedKey;
 	getMaxDurability(): number;
+	getMaxStackSize(): number;
+	getNewData(raw: number): MaterialData;
+	hasGravity(): boolean;
+	isAir(): boolean;
 	isBlock(): boolean;
+	isBurnable(): boolean;
 	isEdible(): boolean;
+	isFlammable(): boolean;
+	isFuel(): boolean;
+	isInteractable(): boolean;
+	isItem(): boolean;
+	isLegacy(): boolean;
+	isOccluding(): boolean;
 	isRecord(): boolean;
 	isSolid(): boolean;
-	isAir(): boolean;
 	isTransparent(): boolean;
-	isFlammable(): boolean;
-	isBurnable(): boolean;
-	isFuel(): boolean;
-	isOccluding(): boolean;
-	isItem(): boolean;
-	isInteractable(): boolean;
-	getHardness(): number;
-	getBlastResistance(): number;
-	getKey(): NamespacedKey;
-	getId(): number;
 	name(): string;
-	compareTo(arg0: any): number;
-	compareTo(arg0: any): number;
-	getDeclaringClass(): any;
 	ordinal(): number;
 }
 
@@ -1496,6 +1496,1395 @@ export default class Material {
 	}
 	public static get LECTERN(): Material {
 		return this.$javaClass.LECTERN;
+	}
+	public static get LEGACY_ACACIA_DOOR(): Material {
+		return this.$javaClass.LEGACY_ACACIA_DOOR;
+	}
+	public static get LEGACY_ACACIA_DOOR_ITEM(): Material {
+		return this.$javaClass.LEGACY_ACACIA_DOOR_ITEM;
+	}
+	public static get LEGACY_ACACIA_FENCE(): Material {
+		return this.$javaClass.LEGACY_ACACIA_FENCE;
+	}
+	public static get LEGACY_ACACIA_FENCE_GATE(): Material {
+		return this.$javaClass.LEGACY_ACACIA_FENCE_GATE;
+	}
+	public static get LEGACY_ACACIA_STAIRS(): Material {
+		return this.$javaClass.LEGACY_ACACIA_STAIRS;
+	}
+	public static get LEGACY_ACTIVATOR_RAIL(): Material {
+		return this.$javaClass.LEGACY_ACTIVATOR_RAIL;
+	}
+	public static get LEGACY_AIR(): Material {
+		return this.$javaClass.LEGACY_AIR;
+	}
+	public static get LEGACY_ANVIL(): Material {
+		return this.$javaClass.LEGACY_ANVIL;
+	}
+	public static get LEGACY_APPLE(): Material {
+		return this.$javaClass.LEGACY_APPLE;
+	}
+	public static get LEGACY_ARMOR_STAND(): Material {
+		return this.$javaClass.LEGACY_ARMOR_STAND;
+	}
+	public static get LEGACY_ARROW(): Material {
+		return this.$javaClass.LEGACY_ARROW;
+	}
+	public static get LEGACY_BAKED_POTATO(): Material {
+		return this.$javaClass.LEGACY_BAKED_POTATO;
+	}
+	public static get LEGACY_BANNER(): Material {
+		return this.$javaClass.LEGACY_BANNER;
+	}
+	public static get LEGACY_BARRIER(): Material {
+		return this.$javaClass.LEGACY_BARRIER;
+	}
+	public static get LEGACY_BEACON(): Material {
+		return this.$javaClass.LEGACY_BEACON;
+	}
+	public static get LEGACY_BED(): Material {
+		return this.$javaClass.LEGACY_BED;
+	}
+	public static get LEGACY_BEDROCK(): Material {
+		return this.$javaClass.LEGACY_BEDROCK;
+	}
+	public static get LEGACY_BED_BLOCK(): Material {
+		return this.$javaClass.LEGACY_BED_BLOCK;
+	}
+	public static get LEGACY_BEETROOT(): Material {
+		return this.$javaClass.LEGACY_BEETROOT;
+	}
+	public static get LEGACY_BEETROOT_BLOCK(): Material {
+		return this.$javaClass.LEGACY_BEETROOT_BLOCK;
+	}
+	public static get LEGACY_BEETROOT_SEEDS(): Material {
+		return this.$javaClass.LEGACY_BEETROOT_SEEDS;
+	}
+	public static get LEGACY_BEETROOT_SOUP(): Material {
+		return this.$javaClass.LEGACY_BEETROOT_SOUP;
+	}
+	public static get LEGACY_BIRCH_DOOR(): Material {
+		return this.$javaClass.LEGACY_BIRCH_DOOR;
+	}
+	public static get LEGACY_BIRCH_DOOR_ITEM(): Material {
+		return this.$javaClass.LEGACY_BIRCH_DOOR_ITEM;
+	}
+	public static get LEGACY_BIRCH_FENCE(): Material {
+		return this.$javaClass.LEGACY_BIRCH_FENCE;
+	}
+	public static get LEGACY_BIRCH_FENCE_GATE(): Material {
+		return this.$javaClass.LEGACY_BIRCH_FENCE_GATE;
+	}
+	public static get LEGACY_BIRCH_WOOD_STAIRS(): Material {
+		return this.$javaClass.LEGACY_BIRCH_WOOD_STAIRS;
+	}
+	public static get LEGACY_BLACK_GLAZED_TERRACOTTA(): Material {
+		return this.$javaClass.LEGACY_BLACK_GLAZED_TERRACOTTA;
+	}
+	public static get LEGACY_BLACK_SHULKER_BOX(): Material {
+		return this.$javaClass.LEGACY_BLACK_SHULKER_BOX;
+	}
+	public static get LEGACY_BLAZE_POWDER(): Material {
+		return this.$javaClass.LEGACY_BLAZE_POWDER;
+	}
+	public static get LEGACY_BLAZE_ROD(): Material {
+		return this.$javaClass.LEGACY_BLAZE_ROD;
+	}
+	public static get LEGACY_BLUE_GLAZED_TERRACOTTA(): Material {
+		return this.$javaClass.LEGACY_BLUE_GLAZED_TERRACOTTA;
+	}
+	public static get LEGACY_BLUE_SHULKER_BOX(): Material {
+		return this.$javaClass.LEGACY_BLUE_SHULKER_BOX;
+	}
+	public static get LEGACY_BOAT(): Material {
+		return this.$javaClass.LEGACY_BOAT;
+	}
+	public static get LEGACY_BOAT_ACACIA(): Material {
+		return this.$javaClass.LEGACY_BOAT_ACACIA;
+	}
+	public static get LEGACY_BOAT_BIRCH(): Material {
+		return this.$javaClass.LEGACY_BOAT_BIRCH;
+	}
+	public static get LEGACY_BOAT_DARK_OAK(): Material {
+		return this.$javaClass.LEGACY_BOAT_DARK_OAK;
+	}
+	public static get LEGACY_BOAT_JUNGLE(): Material {
+		return this.$javaClass.LEGACY_BOAT_JUNGLE;
+	}
+	public static get LEGACY_BOAT_SPRUCE(): Material {
+		return this.$javaClass.LEGACY_BOAT_SPRUCE;
+	}
+	public static get LEGACY_BONE(): Material {
+		return this.$javaClass.LEGACY_BONE;
+	}
+	public static get LEGACY_BONE_BLOCK(): Material {
+		return this.$javaClass.LEGACY_BONE_BLOCK;
+	}
+	public static get LEGACY_BOOK(): Material {
+		return this.$javaClass.LEGACY_BOOK;
+	}
+	public static get LEGACY_BOOKSHELF(): Material {
+		return this.$javaClass.LEGACY_BOOKSHELF;
+	}
+	public static get LEGACY_BOOK_AND_QUILL(): Material {
+		return this.$javaClass.LEGACY_BOOK_AND_QUILL;
+	}
+	public static get LEGACY_BOW(): Material {
+		return this.$javaClass.LEGACY_BOW;
+	}
+	public static get LEGACY_BOWL(): Material {
+		return this.$javaClass.LEGACY_BOWL;
+	}
+	public static get LEGACY_BREAD(): Material {
+		return this.$javaClass.LEGACY_BREAD;
+	}
+	public static get LEGACY_BREWING_STAND(): Material {
+		return this.$javaClass.LEGACY_BREWING_STAND;
+	}
+	public static get LEGACY_BREWING_STAND_ITEM(): Material {
+		return this.$javaClass.LEGACY_BREWING_STAND_ITEM;
+	}
+	public static get LEGACY_BRICK(): Material {
+		return this.$javaClass.LEGACY_BRICK;
+	}
+	public static get LEGACY_BRICK_STAIRS(): Material {
+		return this.$javaClass.LEGACY_BRICK_STAIRS;
+	}
+	public static get LEGACY_BROWN_GLAZED_TERRACOTTA(): Material {
+		return this.$javaClass.LEGACY_BROWN_GLAZED_TERRACOTTA;
+	}
+	public static get LEGACY_BROWN_MUSHROOM(): Material {
+		return this.$javaClass.LEGACY_BROWN_MUSHROOM;
+	}
+	public static get LEGACY_BROWN_SHULKER_BOX(): Material {
+		return this.$javaClass.LEGACY_BROWN_SHULKER_BOX;
+	}
+	public static get LEGACY_BUCKET(): Material {
+		return this.$javaClass.LEGACY_BUCKET;
+	}
+	public static get LEGACY_BURNING_FURNACE(): Material {
+		return this.$javaClass.LEGACY_BURNING_FURNACE;
+	}
+	public static get LEGACY_CACTUS(): Material {
+		return this.$javaClass.LEGACY_CACTUS;
+	}
+	public static get LEGACY_CAKE(): Material {
+		return this.$javaClass.LEGACY_CAKE;
+	}
+	public static get LEGACY_CAKE_BLOCK(): Material {
+		return this.$javaClass.LEGACY_CAKE_BLOCK;
+	}
+	public static get LEGACY_CARPET(): Material {
+		return this.$javaClass.LEGACY_CARPET;
+	}
+	public static get LEGACY_CARROT(): Material {
+		return this.$javaClass.LEGACY_CARROT;
+	}
+	public static get LEGACY_CARROT_ITEM(): Material {
+		return this.$javaClass.LEGACY_CARROT_ITEM;
+	}
+	public static get LEGACY_CARROT_STICK(): Material {
+		return this.$javaClass.LEGACY_CARROT_STICK;
+	}
+	public static get LEGACY_CAULDRON(): Material {
+		return this.$javaClass.LEGACY_CAULDRON;
+	}
+	public static get LEGACY_CAULDRON_ITEM(): Material {
+		return this.$javaClass.LEGACY_CAULDRON_ITEM;
+	}
+	public static get LEGACY_CHAINMAIL_BOOTS(): Material {
+		return this.$javaClass.LEGACY_CHAINMAIL_BOOTS;
+	}
+	public static get LEGACY_CHAINMAIL_CHESTPLATE(): Material {
+		return this.$javaClass.LEGACY_CHAINMAIL_CHESTPLATE;
+	}
+	public static get LEGACY_CHAINMAIL_HELMET(): Material {
+		return this.$javaClass.LEGACY_CHAINMAIL_HELMET;
+	}
+	public static get LEGACY_CHAINMAIL_LEGGINGS(): Material {
+		return this.$javaClass.LEGACY_CHAINMAIL_LEGGINGS;
+	}
+	public static get LEGACY_CHEST(): Material {
+		return this.$javaClass.LEGACY_CHEST;
+	}
+	public static get LEGACY_CHORUS_FLOWER(): Material {
+		return this.$javaClass.LEGACY_CHORUS_FLOWER;
+	}
+	public static get LEGACY_CHORUS_FRUIT(): Material {
+		return this.$javaClass.LEGACY_CHORUS_FRUIT;
+	}
+	public static get LEGACY_CHORUS_FRUIT_POPPED(): Material {
+		return this.$javaClass.LEGACY_CHORUS_FRUIT_POPPED;
+	}
+	public static get LEGACY_CHORUS_PLANT(): Material {
+		return this.$javaClass.LEGACY_CHORUS_PLANT;
+	}
+	public static get LEGACY_CLAY(): Material {
+		return this.$javaClass.LEGACY_CLAY;
+	}
+	public static get LEGACY_CLAY_BALL(): Material {
+		return this.$javaClass.LEGACY_CLAY_BALL;
+	}
+	public static get LEGACY_CLAY_BRICK(): Material {
+		return this.$javaClass.LEGACY_CLAY_BRICK;
+	}
+	public static get LEGACY_COAL(): Material {
+		return this.$javaClass.LEGACY_COAL;
+	}
+	public static get LEGACY_COAL_BLOCK(): Material {
+		return this.$javaClass.LEGACY_COAL_BLOCK;
+	}
+	public static get LEGACY_COAL_ORE(): Material {
+		return this.$javaClass.LEGACY_COAL_ORE;
+	}
+	public static get LEGACY_COBBLESTONE(): Material {
+		return this.$javaClass.LEGACY_COBBLESTONE;
+	}
+	public static get LEGACY_COBBLESTONE_STAIRS(): Material {
+		return this.$javaClass.LEGACY_COBBLESTONE_STAIRS;
+	}
+	public static get LEGACY_COBBLE_WALL(): Material {
+		return this.$javaClass.LEGACY_COBBLE_WALL;
+	}
+	public static get LEGACY_COCOA(): Material {
+		return this.$javaClass.LEGACY_COCOA;
+	}
+	public static get LEGACY_COMMAND(): Material {
+		return this.$javaClass.LEGACY_COMMAND;
+	}
+	public static get LEGACY_COMMAND_CHAIN(): Material {
+		return this.$javaClass.LEGACY_COMMAND_CHAIN;
+	}
+	public static get LEGACY_COMMAND_MINECART(): Material {
+		return this.$javaClass.LEGACY_COMMAND_MINECART;
+	}
+	public static get LEGACY_COMMAND_REPEATING(): Material {
+		return this.$javaClass.LEGACY_COMMAND_REPEATING;
+	}
+	public static get LEGACY_COMPASS(): Material {
+		return this.$javaClass.LEGACY_COMPASS;
+	}
+	public static get LEGACY_CONCRETE(): Material {
+		return this.$javaClass.LEGACY_CONCRETE;
+	}
+	public static get LEGACY_CONCRETE_POWDER(): Material {
+		return this.$javaClass.LEGACY_CONCRETE_POWDER;
+	}
+	public static get LEGACY_COOKED_BEEF(): Material {
+		return this.$javaClass.LEGACY_COOKED_BEEF;
+	}
+	public static get LEGACY_COOKED_CHICKEN(): Material {
+		return this.$javaClass.LEGACY_COOKED_CHICKEN;
+	}
+	public static get LEGACY_COOKED_FISH(): Material {
+		return this.$javaClass.LEGACY_COOKED_FISH;
+	}
+	public static get LEGACY_COOKED_MUTTON(): Material {
+		return this.$javaClass.LEGACY_COOKED_MUTTON;
+	}
+	public static get LEGACY_COOKED_RABBIT(): Material {
+		return this.$javaClass.LEGACY_COOKED_RABBIT;
+	}
+	public static get LEGACY_COOKIE(): Material {
+		return this.$javaClass.LEGACY_COOKIE;
+	}
+	public static get LEGACY_CROPS(): Material {
+		return this.$javaClass.LEGACY_CROPS;
+	}
+	public static get LEGACY_CYAN_GLAZED_TERRACOTTA(): Material {
+		return this.$javaClass.LEGACY_CYAN_GLAZED_TERRACOTTA;
+	}
+	public static get LEGACY_CYAN_SHULKER_BOX(): Material {
+		return this.$javaClass.LEGACY_CYAN_SHULKER_BOX;
+	}
+	public static get LEGACY_DARK_OAK_DOOR(): Material {
+		return this.$javaClass.LEGACY_DARK_OAK_DOOR;
+	}
+	public static get LEGACY_DARK_OAK_DOOR_ITEM(): Material {
+		return this.$javaClass.LEGACY_DARK_OAK_DOOR_ITEM;
+	}
+	public static get LEGACY_DARK_OAK_FENCE(): Material {
+		return this.$javaClass.LEGACY_DARK_OAK_FENCE;
+	}
+	public static get LEGACY_DARK_OAK_FENCE_GATE(): Material {
+		return this.$javaClass.LEGACY_DARK_OAK_FENCE_GATE;
+	}
+	public static get LEGACY_DARK_OAK_STAIRS(): Material {
+		return this.$javaClass.LEGACY_DARK_OAK_STAIRS;
+	}
+	public static get LEGACY_DAYLIGHT_DETECTOR(): Material {
+		return this.$javaClass.LEGACY_DAYLIGHT_DETECTOR;
+	}
+	public static get LEGACY_DAYLIGHT_DETECTOR_INVERTED(): Material {
+		return this.$javaClass.LEGACY_DAYLIGHT_DETECTOR_INVERTED;
+	}
+	public static get LEGACY_DEAD_BUSH(): Material {
+		return this.$javaClass.LEGACY_DEAD_BUSH;
+	}
+	public static get LEGACY_DETECTOR_RAIL(): Material {
+		return this.$javaClass.LEGACY_DETECTOR_RAIL;
+	}
+	public static get LEGACY_DIAMOND(): Material {
+		return this.$javaClass.LEGACY_DIAMOND;
+	}
+	public static get LEGACY_DIAMOND_AXE(): Material {
+		return this.$javaClass.LEGACY_DIAMOND_AXE;
+	}
+	public static get LEGACY_DIAMOND_BARDING(): Material {
+		return this.$javaClass.LEGACY_DIAMOND_BARDING;
+	}
+	public static get LEGACY_DIAMOND_BLOCK(): Material {
+		return this.$javaClass.LEGACY_DIAMOND_BLOCK;
+	}
+	public static get LEGACY_DIAMOND_BOOTS(): Material {
+		return this.$javaClass.LEGACY_DIAMOND_BOOTS;
+	}
+	public static get LEGACY_DIAMOND_CHESTPLATE(): Material {
+		return this.$javaClass.LEGACY_DIAMOND_CHESTPLATE;
+	}
+	public static get LEGACY_DIAMOND_HELMET(): Material {
+		return this.$javaClass.LEGACY_DIAMOND_HELMET;
+	}
+	public static get LEGACY_DIAMOND_HOE(): Material {
+		return this.$javaClass.LEGACY_DIAMOND_HOE;
+	}
+	public static get LEGACY_DIAMOND_LEGGINGS(): Material {
+		return this.$javaClass.LEGACY_DIAMOND_LEGGINGS;
+	}
+	public static get LEGACY_DIAMOND_ORE(): Material {
+		return this.$javaClass.LEGACY_DIAMOND_ORE;
+	}
+	public static get LEGACY_DIAMOND_PICKAXE(): Material {
+		return this.$javaClass.LEGACY_DIAMOND_PICKAXE;
+	}
+	public static get LEGACY_DIAMOND_SPADE(): Material {
+		return this.$javaClass.LEGACY_DIAMOND_SPADE;
+	}
+	public static get LEGACY_DIAMOND_SWORD(): Material {
+		return this.$javaClass.LEGACY_DIAMOND_SWORD;
+	}
+	public static get LEGACY_DIODE(): Material {
+		return this.$javaClass.LEGACY_DIODE;
+	}
+	public static get LEGACY_DIODE_BLOCK_OFF(): Material {
+		return this.$javaClass.LEGACY_DIODE_BLOCK_OFF;
+	}
+	public static get LEGACY_DIODE_BLOCK_ON(): Material {
+		return this.$javaClass.LEGACY_DIODE_BLOCK_ON;
+	}
+	public static get LEGACY_DIRT(): Material {
+		return this.$javaClass.LEGACY_DIRT;
+	}
+	public static get LEGACY_DISPENSER(): Material {
+		return this.$javaClass.LEGACY_DISPENSER;
+	}
+	public static get LEGACY_DOUBLE_PLANT(): Material {
+		return this.$javaClass.LEGACY_DOUBLE_PLANT;
+	}
+	public static get LEGACY_DOUBLE_STEP(): Material {
+		return this.$javaClass.LEGACY_DOUBLE_STEP;
+	}
+	public static get LEGACY_DOUBLE_STONE_SLAB2(): Material {
+		return this.$javaClass.LEGACY_DOUBLE_STONE_SLAB2;
+	}
+	public static get LEGACY_DRAGONS_BREATH(): Material {
+		return this.$javaClass.LEGACY_DRAGONS_BREATH;
+	}
+	public static get LEGACY_DRAGON_EGG(): Material {
+		return this.$javaClass.LEGACY_DRAGON_EGG;
+	}
+	public static get LEGACY_DROPPER(): Material {
+		return this.$javaClass.LEGACY_DROPPER;
+	}
+	public static get LEGACY_EGG(): Material {
+		return this.$javaClass.LEGACY_EGG;
+	}
+	public static get LEGACY_ELYTRA(): Material {
+		return this.$javaClass.LEGACY_ELYTRA;
+	}
+	public static get LEGACY_EMERALD(): Material {
+		return this.$javaClass.LEGACY_EMERALD;
+	}
+	public static get LEGACY_EMERALD_BLOCK(): Material {
+		return this.$javaClass.LEGACY_EMERALD_BLOCK;
+	}
+	public static get LEGACY_EMERALD_ORE(): Material {
+		return this.$javaClass.LEGACY_EMERALD_ORE;
+	}
+	public static get LEGACY_EMPTY_MAP(): Material {
+		return this.$javaClass.LEGACY_EMPTY_MAP;
+	}
+	public static get LEGACY_ENCHANTED_BOOK(): Material {
+		return this.$javaClass.LEGACY_ENCHANTED_BOOK;
+	}
+	public static get LEGACY_ENCHANTMENT_TABLE(): Material {
+		return this.$javaClass.LEGACY_ENCHANTMENT_TABLE;
+	}
+	public static get LEGACY_ENDER_CHEST(): Material {
+		return this.$javaClass.LEGACY_ENDER_CHEST;
+	}
+	public static get LEGACY_ENDER_PEARL(): Material {
+		return this.$javaClass.LEGACY_ENDER_PEARL;
+	}
+	public static get LEGACY_ENDER_PORTAL(): Material {
+		return this.$javaClass.LEGACY_ENDER_PORTAL;
+	}
+	public static get LEGACY_ENDER_PORTAL_FRAME(): Material {
+		return this.$javaClass.LEGACY_ENDER_PORTAL_FRAME;
+	}
+	public static get LEGACY_ENDER_STONE(): Material {
+		return this.$javaClass.LEGACY_ENDER_STONE;
+	}
+	public static get LEGACY_END_BRICKS(): Material {
+		return this.$javaClass.LEGACY_END_BRICKS;
+	}
+	public static get LEGACY_END_CRYSTAL(): Material {
+		return this.$javaClass.LEGACY_END_CRYSTAL;
+	}
+	public static get LEGACY_END_GATEWAY(): Material {
+		return this.$javaClass.LEGACY_END_GATEWAY;
+	}
+	public static get LEGACY_END_ROD(): Material {
+		return this.$javaClass.LEGACY_END_ROD;
+	}
+	public static get LEGACY_EXPLOSIVE_MINECART(): Material {
+		return this.$javaClass.LEGACY_EXPLOSIVE_MINECART;
+	}
+	public static get LEGACY_EXP_BOTTLE(): Material {
+		return this.$javaClass.LEGACY_EXP_BOTTLE;
+	}
+	public static get LEGACY_EYE_OF_ENDER(): Material {
+		return this.$javaClass.LEGACY_EYE_OF_ENDER;
+	}
+	public static get LEGACY_FEATHER(): Material {
+		return this.$javaClass.LEGACY_FEATHER;
+	}
+	public static get LEGACY_FENCE(): Material {
+		return this.$javaClass.LEGACY_FENCE;
+	}
+	public static get LEGACY_FENCE_GATE(): Material {
+		return this.$javaClass.LEGACY_FENCE_GATE;
+	}
+	public static get LEGACY_FERMENTED_SPIDER_EYE(): Material {
+		return this.$javaClass.LEGACY_FERMENTED_SPIDER_EYE;
+	}
+	public static get LEGACY_FIRE(): Material {
+		return this.$javaClass.LEGACY_FIRE;
+	}
+	public static get LEGACY_FIREBALL(): Material {
+		return this.$javaClass.LEGACY_FIREBALL;
+	}
+	public static get LEGACY_FIREWORK(): Material {
+		return this.$javaClass.LEGACY_FIREWORK;
+	}
+	public static get LEGACY_FIREWORK_CHARGE(): Material {
+		return this.$javaClass.LEGACY_FIREWORK_CHARGE;
+	}
+	public static get LEGACY_FISHING_ROD(): Material {
+		return this.$javaClass.LEGACY_FISHING_ROD;
+	}
+	public static get LEGACY_FLINT(): Material {
+		return this.$javaClass.LEGACY_FLINT;
+	}
+	public static get LEGACY_FLINT_AND_STEEL(): Material {
+		return this.$javaClass.LEGACY_FLINT_AND_STEEL;
+	}
+	public static get LEGACY_FLOWER_POT(): Material {
+		return this.$javaClass.LEGACY_FLOWER_POT;
+	}
+	public static get LEGACY_FLOWER_POT_ITEM(): Material {
+		return this.$javaClass.LEGACY_FLOWER_POT_ITEM;
+	}
+	public static get LEGACY_FROSTED_ICE(): Material {
+		return this.$javaClass.LEGACY_FROSTED_ICE;
+	}
+	public static get LEGACY_FURNACE(): Material {
+		return this.$javaClass.LEGACY_FURNACE;
+	}
+	public static get LEGACY_GHAST_TEAR(): Material {
+		return this.$javaClass.LEGACY_GHAST_TEAR;
+	}
+	public static get LEGACY_GLASS(): Material {
+		return this.$javaClass.LEGACY_GLASS;
+	}
+	public static get LEGACY_GLASS_BOTTLE(): Material {
+		return this.$javaClass.LEGACY_GLASS_BOTTLE;
+	}
+	public static get LEGACY_GLOWING_REDSTONE_ORE(): Material {
+		return this.$javaClass.LEGACY_GLOWING_REDSTONE_ORE;
+	}
+	public static get LEGACY_GLOWSTONE(): Material {
+		return this.$javaClass.LEGACY_GLOWSTONE;
+	}
+	public static get LEGACY_GLOWSTONE_DUST(): Material {
+		return this.$javaClass.LEGACY_GLOWSTONE_DUST;
+	}
+	public static get LEGACY_GOLDEN_APPLE(): Material {
+		return this.$javaClass.LEGACY_GOLDEN_APPLE;
+	}
+	public static get LEGACY_GOLDEN_CARROT(): Material {
+		return this.$javaClass.LEGACY_GOLDEN_CARROT;
+	}
+	public static get LEGACY_GOLD_AXE(): Material {
+		return this.$javaClass.LEGACY_GOLD_AXE;
+	}
+	public static get LEGACY_GOLD_BARDING(): Material {
+		return this.$javaClass.LEGACY_GOLD_BARDING;
+	}
+	public static get LEGACY_GOLD_BLOCK(): Material {
+		return this.$javaClass.LEGACY_GOLD_BLOCK;
+	}
+	public static get LEGACY_GOLD_BOOTS(): Material {
+		return this.$javaClass.LEGACY_GOLD_BOOTS;
+	}
+	public static get LEGACY_GOLD_CHESTPLATE(): Material {
+		return this.$javaClass.LEGACY_GOLD_CHESTPLATE;
+	}
+	public static get LEGACY_GOLD_HELMET(): Material {
+		return this.$javaClass.LEGACY_GOLD_HELMET;
+	}
+	public static get LEGACY_GOLD_HOE(): Material {
+		return this.$javaClass.LEGACY_GOLD_HOE;
+	}
+	public static get LEGACY_GOLD_INGOT(): Material {
+		return this.$javaClass.LEGACY_GOLD_INGOT;
+	}
+	public static get LEGACY_GOLD_LEGGINGS(): Material {
+		return this.$javaClass.LEGACY_GOLD_LEGGINGS;
+	}
+	public static get LEGACY_GOLD_NUGGET(): Material {
+		return this.$javaClass.LEGACY_GOLD_NUGGET;
+	}
+	public static get LEGACY_GOLD_ORE(): Material {
+		return this.$javaClass.LEGACY_GOLD_ORE;
+	}
+	public static get LEGACY_GOLD_PICKAXE(): Material {
+		return this.$javaClass.LEGACY_GOLD_PICKAXE;
+	}
+	public static get LEGACY_GOLD_PLATE(): Material {
+		return this.$javaClass.LEGACY_GOLD_PLATE;
+	}
+	public static get LEGACY_GOLD_RECORD(): Material {
+		return this.$javaClass.LEGACY_GOLD_RECORD;
+	}
+	public static get LEGACY_GOLD_SPADE(): Material {
+		return this.$javaClass.LEGACY_GOLD_SPADE;
+	}
+	public static get LEGACY_GOLD_SWORD(): Material {
+		return this.$javaClass.LEGACY_GOLD_SWORD;
+	}
+	public static get LEGACY_GRASS(): Material {
+		return this.$javaClass.LEGACY_GRASS;
+	}
+	public static get LEGACY_GRASS_PATH(): Material {
+		return this.$javaClass.LEGACY_GRASS_PATH;
+	}
+	public static get LEGACY_GRAVEL(): Material {
+		return this.$javaClass.LEGACY_GRAVEL;
+	}
+	public static get LEGACY_GRAY_GLAZED_TERRACOTTA(): Material {
+		return this.$javaClass.LEGACY_GRAY_GLAZED_TERRACOTTA;
+	}
+	public static get LEGACY_GRAY_SHULKER_BOX(): Material {
+		return this.$javaClass.LEGACY_GRAY_SHULKER_BOX;
+	}
+	public static get LEGACY_GREEN_GLAZED_TERRACOTTA(): Material {
+		return this.$javaClass.LEGACY_GREEN_GLAZED_TERRACOTTA;
+	}
+	public static get LEGACY_GREEN_RECORD(): Material {
+		return this.$javaClass.LEGACY_GREEN_RECORD;
+	}
+	public static get LEGACY_GREEN_SHULKER_BOX(): Material {
+		return this.$javaClass.LEGACY_GREEN_SHULKER_BOX;
+	}
+	public static get LEGACY_GRILLED_PORK(): Material {
+		return this.$javaClass.LEGACY_GRILLED_PORK;
+	}
+	public static get LEGACY_HARD_CLAY(): Material {
+		return this.$javaClass.LEGACY_HARD_CLAY;
+	}
+	public static get LEGACY_HAY_BLOCK(): Material {
+		return this.$javaClass.LEGACY_HAY_BLOCK;
+	}
+	public static get LEGACY_HOPPER(): Material {
+		return this.$javaClass.LEGACY_HOPPER;
+	}
+	public static get LEGACY_HOPPER_MINECART(): Material {
+		return this.$javaClass.LEGACY_HOPPER_MINECART;
+	}
+	public static get LEGACY_HUGE_MUSHROOM_1(): Material {
+		return this.$javaClass.LEGACY_HUGE_MUSHROOM_1;
+	}
+	public static get LEGACY_HUGE_MUSHROOM_2(): Material {
+		return this.$javaClass.LEGACY_HUGE_MUSHROOM_2;
+	}
+	public static get LEGACY_ICE(): Material {
+		return this.$javaClass.LEGACY_ICE;
+	}
+	public static get LEGACY_INK_SACK(): Material {
+		return this.$javaClass.LEGACY_INK_SACK;
+	}
+	public static get LEGACY_IRON_AXE(): Material {
+		return this.$javaClass.LEGACY_IRON_AXE;
+	}
+	public static get LEGACY_IRON_BARDING(): Material {
+		return this.$javaClass.LEGACY_IRON_BARDING;
+	}
+	public static get LEGACY_IRON_BLOCK(): Material {
+		return this.$javaClass.LEGACY_IRON_BLOCK;
+	}
+	public static get LEGACY_IRON_BOOTS(): Material {
+		return this.$javaClass.LEGACY_IRON_BOOTS;
+	}
+	public static get LEGACY_IRON_CHESTPLATE(): Material {
+		return this.$javaClass.LEGACY_IRON_CHESTPLATE;
+	}
+	public static get LEGACY_IRON_DOOR(): Material {
+		return this.$javaClass.LEGACY_IRON_DOOR;
+	}
+	public static get LEGACY_IRON_DOOR_BLOCK(): Material {
+		return this.$javaClass.LEGACY_IRON_DOOR_BLOCK;
+	}
+	public static get LEGACY_IRON_FENCE(): Material {
+		return this.$javaClass.LEGACY_IRON_FENCE;
+	}
+	public static get LEGACY_IRON_HELMET(): Material {
+		return this.$javaClass.LEGACY_IRON_HELMET;
+	}
+	public static get LEGACY_IRON_HOE(): Material {
+		return this.$javaClass.LEGACY_IRON_HOE;
+	}
+	public static get LEGACY_IRON_INGOT(): Material {
+		return this.$javaClass.LEGACY_IRON_INGOT;
+	}
+	public static get LEGACY_IRON_LEGGINGS(): Material {
+		return this.$javaClass.LEGACY_IRON_LEGGINGS;
+	}
+	public static get LEGACY_IRON_NUGGET(): Material {
+		return this.$javaClass.LEGACY_IRON_NUGGET;
+	}
+	public static get LEGACY_IRON_ORE(): Material {
+		return this.$javaClass.LEGACY_IRON_ORE;
+	}
+	public static get LEGACY_IRON_PICKAXE(): Material {
+		return this.$javaClass.LEGACY_IRON_PICKAXE;
+	}
+	public static get LEGACY_IRON_PLATE(): Material {
+		return this.$javaClass.LEGACY_IRON_PLATE;
+	}
+	public static get LEGACY_IRON_SPADE(): Material {
+		return this.$javaClass.LEGACY_IRON_SPADE;
+	}
+	public static get LEGACY_IRON_SWORD(): Material {
+		return this.$javaClass.LEGACY_IRON_SWORD;
+	}
+	public static get LEGACY_IRON_TRAPDOOR(): Material {
+		return this.$javaClass.LEGACY_IRON_TRAPDOOR;
+	}
+	public static get LEGACY_ITEM_FRAME(): Material {
+		return this.$javaClass.LEGACY_ITEM_FRAME;
+	}
+	public static get LEGACY_JACK_O_LANTERN(): Material {
+		return this.$javaClass.LEGACY_JACK_O_LANTERN;
+	}
+	public static get LEGACY_JUKEBOX(): Material {
+		return this.$javaClass.LEGACY_JUKEBOX;
+	}
+	public static get LEGACY_JUNGLE_DOOR(): Material {
+		return this.$javaClass.LEGACY_JUNGLE_DOOR;
+	}
+	public static get LEGACY_JUNGLE_DOOR_ITEM(): Material {
+		return this.$javaClass.LEGACY_JUNGLE_DOOR_ITEM;
+	}
+	public static get LEGACY_JUNGLE_FENCE(): Material {
+		return this.$javaClass.LEGACY_JUNGLE_FENCE;
+	}
+	public static get LEGACY_JUNGLE_FENCE_GATE(): Material {
+		return this.$javaClass.LEGACY_JUNGLE_FENCE_GATE;
+	}
+	public static get LEGACY_JUNGLE_WOOD_STAIRS(): Material {
+		return this.$javaClass.LEGACY_JUNGLE_WOOD_STAIRS;
+	}
+	public static get LEGACY_KNOWLEDGE_BOOK(): Material {
+		return this.$javaClass.LEGACY_KNOWLEDGE_BOOK;
+	}
+	public static get LEGACY_LADDER(): Material {
+		return this.$javaClass.LEGACY_LADDER;
+	}
+	public static get LEGACY_LAPIS_BLOCK(): Material {
+		return this.$javaClass.LEGACY_LAPIS_BLOCK;
+	}
+	public static get LEGACY_LAPIS_ORE(): Material {
+		return this.$javaClass.LEGACY_LAPIS_ORE;
+	}
+	public static get LEGACY_LAVA(): Material {
+		return this.$javaClass.LEGACY_LAVA;
+	}
+	public static get LEGACY_LAVA_BUCKET(): Material {
+		return this.$javaClass.LEGACY_LAVA_BUCKET;
+	}
+	public static get LEGACY_LEASH(): Material {
+		return this.$javaClass.LEGACY_LEASH;
+	}
+	public static get LEGACY_LEATHER(): Material {
+		return this.$javaClass.LEGACY_LEATHER;
+	}
+	public static get LEGACY_LEATHER_BOOTS(): Material {
+		return this.$javaClass.LEGACY_LEATHER_BOOTS;
+	}
+	public static get LEGACY_LEATHER_CHESTPLATE(): Material {
+		return this.$javaClass.LEGACY_LEATHER_CHESTPLATE;
+	}
+	public static get LEGACY_LEATHER_HELMET(): Material {
+		return this.$javaClass.LEGACY_LEATHER_HELMET;
+	}
+	public static get LEGACY_LEATHER_LEGGINGS(): Material {
+		return this.$javaClass.LEGACY_LEATHER_LEGGINGS;
+	}
+	public static get LEGACY_LEAVES(): Material {
+		return this.$javaClass.LEGACY_LEAVES;
+	}
+	public static get LEGACY_LEAVES_2(): Material {
+		return this.$javaClass.LEGACY_LEAVES_2;
+	}
+	public static get LEGACY_LEVER(): Material {
+		return this.$javaClass.LEGACY_LEVER;
+	}
+	public static get LEGACY_LIGHT_BLUE_GLAZED_TERRACOTTA(): Material {
+		return this.$javaClass.LEGACY_LIGHT_BLUE_GLAZED_TERRACOTTA;
+	}
+	public static get LEGACY_LIGHT_BLUE_SHULKER_BOX(): Material {
+		return this.$javaClass.LEGACY_LIGHT_BLUE_SHULKER_BOX;
+	}
+	public static get LEGACY_LIME_GLAZED_TERRACOTTA(): Material {
+		return this.$javaClass.LEGACY_LIME_GLAZED_TERRACOTTA;
+	}
+	public static get LEGACY_LIME_SHULKER_BOX(): Material {
+		return this.$javaClass.LEGACY_LIME_SHULKER_BOX;
+	}
+	public static get LEGACY_LINGERING_POTION(): Material {
+		return this.$javaClass.LEGACY_LINGERING_POTION;
+	}
+	public static get LEGACY_LOG(): Material {
+		return this.$javaClass.LEGACY_LOG;
+	}
+	public static get LEGACY_LOG_2(): Material {
+		return this.$javaClass.LEGACY_LOG_2;
+	}
+	public static get LEGACY_LONG_GRASS(): Material {
+		return this.$javaClass.LEGACY_LONG_GRASS;
+	}
+	public static get LEGACY_MAGENTA_GLAZED_TERRACOTTA(): Material {
+		return this.$javaClass.LEGACY_MAGENTA_GLAZED_TERRACOTTA;
+	}
+	public static get LEGACY_MAGENTA_SHULKER_BOX(): Material {
+		return this.$javaClass.LEGACY_MAGENTA_SHULKER_BOX;
+	}
+	public static get LEGACY_MAGMA(): Material {
+		return this.$javaClass.LEGACY_MAGMA;
+	}
+	public static get LEGACY_MAGMA_CREAM(): Material {
+		return this.$javaClass.LEGACY_MAGMA_CREAM;
+	}
+	public static get LEGACY_MAP(): Material {
+		return this.$javaClass.LEGACY_MAP;
+	}
+	public static get LEGACY_MELON(): Material {
+		return this.$javaClass.LEGACY_MELON;
+	}
+	public static get LEGACY_MELON_BLOCK(): Material {
+		return this.$javaClass.LEGACY_MELON_BLOCK;
+	}
+	public static get LEGACY_MELON_SEEDS(): Material {
+		return this.$javaClass.LEGACY_MELON_SEEDS;
+	}
+	public static get LEGACY_MELON_STEM(): Material {
+		return this.$javaClass.LEGACY_MELON_STEM;
+	}
+	public static get LEGACY_MILK_BUCKET(): Material {
+		return this.$javaClass.LEGACY_MILK_BUCKET;
+	}
+	public static get LEGACY_MINECART(): Material {
+		return this.$javaClass.LEGACY_MINECART;
+	}
+	public static get LEGACY_MOB_SPAWNER(): Material {
+		return this.$javaClass.LEGACY_MOB_SPAWNER;
+	}
+	public static get LEGACY_MONSTER_EGG(): Material {
+		return this.$javaClass.LEGACY_MONSTER_EGG;
+	}
+	public static get LEGACY_MONSTER_EGGS(): Material {
+		return this.$javaClass.LEGACY_MONSTER_EGGS;
+	}
+	public static get LEGACY_MOSSY_COBBLESTONE(): Material {
+		return this.$javaClass.LEGACY_MOSSY_COBBLESTONE;
+	}
+	public static get LEGACY_MUSHROOM_SOUP(): Material {
+		return this.$javaClass.LEGACY_MUSHROOM_SOUP;
+	}
+	public static get LEGACY_MUTTON(): Material {
+		return this.$javaClass.LEGACY_MUTTON;
+	}
+	public static get LEGACY_MYCEL(): Material {
+		return this.$javaClass.LEGACY_MYCEL;
+	}
+	public static get LEGACY_NAME_TAG(): Material {
+		return this.$javaClass.LEGACY_NAME_TAG;
+	}
+	public static get LEGACY_NETHERRACK(): Material {
+		return this.$javaClass.LEGACY_NETHERRACK;
+	}
+	public static get LEGACY_NETHER_BRICK(): Material {
+		return this.$javaClass.LEGACY_NETHER_BRICK;
+	}
+	public static get LEGACY_NETHER_BRICK_ITEM(): Material {
+		return this.$javaClass.LEGACY_NETHER_BRICK_ITEM;
+	}
+	public static get LEGACY_NETHER_BRICK_STAIRS(): Material {
+		return this.$javaClass.LEGACY_NETHER_BRICK_STAIRS;
+	}
+	public static get LEGACY_NETHER_FENCE(): Material {
+		return this.$javaClass.LEGACY_NETHER_FENCE;
+	}
+	public static get LEGACY_NETHER_STALK(): Material {
+		return this.$javaClass.LEGACY_NETHER_STALK;
+	}
+	public static get LEGACY_NETHER_STAR(): Material {
+		return this.$javaClass.LEGACY_NETHER_STAR;
+	}
+	public static get LEGACY_NETHER_WARTS(): Material {
+		return this.$javaClass.LEGACY_NETHER_WARTS;
+	}
+	public static get LEGACY_NETHER_WART_BLOCK(): Material {
+		return this.$javaClass.LEGACY_NETHER_WART_BLOCK;
+	}
+	public static get LEGACY_NOTE_BLOCK(): Material {
+		return this.$javaClass.LEGACY_NOTE_BLOCK;
+	}
+	public static get LEGACY_OBSERVER(): Material {
+		return this.$javaClass.LEGACY_OBSERVER;
+	}
+	public static get LEGACY_OBSIDIAN(): Material {
+		return this.$javaClass.LEGACY_OBSIDIAN;
+	}
+	public static get LEGACY_ORANGE_GLAZED_TERRACOTTA(): Material {
+		return this.$javaClass.LEGACY_ORANGE_GLAZED_TERRACOTTA;
+	}
+	public static get LEGACY_ORANGE_SHULKER_BOX(): Material {
+		return this.$javaClass.LEGACY_ORANGE_SHULKER_BOX;
+	}
+	public static get LEGACY_PACKED_ICE(): Material {
+		return this.$javaClass.LEGACY_PACKED_ICE;
+	}
+	public static get LEGACY_PAINTING(): Material {
+		return this.$javaClass.LEGACY_PAINTING;
+	}
+	public static get LEGACY_PAPER(): Material {
+		return this.$javaClass.LEGACY_PAPER;
+	}
+	public static get LEGACY_PINK_GLAZED_TERRACOTTA(): Material {
+		return this.$javaClass.LEGACY_PINK_GLAZED_TERRACOTTA;
+	}
+	public static get LEGACY_PINK_SHULKER_BOX(): Material {
+		return this.$javaClass.LEGACY_PINK_SHULKER_BOX;
+	}
+	public static get LEGACY_PISTON_BASE(): Material {
+		return this.$javaClass.LEGACY_PISTON_BASE;
+	}
+	public static get LEGACY_PISTON_EXTENSION(): Material {
+		return this.$javaClass.LEGACY_PISTON_EXTENSION;
+	}
+	public static get LEGACY_PISTON_MOVING_PIECE(): Material {
+		return this.$javaClass.LEGACY_PISTON_MOVING_PIECE;
+	}
+	public static get LEGACY_PISTON_STICKY_BASE(): Material {
+		return this.$javaClass.LEGACY_PISTON_STICKY_BASE;
+	}
+	public static get LEGACY_POISONOUS_POTATO(): Material {
+		return this.$javaClass.LEGACY_POISONOUS_POTATO;
+	}
+	public static get LEGACY_PORK(): Material {
+		return this.$javaClass.LEGACY_PORK;
+	}
+	public static get LEGACY_PORTAL(): Material {
+		return this.$javaClass.LEGACY_PORTAL;
+	}
+	public static get LEGACY_POTATO(): Material {
+		return this.$javaClass.LEGACY_POTATO;
+	}
+	public static get LEGACY_POTATO_ITEM(): Material {
+		return this.$javaClass.LEGACY_POTATO_ITEM;
+	}
+	public static get LEGACY_POTION(): Material {
+		return this.$javaClass.LEGACY_POTION;
+	}
+	public static get LEGACY_POWERED_MINECART(): Material {
+		return this.$javaClass.LEGACY_POWERED_MINECART;
+	}
+	public static get LEGACY_POWERED_RAIL(): Material {
+		return this.$javaClass.LEGACY_POWERED_RAIL;
+	}
+	public static get LEGACY_PRISMARINE(): Material {
+		return this.$javaClass.LEGACY_PRISMARINE;
+	}
+	public static get LEGACY_PRISMARINE_CRYSTALS(): Material {
+		return this.$javaClass.LEGACY_PRISMARINE_CRYSTALS;
+	}
+	public static get LEGACY_PRISMARINE_SHARD(): Material {
+		return this.$javaClass.LEGACY_PRISMARINE_SHARD;
+	}
+	public static get LEGACY_PUMPKIN(): Material {
+		return this.$javaClass.LEGACY_PUMPKIN;
+	}
+	public static get LEGACY_PUMPKIN_PIE(): Material {
+		return this.$javaClass.LEGACY_PUMPKIN_PIE;
+	}
+	public static get LEGACY_PUMPKIN_SEEDS(): Material {
+		return this.$javaClass.LEGACY_PUMPKIN_SEEDS;
+	}
+	public static get LEGACY_PUMPKIN_STEM(): Material {
+		return this.$javaClass.LEGACY_PUMPKIN_STEM;
+	}
+	public static get LEGACY_PURPLE_GLAZED_TERRACOTTA(): Material {
+		return this.$javaClass.LEGACY_PURPLE_GLAZED_TERRACOTTA;
+	}
+	public static get LEGACY_PURPLE_SHULKER_BOX(): Material {
+		return this.$javaClass.LEGACY_PURPLE_SHULKER_BOX;
+	}
+	public static get LEGACY_PURPUR_BLOCK(): Material {
+		return this.$javaClass.LEGACY_PURPUR_BLOCK;
+	}
+	public static get LEGACY_PURPUR_DOUBLE_SLAB(): Material {
+		return this.$javaClass.LEGACY_PURPUR_DOUBLE_SLAB;
+	}
+	public static get LEGACY_PURPUR_PILLAR(): Material {
+		return this.$javaClass.LEGACY_PURPUR_PILLAR;
+	}
+	public static get LEGACY_PURPUR_SLAB(): Material {
+		return this.$javaClass.LEGACY_PURPUR_SLAB;
+	}
+	public static get LEGACY_PURPUR_STAIRS(): Material {
+		return this.$javaClass.LEGACY_PURPUR_STAIRS;
+	}
+	public static get LEGACY_QUARTZ(): Material {
+		return this.$javaClass.LEGACY_QUARTZ;
+	}
+	public static get LEGACY_QUARTZ_BLOCK(): Material {
+		return this.$javaClass.LEGACY_QUARTZ_BLOCK;
+	}
+	public static get LEGACY_QUARTZ_ORE(): Material {
+		return this.$javaClass.LEGACY_QUARTZ_ORE;
+	}
+	public static get LEGACY_QUARTZ_STAIRS(): Material {
+		return this.$javaClass.LEGACY_QUARTZ_STAIRS;
+	}
+	public static get LEGACY_RABBIT(): Material {
+		return this.$javaClass.LEGACY_RABBIT;
+	}
+	public static get LEGACY_RABBIT_FOOT(): Material {
+		return this.$javaClass.LEGACY_RABBIT_FOOT;
+	}
+	public static get LEGACY_RABBIT_HIDE(): Material {
+		return this.$javaClass.LEGACY_RABBIT_HIDE;
+	}
+	public static get LEGACY_RABBIT_STEW(): Material {
+		return this.$javaClass.LEGACY_RABBIT_STEW;
+	}
+	public static get LEGACY_RAILS(): Material {
+		return this.$javaClass.LEGACY_RAILS;
+	}
+	public static get LEGACY_RAW_BEEF(): Material {
+		return this.$javaClass.LEGACY_RAW_BEEF;
+	}
+	public static get LEGACY_RAW_CHICKEN(): Material {
+		return this.$javaClass.LEGACY_RAW_CHICKEN;
+	}
+	public static get LEGACY_RAW_FISH(): Material {
+		return this.$javaClass.LEGACY_RAW_FISH;
+	}
+	public static get LEGACY_RECORD_10(): Material {
+		return this.$javaClass.LEGACY_RECORD_10;
+	}
+	public static get LEGACY_RECORD_11(): Material {
+		return this.$javaClass.LEGACY_RECORD_11;
+	}
+	public static get LEGACY_RECORD_12(): Material {
+		return this.$javaClass.LEGACY_RECORD_12;
+	}
+	public static get LEGACY_RECORD_3(): Material {
+		return this.$javaClass.LEGACY_RECORD_3;
+	}
+	public static get LEGACY_RECORD_4(): Material {
+		return this.$javaClass.LEGACY_RECORD_4;
+	}
+	public static get LEGACY_RECORD_5(): Material {
+		return this.$javaClass.LEGACY_RECORD_5;
+	}
+	public static get LEGACY_RECORD_6(): Material {
+		return this.$javaClass.LEGACY_RECORD_6;
+	}
+	public static get LEGACY_RECORD_7(): Material {
+		return this.$javaClass.LEGACY_RECORD_7;
+	}
+	public static get LEGACY_RECORD_8(): Material {
+		return this.$javaClass.LEGACY_RECORD_8;
+	}
+	public static get LEGACY_RECORD_9(): Material {
+		return this.$javaClass.LEGACY_RECORD_9;
+	}
+	public static get LEGACY_REDSTONE(): Material {
+		return this.$javaClass.LEGACY_REDSTONE;
+	}
+	public static get LEGACY_REDSTONE_BLOCK(): Material {
+		return this.$javaClass.LEGACY_REDSTONE_BLOCK;
+	}
+	public static get LEGACY_REDSTONE_COMPARATOR(): Material {
+		return this.$javaClass.LEGACY_REDSTONE_COMPARATOR;
+	}
+	public static get LEGACY_REDSTONE_COMPARATOR_OFF(): Material {
+		return this.$javaClass.LEGACY_REDSTONE_COMPARATOR_OFF;
+	}
+	public static get LEGACY_REDSTONE_COMPARATOR_ON(): Material {
+		return this.$javaClass.LEGACY_REDSTONE_COMPARATOR_ON;
+	}
+	public static get LEGACY_REDSTONE_LAMP_OFF(): Material {
+		return this.$javaClass.LEGACY_REDSTONE_LAMP_OFF;
+	}
+	public static get LEGACY_REDSTONE_LAMP_ON(): Material {
+		return this.$javaClass.LEGACY_REDSTONE_LAMP_ON;
+	}
+	public static get LEGACY_REDSTONE_ORE(): Material {
+		return this.$javaClass.LEGACY_REDSTONE_ORE;
+	}
+	public static get LEGACY_REDSTONE_TORCH_OFF(): Material {
+		return this.$javaClass.LEGACY_REDSTONE_TORCH_OFF;
+	}
+	public static get LEGACY_REDSTONE_TORCH_ON(): Material {
+		return this.$javaClass.LEGACY_REDSTONE_TORCH_ON;
+	}
+	public static get LEGACY_REDSTONE_WIRE(): Material {
+		return this.$javaClass.LEGACY_REDSTONE_WIRE;
+	}
+	public static get LEGACY_RED_GLAZED_TERRACOTTA(): Material {
+		return this.$javaClass.LEGACY_RED_GLAZED_TERRACOTTA;
+	}
+	public static get LEGACY_RED_MUSHROOM(): Material {
+		return this.$javaClass.LEGACY_RED_MUSHROOM;
+	}
+	public static get LEGACY_RED_NETHER_BRICK(): Material {
+		return this.$javaClass.LEGACY_RED_NETHER_BRICK;
+	}
+	public static get LEGACY_RED_ROSE(): Material {
+		return this.$javaClass.LEGACY_RED_ROSE;
+	}
+	public static get LEGACY_RED_SANDSTONE(): Material {
+		return this.$javaClass.LEGACY_RED_SANDSTONE;
+	}
+	public static get LEGACY_RED_SANDSTONE_STAIRS(): Material {
+		return this.$javaClass.LEGACY_RED_SANDSTONE_STAIRS;
+	}
+	public static get LEGACY_RED_SHULKER_BOX(): Material {
+		return this.$javaClass.LEGACY_RED_SHULKER_BOX;
+	}
+	public static get LEGACY_ROTTEN_FLESH(): Material {
+		return this.$javaClass.LEGACY_ROTTEN_FLESH;
+	}
+	public static get LEGACY_SADDLE(): Material {
+		return this.$javaClass.LEGACY_SADDLE;
+	}
+	public static get LEGACY_SAND(): Material {
+		return this.$javaClass.LEGACY_SAND;
+	}
+	public static get LEGACY_SANDSTONE(): Material {
+		return this.$javaClass.LEGACY_SANDSTONE;
+	}
+	public static get LEGACY_SANDSTONE_STAIRS(): Material {
+		return this.$javaClass.LEGACY_SANDSTONE_STAIRS;
+	}
+	public static get LEGACY_SAPLING(): Material {
+		return this.$javaClass.LEGACY_SAPLING;
+	}
+	public static get LEGACY_SEA_LANTERN(): Material {
+		return this.$javaClass.LEGACY_SEA_LANTERN;
+	}
+	public static get LEGACY_SEEDS(): Material {
+		return this.$javaClass.LEGACY_SEEDS;
+	}
+	public static get LEGACY_SHEARS(): Material {
+		return this.$javaClass.LEGACY_SHEARS;
+	}
+	public static get LEGACY_SHIELD(): Material {
+		return this.$javaClass.LEGACY_SHIELD;
+	}
+	public static get LEGACY_SHULKER_SHELL(): Material {
+		return this.$javaClass.LEGACY_SHULKER_SHELL;
+	}
+	public static get LEGACY_SIGN(): Material {
+		return this.$javaClass.LEGACY_SIGN;
+	}
+	public static get LEGACY_SIGN_POST(): Material {
+		return this.$javaClass.LEGACY_SIGN_POST;
+	}
+	public static get LEGACY_SILVER_GLAZED_TERRACOTTA(): Material {
+		return this.$javaClass.LEGACY_SILVER_GLAZED_TERRACOTTA;
+	}
+	public static get LEGACY_SILVER_SHULKER_BOX(): Material {
+		return this.$javaClass.LEGACY_SILVER_SHULKER_BOX;
+	}
+	public static get LEGACY_SKULL(): Material {
+		return this.$javaClass.LEGACY_SKULL;
+	}
+	public static get LEGACY_SKULL_ITEM(): Material {
+		return this.$javaClass.LEGACY_SKULL_ITEM;
+	}
+	public static get LEGACY_SLIME_BALL(): Material {
+		return this.$javaClass.LEGACY_SLIME_BALL;
+	}
+	public static get LEGACY_SLIME_BLOCK(): Material {
+		return this.$javaClass.LEGACY_SLIME_BLOCK;
+	}
+	public static get LEGACY_SMOOTH_BRICK(): Material {
+		return this.$javaClass.LEGACY_SMOOTH_BRICK;
+	}
+	public static get LEGACY_SMOOTH_STAIRS(): Material {
+		return this.$javaClass.LEGACY_SMOOTH_STAIRS;
+	}
+	public static get LEGACY_SNOW(): Material {
+		return this.$javaClass.LEGACY_SNOW;
+	}
+	public static get LEGACY_SNOW_BALL(): Material {
+		return this.$javaClass.LEGACY_SNOW_BALL;
+	}
+	public static get LEGACY_SNOW_BLOCK(): Material {
+		return this.$javaClass.LEGACY_SNOW_BLOCK;
+	}
+	public static get LEGACY_SOIL(): Material {
+		return this.$javaClass.LEGACY_SOIL;
+	}
+	public static get LEGACY_SOUL_SAND(): Material {
+		return this.$javaClass.LEGACY_SOUL_SAND;
+	}
+	public static get LEGACY_SPECKLED_MELON(): Material {
+		return this.$javaClass.LEGACY_SPECKLED_MELON;
+	}
+	public static get LEGACY_SPECTRAL_ARROW(): Material {
+		return this.$javaClass.LEGACY_SPECTRAL_ARROW;
+	}
+	public static get LEGACY_SPIDER_EYE(): Material {
+		return this.$javaClass.LEGACY_SPIDER_EYE;
+	}
+	public static get LEGACY_SPLASH_POTION(): Material {
+		return this.$javaClass.LEGACY_SPLASH_POTION;
+	}
+	public static get LEGACY_SPONGE(): Material {
+		return this.$javaClass.LEGACY_SPONGE;
+	}
+	public static get LEGACY_SPRUCE_DOOR(): Material {
+		return this.$javaClass.LEGACY_SPRUCE_DOOR;
+	}
+	public static get LEGACY_SPRUCE_DOOR_ITEM(): Material {
+		return this.$javaClass.LEGACY_SPRUCE_DOOR_ITEM;
+	}
+	public static get LEGACY_SPRUCE_FENCE(): Material {
+		return this.$javaClass.LEGACY_SPRUCE_FENCE;
+	}
+	public static get LEGACY_SPRUCE_FENCE_GATE(): Material {
+		return this.$javaClass.LEGACY_SPRUCE_FENCE_GATE;
+	}
+	public static get LEGACY_SPRUCE_WOOD_STAIRS(): Material {
+		return this.$javaClass.LEGACY_SPRUCE_WOOD_STAIRS;
+	}
+	public static get LEGACY_STAINED_CLAY(): Material {
+		return this.$javaClass.LEGACY_STAINED_CLAY;
+	}
+	public static get LEGACY_STAINED_GLASS(): Material {
+		return this.$javaClass.LEGACY_STAINED_GLASS;
+	}
+	public static get LEGACY_STAINED_GLASS_PANE(): Material {
+		return this.$javaClass.LEGACY_STAINED_GLASS_PANE;
+	}
+	public static get LEGACY_STANDING_BANNER(): Material {
+		return this.$javaClass.LEGACY_STANDING_BANNER;
+	}
+	public static get LEGACY_STATIONARY_LAVA(): Material {
+		return this.$javaClass.LEGACY_STATIONARY_LAVA;
+	}
+	public static get LEGACY_STATIONARY_WATER(): Material {
+		return this.$javaClass.LEGACY_STATIONARY_WATER;
+	}
+	public static get LEGACY_STEP(): Material {
+		return this.$javaClass.LEGACY_STEP;
+	}
+	public static get LEGACY_STICK(): Material {
+		return this.$javaClass.LEGACY_STICK;
+	}
+	public static get LEGACY_STONE(): Material {
+		return this.$javaClass.LEGACY_STONE;
+	}
+	public static get LEGACY_STONE_AXE(): Material {
+		return this.$javaClass.LEGACY_STONE_AXE;
+	}
+	public static get LEGACY_STONE_BUTTON(): Material {
+		return this.$javaClass.LEGACY_STONE_BUTTON;
+	}
+	public static get LEGACY_STONE_HOE(): Material {
+		return this.$javaClass.LEGACY_STONE_HOE;
+	}
+	public static get LEGACY_STONE_PICKAXE(): Material {
+		return this.$javaClass.LEGACY_STONE_PICKAXE;
+	}
+	public static get LEGACY_STONE_PLATE(): Material {
+		return this.$javaClass.LEGACY_STONE_PLATE;
+	}
+	public static get LEGACY_STONE_SLAB2(): Material {
+		return this.$javaClass.LEGACY_STONE_SLAB2;
+	}
+	public static get LEGACY_STONE_SPADE(): Material {
+		return this.$javaClass.LEGACY_STONE_SPADE;
+	}
+	public static get LEGACY_STONE_SWORD(): Material {
+		return this.$javaClass.LEGACY_STONE_SWORD;
+	}
+	public static get LEGACY_STORAGE_MINECART(): Material {
+		return this.$javaClass.LEGACY_STORAGE_MINECART;
+	}
+	public static get LEGACY_STRING(): Material {
+		return this.$javaClass.LEGACY_STRING;
+	}
+	public static get LEGACY_STRUCTURE_BLOCK(): Material {
+		return this.$javaClass.LEGACY_STRUCTURE_BLOCK;
+	}
+	public static get LEGACY_STRUCTURE_VOID(): Material {
+		return this.$javaClass.LEGACY_STRUCTURE_VOID;
+	}
+	public static get LEGACY_SUGAR(): Material {
+		return this.$javaClass.LEGACY_SUGAR;
+	}
+	public static get LEGACY_SUGAR_CANE(): Material {
+		return this.$javaClass.LEGACY_SUGAR_CANE;
+	}
+	public static get LEGACY_SUGAR_CANE_BLOCK(): Material {
+		return this.$javaClass.LEGACY_SUGAR_CANE_BLOCK;
+	}
+	public static get LEGACY_SULPHUR(): Material {
+		return this.$javaClass.LEGACY_SULPHUR;
+	}
+	public static get LEGACY_THIN_GLASS(): Material {
+		return this.$javaClass.LEGACY_THIN_GLASS;
+	}
+	public static get LEGACY_TIPPED_ARROW(): Material {
+		return this.$javaClass.LEGACY_TIPPED_ARROW;
+	}
+	public static get LEGACY_TNT(): Material {
+		return this.$javaClass.LEGACY_TNT;
+	}
+	public static get LEGACY_TORCH(): Material {
+		return this.$javaClass.LEGACY_TORCH;
+	}
+	public static get LEGACY_TOTEM(): Material {
+		return this.$javaClass.LEGACY_TOTEM;
+	}
+	public static get LEGACY_TRAPPED_CHEST(): Material {
+		return this.$javaClass.LEGACY_TRAPPED_CHEST;
+	}
+	public static get LEGACY_TRAP_DOOR(): Material {
+		return this.$javaClass.LEGACY_TRAP_DOOR;
+	}
+	public static get LEGACY_TRIPWIRE(): Material {
+		return this.$javaClass.LEGACY_TRIPWIRE;
+	}
+	public static get LEGACY_TRIPWIRE_HOOK(): Material {
+		return this.$javaClass.LEGACY_TRIPWIRE_HOOK;
+	}
+	public static get LEGACY_VINE(): Material {
+		return this.$javaClass.LEGACY_VINE;
+	}
+	public static get LEGACY_WALL_BANNER(): Material {
+		return this.$javaClass.LEGACY_WALL_BANNER;
+	}
+	public static get LEGACY_WALL_SIGN(): Material {
+		return this.$javaClass.LEGACY_WALL_SIGN;
+	}
+	public static get LEGACY_WATCH(): Material {
+		return this.$javaClass.LEGACY_WATCH;
+	}
+	public static get LEGACY_WATER(): Material {
+		return this.$javaClass.LEGACY_WATER;
+	}
+	public static get LEGACY_WATER_BUCKET(): Material {
+		return this.$javaClass.LEGACY_WATER_BUCKET;
+	}
+	public static get LEGACY_WATER_LILY(): Material {
+		return this.$javaClass.LEGACY_WATER_LILY;
+	}
+	public static get LEGACY_WEB(): Material {
+		return this.$javaClass.LEGACY_WEB;
+	}
+	public static get LEGACY_WHEAT(): Material {
+		return this.$javaClass.LEGACY_WHEAT;
+	}
+	public static get LEGACY_WHITE_GLAZED_TERRACOTTA(): Material {
+		return this.$javaClass.LEGACY_WHITE_GLAZED_TERRACOTTA;
+	}
+	public static get LEGACY_WHITE_SHULKER_BOX(): Material {
+		return this.$javaClass.LEGACY_WHITE_SHULKER_BOX;
+	}
+	public static get LEGACY_WOOD(): Material {
+		return this.$javaClass.LEGACY_WOOD;
+	}
+	public static get LEGACY_WOODEN_DOOR(): Material {
+		return this.$javaClass.LEGACY_WOODEN_DOOR;
+	}
+	public static get LEGACY_WOOD_AXE(): Material {
+		return this.$javaClass.LEGACY_WOOD_AXE;
+	}
+	public static get LEGACY_WOOD_BUTTON(): Material {
+		return this.$javaClass.LEGACY_WOOD_BUTTON;
+	}
+	public static get LEGACY_WOOD_DOOR(): Material {
+		return this.$javaClass.LEGACY_WOOD_DOOR;
+	}
+	public static get LEGACY_WOOD_DOUBLE_STEP(): Material {
+		return this.$javaClass.LEGACY_WOOD_DOUBLE_STEP;
+	}
+	public static get LEGACY_WOOD_HOE(): Material {
+		return this.$javaClass.LEGACY_WOOD_HOE;
+	}
+	public static get LEGACY_WOOD_PICKAXE(): Material {
+		return this.$javaClass.LEGACY_WOOD_PICKAXE;
+	}
+	public static get LEGACY_WOOD_PLATE(): Material {
+		return this.$javaClass.LEGACY_WOOD_PLATE;
+	}
+	public static get LEGACY_WOOD_SPADE(): Material {
+		return this.$javaClass.LEGACY_WOOD_SPADE;
+	}
+	public static get LEGACY_WOOD_STAIRS(): Material {
+		return this.$javaClass.LEGACY_WOOD_STAIRS;
+	}
+	public static get LEGACY_WOOD_STEP(): Material {
+		return this.$javaClass.LEGACY_WOOD_STEP;
+	}
+	public static get LEGACY_WOOD_SWORD(): Material {
+		return this.$javaClass.LEGACY_WOOD_SWORD;
+	}
+	public static get LEGACY_WOOL(): Material {
+		return this.$javaClass.LEGACY_WOOL;
+	}
+	public static get LEGACY_WORKBENCH(): Material {
+		return this.$javaClass.LEGACY_WORKBENCH;
+	}
+	public static get LEGACY_WRITTEN_BOOK(): Material {
+		return this.$javaClass.LEGACY_WRITTEN_BOOK;
+	}
+	public static get LEGACY_YELLOW_FLOWER(): Material {
+		return this.$javaClass.LEGACY_YELLOW_FLOWER;
+	}
+	public static get LEGACY_YELLOW_GLAZED_TERRACOTTA(): Material {
+		return this.$javaClass.LEGACY_YELLOW_GLAZED_TERRACOTTA;
+	}
+	public static get LEGACY_YELLOW_SHULKER_BOX(): Material {
+		return this.$javaClass.LEGACY_YELLOW_SHULKER_BOX;
 	}
 	public static get LEVER(): Material {
 		return this.$javaClass.LEVER;
@@ -2966,1395 +4355,6 @@ export default class Material {
 	}
 	public static get ZOMBIE_WALL_HEAD(): Material {
 		return this.$javaClass.ZOMBIE_WALL_HEAD;
-	}
-	public static get LEGACY_AIR(): Material {
-		return this.$javaClass.LEGACY_AIR;
-	}
-	public static get LEGACY_STONE(): Material {
-		return this.$javaClass.LEGACY_STONE;
-	}
-	public static get LEGACY_GRASS(): Material {
-		return this.$javaClass.LEGACY_GRASS;
-	}
-	public static get LEGACY_DIRT(): Material {
-		return this.$javaClass.LEGACY_DIRT;
-	}
-	public static get LEGACY_COBBLESTONE(): Material {
-		return this.$javaClass.LEGACY_COBBLESTONE;
-	}
-	public static get LEGACY_WOOD(): Material {
-		return this.$javaClass.LEGACY_WOOD;
-	}
-	public static get LEGACY_SAPLING(): Material {
-		return this.$javaClass.LEGACY_SAPLING;
-	}
-	public static get LEGACY_BEDROCK(): Material {
-		return this.$javaClass.LEGACY_BEDROCK;
-	}
-	public static get LEGACY_WATER(): Material {
-		return this.$javaClass.LEGACY_WATER;
-	}
-	public static get LEGACY_STATIONARY_WATER(): Material {
-		return this.$javaClass.LEGACY_STATIONARY_WATER;
-	}
-	public static get LEGACY_LAVA(): Material {
-		return this.$javaClass.LEGACY_LAVA;
-	}
-	public static get LEGACY_STATIONARY_LAVA(): Material {
-		return this.$javaClass.LEGACY_STATIONARY_LAVA;
-	}
-	public static get LEGACY_SAND(): Material {
-		return this.$javaClass.LEGACY_SAND;
-	}
-	public static get LEGACY_GRAVEL(): Material {
-		return this.$javaClass.LEGACY_GRAVEL;
-	}
-	public static get LEGACY_GOLD_ORE(): Material {
-		return this.$javaClass.LEGACY_GOLD_ORE;
-	}
-	public static get LEGACY_IRON_ORE(): Material {
-		return this.$javaClass.LEGACY_IRON_ORE;
-	}
-	public static get LEGACY_COAL_ORE(): Material {
-		return this.$javaClass.LEGACY_COAL_ORE;
-	}
-	public static get LEGACY_LOG(): Material {
-		return this.$javaClass.LEGACY_LOG;
-	}
-	public static get LEGACY_LEAVES(): Material {
-		return this.$javaClass.LEGACY_LEAVES;
-	}
-	public static get LEGACY_SPONGE(): Material {
-		return this.$javaClass.LEGACY_SPONGE;
-	}
-	public static get LEGACY_GLASS(): Material {
-		return this.$javaClass.LEGACY_GLASS;
-	}
-	public static get LEGACY_LAPIS_ORE(): Material {
-		return this.$javaClass.LEGACY_LAPIS_ORE;
-	}
-	public static get LEGACY_LAPIS_BLOCK(): Material {
-		return this.$javaClass.LEGACY_LAPIS_BLOCK;
-	}
-	public static get LEGACY_DISPENSER(): Material {
-		return this.$javaClass.LEGACY_DISPENSER;
-	}
-	public static get LEGACY_SANDSTONE(): Material {
-		return this.$javaClass.LEGACY_SANDSTONE;
-	}
-	public static get LEGACY_NOTE_BLOCK(): Material {
-		return this.$javaClass.LEGACY_NOTE_BLOCK;
-	}
-	public static get LEGACY_BED_BLOCK(): Material {
-		return this.$javaClass.LEGACY_BED_BLOCK;
-	}
-	public static get LEGACY_POWERED_RAIL(): Material {
-		return this.$javaClass.LEGACY_POWERED_RAIL;
-	}
-	public static get LEGACY_DETECTOR_RAIL(): Material {
-		return this.$javaClass.LEGACY_DETECTOR_RAIL;
-	}
-	public static get LEGACY_PISTON_STICKY_BASE(): Material {
-		return this.$javaClass.LEGACY_PISTON_STICKY_BASE;
-	}
-	public static get LEGACY_WEB(): Material {
-		return this.$javaClass.LEGACY_WEB;
-	}
-	public static get LEGACY_LONG_GRASS(): Material {
-		return this.$javaClass.LEGACY_LONG_GRASS;
-	}
-	public static get LEGACY_DEAD_BUSH(): Material {
-		return this.$javaClass.LEGACY_DEAD_BUSH;
-	}
-	public static get LEGACY_PISTON_BASE(): Material {
-		return this.$javaClass.LEGACY_PISTON_BASE;
-	}
-	public static get LEGACY_PISTON_EXTENSION(): Material {
-		return this.$javaClass.LEGACY_PISTON_EXTENSION;
-	}
-	public static get LEGACY_WOOL(): Material {
-		return this.$javaClass.LEGACY_WOOL;
-	}
-	public static get LEGACY_PISTON_MOVING_PIECE(): Material {
-		return this.$javaClass.LEGACY_PISTON_MOVING_PIECE;
-	}
-	public static get LEGACY_YELLOW_FLOWER(): Material {
-		return this.$javaClass.LEGACY_YELLOW_FLOWER;
-	}
-	public static get LEGACY_RED_ROSE(): Material {
-		return this.$javaClass.LEGACY_RED_ROSE;
-	}
-	public static get LEGACY_BROWN_MUSHROOM(): Material {
-		return this.$javaClass.LEGACY_BROWN_MUSHROOM;
-	}
-	public static get LEGACY_RED_MUSHROOM(): Material {
-		return this.$javaClass.LEGACY_RED_MUSHROOM;
-	}
-	public static get LEGACY_GOLD_BLOCK(): Material {
-		return this.$javaClass.LEGACY_GOLD_BLOCK;
-	}
-	public static get LEGACY_IRON_BLOCK(): Material {
-		return this.$javaClass.LEGACY_IRON_BLOCK;
-	}
-	public static get LEGACY_DOUBLE_STEP(): Material {
-		return this.$javaClass.LEGACY_DOUBLE_STEP;
-	}
-	public static get LEGACY_STEP(): Material {
-		return this.$javaClass.LEGACY_STEP;
-	}
-	public static get LEGACY_BRICK(): Material {
-		return this.$javaClass.LEGACY_BRICK;
-	}
-	public static get LEGACY_TNT(): Material {
-		return this.$javaClass.LEGACY_TNT;
-	}
-	public static get LEGACY_BOOKSHELF(): Material {
-		return this.$javaClass.LEGACY_BOOKSHELF;
-	}
-	public static get LEGACY_MOSSY_COBBLESTONE(): Material {
-		return this.$javaClass.LEGACY_MOSSY_COBBLESTONE;
-	}
-	public static get LEGACY_OBSIDIAN(): Material {
-		return this.$javaClass.LEGACY_OBSIDIAN;
-	}
-	public static get LEGACY_TORCH(): Material {
-		return this.$javaClass.LEGACY_TORCH;
-	}
-	public static get LEGACY_FIRE(): Material {
-		return this.$javaClass.LEGACY_FIRE;
-	}
-	public static get LEGACY_MOB_SPAWNER(): Material {
-		return this.$javaClass.LEGACY_MOB_SPAWNER;
-	}
-	public static get LEGACY_WOOD_STAIRS(): Material {
-		return this.$javaClass.LEGACY_WOOD_STAIRS;
-	}
-	public static get LEGACY_CHEST(): Material {
-		return this.$javaClass.LEGACY_CHEST;
-	}
-	public static get LEGACY_REDSTONE_WIRE(): Material {
-		return this.$javaClass.LEGACY_REDSTONE_WIRE;
-	}
-	public static get LEGACY_DIAMOND_ORE(): Material {
-		return this.$javaClass.LEGACY_DIAMOND_ORE;
-	}
-	public static get LEGACY_DIAMOND_BLOCK(): Material {
-		return this.$javaClass.LEGACY_DIAMOND_BLOCK;
-	}
-	public static get LEGACY_WORKBENCH(): Material {
-		return this.$javaClass.LEGACY_WORKBENCH;
-	}
-	public static get LEGACY_CROPS(): Material {
-		return this.$javaClass.LEGACY_CROPS;
-	}
-	public static get LEGACY_SOIL(): Material {
-		return this.$javaClass.LEGACY_SOIL;
-	}
-	public static get LEGACY_FURNACE(): Material {
-		return this.$javaClass.LEGACY_FURNACE;
-	}
-	public static get LEGACY_BURNING_FURNACE(): Material {
-		return this.$javaClass.LEGACY_BURNING_FURNACE;
-	}
-	public static get LEGACY_SIGN_POST(): Material {
-		return this.$javaClass.LEGACY_SIGN_POST;
-	}
-	public static get LEGACY_WOODEN_DOOR(): Material {
-		return this.$javaClass.LEGACY_WOODEN_DOOR;
-	}
-	public static get LEGACY_LADDER(): Material {
-		return this.$javaClass.LEGACY_LADDER;
-	}
-	public static get LEGACY_RAILS(): Material {
-		return this.$javaClass.LEGACY_RAILS;
-	}
-	public static get LEGACY_COBBLESTONE_STAIRS(): Material {
-		return this.$javaClass.LEGACY_COBBLESTONE_STAIRS;
-	}
-	public static get LEGACY_WALL_SIGN(): Material {
-		return this.$javaClass.LEGACY_WALL_SIGN;
-	}
-	public static get LEGACY_LEVER(): Material {
-		return this.$javaClass.LEGACY_LEVER;
-	}
-	public static get LEGACY_STONE_PLATE(): Material {
-		return this.$javaClass.LEGACY_STONE_PLATE;
-	}
-	public static get LEGACY_IRON_DOOR_BLOCK(): Material {
-		return this.$javaClass.LEGACY_IRON_DOOR_BLOCK;
-	}
-	public static get LEGACY_WOOD_PLATE(): Material {
-		return this.$javaClass.LEGACY_WOOD_PLATE;
-	}
-	public static get LEGACY_REDSTONE_ORE(): Material {
-		return this.$javaClass.LEGACY_REDSTONE_ORE;
-	}
-	public static get LEGACY_GLOWING_REDSTONE_ORE(): Material {
-		return this.$javaClass.LEGACY_GLOWING_REDSTONE_ORE;
-	}
-	public static get LEGACY_REDSTONE_TORCH_OFF(): Material {
-		return this.$javaClass.LEGACY_REDSTONE_TORCH_OFF;
-	}
-	public static get LEGACY_REDSTONE_TORCH_ON(): Material {
-		return this.$javaClass.LEGACY_REDSTONE_TORCH_ON;
-	}
-	public static get LEGACY_STONE_BUTTON(): Material {
-		return this.$javaClass.LEGACY_STONE_BUTTON;
-	}
-	public static get LEGACY_SNOW(): Material {
-		return this.$javaClass.LEGACY_SNOW;
-	}
-	public static get LEGACY_ICE(): Material {
-		return this.$javaClass.LEGACY_ICE;
-	}
-	public static get LEGACY_SNOW_BLOCK(): Material {
-		return this.$javaClass.LEGACY_SNOW_BLOCK;
-	}
-	public static get LEGACY_CACTUS(): Material {
-		return this.$javaClass.LEGACY_CACTUS;
-	}
-	public static get LEGACY_CLAY(): Material {
-		return this.$javaClass.LEGACY_CLAY;
-	}
-	public static get LEGACY_SUGAR_CANE_BLOCK(): Material {
-		return this.$javaClass.LEGACY_SUGAR_CANE_BLOCK;
-	}
-	public static get LEGACY_JUKEBOX(): Material {
-		return this.$javaClass.LEGACY_JUKEBOX;
-	}
-	public static get LEGACY_FENCE(): Material {
-		return this.$javaClass.LEGACY_FENCE;
-	}
-	public static get LEGACY_PUMPKIN(): Material {
-		return this.$javaClass.LEGACY_PUMPKIN;
-	}
-	public static get LEGACY_NETHERRACK(): Material {
-		return this.$javaClass.LEGACY_NETHERRACK;
-	}
-	public static get LEGACY_SOUL_SAND(): Material {
-		return this.$javaClass.LEGACY_SOUL_SAND;
-	}
-	public static get LEGACY_GLOWSTONE(): Material {
-		return this.$javaClass.LEGACY_GLOWSTONE;
-	}
-	public static get LEGACY_PORTAL(): Material {
-		return this.$javaClass.LEGACY_PORTAL;
-	}
-	public static get LEGACY_JACK_O_LANTERN(): Material {
-		return this.$javaClass.LEGACY_JACK_O_LANTERN;
-	}
-	public static get LEGACY_CAKE_BLOCK(): Material {
-		return this.$javaClass.LEGACY_CAKE_BLOCK;
-	}
-	public static get LEGACY_DIODE_BLOCK_OFF(): Material {
-		return this.$javaClass.LEGACY_DIODE_BLOCK_OFF;
-	}
-	public static get LEGACY_DIODE_BLOCK_ON(): Material {
-		return this.$javaClass.LEGACY_DIODE_BLOCK_ON;
-	}
-	public static get LEGACY_STAINED_GLASS(): Material {
-		return this.$javaClass.LEGACY_STAINED_GLASS;
-	}
-	public static get LEGACY_TRAP_DOOR(): Material {
-		return this.$javaClass.LEGACY_TRAP_DOOR;
-	}
-	public static get LEGACY_MONSTER_EGGS(): Material {
-		return this.$javaClass.LEGACY_MONSTER_EGGS;
-	}
-	public static get LEGACY_SMOOTH_BRICK(): Material {
-		return this.$javaClass.LEGACY_SMOOTH_BRICK;
-	}
-	public static get LEGACY_HUGE_MUSHROOM_1(): Material {
-		return this.$javaClass.LEGACY_HUGE_MUSHROOM_1;
-	}
-	public static get LEGACY_HUGE_MUSHROOM_2(): Material {
-		return this.$javaClass.LEGACY_HUGE_MUSHROOM_2;
-	}
-	public static get LEGACY_IRON_FENCE(): Material {
-		return this.$javaClass.LEGACY_IRON_FENCE;
-	}
-	public static get LEGACY_THIN_GLASS(): Material {
-		return this.$javaClass.LEGACY_THIN_GLASS;
-	}
-	public static get LEGACY_MELON_BLOCK(): Material {
-		return this.$javaClass.LEGACY_MELON_BLOCK;
-	}
-	public static get LEGACY_PUMPKIN_STEM(): Material {
-		return this.$javaClass.LEGACY_PUMPKIN_STEM;
-	}
-	public static get LEGACY_MELON_STEM(): Material {
-		return this.$javaClass.LEGACY_MELON_STEM;
-	}
-	public static get LEGACY_VINE(): Material {
-		return this.$javaClass.LEGACY_VINE;
-	}
-	public static get LEGACY_FENCE_GATE(): Material {
-		return this.$javaClass.LEGACY_FENCE_GATE;
-	}
-	public static get LEGACY_BRICK_STAIRS(): Material {
-		return this.$javaClass.LEGACY_BRICK_STAIRS;
-	}
-	public static get LEGACY_SMOOTH_STAIRS(): Material {
-		return this.$javaClass.LEGACY_SMOOTH_STAIRS;
-	}
-	public static get LEGACY_MYCEL(): Material {
-		return this.$javaClass.LEGACY_MYCEL;
-	}
-	public static get LEGACY_WATER_LILY(): Material {
-		return this.$javaClass.LEGACY_WATER_LILY;
-	}
-	public static get LEGACY_NETHER_BRICK(): Material {
-		return this.$javaClass.LEGACY_NETHER_BRICK;
-	}
-	public static get LEGACY_NETHER_FENCE(): Material {
-		return this.$javaClass.LEGACY_NETHER_FENCE;
-	}
-	public static get LEGACY_NETHER_BRICK_STAIRS(): Material {
-		return this.$javaClass.LEGACY_NETHER_BRICK_STAIRS;
-	}
-	public static get LEGACY_NETHER_WARTS(): Material {
-		return this.$javaClass.LEGACY_NETHER_WARTS;
-	}
-	public static get LEGACY_ENCHANTMENT_TABLE(): Material {
-		return this.$javaClass.LEGACY_ENCHANTMENT_TABLE;
-	}
-	public static get LEGACY_BREWING_STAND(): Material {
-		return this.$javaClass.LEGACY_BREWING_STAND;
-	}
-	public static get LEGACY_CAULDRON(): Material {
-		return this.$javaClass.LEGACY_CAULDRON;
-	}
-	public static get LEGACY_ENDER_PORTAL(): Material {
-		return this.$javaClass.LEGACY_ENDER_PORTAL;
-	}
-	public static get LEGACY_ENDER_PORTAL_FRAME(): Material {
-		return this.$javaClass.LEGACY_ENDER_PORTAL_FRAME;
-	}
-	public static get LEGACY_ENDER_STONE(): Material {
-		return this.$javaClass.LEGACY_ENDER_STONE;
-	}
-	public static get LEGACY_DRAGON_EGG(): Material {
-		return this.$javaClass.LEGACY_DRAGON_EGG;
-	}
-	public static get LEGACY_REDSTONE_LAMP_OFF(): Material {
-		return this.$javaClass.LEGACY_REDSTONE_LAMP_OFF;
-	}
-	public static get LEGACY_REDSTONE_LAMP_ON(): Material {
-		return this.$javaClass.LEGACY_REDSTONE_LAMP_ON;
-	}
-	public static get LEGACY_WOOD_DOUBLE_STEP(): Material {
-		return this.$javaClass.LEGACY_WOOD_DOUBLE_STEP;
-	}
-	public static get LEGACY_WOOD_STEP(): Material {
-		return this.$javaClass.LEGACY_WOOD_STEP;
-	}
-	public static get LEGACY_COCOA(): Material {
-		return this.$javaClass.LEGACY_COCOA;
-	}
-	public static get LEGACY_SANDSTONE_STAIRS(): Material {
-		return this.$javaClass.LEGACY_SANDSTONE_STAIRS;
-	}
-	public static get LEGACY_EMERALD_ORE(): Material {
-		return this.$javaClass.LEGACY_EMERALD_ORE;
-	}
-	public static get LEGACY_ENDER_CHEST(): Material {
-		return this.$javaClass.LEGACY_ENDER_CHEST;
-	}
-	public static get LEGACY_TRIPWIRE_HOOK(): Material {
-		return this.$javaClass.LEGACY_TRIPWIRE_HOOK;
-	}
-	public static get LEGACY_TRIPWIRE(): Material {
-		return this.$javaClass.LEGACY_TRIPWIRE;
-	}
-	public static get LEGACY_EMERALD_BLOCK(): Material {
-		return this.$javaClass.LEGACY_EMERALD_BLOCK;
-	}
-	public static get LEGACY_SPRUCE_WOOD_STAIRS(): Material {
-		return this.$javaClass.LEGACY_SPRUCE_WOOD_STAIRS;
-	}
-	public static get LEGACY_BIRCH_WOOD_STAIRS(): Material {
-		return this.$javaClass.LEGACY_BIRCH_WOOD_STAIRS;
-	}
-	public static get LEGACY_JUNGLE_WOOD_STAIRS(): Material {
-		return this.$javaClass.LEGACY_JUNGLE_WOOD_STAIRS;
-	}
-	public static get LEGACY_COMMAND(): Material {
-		return this.$javaClass.LEGACY_COMMAND;
-	}
-	public static get LEGACY_BEACON(): Material {
-		return this.$javaClass.LEGACY_BEACON;
-	}
-	public static get LEGACY_COBBLE_WALL(): Material {
-		return this.$javaClass.LEGACY_COBBLE_WALL;
-	}
-	public static get LEGACY_FLOWER_POT(): Material {
-		return this.$javaClass.LEGACY_FLOWER_POT;
-	}
-	public static get LEGACY_CARROT(): Material {
-		return this.$javaClass.LEGACY_CARROT;
-	}
-	public static get LEGACY_POTATO(): Material {
-		return this.$javaClass.LEGACY_POTATO;
-	}
-	public static get LEGACY_WOOD_BUTTON(): Material {
-		return this.$javaClass.LEGACY_WOOD_BUTTON;
-	}
-	public static get LEGACY_SKULL(): Material {
-		return this.$javaClass.LEGACY_SKULL;
-	}
-	public static get LEGACY_ANVIL(): Material {
-		return this.$javaClass.LEGACY_ANVIL;
-	}
-	public static get LEGACY_TRAPPED_CHEST(): Material {
-		return this.$javaClass.LEGACY_TRAPPED_CHEST;
-	}
-	public static get LEGACY_GOLD_PLATE(): Material {
-		return this.$javaClass.LEGACY_GOLD_PLATE;
-	}
-	public static get LEGACY_IRON_PLATE(): Material {
-		return this.$javaClass.LEGACY_IRON_PLATE;
-	}
-	public static get LEGACY_REDSTONE_COMPARATOR_OFF(): Material {
-		return this.$javaClass.LEGACY_REDSTONE_COMPARATOR_OFF;
-	}
-	public static get LEGACY_REDSTONE_COMPARATOR_ON(): Material {
-		return this.$javaClass.LEGACY_REDSTONE_COMPARATOR_ON;
-	}
-	public static get LEGACY_DAYLIGHT_DETECTOR(): Material {
-		return this.$javaClass.LEGACY_DAYLIGHT_DETECTOR;
-	}
-	public static get LEGACY_REDSTONE_BLOCK(): Material {
-		return this.$javaClass.LEGACY_REDSTONE_BLOCK;
-	}
-	public static get LEGACY_QUARTZ_ORE(): Material {
-		return this.$javaClass.LEGACY_QUARTZ_ORE;
-	}
-	public static get LEGACY_HOPPER(): Material {
-		return this.$javaClass.LEGACY_HOPPER;
-	}
-	public static get LEGACY_QUARTZ_BLOCK(): Material {
-		return this.$javaClass.LEGACY_QUARTZ_BLOCK;
-	}
-	public static get LEGACY_QUARTZ_STAIRS(): Material {
-		return this.$javaClass.LEGACY_QUARTZ_STAIRS;
-	}
-	public static get LEGACY_ACTIVATOR_RAIL(): Material {
-		return this.$javaClass.LEGACY_ACTIVATOR_RAIL;
-	}
-	public static get LEGACY_DROPPER(): Material {
-		return this.$javaClass.LEGACY_DROPPER;
-	}
-	public static get LEGACY_STAINED_CLAY(): Material {
-		return this.$javaClass.LEGACY_STAINED_CLAY;
-	}
-	public static get LEGACY_STAINED_GLASS_PANE(): Material {
-		return this.$javaClass.LEGACY_STAINED_GLASS_PANE;
-	}
-	public static get LEGACY_LEAVES_2(): Material {
-		return this.$javaClass.LEGACY_LEAVES_2;
-	}
-	public static get LEGACY_LOG_2(): Material {
-		return this.$javaClass.LEGACY_LOG_2;
-	}
-	public static get LEGACY_ACACIA_STAIRS(): Material {
-		return this.$javaClass.LEGACY_ACACIA_STAIRS;
-	}
-	public static get LEGACY_DARK_OAK_STAIRS(): Material {
-		return this.$javaClass.LEGACY_DARK_OAK_STAIRS;
-	}
-	public static get LEGACY_SLIME_BLOCK(): Material {
-		return this.$javaClass.LEGACY_SLIME_BLOCK;
-	}
-	public static get LEGACY_BARRIER(): Material {
-		return this.$javaClass.LEGACY_BARRIER;
-	}
-	public static get LEGACY_IRON_TRAPDOOR(): Material {
-		return this.$javaClass.LEGACY_IRON_TRAPDOOR;
-	}
-	public static get LEGACY_PRISMARINE(): Material {
-		return this.$javaClass.LEGACY_PRISMARINE;
-	}
-	public static get LEGACY_SEA_LANTERN(): Material {
-		return this.$javaClass.LEGACY_SEA_LANTERN;
-	}
-	public static get LEGACY_HAY_BLOCK(): Material {
-		return this.$javaClass.LEGACY_HAY_BLOCK;
-	}
-	public static get LEGACY_CARPET(): Material {
-		return this.$javaClass.LEGACY_CARPET;
-	}
-	public static get LEGACY_HARD_CLAY(): Material {
-		return this.$javaClass.LEGACY_HARD_CLAY;
-	}
-	public static get LEGACY_COAL_BLOCK(): Material {
-		return this.$javaClass.LEGACY_COAL_BLOCK;
-	}
-	public static get LEGACY_PACKED_ICE(): Material {
-		return this.$javaClass.LEGACY_PACKED_ICE;
-	}
-	public static get LEGACY_DOUBLE_PLANT(): Material {
-		return this.$javaClass.LEGACY_DOUBLE_PLANT;
-	}
-	public static get LEGACY_STANDING_BANNER(): Material {
-		return this.$javaClass.LEGACY_STANDING_BANNER;
-	}
-	public static get LEGACY_WALL_BANNER(): Material {
-		return this.$javaClass.LEGACY_WALL_BANNER;
-	}
-	public static get LEGACY_DAYLIGHT_DETECTOR_INVERTED(): Material {
-		return this.$javaClass.LEGACY_DAYLIGHT_DETECTOR_INVERTED;
-	}
-	public static get LEGACY_RED_SANDSTONE(): Material {
-		return this.$javaClass.LEGACY_RED_SANDSTONE;
-	}
-	public static get LEGACY_RED_SANDSTONE_STAIRS(): Material {
-		return this.$javaClass.LEGACY_RED_SANDSTONE_STAIRS;
-	}
-	public static get LEGACY_DOUBLE_STONE_SLAB2(): Material {
-		return this.$javaClass.LEGACY_DOUBLE_STONE_SLAB2;
-	}
-	public static get LEGACY_STONE_SLAB2(): Material {
-		return this.$javaClass.LEGACY_STONE_SLAB2;
-	}
-	public static get LEGACY_SPRUCE_FENCE_GATE(): Material {
-		return this.$javaClass.LEGACY_SPRUCE_FENCE_GATE;
-	}
-	public static get LEGACY_BIRCH_FENCE_GATE(): Material {
-		return this.$javaClass.LEGACY_BIRCH_FENCE_GATE;
-	}
-	public static get LEGACY_JUNGLE_FENCE_GATE(): Material {
-		return this.$javaClass.LEGACY_JUNGLE_FENCE_GATE;
-	}
-	public static get LEGACY_DARK_OAK_FENCE_GATE(): Material {
-		return this.$javaClass.LEGACY_DARK_OAK_FENCE_GATE;
-	}
-	public static get LEGACY_ACACIA_FENCE_GATE(): Material {
-		return this.$javaClass.LEGACY_ACACIA_FENCE_GATE;
-	}
-	public static get LEGACY_SPRUCE_FENCE(): Material {
-		return this.$javaClass.LEGACY_SPRUCE_FENCE;
-	}
-	public static get LEGACY_BIRCH_FENCE(): Material {
-		return this.$javaClass.LEGACY_BIRCH_FENCE;
-	}
-	public static get LEGACY_JUNGLE_FENCE(): Material {
-		return this.$javaClass.LEGACY_JUNGLE_FENCE;
-	}
-	public static get LEGACY_DARK_OAK_FENCE(): Material {
-		return this.$javaClass.LEGACY_DARK_OAK_FENCE;
-	}
-	public static get LEGACY_ACACIA_FENCE(): Material {
-		return this.$javaClass.LEGACY_ACACIA_FENCE;
-	}
-	public static get LEGACY_SPRUCE_DOOR(): Material {
-		return this.$javaClass.LEGACY_SPRUCE_DOOR;
-	}
-	public static get LEGACY_BIRCH_DOOR(): Material {
-		return this.$javaClass.LEGACY_BIRCH_DOOR;
-	}
-	public static get LEGACY_JUNGLE_DOOR(): Material {
-		return this.$javaClass.LEGACY_JUNGLE_DOOR;
-	}
-	public static get LEGACY_ACACIA_DOOR(): Material {
-		return this.$javaClass.LEGACY_ACACIA_DOOR;
-	}
-	public static get LEGACY_DARK_OAK_DOOR(): Material {
-		return this.$javaClass.LEGACY_DARK_OAK_DOOR;
-	}
-	public static get LEGACY_END_ROD(): Material {
-		return this.$javaClass.LEGACY_END_ROD;
-	}
-	public static get LEGACY_CHORUS_PLANT(): Material {
-		return this.$javaClass.LEGACY_CHORUS_PLANT;
-	}
-	public static get LEGACY_CHORUS_FLOWER(): Material {
-		return this.$javaClass.LEGACY_CHORUS_FLOWER;
-	}
-	public static get LEGACY_PURPUR_BLOCK(): Material {
-		return this.$javaClass.LEGACY_PURPUR_BLOCK;
-	}
-	public static get LEGACY_PURPUR_PILLAR(): Material {
-		return this.$javaClass.LEGACY_PURPUR_PILLAR;
-	}
-	public static get LEGACY_PURPUR_STAIRS(): Material {
-		return this.$javaClass.LEGACY_PURPUR_STAIRS;
-	}
-	public static get LEGACY_PURPUR_DOUBLE_SLAB(): Material {
-		return this.$javaClass.LEGACY_PURPUR_DOUBLE_SLAB;
-	}
-	public static get LEGACY_PURPUR_SLAB(): Material {
-		return this.$javaClass.LEGACY_PURPUR_SLAB;
-	}
-	public static get LEGACY_END_BRICKS(): Material {
-		return this.$javaClass.LEGACY_END_BRICKS;
-	}
-	public static get LEGACY_BEETROOT_BLOCK(): Material {
-		return this.$javaClass.LEGACY_BEETROOT_BLOCK;
-	}
-	public static get LEGACY_GRASS_PATH(): Material {
-		return this.$javaClass.LEGACY_GRASS_PATH;
-	}
-	public static get LEGACY_END_GATEWAY(): Material {
-		return this.$javaClass.LEGACY_END_GATEWAY;
-	}
-	public static get LEGACY_COMMAND_REPEATING(): Material {
-		return this.$javaClass.LEGACY_COMMAND_REPEATING;
-	}
-	public static get LEGACY_COMMAND_CHAIN(): Material {
-		return this.$javaClass.LEGACY_COMMAND_CHAIN;
-	}
-	public static get LEGACY_FROSTED_ICE(): Material {
-		return this.$javaClass.LEGACY_FROSTED_ICE;
-	}
-	public static get LEGACY_MAGMA(): Material {
-		return this.$javaClass.LEGACY_MAGMA;
-	}
-	public static get LEGACY_NETHER_WART_BLOCK(): Material {
-		return this.$javaClass.LEGACY_NETHER_WART_BLOCK;
-	}
-	public static get LEGACY_RED_NETHER_BRICK(): Material {
-		return this.$javaClass.LEGACY_RED_NETHER_BRICK;
-	}
-	public static get LEGACY_BONE_BLOCK(): Material {
-		return this.$javaClass.LEGACY_BONE_BLOCK;
-	}
-	public static get LEGACY_STRUCTURE_VOID(): Material {
-		return this.$javaClass.LEGACY_STRUCTURE_VOID;
-	}
-	public static get LEGACY_OBSERVER(): Material {
-		return this.$javaClass.LEGACY_OBSERVER;
-	}
-	public static get LEGACY_WHITE_SHULKER_BOX(): Material {
-		return this.$javaClass.LEGACY_WHITE_SHULKER_BOX;
-	}
-	public static get LEGACY_ORANGE_SHULKER_BOX(): Material {
-		return this.$javaClass.LEGACY_ORANGE_SHULKER_BOX;
-	}
-	public static get LEGACY_MAGENTA_SHULKER_BOX(): Material {
-		return this.$javaClass.LEGACY_MAGENTA_SHULKER_BOX;
-	}
-	public static get LEGACY_LIGHT_BLUE_SHULKER_BOX(): Material {
-		return this.$javaClass.LEGACY_LIGHT_BLUE_SHULKER_BOX;
-	}
-	public static get LEGACY_YELLOW_SHULKER_BOX(): Material {
-		return this.$javaClass.LEGACY_YELLOW_SHULKER_BOX;
-	}
-	public static get LEGACY_LIME_SHULKER_BOX(): Material {
-		return this.$javaClass.LEGACY_LIME_SHULKER_BOX;
-	}
-	public static get LEGACY_PINK_SHULKER_BOX(): Material {
-		return this.$javaClass.LEGACY_PINK_SHULKER_BOX;
-	}
-	public static get LEGACY_GRAY_SHULKER_BOX(): Material {
-		return this.$javaClass.LEGACY_GRAY_SHULKER_BOX;
-	}
-	public static get LEGACY_SILVER_SHULKER_BOX(): Material {
-		return this.$javaClass.LEGACY_SILVER_SHULKER_BOX;
-	}
-	public static get LEGACY_CYAN_SHULKER_BOX(): Material {
-		return this.$javaClass.LEGACY_CYAN_SHULKER_BOX;
-	}
-	public static get LEGACY_PURPLE_SHULKER_BOX(): Material {
-		return this.$javaClass.LEGACY_PURPLE_SHULKER_BOX;
-	}
-	public static get LEGACY_BLUE_SHULKER_BOX(): Material {
-		return this.$javaClass.LEGACY_BLUE_SHULKER_BOX;
-	}
-	public static get LEGACY_BROWN_SHULKER_BOX(): Material {
-		return this.$javaClass.LEGACY_BROWN_SHULKER_BOX;
-	}
-	public static get LEGACY_GREEN_SHULKER_BOX(): Material {
-		return this.$javaClass.LEGACY_GREEN_SHULKER_BOX;
-	}
-	public static get LEGACY_RED_SHULKER_BOX(): Material {
-		return this.$javaClass.LEGACY_RED_SHULKER_BOX;
-	}
-	public static get LEGACY_BLACK_SHULKER_BOX(): Material {
-		return this.$javaClass.LEGACY_BLACK_SHULKER_BOX;
-	}
-	public static get LEGACY_WHITE_GLAZED_TERRACOTTA(): Material {
-		return this.$javaClass.LEGACY_WHITE_GLAZED_TERRACOTTA;
-	}
-	public static get LEGACY_ORANGE_GLAZED_TERRACOTTA(): Material {
-		return this.$javaClass.LEGACY_ORANGE_GLAZED_TERRACOTTA;
-	}
-	public static get LEGACY_MAGENTA_GLAZED_TERRACOTTA(): Material {
-		return this.$javaClass.LEGACY_MAGENTA_GLAZED_TERRACOTTA;
-	}
-	public static get LEGACY_LIGHT_BLUE_GLAZED_TERRACOTTA(): Material {
-		return this.$javaClass.LEGACY_LIGHT_BLUE_GLAZED_TERRACOTTA;
-	}
-	public static get LEGACY_YELLOW_GLAZED_TERRACOTTA(): Material {
-		return this.$javaClass.LEGACY_YELLOW_GLAZED_TERRACOTTA;
-	}
-	public static get LEGACY_LIME_GLAZED_TERRACOTTA(): Material {
-		return this.$javaClass.LEGACY_LIME_GLAZED_TERRACOTTA;
-	}
-	public static get LEGACY_PINK_GLAZED_TERRACOTTA(): Material {
-		return this.$javaClass.LEGACY_PINK_GLAZED_TERRACOTTA;
-	}
-	public static get LEGACY_GRAY_GLAZED_TERRACOTTA(): Material {
-		return this.$javaClass.LEGACY_GRAY_GLAZED_TERRACOTTA;
-	}
-	public static get LEGACY_SILVER_GLAZED_TERRACOTTA(): Material {
-		return this.$javaClass.LEGACY_SILVER_GLAZED_TERRACOTTA;
-	}
-	public static get LEGACY_CYAN_GLAZED_TERRACOTTA(): Material {
-		return this.$javaClass.LEGACY_CYAN_GLAZED_TERRACOTTA;
-	}
-	public static get LEGACY_PURPLE_GLAZED_TERRACOTTA(): Material {
-		return this.$javaClass.LEGACY_PURPLE_GLAZED_TERRACOTTA;
-	}
-	public static get LEGACY_BLUE_GLAZED_TERRACOTTA(): Material {
-		return this.$javaClass.LEGACY_BLUE_GLAZED_TERRACOTTA;
-	}
-	public static get LEGACY_BROWN_GLAZED_TERRACOTTA(): Material {
-		return this.$javaClass.LEGACY_BROWN_GLAZED_TERRACOTTA;
-	}
-	public static get LEGACY_GREEN_GLAZED_TERRACOTTA(): Material {
-		return this.$javaClass.LEGACY_GREEN_GLAZED_TERRACOTTA;
-	}
-	public static get LEGACY_RED_GLAZED_TERRACOTTA(): Material {
-		return this.$javaClass.LEGACY_RED_GLAZED_TERRACOTTA;
-	}
-	public static get LEGACY_BLACK_GLAZED_TERRACOTTA(): Material {
-		return this.$javaClass.LEGACY_BLACK_GLAZED_TERRACOTTA;
-	}
-	public static get LEGACY_CONCRETE(): Material {
-		return this.$javaClass.LEGACY_CONCRETE;
-	}
-	public static get LEGACY_CONCRETE_POWDER(): Material {
-		return this.$javaClass.LEGACY_CONCRETE_POWDER;
-	}
-	public static get LEGACY_STRUCTURE_BLOCK(): Material {
-		return this.$javaClass.LEGACY_STRUCTURE_BLOCK;
-	}
-	public static get LEGACY_IRON_SPADE(): Material {
-		return this.$javaClass.LEGACY_IRON_SPADE;
-	}
-	public static get LEGACY_IRON_PICKAXE(): Material {
-		return this.$javaClass.LEGACY_IRON_PICKAXE;
-	}
-	public static get LEGACY_IRON_AXE(): Material {
-		return this.$javaClass.LEGACY_IRON_AXE;
-	}
-	public static get LEGACY_FLINT_AND_STEEL(): Material {
-		return this.$javaClass.LEGACY_FLINT_AND_STEEL;
-	}
-	public static get LEGACY_APPLE(): Material {
-		return this.$javaClass.LEGACY_APPLE;
-	}
-	public static get LEGACY_BOW(): Material {
-		return this.$javaClass.LEGACY_BOW;
-	}
-	public static get LEGACY_ARROW(): Material {
-		return this.$javaClass.LEGACY_ARROW;
-	}
-	public static get LEGACY_COAL(): Material {
-		return this.$javaClass.LEGACY_COAL;
-	}
-	public static get LEGACY_DIAMOND(): Material {
-		return this.$javaClass.LEGACY_DIAMOND;
-	}
-	public static get LEGACY_IRON_INGOT(): Material {
-		return this.$javaClass.LEGACY_IRON_INGOT;
-	}
-	public static get LEGACY_GOLD_INGOT(): Material {
-		return this.$javaClass.LEGACY_GOLD_INGOT;
-	}
-	public static get LEGACY_IRON_SWORD(): Material {
-		return this.$javaClass.LEGACY_IRON_SWORD;
-	}
-	public static get LEGACY_WOOD_SWORD(): Material {
-		return this.$javaClass.LEGACY_WOOD_SWORD;
-	}
-	public static get LEGACY_WOOD_SPADE(): Material {
-		return this.$javaClass.LEGACY_WOOD_SPADE;
-	}
-	public static get LEGACY_WOOD_PICKAXE(): Material {
-		return this.$javaClass.LEGACY_WOOD_PICKAXE;
-	}
-	public static get LEGACY_WOOD_AXE(): Material {
-		return this.$javaClass.LEGACY_WOOD_AXE;
-	}
-	public static get LEGACY_STONE_SWORD(): Material {
-		return this.$javaClass.LEGACY_STONE_SWORD;
-	}
-	public static get LEGACY_STONE_SPADE(): Material {
-		return this.$javaClass.LEGACY_STONE_SPADE;
-	}
-	public static get LEGACY_STONE_PICKAXE(): Material {
-		return this.$javaClass.LEGACY_STONE_PICKAXE;
-	}
-	public static get LEGACY_STONE_AXE(): Material {
-		return this.$javaClass.LEGACY_STONE_AXE;
-	}
-	public static get LEGACY_DIAMOND_SWORD(): Material {
-		return this.$javaClass.LEGACY_DIAMOND_SWORD;
-	}
-	public static get LEGACY_DIAMOND_SPADE(): Material {
-		return this.$javaClass.LEGACY_DIAMOND_SPADE;
-	}
-	public static get LEGACY_DIAMOND_PICKAXE(): Material {
-		return this.$javaClass.LEGACY_DIAMOND_PICKAXE;
-	}
-	public static get LEGACY_DIAMOND_AXE(): Material {
-		return this.$javaClass.LEGACY_DIAMOND_AXE;
-	}
-	public static get LEGACY_STICK(): Material {
-		return this.$javaClass.LEGACY_STICK;
-	}
-	public static get LEGACY_BOWL(): Material {
-		return this.$javaClass.LEGACY_BOWL;
-	}
-	public static get LEGACY_MUSHROOM_SOUP(): Material {
-		return this.$javaClass.LEGACY_MUSHROOM_SOUP;
-	}
-	public static get LEGACY_GOLD_SWORD(): Material {
-		return this.$javaClass.LEGACY_GOLD_SWORD;
-	}
-	public static get LEGACY_GOLD_SPADE(): Material {
-		return this.$javaClass.LEGACY_GOLD_SPADE;
-	}
-	public static get LEGACY_GOLD_PICKAXE(): Material {
-		return this.$javaClass.LEGACY_GOLD_PICKAXE;
-	}
-	public static get LEGACY_GOLD_AXE(): Material {
-		return this.$javaClass.LEGACY_GOLD_AXE;
-	}
-	public static get LEGACY_STRING(): Material {
-		return this.$javaClass.LEGACY_STRING;
-	}
-	public static get LEGACY_FEATHER(): Material {
-		return this.$javaClass.LEGACY_FEATHER;
-	}
-	public static get LEGACY_SULPHUR(): Material {
-		return this.$javaClass.LEGACY_SULPHUR;
-	}
-	public static get LEGACY_WOOD_HOE(): Material {
-		return this.$javaClass.LEGACY_WOOD_HOE;
-	}
-	public static get LEGACY_STONE_HOE(): Material {
-		return this.$javaClass.LEGACY_STONE_HOE;
-	}
-	public static get LEGACY_IRON_HOE(): Material {
-		return this.$javaClass.LEGACY_IRON_HOE;
-	}
-	public static get LEGACY_DIAMOND_HOE(): Material {
-		return this.$javaClass.LEGACY_DIAMOND_HOE;
-	}
-	public static get LEGACY_GOLD_HOE(): Material {
-		return this.$javaClass.LEGACY_GOLD_HOE;
-	}
-	public static get LEGACY_SEEDS(): Material {
-		return this.$javaClass.LEGACY_SEEDS;
-	}
-	public static get LEGACY_WHEAT(): Material {
-		return this.$javaClass.LEGACY_WHEAT;
-	}
-	public static get LEGACY_BREAD(): Material {
-		return this.$javaClass.LEGACY_BREAD;
-	}
-	public static get LEGACY_LEATHER_HELMET(): Material {
-		return this.$javaClass.LEGACY_LEATHER_HELMET;
-	}
-	public static get LEGACY_LEATHER_CHESTPLATE(): Material {
-		return this.$javaClass.LEGACY_LEATHER_CHESTPLATE;
-	}
-	public static get LEGACY_LEATHER_LEGGINGS(): Material {
-		return this.$javaClass.LEGACY_LEATHER_LEGGINGS;
-	}
-	public static get LEGACY_LEATHER_BOOTS(): Material {
-		return this.$javaClass.LEGACY_LEATHER_BOOTS;
-	}
-	public static get LEGACY_CHAINMAIL_HELMET(): Material {
-		return this.$javaClass.LEGACY_CHAINMAIL_HELMET;
-	}
-	public static get LEGACY_CHAINMAIL_CHESTPLATE(): Material {
-		return this.$javaClass.LEGACY_CHAINMAIL_CHESTPLATE;
-	}
-	public static get LEGACY_CHAINMAIL_LEGGINGS(): Material {
-		return this.$javaClass.LEGACY_CHAINMAIL_LEGGINGS;
-	}
-	public static get LEGACY_CHAINMAIL_BOOTS(): Material {
-		return this.$javaClass.LEGACY_CHAINMAIL_BOOTS;
-	}
-	public static get LEGACY_IRON_HELMET(): Material {
-		return this.$javaClass.LEGACY_IRON_HELMET;
-	}
-	public static get LEGACY_IRON_CHESTPLATE(): Material {
-		return this.$javaClass.LEGACY_IRON_CHESTPLATE;
-	}
-	public static get LEGACY_IRON_LEGGINGS(): Material {
-		return this.$javaClass.LEGACY_IRON_LEGGINGS;
-	}
-	public static get LEGACY_IRON_BOOTS(): Material {
-		return this.$javaClass.LEGACY_IRON_BOOTS;
-	}
-	public static get LEGACY_DIAMOND_HELMET(): Material {
-		return this.$javaClass.LEGACY_DIAMOND_HELMET;
-	}
-	public static get LEGACY_DIAMOND_CHESTPLATE(): Material {
-		return this.$javaClass.LEGACY_DIAMOND_CHESTPLATE;
-	}
-	public static get LEGACY_DIAMOND_LEGGINGS(): Material {
-		return this.$javaClass.LEGACY_DIAMOND_LEGGINGS;
-	}
-	public static get LEGACY_DIAMOND_BOOTS(): Material {
-		return this.$javaClass.LEGACY_DIAMOND_BOOTS;
-	}
-	public static get LEGACY_GOLD_HELMET(): Material {
-		return this.$javaClass.LEGACY_GOLD_HELMET;
-	}
-	public static get LEGACY_GOLD_CHESTPLATE(): Material {
-		return this.$javaClass.LEGACY_GOLD_CHESTPLATE;
-	}
-	public static get LEGACY_GOLD_LEGGINGS(): Material {
-		return this.$javaClass.LEGACY_GOLD_LEGGINGS;
-	}
-	public static get LEGACY_GOLD_BOOTS(): Material {
-		return this.$javaClass.LEGACY_GOLD_BOOTS;
-	}
-	public static get LEGACY_FLINT(): Material {
-		return this.$javaClass.LEGACY_FLINT;
-	}
-	public static get LEGACY_PORK(): Material {
-		return this.$javaClass.LEGACY_PORK;
-	}
-	public static get LEGACY_GRILLED_PORK(): Material {
-		return this.$javaClass.LEGACY_GRILLED_PORK;
-	}
-	public static get LEGACY_PAINTING(): Material {
-		return this.$javaClass.LEGACY_PAINTING;
-	}
-	public static get LEGACY_GOLDEN_APPLE(): Material {
-		return this.$javaClass.LEGACY_GOLDEN_APPLE;
-	}
-	public static get LEGACY_SIGN(): Material {
-		return this.$javaClass.LEGACY_SIGN;
-	}
-	public static get LEGACY_WOOD_DOOR(): Material {
-		return this.$javaClass.LEGACY_WOOD_DOOR;
-	}
-	public static get LEGACY_BUCKET(): Material {
-		return this.$javaClass.LEGACY_BUCKET;
-	}
-	public static get LEGACY_WATER_BUCKET(): Material {
-		return this.$javaClass.LEGACY_WATER_BUCKET;
-	}
-	public static get LEGACY_LAVA_BUCKET(): Material {
-		return this.$javaClass.LEGACY_LAVA_BUCKET;
-	}
-	public static get LEGACY_MINECART(): Material {
-		return this.$javaClass.LEGACY_MINECART;
-	}
-	public static get LEGACY_SADDLE(): Material {
-		return this.$javaClass.LEGACY_SADDLE;
-	}
-	public static get LEGACY_IRON_DOOR(): Material {
-		return this.$javaClass.LEGACY_IRON_DOOR;
-	}
-	public static get LEGACY_REDSTONE(): Material {
-		return this.$javaClass.LEGACY_REDSTONE;
-	}
-	public static get LEGACY_SNOW_BALL(): Material {
-		return this.$javaClass.LEGACY_SNOW_BALL;
-	}
-	public static get LEGACY_BOAT(): Material {
-		return this.$javaClass.LEGACY_BOAT;
-	}
-	public static get LEGACY_LEATHER(): Material {
-		return this.$javaClass.LEGACY_LEATHER;
-	}
-	public static get LEGACY_MILK_BUCKET(): Material {
-		return this.$javaClass.LEGACY_MILK_BUCKET;
-	}
-	public static get LEGACY_CLAY_BRICK(): Material {
-		return this.$javaClass.LEGACY_CLAY_BRICK;
-	}
-	public static get LEGACY_CLAY_BALL(): Material {
-		return this.$javaClass.LEGACY_CLAY_BALL;
-	}
-	public static get LEGACY_SUGAR_CANE(): Material {
-		return this.$javaClass.LEGACY_SUGAR_CANE;
-	}
-	public static get LEGACY_PAPER(): Material {
-		return this.$javaClass.LEGACY_PAPER;
-	}
-	public static get LEGACY_BOOK(): Material {
-		return this.$javaClass.LEGACY_BOOK;
-	}
-	public static get LEGACY_SLIME_BALL(): Material {
-		return this.$javaClass.LEGACY_SLIME_BALL;
-	}
-	public static get LEGACY_STORAGE_MINECART(): Material {
-		return this.$javaClass.LEGACY_STORAGE_MINECART;
-	}
-	public static get LEGACY_POWERED_MINECART(): Material {
-		return this.$javaClass.LEGACY_POWERED_MINECART;
-	}
-	public static get LEGACY_EGG(): Material {
-		return this.$javaClass.LEGACY_EGG;
-	}
-	public static get LEGACY_COMPASS(): Material {
-		return this.$javaClass.LEGACY_COMPASS;
-	}
-	public static get LEGACY_FISHING_ROD(): Material {
-		return this.$javaClass.LEGACY_FISHING_ROD;
-	}
-	public static get LEGACY_WATCH(): Material {
-		return this.$javaClass.LEGACY_WATCH;
-	}
-	public static get LEGACY_GLOWSTONE_DUST(): Material {
-		return this.$javaClass.LEGACY_GLOWSTONE_DUST;
-	}
-	public static get LEGACY_RAW_FISH(): Material {
-		return this.$javaClass.LEGACY_RAW_FISH;
-	}
-	public static get LEGACY_COOKED_FISH(): Material {
-		return this.$javaClass.LEGACY_COOKED_FISH;
-	}
-	public static get LEGACY_INK_SACK(): Material {
-		return this.$javaClass.LEGACY_INK_SACK;
-	}
-	public static get LEGACY_BONE(): Material {
-		return this.$javaClass.LEGACY_BONE;
-	}
-	public static get LEGACY_SUGAR(): Material {
-		return this.$javaClass.LEGACY_SUGAR;
-	}
-	public static get LEGACY_CAKE(): Material {
-		return this.$javaClass.LEGACY_CAKE;
-	}
-	public static get LEGACY_BED(): Material {
-		return this.$javaClass.LEGACY_BED;
-	}
-	public static get LEGACY_DIODE(): Material {
-		return this.$javaClass.LEGACY_DIODE;
-	}
-	public static get LEGACY_COOKIE(): Material {
-		return this.$javaClass.LEGACY_COOKIE;
-	}
-	public static get LEGACY_MAP(): Material {
-		return this.$javaClass.LEGACY_MAP;
-	}
-	public static get LEGACY_SHEARS(): Material {
-		return this.$javaClass.LEGACY_SHEARS;
-	}
-	public static get LEGACY_MELON(): Material {
-		return this.$javaClass.LEGACY_MELON;
-	}
-	public static get LEGACY_PUMPKIN_SEEDS(): Material {
-		return this.$javaClass.LEGACY_PUMPKIN_SEEDS;
-	}
-	public static get LEGACY_MELON_SEEDS(): Material {
-		return this.$javaClass.LEGACY_MELON_SEEDS;
-	}
-	public static get LEGACY_RAW_BEEF(): Material {
-		return this.$javaClass.LEGACY_RAW_BEEF;
-	}
-	public static get LEGACY_COOKED_BEEF(): Material {
-		return this.$javaClass.LEGACY_COOKED_BEEF;
-	}
-	public static get LEGACY_RAW_CHICKEN(): Material {
-		return this.$javaClass.LEGACY_RAW_CHICKEN;
-	}
-	public static get LEGACY_COOKED_CHICKEN(): Material {
-		return this.$javaClass.LEGACY_COOKED_CHICKEN;
-	}
-	public static get LEGACY_ROTTEN_FLESH(): Material {
-		return this.$javaClass.LEGACY_ROTTEN_FLESH;
-	}
-	public static get LEGACY_ENDER_PEARL(): Material {
-		return this.$javaClass.LEGACY_ENDER_PEARL;
-	}
-	public static get LEGACY_BLAZE_ROD(): Material {
-		return this.$javaClass.LEGACY_BLAZE_ROD;
-	}
-	public static get LEGACY_GHAST_TEAR(): Material {
-		return this.$javaClass.LEGACY_GHAST_TEAR;
-	}
-	public static get LEGACY_GOLD_NUGGET(): Material {
-		return this.$javaClass.LEGACY_GOLD_NUGGET;
-	}
-	public static get LEGACY_NETHER_STALK(): Material {
-		return this.$javaClass.LEGACY_NETHER_STALK;
-	}
-	public static get LEGACY_POTION(): Material {
-		return this.$javaClass.LEGACY_POTION;
-	}
-	public static get LEGACY_GLASS_BOTTLE(): Material {
-		return this.$javaClass.LEGACY_GLASS_BOTTLE;
-	}
-	public static get LEGACY_SPIDER_EYE(): Material {
-		return this.$javaClass.LEGACY_SPIDER_EYE;
-	}
-	public static get LEGACY_FERMENTED_SPIDER_EYE(): Material {
-		return this.$javaClass.LEGACY_FERMENTED_SPIDER_EYE;
-	}
-	public static get LEGACY_BLAZE_POWDER(): Material {
-		return this.$javaClass.LEGACY_BLAZE_POWDER;
-	}
-	public static get LEGACY_MAGMA_CREAM(): Material {
-		return this.$javaClass.LEGACY_MAGMA_CREAM;
-	}
-	public static get LEGACY_BREWING_STAND_ITEM(): Material {
-		return this.$javaClass.LEGACY_BREWING_STAND_ITEM;
-	}
-	public static get LEGACY_CAULDRON_ITEM(): Material {
-		return this.$javaClass.LEGACY_CAULDRON_ITEM;
-	}
-	public static get LEGACY_EYE_OF_ENDER(): Material {
-		return this.$javaClass.LEGACY_EYE_OF_ENDER;
-	}
-	public static get LEGACY_SPECKLED_MELON(): Material {
-		return this.$javaClass.LEGACY_SPECKLED_MELON;
-	}
-	public static get LEGACY_MONSTER_EGG(): Material {
-		return this.$javaClass.LEGACY_MONSTER_EGG;
-	}
-	public static get LEGACY_EXP_BOTTLE(): Material {
-		return this.$javaClass.LEGACY_EXP_BOTTLE;
-	}
-	public static get LEGACY_FIREBALL(): Material {
-		return this.$javaClass.LEGACY_FIREBALL;
-	}
-	public static get LEGACY_BOOK_AND_QUILL(): Material {
-		return this.$javaClass.LEGACY_BOOK_AND_QUILL;
-	}
-	public static get LEGACY_WRITTEN_BOOK(): Material {
-		return this.$javaClass.LEGACY_WRITTEN_BOOK;
-	}
-	public static get LEGACY_EMERALD(): Material {
-		return this.$javaClass.LEGACY_EMERALD;
-	}
-	public static get LEGACY_ITEM_FRAME(): Material {
-		return this.$javaClass.LEGACY_ITEM_FRAME;
-	}
-	public static get LEGACY_FLOWER_POT_ITEM(): Material {
-		return this.$javaClass.LEGACY_FLOWER_POT_ITEM;
-	}
-	public static get LEGACY_CARROT_ITEM(): Material {
-		return this.$javaClass.LEGACY_CARROT_ITEM;
-	}
-	public static get LEGACY_POTATO_ITEM(): Material {
-		return this.$javaClass.LEGACY_POTATO_ITEM;
-	}
-	public static get LEGACY_BAKED_POTATO(): Material {
-		return this.$javaClass.LEGACY_BAKED_POTATO;
-	}
-	public static get LEGACY_POISONOUS_POTATO(): Material {
-		return this.$javaClass.LEGACY_POISONOUS_POTATO;
-	}
-	public static get LEGACY_EMPTY_MAP(): Material {
-		return this.$javaClass.LEGACY_EMPTY_MAP;
-	}
-	public static get LEGACY_GOLDEN_CARROT(): Material {
-		return this.$javaClass.LEGACY_GOLDEN_CARROT;
-	}
-	public static get LEGACY_SKULL_ITEM(): Material {
-		return this.$javaClass.LEGACY_SKULL_ITEM;
-	}
-	public static get LEGACY_CARROT_STICK(): Material {
-		return this.$javaClass.LEGACY_CARROT_STICK;
-	}
-	public static get LEGACY_NETHER_STAR(): Material {
-		return this.$javaClass.LEGACY_NETHER_STAR;
-	}
-	public static get LEGACY_PUMPKIN_PIE(): Material {
-		return this.$javaClass.LEGACY_PUMPKIN_PIE;
-	}
-	public static get LEGACY_FIREWORK(): Material {
-		return this.$javaClass.LEGACY_FIREWORK;
-	}
-	public static get LEGACY_FIREWORK_CHARGE(): Material {
-		return this.$javaClass.LEGACY_FIREWORK_CHARGE;
-	}
-	public static get LEGACY_ENCHANTED_BOOK(): Material {
-		return this.$javaClass.LEGACY_ENCHANTED_BOOK;
-	}
-	public static get LEGACY_REDSTONE_COMPARATOR(): Material {
-		return this.$javaClass.LEGACY_REDSTONE_COMPARATOR;
-	}
-	public static get LEGACY_NETHER_BRICK_ITEM(): Material {
-		return this.$javaClass.LEGACY_NETHER_BRICK_ITEM;
-	}
-	public static get LEGACY_QUARTZ(): Material {
-		return this.$javaClass.LEGACY_QUARTZ;
-	}
-	public static get LEGACY_EXPLOSIVE_MINECART(): Material {
-		return this.$javaClass.LEGACY_EXPLOSIVE_MINECART;
-	}
-	public static get LEGACY_HOPPER_MINECART(): Material {
-		return this.$javaClass.LEGACY_HOPPER_MINECART;
-	}
-	public static get LEGACY_PRISMARINE_SHARD(): Material {
-		return this.$javaClass.LEGACY_PRISMARINE_SHARD;
-	}
-	public static get LEGACY_PRISMARINE_CRYSTALS(): Material {
-		return this.$javaClass.LEGACY_PRISMARINE_CRYSTALS;
-	}
-	public static get LEGACY_RABBIT(): Material {
-		return this.$javaClass.LEGACY_RABBIT;
-	}
-	public static get LEGACY_COOKED_RABBIT(): Material {
-		return this.$javaClass.LEGACY_COOKED_RABBIT;
-	}
-	public static get LEGACY_RABBIT_STEW(): Material {
-		return this.$javaClass.LEGACY_RABBIT_STEW;
-	}
-	public static get LEGACY_RABBIT_FOOT(): Material {
-		return this.$javaClass.LEGACY_RABBIT_FOOT;
-	}
-	public static get LEGACY_RABBIT_HIDE(): Material {
-		return this.$javaClass.LEGACY_RABBIT_HIDE;
-	}
-	public static get LEGACY_ARMOR_STAND(): Material {
-		return this.$javaClass.LEGACY_ARMOR_STAND;
-	}
-	public static get LEGACY_IRON_BARDING(): Material {
-		return this.$javaClass.LEGACY_IRON_BARDING;
-	}
-	public static get LEGACY_GOLD_BARDING(): Material {
-		return this.$javaClass.LEGACY_GOLD_BARDING;
-	}
-	public static get LEGACY_DIAMOND_BARDING(): Material {
-		return this.$javaClass.LEGACY_DIAMOND_BARDING;
-	}
-	public static get LEGACY_LEASH(): Material {
-		return this.$javaClass.LEGACY_LEASH;
-	}
-	public static get LEGACY_NAME_TAG(): Material {
-		return this.$javaClass.LEGACY_NAME_TAG;
-	}
-	public static get LEGACY_COMMAND_MINECART(): Material {
-		return this.$javaClass.LEGACY_COMMAND_MINECART;
-	}
-	public static get LEGACY_MUTTON(): Material {
-		return this.$javaClass.LEGACY_MUTTON;
-	}
-	public static get LEGACY_COOKED_MUTTON(): Material {
-		return this.$javaClass.LEGACY_COOKED_MUTTON;
-	}
-	public static get LEGACY_BANNER(): Material {
-		return this.$javaClass.LEGACY_BANNER;
-	}
-	public static get LEGACY_END_CRYSTAL(): Material {
-		return this.$javaClass.LEGACY_END_CRYSTAL;
-	}
-	public static get LEGACY_SPRUCE_DOOR_ITEM(): Material {
-		return this.$javaClass.LEGACY_SPRUCE_DOOR_ITEM;
-	}
-	public static get LEGACY_BIRCH_DOOR_ITEM(): Material {
-		return this.$javaClass.LEGACY_BIRCH_DOOR_ITEM;
-	}
-	public static get LEGACY_JUNGLE_DOOR_ITEM(): Material {
-		return this.$javaClass.LEGACY_JUNGLE_DOOR_ITEM;
-	}
-	public static get LEGACY_ACACIA_DOOR_ITEM(): Material {
-		return this.$javaClass.LEGACY_ACACIA_DOOR_ITEM;
-	}
-	public static get LEGACY_DARK_OAK_DOOR_ITEM(): Material {
-		return this.$javaClass.LEGACY_DARK_OAK_DOOR_ITEM;
-	}
-	public static get LEGACY_CHORUS_FRUIT(): Material {
-		return this.$javaClass.LEGACY_CHORUS_FRUIT;
-	}
-	public static get LEGACY_CHORUS_FRUIT_POPPED(): Material {
-		return this.$javaClass.LEGACY_CHORUS_FRUIT_POPPED;
-	}
-	public static get LEGACY_BEETROOT(): Material {
-		return this.$javaClass.LEGACY_BEETROOT;
-	}
-	public static get LEGACY_BEETROOT_SEEDS(): Material {
-		return this.$javaClass.LEGACY_BEETROOT_SEEDS;
-	}
-	public static get LEGACY_BEETROOT_SOUP(): Material {
-		return this.$javaClass.LEGACY_BEETROOT_SOUP;
-	}
-	public static get LEGACY_DRAGONS_BREATH(): Material {
-		return this.$javaClass.LEGACY_DRAGONS_BREATH;
-	}
-	public static get LEGACY_SPLASH_POTION(): Material {
-		return this.$javaClass.LEGACY_SPLASH_POTION;
-	}
-	public static get LEGACY_SPECTRAL_ARROW(): Material {
-		return this.$javaClass.LEGACY_SPECTRAL_ARROW;
-	}
-	public static get LEGACY_TIPPED_ARROW(): Material {
-		return this.$javaClass.LEGACY_TIPPED_ARROW;
-	}
-	public static get LEGACY_LINGERING_POTION(): Material {
-		return this.$javaClass.LEGACY_LINGERING_POTION;
-	}
-	public static get LEGACY_SHIELD(): Material {
-		return this.$javaClass.LEGACY_SHIELD;
-	}
-	public static get LEGACY_ELYTRA(): Material {
-		return this.$javaClass.LEGACY_ELYTRA;
-	}
-	public static get LEGACY_BOAT_SPRUCE(): Material {
-		return this.$javaClass.LEGACY_BOAT_SPRUCE;
-	}
-	public static get LEGACY_BOAT_BIRCH(): Material {
-		return this.$javaClass.LEGACY_BOAT_BIRCH;
-	}
-	public static get LEGACY_BOAT_JUNGLE(): Material {
-		return this.$javaClass.LEGACY_BOAT_JUNGLE;
-	}
-	public static get LEGACY_BOAT_ACACIA(): Material {
-		return this.$javaClass.LEGACY_BOAT_ACACIA;
-	}
-	public static get LEGACY_BOAT_DARK_OAK(): Material {
-		return this.$javaClass.LEGACY_BOAT_DARK_OAK;
-	}
-	public static get LEGACY_TOTEM(): Material {
-		return this.$javaClass.LEGACY_TOTEM;
-	}
-	public static get LEGACY_SHULKER_SHELL(): Material {
-		return this.$javaClass.LEGACY_SHULKER_SHELL;
-	}
-	public static get LEGACY_IRON_NUGGET(): Material {
-		return this.$javaClass.LEGACY_IRON_NUGGET;
-	}
-	public static get LEGACY_KNOWLEDGE_BOOK(): Material {
-		return this.$javaClass.LEGACY_KNOWLEDGE_BOOK;
-	}
-	public static get LEGACY_GOLD_RECORD(): Material {
-		return this.$javaClass.LEGACY_GOLD_RECORD;
-	}
-	public static get LEGACY_GREEN_RECORD(): Material {
-		return this.$javaClass.LEGACY_GREEN_RECORD;
-	}
-	public static get LEGACY_RECORD_3(): Material {
-		return this.$javaClass.LEGACY_RECORD_3;
-	}
-	public static get LEGACY_RECORD_4(): Material {
-		return this.$javaClass.LEGACY_RECORD_4;
-	}
-	public static get LEGACY_RECORD_5(): Material {
-		return this.$javaClass.LEGACY_RECORD_5;
-	}
-	public static get LEGACY_RECORD_6(): Material {
-		return this.$javaClass.LEGACY_RECORD_6;
-	}
-	public static get LEGACY_RECORD_7(): Material {
-		return this.$javaClass.LEGACY_RECORD_7;
-	}
-	public static get LEGACY_RECORD_8(): Material {
-		return this.$javaClass.LEGACY_RECORD_8;
-	}
-	public static get LEGACY_RECORD_9(): Material {
-		return this.$javaClass.LEGACY_RECORD_9;
-	}
-	public static get LEGACY_RECORD_10(): Material {
-		return this.$javaClass.LEGACY_RECORD_10;
-	}
-	public static get LEGACY_RECORD_11(): Material {
-		return this.$javaClass.LEGACY_RECORD_11;
-	}
-	public static get LEGACY_RECORD_12(): Material {
-		return this.$javaClass.LEGACY_RECORD_12;
 	}
 }
 

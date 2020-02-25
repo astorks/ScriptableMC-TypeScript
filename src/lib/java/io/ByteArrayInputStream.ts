@@ -1,26 +1,38 @@
 declare var Java: any;
 import InputStream from '../../java/io/InputStream.js'
+import OutputStream from '../../java/io/OutputStream.js'
 
 export default interface ByteArrayInputStream extends InputStream {
-	read(arg0: Array<number>, arg1: number, arg2: number): number;
-	read(): number;
-	close(): void;
-	mark(arg0: number): void;
-	skip(arg0: number): number;
 	available(): number;
+	close(): void;
+	mark(readAheadLimit: number): void;
 	markSupported(): boolean;
+	read(): number;
+	read(b: Array<number>): number;
+	read(b: Array<number>, off: number, len: number): number;
+	readAllBytes(): Array<number>;
+	readNBytes(len: number): Array<number>;
+	readNBytes(b: Array<number>, off: number, len: number): number;
 	reset(): void;
-	read(arg0: Array<number>): number;
+	skip(n: number): number;
+	transferTo(out: OutputStream): number;
 }
 
 export default class ByteArrayInputStream {
 	public static get $javaClass(): any {
 		return Java.type('java.io.ByteArrayInputStream');
 	}
-	constructor(arg0: Array<number>);
-	constructor(arg0: Array<number>, arg1: number, arg2: number);
+
+	constructor(buf: Array<number>);
+	constructor(buf: Array<number>, offset: number, length: number);
 	constructor(...args: any[]) {
 		return new ByteArrayInputStream.$javaClass(...args);
 	}
+
+	public static nullInputStream(): InputStream;
+	public static nullInputStream(...args: any[]): any {
+		return ByteArrayInputStream.$javaClass.nullInputStream(...args);
+	}
+
 }
 

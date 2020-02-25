@@ -9,23 +9,25 @@ import RegisteredListener from '../../../org/bukkit/plugin/RegisteredListener.js
 export default interface TimedRegisteredListener extends RegisteredListener {
 	callEvent(event: Event): void;
 	getCount(): number;
+	getEventClass(): any;
+	getListener(): Listener;
+	getPlugin(): Plugin;
+	getPriority(): EventPriority;
 	getTotalTime(): number;
 	hasMultiple(): boolean;
-	getEventClass(): any;
-	reset(): void;
-	getPlugin(): Plugin;
-	getListener(): Listener;
 	isIgnoringCancelled(): boolean;
-	getPriority(): EventPriority;
+	reset(): void;
 }
 
 export default class TimedRegisteredListener {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.plugin.TimedRegisteredListener');
 	}
+
 	constructor(pluginListener: Listener, eventExecutor: EventExecutor, eventPriority: EventPriority, registeredPlugin: Plugin, listenCancelled: boolean);
 	constructor(...args: any[]) {
 		return new TimedRegisteredListener.$javaClass(...args);
 	}
+
 }
 

@@ -8,5 +8,6 @@ export default class Flushable {
 	public static get $javaClass(): any {
 		return Java.type('java.io.Flushable');
 	}
+
 }
 

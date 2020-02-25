@@ -7,34 +7,35 @@ import SlotPos from '../../../../fr/minuskube/inv/content/SlotPos.js'
 import SmartInventory from '../../../../fr/minuskube/inv/SmartInventory.js'
 
 export default interface InventoryContents {
-	pagination(): Pagination;
-	firstEmpty(): any;
-	inventory(): SmartInventory;
-	property(arg0: string, arg1: any): any;
-	property(arg0: string): any;
-	fillRow(arg0: number, arg1: ClickableItem): InventoryContents;
-	fillRect(arg0: SlotPos, arg1: SlotPos, arg2: ClickableItem): InventoryContents;
-	fillRect(arg0: number, arg1: number, arg2: number, arg3: number, arg4: ClickableItem): InventoryContents;
+	add(arg0: ClickableItem): InventoryContents;
+	all(): Array<Array<ClickableItem>>;
+	fill(arg0: ClickableItem): InventoryContents;
 	fillBorders(arg0: ClickableItem): InventoryContents;
 	fillColumn(arg0: number, arg1: ClickableItem): InventoryContents;
-	newIterator(arg0: string, arg1: SlotIterator$Type, arg2: number, arg3: number): SlotIterator;
-	newIterator(arg0: SlotIterator$Type, arg1: number, arg2: number): SlotIterator;
-	newIterator(arg0: SlotIterator$Type, arg1: SlotPos): SlotIterator;
-	newIterator(arg0: string, arg1: SlotIterator$Type, arg2: SlotPos): SlotIterator;
-	add(arg0: ClickableItem): InventoryContents;
+	fillRect(arg0: SlotPos, arg1: SlotPos, arg2: ClickableItem): InventoryContents;
+	fillRect(arg0: number, arg1: number, arg2: number, arg3: number, arg4: ClickableItem): InventoryContents;
+	fillRow(arg0: number, arg1: ClickableItem): InventoryContents;
+	firstEmpty(): any;
 	get(arg0: SlotPos): any;
 	get(arg0: number, arg1: number): any;
-	setProperty(arg0: string, arg1: any): InventoryContents;
+	inventory(): SmartInventory;
 	iterator(arg0: string): any;
+	newIterator(arg0: SlotIterator$Type, arg1: SlotPos): SlotIterator;
+	newIterator(arg0: string, arg1: SlotIterator$Type, arg2: SlotPos): SlotIterator;
+	newIterator(arg0: SlotIterator$Type, arg1: number, arg2: number): SlotIterator;
+	newIterator(arg0: string, arg1: SlotIterator$Type, arg2: number, arg3: number): SlotIterator;
+	pagination(): Pagination;
+	property(arg0: string): any;
+	property(arg0: string, arg1: any): any;
 	set(arg0: SlotPos, arg1: ClickableItem): InventoryContents;
 	set(arg0: number, arg1: number, arg2: ClickableItem): InventoryContents;
-	fill(arg0: ClickableItem): InventoryContents;
-	all(): Array<Array<ClickableItem>>;
+	setProperty(arg0: string, arg1: any): InventoryContents;
 }
 
 export default class InventoryContents {
 	public static get $javaClass(): any {
 		return Java.type('fr.minuskube.inv.content.InventoryContents');
 	}
+
 }
 

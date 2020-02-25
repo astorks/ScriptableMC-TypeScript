@@ -3,54 +3,67 @@ import Buffer from '../../java/nio/Buffer.js'
 import ByteOrder from '../../java/nio/ByteOrder.js'
 
 export default interface DoubleBuffer extends Buffer {
-	get(arg0: Array<number>, arg1: number, arg2: number): DoubleBuffer;
-	get(arg0: Array<number>): DoubleBuffer;
-	get(): number;
-	get(arg0: number): number;
-	put(arg0: Array<number>): DoubleBuffer;
-	put(arg0: Array<number>, arg1: number, arg2: number): DoubleBuffer;
-	put(arg0: number, arg1: number): DoubleBuffer;
-	put(arg0: DoubleBuffer): DoubleBuffer;
-	put(arg0: number): DoubleBuffer;
-	compareTo(arg0: any): number;
-	compareTo(arg0: DoubleBuffer): number;
-	isDirect(): boolean;
-	hasArray(): boolean;
-	array(): Array<number>;
 	array(): any;
+	array(): Array<number>;
 	arrayOffset(): number;
-	duplicate(): DoubleBuffer;
-	slice(): DoubleBuffer;
 	asReadOnlyBuffer(): DoubleBuffer;
-	compact(): DoubleBuffer;
-	order(): ByteOrder;
-	limit(arg0: number): Buffer;
-	limit(): number;
-	clear(): Buffer;
-	remaining(): number;
-	position(arg0: number): Buffer;
-	position(): number;
 	capacity(): number;
-	mark(): Buffer;
-	reset(): Buffer;
+	clear(): DoubleBuffer;
+	clear(): Buffer;
+	compact(): DoubleBuffer;
+	compareTo(arg0: any): number;
+	compareTo(that: DoubleBuffer): number;
+	duplicate(): Buffer;
+	duplicate(): DoubleBuffer;
+	flip(): DoubleBuffer;
 	flip(): Buffer;
-	rewind(): Buffer;
+	get(): number;
+	get(dst: Array<number>): DoubleBuffer;
+	get(arg0: number): number;
+	get(dst: Array<number>, offset: number, length: number): DoubleBuffer;
+	hasArray(): boolean;
 	hasRemaining(): boolean;
+	isDirect(): boolean;
 	isReadOnly(): boolean;
+	limit(): number;
+	limit(newLimit: number): Buffer;
+	limit(newLimit: number): DoubleBuffer;
+	mark(): Buffer;
+	mark(): DoubleBuffer;
+	mismatch(that: DoubleBuffer): number;
+	order(): ByteOrder;
+	position(): number;
+	position(newPosition: number): DoubleBuffer;
+	position(newPosition: number): Buffer;
+	put(src: Array<number>): DoubleBuffer;
+	put(src: DoubleBuffer): DoubleBuffer;
+	put(arg0: number): DoubleBuffer;
+	put(arg0: number, arg1: number): DoubleBuffer;
+	put(src: Array<number>, offset: number, length: number): DoubleBuffer;
+	remaining(): number;
+	reset(): Buffer;
+	reset(): DoubleBuffer;
+	rewind(): Buffer;
+	rewind(): DoubleBuffer;
+	slice(): DoubleBuffer;
+	slice(): Buffer;
 }
 
 export default class DoubleBuffer {
 	public static get $javaClass(): any {
 		return Java.type('java.nio.DoubleBuffer');
 	}
-	public static wrap(arg0: Array<number>, arg1: number, arg2: number): DoubleBuffer;
-	public static wrap(arg0: Array<number>): DoubleBuffer;
-	public static wrap(...args: any[]): any {
-		return DoubleBuffer.$javaClass.wrap(...args);
-	}
-	public static allocate(arg0: number): DoubleBuffer;
+
+	public static allocate(capacity: number): DoubleBuffer;
 	public static allocate(...args: any[]): any {
 		return DoubleBuffer.$javaClass.allocate(...args);
 	}
+
+	public static wrap(array: Array<number>): DoubleBuffer;
+	public static wrap(array: Array<number>, offset: number, length: number): DoubleBuffer;
+	public static wrap(...args: any[]): any {
+		return DoubleBuffer.$javaClass.wrap(...args);
+	}
+
 }
 

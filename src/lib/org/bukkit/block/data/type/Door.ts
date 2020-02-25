@@ -10,23 +10,23 @@ import Openable from '../../../../../org/bukkit/block/data/Openable.js'
 import Powerable from '../../../../../org/bukkit/block/data/Powerable.js'
 
 export default interface Door extends Bisected, Directional, Openable, Powerable {
-	setHinge(arg0: Door$Hinge): void;
-	getHinge(): Door$Hinge;
-	getHalf(): Bisected$Half;
-	setHalf(arg0: Bisected$Half): void;
-	getMaterial(): Material;
-	getAsString(arg0: boolean): string;
-	getAsString(): string;
-	clone(): BlockData;
 	clone(): any;
-	matches(arg0: BlockData): boolean;
-	merge(arg0: BlockData): BlockData;
-	getFacing(): BlockFace;
-	setFacing(arg0: BlockFace): void;
+	clone(): BlockData;
+	getAsString(): string;
+	getAsString(arg0: boolean): string;
 	getFaces(): any;
-	setOpen(arg0: boolean): void;
+	getFacing(): BlockFace;
+	getHalf(): Bisected$Half;
+	getHinge(): Door$Hinge;
+	getMaterial(): Material;
 	isOpen(): boolean;
 	isPowered(): boolean;
+	matches(arg0: BlockData): boolean;
+	merge(arg0: BlockData): BlockData;
+	setFacing(arg0: BlockFace): void;
+	setHalf(arg0: Bisected$Half): void;
+	setHinge(arg0: Door$Hinge): void;
+	setOpen(arg0: boolean): void;
 	setPowered(arg0: boolean): void;
 }
 
@@ -34,5 +34,6 @@ export default class Door {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.block.data.type.Door');
 	}
+
 }
 

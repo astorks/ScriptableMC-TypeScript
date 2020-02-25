@@ -9,5 +9,6 @@ export default class Savepoint {
 	public static get $javaClass(): any {
 		return Java.type('java.sql.Savepoint');
 	}
+
 }
 

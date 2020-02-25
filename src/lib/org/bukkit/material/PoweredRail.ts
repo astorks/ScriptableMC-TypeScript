@@ -8,20 +8,20 @@ import Rails from '../../../org/bukkit/material/Rails.js'
 import Redstone from '../../../org/bukkit/material/Redstone.js'
 
 export default interface PoweredRail extends ExtendedRails, Redstone {
-	isPowered(): boolean;
-	setPowered(isPowered: boolean): void;
 	clone(): MaterialData;
 	clone(): any;
 	clone(): Rails;
 	clone(): ExtendedRails;
 	clone(): PoweredRail;
-	setDirection(face: BlockFace, isOnSlope: boolean): void;
-	isCurve(): boolean;
-	getDirection(): BlockFace;
-	isOnSlope(): boolean;
 	getData(): number;
-	setData(data: number): void;
+	getDirection(): BlockFace;
 	getItemType(): Material;
+	isCurve(): boolean;
+	isOnSlope(): boolean;
+	isPowered(): boolean;
+	setData(data: number): void;
+	setDirection(face: BlockFace, isOnSlope: boolean): void;
+	setPowered(isPowered: boolean): void;
 	toItemStack(): ItemStack;
 	toItemStack(amount: number): ItemStack;
 }
@@ -30,11 +30,13 @@ export default class PoweredRail {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.material.PoweredRail');
 	}
+
 	constructor();
-	constructor(type: Material, data: number);
 	constructor(type: Material);
+	constructor(type: Material, data: number);
 	constructor(...args: any[]) {
 		return new PoweredRail.$javaClass(...args);
 	}
+
 }
 

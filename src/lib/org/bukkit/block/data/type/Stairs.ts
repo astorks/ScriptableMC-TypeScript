@@ -9,21 +9,21 @@ import Stairs$Shape from '../../../../../org/bukkit/block/data/type/Stairs$Shape
 import Waterlogged from '../../../../../org/bukkit/block/data/Waterlogged.js'
 
 export default interface Stairs extends Bisected, Directional, Waterlogged {
-	setShape(arg0: Stairs$Shape): void;
-	getShape(): Stairs$Shape;
-	getHalf(): Bisected$Half;
-	setHalf(arg0: Bisected$Half): void;
-	getMaterial(): Material;
-	getAsString(arg0: boolean): string;
-	getAsString(): string;
-	clone(): BlockData;
 	clone(): any;
+	clone(): BlockData;
+	getAsString(): string;
+	getAsString(arg0: boolean): string;
+	getFaces(): any;
+	getFacing(): BlockFace;
+	getHalf(): Bisected$Half;
+	getMaterial(): Material;
+	getShape(): Stairs$Shape;
+	isWaterlogged(): boolean;
 	matches(arg0: BlockData): boolean;
 	merge(arg0: BlockData): BlockData;
-	getFacing(): BlockFace;
 	setFacing(arg0: BlockFace): void;
-	getFaces(): any;
-	isWaterlogged(): boolean;
+	setHalf(arg0: Bisected$Half): void;
+	setShape(arg0: Stairs$Shape): void;
 	setWaterlogged(arg0: boolean): void;
 }
 
@@ -31,5 +31,6 @@ export default class Stairs {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.block.data.type.Stairs');
 	}
+
 }
 

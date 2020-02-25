@@ -9,40 +9,47 @@ import WatchService from '../../../java/nio/file/WatchService.js'
 import Watchable from '../../../java/nio/file/Watchable.js'
 
 export default interface Path {
-	register(arg0: WatchService, arg1: Array<WatchEvent$Kind>, arg2: Array<WatchEvent$Modifier>): WatchKey;
-	register(arg0: WatchService, arg1: Array<WatchEvent$Kind>): WatchKey;
 	compareTo(arg0: Path): number;
 	compareTo(arg0: any): number;
-	getName(arg0: number): Path;
-	startsWith(arg0: string): boolean;
-	startsWith(arg0: Path): boolean;
-	endsWith(arg0: string): boolean;
+	endsWith(other: string): boolean;
 	endsWith(arg0: Path): boolean;
-	iterator(): any;
-	getParent(): Path;
-	isAbsolute(): boolean;
-	resolve(arg0: Path): Path;
-	resolve(arg0: string): Path;
-	getRoot(): Path;
-	normalize(): Path;
-	getFileSystem(): FileSystem;
-	toFile(): File;
+	forEach(action: any): void;
 	getFileName(): Path;
+	getFileSystem(): FileSystem;
+	getName(arg0: number): Path;
 	getNameCount(): number;
-	subpath(arg0: number, arg1: number): Path;
-	resolveSibling(arg0: Path): Path;
-	resolveSibling(arg0: string): Path;
+	getParent(): Path;
+	getRoot(): Path;
+	isAbsolute(): boolean;
+	iterator(): any;
+	normalize(): Path;
+	register(watcher: WatchService, events: Array<WatchEvent$Kind>): WatchKey;
+	register(arg0: WatchService, arg1: Array<WatchEvent$Kind>, arg2: Array<WatchEvent$Modifier>): WatchKey;
 	relativize(arg0: Path): Path;
-	toUri(): any;
-	toAbsolutePath(): Path;
-	toRealPath(arg0: Array<LinkOption>): Path;
+	resolve(other: string): Path;
+	resolve(arg0: Path): Path;
+	resolveSibling(other: string): Path;
+	resolveSibling(other: Path): Path;
 	spliterator(): any;
-	forEach(arg0: any): void;
+	startsWith(other: string): boolean;
+	startsWith(arg0: Path): boolean;
+	subpath(arg0: number, arg1: number): Path;
+	toAbsolutePath(): Path;
+	toFile(): File;
+	toRealPath(arg0: Array<LinkOption>): Path;
+	toUri(): any;
 }
 
 export default class Path {
 	public static get $javaClass(): any {
 		return Java.type('java.nio.file.Path');
 	}
+
+	public static of(uri: any): Path;
+	public static of(first: string, more: Array<string>): Path;
+	public static of(...args: any[]): any {
+		return Path.$javaClass.of(...args);
+	}
+
 }
 

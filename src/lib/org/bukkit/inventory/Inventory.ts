@@ -7,45 +7,46 @@ import Location from '../../../org/bukkit/Location.js'
 import Material from '../../../org/bukkit/Material.js'
 
 export default interface Inventory {
-	setContents(arg0: Array<ItemStack>): void;
-	getContents(): Array<ItemStack>;
-	getMaxStackSize(): number;
-	getStorageContents(): Array<ItemStack>;
-	getItem(arg0: number): ItemStack;
-	setItem(arg0: number, arg1: ItemStack): void;
-	setMaxStackSize(arg0: number): void;
 	addItem(arg0: Array<ItemStack>): any;
-	removeItem(arg0: Array<ItemStack>): any;
-	setStorageContents(arg0: Array<ItemStack>): void;
-	containsAtLeast(arg0: ItemStack, arg1: number): boolean;
-	firstEmpty(): number;
-	getViewers(): Array<HumanEntity>;
-	getHolder(): InventoryHolder;
-	remove(arg0: ItemStack): void;
-	remove(arg0: Material): void;
+	all(arg0: Material): any;
+	all(arg0: ItemStack): any;
 	clear(): void;
 	clear(arg0: number): void;
-	contains(arg0: ItemStack, arg1: number): boolean;
 	contains(arg0: Material): boolean;
-	contains(arg0: Material, arg1: number): boolean;
 	contains(arg0: ItemStack): boolean;
-	iterator(): any;
-	iterator(arg0: number): any;
-	iterator(): any;
-	getLocation(): Location;
+	contains(arg0: ItemStack, arg1: number): boolean;
+	contains(arg0: Material, arg1: number): boolean;
+	containsAtLeast(arg0: ItemStack, arg1: number): boolean;
 	first(arg0: ItemStack): number;
 	first(arg0: Material): number;
-	getType(): InventoryType;
+	firstEmpty(): number;
+	forEach(action: any): void;
+	getContents(): Array<ItemStack>;
+	getHolder(): InventoryHolder;
+	getItem(arg0: number): ItemStack;
+	getLocation(): Location;
+	getMaxStackSize(): number;
 	getSize(): number;
-	all(arg0: ItemStack): any;
-	all(arg0: Material): any;
+	getStorageContents(): Array<ItemStack>;
+	getType(): InventoryType;
+	getViewers(): Array<HumanEntity>;
+	iterator(): any;
+	iterator(): any;
+	iterator(arg0: number): any;
+	remove(arg0: Material): void;
+	remove(arg0: ItemStack): void;
+	removeItem(arg0: Array<ItemStack>): any;
+	setContents(arg0: Array<ItemStack>): void;
+	setItem(arg0: number, arg1: ItemStack): void;
+	setMaxStackSize(arg0: number): void;
+	setStorageContents(arg0: Array<ItemStack>): void;
 	spliterator(): any;
-	forEach(arg0: any): void;
 }
 
 export default class Inventory {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.inventory.Inventory');
 	}
+
 }
 

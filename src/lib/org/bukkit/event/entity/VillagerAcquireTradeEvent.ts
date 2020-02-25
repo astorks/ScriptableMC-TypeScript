@@ -8,29 +8,32 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import MerchantRecipe from '../../../../org/bukkit/inventory/MerchantRecipe.js'
 
 export default interface VillagerAcquireTradeEvent extends EntityEvent, Cancellable {
-	isCancelled(): boolean;
-	getHandlers(): HandlerList;
-	getEntity(): AbstractVillager;
 	getEntity(): Entity;
-	getRecipe(): MerchantRecipe;
-	setRecipe(recipe: MerchantRecipe): void;
-	setCancelled(cancel: boolean): void;
+	getEntity(): AbstractVillager;
 	getEntityType(): EntityType;
 	getEventName(): string;
+	getHandlers(): HandlerList;
+	getRecipe(): MerchantRecipe;
 	isAsynchronous(): boolean;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
+	setRecipe(recipe: MerchantRecipe): void;
 }
 
 export default class VillagerAcquireTradeEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.entity.VillagerAcquireTradeEvent');
 	}
+
 	constructor(what: AbstractVillager, recipe: MerchantRecipe);
 	constructor(...args: any[]) {
 		return new VillagerAcquireTradeEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return VillagerAcquireTradeEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

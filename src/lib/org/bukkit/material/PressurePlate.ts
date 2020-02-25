@@ -5,13 +5,13 @@ import MaterialData from '../../../org/bukkit/material/MaterialData.js'
 import PressureSensor from '../../../org/bukkit/material/PressureSensor.js'
 
 export default interface PressurePlate extends MaterialData, PressureSensor {
-	isPressed(): boolean;
 	clone(): PressurePlate;
 	clone(): MaterialData;
 	clone(): any;
 	getData(): number;
-	setData(data: number): void;
 	getItemType(): Material;
+	isPressed(): boolean;
+	setData(data: number): void;
 	toItemStack(): ItemStack;
 	toItemStack(amount: number): ItemStack;
 }
@@ -20,11 +20,13 @@ export default class PressurePlate {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.material.PressurePlate');
 	}
-	constructor(type: Material, data: number);
-	constructor(type: Material);
+
 	constructor();
+	constructor(type: Material);
+	constructor(type: Material, data: number);
 	constructor(...args: any[]) {
 		return new PressurePlate.$javaClass(...args);
 	}
+
 }
 

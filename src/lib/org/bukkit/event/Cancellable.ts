@@ -9,5 +9,6 @@ export default class Cancellable {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.Cancellable');
 	}
+
 }
 

@@ -7,25 +7,25 @@ import Reader from '../../../java/io/Reader.js'
 import Writer from '../../../java/io/Writer.js'
 
 export default interface PluginDescriptionFile {
-	getFullName(): string;
-	getDescription(): string;
-	getVersion(): string;
-	getMain(): string;
-	getLoad(): PluginLoadOrder;
-	getAuthors(): Array<string>;
-	getWebsite(): string;
-	getDepend(): Array<string>;
-	getSoftDepend(): Array<string>;
-	getLoadBefore(): Array<string>;
-	getPrefix(): string;
-	getCommands(): any;
-	getPermissionDefault(): PermissionDefault;
-	getAwareness(): any;
 	getAPIVersion(): string;
+	getAuthors(): Array<string>;
+	getAwareness(): any;
 	getClassLoaderOf(): string;
-	getRawName(): string;
+	getCommands(): any;
+	getDepend(): Array<string>;
+	getDescription(): string;
+	getFullName(): string;
+	getLoad(): PluginLoadOrder;
+	getLoadBefore(): Array<string>;
+	getMain(): string;
 	getName(): string;
+	getPermissionDefault(): PermissionDefault;
 	getPermissions(): Array<Permission>;
+	getPrefix(): string;
+	getRawName(): string;
+	getSoftDepend(): Array<string>;
+	getVersion(): string;
+	getWebsite(): string;
 	save(writer: Writer): void;
 }
 
@@ -33,11 +33,13 @@ export default class PluginDescriptionFile {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.plugin.PluginDescriptionFile');
 	}
+
 	constructor(reader: Reader);
 	constructor(stream: InputStream);
 	constructor(pluginName: string, pluginVersion: string, mainClass: string);
 	constructor(...args: any[]) {
 		return new PluginDescriptionFile.$javaClass(...args);
 	}
+
 }
 

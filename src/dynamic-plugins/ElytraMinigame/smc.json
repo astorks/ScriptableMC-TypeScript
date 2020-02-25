@@ -1,0 +1,7 @@
+{
+    "name": "smc-elytra-minigame",
+    "enabled": true,
+    "version": "0.0.1",
+    "description": "ScriptableMC elytra minigame.",
+    "main": "main.js"
+}

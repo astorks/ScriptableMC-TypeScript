@@ -7,19 +7,19 @@ import Material from '../../../../../org/bukkit/Material.js'
 import Powerable from '../../../../../org/bukkit/block/data/Powerable.js'
 
 export default interface TripwireHook extends Attachable, Directional, Powerable {
-	isAttached(): boolean;
-	setAttached(arg0: boolean): void;
-	getMaterial(): Material;
-	getAsString(arg0: boolean): string;
-	getAsString(): string;
-	clone(): BlockData;
 	clone(): any;
+	clone(): BlockData;
+	getAsString(): string;
+	getAsString(arg0: boolean): string;
+	getFaces(): any;
+	getFacing(): BlockFace;
+	getMaterial(): Material;
+	isAttached(): boolean;
+	isPowered(): boolean;
 	matches(arg0: BlockData): boolean;
 	merge(arg0: BlockData): BlockData;
-	getFacing(): BlockFace;
+	setAttached(arg0: boolean): void;
 	setFacing(arg0: BlockFace): void;
-	getFaces(): any;
-	isPowered(): boolean;
 	setPowered(arg0: boolean): void;
 }
 
@@ -27,5 +27,6 @@ export default class TripwireHook {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.block.data.type.TripwireHook');
 	}
+
 }
 

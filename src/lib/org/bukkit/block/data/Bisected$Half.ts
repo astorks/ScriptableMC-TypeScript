@@ -1,10 +1,10 @@
 declare var Java: any;
 
 export default interface Bisected$Half {
-	name(): string;
 	compareTo(arg0: any): number;
-	compareTo(arg0: any): number;
+	compareTo(o: any): number;
 	getDeclaringClass(): any;
+	name(): string;
 	ordinal(): number;
 }
 
@@ -13,11 +13,11 @@ export default class Bisected$Half {
 		return Java.type('org.bukkit.block.data.Bisected$Half');
 	}
 
-	public static get TOP(): Bisected$Half {
-		return this.$javaClass.TOP;
-	}
 	public static get BOTTOM(): Bisected$Half {
 		return this.$javaClass.BOTTOM;
+	}
+	public static get TOP(): Bisected$Half {
+		return this.$javaClass.TOP;
 	}
 }
 

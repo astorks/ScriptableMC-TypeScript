@@ -12,45 +12,49 @@ import PluginLoader from '../../../../org/bukkit/plugin/PluginLoader.js'
 import Server from '../../../../org/bukkit/Server.js'
 
 export default interface JavaPlugin extends PluginBase {
-	getLogger(): any;
-	getServer(): Server;
-	onLoad(): void;
-	onEnable(): void;
-	onDisable(): void;
-	isEnabled(): boolean;
-	onCommand(sender: CommandSender, command: Command, label: string, args: Array<string>): boolean;
-	getDescription(): PluginDescriptionFile;
-	onTabComplete(sender: CommandSender, command: Command, alias: string, args: Array<string>): Array<string>;
-	getDataFolder(): File;
-	getPluginLoader(): PluginLoader;
+	getCommand(_name: string): PluginCommand;
 	getConfig(): FileConfiguration;
+	getDataFolder(): File;
+	getDefaultWorldGenerator(worldName: string, id: string): ChunkGenerator;
+	getDescription(): PluginDescriptionFile;
+	getLogger(): any;
+	getName(): string;
+	getPluginLoader(): PluginLoader;
+	getResource(filename: string): InputStream;
+	getServer(): Server;
+	isEnabled(): boolean;
+	isNaggable(): boolean;
+	onCommand(sender: CommandSender, command: Command, label: string, args: Array<string>): boolean;
+	onDisable(): void;
+	onEnable(): void;
+	onLoad(): void;
+	onTabComplete(sender: CommandSender, command: Command, alias: string, args: Array<string>): Array<string>;
 	reloadConfig(): void;
 	saveConfig(): void;
 	saveDefaultConfig(): void;
 	saveResource(resourcePath: string, replace: boolean): void;
-	getCommand(_name: string): PluginCommand;
-	getDefaultWorldGenerator(worldName: string, id: string): ChunkGenerator;
-	isNaggable(): boolean;
 	setNaggable(canNag: boolean): void;
-	getResource(filename: string): InputStream;
-	getName(): string;
 }
 
 export default class JavaPlugin {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.plugin.java.JavaPlugin');
 	}
+
 	constructor();
 	constructor(...args: any[]) {
 		return new JavaPlugin.$javaClass(...args);
 	}
+
 	public static getPlugin(clazz: any): JavaPlugin;
 	public static getPlugin(...args: any[]): any {
 		return JavaPlugin.$javaClass.getPlugin(...args);
 	}
+
 	public static getProvidingPlugin(clazz: any): JavaPlugin;
 	public static getProvidingPlugin(...args: any[]): any {
 		return JavaPlugin.$javaClass.getProvidingPlugin(...args);
 	}
+
 }
 

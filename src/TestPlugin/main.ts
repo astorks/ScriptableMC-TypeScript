@@ -8,12 +8,6 @@ import InventoryContents from '../lib/fr/minuskube/inv/content/InventoryContents
 import ItemStack from '../lib/org/bukkit/inventory/ItemStack.js';
 import Material from '../lib/org/bukkit/Material.js';
 import Enchantment from '../lib/org/bukkit/enchantments/Enchantment.js';
-import PlayerInteractEvent from '../lib/org/bukkit/event/player/PlayerInteractEvent.js';
-import BlockBreakEvent from '../lib/org/bukkit/event/block/BlockBreakEvent.js';
-import BlockPlaceEvent from '../lib/org/bukkit/event/block/BlockPlaceEvent.js';
-import EntityDamageEvent from '../lib/org/bukkit/event/entity/EntityDamageEvent.js';
-import PlayerInteractAtEntityEvent from '../lib/org/bukkit/event/player/PlayerInteractAtEntityEvent.js';
-import PlayerInteractEntityEvent from '../lib/org/bukkit/event/player/PlayerInteractEntityEvent.js';
 import ByteStreams from '../lib/com/google/common/io/ByteStreams.js';
 import EntityType from '../lib/org/bukkit/entity/EntityType.js';
 import Firework from '../lib/org/bukkit/entity/Firework.js';
@@ -40,7 +34,7 @@ export default class TestPlugin extends JsPlugin {
         // MySQL example
         if(CONFIG.mysql.enabled) {
             this.mysqlConnection = this.mysqlFromConfig(CONFIG.mysql);
-            this.mysqlConnection.openConnectionAsync(() => {
+            this.mysqlConnection.openConnectionAsync(this.context.getJavaPlugin(), () => {
                 let selectStatement = this.mysqlConnection.prepareStatement("SELECT * FROM Testing WHERE enabled = ?;");
                 selectStatement.setBoolean(1, true);
                 let result = selectStatement.executeQuery();
@@ -63,19 +57,19 @@ export default class TestPlugin extends JsPlugin {
         // Register incoming bungee message channel
         this.registerIncomingPluginChannel('BungeeCord', this.onBungeeMessageReceived);
 
-        // no-op event handler, this will cancel any event that is registered to it.
-        let noop = (l: any, e: any) => e.setCancelled(true);
 
         // Register PlayerJoinEvent to a local method
         this.registerEvent(PlayerJoinEvent, this.onPlayerJoin);
 
-        // Register a bunch of block break / entity interact events and no-op them
-        this.registerEvent(EntityDamageEvent, noop);
-        this.registerEvent(BlockBreakEvent, noop);
-        this.registerEvent(BlockPlaceEvent, noop);
-        this.registerEvent(PlayerInteractEvent, noop);
-        this.registerEvent(PlayerInteractAtEntityEvent, noop);
-        this.registerEvent(PlayerInteractEntityEvent, noop);
+        // // no-op event handler, this will cancel any event that is registered to it.
+        // let noop = (l: any, e: any) => e.setCancelled(true);
+        // // Register a bunch of block break / entity interact events and no-op them
+        // this.registerEvent(EntityDamageEvent, noop);
+        // this.registerEvent(BlockBreakEvent, noop);
+        // this.registerEvent(BlockPlaceEvent, noop);
+        // this.registerEvent(PlayerInteractEvent, noop);
+        // this.registerEvent(PlayerInteractAtEntityEvent, noop);
+        // this.registerEvent(PlayerInteractEntityEvent, noop);
 
         // Create a new command /hellojs
         let cmd = this.newCommand("hellojs");
@@ -126,7 +120,7 @@ export default class TestPlugin extends JsPlugin {
     onHelloWorldCmdExecute(sender: (CommandSender | Player), command: Command, label: string, args: Array<string>) {
         const plugin = this;
         
-        let inventory = SmartInventory.builder()
+        let inventory = SmartInventory.builder(this.context.getInventoryManager())
             .id("hellojs")
             .provider(new SmartInventoryProvider({
                 init(player: Player, contents: InventoryContents): void {

@@ -9,5 +9,6 @@ export default class Wrapper {
 	public static get $javaClass(): any {
 		return Java.type('java.sql.Wrapper');
 	}
+
 }
 

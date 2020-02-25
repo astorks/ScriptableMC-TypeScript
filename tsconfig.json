@@ -6,11 +6,8 @@
         "allowJs": true,
         "outDir": "dist",
         "rootDir": "src",
-        "declaration": false,
         //"lib": ["ES5", "ES2015", "ES2016", "ES2017", "ES2018", "ES2019", "ScriptHost"],
-        "types": [
-
-        ]
+        "types": []
     },
     "include": [
         "src/**/*"

@@ -10,5 +10,6 @@ export default class Channel {
 	public static get $javaClass(): any {
 		return Java.type('java.nio.channels.Channel');
 	}
+
 }
 

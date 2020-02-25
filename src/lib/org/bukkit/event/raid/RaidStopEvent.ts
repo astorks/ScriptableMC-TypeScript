@@ -6,11 +6,11 @@ import RaidStopEvent$Reason from '../../../../org/bukkit/event/raid/RaidStopEven
 import World from '../../../../org/bukkit/World.js'
 
 export default interface RaidStopEvent extends RaidEvent {
-	getHandlers(): HandlerList;
-	getReason(): RaidStopEvent$Reason;
-	getRaid(): Raid;
-	getWorld(): World;
 	getEventName(): string;
+	getHandlers(): HandlerList;
+	getRaid(): Raid;
+	getReason(): RaidStopEvent$Reason;
+	getWorld(): World;
 	isAsynchronous(): boolean;
 }
 
@@ -18,13 +18,16 @@ export default class RaidStopEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.raid.RaidStopEvent');
 	}
+
 	constructor(raid: Raid, world: World, reason: RaidStopEvent$Reason);
 	constructor(...args: any[]) {
 		return new RaidStopEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return RaidStopEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

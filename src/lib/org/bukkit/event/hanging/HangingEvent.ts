@@ -5,8 +5,8 @@ import Hanging from '../../../../org/bukkit/entity/Hanging.js'
 
 export default interface HangingEvent extends Event {
 	getEntity(): Hanging;
-	getHandlers(): HandlerList;
 	getEventName(): string;
+	getHandlers(): HandlerList;
 	isAsynchronous(): boolean;
 }
 
@@ -14,5 +14,6 @@ export default class HangingEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.hanging.HangingEvent');
 	}
+
 }
 

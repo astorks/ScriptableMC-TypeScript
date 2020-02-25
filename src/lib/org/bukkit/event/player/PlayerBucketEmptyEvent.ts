@@ -8,32 +8,35 @@ import Player from '../../../../org/bukkit/entity/Player.js'
 import PlayerBucketEvent from '../../../../org/bukkit/event/player/PlayerBucketEvent.js'
 
 export default interface PlayerBucketEmptyEvent extends PlayerBucketEvent {
-	getHandlers(): HandlerList;
-	isCancelled(): boolean;
 	getBlock(): Block;
-	getItemStack(): ItemStack;
-	setItemStack(itemStack: ItemStack): void;
-	setCancelled(cancel: boolean): void;
-	getBlockFace(): BlockFace;
 	getBlockClicked(): Block;
+	getBlockFace(): BlockFace;
 	getBucket(): Material;
-	getPlayer(): Player;
 	getEventName(): string;
+	getHandlers(): HandlerList;
+	getItemStack(): ItemStack;
+	getPlayer(): Player;
 	isAsynchronous(): boolean;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
+	setItemStack(itemStack: ItemStack): void;
 }
 
 export default class PlayerBucketEmptyEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.player.PlayerBucketEmptyEvent');
 	}
-	constructor(who: Player, block: Block, blockClicked: Block, blockFace: BlockFace, bucket: Material, itemInHand: ItemStack);
+
 	constructor(who: Player, blockClicked: Block, blockFace: BlockFace, bucket: Material, itemInHand: ItemStack);
+	constructor(who: Player, block: Block, blockClicked: Block, blockFace: BlockFace, bucket: Material, itemInHand: ItemStack);
 	constructor(...args: any[]) {
 		return new PlayerBucketEmptyEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return PlayerBucketEmptyEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

@@ -14,44 +14,45 @@ import TileState from '../../../org/bukkit/block/TileState.js'
 import World from '../../../org/bukkit/World.js'
 
 export default interface Sign extends TileState, Colorable {
-	getLine(arg0: number): string;
-	setLine(arg0: number, arg1: string): void;
-	getLines(): Array<string>;
-	isEditable(): boolean;
-	setEditable(arg0: boolean): void;
-	getPersistentDataContainer(): PersistentDataContainer;
-	getData(): MaterialData;
 	getBlock(): Block;
-	getWorld(): World;
-	setType(arg0: Material): void;
-	setData(arg0: MaterialData): void;
+	getBlockData(): BlockData;
 	getChunk(): Chunk;
+	getColor(): DyeColor;
+	getData(): MaterialData;
+	getLightLevel(): number;
+	getLine(arg0: number): string;
+	getLines(): Array<string>;
+	getLocation(): Location;
+	getLocation(arg0: Location): Location;
+	getMetadata(arg0: string): Array<MetadataValue>;
+	getPersistentDataContainer(): PersistentDataContainer;
+	getRawData(): number;
+	getType(): Material;
+	getWorld(): World;
 	getX(): number;
 	getY(): number;
 	getZ(): number;
-	getBlockData(): BlockData;
-	setRawData(arg0: number): void;
-	getRawData(): number;
-	isPlaced(): boolean;
-	setBlockData(arg0: BlockData): void;
-	getLightLevel(): number;
-	update(arg0: boolean, arg1: boolean): boolean;
-	update(arg0: boolean): boolean;
-	update(): boolean;
-	getLocation(arg0: Location): Location;
-	getLocation(): Location;
-	getType(): Material;
-	setMetadata(arg0: string, arg1: MetadataValue): void;
-	getMetadata(arg0: string): Array<MetadataValue>;
 	hasMetadata(arg0: string): boolean;
+	isEditable(): boolean;
+	isPlaced(): boolean;
 	removeMetadata(arg0: string, arg1: Plugin): void;
-	getColor(): DyeColor;
+	setBlockData(arg0: BlockData): void;
 	setColor(arg0: DyeColor): void;
+	setData(arg0: MaterialData): void;
+	setEditable(arg0: boolean): void;
+	setLine(arg0: number, arg1: string): void;
+	setMetadata(arg0: string, arg1: MetadataValue): void;
+	setRawData(arg0: number): void;
+	setType(arg0: Material): void;
+	update(): boolean;
+	update(arg0: boolean): boolean;
+	update(arg0: boolean, arg1: boolean): boolean;
 }
 
 export default class Sign {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.block.Sign');
 	}
+
 }
 

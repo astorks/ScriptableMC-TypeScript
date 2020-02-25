@@ -12,5 +12,6 @@ export default class BlockInventoryHolder {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.inventory.BlockInventoryHolder');
 	}
+
 }
 

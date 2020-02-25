@@ -4,38 +4,40 @@ import CommandSender from '../../../org/bukkit/command/CommandSender.js'
 import Location from '../../../org/bukkit/Location.js'
 
 export default interface Command {
-	unregister(commandMap: CommandMap): boolean;
-	testPermission(target: CommandSender): boolean;
-	getDescription(): string;
-	tabComplete(sender: CommandSender, alias: string, args: Array<string>): Array<string>;
-	tabComplete(sender: CommandSender, alias: string, args: Array<string>, location: Location): Array<string>;
-	testPermissionSilent(target: CommandSender): boolean;
-	getLabel(): string;
-	setLabel(_name: string): boolean;
+	execute(arg0: CommandSender, arg1: string, arg2: Array<string>): boolean;
 	getAliases(): Array<string>;
+	getDescription(): string;
+	getLabel(): string;
+	getName(): string;
+	getPermission(): string;
 	getPermissionMessage(): string;
 	getUsage(): string;
+	isRegistered(): boolean;
+	register(commandMap: CommandMap): boolean;
 	setAliases(aliases: Array<any>): Command;
 	setDescription(description: string): Command;
-	setPermissionMessage(permissionMessage: string): Command;
-	setUsage(usage: string): Command;
-	register(commandMap: CommandMap): boolean;
-	getName(): string;
-	isRegistered(): boolean;
-	execute(arg0: CommandSender, arg1: string, arg2: Array<string>): boolean;
+	setLabel(_name: string): boolean;
 	setName(_name: string): boolean;
 	setPermission(permission: string): void;
-	getPermission(): string;
+	setPermissionMessage(permissionMessage: string): Command;
+	setUsage(usage: string): Command;
+	tabComplete(sender: CommandSender, alias: string, args: Array<string>): Array<string>;
+	tabComplete(sender: CommandSender, alias: string, args: Array<string>, location: Location): Array<string>;
+	testPermission(target: CommandSender): boolean;
+	testPermissionSilent(target: CommandSender): boolean;
+	unregister(commandMap: CommandMap): boolean;
 }
 
 export default class Command {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.command.Command');
 	}
-	public static broadcastCommandMessage(source: CommandSender, message: string, sendToSource: boolean): void;
+
 	public static broadcastCommandMessage(source: CommandSender, message: string): void;
+	public static broadcastCommandMessage(source: CommandSender, message: string, sendToSource: boolean): void;
 	public static broadcastCommandMessage(...args: any[]): any {
 		return Command.$javaClass.broadcastCommandMessage(...args);
 	}
+
 }
 

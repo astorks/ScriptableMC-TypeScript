@@ -12,12 +12,15 @@ export default class ValidatingPrompt {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.conversations.ValidatingPrompt');
 	}
+
 	constructor();
 	constructor(...args: any[]) {
 		return new ValidatingPrompt.$javaClass(...args);
 	}
+
 	public static get END_OF_CONVERSATION(): Prompt {
 		return ValidatingPrompt.$javaClass.END_OF_CONVERSATION;
 	}
+
 }
 

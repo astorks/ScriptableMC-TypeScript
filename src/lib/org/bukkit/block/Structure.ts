@@ -17,64 +17,65 @@ import UsageMode from '../../../org/bukkit/block/structure/UsageMode.js'
 import World from '../../../org/bukkit/World.js'
 
 export default interface Structure extends TileState {
-	setSeed(arg0: number): void;
-	getSeed(): number;
-	setRotation(arg0: StructureRotation): void;
-	setMetadata(arg0: string): void;
-	getMetadata(): string;
-	setAuthor(arg0: LivingEntity): void;
-	setAuthor(arg0: string): void;
 	getAuthor(): string;
+	getBlock(): Block;
+	getBlockData(): BlockData;
+	getChunk(): Chunk;
+	getData(): MaterialData;
+	getIntegrity(): number;
+	getLightLevel(): number;
+	getLocation(): Location;
+	getLocation(arg0: Location): Location;
+	getMetadata(): string;
+	getMetadata(arg0: string): Array<MetadataValue>;
+	getMirror(): Mirror;
+	getPersistentDataContainer(): PersistentDataContainer;
+	getRawData(): number;
+	getRelativePosition(): BlockVector;
 	getRotation(): StructureRotation;
-	setStructureName(arg0: string): void;
+	getSeed(): number;
 	getStructureName(): string;
 	getStructureSize(): BlockVector;
-	setStructureSize(arg0: BlockVector): void;
-	getRelativePosition(): BlockVector;
-	setRelativePosition(arg0: BlockVector): void;
-	setMirror(arg0: Mirror): void;
-	getMirror(): Mirror;
-	setUsageMode(arg0: UsageMode): void;
+	getType(): Material;
 	getUsageMode(): UsageMode;
-	setIgnoreEntities(arg0: boolean): void;
-	isIgnoreEntities(): boolean;
-	setShowAir(arg0: boolean): void;
-	isShowAir(): boolean;
-	setBoundingBoxVisible(arg0: boolean): void;
-	isBoundingBoxVisible(): boolean;
-	setIntegrity(arg0: number): void;
-	getIntegrity(): number;
-	getPersistentDataContainer(): PersistentDataContainer;
-	getData(): MaterialData;
-	getBlock(): Block;
 	getWorld(): World;
-	setType(arg0: Material): void;
-	setData(arg0: MaterialData): void;
-	getChunk(): Chunk;
 	getX(): number;
 	getY(): number;
 	getZ(): number;
-	getBlockData(): BlockData;
-	setRawData(arg0: number): void;
-	getRawData(): number;
-	isPlaced(): boolean;
-	setBlockData(arg0: BlockData): void;
-	getLightLevel(): number;
-	update(arg0: boolean, arg1: boolean): boolean;
-	update(arg0: boolean): boolean;
-	update(): boolean;
-	getLocation(arg0: Location): Location;
-	getLocation(): Location;
-	getType(): Material;
-	setMetadata(arg0: string, arg1: MetadataValue): void;
-	getMetadata(arg0: string): Array<MetadataValue>;
 	hasMetadata(arg0: string): boolean;
+	isBoundingBoxVisible(): boolean;
+	isIgnoreEntities(): boolean;
+	isPlaced(): boolean;
+	isShowAir(): boolean;
 	removeMetadata(arg0: string, arg1: Plugin): void;
+	setAuthor(arg0: string): void;
+	setAuthor(arg0: LivingEntity): void;
+	setBlockData(arg0: BlockData): void;
+	setBoundingBoxVisible(arg0: boolean): void;
+	setData(arg0: MaterialData): void;
+	setIgnoreEntities(arg0: boolean): void;
+	setIntegrity(arg0: number): void;
+	setMetadata(arg0: string): void;
+	setMetadata(arg0: string, arg1: MetadataValue): void;
+	setMirror(arg0: Mirror): void;
+	setRawData(arg0: number): void;
+	setRelativePosition(arg0: BlockVector): void;
+	setRotation(arg0: StructureRotation): void;
+	setSeed(arg0: number): void;
+	setShowAir(arg0: boolean): void;
+	setStructureName(arg0: string): void;
+	setStructureSize(arg0: BlockVector): void;
+	setType(arg0: Material): void;
+	setUsageMode(arg0: UsageMode): void;
+	update(): boolean;
+	update(arg0: boolean): boolean;
+	update(arg0: boolean, arg1: boolean): boolean;
 }
 
 export default class Structure {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.block.Structure');
 	}
+
 }
 

@@ -13,55 +13,56 @@ import TileState from '../../../org/bukkit/block/TileState.js'
 import World from '../../../org/bukkit/World.js'
 
 export default interface CreatureSpawner extends TileState {
-	getSpawnedType(): EntityType;
-	getDelay(): number;
-	setMinSpawnDelay(arg0: number): void;
-	setCreatureTypeByName(arg0: string): void;
+	getBlock(): Block;
+	getBlockData(): BlockData;
+	getChunk(): Chunk;
 	getCreatureTypeName(): string;
-	setMaxSpawnDelay(arg0: number): void;
-	getSpawnCount(): number;
-	setSpawnCount(arg0: number): void;
+	getData(): MaterialData;
+	getDelay(): number;
+	getLightLevel(): number;
+	getLocation(): Location;
+	getLocation(arg0: Location): Location;
 	getMaxNearbyEntities(): number;
-	setMaxNearbyEntities(arg0: number): void;
-	getRequiredPlayerRange(): number;
-	setRequiredPlayerRange(arg0: number): void;
-	getSpawnRange(): number;
-	setSpawnRange(arg0: number): void;
 	getMaxSpawnDelay(): number;
-	setSpawnedType(arg0: EntityType): void;
-	setDelay(arg0: number): void;
+	getMetadata(arg0: string): Array<MetadataValue>;
 	getMinSpawnDelay(): number;
 	getPersistentDataContainer(): PersistentDataContainer;
-	getData(): MaterialData;
-	getBlock(): Block;
+	getRawData(): number;
+	getRequiredPlayerRange(): number;
+	getSpawnCount(): number;
+	getSpawnRange(): number;
+	getSpawnedType(): EntityType;
+	getType(): Material;
 	getWorld(): World;
-	setType(arg0: Material): void;
-	setData(arg0: MaterialData): void;
-	getChunk(): Chunk;
 	getX(): number;
 	getY(): number;
 	getZ(): number;
-	getBlockData(): BlockData;
-	setRawData(arg0: number): void;
-	getRawData(): number;
-	isPlaced(): boolean;
-	setBlockData(arg0: BlockData): void;
-	getLightLevel(): number;
-	update(arg0: boolean, arg1: boolean): boolean;
-	update(arg0: boolean): boolean;
-	update(): boolean;
-	getLocation(arg0: Location): Location;
-	getLocation(): Location;
-	getType(): Material;
-	setMetadata(arg0: string, arg1: MetadataValue): void;
-	getMetadata(arg0: string): Array<MetadataValue>;
 	hasMetadata(arg0: string): boolean;
+	isPlaced(): boolean;
 	removeMetadata(arg0: string, arg1: Plugin): void;
+	setBlockData(arg0: BlockData): void;
+	setCreatureTypeByName(arg0: string): void;
+	setData(arg0: MaterialData): void;
+	setDelay(arg0: number): void;
+	setMaxNearbyEntities(arg0: number): void;
+	setMaxSpawnDelay(arg0: number): void;
+	setMetadata(arg0: string, arg1: MetadataValue): void;
+	setMinSpawnDelay(arg0: number): void;
+	setRawData(arg0: number): void;
+	setRequiredPlayerRange(arg0: number): void;
+	setSpawnCount(arg0: number): void;
+	setSpawnRange(arg0: number): void;
+	setSpawnedType(arg0: EntityType): void;
+	setType(arg0: Material): void;
+	update(): boolean;
+	update(arg0: boolean): boolean;
+	update(arg0: boolean, arg1: boolean): boolean;
 }
 
 export default class CreatureSpawner {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.block.CreatureSpawner');
 	}
+
 }
 

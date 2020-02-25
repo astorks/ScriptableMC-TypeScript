@@ -9,30 +9,33 @@ import LivingEntity from '../../../../org/bukkit/entity/LivingEntity.js'
 import Material from '../../../../org/bukkit/Material.js'
 
 export default interface EntityBreakDoorEvent extends EntityChangeBlockEvent {
-	getEntity(): LivingEntity;
-	getEntity(): Entity;
-	isCancelled(): boolean;
-	getHandlers(): HandlerList;
 	getBlock(): Block;
 	getBlockData(): BlockData;
-	setCancelled(cancel: boolean): void;
-	getTo(): Material;
+	getEntity(): LivingEntity;
+	getEntity(): Entity;
 	getEntityType(): EntityType;
 	getEventName(): string;
+	getHandlers(): HandlerList;
+	getTo(): Material;
 	isAsynchronous(): boolean;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 }
 
 export default class EntityBreakDoorEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.entity.EntityBreakDoorEvent');
 	}
+
 	constructor(entity: LivingEntity, targetBlock: Block);
 	constructor(...args: any[]) {
 		return new EntityBreakDoorEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return EntityBreakDoorEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

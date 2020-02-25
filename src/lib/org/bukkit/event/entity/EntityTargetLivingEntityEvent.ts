@@ -7,30 +7,33 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import LivingEntity from '../../../../org/bukkit/entity/LivingEntity.js'
 
 export default interface EntityTargetLivingEntityEvent extends EntityTargetEvent {
-	getTarget(): Entity;
-	getTarget(): LivingEntity;
-	setTarget(target: Entity): void;
-	isCancelled(): boolean;
-	getHandlers(): HandlerList;
-	setCancelled(cancel: boolean): void;
-	getReason(): EntityTargetEvent$TargetReason;
 	getEntity(): Entity;
 	getEntityType(): EntityType;
 	getEventName(): string;
+	getHandlers(): HandlerList;
+	getReason(): EntityTargetEvent$TargetReason;
+	getTarget(): Entity;
+	getTarget(): LivingEntity;
 	isAsynchronous(): boolean;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
+	setTarget(target: Entity): void;
 }
 
 export default class EntityTargetLivingEntityEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.entity.EntityTargetLivingEntityEvent');
 	}
+
 	constructor(entity: Entity, target: LivingEntity, reason: EntityTargetEvent$TargetReason);
 	constructor(...args: any[]) {
 		return new EntityTargetLivingEntityEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return EntityTargetLivingEntityEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

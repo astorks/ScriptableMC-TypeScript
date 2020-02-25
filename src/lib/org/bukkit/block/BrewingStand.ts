@@ -14,51 +14,52 @@ import Plugin from '../../../org/bukkit/plugin/Plugin.js'
 import World from '../../../org/bukkit/World.js'
 
 export default interface BrewingStand extends Container {
-	getInventory(): BrewerInventory;
-	getInventory(): Inventory;
-	getSnapshotInventory(): Inventory;
-	getSnapshotInventory(): BrewerInventory;
-	getFuelLevel(): number;
-	getBrewingTime(): number;
-	setBrewingTime(arg0: number): void;
-	setFuelLevel(arg0: number): void;
-	getPersistentDataContainer(): PersistentDataContainer;
-	getData(): MaterialData;
 	getBlock(): Block;
-	getWorld(): World;
-	setType(arg0: Material): void;
-	setData(arg0: MaterialData): void;
+	getBlock(): Block;
+	getBlockData(): BlockData;
+	getBrewingTime(): number;
 	getChunk(): Chunk;
+	getCustomName(): string;
+	getData(): MaterialData;
+	getFuelLevel(): number;
+	getInventory(): Inventory;
+	getInventory(): BrewerInventory;
+	getLightLevel(): number;
+	getLocation(): Location;
+	getLocation(arg0: Location): Location;
+	getLock(): string;
+	getMetadata(arg0: string): Array<MetadataValue>;
+	getPersistentDataContainer(): PersistentDataContainer;
+	getRawData(): number;
+	getSnapshotInventory(): BrewerInventory;
+	getSnapshotInventory(): Inventory;
+	getType(): Material;
+	getWorld(): World;
 	getX(): number;
 	getY(): number;
 	getZ(): number;
-	getBlockData(): BlockData;
-	setRawData(arg0: number): void;
-	getRawData(): number;
-	isPlaced(): boolean;
-	setBlockData(arg0: BlockData): void;
-	getLightLevel(): number;
-	update(arg0: boolean, arg1: boolean): boolean;
-	update(arg0: boolean): boolean;
-	update(): boolean;
-	getLocation(arg0: Location): Location;
-	getLocation(): Location;
-	getType(): Material;
-	setMetadata(arg0: string, arg1: MetadataValue): void;
-	getMetadata(arg0: string): Array<MetadataValue>;
 	hasMetadata(arg0: string): boolean;
-	removeMetadata(arg0: string, arg1: Plugin): void;
-	getBlock(): Block;
 	isLocked(): boolean;
-	getLock(): string;
-	setLock(arg0: string): void;
-	getCustomName(): string;
+	isPlaced(): boolean;
+	removeMetadata(arg0: string, arg1: Plugin): void;
+	setBlockData(arg0: BlockData): void;
+	setBrewingTime(arg0: number): void;
 	setCustomName(arg0: string): void;
+	setData(arg0: MaterialData): void;
+	setFuelLevel(arg0: number): void;
+	setLock(arg0: string): void;
+	setMetadata(arg0: string, arg1: MetadataValue): void;
+	setRawData(arg0: number): void;
+	setType(arg0: Material): void;
+	update(): boolean;
+	update(arg0: boolean): boolean;
+	update(arg0: boolean, arg1: boolean): boolean;
 }
 
 export default class BrewingStand {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.block.BrewingStand');
 	}
+
 }
 

@@ -10,5 +10,6 @@ export default class CommandExecutor {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.command.CommandExecutor');
 	}
+
 }
 

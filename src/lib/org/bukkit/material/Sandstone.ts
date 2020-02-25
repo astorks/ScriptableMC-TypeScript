@@ -5,14 +5,14 @@ import MaterialData from '../../../org/bukkit/material/MaterialData.js'
 import SandstoneType from '../../../org/bukkit/SandstoneType.js'
 
 export default interface Sandstone extends MaterialData {
-	setType(type: SandstoneType): void;
-	clone(): any;
 	clone(): Sandstone;
 	clone(): MaterialData;
-	getType(): SandstoneType;
+	clone(): any;
 	getData(): number;
-	setData(data: number): void;
 	getItemType(): Material;
+	getType(): SandstoneType;
+	setData(data: number): void;
+	setType(type: SandstoneType): void;
 	toItemStack(): ItemStack;
 	toItemStack(amount: number): ItemStack;
 }
@@ -21,12 +21,14 @@ export default class Sandstone {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.material.Sandstone');
 	}
+
 	constructor();
-	constructor(type: Material, data: number);
 	constructor(type: Material);
 	constructor(type: SandstoneType);
+	constructor(type: Material, data: number);
 	constructor(...args: any[]) {
 		return new Sandstone.$javaClass(...args);
 	}
+
 }
 

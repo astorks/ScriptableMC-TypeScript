@@ -6,17 +6,17 @@ import TreeSpecies from '../../../org/bukkit/TreeSpecies.js'
 import Wood from '../../../org/bukkit/material/Wood.js'
 
 export default interface WoodenStep extends Wood {
-	isInverted(): boolean;
-	setInverted(inv: boolean): void;
 	clone(): MaterialData;
 	clone(): any;
 	clone(): Wood;
 	clone(): WoodenStep;
-	getSpecies(): TreeSpecies;
-	setSpecies(species: TreeSpecies): void;
 	getData(): number;
-	setData(data: number): void;
 	getItemType(): Material;
+	getSpecies(): TreeSpecies;
+	isInverted(): boolean;
+	setData(data: number): void;
+	setInverted(inv: boolean): void;
+	setSpecies(species: TreeSpecies): void;
 	toItemStack(): ItemStack;
 	toItemStack(amount: number): ItemStack;
 }
@@ -25,12 +25,14 @@ export default class WoodenStep {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.material.WoodenStep');
 	}
+
+	constructor();
+	constructor(species: TreeSpecies);
 	constructor(species: TreeSpecies, inv: boolean);
 	constructor(type: Material, data: number);
-	constructor(species: TreeSpecies);
-	constructor();
 	constructor(...args: any[]) {
 		return new WoodenStep.$javaClass(...args);
 	}
+
 }
 

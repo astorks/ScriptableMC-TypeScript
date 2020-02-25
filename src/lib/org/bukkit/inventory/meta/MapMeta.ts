@@ -12,66 +12,67 @@ import Multimap from '../../../../com/google/common/collect/Multimap.js'
 import PersistentDataContainer from '../../../../org/bukkit/persistence/PersistentDataContainer.js'
 
 export default interface MapMeta extends ItemMeta {
-	getColor(): Color;
-	setColor(arg0: Color): void;
-	getMapView(): MapView;
-	hasMapId(): boolean;
-	getMapId(): number;
-	setMapId(arg0: number): void;
-	hasMapView(): boolean;
-	setMapView(arg0: MapView): void;
-	isScaling(): boolean;
-	setScaling(arg0: boolean): void;
-	hasLocationName(): boolean;
-	getLocationName(): string;
-	setLocationName(arg0: string): void;
-	hasColor(): boolean;
+	addAttributeModifier(arg0: Attribute, arg1: AttributeModifier): boolean;
+	addEnchant(arg0: Enchantment, arg1: number, arg2: boolean): boolean;
+	addItemFlags(arg0: Array<ItemFlag>): void;
+	clone(): MapMeta;
 	clone(): any;
 	clone(): ItemMeta;
-	clone(): MapMeta;
-	getLore(): Array<string>;
-	isUnbreakable(): boolean;
-	setUnbreakable(arg0: boolean): void;
-	addEnchant(arg0: Enchantment, arg1: number, arg2: boolean): boolean;
-	removeEnchant(arg0: Enchantment): boolean;
-	setLore(arg0: Array<any>): void;
-	setDisplayName(arg0: string): void;
-	hasEnchant(arg0: Enchantment): boolean;
+	getAttributeModifiers(): Multimap;
+	getAttributeModifiers(arg0: EquipmentSlot): Multimap;
+	getAttributeModifiers(arg0: Attribute): any;
+	getColor(): Color;
+	getCustomModelData(): number;
+	getCustomTagContainer(): CustomItemTagContainer;
+	getDisplayName(): string;
 	getEnchantLevel(arg0: Enchantment): number;
 	getEnchants(): any;
-	setVersion(arg0: number): void;
-	setLocalizedName(arg0: string): void;
-	hasLore(): boolean;
-	hasCustomModelData(): boolean;
-	getCustomModelData(): number;
-	setCustomModelData(arg0: any): void;
-	hasEnchants(): boolean;
-	hasConflictingEnchant(arg0: Enchantment): boolean;
-	addItemFlags(arg0: Array<ItemFlag>): void;
-	removeItemFlags(arg0: Array<ItemFlag>): void;
 	getItemFlags(): any;
-	hasItemFlag(arg0: ItemFlag): boolean;
+	getLocalizedName(): string;
+	getLocationName(): string;
+	getLore(): Array<string>;
+	getMapId(): number;
+	getMapView(): MapView;
+	getPersistentDataContainer(): PersistentDataContainer;
 	hasAttributeModifiers(): boolean;
-	getAttributeModifiers(arg0: EquipmentSlot): Multimap;
-	getAttributeModifiers(): Multimap;
-	getAttributeModifiers(arg0: Attribute): any;
-	addAttributeModifier(arg0: Attribute, arg1: AttributeModifier): boolean;
-	setAttributeModifiers(arg0: Multimap): void;
+	hasColor(): boolean;
+	hasConflictingEnchant(arg0: Enchantment): boolean;
+	hasCustomModelData(): boolean;
+	hasDisplayName(): boolean;
+	hasEnchant(arg0: Enchantment): boolean;
+	hasEnchants(): boolean;
+	hasItemFlag(arg0: ItemFlag): boolean;
+	hasLocalizedName(): boolean;
+	hasLocationName(): boolean;
+	hasLore(): boolean;
+	hasMapId(): boolean;
+	hasMapView(): boolean;
+	isScaling(): boolean;
+	isUnbreakable(): boolean;
 	removeAttributeModifier(arg0: Attribute): boolean;
 	removeAttributeModifier(arg0: EquipmentSlot): boolean;
 	removeAttributeModifier(arg0: Attribute, arg1: AttributeModifier): boolean;
-	getCustomTagContainer(): CustomItemTagContainer;
-	hasLocalizedName(): boolean;
-	hasDisplayName(): boolean;
-	getLocalizedName(): string;
-	getDisplayName(): string;
+	removeEnchant(arg0: Enchantment): boolean;
+	removeItemFlags(arg0: Array<ItemFlag>): void;
 	serialize(): any;
-	getPersistentDataContainer(): PersistentDataContainer;
+	setAttributeModifiers(arg0: Multimap): void;
+	setColor(arg0: Color): void;
+	setCustomModelData(arg0: any): void;
+	setDisplayName(arg0: string): void;
+	setLocalizedName(arg0: string): void;
+	setLocationName(arg0: string): void;
+	setLore(arg0: Array<any>): void;
+	setMapId(arg0: number): void;
+	setMapView(arg0: MapView): void;
+	setScaling(arg0: boolean): void;
+	setUnbreakable(arg0: boolean): void;
+	setVersion(arg0: number): void;
 }
 
 export default class MapMeta {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.inventory.meta.MapMeta');
 	}
+
 }
 

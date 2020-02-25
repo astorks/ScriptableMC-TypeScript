@@ -1,11 +1,11 @@
 declare var Java: any;
 
 export default interface SandstoneType {
+	compareTo(arg0: any): number;
+	compareTo(o: any): number;
 	getData(): number;
-	name(): string;
-	compareTo(arg0: any): number;
-	compareTo(arg0: any): number;
 	getDeclaringClass(): any;
+	name(): string;
 	ordinal(): number;
 }
 

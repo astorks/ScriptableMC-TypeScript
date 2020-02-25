@@ -9,5 +9,6 @@ export default class Nameable {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.Nameable');
 	}
+
 }
 

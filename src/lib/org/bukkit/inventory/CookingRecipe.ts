@@ -7,28 +7,30 @@ import Recipe from '../../../org/bukkit/inventory/Recipe.js'
 import RecipeChoice from '../../../org/bukkit/inventory/RecipeChoice.js'
 
 export default interface CookingRecipe extends Recipe, Keyed {
-	setInput(input: Material): CookingRecipe;
-	setInputChoice(input: RecipeChoice): CookingRecipe;
-	getInputChoice(): RecipeChoice;
-	getInput(): ItemStack;
-	setExperience(experience: number): void;
-	getExperience(): number;
-	setCookingTime(cookingTime: number): void;
 	getCookingTime(): number;
+	getExperience(): number;
 	getGroup(): string;
-	setGroup(group: string): void;
+	getInput(): ItemStack;
+	getInputChoice(): RecipeChoice;
 	getKey(): NamespacedKey;
 	getResult(): ItemStack;
+	setCookingTime(cookingTime: number): void;
+	setExperience(experience: number): void;
+	setGroup(group: string): void;
+	setInput(input: Material): CookingRecipe;
+	setInputChoice(input: RecipeChoice): CookingRecipe;
 }
 
 export default class CookingRecipe {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.inventory.CookingRecipe');
 	}
+
 	constructor(key: NamespacedKey, result: ItemStack, input: RecipeChoice, experience: number, cookingTime: number);
 	constructor(key: NamespacedKey, result: ItemStack, source: Material, experience: number, cookingTime: number);
 	constructor(...args: any[]) {
 		return new CookingRecipe.$javaClass(...args);
 	}
+
 }
 

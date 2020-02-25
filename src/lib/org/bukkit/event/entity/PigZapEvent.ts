@@ -10,32 +10,35 @@ import Pig from '../../../../org/bukkit/entity/Pig.js'
 import PigZombie from '../../../../org/bukkit/entity/PigZombie.js'
 
 export default interface PigZapEvent extends EntityTransformEvent, Cancellable {
-	isCancelled(): boolean;
-	getHandlers(): HandlerList;
-	getEntity(): Pig;
 	getEntity(): Entity;
-	setCancelled(cancel: boolean): void;
-	getLightning(): LightningStrike;
-	getPigZombie(): PigZombie;
-	getTransformedEntity(): Entity;
-	getTransformedEntities(): Array<Entity>;
-	getTransformReason(): EntityTransformEvent$TransformReason;
+	getEntity(): Pig;
 	getEntityType(): EntityType;
 	getEventName(): string;
+	getHandlers(): HandlerList;
+	getLightning(): LightningStrike;
+	getPigZombie(): PigZombie;
+	getTransformReason(): EntityTransformEvent$TransformReason;
+	getTransformedEntities(): Array<Entity>;
+	getTransformedEntity(): Entity;
 	isAsynchronous(): boolean;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 }
 
 export default class PigZapEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.entity.PigZapEvent');
 	}
+
 	constructor(pig: Pig, bolt: LightningStrike, pigzombie: PigZombie);
 	constructor(...args: any[]) {
 		return new PigZapEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return PigZapEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

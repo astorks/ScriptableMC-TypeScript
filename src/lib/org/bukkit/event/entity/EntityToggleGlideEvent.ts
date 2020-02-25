@@ -7,27 +7,30 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import LivingEntity from '../../../../org/bukkit/entity/LivingEntity.js'
 
 export default interface EntityToggleGlideEvent extends EntityEvent, Cancellable {
-	isCancelled(): boolean;
-	getHandlers(): HandlerList;
-	isGliding(): boolean;
-	setCancelled(cancel: boolean): void;
 	getEntity(): Entity;
 	getEntityType(): EntityType;
 	getEventName(): string;
+	getHandlers(): HandlerList;
 	isAsynchronous(): boolean;
+	isCancelled(): boolean;
+	isGliding(): boolean;
+	setCancelled(cancel: boolean): void;
 }
 
 export default class EntityToggleGlideEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.entity.EntityToggleGlideEvent');
 	}
+
 	constructor(who: LivingEntity, isGliding: boolean);
 	constructor(...args: any[]) {
 		return new EntityToggleGlideEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return EntityToggleGlideEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

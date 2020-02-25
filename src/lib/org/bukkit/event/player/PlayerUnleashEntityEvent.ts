@@ -8,28 +8,31 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import Player from '../../../../org/bukkit/entity/Player.js'
 
 export default interface PlayerUnleashEntityEvent extends EntityUnleashEvent, Cancellable {
-	isCancelled(): boolean;
-	getPlayer(): Player;
-	setCancelled(cancel: boolean): void;
-	getHandlers(): HandlerList;
-	getReason(): EntityUnleashEvent$UnleashReason;
 	getEntity(): Entity;
 	getEntityType(): EntityType;
 	getEventName(): string;
+	getHandlers(): HandlerList;
+	getPlayer(): Player;
+	getReason(): EntityUnleashEvent$UnleashReason;
 	isAsynchronous(): boolean;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 }
 
 export default class PlayerUnleashEntityEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.player.PlayerUnleashEntityEvent');
 	}
+
 	constructor(entity: Entity, player: Player);
 	constructor(...args: any[]) {
 		return new PlayerUnleashEntityEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return PlayerUnleashEntityEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 

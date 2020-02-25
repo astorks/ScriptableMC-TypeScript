@@ -1,21 +1,23 @@
 declare var Java: any;
 
 export default interface SerializablePermission {
-	implies(arg0: any): boolean;
+	checkGuard(object: any): void;
 	getActions(): string;
-	newPermissionCollection(): any;
 	getName(): string;
-	checkGuard(arg0: any): void;
+	implies(p: any): boolean;
+	newPermissionCollection(): any;
 }
 
 export default class SerializablePermission {
 	public static get $javaClass(): any {
 		return Java.type('java.io.SerializablePermission');
 	}
-	constructor(arg0: string);
-	constructor(arg0: string, arg1: string);
+
+	constructor(_name: string);
+	constructor(_name: string, actions: string);
 	constructor(...args: any[]) {
 		return new SerializablePermission.$javaClass(...args);
 	}
+
 }
 

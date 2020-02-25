@@ -7,28 +7,30 @@ import Player from '../../../org/bukkit/entity/Player.js'
 import SmartInventory$Builder from '../../../fr/minuskube/inv/SmartInventory$Builder.js'
 
 export default interface SmartInventory {
-	getProvider(): InventoryProvider;
-	getTitle(): string;
-	getRows(): number;
+	close(player: Player): void;
 	getColumns(): number;
-	isCloseable(): boolean;
-	setCloseable(closeable: boolean): void;
+	getId(): string;
 	getManager(): InventoryManager;
 	getParent(): any;
-	getId(): string;
-	close(player: Player): void;
+	getProvider(): InventoryProvider;
+	getRows(): number;
+	getTitle(): string;
 	getType(): InventoryType;
-	open(player: Player, page: number): Inventory;
+	isCloseable(): boolean;
 	open(player: Player): Inventory;
+	open(player: Player, page: number): Inventory;
+	setCloseable(closeable: boolean): void;
 }
 
 export default class SmartInventory {
 	public static get $javaClass(): any {
 		return Java.type('fr.minuskube.inv.SmartInventory');
 	}
+
 	public static builder(): SmartInventory$Builder;
 	public static builder(...args: any[]): any {
 		return SmartInventory.$javaClass.builder(...args);
 	}
+
 }
 

@@ -6,25 +6,26 @@ import Player from '../../org/bukkit/entity/Player.js'
 import ServerOperator from '../../org/bukkit/permissions/ServerOperator.js'
 
 export default interface OfflinePlayer extends ServerOperator, AnimalTamer, ConfigurationSerializable {
-	getUniqueId(): string;
-	isOnline(): boolean;
-	setWhitelisted(arg0: boolean): void;
+	getBedSpawnLocation(): Location;
 	getFirstPlayed(): number;
 	getLastPlayed(): number;
-	hasPlayedBefore(): boolean;
-	getBedSpawnLocation(): Location;
-	isWhitelisted(): boolean;
-	getPlayer(): Player;
-	isBanned(): boolean;
 	getName(): string;
-	setOp(arg0: boolean): void;
+	getPlayer(): Player;
+	getUniqueId(): string;
+	hasPlayedBefore(): boolean;
+	isBanned(): boolean;
+	isOnline(): boolean;
 	isOp(): boolean;
+	isWhitelisted(): boolean;
 	serialize(): any;
+	setOp(arg0: boolean): void;
+	setWhitelisted(arg0: boolean): void;
 }
 
 export default class OfflinePlayer {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.OfflinePlayer');
 	}
+
 }
 

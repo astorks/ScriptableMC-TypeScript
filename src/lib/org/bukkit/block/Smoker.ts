@@ -14,53 +14,54 @@ import Plugin from '../../../org/bukkit/plugin/Plugin.js'
 import World from '../../../org/bukkit/World.js'
 
 export default interface Smoker extends Furnace {
-	getInventory(): FurnaceInventory;
+	getBlock(): Block;
+	getBlock(): Block;
+	getBlockData(): BlockData;
+	getBurnTime(): number;
+	getChunk(): Chunk;
+	getCookTime(): number;
+	getCookTimeTotal(): number;
+	getCustomName(): string;
+	getData(): MaterialData;
 	getInventory(): Inventory;
+	getInventory(): FurnaceInventory;
+	getLightLevel(): number;
+	getLocation(): Location;
+	getLocation(arg0: Location): Location;
+	getLock(): string;
+	getMetadata(arg0: string): Array<MetadataValue>;
+	getPersistentDataContainer(): PersistentDataContainer;
+	getRawData(): number;
 	getSnapshotInventory(): FurnaceInventory;
 	getSnapshotInventory(): Inventory;
-	getBurnTime(): number;
-	setBurnTime(arg0: number): void;
-	getCookTime(): number;
-	setCookTime(arg0: number): void;
-	getCookTimeTotal(): number;
-	setCookTimeTotal(arg0: number): void;
-	getPersistentDataContainer(): PersistentDataContainer;
-	getData(): MaterialData;
-	getBlock(): Block;
+	getType(): Material;
 	getWorld(): World;
-	setType(arg0: Material): void;
-	setData(arg0: MaterialData): void;
-	getChunk(): Chunk;
 	getX(): number;
 	getY(): number;
 	getZ(): number;
-	getBlockData(): BlockData;
-	setRawData(arg0: number): void;
-	getRawData(): number;
-	isPlaced(): boolean;
-	setBlockData(arg0: BlockData): void;
-	getLightLevel(): number;
-	update(arg0: boolean, arg1: boolean): boolean;
-	update(arg0: boolean): boolean;
-	update(): boolean;
-	getLocation(arg0: Location): Location;
-	getLocation(): Location;
-	getType(): Material;
-	setMetadata(arg0: string, arg1: MetadataValue): void;
-	getMetadata(arg0: string): Array<MetadataValue>;
 	hasMetadata(arg0: string): boolean;
-	removeMetadata(arg0: string, arg1: Plugin): void;
-	getBlock(): Block;
 	isLocked(): boolean;
-	getLock(): string;
-	setLock(arg0: string): void;
-	getCustomName(): string;
+	isPlaced(): boolean;
+	removeMetadata(arg0: string, arg1: Plugin): void;
+	setBlockData(arg0: BlockData): void;
+	setBurnTime(arg0: number): void;
+	setCookTime(arg0: number): void;
+	setCookTimeTotal(arg0: number): void;
 	setCustomName(arg0: string): void;
+	setData(arg0: MaterialData): void;
+	setLock(arg0: string): void;
+	setMetadata(arg0: string, arg1: MetadataValue): void;
+	setRawData(arg0: number): void;
+	setType(arg0: Material): void;
+	update(): boolean;
+	update(arg0: boolean): boolean;
+	update(arg0: boolean, arg1: boolean): boolean;
 }
 
 export default class Smoker {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.block.Smoker');
 	}
+
 }
 

@@ -10,5 +10,6 @@ export default class HelpTopicFactory {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.help.HelpTopicFactory');
 	}
+
 }
 

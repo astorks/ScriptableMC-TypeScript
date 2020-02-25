@@ -3,54 +3,67 @@ import Buffer from '../../java/nio/Buffer.js'
 import ByteOrder from '../../java/nio/ByteOrder.js'
 
 export default interface IntBuffer extends Buffer {
-	get(arg0: Array<number>, arg1: number, arg2: number): IntBuffer;
-	get(arg0: Array<number>): IntBuffer;
-	get(): number;
-	get(arg0: number): number;
-	put(arg0: Array<number>): IntBuffer;
-	put(arg0: Array<number>, arg1: number, arg2: number): IntBuffer;
-	put(arg0: number, arg1: number): IntBuffer;
-	put(arg0: IntBuffer): IntBuffer;
-	put(arg0: number): IntBuffer;
-	compareTo(arg0: any): number;
-	compareTo(arg0: IntBuffer): number;
-	isDirect(): boolean;
-	hasArray(): boolean;
-	array(): Array<number>;
 	array(): any;
+	array(): Array<number>;
 	arrayOffset(): number;
-	duplicate(): IntBuffer;
-	slice(): IntBuffer;
 	asReadOnlyBuffer(): IntBuffer;
-	compact(): IntBuffer;
-	order(): ByteOrder;
-	limit(arg0: number): Buffer;
-	limit(): number;
-	clear(): Buffer;
-	remaining(): number;
-	position(arg0: number): Buffer;
-	position(): number;
 	capacity(): number;
-	mark(): Buffer;
-	reset(): Buffer;
+	clear(): IntBuffer;
+	clear(): Buffer;
+	compact(): IntBuffer;
+	compareTo(arg0: any): number;
+	compareTo(that: IntBuffer): number;
+	duplicate(): Buffer;
+	duplicate(): IntBuffer;
+	flip(): IntBuffer;
 	flip(): Buffer;
-	rewind(): Buffer;
+	get(): number;
+	get(dst: Array<number>): IntBuffer;
+	get(arg0: number): number;
+	get(dst: Array<number>, offset: number, length: number): IntBuffer;
+	hasArray(): boolean;
 	hasRemaining(): boolean;
+	isDirect(): boolean;
 	isReadOnly(): boolean;
+	limit(): number;
+	limit(newLimit: number): Buffer;
+	limit(newLimit: number): IntBuffer;
+	mark(): Buffer;
+	mark(): IntBuffer;
+	mismatch(that: IntBuffer): number;
+	order(): ByteOrder;
+	position(): number;
+	position(newPosition: number): IntBuffer;
+	position(newPosition: number): Buffer;
+	put(src: Array<number>): IntBuffer;
+	put(src: IntBuffer): IntBuffer;
+	put(arg0: number): IntBuffer;
+	put(arg0: number, arg1: number): IntBuffer;
+	put(src: Array<number>, offset: number, length: number): IntBuffer;
+	remaining(): number;
+	reset(): Buffer;
+	reset(): IntBuffer;
+	rewind(): Buffer;
+	rewind(): IntBuffer;
+	slice(): IntBuffer;
+	slice(): Buffer;
 }
 
 export default class IntBuffer {
 	public static get $javaClass(): any {
 		return Java.type('java.nio.IntBuffer');
 	}
-	public static wrap(arg0: Array<number>, arg1: number, arg2: number): IntBuffer;
-	public static wrap(arg0: Array<number>): IntBuffer;
-	public static wrap(...args: any[]): any {
-		return IntBuffer.$javaClass.wrap(...args);
-	}
-	public static allocate(arg0: number): IntBuffer;
+
+	public static allocate(capacity: number): IntBuffer;
 	public static allocate(...args: any[]): any {
 		return IntBuffer.$javaClass.allocate(...args);
 	}
+
+	public static wrap(array: Array<number>): IntBuffer;
+	public static wrap(array: Array<number>, offset: number, length: number): IntBuffer;
+	public static wrap(...args: any[]): any {
+		return IntBuffer.$javaClass.wrap(...args);
+	}
+
 }
 

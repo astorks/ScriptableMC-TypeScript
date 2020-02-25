@@ -7,27 +7,30 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import Sheep from '../../../../org/bukkit/entity/Sheep.js'
 
 export default interface SheepRegrowWoolEvent extends EntityEvent, Cancellable {
-	isCancelled(): boolean;
-	getHandlers(): HandlerList;
-	getEntity(): Entity;
 	getEntity(): Sheep;
-	setCancelled(cancel: boolean): void;
+	getEntity(): Entity;
 	getEntityType(): EntityType;
 	getEventName(): string;
+	getHandlers(): HandlerList;
 	isAsynchronous(): boolean;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 }
 
 export default class SheepRegrowWoolEvent {
 	public static get $javaClass(): any {
 		return Java.type('org.bukkit.event.entity.SheepRegrowWoolEvent');
 	}
+
 	constructor(sheep: Sheep);
 	constructor(...args: any[]) {
 		return new SheepRegrowWoolEvent.$javaClass(...args);
 	}
+
 	public static getHandlerList(): HandlerList;
 	public static getHandlerList(...args: any[]): any {
 		return SheepRegrowWoolEvent.$javaClass.getHandlerList(...args);
 	}
+
 }
 
