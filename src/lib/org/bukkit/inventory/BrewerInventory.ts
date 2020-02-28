@@ -1,10 +1,10 @@
 declare var Java: any;
 import BrewingStand from '../../../org/bukkit/block/BrewingStand.js'
 import HumanEntity from '../../../org/bukkit/entity/HumanEntity.js'
-import Inventory from '../../../org/bukkit/inventory/Inventory.js'
-import InventoryHolder from '../../../org/bukkit/inventory/InventoryHolder.js'
+import Inventory from './Inventory.js'
+import InventoryHolder from './InventoryHolder.js'
 import InventoryType from '../../../org/bukkit/event/inventory/InventoryType.js'
-import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
+import ItemStack from './ItemStack.js'
 import Location from '../../../org/bukkit/Location.js'
 import Material from '../../../org/bukkit/Material.js'
 
@@ -25,8 +25,8 @@ export default interface BrewerInventory extends Inventory {
 	forEach(action: any): void;
 	getContents(): Array<ItemStack>;
 	getFuel(): ItemStack;
-	getHolder(): BrewingStand;
 	getHolder(): InventoryHolder;
+	getHolder(): BrewingStand;
 	getIngredient(): ItemStack;
 	getItem(arg0: number): ItemStack;
 	getLocation(): Location;

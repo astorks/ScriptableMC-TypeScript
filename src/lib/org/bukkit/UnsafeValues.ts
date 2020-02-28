@@ -1,11 +1,11 @@
 declare var Java: any;
-import Advancement from '../../org/bukkit/advancement/Advancement.js'
-import BlockData from '../../org/bukkit/block/data/BlockData.js'
-import ItemStack from '../../org/bukkit/inventory/ItemStack.js'
-import Material from '../../org/bukkit/Material.js'
-import MaterialData from '../../org/bukkit/material/MaterialData.js'
-import NamespacedKey from '../../org/bukkit/NamespacedKey.js'
-import PluginDescriptionFile from '../../org/bukkit/plugin/PluginDescriptionFile.js'
+import Advancement from './advancement/Advancement.js'
+import BlockData from './block/data/BlockData.js'
+import ItemStack from './inventory/ItemStack.js'
+import Material from './Material.js'
+import MaterialData from './material/MaterialData.js'
+import NamespacedKey from './NamespacedKey.js'
+import PluginDescriptionFile from './plugin/PluginDescriptionFile.js'
 
 export default interface UnsafeValues {
 	checkSupported(arg0: PluginDescriptionFile): void;

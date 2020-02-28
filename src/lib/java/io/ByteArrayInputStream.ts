@@ -1,6 +1,6 @@
 declare var Java: any;
-import InputStream from '../../java/io/InputStream.js'
-import OutputStream from '../../java/io/OutputStream.js'
+import InputStream from './InputStream.js'
+import OutputStream from './OutputStream.js'
 
 export default interface ByteArrayInputStream extends InputStream {
 	available(): number;

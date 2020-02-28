@@ -1,9 +1,9 @@
 declare var Java: any;
 import ClickableItem from '../../../../fr/minuskube/inv/ClickableItem.js'
-import Pagination from '../../../../fr/minuskube/inv/content/Pagination.js'
-import SlotIterator from '../../../../fr/minuskube/inv/content/SlotIterator.js'
-import SlotIterator$Type from '../../../../fr/minuskube/inv/content/SlotIterator$Type.js'
-import SlotPos from '../../../../fr/minuskube/inv/content/SlotPos.js'
+import Pagination from './Pagination.js'
+import SlotIterator from './SlotIterator.js'
+import SlotIterator$Type from './SlotIterator$Type.js'
+import SlotPos from './SlotPos.js'
 import SmartInventory from '../../../../fr/minuskube/inv/SmartInventory.js'
 
 export default interface InventoryContents {
@@ -21,8 +21,8 @@ export default interface InventoryContents {
 	inventory(): SmartInventory;
 	iterator(arg0: string): any;
 	newIterator(arg0: SlotIterator$Type, arg1: SlotPos): SlotIterator;
-	newIterator(arg0: string, arg1: SlotIterator$Type, arg2: SlotPos): SlotIterator;
 	newIterator(arg0: SlotIterator$Type, arg1: number, arg2: number): SlotIterator;
+	newIterator(arg0: string, arg1: SlotIterator$Type, arg2: SlotPos): SlotIterator;
 	newIterator(arg0: string, arg1: SlotIterator$Type, arg2: number, arg3: number): SlotIterator;
 	pagination(): Pagination;
 	property(arg0: string): any;

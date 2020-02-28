@@ -1,11 +1,11 @@
 declare var Java: any;
-import Conversable from '../../../org/bukkit/conversations/Conversable.js'
-import Conversation from '../../../org/bukkit/conversations/Conversation.js'
-import ConversationAbandonedListener from '../../../org/bukkit/conversations/ConversationAbandonedListener.js'
-import ConversationCanceller from '../../../org/bukkit/conversations/ConversationCanceller.js'
-import ConversationPrefix from '../../../org/bukkit/conversations/ConversationPrefix.js'
+import Conversable from './Conversable.js'
+import Conversation from './Conversation.js'
+import ConversationAbandonedListener from './ConversationAbandonedListener.js'
+import ConversationCanceller from './ConversationCanceller.js'
+import ConversationPrefix from './ConversationPrefix.js'
 import Plugin from '../../../org/bukkit/plugin/Plugin.js'
-import Prompt from '../../../org/bukkit/conversations/Prompt.js'
+import Prompt from './Prompt.js'
 
 export default interface ConversationFactory {
 	addConversationAbandonedListener(listener: ConversationAbandonedListener): ConversationFactory;

@@ -1,0 +1,7 @@
+{
+    "name": "smc-hub-spawn",
+    "enabled": true,
+    "version": "1.0.0",
+    "description": "ScriptableMC hub spawn.",
+    "main": "main.js"
+}

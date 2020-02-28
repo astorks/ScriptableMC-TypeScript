@@ -1,9 +1,9 @@
 declare var Java: any;
-import ObjectOutput from '../../java/io/ObjectOutput.js'
-import ObjectOutputStream$PutField from '../../java/io/ObjectOutputStream$PutField.js'
-import ObjectStreamConstants from '../../java/io/ObjectStreamConstants.js'
-import OutputStream from '../../java/io/OutputStream.js'
-import SerializablePermission from '../../java/io/SerializablePermission.js'
+import ObjectOutput from './ObjectOutput.js'
+import ObjectOutputStream$PutField from './ObjectOutputStream$PutField.js'
+import ObjectStreamConstants from './ObjectStreamConstants.js'
+import OutputStream from './OutputStream.js'
+import SerializablePermission from './SerializablePermission.js'
 
 export default interface ObjectOutputStream extends OutputStream {
 	close(): void;

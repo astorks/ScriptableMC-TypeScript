@@ -1,12 +1,12 @@
 declare var Java: any;
-import Command from '../../../org/bukkit/command/Command.js'
-import CommandExecutor from '../../../org/bukkit/command/CommandExecutor.js'
-import CommandMap from '../../../org/bukkit/command/CommandMap.js'
-import CommandSender from '../../../org/bukkit/command/CommandSender.js'
+import Command from './Command.js'
+import CommandExecutor from './CommandExecutor.js'
+import CommandMap from './CommandMap.js'
+import CommandSender from './CommandSender.js'
 import Location from '../../../org/bukkit/Location.js'
 import Plugin from '../../../org/bukkit/plugin/Plugin.js'
-import PluginIdentifiableCommand from '../../../org/bukkit/command/PluginIdentifiableCommand.js'
-import TabCompleter from '../../../org/bukkit/command/TabCompleter.js'
+import PluginIdentifiableCommand from './PluginIdentifiableCommand.js'
+import TabCompleter from './TabCompleter.js'
 
 export default interface PluginCommand extends Command, PluginIdentifiableCommand {
 	execute(sender: CommandSender, commandLabel: string, args: Array<string>): boolean;

@@ -3,7 +3,7 @@ import Charset from '../../java/nio/charset/Charset.js'
 import CookieJar from '../../khttp/structures/cookie/CookieJar.js'
 import InputStream from '../../java/io/InputStream.js'
 import Request from '../../khttp/requests/Request.js'
-import Response from '../../khttp/responses/Response.js'
+import Response from './Response.js'
 
 export default interface GenericResponse {
 	contentIterator(chunkSize: number): any;

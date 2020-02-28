@@ -1,6 +1,6 @@
 declare var Java: any;
 import Entity from '../../../org/bukkit/entity/Entity.js'
-import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
+import ItemStack from './ItemStack.js'
 
 export default interface EntityEquipment {
 	clear(): void;

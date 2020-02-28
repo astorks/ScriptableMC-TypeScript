@@ -4,8 +4,8 @@ import Entity from '../../../../org/bukkit/entity/Entity.js'
 import FishHook from '../../../../org/bukkit/entity/FishHook.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import Player from '../../../../org/bukkit/entity/Player.js'
-import PlayerEvent from '../../../../org/bukkit/event/player/PlayerEvent.js'
-import PlayerFishEvent$State from '../../../../org/bukkit/event/player/PlayerFishEvent$State.js'
+import PlayerEvent from './PlayerEvent.js'
+import PlayerFishEvent$State from './PlayerFishEvent$State.js'
 
 export default interface PlayerFishEvent extends PlayerEvent, Cancellable {
 	getCaught(): Entity;

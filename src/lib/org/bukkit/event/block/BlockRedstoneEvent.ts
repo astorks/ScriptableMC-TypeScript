@@ -1,6 +1,6 @@
 declare var Java: any;
 import Block from '../../../../org/bukkit/block/Block.js'
-import BlockEvent from '../../../../org/bukkit/event/block/BlockEvent.js'
+import BlockEvent from './BlockEvent.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 
 export default interface BlockRedstoneEvent extends BlockEvent {

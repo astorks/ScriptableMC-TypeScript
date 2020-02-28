@@ -4,7 +4,7 @@ import Bisected$Half from '../../../../../org/bukkit/block/data/Bisected$Half.js
 import BlockData from '../../../../../org/bukkit/block/data/BlockData.js'
 import BlockFace from '../../../../../org/bukkit/block/BlockFace.js'
 import Directional from '../../../../../org/bukkit/block/data/Directional.js'
-import Door$Hinge from '../../../../../org/bukkit/block/data/type/Door$Hinge.js'
+import Door$Hinge from './Door$Hinge.js'
 import Material from '../../../../../org/bukkit/Material.js'
 import Openable from '../../../../../org/bukkit/block/data/Openable.js'
 import Powerable from '../../../../../org/bukkit/block/data/Powerable.js'

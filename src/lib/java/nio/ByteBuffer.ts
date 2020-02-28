@@ -1,12 +1,12 @@
 declare var Java: any;
-import Buffer from '../../java/nio/Buffer.js'
-import ByteOrder from '../../java/nio/ByteOrder.js'
-import CharBuffer from '../../java/nio/CharBuffer.js'
-import DoubleBuffer from '../../java/nio/DoubleBuffer.js'
-import FloatBuffer from '../../java/nio/FloatBuffer.js'
-import IntBuffer from '../../java/nio/IntBuffer.js'
-import LongBuffer from '../../java/nio/LongBuffer.js'
-import ShortBuffer from '../../java/nio/ShortBuffer.js'
+import Buffer from './Buffer.js'
+import ByteOrder from './ByteOrder.js'
+import CharBuffer from './CharBuffer.js'
+import DoubleBuffer from './DoubleBuffer.js'
+import FloatBuffer from './FloatBuffer.js'
+import IntBuffer from './IntBuffer.js'
+import LongBuffer from './LongBuffer.js'
+import ShortBuffer from './ShortBuffer.js'
 
 export default interface ByteBuffer extends Buffer {
 	alignedSlice(unitSize: number): ByteBuffer;

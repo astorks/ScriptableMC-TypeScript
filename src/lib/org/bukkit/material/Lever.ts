@@ -2,15 +2,15 @@ declare var Java: any;
 import BlockFace from '../../../org/bukkit/block/BlockFace.js'
 import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
 import Material from '../../../org/bukkit/Material.js'
-import MaterialData from '../../../org/bukkit/material/MaterialData.js'
-import Redstone from '../../../org/bukkit/material/Redstone.js'
-import SimpleAttachableMaterialData from '../../../org/bukkit/material/SimpleAttachableMaterialData.js'
+import MaterialData from './MaterialData.js'
+import Redstone from './Redstone.js'
+import SimpleAttachableMaterialData from './SimpleAttachableMaterialData.js'
 
 export default interface Lever extends SimpleAttachableMaterialData, Redstone {
-	clone(): MaterialData;
 	clone(): any;
-	clone(): SimpleAttachableMaterialData;
 	clone(): Lever;
+	clone(): SimpleAttachableMaterialData;
+	clone(): MaterialData;
 	getAttachedFace(): BlockFace;
 	getData(): number;
 	getFacing(): BlockFace;

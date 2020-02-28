@@ -1,6 +1,6 @@
 declare var Java: any;
-import Closeable from '../../java/io/Closeable.js'
-import Flushable from '../../java/io/Flushable.js'
+import Closeable from './Closeable.js'
+import Flushable from './Flushable.js'
 
 export default interface OutputStream {
 	close(): void;

@@ -1,5 +1,5 @@
 declare var Java: any;
-import BukkitCommand from '../../../../org/bukkit/command/defaults/BukkitCommand.js'
+import BukkitCommand from './BukkitCommand.js'
 import Command from '../../../../org/bukkit/command/Command.js'
 import CommandMap from '../../../../org/bukkit/command/CommandMap.js'
 import CommandSender from '../../../../org/bukkit/command/CommandSender.js'

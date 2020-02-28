@@ -1,5 +1,5 @@
 declare var Java: any;
-import MetadataValue from '../../../org/bukkit/metadata/MetadataValue.js'
+import MetadataValue from './MetadataValue.js'
 import Plugin from '../../../org/bukkit/plugin/Plugin.js'
 
 export default interface MetadataValueAdapter extends MetadataValue {

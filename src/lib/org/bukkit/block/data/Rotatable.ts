@@ -1,5 +1,5 @@
 declare var Java: any;
-import BlockData from '../../../../org/bukkit/block/data/BlockData.js'
+import BlockData from './BlockData.js'
 import BlockFace from '../../../../org/bukkit/block/BlockFace.js'
 import Material from '../../../../org/bukkit/Material.js'
 

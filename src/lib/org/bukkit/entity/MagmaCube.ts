@@ -4,31 +4,31 @@ import AttributeInstance from '../../../org/bukkit/attribute/AttributeInstance.j
 import Block from '../../../org/bukkit/block/Block.js'
 import BlockFace from '../../../org/bukkit/block/BlockFace.js'
 import BoundingBox from '../../../org/bukkit/util/BoundingBox.js'
-import Entity from '../../../org/bukkit/entity/Entity.js'
+import Entity from './Entity.js'
 import EntityDamageEvent from '../../../org/bukkit/event/entity/EntityDamageEvent.js'
 import EntityEffect from '../../../org/bukkit/EntityEffect.js'
 import EntityEquipment from '../../../org/bukkit/inventory/EntityEquipment.js'
-import EntityType from '../../../org/bukkit/entity/EntityType.js'
+import EntityType from './EntityType.js'
 import FluidCollisionMode from '../../../org/bukkit/FluidCollisionMode.js'
-import LivingEntity from '../../../org/bukkit/entity/LivingEntity.js'
+import LivingEntity from './LivingEntity.js'
 import Location from '../../../org/bukkit/Location.js'
 import LootTable from '../../../org/bukkit/loot/LootTable.js'
-import MemoryKey from '../../../org/bukkit/entity/memory/MemoryKey.js'
+import MemoryKey from './memory/MemoryKey.js'
 import MetadataValue from '../../../org/bukkit/metadata/MetadataValue.js'
 import Permission from '../../../org/bukkit/permissions/Permission.js'
 import PermissionAttachment from '../../../org/bukkit/permissions/PermissionAttachment.js'
 import PersistentDataContainer from '../../../org/bukkit/persistence/PersistentDataContainer.js'
 import PistonMoveReaction from '../../../org/bukkit/block/PistonMoveReaction.js'
-import Player from '../../../org/bukkit/entity/Player.js'
+import Player from './Player.js'
 import PlayerTeleportEvent$TeleportCause from '../../../org/bukkit/event/player/PlayerTeleportEvent$TeleportCause.js'
 import Plugin from '../../../org/bukkit/plugin/Plugin.js'
-import Pose from '../../../org/bukkit/entity/Pose.js'
+import Pose from './Pose.js'
 import PotionEffect from '../../../org/bukkit/potion/PotionEffect.js'
 import PotionEffectType from '../../../org/bukkit/potion/PotionEffectType.js'
-import Projectile from '../../../org/bukkit/entity/Projectile.js'
+import Projectile from './Projectile.js'
 import RayTraceResult from '../../../org/bukkit/util/RayTraceResult.js'
 import Server from '../../../org/bukkit/Server.js'
-import Slime from '../../../org/bukkit/entity/Slime.js'
+import Slime from './Slime.js'
 import Vector from '../../../org/bukkit/util/Vector.js'
 import World from '../../../org/bukkit/World.js'
 
@@ -40,14 +40,14 @@ export default interface MagmaCube extends Slime {
 	addPassenger(arg0: Entity): boolean;
 	addPotionEffect(arg0: PotionEffect): boolean;
 	addPotionEffect(arg0: PotionEffect, arg1: boolean): boolean;
-	addPotionEffects(arg0: any): boolean;
+	addPotionEffects(arg0: Array<any>): boolean;
 	addScoreboardTag(arg0: string): boolean;
 	attack(arg0: Entity): void;
 	damage(arg0: number): void;
 	damage(arg0: number, arg1: Entity): void;
 	eject(): boolean;
 	getAbsorptionAmount(): number;
-	getActivePotionEffects(): any;
+	getActivePotionEffects(): Array<PotionEffect>;
 	getAttribute(arg0: Attribute): AttributeInstance;
 	getBoundingBox(): BoundingBox;
 	getCanPickupItems(): boolean;
@@ -109,8 +109,8 @@ export default interface MagmaCube extends Slime {
 	hasGravity(): boolean;
 	hasLineOfSight(arg0: Entity): boolean;
 	hasMetadata(arg0: string): boolean;
-	hasPermission(arg0: string): boolean;
 	hasPermission(arg0: Permission): boolean;
+	hasPermission(arg0: string): boolean;
 	hasPotionEffect(arg0: PotionEffectType): boolean;
 	isAware(): boolean;
 	isCollidable(): boolean;
@@ -124,8 +124,8 @@ export default interface MagmaCube extends Slime {
 	isLeashed(): boolean;
 	isOnGround(): boolean;
 	isOp(): boolean;
-	isPermissionSet(arg0: string): boolean;
 	isPermissionSet(arg0: Permission): boolean;
+	isPermissionSet(arg0: string): boolean;
 	isPersistent(): boolean;
 	isRiptiding(): boolean;
 	isSilent(): boolean;
@@ -188,8 +188,8 @@ export default interface MagmaCube extends Slime {
 	setVelocity(arg0: Vector): void;
 	swingMainHand(): void;
 	swingOffHand(): void;
-	teleport(arg0: Entity): boolean;
 	teleport(arg0: Location): boolean;
+	teleport(arg0: Entity): boolean;
 	teleport(arg0: Location, arg1: PlayerTeleportEvent$TeleportCause): boolean;
 	teleport(arg0: Entity, arg1: PlayerTeleportEvent$TeleportCause): boolean;
 }

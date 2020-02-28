@@ -6,7 +6,7 @@ import Location from '../../../../org/bukkit/Location.js'
 import Player from '../../../../org/bukkit/entity/Player.js'
 import TreeType from '../../../../org/bukkit/TreeType.js'
 import World from '../../../../org/bukkit/World.js'
-import WorldEvent from '../../../../org/bukkit/event/world/WorldEvent.js'
+import WorldEvent from './WorldEvent.js'
 
 export default interface StructureGrowEvent extends WorldEvent, Cancellable {
 	getBlocks(): Array<BlockState>;

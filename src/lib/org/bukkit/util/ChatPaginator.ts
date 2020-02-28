@@ -1,5 +1,5 @@
 declare var Java: any;
-import ChatPaginator$ChatPage from '../../../org/bukkit/util/ChatPaginator$ChatPage.js'
+import ChatPaginator$ChatPage from './ChatPaginator$ChatPage.js'
 
 export default class ChatPaginator {
 	public static get $javaClass(): any {

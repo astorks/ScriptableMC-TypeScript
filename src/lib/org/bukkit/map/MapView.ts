@@ -1,6 +1,6 @@
 declare var Java: any;
-import MapRenderer from '../../../org/bukkit/map/MapRenderer.js'
-import MapView$Scale from '../../../org/bukkit/map/MapView$Scale.js'
+import MapRenderer from './MapRenderer.js'
+import MapView$Scale from './MapView$Scale.js'
 import World from '../../../org/bukkit/World.js'
 
 export default interface MapView {

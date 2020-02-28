@@ -1,17 +1,17 @@
 declare var Java: any;
-import AbstractInterruptibleChannel from '../../../java/nio/channels/spi/AbstractInterruptibleChannel.js'
+import AbstractInterruptibleChannel from './spi/AbstractInterruptibleChannel.js'
 import ByteBuffer from '../../../java/nio/ByteBuffer.js'
 import FileAttribute from '../../../java/nio/file/attribute/FileAttribute.js'
-import FileChannel$MapMode from '../../../java/nio/channels/FileChannel$MapMode.js'
-import FileLock from '../../../java/nio/channels/FileLock.js'
-import GatheringByteChannel from '../../../java/nio/channels/GatheringByteChannel.js'
+import FileChannel$MapMode from './FileChannel$MapMode.js'
+import FileLock from './FileLock.js'
+import GatheringByteChannel from './GatheringByteChannel.js'
 import MappedByteBuffer from '../../../java/nio/MappedByteBuffer.js'
 import OpenOption from '../../../java/nio/file/OpenOption.js'
 import Path from '../../../java/nio/file/Path.js'
-import ReadableByteChannel from '../../../java/nio/channels/ReadableByteChannel.js'
-import ScatteringByteChannel from '../../../java/nio/channels/ScatteringByteChannel.js'
-import SeekableByteChannel from '../../../java/nio/channels/SeekableByteChannel.js'
-import WritableByteChannel from '../../../java/nio/channels/WritableByteChannel.js'
+import ReadableByteChannel from './ReadableByteChannel.js'
+import ScatteringByteChannel from './ScatteringByteChannel.js'
+import SeekableByteChannel from './SeekableByteChannel.js'
+import WritableByteChannel from './WritableByteChannel.js'
 
 export default interface FileChannel extends AbstractInterruptibleChannel {
 	close(): void;

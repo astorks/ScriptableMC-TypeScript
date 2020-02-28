@@ -1,6 +1,6 @@
 declare var Java: any;
 import Block from '../../../../org/bukkit/block/Block.js'
-import BlockGrowEvent from '../../../../org/bukkit/event/block/BlockGrowEvent.js'
+import BlockGrowEvent from './BlockGrowEvent.js'
 import BlockState from '../../../../org/bukkit/block/BlockState.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 

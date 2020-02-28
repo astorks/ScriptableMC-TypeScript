@@ -1,5 +1,5 @@
 declare var Java: any;
-import Listener from '../../../org/bukkit/event/Listener.js'
+import Listener from './Listener.js'
 import Plugin from '../../../org/bukkit/plugin/Plugin.js'
 import RegisteredListener from '../../../org/bukkit/plugin/RegisteredListener.js'
 
@@ -7,10 +7,10 @@ export default interface HandlerList {
 	bake(): void;
 	getRegisteredListeners(): Array<RegisteredListener>;
 	register(listener: RegisteredListener): void;
-	registerAll(listeners: any): void;
-	unregister(listener: Listener): void;
-	unregister(listener: RegisteredListener): void;
+	registerAll(listeners: Array<any>): void;
 	unregister(plugin: Plugin): void;
+	unregister(listener: RegisteredListener): void;
+	unregister(listener: Listener): void;
 }
 
 export default class HandlerList {

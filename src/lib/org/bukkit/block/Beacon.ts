@@ -1,9 +1,10 @@
 declare var Java: any;
-import Block from '../../../org/bukkit/block/Block.js'
-import BlockData from '../../../org/bukkit/block/data/BlockData.js'
+import Block from './Block.js'
+import BlockData from './data/BlockData.js'
 import Chunk from '../../../org/bukkit/Chunk.js'
+import LivingEntity from '../../../org/bukkit/entity/LivingEntity.js'
 import Location from '../../../org/bukkit/Location.js'
-import Lockable from '../../../org/bukkit/block/Lockable.js'
+import Lockable from './Lockable.js'
 import Material from '../../../org/bukkit/Material.js'
 import MaterialData from '../../../org/bukkit/material/MaterialData.js'
 import MetadataValue from '../../../org/bukkit/metadata/MetadataValue.js'
@@ -12,7 +13,7 @@ import PersistentDataContainer from '../../../org/bukkit/persistence/PersistentD
 import Plugin from '../../../org/bukkit/plugin/Plugin.js'
 import PotionEffect from '../../../org/bukkit/potion/PotionEffect.js'
 import PotionEffectType from '../../../org/bukkit/potion/PotionEffectType.js'
-import TileState from '../../../org/bukkit/block/TileState.js'
+import TileState from './TileState.js'
 import World from '../../../org/bukkit/World.js'
 
 export default interface Beacon extends TileState, Lockable, Nameable {
@@ -21,7 +22,7 @@ export default interface Beacon extends TileState, Lockable, Nameable {
 	getChunk(): Chunk;
 	getCustomName(): string;
 	getData(): MaterialData;
-	getEntitiesInRange(): any;
+	getEntitiesInRange(): Array<LivingEntity>;
 	getLightLevel(): number;
 	getLocation(): Location;
 	getLocation(arg0: Location): Location;

@@ -1,8 +1,8 @@
 declare var Java: any;
-import Block from '../../../org/bukkit/block/Block.js'
-import BlockData from '../../../org/bukkit/block/data/BlockData.js'
+import Block from './Block.js'
+import BlockData from './data/BlockData.js'
 import Chunk from '../../../org/bukkit/Chunk.js'
-import Container from '../../../org/bukkit/block/Container.js'
+import Container from './Container.js'
 import FurnaceInventory from '../../../org/bukkit/inventory/FurnaceInventory.js'
 import Inventory from '../../../org/bukkit/inventory/Inventory.js'
 import Location from '../../../org/bukkit/Location.js'
@@ -32,8 +32,8 @@ export default interface Furnace extends Container {
 	getMetadata(arg0: string): Array<MetadataValue>;
 	getPersistentDataContainer(): PersistentDataContainer;
 	getRawData(): number;
-	getSnapshotInventory(): FurnaceInventory;
 	getSnapshotInventory(): Inventory;
+	getSnapshotInventory(): FurnaceInventory;
 	getType(): Material;
 	getWorld(): World;
 	getX(): number;

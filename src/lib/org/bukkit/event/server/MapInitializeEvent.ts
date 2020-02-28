@@ -1,7 +1,7 @@
 declare var Java: any;
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import MapView from '../../../../org/bukkit/map/MapView.js'
-import ServerEvent from '../../../../org/bukkit/event/server/ServerEvent.js'
+import ServerEvent from './ServerEvent.js'
 
 export default interface MapInitializeEvent extends ServerEvent {
 	getEventName(): string;

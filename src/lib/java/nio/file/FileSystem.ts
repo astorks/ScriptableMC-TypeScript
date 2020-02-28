@@ -1,10 +1,10 @@
 declare var Java: any;
 import Closeable from '../../../java/io/Closeable.js'
-import FileSystemProvider from '../../../java/nio/file/spi/FileSystemProvider.js'
-import Path from '../../../java/nio/file/Path.js'
-import PathMatcher from '../../../java/nio/file/PathMatcher.js'
-import UserPrincipalLookupService from '../../../java/nio/file/attribute/UserPrincipalLookupService.js'
-import WatchService from '../../../java/nio/file/WatchService.js'
+import FileSystemProvider from './spi/FileSystemProvider.js'
+import Path from './Path.js'
+import PathMatcher from './PathMatcher.js'
+import UserPrincipalLookupService from './attribute/UserPrincipalLookupService.js'
+import WatchService from './WatchService.js'
 
 export default interface FileSystem {
 	close(): void;

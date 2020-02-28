@@ -10,7 +10,7 @@ export default class StringUtil {
 		return new StringUtil.$javaClass(...args);
 	}
 
-	public static copyPartialMatches(token: string, originals: any, collection: any): any;
+	public static copyPartialMatches(token: string, originals: any, collection: Array<any>): Array<any>;
 	public static copyPartialMatches(...args: any[]): any {
 		return StringUtil.$javaClass.copyPartialMatches(...args);
 	}

@@ -2,7 +2,7 @@ declare var Java: any;
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import Location from '../../../../org/bukkit/Location.js'
 import Player from '../../../../org/bukkit/entity/Player.js'
-import PlayerEvent from '../../../../org/bukkit/event/player/PlayerEvent.js'
+import PlayerEvent from './PlayerEvent.js'
 
 export default interface PlayerRespawnEvent extends PlayerEvent {
 	getEventName(): string;

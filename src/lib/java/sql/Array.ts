@@ -1,5 +1,5 @@
 declare var Java: any;
-import ResultSet from '../../java/sql/ResultSet.js'
+import ResultSet from './ResultSet.js'
 
 export default interface _Array {
 	free(): void;

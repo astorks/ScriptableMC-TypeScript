@@ -2,15 +2,15 @@ declare var Java: any;
 import BlockFace from '../../../org/bukkit/block/BlockFace.js'
 import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
 import Material from '../../../org/bukkit/Material.js'
-import MaterialData from '../../../org/bukkit/material/MaterialData.js'
-import Redstone from '../../../org/bukkit/material/Redstone.js'
-import SimpleAttachableMaterialData from '../../../org/bukkit/material/SimpleAttachableMaterialData.js'
+import MaterialData from './MaterialData.js'
+import Redstone from './Redstone.js'
+import SimpleAttachableMaterialData from './SimpleAttachableMaterialData.js'
 
 export default interface TripwireHook extends SimpleAttachableMaterialData, Redstone {
-	clone(): any;
-	clone(): MaterialData;
 	clone(): SimpleAttachableMaterialData;
 	clone(): TripwireHook;
+	clone(): any;
+	clone(): MaterialData;
 	getAttachedFace(): BlockFace;
 	getData(): number;
 	getFacing(): BlockFace;

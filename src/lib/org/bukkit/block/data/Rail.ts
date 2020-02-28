@@ -1,7 +1,7 @@
 declare var Java: any;
-import BlockData from '../../../../org/bukkit/block/data/BlockData.js'
+import BlockData from './BlockData.js'
 import Material from '../../../../org/bukkit/Material.js'
-import Rail$Shape from '../../../../org/bukkit/block/data/Rail$Shape.js'
+import Rail$Shape from './Rail$Shape.js'
 
 export default interface Rail extends BlockData {
 	clone(): any;

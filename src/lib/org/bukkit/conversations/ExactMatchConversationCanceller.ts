@@ -1,7 +1,7 @@
 declare var Java: any;
-import Conversation from '../../../org/bukkit/conversations/Conversation.js'
-import ConversationCanceller from '../../../org/bukkit/conversations/ConversationCanceller.js'
-import ConversationContext from '../../../org/bukkit/conversations/ConversationContext.js'
+import Conversation from './Conversation.js'
+import ConversationCanceller from './ConversationCanceller.js'
+import ConversationContext from './ConversationContext.js'
 
 export default interface ExactMatchConversationCanceller extends ConversationCanceller {
 	cancelBasedOnInput(context: ConversationContext, input: string): boolean;

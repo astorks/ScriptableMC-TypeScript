@@ -1,5 +1,5 @@
 declare var Java: any;
-import NamespacedKey from '../../org/bukkit/NamespacedKey.js'
+import NamespacedKey from './NamespacedKey.js'
 
 export default interface Keyed {
 	getKey(): NamespacedKey;

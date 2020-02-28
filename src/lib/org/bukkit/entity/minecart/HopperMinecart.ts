@@ -75,8 +75,8 @@ export default interface HopperMinecart extends Minecart, InventoryHolder, Loota
 	getWorld(): World;
 	hasGravity(): boolean;
 	hasMetadata(arg0: string): boolean;
-	hasPermission(arg0: string): boolean;
 	hasPermission(arg0: Permission): boolean;
+	hasPermission(arg0: string): boolean;
 	isCustomNameVisible(): boolean;
 	isDead(): boolean;
 	isEmpty(): boolean;
@@ -86,8 +86,8 @@ export default interface HopperMinecart extends Minecart, InventoryHolder, Loota
 	isInvulnerable(): boolean;
 	isOnGround(): boolean;
 	isOp(): boolean;
-	isPermissionSet(arg0: string): boolean;
 	isPermissionSet(arg0: Permission): boolean;
+	isPermissionSet(arg0: string): boolean;
 	isPersistent(): boolean;
 	isSilent(): boolean;
 	isSlowWhenEmpty(): boolean;
@@ -130,8 +130,8 @@ export default interface HopperMinecart extends Minecart, InventoryHolder, Loota
 	setSlowWhenEmpty(arg0: boolean): void;
 	setTicksLived(arg0: number): void;
 	setVelocity(arg0: Vector): void;
-	teleport(arg0: Entity): boolean;
 	teleport(arg0: Location): boolean;
+	teleport(arg0: Entity): boolean;
 	teleport(arg0: Location, arg1: PlayerTeleportEvent$TeleportCause): boolean;
 	teleport(arg0: Entity, arg1: PlayerTeleportEvent$TeleportCause): boolean;
 }

@@ -1,5 +1,5 @@
 declare var Java: any;
-import Warning from '../../org/bukkit/Warning.js'
+import Warning from './Warning.js'
 
 export default interface Warning$WarningState {
 	compareTo(arg0: any): number;

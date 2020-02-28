@@ -1,7 +1,7 @@
 declare var Java: any;
-import Block from '../../../org/bukkit/block/Block.js'
-import BlockData from '../../../org/bukkit/block/data/BlockData.js'
-import BlockFace from '../../../org/bukkit/block/BlockFace.js'
+import Block from './Block.js'
+import BlockData from './data/BlockData.js'
+import BlockFace from './BlockFace.js'
 import Chunk from '../../../org/bukkit/Chunk.js'
 import Location from '../../../org/bukkit/Location.js'
 import Material from '../../../org/bukkit/Material.js'
@@ -11,7 +11,7 @@ import OfflinePlayer from '../../../org/bukkit/OfflinePlayer.js'
 import PersistentDataContainer from '../../../org/bukkit/persistence/PersistentDataContainer.js'
 import Plugin from '../../../org/bukkit/plugin/Plugin.js'
 import SkullType from '../../../org/bukkit/SkullType.js'
-import TileState from '../../../org/bukkit/block/TileState.js'
+import TileState from './TileState.js'
 import World from '../../../org/bukkit/World.js'
 
 export default interface Skull extends TileState {

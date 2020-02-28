@@ -1,18 +1,18 @@
 declare var Java: any;
-import Blob from '../../java/sql/Blob.js'
-import CallableStatement from '../../java/sql/CallableStatement.js'
-import Clob from '../../java/sql/Clob.js'
-import DatabaseMetaData from '../../java/sql/DatabaseMetaData.js'
-import NClob from '../../java/sql/NClob.js'
-import PreparedStatement from '../../java/sql/PreparedStatement.js'
-import SQLWarning from '../../java/sql/SQLWarning.js'
-import SQLXML from '../../java/sql/SQLXML.js'
-import Savepoint from '../../java/sql/Savepoint.js'
-import ShardingKey from '../../java/sql/ShardingKey.js'
-import Statement from '../../java/sql/Statement.js'
-import Struct from '../../java/sql/Struct.js'
-import Wrapper from '../../java/sql/Wrapper.js'
-import _Array from '../../java/sql/Array.js'
+import Blob from './Blob.js'
+import CallableStatement from './CallableStatement.js'
+import Clob from './Clob.js'
+import DatabaseMetaData from './DatabaseMetaData.js'
+import NClob from './NClob.js'
+import PreparedStatement from './PreparedStatement.js'
+import SQLWarning from './SQLWarning.js'
+import SQLXML from './SQLXML.js'
+import Savepoint from './Savepoint.js'
+import ShardingKey from './ShardingKey.js'
+import Statement from './Statement.js'
+import Struct from './Struct.js'
+import Wrapper from './Wrapper.js'
+import _Array from './Array.js'
 
 export default interface Connection {
 	abort(arg0: any): void;
@@ -50,9 +50,9 @@ export default interface Connection {
 	prepareCall(arg0: string, arg1: number, arg2: number): CallableStatement;
 	prepareCall(arg0: string, arg1: number, arg2: number, arg3: number): CallableStatement;
 	prepareStatement(arg0: string): PreparedStatement;
+	prepareStatement(arg0: string, arg1: Array<string>): PreparedStatement;
 	prepareStatement(arg0: string, arg1: Array<number>): PreparedStatement;
 	prepareStatement(arg0: string, arg1: number): PreparedStatement;
-	prepareStatement(arg0: string, arg1: Array<string>): PreparedStatement;
 	prepareStatement(arg0: string, arg1: number, arg2: number): PreparedStatement;
 	prepareStatement(arg0: string, arg1: number, arg2: number, arg3: number): PreparedStatement;
 	releaseSavepoint(arg0: Savepoint): void;

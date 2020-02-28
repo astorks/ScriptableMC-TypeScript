@@ -1,7 +1,7 @@
 declare var Java: any;
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
-import ServerEvent from '../../../../org/bukkit/event/server/ServerEvent.js'
-import ServerLoadEvent$LoadType from '../../../../org/bukkit/event/server/ServerLoadEvent$LoadType.js'
+import ServerEvent from './ServerEvent.js'
+import ServerLoadEvent$LoadType from './ServerLoadEvent$LoadType.js'
 
 export default interface ServerLoadEvent extends ServerEvent {
 	getEventName(): string;

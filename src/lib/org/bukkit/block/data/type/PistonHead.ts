@@ -2,8 +2,8 @@ declare var Java: any;
 import BlockData from '../../../../../org/bukkit/block/data/BlockData.js'
 import BlockFace from '../../../../../org/bukkit/block/BlockFace.js'
 import Material from '../../../../../org/bukkit/Material.js'
-import TechnicalPiston from '../../../../../org/bukkit/block/data/type/TechnicalPiston.js'
-import TechnicalPiston$Type from '../../../../../org/bukkit/block/data/type/TechnicalPiston$Type.js'
+import TechnicalPiston from './TechnicalPiston.js'
+import TechnicalPiston$Type from './TechnicalPiston$Type.js'
 
 export default interface PistonHead extends TechnicalPiston {
 	clone(): any;

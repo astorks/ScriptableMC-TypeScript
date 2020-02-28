@@ -1,6 +1,6 @@
 declare var Java: any;
-import ItemTagAdapterContext from '../../../../../org/bukkit/inventory/meta/tags/ItemTagAdapterContext.js'
-import ItemTagType from '../../../../../org/bukkit/inventory/meta/tags/ItemTagType.js'
+import ItemTagAdapterContext from './ItemTagAdapterContext.js'
+import ItemTagType from './ItemTagType.js'
 import NamespacedKey from '../../../../../org/bukkit/NamespacedKey.js'
 
 export default interface CustomItemTagContainer {

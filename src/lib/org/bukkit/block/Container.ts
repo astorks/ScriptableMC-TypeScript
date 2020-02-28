@@ -1,18 +1,18 @@
 declare var Java: any;
-import Block from '../../../org/bukkit/block/Block.js'
-import BlockData from '../../../org/bukkit/block/data/BlockData.js'
+import Block from './Block.js'
+import BlockData from './data/BlockData.js'
 import BlockInventoryHolder from '../../../org/bukkit/inventory/BlockInventoryHolder.js'
 import Chunk from '../../../org/bukkit/Chunk.js'
 import Inventory from '../../../org/bukkit/inventory/Inventory.js'
 import Location from '../../../org/bukkit/Location.js'
-import Lockable from '../../../org/bukkit/block/Lockable.js'
+import Lockable from './Lockable.js'
 import Material from '../../../org/bukkit/Material.js'
 import MaterialData from '../../../org/bukkit/material/MaterialData.js'
 import MetadataValue from '../../../org/bukkit/metadata/MetadataValue.js'
 import Nameable from '../../../org/bukkit/Nameable.js'
 import PersistentDataContainer from '../../../org/bukkit/persistence/PersistentDataContainer.js'
 import Plugin from '../../../org/bukkit/plugin/Plugin.js'
-import TileState from '../../../org/bukkit/block/TileState.js'
+import TileState from './TileState.js'
 import World from '../../../org/bukkit/World.js'
 
 export default interface Container extends TileState, BlockInventoryHolder, Lockable, Nameable {

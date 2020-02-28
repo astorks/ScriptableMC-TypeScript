@@ -1,10 +1,10 @@
 declare var Java: any;
 import ChatColor from '../../../org/bukkit/ChatColor.js'
-import NameTagVisibility from '../../../org/bukkit/scoreboard/NameTagVisibility.js'
+import NameTagVisibility from './NameTagVisibility.js'
 import OfflinePlayer from '../../../org/bukkit/OfflinePlayer.js'
-import Scoreboard from '../../../org/bukkit/scoreboard/Scoreboard.js'
-import Team$Option from '../../../org/bukkit/scoreboard/Team$Option.js'
-import Team$OptionStatus from '../../../org/bukkit/scoreboard/Team$OptionStatus.js'
+import Scoreboard from './Scoreboard.js'
+import Team$Option from './Team$Option.js'
+import Team$OptionStatus from './Team$OptionStatus.js'
 
 export default interface Team {
 	addEntry(arg0: string): void;

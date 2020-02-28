@@ -1,49 +1,49 @@
 declare var Java: any;
-import Advancement from '../../org/bukkit/advancement/Advancement.js'
-import BanList from '../../org/bukkit/BanList.js'
-import BanList$Type from '../../org/bukkit/BanList$Type.js'
-import BarColor from '../../org/bukkit/boss/BarColor.js'
-import BarFlag from '../../org/bukkit/boss/BarFlag.js'
-import BarStyle from '../../org/bukkit/boss/BarStyle.js'
-import BlockData from '../../org/bukkit/block/data/BlockData.js'
-import BossBar from '../../org/bukkit/boss/BossBar.js'
-import BukkitScheduler from '../../org/bukkit/scheduler/BukkitScheduler.js'
-import CachedServerIcon from '../../org/bukkit/util/CachedServerIcon.js'
-import ChunkGenerator$ChunkData from '../../org/bukkit/generator/ChunkGenerator$ChunkData.js'
-import CommandSender from '../../org/bukkit/command/CommandSender.js'
-import ConsoleCommandSender from '../../org/bukkit/command/ConsoleCommandSender.js'
-import Entity from '../../org/bukkit/entity/Entity.js'
+import Advancement from './advancement/Advancement.js'
+import BanList from './BanList.js'
+import BanList$Type from './BanList$Type.js'
+import BarColor from './boss/BarColor.js'
+import BarFlag from './boss/BarFlag.js'
+import BarStyle from './boss/BarStyle.js'
+import BlockData from './block/data/BlockData.js'
+import BossBar from './boss/BossBar.js'
+import BukkitScheduler from './scheduler/BukkitScheduler.js'
+import CachedServerIcon from './util/CachedServerIcon.js'
+import ChunkGenerator$ChunkData from './generator/ChunkGenerator$ChunkData.js'
+import CommandSender from './command/CommandSender.js'
+import ConsoleCommandSender from './command/ConsoleCommandSender.js'
+import Entity from './entity/Entity.js'
 import File from '../../java/io/File.js'
-import GameMode from '../../org/bukkit/GameMode.js'
-import HelpMap from '../../org/bukkit/help/HelpMap.js'
-import Inventory from '../../org/bukkit/inventory/Inventory.js'
-import InventoryHolder from '../../org/bukkit/inventory/InventoryHolder.js'
-import InventoryType from '../../org/bukkit/event/inventory/InventoryType.js'
-import ItemFactory from '../../org/bukkit/inventory/ItemFactory.js'
-import ItemStack from '../../org/bukkit/inventory/ItemStack.js'
-import KeyedBossBar from '../../org/bukkit/boss/KeyedBossBar.js'
-import Location from '../../org/bukkit/Location.js'
-import LootTable from '../../org/bukkit/loot/LootTable.js'
-import MapView from '../../org/bukkit/map/MapView.js'
-import Material from '../../org/bukkit/Material.js'
-import Merchant from '../../org/bukkit/inventory/Merchant.js'
-import Messenger from '../../org/bukkit/plugin/messaging/Messenger.js'
-import NamespacedKey from '../../org/bukkit/NamespacedKey.js'
-import OfflinePlayer from '../../org/bukkit/OfflinePlayer.js'
-import Player from '../../org/bukkit/entity/Player.js'
-import Plugin from '../../org/bukkit/plugin/Plugin.js'
-import PluginCommand from '../../org/bukkit/command/PluginCommand.js'
-import PluginManager from '../../org/bukkit/plugin/PluginManager.js'
-import PluginMessageRecipient from '../../org/bukkit/plugin/messaging/PluginMessageRecipient.js'
-import Recipe from '../../org/bukkit/inventory/Recipe.js'
-import ScoreboardManager from '../../org/bukkit/scoreboard/ScoreboardManager.js'
-import ServicesManager from '../../org/bukkit/plugin/ServicesManager.js'
-import StructureType from '../../org/bukkit/StructureType.js'
-import Tag from '../../org/bukkit/Tag.js'
-import UnsafeValues from '../../org/bukkit/UnsafeValues.js'
-import Warning$WarningState from '../../org/bukkit/Warning$WarningState.js'
-import World from '../../org/bukkit/World.js'
-import WorldCreator from '../../org/bukkit/WorldCreator.js'
+import GameMode from './GameMode.js'
+import HelpMap from './help/HelpMap.js'
+import Inventory from './inventory/Inventory.js'
+import InventoryHolder from './inventory/InventoryHolder.js'
+import InventoryType from './event/inventory/InventoryType.js'
+import ItemFactory from './inventory/ItemFactory.js'
+import ItemStack from './inventory/ItemStack.js'
+import KeyedBossBar from './boss/KeyedBossBar.js'
+import Location from './Location.js'
+import LootTable from './loot/LootTable.js'
+import MapView from './map/MapView.js'
+import Material from './Material.js'
+import Merchant from './inventory/Merchant.js'
+import Messenger from './plugin/messaging/Messenger.js'
+import NamespacedKey from './NamespacedKey.js'
+import OfflinePlayer from './OfflinePlayer.js'
+import Player from './entity/Player.js'
+import Plugin from './plugin/Plugin.js'
+import PluginCommand from './command/PluginCommand.js'
+import PluginManager from './plugin/PluginManager.js'
+import PluginMessageRecipient from './plugin/messaging/PluginMessageRecipient.js'
+import Recipe from './inventory/Recipe.js'
+import ScoreboardManager from './scoreboard/ScoreboardManager.js'
+import ServicesManager from './plugin/ServicesManager.js'
+import StructureType from './StructureType.js'
+import Tag from './Tag.js'
+import UnsafeValues from './UnsafeValues.js'
+import Warning$WarningState from './Warning$WarningState.js'
+import World from './World.js'
+import WorldCreator from './WorldCreator.js'
 
 export default interface Server extends PluginMessageRecipient {
 	addRecipe(arg0: Recipe): boolean;
@@ -52,10 +52,10 @@ export default interface Server extends PluginMessageRecipient {
 	broadcast(arg0: string, arg1: string): number;
 	broadcastMessage(arg0: string): number;
 	clearRecipes(): void;
-	createBlockData(arg0: Material): BlockData;
 	createBlockData(arg0: string): BlockData;
-	createBlockData(arg0: Material, arg1: string): BlockData;
+	createBlockData(arg0: Material): BlockData;
 	createBlockData(arg0: Material, arg1: any): BlockData;
+	createBlockData(arg0: Material, arg1: string): BlockData;
 	createBossBar(arg0: string, arg1: BarColor, arg2: BarStyle, arg3: Array<BarFlag>): BossBar;
 	createBossBar(arg0: NamespacedKey, arg1: string, arg2: BarColor, arg3: BarStyle, arg4: Array<BarFlag>): KeyedBossBar;
 	createChunkData(arg0: World): ChunkGenerator$ChunkData;
@@ -63,8 +63,8 @@ export default interface Server extends PluginMessageRecipient {
 	createExplorerMap(arg0: World, arg1: Location, arg2: StructureType, arg3: number, arg4: boolean): ItemStack;
 	createInventory(arg0: InventoryHolder, arg1: number): Inventory;
 	createInventory(arg0: InventoryHolder, arg1: InventoryType): Inventory;
-	createInventory(arg0: InventoryHolder, arg1: number, arg2: string): Inventory;
 	createInventory(arg0: InventoryHolder, arg1: InventoryType, arg2: string): Inventory;
+	createInventory(arg0: InventoryHolder, arg1: number, arg2: string): Inventory;
 	createMap(arg0: World): MapView;
 	createMerchant(arg0: string): Merchant;
 	createWorld(arg0: WorldCreator): World;
@@ -104,7 +104,7 @@ export default interface Server extends PluginMessageRecipient {
 	getOfflinePlayer(arg0: string): OfflinePlayer;
 	getOfflinePlayers(): Array<OfflinePlayer>;
 	getOnlineMode(): boolean;
-	getOnlinePlayers(): any;
+	getOnlinePlayers(): Array<Player>;
 	getOperators(): any;
 	getPlayer(arg0: string): Player;
 	getPlayer(arg0: string): Player;

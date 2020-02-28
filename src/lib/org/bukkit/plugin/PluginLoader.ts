@@ -1,8 +1,8 @@
 declare var Java: any;
 import File from '../../../java/io/File.js'
 import Listener from '../../../org/bukkit/event/Listener.js'
-import Plugin from '../../../org/bukkit/plugin/Plugin.js'
-import PluginDescriptionFile from '../../../org/bukkit/plugin/PluginDescriptionFile.js'
+import Plugin from './Plugin.js'
+import PluginDescriptionFile from './PluginDescriptionFile.js'
 
 export default interface PluginLoader {
 	createRegisteredListeners(arg0: Listener, arg1: Plugin): any;

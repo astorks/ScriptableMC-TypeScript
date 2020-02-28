@@ -1,9 +1,9 @@
 declare var Java: any;
-import AsynchronousChannel from '../../../java/nio/channels/AsynchronousChannel.js'
+import AsynchronousChannel from './AsynchronousChannel.js'
 import ByteBuffer from '../../../java/nio/ByteBuffer.js'
-import CompletionHandler from '../../../java/nio/channels/CompletionHandler.js'
+import CompletionHandler from './CompletionHandler.js'
 import FileAttribute from '../../../java/nio/file/attribute/FileAttribute.js'
-import FileLock from '../../../java/nio/channels/FileLock.js'
+import FileLock from './FileLock.js'
 import OpenOption from '../../../java/nio/file/OpenOption.js'
 import Path from '../../../java/nio/file/Path.js'
 

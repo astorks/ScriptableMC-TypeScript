@@ -1,12 +1,12 @@
 declare var Java: any;
 import HumanEntity from '../../../org/bukkit/entity/HumanEntity.js'
-import Inventory from '../../../org/bukkit/inventory/Inventory.js'
-import InventoryHolder from '../../../org/bukkit/inventory/InventoryHolder.js'
+import Inventory from './Inventory.js'
+import InventoryHolder from './InventoryHolder.js'
 import InventoryType from '../../../org/bukkit/event/inventory/InventoryType.js'
-import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
+import ItemStack from './ItemStack.js'
 import Location from '../../../org/bukkit/Location.js'
 import Material from '../../../org/bukkit/Material.js'
-import Recipe from '../../../org/bukkit/inventory/Recipe.js'
+import Recipe from './Recipe.js'
 
 export default interface CraftingInventory extends Inventory {
 	addItem(arg0: Array<ItemStack>): any;

@@ -1,13 +1,13 @@
 declare var Java: any;
 import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
 import Material from '../../../org/bukkit/Material.js'
-import MaterialData from '../../../org/bukkit/material/MaterialData.js'
+import MaterialData from './MaterialData.js'
 import NetherWartsState from '../../../org/bukkit/NetherWartsState.js'
 
 export default interface NetherWarts extends MaterialData {
-	clone(): MaterialData;
-	clone(): any;
 	clone(): NetherWarts;
+	clone(): any;
+	clone(): MaterialData;
 	getData(): number;
 	getItemType(): Material;
 	getState(): NetherWartsState;
@@ -23,8 +23,8 @@ export default class NetherWarts {
 	}
 
 	constructor();
-	constructor(state: NetherWartsState);
 	constructor(type: Material);
+	constructor(state: NetherWartsState);
 	constructor(type: Material, data: number);
 	constructor(...args: any[]) {
 		return new NetherWarts.$javaClass(...args);

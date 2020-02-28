@@ -1,7 +1,7 @@
 declare var Java: any;
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import Player from '../../../../org/bukkit/entity/Player.js'
-import PlayerEvent from '../../../../org/bukkit/event/player/PlayerEvent.js'
+import PlayerEvent from './PlayerEvent.js'
 
 export default interface PlayerChatTabCompleteEvent extends PlayerEvent {
 	getChatMessage(): string;
@@ -9,7 +9,7 @@ export default interface PlayerChatTabCompleteEvent extends PlayerEvent {
 	getHandlers(): HandlerList;
 	getLastToken(): string;
 	getPlayer(): Player;
-	getTabCompletions(): any;
+	getTabCompletions(): Array<string>;
 	isAsynchronous(): boolean;
 }
 
@@ -18,7 +18,7 @@ export default class PlayerChatTabCompleteEvent {
 		return Java.type('org.bukkit.event.player.PlayerChatTabCompleteEvent');
 	}
 
-	constructor(who: Player, message: string, completions: any);
+	constructor(who: Player, message: string, completions: Array<any>);
 	constructor(...args: any[]) {
 		return new PlayerChatTabCompleteEvent.$javaClass(...args);
 	}

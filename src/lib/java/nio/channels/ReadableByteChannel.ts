@@ -1,6 +1,6 @@
 declare var Java: any;
 import ByteBuffer from '../../../java/nio/ByteBuffer.js'
-import Channel from '../../../java/nio/channels/Channel.js'
+import Channel from './Channel.js'
 
 export default interface ReadableByteChannel {
 	close(): void;

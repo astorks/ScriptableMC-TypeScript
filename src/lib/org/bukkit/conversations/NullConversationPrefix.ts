@@ -1,6 +1,6 @@
 declare var Java: any;
-import ConversationContext from '../../../org/bukkit/conversations/ConversationContext.js'
-import ConversationPrefix from '../../../org/bukkit/conversations/ConversationPrefix.js'
+import ConversationContext from './ConversationContext.js'
+import ConversationPrefix from './ConversationPrefix.js'
 
 export default interface NullConversationPrefix extends ConversationPrefix {
 	getPrefix(context: ConversationContext): string;

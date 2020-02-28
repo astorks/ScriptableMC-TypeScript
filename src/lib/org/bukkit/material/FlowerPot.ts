@@ -1,7 +1,7 @@
 declare var Java: any;
 import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
 import Material from '../../../org/bukkit/Material.js'
-import MaterialData from '../../../org/bukkit/material/MaterialData.js'
+import MaterialData from './MaterialData.js'
 
 export default interface FlowerPot extends MaterialData {
 	clone(): FlowerPot;

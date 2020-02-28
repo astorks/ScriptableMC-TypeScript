@@ -5,12 +5,12 @@ import Entity from '../../../../org/bukkit/entity/Entity.js'
 import EntityType from '../../../../org/bukkit/entity/EntityType.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import Projectile from '../../../../org/bukkit/entity/Projectile.js'
-import ProjectileHitEvent from '../../../../org/bukkit/event/entity/ProjectileHitEvent.js'
+import ProjectileHitEvent from './ProjectileHitEvent.js'
 import ThrownExpBottle from '../../../../org/bukkit/entity/ThrownExpBottle.js'
 
 export default interface ExpBottleEvent extends ProjectileHitEvent {
-	getEntity(): Projectile;
 	getEntity(): Entity;
+	getEntity(): Projectile;
 	getEntity(): ThrownExpBottle;
 	getEntityType(): EntityType;
 	getEventName(): string;

@@ -4,7 +4,7 @@ import File from '../../../../java/io/File.js'
 import InventoryManager from '../../../../fr/minuskube/inv/InventoryManager.js'
 import ScriptEngineConfig from '../../../../com/pixlfox/scriptablemc/ScriptEngineConfig.js'
 import ScriptEngineMain from '../../../../com/pixlfox/scriptablemc/ScriptEngineMain.js'
-import ScriptablePluginContext from '../../../../com/pixlfox/scriptablemc/core/ScriptablePluginContext.js'
+import ScriptablePluginContext from './ScriptablePluginContext.js'
 import Version from '../../../../com/smc/version/Version.js'
 
 export default interface ScriptablePluginEngine {
@@ -27,6 +27,8 @@ export default interface ScriptablePluginEngine {
 	getInventoryManager(): InventoryManager;
 	getLanguageFileExtension(): string;
 	getLanguageName(): string;
+	getPluginInstance(_name: string): any;
+	getPluginInstance(pluginContext: ScriptablePluginContext): any;
 	getPluginVersion(): Version;
 	getScriptablePlugins(): Array<ScriptablePluginContext>;
 	getStartupErrors(): Array<any>;

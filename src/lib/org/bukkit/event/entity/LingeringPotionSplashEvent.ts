@@ -7,7 +7,7 @@ import Entity from '../../../../org/bukkit/entity/Entity.js'
 import EntityType from '../../../../org/bukkit/entity/EntityType.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import Projectile from '../../../../org/bukkit/entity/Projectile.js'
-import ProjectileHitEvent from '../../../../org/bukkit/event/entity/ProjectileHitEvent.js'
+import ProjectileHitEvent from './ProjectileHitEvent.js'
 import ThrownPotion from '../../../../org/bukkit/entity/ThrownPotion.js'
 
 export default interface LingeringPotionSplashEvent extends ProjectileHitEvent, Cancellable {

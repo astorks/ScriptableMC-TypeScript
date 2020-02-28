@@ -1,7 +1,7 @@
 declare var Java: any;
-import Keyed from '../../org/bukkit/Keyed.js'
-import NamespacedKey from '../../org/bukkit/NamespacedKey.js'
-import Statistic$Type from '../../org/bukkit/Statistic$Type.js'
+import Keyed from './Keyed.js'
+import NamespacedKey from './NamespacedKey.js'
+import Statistic$Type from './Statistic$Type.js'
 
 export default interface Statistic extends Keyed {
 	compareTo(arg0: any): number;

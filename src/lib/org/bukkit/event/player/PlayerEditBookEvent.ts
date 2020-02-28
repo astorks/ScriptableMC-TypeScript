@@ -3,7 +3,7 @@ import BookMeta from '../../../../org/bukkit/inventory/meta/BookMeta.js'
 import Cancellable from '../../../../org/bukkit/event/Cancellable.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import Player from '../../../../org/bukkit/entity/Player.js'
-import PlayerEvent from '../../../../org/bukkit/event/player/PlayerEvent.js'
+import PlayerEvent from './PlayerEvent.js'
 
 export default interface PlayerEditBookEvent extends PlayerEvent, Cancellable {
 	getEventName(): string;

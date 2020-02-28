@@ -1,5 +1,5 @@
 declare var Java: any;
-import MapFont$CharacterSprite from '../../../org/bukkit/map/MapFont$CharacterSprite.js'
+import MapFont$CharacterSprite from './MapFont$CharacterSprite.js'
 
 export default interface MapFont {
 	getChar(ch: string): MapFont$CharacterSprite;

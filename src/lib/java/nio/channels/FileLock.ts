@@ -1,6 +1,6 @@
 declare var Java: any;
-import Channel from '../../../java/nio/channels/Channel.js'
-import FileChannel from '../../../java/nio/channels/FileChannel.js'
+import Channel from './Channel.js'
+import FileChannel from './FileChannel.js'
 
 export default interface FileLock {
 	acquiredBy(): Channel;

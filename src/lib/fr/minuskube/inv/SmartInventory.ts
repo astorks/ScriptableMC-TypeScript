@@ -1,10 +1,10 @@
 declare var Java: any;
 import Inventory from '../../../org/bukkit/inventory/Inventory.js'
-import InventoryManager from '../../../fr/minuskube/inv/InventoryManager.js'
-import InventoryProvider from '../../../fr/minuskube/inv/content/InventoryProvider.js'
+import InventoryManager from './InventoryManager.js'
+import InventoryProvider from './content/InventoryProvider.js'
 import InventoryType from '../../../org/bukkit/event/inventory/InventoryType.js'
 import Player from '../../../org/bukkit/entity/Player.js'
-import SmartInventory$Builder from '../../../fr/minuskube/inv/SmartInventory$Builder.js'
+import SmartInventory$Builder from './SmartInventory$Builder.js'
 
 export default interface SmartInventory {
 	close(player: Player): void;

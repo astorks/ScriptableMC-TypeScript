@@ -1,5 +1,5 @@
 declare var Java: any;
-import Plugin from '../../org/bukkit/plugin/Plugin.js'
+import Plugin from './plugin/Plugin.js'
 
 export default interface NamespacedKey {
 	getKey(): string;

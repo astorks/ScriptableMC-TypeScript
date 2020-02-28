@@ -1,7 +1,0 @@
-{
-    "name": "dynamic-test-two",
-    "enabled": true,
-    "version": "0.0.1",
-    "description": "ScriptableMC dynamic test two.",
-    "main": "main.js"
-}

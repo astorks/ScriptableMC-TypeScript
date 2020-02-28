@@ -1,6 +1,6 @@
 declare var Java: any;
-import Buffer from '../../java/nio/Buffer.js'
-import ByteOrder from '../../java/nio/ByteOrder.js'
+import Buffer from './Buffer.js'
+import ByteOrder from './ByteOrder.js'
 
 export default interface DoubleBuffer extends Buffer {
 	array(): any;

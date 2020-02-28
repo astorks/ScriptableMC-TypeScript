@@ -1,7 +1,7 @@
 declare var Java: any;
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import Plugin from '../../../../org/bukkit/plugin/Plugin.js'
-import PluginEvent from '../../../../org/bukkit/event/server/PluginEvent.js'
+import PluginEvent from './PluginEvent.js'
 
 export default interface PluginEnableEvent extends PluginEvent {
 	getEventName(): string;

@@ -1,5 +1,5 @@
 declare var Java: any;
-import AttributeModifier$Operation from '../../../org/bukkit/attribute/AttributeModifier$Operation.js'
+import AttributeModifier$Operation from './AttributeModifier$Operation.js'
 import ConfigurationSerializable from '../../../org/bukkit/configuration/serialization/ConfigurationSerializable.js'
 import EquipmentSlot from '../../../org/bukkit/inventory/EquipmentSlot.js'
 

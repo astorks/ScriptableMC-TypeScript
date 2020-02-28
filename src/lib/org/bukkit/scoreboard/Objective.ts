@@ -1,9 +1,9 @@
 declare var Java: any;
-import DisplaySlot from '../../../org/bukkit/scoreboard/DisplaySlot.js'
+import DisplaySlot from './DisplaySlot.js'
 import OfflinePlayer from '../../../org/bukkit/OfflinePlayer.js'
-import RenderType from '../../../org/bukkit/scoreboard/RenderType.js'
-import Score from '../../../org/bukkit/scoreboard/Score.js'
-import Scoreboard from '../../../org/bukkit/scoreboard/Scoreboard.js'
+import RenderType from './RenderType.js'
+import Score from './Score.js'
+import Scoreboard from './Scoreboard.js'
 
 export default interface Objective {
 	getCriteria(): string;

@@ -1,6 +1,6 @@
 declare var Java: any;
 import Keyed from '../../../org/bukkit/Keyed.js'
-import LootTable from '../../../org/bukkit/loot/LootTable.js'
+import LootTable from './LootTable.js'
 import NamespacedKey from '../../../org/bukkit/NamespacedKey.js'
 
 export default interface LootTables extends Keyed {

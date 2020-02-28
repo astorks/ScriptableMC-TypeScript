@@ -1,15 +1,15 @@
 declare var Java: any;
 import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
 import Material from '../../../org/bukkit/Material.js'
-import MaterialData from '../../../org/bukkit/material/MaterialData.js'
+import MaterialData from './MaterialData.js'
 import TreeSpecies from '../../../org/bukkit/TreeSpecies.js'
-import Wood from '../../../org/bukkit/material/Wood.js'
+import Wood from './Wood.js'
 
 export default interface WoodenStep extends Wood {
-	clone(): MaterialData;
-	clone(): any;
 	clone(): Wood;
+	clone(): any;
 	clone(): WoodenStep;
+	clone(): MaterialData;
 	getData(): number;
 	getItemType(): Material;
 	getSpecies(): TreeSpecies;

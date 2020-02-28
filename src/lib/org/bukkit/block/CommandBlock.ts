@@ -1,6 +1,6 @@
 declare var Java: any;
-import Block from '../../../org/bukkit/block/Block.js'
-import BlockData from '../../../org/bukkit/block/data/BlockData.js'
+import Block from './Block.js'
+import BlockData from './data/BlockData.js'
 import Chunk from '../../../org/bukkit/Chunk.js'
 import Location from '../../../org/bukkit/Location.js'
 import Material from '../../../org/bukkit/Material.js'
@@ -8,7 +8,7 @@ import MaterialData from '../../../org/bukkit/material/MaterialData.js'
 import MetadataValue from '../../../org/bukkit/metadata/MetadataValue.js'
 import PersistentDataContainer from '../../../org/bukkit/persistence/PersistentDataContainer.js'
 import Plugin from '../../../org/bukkit/plugin/Plugin.js'
-import TileState from '../../../org/bukkit/block/TileState.js'
+import TileState from './TileState.js'
 import World from '../../../org/bukkit/World.js'
 
 export default interface CommandBlock extends TileState {

@@ -1,5 +1,5 @@
 declare var Java: any;
-import Version from '../../../com/smc/version/Version.js'
+import Version from './Version.js'
 
 export default class MinecraftVersions {
 	public static get $javaClass(): any {

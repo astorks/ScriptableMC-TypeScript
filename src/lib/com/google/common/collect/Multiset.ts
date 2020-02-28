@@ -3,10 +3,10 @@ declare var Java: any;
 export default interface Multiset {
 	add(arg0: any): boolean;
 	add(arg0: any, arg1: number): number;
-	addAll(arg0: any): boolean;
+	addAll(arg0: Array<any>): boolean;
 	clear(): void;
 	contains(arg0: any): boolean;
-	containsAll(arg0: any): boolean;
+	containsAll(arg0: Array<any>): boolean;
 	count(arg0: any): number;
 	elementSet(): any;
 	entrySet(): any;
@@ -17,9 +17,9 @@ export default interface Multiset {
 	parallelStream(): any;
 	remove(arg0: any): boolean;
 	remove(arg0: any, arg1: number): number;
-	removeAll(arg0: any): boolean;
+	removeAll(arg0: Array<any>): boolean;
 	removeIf(filter: any): boolean;
-	retainAll(arg0: any): boolean;
+	retainAll(arg0: Array<any>): boolean;
 	setCount(arg0: any, arg1: number): number;
 	setCount(arg0: any, arg1: number, arg2: number): boolean;
 	size(): number;

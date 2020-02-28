@@ -1,5 +1,5 @@
 declare var Java: any;
-import PersistentDataContainer from '../../../org/bukkit/persistence/PersistentDataContainer.js'
+import PersistentDataContainer from './PersistentDataContainer.js'
 
 export default interface PersistentDataHolder {
 	getPersistentDataContainer(): PersistentDataContainer;

@@ -1,13 +1,13 @@
 declare var Java: any;
 import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
 import Material from '../../../org/bukkit/Material.js'
-import MaterialData from '../../../org/bukkit/material/MaterialData.js'
-import Redstone from '../../../org/bukkit/material/Redstone.js'
+import MaterialData from './MaterialData.js'
+import Redstone from './Redstone.js'
 
 export default interface RedstoneWire extends MaterialData, Redstone {
+	clone(): any;
 	clone(): RedstoneWire;
 	clone(): MaterialData;
-	clone(): any;
 	getData(): number;
 	getItemType(): Material;
 	isPowered(): boolean;

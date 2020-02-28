@@ -1,11 +1,11 @@
 declare var Java: any;
 import Attribute from '../../../../org/bukkit/attribute/Attribute.js'
 import AttributeModifier from '../../../../org/bukkit/attribute/AttributeModifier.js'
-import CustomItemTagContainer from '../../../../org/bukkit/inventory/meta/tags/CustomItemTagContainer.js'
+import CustomItemTagContainer from './tags/CustomItemTagContainer.js'
 import Enchantment from '../../../../org/bukkit/enchantments/Enchantment.js'
 import EquipmentSlot from '../../../../org/bukkit/inventory/EquipmentSlot.js'
 import ItemFlag from '../../../../org/bukkit/inventory/ItemFlag.js'
-import ItemMeta from '../../../../org/bukkit/inventory/meta/ItemMeta.js'
+import ItemMeta from './ItemMeta.js'
 import Multimap from '../../../../com/google/common/collect/Multimap.js'
 import PersistentDataContainer from '../../../../org/bukkit/persistence/PersistentDataContainer.js'
 
@@ -19,7 +19,7 @@ export default interface EnchantmentStorageMeta extends ItemMeta {
 	clone(): EnchantmentStorageMeta;
 	getAttributeModifiers(): Multimap;
 	getAttributeModifiers(arg0: EquipmentSlot): Multimap;
-	getAttributeModifiers(arg0: Attribute): any;
+	getAttributeModifiers(arg0: Attribute): Array<AttributeModifier>;
 	getCustomModelData(): number;
 	getCustomTagContainer(): CustomItemTagContainer;
 	getDisplayName(): string;
@@ -44,8 +44,8 @@ export default interface EnchantmentStorageMeta extends ItemMeta {
 	hasStoredEnchant(arg0: Enchantment): boolean;
 	hasStoredEnchants(): boolean;
 	isUnbreakable(): boolean;
-	removeAttributeModifier(arg0: Attribute): boolean;
 	removeAttributeModifier(arg0: EquipmentSlot): boolean;
+	removeAttributeModifier(arg0: Attribute): boolean;
 	removeAttributeModifier(arg0: Attribute, arg1: AttributeModifier): boolean;
 	removeEnchant(arg0: Enchantment): boolean;
 	removeItemFlags(arg0: Array<ItemFlag>): void;

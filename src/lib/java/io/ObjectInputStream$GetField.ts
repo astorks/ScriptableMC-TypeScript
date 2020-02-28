@@ -1,8 +1,9 @@
 declare var Java: any;
-import ObjectStreamClass from '../../java/io/ObjectStreamClass.js'
+import ObjectStreamClass from './ObjectStreamClass.js'
 
 export default interface ObjectInputStream$GetField {
 	defaulted(arg0: string): boolean;
+	get(arg0: string, arg1: number): number;
 	get(arg0: string, arg1: number): number;
 	get(arg0: string, arg1: number): number;
 	get(arg0: string, arg1: number): number;
@@ -11,7 +12,6 @@ export default interface ObjectInputStream$GetField {
 	get(arg0: string, arg1: boolean): boolean;
 	get(arg0: string, arg1: number): number;
 	get(arg0: string, arg1: string): string;
-	get(arg0: string, arg1: number): number;
 	getObjectStreamClass(): ObjectStreamClass;
 }
 

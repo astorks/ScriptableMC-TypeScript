@@ -1,7 +1,7 @@
 declare var Java: any;
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import Player from '../../../../org/bukkit/entity/Player.js'
-import PlayerChannelEvent from '../../../../org/bukkit/event/player/PlayerChannelEvent.js'
+import PlayerChannelEvent from './PlayerChannelEvent.js'
 
 export default interface PlayerUnregisterChannelEvent extends PlayerChannelEvent {
 	getChannel(): string;

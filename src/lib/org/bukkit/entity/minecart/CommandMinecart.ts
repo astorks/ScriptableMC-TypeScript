@@ -69,8 +69,8 @@ export default interface CommandMinecart extends Minecart {
 	getWorld(): World;
 	hasGravity(): boolean;
 	hasMetadata(arg0: string): boolean;
-	hasPermission(arg0: string): boolean;
 	hasPermission(arg0: Permission): boolean;
+	hasPermission(arg0: string): boolean;
 	isCustomNameVisible(): boolean;
 	isDead(): boolean;
 	isEmpty(): boolean;
@@ -79,8 +79,8 @@ export default interface CommandMinecart extends Minecart {
 	isInvulnerable(): boolean;
 	isOnGround(): boolean;
 	isOp(): boolean;
-	isPermissionSet(arg0: string): boolean;
 	isPermissionSet(arg0: Permission): boolean;
+	isPermissionSet(arg0: string): boolean;
 	isPersistent(): boolean;
 	isSilent(): boolean;
 	isSlowWhenEmpty(): boolean;
@@ -122,8 +122,8 @@ export default interface CommandMinecart extends Minecart {
 	setSlowWhenEmpty(arg0: boolean): void;
 	setTicksLived(arg0: number): void;
 	setVelocity(arg0: Vector): void;
-	teleport(arg0: Entity): boolean;
 	teleport(arg0: Location): boolean;
+	teleport(arg0: Entity): boolean;
 	teleport(arg0: Location, arg1: PlayerTeleportEvent$TeleportCause): boolean;
 	teleport(arg0: Entity, arg1: PlayerTeleportEvent$TeleportCause): boolean;
 }

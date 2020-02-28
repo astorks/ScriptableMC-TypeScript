@@ -1,14 +1,15 @@
 declare var Java: any;
 import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
 import LivingEntity from '../../../org/bukkit/entity/LivingEntity.js'
-import PotionBrewer from '../../../org/bukkit/potion/PotionBrewer.js'
-import PotionType from '../../../org/bukkit/potion/PotionType.js'
+import PotionBrewer from './PotionBrewer.js'
+import PotionEffect from './PotionEffect.js'
+import PotionType from './PotionType.js'
 
 export default interface Potion {
-	apply(to: LivingEntity): void;
 	apply(to: ItemStack): void;
+	apply(to: LivingEntity): void;
 	extend(): Potion;
-	getEffects(): any;
+	getEffects(): Array<PotionEffect>;
 	getLevel(): number;
 	getNameId(): number;
 	getType(): PotionType;

@@ -1,8 +1,8 @@
 declare var Java: any;
-import AsyncPlayerPreLoginEvent$Result from '../../../../org/bukkit/event/player/AsyncPlayerPreLoginEvent$Result.js'
+import AsyncPlayerPreLoginEvent$Result from './AsyncPlayerPreLoginEvent$Result.js'
 import Event from '../../../../org/bukkit/event/Event.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
-import PlayerPreLoginEvent$Result from '../../../../org/bukkit/event/player/PlayerPreLoginEvent$Result.js'
+import PlayerPreLoginEvent$Result from './PlayerPreLoginEvent$Result.js'
 
 export default interface AsyncPlayerPreLoginEvent extends Event {
 	allow(): void;

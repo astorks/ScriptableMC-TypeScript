@@ -1,6 +1,6 @@
 declare var Java: any;
-import Conversation from '../../../org/bukkit/conversations/Conversation.js'
-import ConversationAbandonedEvent from '../../../org/bukkit/conversations/ConversationAbandonedEvent.js'
+import Conversation from './Conversation.js'
+import ConversationAbandonedEvent from './ConversationAbandonedEvent.js'
 
 export default interface Conversable {
 	abandonConversation(arg0: Conversation): void;

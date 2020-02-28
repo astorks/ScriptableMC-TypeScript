@@ -2,8 +2,8 @@ declare var Java: any;
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import Location from '../../../../org/bukkit/Location.js'
 import Player from '../../../../org/bukkit/entity/Player.js'
-import PlayerMoveEvent from '../../../../org/bukkit/event/player/PlayerMoveEvent.js'
-import PlayerTeleportEvent$TeleportCause from '../../../../org/bukkit/event/player/PlayerTeleportEvent$TeleportCause.js'
+import PlayerMoveEvent from './PlayerMoveEvent.js'
+import PlayerTeleportEvent$TeleportCause from './PlayerTeleportEvent$TeleportCause.js'
 
 export default interface PlayerTeleportEvent extends PlayerMoveEvent {
 	getCause(): PlayerTeleportEvent$TeleportCause;

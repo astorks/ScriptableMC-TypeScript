@@ -1,7 +1,7 @@
 declare var Java: any;
-import Command from '../../../org/bukkit/command/Command.js'
-import CommandMap from '../../../org/bukkit/command/CommandMap.js'
-import CommandSender from '../../../org/bukkit/command/CommandSender.js'
+import Command from './Command.js'
+import CommandMap from './CommandMap.js'
+import CommandSender from './CommandSender.js'
 import Location from '../../../org/bukkit/Location.js'
 import Server from '../../../org/bukkit/Server.js'
 
@@ -9,7 +9,7 @@ export default interface SimpleCommandMap extends CommandMap {
 	clearCommands(): void;
 	dispatch(sender: CommandSender, commandLine: string): boolean;
 	getCommand(_name: string): Command;
-	getCommands(): any;
+	getCommands(): Array<Command>;
 	register(fallbackPrefix: string, command: Command): boolean;
 	register(label: string, fallbackPrefix: string, command: Command): boolean;
 	registerAll(fallbackPrefix: string, commands: Array<any>): void;

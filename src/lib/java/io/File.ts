@@ -1,8 +1,8 @@
 declare var Java: any;
-import FileFilter from '../../java/io/FileFilter.js'
-import FilenameFilter from '../../java/io/FilenameFilter.js'
+import FileFilter from './FileFilter.js'
+import FilenameFilter from './FilenameFilter.js'
 import Path from '../../java/nio/file/Path.js'
-import Serializable from '../../java/io/Serializable.js'
+import Serializable from './Serializable.js'
 
 export default interface File {
 	canExecute(): boolean;

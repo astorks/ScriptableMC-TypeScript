@@ -1,10 +1,10 @@
 declare var Java: any;
-import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
+import ItemStack from './ItemStack.js'
 import Keyed from '../../../org/bukkit/Keyed.js'
 import Material from '../../../org/bukkit/Material.js'
 import NamespacedKey from '../../../org/bukkit/NamespacedKey.js'
-import Recipe from '../../../org/bukkit/inventory/Recipe.js'
-import RecipeChoice from '../../../org/bukkit/inventory/RecipeChoice.js'
+import Recipe from './Recipe.js'
+import RecipeChoice from './RecipeChoice.js'
 
 export default interface StonecuttingRecipe extends Recipe, Keyed {
 	getGroup(): string;
@@ -22,8 +22,8 @@ export default class StonecuttingRecipe {
 		return Java.type('org.bukkit.inventory.StonecuttingRecipe');
 	}
 
-	constructor(key: NamespacedKey, result: ItemStack, input: RecipeChoice);
 	constructor(key: NamespacedKey, result: ItemStack, source: Material);
+	constructor(key: NamespacedKey, result: ItemStack, input: RecipeChoice);
 	constructor(...args: any[]) {
 		return new StonecuttingRecipe.$javaClass(...args);
 	}

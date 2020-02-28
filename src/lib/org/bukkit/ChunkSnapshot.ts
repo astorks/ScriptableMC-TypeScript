@@ -1,7 +1,7 @@
 declare var Java: any;
-import Biome from '../../org/bukkit/block/Biome.js'
-import BlockData from '../../org/bukkit/block/data/BlockData.js'
-import Material from '../../org/bukkit/Material.js'
+import Biome from './block/Biome.js'
+import BlockData from './block/data/BlockData.js'
+import Material from './Material.js'
 
 export default interface ChunkSnapshot {
 	contains(arg0: BlockData): boolean;

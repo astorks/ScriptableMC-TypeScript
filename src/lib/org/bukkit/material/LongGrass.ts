@@ -2,12 +2,12 @@ declare var Java: any;
 import GrassSpecies from '../../../org/bukkit/GrassSpecies.js'
 import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
 import Material from '../../../org/bukkit/Material.js'
-import MaterialData from '../../../org/bukkit/material/MaterialData.js'
+import MaterialData from './MaterialData.js'
 
 export default interface LongGrass extends MaterialData {
-	clone(): any;
-	clone(): MaterialData;
 	clone(): LongGrass;
+	clone(): MaterialData;
+	clone(): any;
 	getData(): number;
 	getItemType(): Material;
 	getSpecies(): GrassSpecies;

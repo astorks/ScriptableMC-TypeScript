@@ -1,6 +1,6 @@
 declare var Java: any;
 import Closeable from '../../../java/io/Closeable.js'
-import WatchKey from '../../../java/nio/file/WatchKey.js'
+import WatchKey from './WatchKey.js'
 
 export default interface WatchService {
 	close(): void;

@@ -1,5 +1,5 @@
 declare var Java: any;
-import InventoryContents from '../../../../fr/minuskube/inv/content/InventoryContents.js'
+import InventoryContents from './InventoryContents.js'
 import Player from '../../../../org/bukkit/entity/Player.js'
 
 export default interface InventoryProvider {

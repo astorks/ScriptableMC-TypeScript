@@ -1,7 +1,7 @@
 declare var Java: any;
 import BlockData from '../../../../../org/bukkit/block/data/BlockData.js'
 import Material from '../../../../../org/bukkit/Material.js'
-import StructureBlock$Mode from '../../../../../org/bukkit/block/data/type/StructureBlock$Mode.js'
+import StructureBlock$Mode from './StructureBlock$Mode.js'
 
 export default interface StructureBlock extends BlockData {
 	clone(): any;

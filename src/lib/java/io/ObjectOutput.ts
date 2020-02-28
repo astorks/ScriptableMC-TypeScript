@@ -1,5 +1,5 @@
 declare var Java: any;
-import DataOutput from '../../java/io/DataOutput.js'
+import DataOutput from './DataOutput.js'
 
 export default interface ObjectOutput {
 	close(): void;

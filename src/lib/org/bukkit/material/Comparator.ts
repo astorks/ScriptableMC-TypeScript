@@ -1,15 +1,15 @@
 declare var Java: any;
 import BlockFace from '../../../org/bukkit/block/BlockFace.js'
-import Directional from '../../../org/bukkit/material/Directional.js'
+import Directional from './Directional.js'
 import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
 import Material from '../../../org/bukkit/Material.js'
-import MaterialData from '../../../org/bukkit/material/MaterialData.js'
-import Redstone from '../../../org/bukkit/material/Redstone.js'
+import MaterialData from './MaterialData.js'
+import Redstone from './Redstone.js'
 
 export default interface Comparator extends MaterialData, Directional, Redstone {
-	clone(): MaterialData;
-	clone(): Comparator;
 	clone(): any;
+	clone(): Comparator;
+	clone(): MaterialData;
 	getData(): number;
 	getFacing(): BlockFace;
 	getItemType(): Material;

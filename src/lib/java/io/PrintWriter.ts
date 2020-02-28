@@ -1,8 +1,8 @@
 declare var Java: any;
 import Charset from '../../java/nio/charset/Charset.js'
-import File from '../../java/io/File.js'
-import OutputStream from '../../java/io/OutputStream.js'
-import Writer from '../../java/io/Writer.js'
+import File from './File.js'
+import OutputStream from './OutputStream.js'
+import Writer from './Writer.js'
 
 export default interface PrintWriter extends Writer {
 	append(csq: any): PrintWriter;

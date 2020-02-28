@@ -54,8 +54,8 @@ export default class Time {
 		return Time.$javaClass.parse(...args);
 	}
 
-	public static valueOf(s: string): Time;
 	public static valueOf(time: any): Time;
+	public static valueOf(s: string): Time;
 	public static valueOf(...args: any[]): any {
 		return Time.$javaClass.valueOf(...args);
 	}

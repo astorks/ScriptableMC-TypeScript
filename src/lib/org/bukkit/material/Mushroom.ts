@@ -2,13 +2,13 @@ declare var Java: any;
 import BlockFace from '../../../org/bukkit/block/BlockFace.js'
 import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
 import Material from '../../../org/bukkit/Material.js'
-import MaterialData from '../../../org/bukkit/material/MaterialData.js'
-import MushroomBlockTexture from '../../../org/bukkit/material/types/MushroomBlockTexture.js'
+import MaterialData from './MaterialData.js'
+import MushroomBlockTexture from './types/MushroomBlockTexture.js'
 
 export default interface Mushroom extends MaterialData {
-	clone(): any;
-	clone(): MaterialData;
 	clone(): Mushroom;
+	clone(): MaterialData;
+	clone(): any;
 	getBlockTexture(): MushroomBlockTexture;
 	getData(): number;
 	getItemType(): Material;
@@ -29,9 +29,9 @@ export default class Mushroom {
 	}
 
 	constructor(shroom: Material);
-	constructor(shroom: Material, capFace: BlockFace);
-	constructor(shroom: Material, texture: MushroomBlockTexture);
 	constructor(shroom: Material, data: number);
+	constructor(shroom: Material, texture: MushroomBlockTexture);
+	constructor(shroom: Material, capFace: BlockFace);
 	constructor(...args: any[]) {
 		return new Mushroom.$javaClass(...args);
 	}

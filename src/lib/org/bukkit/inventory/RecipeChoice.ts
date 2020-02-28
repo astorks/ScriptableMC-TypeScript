@@ -1,5 +1,5 @@
 declare var Java: any;
-import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
+import ItemStack from './ItemStack.js'
 
 export default interface RecipeChoice {
 	and(other: any): any;

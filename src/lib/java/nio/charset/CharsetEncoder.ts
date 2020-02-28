@@ -1,9 +1,9 @@
 declare var Java: any;
 import ByteBuffer from '../../../java/nio/ByteBuffer.js'
 import CharBuffer from '../../../java/nio/CharBuffer.js'
-import Charset from '../../../java/nio/charset/Charset.js'
-import CoderResult from '../../../java/nio/charset/CoderResult.js'
-import CodingErrorAction from '../../../java/nio/charset/CodingErrorAction.js'
+import Charset from './Charset.js'
+import CoderResult from './CoderResult.js'
+import CodingErrorAction from './CodingErrorAction.js'
 
 export default interface CharsetEncoder {
 	averageBytesPerChar(): number;

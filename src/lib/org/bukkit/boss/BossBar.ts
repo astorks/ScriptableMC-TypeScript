@@ -1,7 +1,7 @@
 declare var Java: any;
-import BarColor from '../../../org/bukkit/boss/BarColor.js'
-import BarFlag from '../../../org/bukkit/boss/BarFlag.js'
-import BarStyle from '../../../org/bukkit/boss/BarStyle.js'
+import BarColor from './BarColor.js'
+import BarFlag from './BarFlag.js'
+import BarStyle from './BarStyle.js'
 import Player from '../../../org/bukkit/entity/Player.js'
 
 export default interface BossBar {

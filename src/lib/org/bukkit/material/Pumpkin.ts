@@ -1,14 +1,14 @@
 declare var Java: any;
 import BlockFace from '../../../org/bukkit/block/BlockFace.js'
-import Directional from '../../../org/bukkit/material/Directional.js'
+import Directional from './Directional.js'
 import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
 import Material from '../../../org/bukkit/Material.js'
-import MaterialData from '../../../org/bukkit/material/MaterialData.js'
+import MaterialData from './MaterialData.js'
 
 export default interface Pumpkin extends MaterialData, Directional {
-	clone(): any;
-	clone(): Pumpkin;
 	clone(): MaterialData;
+	clone(): Pumpkin;
+	clone(): any;
 	getData(): number;
 	getFacing(): BlockFace;
 	getItemType(): Material;

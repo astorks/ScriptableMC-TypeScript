@@ -1,5 +1,5 @@
 declare var Java: any;
-import HandlerList from '../../../org/bukkit/event/HandlerList.js'
+import HandlerList from './HandlerList.js'
 
 export default interface Event {
 	getEventName(): string;

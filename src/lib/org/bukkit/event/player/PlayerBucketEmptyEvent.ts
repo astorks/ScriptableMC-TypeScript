@@ -5,7 +5,7 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import ItemStack from '../../../../org/bukkit/inventory/ItemStack.js'
 import Material from '../../../../org/bukkit/Material.js'
 import Player from '../../../../org/bukkit/entity/Player.js'
-import PlayerBucketEvent from '../../../../org/bukkit/event/player/PlayerBucketEvent.js'
+import PlayerBucketEvent from './PlayerBucketEvent.js'
 
 export default interface PlayerBucketEmptyEvent extends PlayerBucketEvent {
 	getBlock(): Block;

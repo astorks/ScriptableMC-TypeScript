@@ -3,7 +3,7 @@ import Cancellable from '../../../../org/bukkit/event/Cancellable.js'
 import Entity from '../../../../org/bukkit/entity/Entity.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import Vehicle from '../../../../org/bukkit/entity/Vehicle.js'
-import VehicleCollisionEvent from '../../../../org/bukkit/event/vehicle/VehicleCollisionEvent.js'
+import VehicleCollisionEvent from './VehicleCollisionEvent.js'
 
 export default interface VehicleEntityCollisionEvent extends VehicleCollisionEvent, Cancellable {
 	getEntity(): Entity;

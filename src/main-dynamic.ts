@@ -6,6 +6,26 @@ declare const engine: ScriptablePluginEngine
 
 const DEBUG_LOGGING = false;
 
+class MainJsFileFilter implements IOFileFilter {
+    accept(file: File): boolean {
+        return file.getName() == "smc.json";
+    }
+}
+
+class PluginsFolderFilter implements IOFileFilter {
+    accept(file: File): boolean {
+        return file.isDirectory();
+    }
+}
+
+interface DynamicPluginManifest {
+    name: string;
+    enabled: boolean;
+    version: string;
+    description: string;
+    main: string;
+}
+
 if(engine.getConfig().readConfigBoolean("dynamic_plugins_enabled", false)) {
     (async () => {
         try {
@@ -13,13 +33,11 @@ if(engine.getConfig().readConfigBoolean("dynamic_plugins_enabled", false)) {
             let rootDynamicPluginsFolder = new File("./scripts/dynamic-plugins");
             let rootScriptsUri = new File("./scripts").getAbsoluteFile().toURI();
             
-            let pluginManifestFiles = (
-                FileUtils.listFiles(
-                    rootDynamicPluginsFolder,
-                    new MainJsFileFilter(),
-                    new PluginsFolderFilter(),
-                ).toArray()
-            ) as Array<File>;
+            let pluginManifestFiles = FileUtils.listFiles(
+                rootDynamicPluginsFolder,
+                new MainJsFileFilter(),
+                new PluginsFolderFilter(),
+            );
 
             for(let i = 0; i < pluginManifestFiles.length; i++) {
                 let manifestFile = pluginManifestFiles[i];
@@ -65,24 +83,4 @@ if(engine.getConfig().readConfigBoolean("dynamic_plugins_enabled", false)) {
             console.log(e);
         }
     })();
-}
-
-class MainJsFileFilter implements IOFileFilter {
-    accept(file: File): boolean {
-        return file.getName() == "smc.json";
-    }
-}
-
-class PluginsFolderFilter implements IOFileFilter {
-    accept(file: File): boolean {
-        return file.isDirectory();
-    }
-}
-
-interface DynamicPluginManifest {
-    name: string;
-    enabled: boolean;
-    version: string;
-    description: string;
-    main: string;
 }

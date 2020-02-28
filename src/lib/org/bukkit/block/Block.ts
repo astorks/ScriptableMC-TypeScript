@@ -1,8 +1,8 @@
 declare var Java: any;
-import Biome from '../../../org/bukkit/block/Biome.js'
-import BlockData from '../../../org/bukkit/block/data/BlockData.js'
-import BlockFace from '../../../org/bukkit/block/BlockFace.js'
-import BlockState from '../../../org/bukkit/block/BlockState.js'
+import Biome from './Biome.js'
+import BlockData from './data/BlockData.js'
+import BlockFace from './BlockFace.js'
+import BlockState from './BlockState.js'
 import BoundingBox from '../../../org/bukkit/util/BoundingBox.js'
 import Chunk from '../../../org/bukkit/Chunk.js'
 import FluidCollisionMode from '../../../org/bukkit/FluidCollisionMode.js'
@@ -11,7 +11,7 @@ import Location from '../../../org/bukkit/Location.js'
 import Material from '../../../org/bukkit/Material.js'
 import MetadataValue from '../../../org/bukkit/metadata/MetadataValue.js'
 import Metadatable from '../../../org/bukkit/metadata/Metadatable.js'
-import PistonMoveReaction from '../../../org/bukkit/block/PistonMoveReaction.js'
+import PistonMoveReaction from './PistonMoveReaction.js'
 import Plugin from '../../../org/bukkit/plugin/Plugin.js'
 import RayTraceResult from '../../../org/bukkit/util/RayTraceResult.js'
 import Vector from '../../../org/bukkit/util/Vector.js'
@@ -27,8 +27,8 @@ export default interface Block extends Metadatable {
 	getBoundingBox(): BoundingBox;
 	getChunk(): Chunk;
 	getData(): number;
-	getDrops(): any;
-	getDrops(arg0: ItemStack): any;
+	getDrops(): Array<ItemStack>;
+	getDrops(arg0: ItemStack): Array<ItemStack>;
 	getFace(arg0: Block): BlockFace;
 	getHumidity(): number;
 	getLightFromBlocks(): number;

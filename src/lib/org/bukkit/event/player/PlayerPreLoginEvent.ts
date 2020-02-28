@@ -1,7 +1,7 @@
 declare var Java: any;
 import Event from '../../../../org/bukkit/event/Event.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
-import PlayerPreLoginEvent$Result from '../../../../org/bukkit/event/player/PlayerPreLoginEvent$Result.js'
+import PlayerPreLoginEvent$Result from './PlayerPreLoginEvent$Result.js'
 
 export default interface PlayerPreLoginEvent extends Event {
 	allow(): void;

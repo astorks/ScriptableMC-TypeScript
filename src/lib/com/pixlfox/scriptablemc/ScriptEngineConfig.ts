@@ -1,6 +1,6 @@
 declare var Java: any;
 import FileConfiguration from '../../../org/bukkit/configuration/file/FileConfiguration.js'
-import ScriptEngineDebuggerConfig from '../../../com/pixlfox/scriptablemc/ScriptEngineDebuggerConfig.js'
+import ScriptEngineDebuggerConfig from './ScriptEngineDebuggerConfig.js'
 
 export default interface ScriptEngineConfig {
 	getAutoEnablePlugins(): boolean;

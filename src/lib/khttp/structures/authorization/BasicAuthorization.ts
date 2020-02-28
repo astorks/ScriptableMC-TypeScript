@@ -1,5 +1,5 @@
 declare var Java: any;
-import Authorization from '../../../khttp/structures/authorization/Authorization.js'
+import Authorization from './Authorization.js'
 
 export default interface BasicAuthorization {
 	component1(): string;

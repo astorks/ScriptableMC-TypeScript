@@ -1,6 +1,6 @@
 declare var Java: any;
-import Plugin from '../../../org/bukkit/plugin/Plugin.js'
-import ServicePriority from '../../../org/bukkit/plugin/ServicePriority.js'
+import Plugin from './Plugin.js'
+import ServicePriority from './ServicePriority.js'
 
 export default interface RegisteredServiceProvider {
 	compareTo(other: RegisteredServiceProvider): number;

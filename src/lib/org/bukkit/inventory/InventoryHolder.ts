@@ -1,5 +1,5 @@
 declare var Java: any;
-import Inventory from '../../../org/bukkit/inventory/Inventory.js'
+import Inventory from './Inventory.js'
 
 export default interface InventoryHolder {
 	getInventory(): Inventory;

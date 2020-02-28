@@ -1,5 +1,5 @@
 declare var Java: any;
-import OutputStream from '../../java/io/OutputStream.js'
+import OutputStream from './OutputStream.js'
 
 export default interface FilterOutputStream extends OutputStream {
 	close(): void;

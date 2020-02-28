@@ -1,9 +1,9 @@
 declare var Java: any;
-import InventoryListener from '../../../fr/minuskube/inv/InventoryListener.js'
-import InventoryManager from '../../../fr/minuskube/inv/InventoryManager.js'
-import InventoryProvider from '../../../fr/minuskube/inv/content/InventoryProvider.js'
+import InventoryListener from './InventoryListener.js'
+import InventoryManager from './InventoryManager.js'
+import InventoryProvider from './content/InventoryProvider.js'
 import InventoryType from '../../../org/bukkit/event/inventory/InventoryType.js'
-import SmartInventory from '../../../fr/minuskube/inv/SmartInventory.js'
+import SmartInventory from './SmartInventory.js'
 
 export default interface SmartInventory$Builder {
 	build(): SmartInventory;

@@ -1,8 +1,8 @@
 declare var Java: any;
 import Entity from '../../../../org/bukkit/entity/Entity.js'
-import EntityDamageEvent from '../../../../org/bukkit/event/entity/EntityDamageEvent.js'
-import EntityDamageEvent$DamageCause from '../../../../org/bukkit/event/entity/EntityDamageEvent$DamageCause.js'
-import EntityDamageEvent$DamageModifier from '../../../../org/bukkit/event/entity/EntityDamageEvent$DamageModifier.js'
+import EntityDamageEvent from './EntityDamageEvent.js'
+import EntityDamageEvent$DamageCause from './EntityDamageEvent$DamageCause.js'
+import EntityDamageEvent$DamageModifier from './EntityDamageEvent$DamageModifier.js'
 import EntityType from '../../../../org/bukkit/entity/EntityType.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 

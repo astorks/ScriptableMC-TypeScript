@@ -1,7 +1,7 @@
 declare var Java: any;
-import Messenger from '../../../../org/bukkit/plugin/messaging/Messenger.js'
+import Messenger from './Messenger.js'
 import Plugin from '../../../../org/bukkit/plugin/Plugin.js'
-import PluginMessageListener from '../../../../org/bukkit/plugin/messaging/PluginMessageListener.js'
+import PluginMessageListener from './PluginMessageListener.js'
 
 export default interface PluginMessageListenerRegistration {
 	getChannel(): string;

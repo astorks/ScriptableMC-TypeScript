@@ -2,7 +2,7 @@ declare var Java: any;
 import Color from '../../../org/bukkit/Color.js'
 import ConfigurationSerializable from '../../../org/bukkit/configuration/serialization/ConfigurationSerializable.js'
 import LivingEntity from '../../../org/bukkit/entity/LivingEntity.js'
-import PotionEffectType from '../../../org/bukkit/potion/PotionEffectType.js'
+import PotionEffectType from './PotionEffectType.js'
 
 export default interface PotionEffect extends ConfigurationSerializable {
 	apply(entity: LivingEntity): boolean;

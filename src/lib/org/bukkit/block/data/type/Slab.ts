@@ -1,7 +1,7 @@
 declare var Java: any;
 import BlockData from '../../../../../org/bukkit/block/data/BlockData.js'
 import Material from '../../../../../org/bukkit/Material.js'
-import Slab$Type from '../../../../../org/bukkit/block/data/type/Slab$Type.js'
+import Slab$Type from './Slab$Type.js'
 import Waterlogged from '../../../../../org/bukkit/block/data/Waterlogged.js'
 
 export default interface Slab extends Waterlogged {

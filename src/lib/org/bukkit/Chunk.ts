@@ -1,11 +1,11 @@
 declare var Java: any;
-import Block from '../../org/bukkit/block/Block.js'
-import BlockData from '../../org/bukkit/block/data/BlockData.js'
-import BlockState from '../../org/bukkit/block/BlockState.js'
-import ChunkSnapshot from '../../org/bukkit/ChunkSnapshot.js'
-import Entity from '../../org/bukkit/entity/Entity.js'
-import Plugin from '../../org/bukkit/plugin/Plugin.js'
-import World from '../../org/bukkit/World.js'
+import Block from './block/Block.js'
+import BlockData from './block/data/BlockData.js'
+import BlockState from './block/BlockState.js'
+import ChunkSnapshot from './ChunkSnapshot.js'
+import Entity from './entity/Entity.js'
+import Plugin from './plugin/Plugin.js'
+import World from './World.js'
 
 export default interface Chunk {
 	addPluginChunkTicket(arg0: Plugin): boolean;
@@ -15,7 +15,7 @@ export default interface Chunk {
 	getChunkSnapshot(arg0: boolean, arg1: boolean, arg2: boolean): ChunkSnapshot;
 	getEntities(): Array<Entity>;
 	getInhabitedTime(): number;
-	getPluginChunkTickets(): any;
+	getPluginChunkTickets(): Array<Plugin>;
 	getTileEntities(): Array<BlockState>;
 	getWorld(): World;
 	getX(): number;

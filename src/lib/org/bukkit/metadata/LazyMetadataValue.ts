@@ -1,6 +1,6 @@
 declare var Java: any;
-import LazyMetadataValue$CacheStrategy from '../../../org/bukkit/metadata/LazyMetadataValue$CacheStrategy.js'
-import MetadataValueAdapter from '../../../org/bukkit/metadata/MetadataValueAdapter.js'
+import LazyMetadataValue$CacheStrategy from './LazyMetadataValue$CacheStrategy.js'
+import MetadataValueAdapter from './MetadataValueAdapter.js'
 import Plugin from '../../../org/bukkit/plugin/Plugin.js'
 
 export default interface LazyMetadataValue extends MetadataValueAdapter {

@@ -2,8 +2,8 @@ declare var Java: any;
 import Cancellable from '../../../../org/bukkit/event/Cancellable.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import LightningStrike from '../../../../org/bukkit/entity/LightningStrike.js'
-import LightningStrikeEvent$Cause from '../../../../org/bukkit/event/weather/LightningStrikeEvent$Cause.js'
-import WeatherEvent from '../../../../org/bukkit/event/weather/WeatherEvent.js'
+import LightningStrikeEvent$Cause from './LightningStrikeEvent$Cause.js'
+import WeatherEvent from './WeatherEvent.js'
 import World from '../../../../org/bukkit/World.js'
 
 export default interface LightningStrikeEvent extends WeatherEvent, Cancellable {

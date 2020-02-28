@@ -4,8 +4,8 @@ import Cancellable from '../../../../org/bukkit/event/Cancellable.js'
 import Event$Result from '../../../../org/bukkit/event/Event$Result.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import Player from '../../../../org/bukkit/entity/Player.js'
-import PlayerBedEnterEvent$BedEnterResult from '../../../../org/bukkit/event/player/PlayerBedEnterEvent$BedEnterResult.js'
-import PlayerEvent from '../../../../org/bukkit/event/player/PlayerEvent.js'
+import PlayerBedEnterEvent$BedEnterResult from './PlayerBedEnterEvent$BedEnterResult.js'
+import PlayerEvent from './PlayerEvent.js'
 
 export default interface PlayerBedEnterEvent extends PlayerEvent, Cancellable {
 	getBed(): Block;

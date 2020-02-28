@@ -2,7 +2,7 @@ declare var Java: any;
 import CoalType from '../../../org/bukkit/CoalType.js'
 import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
 import Material from '../../../org/bukkit/Material.js'
-import MaterialData from '../../../org/bukkit/material/MaterialData.js'
+import MaterialData from './MaterialData.js'
 
 export default interface Coal extends MaterialData {
 	clone(): Coal;

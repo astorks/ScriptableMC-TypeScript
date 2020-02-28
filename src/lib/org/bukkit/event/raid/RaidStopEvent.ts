@@ -1,8 +1,8 @@
 declare var Java: any;
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import Raid from '../../../../org/bukkit/Raid.js'
-import RaidEvent from '../../../../org/bukkit/event/raid/RaidEvent.js'
-import RaidStopEvent$Reason from '../../../../org/bukkit/event/raid/RaidStopEvent$Reason.js'
+import RaidEvent from './RaidEvent.js'
+import RaidStopEvent$Reason from './RaidStopEvent$Reason.js'
 import World from '../../../../org/bukkit/World.js'
 
 export default interface RaidStopEvent extends RaidEvent {

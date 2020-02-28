@@ -1,8 +1,8 @@
 declare var Java: any;
 import Player from '../../../../org/bukkit/entity/Player.js'
 import Plugin from '../../../../org/bukkit/plugin/Plugin.js'
-import PluginMessageListener from '../../../../org/bukkit/plugin/messaging/PluginMessageListener.js'
-import PluginMessageListenerRegistration from '../../../../org/bukkit/plugin/messaging/PluginMessageListenerRegistration.js'
+import PluginMessageListener from './PluginMessageListener.js'
+import PluginMessageListenerRegistration from './PluginMessageListenerRegistration.js'
 
 export default interface Messenger {
 	dispatchIncomingMessage(arg0: Player, arg1: string, arg2: Array<number>): void;

@@ -1,5 +1,5 @@
 declare var Java: any;
-import PermissionAttachment from '../../../org/bukkit/permissions/PermissionAttachment.js'
+import PermissionAttachment from './PermissionAttachment.js'
 
 export default interface PermissionRemovedExecutor {
 	attachmentRemoved(arg0: PermissionAttachment): void;

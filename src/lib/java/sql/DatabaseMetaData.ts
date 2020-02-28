@@ -1,8 +1,8 @@
 declare var Java: any;
-import Connection from '../../java/sql/Connection.js'
-import ResultSet from '../../java/sql/ResultSet.js'
-import RowIdLifetime from '../../java/sql/RowIdLifetime.js'
-import Wrapper from '../../java/sql/Wrapper.js'
+import Connection from './Connection.js'
+import ResultSet from './ResultSet.js'
+import RowIdLifetime from './RowIdLifetime.js'
+import Wrapper from './Wrapper.js'
 
 export default interface DatabaseMetaData {
 	allProceduresAreCallable(): boolean;

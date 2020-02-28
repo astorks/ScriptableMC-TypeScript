@@ -1,6 +1,6 @@
 declare var Java: any;
 import Entity from '../../../../org/bukkit/entity/Entity.js'
-import EntityTeleportEvent from '../../../../org/bukkit/event/entity/EntityTeleportEvent.js'
+import EntityTeleportEvent from './EntityTeleportEvent.js'
 import EntityType from '../../../../org/bukkit/entity/EntityType.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import Location from '../../../../org/bukkit/Location.js'

@@ -1,5 +1,5 @@
 declare var Java: any;
-import DataInput from '../../java/io/DataInput.js'
+import DataInput from './DataInput.js'
 
 export default interface ObjectInput {
 	available(): number;

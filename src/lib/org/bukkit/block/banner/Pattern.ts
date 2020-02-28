@@ -1,7 +1,7 @@
 declare var Java: any;
 import ConfigurationSerializable from '../../../../org/bukkit/configuration/serialization/ConfigurationSerializable.js'
 import DyeColor from '../../../../org/bukkit/DyeColor.js'
-import PatternType from '../../../../org/bukkit/block/banner/PatternType.js'
+import PatternType from './PatternType.js'
 
 export default interface Pattern extends ConfigurationSerializable {
 	getColor(): DyeColor;

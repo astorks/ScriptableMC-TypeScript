@@ -1,5 +1,5 @@
 declare var Java: any;
-import MapCursor from '../../../org/bukkit/map/MapCursor.js'
+import MapCursor from './MapCursor.js'
 
 export default interface MapCursorCollection {
 	addCursor(cursor: MapCursor): MapCursor;

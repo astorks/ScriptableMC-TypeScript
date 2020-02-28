@@ -1,5 +1,5 @@
 declare var Java: any;
-import FileTime from '../../../../java/nio/file/attribute/FileTime.js'
+import FileTime from './FileTime.js'
 
 export default interface BasicFileAttributes {
 	creationTime(): FileTime;

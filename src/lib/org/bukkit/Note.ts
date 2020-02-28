@@ -1,5 +1,5 @@
 declare var Java: any;
-import Note$Tone from '../../org/bukkit/Note$Tone.js'
+import Note$Tone from './Note$Tone.js'
 
 export default interface Note {
 	flattened(): Note;

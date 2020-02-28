@@ -634,6 +634,15 @@ import org_bukkit_material_types_MushroomBlockTexture from './org/bukkit/materia
 import org_bukkit_entity_MushroomCow from './org/bukkit/entity/MushroomCow.js'
 import org_bukkit_entity_MushroomCow$Variant from './org/bukkit/entity/MushroomCow$Variant.js'
 import com_smc_utils_MysqlWrapper from './com/smc/utils/MysqlWrapper.js'
+import com_smc_nbtapi_NBTCompound from './com/smc/nbtapi/NBTCompound.js'
+import com_smc_nbtapi_NBTCompoundList from './com/smc/nbtapi/NBTCompoundList.js'
+import com_smc_nbtapi_NBTContainer from './com/smc/nbtapi/NBTContainer.js'
+import com_smc_nbtapi_NBTEntity from './com/smc/nbtapi/NBTEntity.js'
+import com_smc_nbtapi_NBTFile from './com/smc/nbtapi/NBTFile.js'
+import com_smc_nbtapi_NBTItem from './com/smc/nbtapi/NBTItem.js'
+import com_smc_nbtapi_NBTList from './com/smc/nbtapi/NBTList.js'
+import com_smc_nbtapi_NBTListCompound from './com/smc/nbtapi/NBTListCompound.js'
+import com_smc_nbtapi_NBTType from './com/smc/nbtapi/NBTType.js'
 import java_sql_NClob from './java/sql/NClob.js'
 import org_bukkit_entity_NPC from './org/bukkit/entity/NPC.js'
 import org_bukkit_scoreboard_NameTagVisibility from './org/bukkit/scoreboard/NameTagVisibility.js'
@@ -2339,6 +2348,17 @@ export namespace com.google.common.collect {
 }
 export namespace org.bukkit.material.types {
 	export const MushroomBlockTexture = org_bukkit_material_types_MushroomBlockTexture;
+}
+export namespace com.smc.nbtapi {
+	export const NBTCompound = com_smc_nbtapi_NBTCompound;
+	export const NBTCompoundList = com_smc_nbtapi_NBTCompoundList;
+	export const NBTContainer = com_smc_nbtapi_NBTContainer;
+	export const NBTEntity = com_smc_nbtapi_NBTEntity;
+	export const NBTFile = com_smc_nbtapi_NBTFile;
+	export const NBTItem = com_smc_nbtapi_NBTItem;
+	export const NBTList = com_smc_nbtapi_NBTList;
+	export const NBTListCompound = com_smc_nbtapi_NBTListCompound;
+	export const NBTType = com_smc_nbtapi_NBTType;
 }
 export namespace org.bukkit.util.noise {
 	export const NoiseGenerator = org_bukkit_util_noise_NoiseGenerator;

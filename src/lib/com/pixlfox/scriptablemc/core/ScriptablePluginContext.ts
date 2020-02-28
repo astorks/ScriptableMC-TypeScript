@@ -8,7 +8,7 @@ import Player from '../../../../org/bukkit/entity/Player.js'
 import PluginCommand from '../../../../org/bukkit/command/PluginCommand.js'
 import PluginMessageListener from '../../../../org/bukkit/plugin/messaging/PluginMessageListener.js'
 import PluginMessageListenerRegistration from '../../../../org/bukkit/plugin/messaging/PluginMessageListenerRegistration.js'
-import ScriptablePluginEngine from '../../../../com/pixlfox/scriptablemc/core/ScriptablePluginEngine.js'
+import ScriptablePluginEngine from './ScriptablePluginEngine.js'
 import Server from '../../../../org/bukkit/Server.js'
 import ServicesManager from '../../../../org/bukkit/plugin/ServicesManager.js'
 import Version from '../../../../com/smc/version/Version.js'
@@ -16,8 +16,8 @@ import Version from '../../../../com/smc/version/Version.js'
 export default interface ScriptablePluginContext extends Listener {
 	disable(): void;
 	enable(): void;
-	getBukkitServiceRegistration(_class: any): any;
 	getBukkitServiceRegistration(className: string): any;
+	getBukkitServiceRegistration(_class: any): any;
 	getCommands(): Array<PluginCommand>;
 	getEngine(): ScriptablePluginEngine;
 	getInventoryManager(): InventoryManager;

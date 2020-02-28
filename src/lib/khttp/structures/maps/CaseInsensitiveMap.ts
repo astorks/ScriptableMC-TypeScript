@@ -19,7 +19,7 @@ export default interface CaseInsensitiveMap {
 	getKeys(): any;
 	getOrDefault(key: any, defaultValue: any): any;
 	getSize(): number;
-	getValues(): any;
+	getValues(): Array<any>;
 	isEmpty(): boolean;
 	keySet(): any;
 	merge(arg0: any, arg1: any, arg2: any): any;
@@ -37,7 +37,7 @@ export default interface CaseInsensitiveMap {
 	replace(arg0: any, arg1: any, arg2: any): boolean;
 	replaceAll(arg0: any): void;
 	size(): number;
-	values(): any;
+	values(): Array<any>;
 }
 
 export default class CaseInsensitiveMap {

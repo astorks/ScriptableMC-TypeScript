@@ -13,11 +13,11 @@ export default interface CommandSender extends Permissible {
 	getEffectivePermissions(): any;
 	getName(): string;
 	getServer(): Server;
-	hasPermission(arg0: string): boolean;
 	hasPermission(arg0: Permission): boolean;
+	hasPermission(arg0: string): boolean;
 	isOp(): boolean;
-	isPermissionSet(arg0: string): boolean;
 	isPermissionSet(arg0: Permission): boolean;
+	isPermissionSet(arg0: string): boolean;
 	recalculatePermissions(): void;
 	removeAttachment(arg0: PermissionAttachment): void;
 	sendMessage(arg0: Array<string>): void;

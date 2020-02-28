@@ -1,9 +1,9 @@
 declare var Java: any;
-import Colorable from '../../../org/bukkit/material/Colorable.js'
+import Colorable from './Colorable.js'
 import DyeColor from '../../../org/bukkit/DyeColor.js'
 import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
 import Material from '../../../org/bukkit/Material.js'
-import MaterialData from '../../../org/bukkit/material/MaterialData.js'
+import MaterialData from './MaterialData.js'
 
 export default interface Dye extends MaterialData, Colorable {
 	clone(): Dye;

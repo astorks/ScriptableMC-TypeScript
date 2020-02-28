@@ -1,11 +1,11 @@
 declare var Java: any;
-import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
+import ItemStack from './ItemStack.js'
 import Keyed from '../../../org/bukkit/Keyed.js'
 import Material from '../../../org/bukkit/Material.js'
 import MaterialData from '../../../org/bukkit/material/MaterialData.js'
 import NamespacedKey from '../../../org/bukkit/NamespacedKey.js'
-import Recipe from '../../../org/bukkit/inventory/Recipe.js'
-import RecipeChoice from '../../../org/bukkit/inventory/RecipeChoice.js'
+import Recipe from './Recipe.js'
+import RecipeChoice from './RecipeChoice.js'
 
 export default interface ShapedRecipe extends Recipe, Keyed {
 	getChoiceMap(): any;
@@ -15,9 +15,9 @@ export default interface ShapedRecipe extends Recipe, Keyed {
 	getResult(): ItemStack;
 	getShape(): Array<string>;
 	setGroup(group: string): void;
+	setIngredient(key: string, ingredient: MaterialData): ShapedRecipe;
 	setIngredient(key: string, ingredient: Material): ShapedRecipe;
 	setIngredient(key: string, ingredient: RecipeChoice): ShapedRecipe;
-	setIngredient(key: string, ingredient: MaterialData): ShapedRecipe;
 	setIngredient(key: string, ingredient: Material, raw: number): ShapedRecipe;
 	shape(shape: Array<string>): ShapedRecipe;
 }

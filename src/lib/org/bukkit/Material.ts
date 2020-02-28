@@ -1,8 +1,8 @@
 declare var Java: any;
-import BlockData from '../../org/bukkit/block/data/BlockData.js'
-import Keyed from '../../org/bukkit/Keyed.js'
-import MaterialData from '../../org/bukkit/material/MaterialData.js'
-import NamespacedKey from '../../org/bukkit/NamespacedKey.js'
+import BlockData from './block/data/BlockData.js'
+import Keyed from './Keyed.js'
+import MaterialData from './material/MaterialData.js'
+import NamespacedKey from './NamespacedKey.js'
 
 export default interface Material extends Keyed {
 	compareTo(arg0: any): number;

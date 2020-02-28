@@ -1,7 +1,7 @@
 declare var Java: any;
-import Objective from '../../../org/bukkit/scoreboard/Objective.js'
+import Objective from './Objective.js'
 import OfflinePlayer from '../../../org/bukkit/OfflinePlayer.js'
-import Scoreboard from '../../../org/bukkit/scoreboard/Scoreboard.js'
+import Scoreboard from './Scoreboard.js'
 
 export default interface Score {
 	getEntry(): string;

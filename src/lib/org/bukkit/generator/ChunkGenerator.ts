@@ -1,7 +1,7 @@
 declare var Java: any;
-import BlockPopulator from '../../../org/bukkit/generator/BlockPopulator.js'
-import ChunkGenerator$BiomeGrid from '../../../org/bukkit/generator/ChunkGenerator$BiomeGrid.js'
-import ChunkGenerator$ChunkData from '../../../org/bukkit/generator/ChunkGenerator$ChunkData.js'
+import BlockPopulator from './BlockPopulator.js'
+import ChunkGenerator$BiomeGrid from './ChunkGenerator$BiomeGrid.js'
+import ChunkGenerator$ChunkData from './ChunkGenerator$ChunkData.js'
 import Location from '../../../org/bukkit/Location.js'
 import World from '../../../org/bukkit/World.js'
 

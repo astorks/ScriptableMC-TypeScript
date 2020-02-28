@@ -1,5 +1,5 @@
 declare var Java: any;
-import Multiset from '../../../../com/google/common/collect/Multiset.js'
+import Multiset from './Multiset.js'
 
 export default interface Multimap {
 	asMap(): any;
@@ -7,9 +7,9 @@ export default interface Multimap {
 	containsEntry(arg0: any, arg1: any): boolean;
 	containsKey(arg0: any): boolean;
 	containsValue(arg0: any): boolean;
-	entries(): any;
+	entries(): Array<any>;
 	forEach(action: any): void;
-	get(arg0: any): any;
+	get(arg0: any): Array<any>;
 	isEmpty(): boolean;
 	keySet(): any;
 	keys(): Multiset;
@@ -17,10 +17,10 @@ export default interface Multimap {
 	putAll(arg0: Multimap): boolean;
 	putAll(arg0: any, arg1: any): boolean;
 	remove(arg0: any, arg1: any): boolean;
-	removeAll(arg0: any): any;
-	replaceValues(arg0: any, arg1: any): any;
+	removeAll(arg0: any): Array<any>;
+	replaceValues(arg0: any, arg1: any): Array<any>;
 	size(): number;
-	values(): any;
+	values(): Array<any>;
 }
 
 export default class Multimap {

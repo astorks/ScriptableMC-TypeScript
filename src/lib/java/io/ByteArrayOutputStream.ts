@@ -1,6 +1,6 @@
 declare var Java: any;
 import Charset from '../../java/nio/charset/Charset.js'
-import OutputStream from '../../java/io/OutputStream.js'
+import OutputStream from './OutputStream.js'
 
 export default interface ByteArrayOutputStream extends OutputStream {
 	close(): void;

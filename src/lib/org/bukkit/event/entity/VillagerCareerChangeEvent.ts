@@ -1,12 +1,12 @@
 declare var Java: any;
 import Cancellable from '../../../../org/bukkit/event/Cancellable.js'
 import Entity from '../../../../org/bukkit/entity/Entity.js'
-import EntityEvent from '../../../../org/bukkit/event/entity/EntityEvent.js'
+import EntityEvent from './EntityEvent.js'
 import EntityType from '../../../../org/bukkit/entity/EntityType.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import Villager from '../../../../org/bukkit/entity/Villager.js'
 import Villager$Profession from '../../../../org/bukkit/entity/Villager$Profession.js'
-import VillagerCareerChangeEvent$ChangeReason from '../../../../org/bukkit/event/entity/VillagerCareerChangeEvent$ChangeReason.js'
+import VillagerCareerChangeEvent$ChangeReason from './VillagerCareerChangeEvent$ChangeReason.js'
 
 export default interface VillagerCareerChangeEvent extends EntityEvent, Cancellable {
 	getEntity(): Entity;

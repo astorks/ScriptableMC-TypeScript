@@ -1,0 +1,7 @@
+{
+    "name": "smc-sounds-menu",
+    "enabled": true,
+    "version": "1.0.0",
+    "description": "ScriptableMC sounds menu.",
+    "main": "main.js"
+}

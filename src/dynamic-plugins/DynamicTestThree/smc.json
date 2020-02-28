@@ -1,7 +1,0 @@
-{
-    "name": "dynamic-test-three",
-    "enabled": true,
-    "version": "0.0.1",
-    "description": "ScriptableMC dynamic test three.",
-    "main": "main.js"
-}

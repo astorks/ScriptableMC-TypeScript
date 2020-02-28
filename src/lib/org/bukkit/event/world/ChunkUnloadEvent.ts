@@ -1,6 +1,6 @@
 declare var Java: any;
 import Chunk from '../../../../org/bukkit/Chunk.js'
-import ChunkEvent from '../../../../org/bukkit/event/world/ChunkEvent.js'
+import ChunkEvent from './ChunkEvent.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import World from '../../../../org/bukkit/World.js'
 

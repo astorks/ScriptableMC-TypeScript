@@ -1,12 +1,12 @@
 declare var Java: any;
 import Event from '../../../org/bukkit/event/Event.js'
-import EventExecutor from '../../../org/bukkit/plugin/EventExecutor.js'
+import EventExecutor from './EventExecutor.js'
 import EventPriority from '../../../org/bukkit/event/EventPriority.js'
 import File from '../../../java/io/File.js'
 import Listener from '../../../org/bukkit/event/Listener.js'
 import Permissible from '../../../org/bukkit/permissions/Permissible.js'
 import Permission from '../../../org/bukkit/permissions/Permission.js'
-import Plugin from '../../../org/bukkit/plugin/Plugin.js'
+import Plugin from './Plugin.js'
 
 export default interface PluginManager {
 	addPermission(arg0: Permission): void;
@@ -22,8 +22,8 @@ export default interface PluginManager {
 	getPermissions(): any;
 	getPlugin(arg0: string): Plugin;
 	getPlugins(): Array<Plugin>;
-	isPluginEnabled(arg0: Plugin): boolean;
 	isPluginEnabled(arg0: string): boolean;
+	isPluginEnabled(arg0: Plugin): boolean;
 	loadPlugin(arg0: File): Plugin;
 	loadPlugins(arg0: File): Array<Plugin>;
 	recalculatePermissionDefaults(arg0: Permission): void;
@@ -31,8 +31,8 @@ export default interface PluginManager {
 	registerEvent(arg0: any, arg1: Listener, arg2: EventPriority, arg3: EventExecutor, arg4: Plugin, arg5: boolean): void;
 	registerEvents(arg0: Listener, arg1: Plugin): void;
 	registerInterface(arg0: any): void;
-	removePermission(arg0: string): void;
 	removePermission(arg0: Permission): void;
+	removePermission(arg0: string): void;
 	subscribeToDefaultPerms(arg0: boolean, arg1: Permissible): void;
 	subscribeToPermission(arg0: string, arg1: Permissible): void;
 	unsubscribeFromDefaultPerms(arg0: boolean, arg1: Permissible): void;

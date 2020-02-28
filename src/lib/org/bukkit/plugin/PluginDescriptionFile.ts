@@ -2,7 +2,7 @@ declare var Java: any;
 import InputStream from '../../../java/io/InputStream.js'
 import Permission from '../../../org/bukkit/permissions/Permission.js'
 import PermissionDefault from '../../../org/bukkit/permissions/PermissionDefault.js'
-import PluginLoadOrder from '../../../org/bukkit/plugin/PluginLoadOrder.js'
+import PluginLoadOrder from './PluginLoadOrder.js'
 import Reader from '../../../java/io/Reader.js'
 import Writer from '../../../java/io/Writer.js'
 

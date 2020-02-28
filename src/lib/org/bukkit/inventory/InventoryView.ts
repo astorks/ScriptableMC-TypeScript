@@ -1,10 +1,10 @@
 declare var Java: any;
 import HumanEntity from '../../../org/bukkit/entity/HumanEntity.js'
-import Inventory from '../../../org/bukkit/inventory/Inventory.js'
+import Inventory from './Inventory.js'
 import InventoryType from '../../../org/bukkit/event/inventory/InventoryType.js'
 import InventoryType$SlotType from '../../../org/bukkit/event/inventory/InventoryType$SlotType.js'
-import InventoryView$Property from '../../../org/bukkit/inventory/InventoryView$Property.js'
-import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
+import InventoryView$Property from './InventoryView$Property.js'
+import ItemStack from './ItemStack.js'
 
 export default interface InventoryView {
 	close(): void;

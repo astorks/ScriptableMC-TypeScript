@@ -1,7 +1,7 @@
 declare var Java: any;
 import Command from '../../../org/bukkit/command/Command.js'
 import CommandSender from '../../../org/bukkit/command/CommandSender.js'
-import HelpTopic from '../../../org/bukkit/help/HelpTopic.js'
+import HelpTopic from './HelpTopic.js'
 
 export default interface GenericCommandHelpTopic extends HelpTopic {
 	amendCanSee(amendedPermission: string): void;

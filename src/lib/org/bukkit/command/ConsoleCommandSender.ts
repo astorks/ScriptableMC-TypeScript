@@ -1,5 +1,5 @@
 declare var Java: any;
-import CommandSender from '../../../org/bukkit/command/CommandSender.js'
+import CommandSender from './CommandSender.js'
 import Conversable from '../../../org/bukkit/conversations/Conversable.js'
 import Conversation from '../../../org/bukkit/conversations/Conversation.js'
 import ConversationAbandonedEvent from '../../../org/bukkit/conversations/ConversationAbandonedEvent.js'
@@ -20,12 +20,12 @@ export default interface ConsoleCommandSender extends CommandSender, Conversable
 	getEffectivePermissions(): any;
 	getName(): string;
 	getServer(): Server;
-	hasPermission(arg0: string): boolean;
 	hasPermission(arg0: Permission): boolean;
+	hasPermission(arg0: string): boolean;
 	isConversing(): boolean;
 	isOp(): boolean;
-	isPermissionSet(arg0: string): boolean;
 	isPermissionSet(arg0: Permission): boolean;
+	isPermissionSet(arg0: string): boolean;
 	recalculatePermissions(): void;
 	removeAttachment(arg0: PermissionAttachment): void;
 	sendMessage(arg0: Array<string>): void;

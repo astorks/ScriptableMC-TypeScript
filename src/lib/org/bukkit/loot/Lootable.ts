@@ -1,5 +1,5 @@
 declare var Java: any;
-import LootTable from '../../../org/bukkit/loot/LootTable.js'
+import LootTable from './LootTable.js'
 
 export default interface Lootable {
 	getLootTable(): LootTable;

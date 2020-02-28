@@ -1,6 +1,6 @@
 declare var Java: any;
-import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
-import Recipe from '../../../org/bukkit/inventory/Recipe.js'
+import ItemStack from './ItemStack.js'
+import Recipe from './Recipe.js'
 
 export default interface MerchantRecipe extends Recipe {
 	addIngredient(item: ItemStack): void;

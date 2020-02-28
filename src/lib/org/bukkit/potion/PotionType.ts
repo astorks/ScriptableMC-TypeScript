@@ -1,5 +1,5 @@
 declare var Java: any;
-import PotionEffectType from '../../../org/bukkit/potion/PotionEffectType.js'
+import PotionEffectType from './PotionEffectType.js'
 
 export default interface PotionType {
 	compareTo(arg0: any): number;

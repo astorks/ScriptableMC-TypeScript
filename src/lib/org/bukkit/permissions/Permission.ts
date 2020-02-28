@@ -1,5 +1,5 @@
 declare var Java: any;
-import PermissionDefault from '../../../org/bukkit/permissions/PermissionDefault.js'
+import PermissionDefault from './PermissionDefault.js'
 
 export default interface Permission {
 	addParent(perm: Permission, value: boolean): void;

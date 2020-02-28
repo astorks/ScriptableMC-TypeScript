@@ -1,7 +1,7 @@
 declare var Java: any;
 import Block from '../../../org/bukkit/block/Block.js'
 import Projectile from '../../../org/bukkit/entity/Projectile.js'
-import ProjectileSource from '../../../org/bukkit/projectiles/ProjectileSource.js'
+import ProjectileSource from './ProjectileSource.js'
 import Vector from '../../../org/bukkit/util/Vector.js'
 
 export default interface BlockProjectileSource extends ProjectileSource {

@@ -1,5 +1,5 @@
 declare var Java: any;
-import ConfigurationSerializable from '../../../../org/bukkit/configuration/serialization/ConfigurationSerializable.js'
+import ConfigurationSerializable from './ConfigurationSerializable.js'
 
 export default interface ConfigurationSerialization {
 	deserialize(args: any): ConfigurationSerializable;

@@ -1,21 +1,21 @@
 declare var Java: any;
-import Blob from '../../java/sql/Blob.js'
-import Clob from '../../java/sql/Clob.js'
-import Date from '../../java/sql/Date.js'
+import Blob from './Blob.js'
+import Clob from './Clob.js'
+import Date from './Date.js'
 import InputStream from '../../java/io/InputStream.js'
-import NClob from '../../java/sql/NClob.js'
+import NClob from './NClob.js'
 import Reader from '../../java/io/Reader.js'
-import Ref from '../../java/sql/Ref.js'
-import ResultSetMetaData from '../../java/sql/ResultSetMetaData.js'
-import RowId from '../../java/sql/RowId.js'
-import SQLType from '../../java/sql/SQLType.js'
-import SQLWarning from '../../java/sql/SQLWarning.js'
-import SQLXML from '../../java/sql/SQLXML.js'
-import Statement from '../../java/sql/Statement.js'
-import Time from '../../java/sql/Time.js'
-import Timestamp from '../../java/sql/Timestamp.js'
-import Wrapper from '../../java/sql/Wrapper.js'
-import _Array from '../../java/sql/Array.js'
+import Ref from './Ref.js'
+import ResultSetMetaData from './ResultSetMetaData.js'
+import RowId from './RowId.js'
+import SQLType from './SQLType.js'
+import SQLWarning from './SQLWarning.js'
+import SQLXML from './SQLXML.js'
+import Statement from './Statement.js'
+import Time from './Time.js'
+import Timestamp from './Timestamp.js'
+import Wrapper from './Wrapper.js'
+import _Array from './Array.js'
 
 export default interface ResultSet {
 	absolute(arg0: number): boolean;
@@ -27,36 +27,36 @@ export default interface ResultSet {
 	deleteRow(): void;
 	findColumn(arg0: string): number;
 	first(): boolean;
-	getArray(arg0: string): _Array;
 	getArray(arg0: number): _Array;
+	getArray(arg0: string): _Array;
 	getAsciiStream(arg0: number): InputStream;
 	getAsciiStream(arg0: string): InputStream;
 	getBigDecimal(arg0: number): any;
 	getBigDecimal(arg0: string): any;
 	getBigDecimal(arg0: number, arg1: number): any;
 	getBigDecimal(arg0: string, arg1: number): any;
-	getBinaryStream(arg0: string): InputStream;
 	getBinaryStream(arg0: number): InputStream;
+	getBinaryStream(arg0: string): InputStream;
 	getBlob(arg0: number): Blob;
 	getBlob(arg0: string): Blob;
-	getBoolean(arg0: string): boolean;
 	getBoolean(arg0: number): boolean;
-	getByte(arg0: number): number;
+	getBoolean(arg0: string): boolean;
 	getByte(arg0: string): number;
-	getBytes(arg0: string): Array<number>;
+	getByte(arg0: number): number;
 	getBytes(arg0: number): Array<number>;
+	getBytes(arg0: string): Array<number>;
 	getCharacterStream(arg0: string): Reader;
 	getCharacterStream(arg0: number): Reader;
-	getClob(arg0: number): Clob;
 	getClob(arg0: string): Clob;
+	getClob(arg0: number): Clob;
 	getConcurrency(): number;
 	getCursorName(): string;
 	getDate(arg0: number): Date;
 	getDate(arg0: string): Date;
-	getDate(arg0: string, arg1: any): Date;
 	getDate(arg0: number, arg1: any): Date;
-	getDouble(arg0: string): number;
+	getDate(arg0: string, arg1: any): Date;
 	getDouble(arg0: number): number;
+	getDouble(arg0: string): number;
 	getFetchDirection(): number;
 	getFetchSize(): number;
 	getFloat(arg0: number): number;
@@ -67,8 +67,8 @@ export default interface ResultSet {
 	getLong(arg0: number): number;
 	getLong(arg0: string): number;
 	getMetaData(): ResultSetMetaData;
-	getNCharacterStream(arg0: string): Reader;
 	getNCharacterStream(arg0: number): Reader;
+	getNCharacterStream(arg0: string): Reader;
 	getNClob(arg0: string): NClob;
 	getNClob(arg0: number): NClob;
 	getNString(arg0: string): string;
@@ -82,10 +82,10 @@ export default interface ResultSet {
 	getRef(arg0: number): Ref;
 	getRef(arg0: string): Ref;
 	getRow(): number;
-	getRowId(arg0: number): RowId;
 	getRowId(arg0: string): RowId;
-	getSQLXML(arg0: number): SQLXML;
+	getRowId(arg0: number): RowId;
 	getSQLXML(arg0: string): SQLXML;
+	getSQLXML(arg0: number): SQLXML;
 	getShort(arg0: string): number;
 	getShort(arg0: number): number;
 	getStatement(): Statement;
@@ -95,15 +95,15 @@ export default interface ResultSet {
 	getTime(arg0: string): Time;
 	getTime(arg0: number, arg1: any): Time;
 	getTime(arg0: string, arg1: any): Time;
-	getTimestamp(arg0: number): Timestamp;
 	getTimestamp(arg0: string): Timestamp;
-	getTimestamp(arg0: number, arg1: any): Timestamp;
+	getTimestamp(arg0: number): Timestamp;
 	getTimestamp(arg0: string, arg1: any): Timestamp;
+	getTimestamp(arg0: number, arg1: any): Timestamp;
 	getType(): number;
-	getURL(arg0: number): any;
 	getURL(arg0: string): any;
-	getUnicodeStream(arg0: string): InputStream;
+	getURL(arg0: number): any;
 	getUnicodeStream(arg0: number): InputStream;
+	getUnicodeStream(arg0: string): InputStream;
 	getWarnings(): SQLWarning;
 	insertRow(): void;
 	isAfterLast(): boolean;
@@ -125,25 +125,25 @@ export default interface ResultSet {
 	setFetchDirection(arg0: number): void;
 	setFetchSize(arg0: number): void;
 	unwrap(arg0: any): any;
-	updateArray(arg0: number, arg1: _Array): void;
 	updateArray(arg0: string, arg1: _Array): void;
-	updateAsciiStream(arg0: number, arg1: InputStream): void;
+	updateArray(arg0: number, arg1: _Array): void;
 	updateAsciiStream(arg0: string, arg1: InputStream): void;
+	updateAsciiStream(arg0: number, arg1: InputStream): void;
 	updateAsciiStream(arg0: string, arg1: InputStream, arg2: number): void;
 	updateAsciiStream(arg0: number, arg1: InputStream, arg2: number): void;
 	updateAsciiStream(arg0: string, arg1: InputStream, arg2: number): void;
 	updateAsciiStream(arg0: number, arg1: InputStream, arg2: number): void;
-	updateBigDecimal(arg0: number, arg1: any): void;
 	updateBigDecimal(arg0: string, arg1: any): void;
+	updateBigDecimal(arg0: number, arg1: any): void;
 	updateBinaryStream(arg0: number, arg1: InputStream): void;
 	updateBinaryStream(arg0: string, arg1: InputStream): void;
+	updateBinaryStream(arg0: number, arg1: InputStream, arg2: number): void;
 	updateBinaryStream(arg0: string, arg1: InputStream, arg2: number): void;
 	updateBinaryStream(arg0: string, arg1: InputStream, arg2: number): void;
 	updateBinaryStream(arg0: number, arg1: InputStream, arg2: number): void;
-	updateBinaryStream(arg0: number, arg1: InputStream, arg2: number): void;
-	updateBlob(arg0: string, arg1: Blob): void;
 	updateBlob(arg0: string, arg1: InputStream): void;
 	updateBlob(arg0: number, arg1: InputStream): void;
+	updateBlob(arg0: string, arg1: Blob): void;
 	updateBlob(arg0: number, arg1: Blob): void;
 	updateBlob(arg0: string, arg1: InputStream, arg2: number): void;
 	updateBlob(arg0: number, arg1: InputStream, arg2: number): void;
@@ -155,61 +155,61 @@ export default interface ResultSet {
 	updateBytes(arg0: string, arg1: Array<number>): void;
 	updateCharacterStream(arg0: number, arg1: Reader): void;
 	updateCharacterStream(arg0: string, arg1: Reader): void;
-	updateCharacterStream(arg0: number, arg1: Reader, arg2: number): void;
-	updateCharacterStream(arg0: string, arg1: Reader, arg2: number): void;
 	updateCharacterStream(arg0: string, arg1: Reader, arg2: number): void;
 	updateCharacterStream(arg0: number, arg1: Reader, arg2: number): void;
+	updateCharacterStream(arg0: string, arg1: Reader, arg2: number): void;
+	updateCharacterStream(arg0: number, arg1: Reader, arg2: number): void;
+	updateClob(arg0: string, arg1: Clob): void;
 	updateClob(arg0: number, arg1: Clob): void;
 	updateClob(arg0: string, arg1: Reader): void;
 	updateClob(arg0: number, arg1: Reader): void;
-	updateClob(arg0: string, arg1: Clob): void;
-	updateClob(arg0: number, arg1: Reader, arg2: number): void;
 	updateClob(arg0: string, arg1: Reader, arg2: number): void;
-	updateDate(arg0: string, arg1: Date): void;
+	updateClob(arg0: number, arg1: Reader, arg2: number): void;
 	updateDate(arg0: number, arg1: Date): void;
-	updateDouble(arg0: string, arg1: number): void;
+	updateDate(arg0: string, arg1: Date): void;
 	updateDouble(arg0: number, arg1: number): void;
-	updateFloat(arg0: number, arg1: number): void;
+	updateDouble(arg0: string, arg1: number): void;
 	updateFloat(arg0: string, arg1: number): void;
+	updateFloat(arg0: number, arg1: number): void;
 	updateInt(arg0: string, arg1: number): void;
 	updateInt(arg0: number, arg1: number): void;
 	updateLong(arg0: number, arg1: number): void;
 	updateLong(arg0: string, arg1: number): void;
-	updateNCharacterStream(arg0: number, arg1: Reader): void;
 	updateNCharacterStream(arg0: string, arg1: Reader): void;
+	updateNCharacterStream(arg0: number, arg1: Reader): void;
 	updateNCharacterStream(arg0: number, arg1: Reader, arg2: number): void;
 	updateNCharacterStream(arg0: string, arg1: Reader, arg2: number): void;
-	updateNClob(arg0: number, arg1: Reader): void;
-	updateNClob(arg0: number, arg1: NClob): void;
-	updateNClob(arg0: string, arg1: NClob): void;
 	updateNClob(arg0: string, arg1: Reader): void;
-	updateNClob(arg0: number, arg1: Reader, arg2: number): void;
+	updateNClob(arg0: string, arg1: NClob): void;
+	updateNClob(arg0: number, arg1: NClob): void;
+	updateNClob(arg0: number, arg1: Reader): void;
 	updateNClob(arg0: string, arg1: Reader, arg2: number): void;
+	updateNClob(arg0: number, arg1: Reader, arg2: number): void;
 	updateNString(arg0: string, arg1: string): void;
 	updateNString(arg0: number, arg1: string): void;
-	updateNull(arg0: string): void;
 	updateNull(arg0: number): void;
-	updateObject(arg0: string, arg1: any): void;
+	updateNull(arg0: string): void;
 	updateObject(arg0: number, arg1: any): void;
+	updateObject(arg0: string, arg1: any): void;
+	updateObject(columnIndex: number, x: any, targetSqlType: SQLType): void;
 	updateObject(arg0: number, arg1: any, arg2: number): void;
 	updateObject(arg0: string, arg1: any, arg2: number): void;
-	updateObject(columnIndex: number, x: any, targetSqlType: SQLType): void;
 	updateObject(columnLabel: string, x: any, targetSqlType: SQLType): void;
-	updateObject(columnIndex: number, x: any, targetSqlType: SQLType, scaleOrLength: number): void;
 	updateObject(columnLabel: string, x: any, targetSqlType: SQLType, scaleOrLength: number): void;
-	updateRef(arg0: string, arg1: Ref): void;
+	updateObject(columnIndex: number, x: any, targetSqlType: SQLType, scaleOrLength: number): void;
 	updateRef(arg0: number, arg1: Ref): void;
+	updateRef(arg0: string, arg1: Ref): void;
 	updateRow(): void;
 	updateRowId(arg0: string, arg1: RowId): void;
 	updateRowId(arg0: number, arg1: RowId): void;
-	updateSQLXML(arg0: string, arg1: SQLXML): void;
 	updateSQLXML(arg0: number, arg1: SQLXML): void;
+	updateSQLXML(arg0: string, arg1: SQLXML): void;
 	updateShort(arg0: string, arg1: number): void;
 	updateShort(arg0: number, arg1: number): void;
 	updateString(arg0: number, arg1: string): void;
 	updateString(arg0: string, arg1: string): void;
-	updateTime(arg0: string, arg1: Time): void;
 	updateTime(arg0: number, arg1: Time): void;
+	updateTime(arg0: string, arg1: Time): void;
 	updateTimestamp(arg0: number, arg1: Timestamp): void;
 	updateTimestamp(arg0: string, arg1: Timestamp): void;
 	wasNull(): boolean;

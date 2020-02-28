@@ -1,7 +1,7 @@
 declare var Java: any;
 import CharBuffer from '../../java/nio/CharBuffer.js'
-import Closeable from '../../java/io/Closeable.js'
-import Writer from '../../java/io/Writer.js'
+import Closeable from './Closeable.js'
+import Writer from './Writer.js'
 
 export default interface Reader {
 	close(): void;

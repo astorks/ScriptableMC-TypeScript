@@ -4,7 +4,7 @@ import EntityType from '../../../../org/bukkit/entity/EntityType.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import Material from '../../../../org/bukkit/Material.js'
 import Player from '../../../../org/bukkit/entity/Player.js'
-import PlayerEvent from '../../../../org/bukkit/event/player/PlayerEvent.js'
+import PlayerEvent from './PlayerEvent.js'
 import Statistic from '../../../../org/bukkit/Statistic.js'
 
 export default interface PlayerStatisticIncrementEvent extends PlayerEvent, Cancellable {
@@ -27,8 +27,8 @@ export default class PlayerStatisticIncrementEvent {
 	}
 
 	constructor(player: Player, statistic: Statistic, initialValue: number, newValue: number);
-	constructor(player: Player, statistic: Statistic, initialValue: number, newValue: number, material: Material);
 	constructor(player: Player, statistic: Statistic, initialValue: number, newValue: number, entityType: EntityType);
+	constructor(player: Player, statistic: Statistic, initialValue: number, newValue: number, material: Material);
 	constructor(...args: any[]) {
 		return new PlayerStatisticIncrementEvent.$javaClass(...args);
 	}

@@ -1,10 +1,10 @@
 declare var Java: any;
-import Plugin from '../../../org/bukkit/plugin/Plugin.js'
+import Plugin from './Plugin.js'
 
 export default interface PluginLogger {
 	addHandler(handler: any): void;
-	config(msg: string): void;
 	config(msgSupplier: any): void;
+	config(msg: string): void;
 	entering(sourceClass: string, sourceMethod: string): void;
 	entering(sourceClass: string, sourceMethod: string, params: Array<any>): void;
 	entering(sourceClass: string, sourceMethod: string, param1: any): void;
@@ -31,23 +31,23 @@ export default interface PluginLogger {
 	log(level: any, msg: string): void;
 	log(level: any, msgSupplier: any): void;
 	log(level: any, msg: string, thrown: any): void;
-	log(level: any, msg: string, params: Array<any>): void;
 	log(level: any, thrown: any, msgSupplier: any): void;
 	log(level: any, msg: string, param1: any): void;
+	log(level: any, msg: string, params: Array<any>): void;
 	logp(level: any, sourceClass: string, sourceMethod: string, msg: string): void;
 	logp(level: any, sourceClass: string, sourceMethod: string, msgSupplier: any): void;
-	logp(level: any, sourceClass: string, sourceMethod: string, msg: string, param1: any): void;
-	logp(level: any, sourceClass: string, sourceMethod: string, thrown: any, msgSupplier: any): void;
 	logp(level: any, sourceClass: string, sourceMethod: string, msg: string, thrown: any): void;
+	logp(level: any, sourceClass: string, sourceMethod: string, thrown: any, msgSupplier: any): void;
+	logp(level: any, sourceClass: string, sourceMethod: string, msg: string, param1: any): void;
 	logp(level: any, sourceClass: string, sourceMethod: string, msg: string, params: Array<any>): void;
 	logrb(level: any, bundle: any, msg: string, thrown: any): void;
 	logrb(level: any, bundle: any, msg: string, params: Array<any>): void;
 	logrb(level: any, sourceClass: string, sourceMethod: string, bundleName: string, msg: string): void;
-	logrb(level: any, sourceClass: string, sourceMethod: string, bundle: any, msg: string, thrown: any): void;
 	logrb(level: any, sourceClass: string, sourceMethod: string, bundleName: string, msg: string, param1: any): void;
 	logrb(level: any, sourceClass: string, sourceMethod: string, bundle: any, msg: string, params: Array<any>): void;
-	logrb(level: any, sourceClass: string, sourceMethod: string, bundleName: string, msg: string, params: Array<any>): void;
+	logrb(level: any, sourceClass: string, sourceMethod: string, bundle: any, msg: string, thrown: any): void;
 	logrb(level: any, sourceClass: string, sourceMethod: string, bundleName: string, msg: string, thrown: any): void;
+	logrb(level: any, sourceClass: string, sourceMethod: string, bundleName: string, msg: string, params: Array<any>): void;
 	removeHandler(handler: any): void;
 	setFilter(newFilter: any): void;
 	setLevel(newLevel: any): void;

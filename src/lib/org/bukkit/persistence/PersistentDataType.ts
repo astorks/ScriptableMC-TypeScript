@@ -1,5 +1,5 @@
 declare var Java: any;
-import PersistentDataAdapterContext from '../../../org/bukkit/persistence/PersistentDataAdapterContext.js'
+import PersistentDataAdapterContext from './PersistentDataAdapterContext.js'
 
 export default interface PersistentDataType {
 	fromPrimitive(arg0: any, arg1: PersistentDataAdapterContext): any;

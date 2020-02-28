@@ -3,8 +3,8 @@ import Block from '../../../org/bukkit/block/Block.js'
 import BlockFace from '../../../org/bukkit/block/BlockFace.js'
 import ConfigurationSerializable from '../../../org/bukkit/configuration/serialization/ConfigurationSerializable.js'
 import Location from '../../../org/bukkit/Location.js'
-import RayTraceResult from '../../../org/bukkit/util/RayTraceResult.js'
-import Vector from '../../../org/bukkit/util/Vector.js'
+import RayTraceResult from './RayTraceResult.js'
+import Vector from './Vector.js'
 
 export default interface BoundingBox extends ConfigurationSerializable {
 	clone(): any;

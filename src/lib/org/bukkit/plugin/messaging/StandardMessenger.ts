@@ -1,14 +1,14 @@
 declare var Java: any;
-import Messenger from '../../../../org/bukkit/plugin/messaging/Messenger.js'
+import Messenger from './Messenger.js'
 import Player from '../../../../org/bukkit/entity/Player.js'
 import Plugin from '../../../../org/bukkit/plugin/Plugin.js'
-import PluginMessageListener from '../../../../org/bukkit/plugin/messaging/PluginMessageListener.js'
-import PluginMessageListenerRegistration from '../../../../org/bukkit/plugin/messaging/PluginMessageListenerRegistration.js'
+import PluginMessageListener from './PluginMessageListener.js'
+import PluginMessageListenerRegistration from './PluginMessageListenerRegistration.js'
 
 export default interface StandardMessenger extends Messenger {
 	dispatchIncomingMessage(source: Player, channel: string, message: Array<number>): void;
-	getIncomingChannelRegistrations(plugin: Plugin): any;
 	getIncomingChannelRegistrations(channel: string): any;
+	getIncomingChannelRegistrations(plugin: Plugin): any;
 	getIncomingChannelRegistrations(plugin: Plugin, channel: string): any;
 	getIncomingChannels(): any;
 	getIncomingChannels(plugin: Plugin): any;

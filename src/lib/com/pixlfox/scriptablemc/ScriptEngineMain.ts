@@ -9,7 +9,7 @@ import JavaPlugin from '../../../org/bukkit/plugin/java/JavaPlugin.js'
 import PluginCommand from '../../../org/bukkit/command/PluginCommand.js'
 import PluginDescriptionFile from '../../../org/bukkit/plugin/PluginDescriptionFile.js'
 import PluginLoader from '../../../org/bukkit/plugin/PluginLoader.js'
-import ScriptablePluginEngine from '../../../com/pixlfox/scriptablemc/core/ScriptablePluginEngine.js'
+import ScriptablePluginEngine from './core/ScriptablePluginEngine.js'
 import Server from '../../../org/bukkit/Server.js'
 import Version from '../../../com/smc/version/Version.js'
 

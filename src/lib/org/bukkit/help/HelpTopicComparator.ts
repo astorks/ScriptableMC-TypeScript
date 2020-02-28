@@ -1,10 +1,10 @@
 declare var Java: any;
-import HelpTopic from '../../../org/bukkit/help/HelpTopic.js'
-import HelpTopicComparator$TopicNameComparator from '../../../org/bukkit/help/HelpTopicComparator$TopicNameComparator.js'
+import HelpTopic from './HelpTopic.js'
+import HelpTopicComparator$TopicNameComparator from './HelpTopicComparator$TopicNameComparator.js'
 
 export default interface HelpTopicComparator {
-	compare(lhs: HelpTopic, rhs: HelpTopic): number;
 	compare(arg0: any, arg1: any): number;
+	compare(lhs: HelpTopic, rhs: HelpTopic): number;
 	reversed(): any;
 	thenComparing(keyExtractor: any): any;
 	thenComparing(other: any): any;

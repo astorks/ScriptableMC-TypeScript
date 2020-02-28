@@ -1,6 +1,6 @@
 declare var Java: any;
 import ClickableItem from '../../../../fr/minuskube/inv/ClickableItem.js'
-import SlotPos from '../../../../fr/minuskube/inv/content/SlotPos.js'
+import SlotPos from './SlotPos.js'
 
 export default interface SlotIterator {
 	allowOverride(arg0: boolean): SlotIterator;

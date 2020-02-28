@@ -1,7 +1,7 @@
 declare var Java: any;
 import Block from '../../../../org/bukkit/block/Block.js'
 import Entity from '../../../../org/bukkit/entity/Entity.js'
-import EntityCombustEvent from '../../../../org/bukkit/event/entity/EntityCombustEvent.js'
+import EntityCombustEvent from './EntityCombustEvent.js'
 import EntityType from '../../../../org/bukkit/entity/EntityType.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 

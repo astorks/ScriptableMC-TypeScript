@@ -1,5 +1,5 @@
 declare var Java: any;
-import Channel from '../../../java/nio/channels/Channel.js'
+import Channel from './Channel.js'
 
 export default interface AsynchronousChannel {
 	close(): void;

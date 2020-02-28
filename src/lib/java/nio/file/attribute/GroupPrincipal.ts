@@ -1,5 +1,5 @@
 declare var Java: any;
-import UserPrincipal from '../../../../java/nio/file/attribute/UserPrincipal.js'
+import UserPrincipal from './UserPrincipal.js'
 
 export default interface GroupPrincipal {
 	getName(): string;

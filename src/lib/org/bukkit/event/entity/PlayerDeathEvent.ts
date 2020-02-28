@@ -1,6 +1,6 @@
 declare var Java: any;
 import Entity from '../../../../org/bukkit/entity/Entity.js'
-import EntityDeathEvent from '../../../../org/bukkit/event/entity/EntityDeathEvent.js'
+import EntityDeathEvent from './EntityDeathEvent.js'
 import EntityType from '../../../../org/bukkit/entity/EntityType.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import ItemStack from '../../../../org/bukkit/inventory/ItemStack.js'
@@ -11,8 +11,8 @@ export default interface PlayerDeathEvent extends EntityDeathEvent {
 	getDeathMessage(): string;
 	getDroppedExp(): number;
 	getDrops(): Array<ItemStack>;
-	getEntity(): Entity;
 	getEntity(): LivingEntity;
+	getEntity(): Entity;
 	getEntity(): Player;
 	getEntityType(): EntityType;
 	getEventName(): string;

@@ -1,12 +1,12 @@
 declare var Java: any;
 import File from '../../../java/io/File.js'
-import FileSystem from '../../../java/nio/file/FileSystem.js'
-import LinkOption from '../../../java/nio/file/LinkOption.js'
-import WatchEvent$Kind from '../../../java/nio/file/WatchEvent$Kind.js'
-import WatchEvent$Modifier from '../../../java/nio/file/WatchEvent$Modifier.js'
-import WatchKey from '../../../java/nio/file/WatchKey.js'
-import WatchService from '../../../java/nio/file/WatchService.js'
-import Watchable from '../../../java/nio/file/Watchable.js'
+import FileSystem from './FileSystem.js'
+import LinkOption from './LinkOption.js'
+import WatchEvent$Kind from './WatchEvent$Kind.js'
+import WatchEvent$Modifier from './WatchEvent$Modifier.js'
+import WatchKey from './WatchKey.js'
+import WatchService from './WatchService.js'
+import Watchable from './Watchable.js'
 
 export default interface Path {
 	compareTo(arg0: Path): number;
@@ -28,8 +28,8 @@ export default interface Path {
 	relativize(arg0: Path): Path;
 	resolve(other: string): Path;
 	resolve(arg0: Path): Path;
-	resolveSibling(other: string): Path;
 	resolveSibling(other: Path): Path;
+	resolveSibling(other: string): Path;
 	spliterator(): any;
 	startsWith(other: string): boolean;
 	startsWith(arg0: Path): boolean;

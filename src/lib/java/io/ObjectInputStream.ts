@@ -1,12 +1,12 @@
 declare var Java: any;
-import InputStream from '../../java/io/InputStream.js'
-import ObjectInput from '../../java/io/ObjectInput.js'
-import ObjectInputFilter from '../../java/io/ObjectInputFilter.js'
-import ObjectInputStream$GetField from '../../java/io/ObjectInputStream$GetField.js'
-import ObjectInputValidation from '../../java/io/ObjectInputValidation.js'
-import ObjectStreamConstants from '../../java/io/ObjectStreamConstants.js'
-import OutputStream from '../../java/io/OutputStream.js'
-import SerializablePermission from '../../java/io/SerializablePermission.js'
+import InputStream from './InputStream.js'
+import ObjectInput from './ObjectInput.js'
+import ObjectInputFilter from './ObjectInputFilter.js'
+import ObjectInputStream$GetField from './ObjectInputStream$GetField.js'
+import ObjectInputValidation from './ObjectInputValidation.js'
+import ObjectStreamConstants from './ObjectStreamConstants.js'
+import OutputStream from './OutputStream.js'
+import SerializablePermission from './SerializablePermission.js'
 
 export default interface ObjectInputStream extends InputStream {
 	available(): number;

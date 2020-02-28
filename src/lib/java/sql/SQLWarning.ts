@@ -1,7 +1,7 @@
 declare var Java: any;
 import PrintStream from '../../java/io/PrintStream.js'
 import PrintWriter from '../../java/io/PrintWriter.js'
-import SQLException from '../../java/sql/SQLException.js'
+import SQLException from './SQLException.js'
 
 export default interface SQLWarning extends SQLException {
 	addSuppressed(exception: any): void;
@@ -33,8 +33,8 @@ export default class SQLWarning {
 	}
 
 	constructor();
-	constructor(reason: string);
 	constructor(cause: any);
+	constructor(reason: string);
 	constructor(reason: string, cause: any);
 	constructor(reason: string, SQLState: string);
 	constructor(reason: string, SQLState: string, cause: any);

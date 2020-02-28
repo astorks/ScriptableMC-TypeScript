@@ -1,5 +1,5 @@
 declare var Java: any;
-import EnchantmentTarget from '../../../org/bukkit/enchantments/EnchantmentTarget.js'
+import EnchantmentTarget from './EnchantmentTarget.js'
 import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
 import Keyed from '../../../org/bukkit/Keyed.js'
 import NamespacedKey from '../../../org/bukkit/NamespacedKey.js'

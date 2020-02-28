@@ -3,7 +3,7 @@ import Entity from '../../../../org/bukkit/entity/Entity.js'
 import EquipmentSlot from '../../../../org/bukkit/inventory/EquipmentSlot.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import Player from '../../../../org/bukkit/entity/Player.js'
-import PlayerInteractEntityEvent from '../../../../org/bukkit/event/player/PlayerInteractEntityEvent.js'
+import PlayerInteractEntityEvent from './PlayerInteractEntityEvent.js'
 import Vector from '../../../../org/bukkit/util/Vector.js'
 
 export default interface PlayerInteractAtEntityEvent extends PlayerInteractEntityEvent {

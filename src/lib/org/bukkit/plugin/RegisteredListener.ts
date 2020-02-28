@@ -1,9 +1,9 @@
 declare var Java: any;
 import Event from '../../../org/bukkit/event/Event.js'
-import EventExecutor from '../../../org/bukkit/plugin/EventExecutor.js'
+import EventExecutor from './EventExecutor.js'
 import EventPriority from '../../../org/bukkit/event/EventPriority.js'
 import Listener from '../../../org/bukkit/event/Listener.js'
-import Plugin from '../../../org/bukkit/plugin/Plugin.js'
+import Plugin from './Plugin.js'
 
 export default interface RegisteredListener {
 	callEvent(event: Event): void;

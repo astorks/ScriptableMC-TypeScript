@@ -1,7 +1,7 @@
 declare var Java: any;
 import NamespacedKey from '../../../org/bukkit/NamespacedKey.js'
-import PersistentDataAdapterContext from '../../../org/bukkit/persistence/PersistentDataAdapterContext.js'
-import PersistentDataType from '../../../org/bukkit/persistence/PersistentDataType.js'
+import PersistentDataAdapterContext from './PersistentDataAdapterContext.js'
+import PersistentDataType from './PersistentDataType.js'
 
 export default interface PersistentDataContainer {
 	get(arg0: NamespacedKey, arg1: PersistentDataType): any;

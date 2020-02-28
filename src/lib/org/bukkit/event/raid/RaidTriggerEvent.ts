@@ -3,7 +3,7 @@ import Cancellable from '../../../../org/bukkit/event/Cancellable.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import Player from '../../../../org/bukkit/entity/Player.js'
 import Raid from '../../../../org/bukkit/Raid.js'
-import RaidEvent from '../../../../org/bukkit/event/raid/RaidEvent.js'
+import RaidEvent from './RaidEvent.js'
 import World from '../../../../org/bukkit/World.js'
 
 export default interface RaidTriggerEvent extends RaidEvent, Cancellable {

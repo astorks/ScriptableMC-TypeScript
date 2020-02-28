@@ -1,5 +1,5 @@
 declare var Java: any;
-import ConversationContext from '../../../org/bukkit/conversations/ConversationContext.js'
+import ConversationContext from './ConversationContext.js'
 
 export default interface Prompt {
 	acceptInput(arg0: ConversationContext, arg1: string): Prompt;

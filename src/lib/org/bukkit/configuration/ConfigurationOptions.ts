@@ -1,5 +1,5 @@
 declare var Java: any;
-import Configuration from '../../../org/bukkit/configuration/Configuration.js'
+import Configuration from './Configuration.js'
 
 export default interface ConfigurationOptions {
 	configuration(): Configuration;

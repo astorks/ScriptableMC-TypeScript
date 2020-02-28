@@ -1,7 +1,7 @@
 declare var Java: any;
 import Cancellable from '../../../../org/bukkit/event/Cancellable.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
-import ServerEvent from '../../../../org/bukkit/event/server/ServerEvent.js'
+import ServerEvent from './ServerEvent.js'
 
 export default interface BroadcastMessageEvent extends ServerEvent, Cancellable {
 	getEventName(): string;

@@ -1,8 +1,8 @@
 declare var Java: any;
 import Cancellable from '../../../../org/bukkit/event/Cancellable.js'
 import Entity from '../../../../org/bukkit/entity/Entity.js'
-import EntityEvent from '../../../../org/bukkit/event/entity/EntityEvent.js'
-import EntityRegainHealthEvent$RegainReason from '../../../../org/bukkit/event/entity/EntityRegainHealthEvent$RegainReason.js'
+import EntityEvent from './EntityEvent.js'
+import EntityRegainHealthEvent$RegainReason from './EntityRegainHealthEvent$RegainReason.js'
 import EntityType from '../../../../org/bukkit/entity/EntityType.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 

@@ -1,10 +1,10 @@
 declare var Java: any;
 import BlockFace from '../../../org/bukkit/block/BlockFace.js'
 import BoundingBox from '../../../org/bukkit/util/BoundingBox.js'
-import Entity from '../../../org/bukkit/entity/Entity.js'
+import Entity from './Entity.js'
 import EntityDamageEvent from '../../../org/bukkit/event/entity/EntityDamageEvent.js'
 import EntityEffect from '../../../org/bukkit/EntityEffect.js'
-import EntityType from '../../../org/bukkit/entity/EntityType.js'
+import EntityType from './EntityType.js'
 import Location from '../../../org/bukkit/Location.js'
 import MetadataValue from '../../../org/bukkit/metadata/MetadataValue.js'
 import Permission from '../../../org/bukkit/permissions/Permission.js'
@@ -13,7 +13,7 @@ import PersistentDataContainer from '../../../org/bukkit/persistence/PersistentD
 import PistonMoveReaction from '../../../org/bukkit/block/PistonMoveReaction.js'
 import PlayerTeleportEvent$TeleportCause from '../../../org/bukkit/event/player/PlayerTeleportEvent$TeleportCause.js'
 import Plugin from '../../../org/bukkit/plugin/Plugin.js'
-import Pose from '../../../org/bukkit/entity/Pose.js'
+import Pose from './Pose.js'
 import Server from '../../../org/bukkit/Server.js'
 import Vector from '../../../org/bukkit/util/Vector.js'
 import World from '../../../org/bukkit/World.js'
@@ -61,8 +61,8 @@ export default interface EnderSignal extends Entity {
 	getWorld(): World;
 	hasGravity(): boolean;
 	hasMetadata(arg0: string): boolean;
-	hasPermission(arg0: string): boolean;
 	hasPermission(arg0: Permission): boolean;
+	hasPermission(arg0: string): boolean;
 	isCustomNameVisible(): boolean;
 	isDead(): boolean;
 	isEmpty(): boolean;
@@ -71,8 +71,8 @@ export default interface EnderSignal extends Entity {
 	isInvulnerable(): boolean;
 	isOnGround(): boolean;
 	isOp(): boolean;
-	isPermissionSet(arg0: string): boolean;
 	isPermissionSet(arg0: Permission): boolean;
+	isPermissionSet(arg0: string): boolean;
 	isPersistent(): boolean;
 	isSilent(): boolean;
 	isValid(): boolean;
@@ -106,8 +106,8 @@ export default interface EnderSignal extends Entity {
 	setTargetLocation(arg0: Location): void;
 	setTicksLived(arg0: number): void;
 	setVelocity(arg0: Vector): void;
-	teleport(arg0: Entity): boolean;
 	teleport(arg0: Location): boolean;
+	teleport(arg0: Entity): boolean;
 	teleport(arg0: Location, arg1: PlayerTeleportEvent$TeleportCause): boolean;
 	teleport(arg0: Entity, arg1: PlayerTeleportEvent$TeleportCause): boolean;
 }

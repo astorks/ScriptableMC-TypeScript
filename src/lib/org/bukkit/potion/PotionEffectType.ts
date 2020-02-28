@@ -1,6 +1,6 @@
 declare var Java: any;
 import Color from '../../../org/bukkit/Color.js'
-import PotionEffect from '../../../org/bukkit/potion/PotionEffect.js'
+import PotionEffect from './PotionEffect.js'
 
 export default interface PotionEffectType {
 	createEffect(duration: number, amplifier: number): PotionEffect;

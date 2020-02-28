@@ -1,9 +1,9 @@
 declare var Java: any;
-import File from '../../java/io/File.js'
+import File from './File.js'
 import FileChannel from '../../java/nio/channels/FileChannel.js'
-import FileDescriptor from '../../java/io/FileDescriptor.js'
-import InputStream from '../../java/io/InputStream.js'
-import OutputStream from '../../java/io/OutputStream.js'
+import FileDescriptor from './FileDescriptor.js'
+import InputStream from './InputStream.js'
+import OutputStream from './OutputStream.js'
 
 export default interface FileInputStream extends InputStream {
 	available(): number;

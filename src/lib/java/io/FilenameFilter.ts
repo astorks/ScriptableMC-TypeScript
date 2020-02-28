@@ -1,5 +1,5 @@
 declare var Java: any;
-import File from '../../java/io/File.js'
+import File from './File.js'
 
 export default interface FilenameFilter {
 	accept(arg0: File, arg1: string): boolean;

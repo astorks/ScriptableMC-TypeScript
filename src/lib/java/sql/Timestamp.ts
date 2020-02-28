@@ -6,9 +6,9 @@ export default interface Timestamp {
 	before(ts: Timestamp): boolean;
 	before(when: any): boolean;
 	clone(): any;
-	compareTo(o: any): number;
 	compareTo(ts: Timestamp): number;
 	compareTo(arg0: any): number;
+	compareTo(o: any): number;
 	getDate(): number;
 	getDay(): number;
 	getHours(): number;
@@ -60,8 +60,8 @@ export default class Timestamp {
 		return Timestamp.$javaClass.parse(...args);
 	}
 
-	public static valueOf(s: string): Timestamp;
 	public static valueOf(dateTime: any): Timestamp;
+	public static valueOf(s: string): Timestamp;
 	public static valueOf(...args: any[]): any {
 		return Timestamp.$javaClass.valueOf(...args);
 	}

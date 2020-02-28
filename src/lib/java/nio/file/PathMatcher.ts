@@ -1,5 +1,5 @@
 declare var Java: any;
-import Path from '../../../java/nio/file/Path.js'
+import Path from './Path.js'
 
 export default interface PathMatcher {
 	matches(arg0: Path): boolean;

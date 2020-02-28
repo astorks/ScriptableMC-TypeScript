@@ -1,5 +1,5 @@
 declare var Java: any;
-import Wrapper from '../../java/sql/Wrapper.js'
+import Wrapper from './Wrapper.js'
 
 export default interface ResultSetMetaData {
 	getCatalogName(arg0: number): string;

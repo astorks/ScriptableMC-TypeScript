@@ -1,6 +1,6 @@
 declare var Java: any;
 import Axis from '../../../../org/bukkit/Axis.js'
-import BlockData from '../../../../org/bukkit/block/data/BlockData.js'
+import BlockData from './BlockData.js'
 import Material from '../../../../org/bukkit/Material.js'
 
 export default interface Orientable extends BlockData {

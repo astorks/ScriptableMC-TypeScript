@@ -1,6 +1,6 @@
 declare var Java: any;
-import Command from '../../../org/bukkit/command/Command.js'
-import CommandSender from '../../../org/bukkit/command/CommandSender.js'
+import Command from './Command.js'
+import CommandSender from './CommandSender.js'
 import Location from '../../../org/bukkit/Location.js'
 
 export default interface CommandMap {

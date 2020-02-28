@@ -5,9 +5,9 @@ import CommandSender from '../../../org/bukkit/command/CommandSender.js'
 import File from '../../../java/io/File.js'
 import FileConfiguration from '../../../org/bukkit/configuration/file/FileConfiguration.js'
 import InputStream from '../../../java/io/InputStream.js'
-import Plugin from '../../../org/bukkit/plugin/Plugin.js'
-import PluginDescriptionFile from '../../../org/bukkit/plugin/PluginDescriptionFile.js'
-import PluginLoader from '../../../org/bukkit/plugin/PluginLoader.js'
+import Plugin from './Plugin.js'
+import PluginDescriptionFile from './PluginDescriptionFile.js'
+import PluginLoader from './PluginLoader.js'
 import Server from '../../../org/bukkit/Server.js'
 
 export default interface PluginBase extends Plugin {

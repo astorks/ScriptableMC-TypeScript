@@ -1,5 +1,5 @@
 declare var Java: any;
-import SerializablePermission from '../../java/io/SerializablePermission.js'
+import SerializablePermission from './SerializablePermission.js'
 
 export default class ObjectStreamConstants {
 	public static get $javaClass(): any {

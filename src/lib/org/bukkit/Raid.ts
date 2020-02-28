@@ -1,7 +1,7 @@
 declare var Java: any;
-import Location from '../../org/bukkit/Location.js'
-import Raid$RaidStatus from '../../org/bukkit/Raid$RaidStatus.js'
-import Raider from '../../org/bukkit/entity/Raider.js'
+import Location from './Location.js'
+import Raid$RaidStatus from './Raid$RaidStatus.js'
+import Raider from './entity/Raider.js'
 
 export default interface Raid {
 	getActiveTicks(): number;

@@ -1,9 +1,9 @@
 declare var Java: any;
-import ByteArrayDataInput from '../../../../com/google/common/io/ByteArrayDataInput.js'
-import ByteArrayDataOutput from '../../../../com/google/common/io/ByteArrayDataOutput.js'
+import ByteArrayDataInput from './ByteArrayDataInput.js'
+import ByteArrayDataOutput from './ByteArrayDataOutput.js'
 import ByteArrayInputStream from '../../../../java/io/ByteArrayInputStream.js'
 import ByteArrayOutputStream from '../../../../java/io/ByteArrayOutputStream.js'
-import ByteProcessor from '../../../../com/google/common/io/ByteProcessor.js'
+import ByteProcessor from './ByteProcessor.js'
 import InputStream from '../../../../java/io/InputStream.js'
 import OutputStream from '../../../../java/io/OutputStream.js'
 import ReadableByteChannel from '../../../../java/nio/channels/ReadableByteChannel.js'
@@ -14,8 +14,8 @@ export default class ByteStreams {
 		return Java.type('com.google.common.io.ByteStreams');
 	}
 
-	public static copy(from: ReadableByteChannel, to: WritableByteChannel): number;
 	public static copy(from: InputStream, to: OutputStream): number;
+	public static copy(from: ReadableByteChannel, to: WritableByteChannel): number;
 	public static copy(...args: any[]): any {
 		return ByteStreams.$javaClass.copy(...args);
 	}

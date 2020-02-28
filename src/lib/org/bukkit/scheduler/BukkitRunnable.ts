@@ -1,5 +1,5 @@
 declare var Java: any;
-import BukkitTask from '../../../org/bukkit/scheduler/BukkitTask.js'
+import BukkitTask from './BukkitTask.js'
 import Plugin from '../../../org/bukkit/plugin/Plugin.js'
 
 export default interface BukkitRunnable {

@@ -1,5 +1,5 @@
 declare var Java: any;
-import NoiseGenerator from '../../../../org/bukkit/util/noise/NoiseGenerator.js'
+import NoiseGenerator from './NoiseGenerator.js'
 
 export default interface OctaveGenerator {
 	getOctaves(): Array<NoiseGenerator>;
@@ -7,8 +7,8 @@ export default interface OctaveGenerator {
 	getYScale(): number;
 	getZScale(): number;
 	noise(x: number, frequency: number, amplitude: number): number;
-	noise(x: number, y: number, frequency: number, amplitude: number): number;
 	noise(x: number, frequency: number, amplitude: number, normalized: boolean): number;
+	noise(x: number, y: number, frequency: number, amplitude: number): number;
 	noise(x: number, y: number, frequency: number, amplitude: number, normalized: boolean): number;
 	noise(x: number, y: number, z: number, frequency: number, amplitude: number): number;
 	noise(x: number, y: number, z: number, frequency: number, amplitude: number, normalized: boolean): number;

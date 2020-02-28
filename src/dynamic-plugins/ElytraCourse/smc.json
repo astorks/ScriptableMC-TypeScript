@@ -1,0 +1,7 @@
+{
+    "name": "smc-elytra-course",
+    "enabled": true,
+    "version": "1.0.0",
+    "description": "ScriptableMC elytra course.",
+    "main": "main.js"
+}

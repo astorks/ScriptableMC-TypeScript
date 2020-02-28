@@ -1,5 +1,5 @@
 declare var Java: any;
-import Cookie from '../../../khttp/structures/cookie/Cookie.js'
+import Cookie from './Cookie.js'
 
 export default interface CookieJar {
 	clear(): void;
@@ -12,15 +12,15 @@ export default interface CookieJar {
 	containsValue(value: string): boolean;
 	entrySet(): any;
 	forEach(action: any): void;
-	get(arg0: any): any;
 	get(key: string): string;
+	get(arg0: any): any;
 	getCookie(key: string): Cookie;
 	getCookies(): Array<Cookie>;
 	getEntries(): any;
 	getKeys(): any;
 	getOrDefault(key: any, defaultValue: any): any;
 	getSize(): number;
-	getValues(): any;
+	getValues(): Array<string>;
 	isEmpty(): boolean;
 	keySet(): any;
 	merge(key: any, value: any, remappingFunction: any): any;
@@ -28,15 +28,15 @@ export default interface CookieJar {
 	put(key: string, value: string): string;
 	putAll(from: any): void;
 	putIfAbsent(key: any, value: any): any;
-	remove(key: string): string;
 	remove(arg0: any): any;
+	remove(key: string): string;
 	remove(key: any, value: any): boolean;
 	replace(key: any, value: any): any;
 	replace(key: any, oldValue: any, newValue: any): boolean;
 	replaceAll(_function: any): void;
 	setCookie(cookie: Cookie): void;
 	size(): number;
-	values(): any;
+	values(): Array<any>;
 }
 
 export default class CookieJar {

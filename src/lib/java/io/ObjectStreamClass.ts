@@ -1,6 +1,6 @@
 declare var Java: any;
-import ObjectStreamField from '../../java/io/ObjectStreamField.js'
-import Serializable from '../../java/io/Serializable.js'
+import ObjectStreamField from './ObjectStreamField.js'
+import Serializable from './Serializable.js'
 
 export default interface ObjectStreamClass {
 	forClass(): any;

@@ -1,9 +1,9 @@
 declare var Java: any;
-import Permissible from '../../../org/bukkit/permissions/Permissible.js'
-import Permission from '../../../org/bukkit/permissions/Permission.js'
-import PermissionAttachment from '../../../org/bukkit/permissions/PermissionAttachment.js'
+import Permissible from './Permissible.js'
+import Permission from './Permission.js'
+import PermissionAttachment from './PermissionAttachment.js'
 import Plugin from '../../../org/bukkit/plugin/Plugin.js'
-import ServerOperator from '../../../org/bukkit/permissions/ServerOperator.js'
+import ServerOperator from './ServerOperator.js'
 
 export default interface PermissibleBase extends Permissible {
 	addAttachment(plugin: Plugin): PermissionAttachment;

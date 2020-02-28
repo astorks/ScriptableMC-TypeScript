@@ -2,14 +2,14 @@ declare var Java: any;
 import Block from '../../../org/bukkit/block/Block.js'
 import LivingEntity from '../../../org/bukkit/entity/LivingEntity.js'
 import Location from '../../../org/bukkit/Location.js'
-import Vector from '../../../org/bukkit/util/Vector.js'
+import Vector from './Vector.js'
 import World from '../../../org/bukkit/World.js'
 
 export default interface BlockIterator {
 	forEachRemaining(action: any): void;
 	hasNext(): boolean;
-	next(): any;
 	next(): Block;
+	next(): any;
 	remove(): void;
 }
 

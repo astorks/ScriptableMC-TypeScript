@@ -1,6 +1,6 @@
 declare var Java: any;
-import Closeable from '../../java/io/Closeable.js'
-import OutputStream from '../../java/io/OutputStream.js'
+import Closeable from './Closeable.js'
+import OutputStream from './OutputStream.js'
 
 export default interface InputStream {
 	available(): number;

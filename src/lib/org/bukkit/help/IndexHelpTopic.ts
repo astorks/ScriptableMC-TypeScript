@@ -1,6 +1,6 @@
 declare var Java: any;
 import CommandSender from '../../../org/bukkit/command/CommandSender.js'
-import HelpTopic from '../../../org/bukkit/help/HelpTopic.js'
+import HelpTopic from './HelpTopic.js'
 
 export default interface IndexHelpTopic extends HelpTopic {
 	amendCanSee(amendedPermission: string): void;
@@ -16,8 +16,8 @@ export default class IndexHelpTopic {
 		return Java.type('org.bukkit.help.IndexHelpTopic');
 	}
 
-	constructor(_name: string, shortText: string, permission: string, topics: any);
-	constructor(_name: string, shortText: string, permission: string, topics: any, preamble: string);
+	constructor(_name: string, shortText: string, permission: string, topics: Array<any>);
+	constructor(_name: string, shortText: string, permission: string, topics: Array<any>, preamble: string);
 	constructor(...args: any[]) {
 		return new IndexHelpTopic.$javaClass(...args);
 	}

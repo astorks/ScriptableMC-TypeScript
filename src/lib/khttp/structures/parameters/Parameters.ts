@@ -21,7 +21,7 @@ export default interface Parameters {
 	getOrDefault(key: any, defaultValue: any): any;
 	getParameters(): Array<any>;
 	getSize(): number;
-	getValues(): any;
+	getValues(): Array<string>;
 	isEmpty(): boolean;
 	keySet(): any;
 	merge(arg0: string, arg1: string, arg2: any): string;
@@ -39,7 +39,7 @@ export default interface Parameters {
 	replace(arg0: string, arg1: string, arg2: string): boolean;
 	replaceAll(arg0: any): void;
 	size(): number;
-	values(): any;
+	values(): Array<any>;
 }
 
 export default class Parameters {

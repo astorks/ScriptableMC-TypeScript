@@ -1,6 +1,6 @@
 declare var Java: any;
 import Location from '../../../org/bukkit/Location.js'
-import Vector from '../../../org/bukkit/util/Vector.js'
+import Vector from './Vector.js'
 import World from '../../../org/bukkit/World.js'
 
 export default interface BlockVector extends Vector {
@@ -30,8 +30,8 @@ export default interface BlockVector extends Vector {
 	length(): number;
 	lengthSquared(): number;
 	midpoint(other: Vector): Vector;
-	multiply(m: number): Vector;
 	multiply(vec: Vector): Vector;
+	multiply(m: number): Vector;
 	multiply(m: number): Vector;
 	multiply(m: number): Vector;
 	normalize(): Vector;

@@ -1,14 +1,14 @@
 declare var Java: any;
 import BlockFace from '../../../org/bukkit/block/BlockFace.js'
-import Directional from '../../../org/bukkit/material/Directional.js'
+import Directional from './Directional.js'
 import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
 import Material from '../../../org/bukkit/Material.js'
-import MaterialData from '../../../org/bukkit/material/MaterialData.js'
+import MaterialData from './MaterialData.js'
 
 export default interface Bed extends MaterialData, Directional {
-	clone(): MaterialData;
-	clone(): Bed;
 	clone(): any;
+	clone(): Bed;
+	clone(): MaterialData;
 	getData(): number;
 	getFacing(): BlockFace;
 	getItemType(): Material;
@@ -26,8 +26,8 @@ export default class Bed {
 	}
 
 	constructor();
-	constructor(direction: BlockFace);
 	constructor(type: Material);
+	constructor(direction: BlockFace);
 	constructor(type: Material, data: number);
 	constructor(...args: any[]) {
 		return new Bed.$javaClass(...args);

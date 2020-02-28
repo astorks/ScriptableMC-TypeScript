@@ -1,7 +1,7 @@
 declare var Java: any;
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import RegisteredServiceProvider from '../../../../org/bukkit/plugin/RegisteredServiceProvider.js'
-import ServiceEvent from '../../../../org/bukkit/event/server/ServiceEvent.js'
+import ServiceEvent from './ServiceEvent.js'
 
 export default interface ServiceUnregisterEvent extends ServiceEvent {
 	getEventName(): string;

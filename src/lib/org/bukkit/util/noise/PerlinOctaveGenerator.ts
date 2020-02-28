@@ -1,6 +1,6 @@
 declare var Java: any;
-import NoiseGenerator from '../../../../org/bukkit/util/noise/NoiseGenerator.js'
-import OctaveGenerator from '../../../../org/bukkit/util/noise/OctaveGenerator.js'
+import NoiseGenerator from './NoiseGenerator.js'
+import OctaveGenerator from './OctaveGenerator.js'
 import World from '../../../../org/bukkit/World.js'
 
 export default interface PerlinOctaveGenerator extends OctaveGenerator {
@@ -9,8 +9,8 @@ export default interface PerlinOctaveGenerator extends OctaveGenerator {
 	getYScale(): number;
 	getZScale(): number;
 	noise(x: number, frequency: number, amplitude: number): number;
-	noise(x: number, y: number, frequency: number, amplitude: number): number;
 	noise(x: number, frequency: number, amplitude: number, normalized: boolean): number;
+	noise(x: number, y: number, frequency: number, amplitude: number): number;
 	noise(x: number, y: number, frequency: number, amplitude: number, normalized: boolean): number;
 	noise(x: number, y: number, z: number, frequency: number, amplitude: number): number;
 	noise(x: number, y: number, z: number, frequency: number, amplitude: number, normalized: boolean): number;
@@ -25,9 +25,9 @@ export default class PerlinOctaveGenerator {
 		return Java.type('org.bukkit.util.noise.PerlinOctaveGenerator');
 	}
 
-	constructor(world: World, octaves: number);
 	constructor(rand: any, octaves: number);
 	constructor(seed: number, octaves: number);
+	constructor(world: World, octaves: number);
 	constructor(...args: any[]) {
 		return new PerlinOctaveGenerator.$javaClass(...args);
 	}

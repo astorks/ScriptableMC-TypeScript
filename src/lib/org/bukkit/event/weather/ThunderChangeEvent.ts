@@ -1,7 +1,7 @@
 declare var Java: any;
 import Cancellable from '../../../../org/bukkit/event/Cancellable.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
-import WeatherEvent from '../../../../org/bukkit/event/weather/WeatherEvent.js'
+import WeatherEvent from './WeatherEvent.js'
 import World from '../../../../org/bukkit/World.js'
 
 export default interface ThunderChangeEvent extends WeatherEvent, Cancellable {

@@ -3,7 +3,7 @@ import Cancellable from '../../../../org/bukkit/event/Cancellable.js'
 import Entity from '../../../../org/bukkit/entity/Entity.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import Vehicle from '../../../../org/bukkit/entity/Vehicle.js'
-import VehicleEvent from '../../../../org/bukkit/event/vehicle/VehicleEvent.js'
+import VehicleEvent from './VehicleEvent.js'
 
 export default interface VehicleDestroyEvent extends VehicleEvent, Cancellable {
 	getAttacker(): Entity;

@@ -1,15 +1,15 @@
 declare var Java: any;
 import BlockFace from '../../../org/bukkit/block/BlockFace.js'
-import Directional from '../../../org/bukkit/material/Directional.js'
+import Directional from './Directional.js'
 import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
 import Material from '../../../org/bukkit/Material.js'
-import MaterialData from '../../../org/bukkit/material/MaterialData.js'
-import Openable from '../../../org/bukkit/material/Openable.js'
+import MaterialData from './MaterialData.js'
+import Openable from './Openable.js'
 
 export default interface Gate extends MaterialData, Directional, Openable {
-	clone(): Gate;
-	clone(): any;
 	clone(): MaterialData;
+	clone(): any;
+	clone(): Gate;
 	getData(): number;
 	getFacing(): BlockFace;
 	getItemType(): Material;

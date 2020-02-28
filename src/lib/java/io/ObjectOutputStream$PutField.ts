@@ -1,5 +1,5 @@
 declare var Java: any;
-import ObjectOutput from '../../java/io/ObjectOutput.js'
+import ObjectOutput from './ObjectOutput.js'
 
 export default interface ObjectOutputStream$PutField {
 	put(arg0: string, arg1: number): void;

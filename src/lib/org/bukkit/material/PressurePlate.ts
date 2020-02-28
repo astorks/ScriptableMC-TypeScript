@@ -1,13 +1,13 @@
 declare var Java: any;
 import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
 import Material from '../../../org/bukkit/Material.js'
-import MaterialData from '../../../org/bukkit/material/MaterialData.js'
-import PressureSensor from '../../../org/bukkit/material/PressureSensor.js'
+import MaterialData from './MaterialData.js'
+import PressureSensor from './PressureSensor.js'
 
 export default interface PressurePlate extends MaterialData, PressureSensor {
+	clone(): any;
 	clone(): PressurePlate;
 	clone(): MaterialData;
-	clone(): any;
 	getData(): number;
 	getItemType(): Material;
 	isPressed(): boolean;

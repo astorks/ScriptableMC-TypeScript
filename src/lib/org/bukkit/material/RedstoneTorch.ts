@@ -2,15 +2,15 @@ declare var Java: any;
 import BlockFace from '../../../org/bukkit/block/BlockFace.js'
 import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
 import Material from '../../../org/bukkit/Material.js'
-import MaterialData from '../../../org/bukkit/material/MaterialData.js'
-import Redstone from '../../../org/bukkit/material/Redstone.js'
-import SimpleAttachableMaterialData from '../../../org/bukkit/material/SimpleAttachableMaterialData.js'
-import Torch from '../../../org/bukkit/material/Torch.js'
+import MaterialData from './MaterialData.js'
+import Redstone from './Redstone.js'
+import SimpleAttachableMaterialData from './SimpleAttachableMaterialData.js'
+import Torch from './Torch.js'
 
 export default interface RedstoneTorch extends Torch, Redstone {
-	clone(): SimpleAttachableMaterialData;
 	clone(): MaterialData;
 	clone(): any;
+	clone(): SimpleAttachableMaterialData;
 	clone(): Torch;
 	clone(): RedstoneTorch;
 	getAttachedFace(): BlockFace;

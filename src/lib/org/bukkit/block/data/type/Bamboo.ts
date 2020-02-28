@@ -1,9 +1,9 @@
 declare var Java: any;
 import Ageable from '../../../../../org/bukkit/block/data/Ageable.js'
-import Bamboo$Leaves from '../../../../../org/bukkit/block/data/type/Bamboo$Leaves.js'
+import Bamboo$Leaves from './Bamboo$Leaves.js'
 import BlockData from '../../../../../org/bukkit/block/data/BlockData.js'
 import Material from '../../../../../org/bukkit/Material.js'
-import Sapling from '../../../../../org/bukkit/block/data/type/Sapling.js'
+import Sapling from './Sapling.js'
 
 export default interface Bamboo extends Ageable, Sapling {
 	clone(): any;

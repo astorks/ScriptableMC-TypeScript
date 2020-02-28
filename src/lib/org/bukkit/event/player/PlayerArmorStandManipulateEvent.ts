@@ -5,7 +5,7 @@ import EquipmentSlot from '../../../../org/bukkit/inventory/EquipmentSlot.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import ItemStack from '../../../../org/bukkit/inventory/ItemStack.js'
 import Player from '../../../../org/bukkit/entity/Player.js'
-import PlayerInteractEntityEvent from '../../../../org/bukkit/event/player/PlayerInteractEntityEvent.js'
+import PlayerInteractEntityEvent from './PlayerInteractEntityEvent.js'
 
 export default interface PlayerArmorStandManipulateEvent extends PlayerInteractEntityEvent {
 	getArmorStandItem(): ItemStack;

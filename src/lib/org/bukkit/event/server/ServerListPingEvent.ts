@@ -1,7 +1,7 @@
 declare var Java: any;
 import CachedServerIcon from '../../../../org/bukkit/util/CachedServerIcon.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
-import ServerEvent from '../../../../org/bukkit/event/server/ServerEvent.js'
+import ServerEvent from './ServerEvent.js'
 
 export default interface ServerListPingEvent extends ServerEvent {
 	forEach(action: any): void;

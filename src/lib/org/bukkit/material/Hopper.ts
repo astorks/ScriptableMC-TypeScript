@@ -1,15 +1,15 @@
 declare var Java: any;
 import BlockFace from '../../../org/bukkit/block/BlockFace.js'
-import Directional from '../../../org/bukkit/material/Directional.js'
+import Directional from './Directional.js'
 import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
 import Material from '../../../org/bukkit/Material.js'
-import MaterialData from '../../../org/bukkit/material/MaterialData.js'
-import Redstone from '../../../org/bukkit/material/Redstone.js'
+import MaterialData from './MaterialData.js'
+import Redstone from './Redstone.js'
 
 export default interface Hopper extends MaterialData, Directional, Redstone {
-	clone(): any;
-	clone(): MaterialData;
 	clone(): Hopper;
+	clone(): MaterialData;
+	clone(): any;
 	getData(): number;
 	getFacing(): BlockFace;
 	getItemType(): Material;
@@ -28,8 +28,8 @@ export default class Hopper {
 	}
 
 	constructor();
-	constructor(type: Material);
 	constructor(facingDirection: BlockFace);
+	constructor(type: Material);
 	constructor(type: Material, data: number);
 	constructor(facingDirection: BlockFace, isActive: boolean);
 	constructor(...args: any[]) {

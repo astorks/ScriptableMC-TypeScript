@@ -1,7 +1,7 @@
 declare var Java: any;
-import ConversationContext from '../../../org/bukkit/conversations/ConversationContext.js'
-import Prompt from '../../../org/bukkit/conversations/Prompt.js'
-import ValidatingPrompt from '../../../org/bukkit/conversations/ValidatingPrompt.js'
+import ConversationContext from './ConversationContext.js'
+import Prompt from './Prompt.js'
+import ValidatingPrompt from './ValidatingPrompt.js'
 
 export default interface RegexPrompt extends ValidatingPrompt {
 	acceptInput(context: ConversationContext, input: string): Prompt;
@@ -14,8 +14,8 @@ export default class RegexPrompt {
 		return Java.type('org.bukkit.conversations.RegexPrompt');
 	}
 
-	constructor(regex: string);
 	constructor(pattern: any);
+	constructor(regex: string);
 	constructor(...args: any[]) {
 		return new RegexPrompt.$javaClass(...args);
 	}

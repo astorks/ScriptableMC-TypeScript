@@ -1,5 +1,5 @@
 declare var Java: any;
-import MapCursor$Type from '../../org/bukkit/map/MapCursor$Type.js'
+import MapCursor$Type from './map/MapCursor$Type.js'
 
 export default interface StructureType {
 	getMapIcon(): MapCursor$Type;

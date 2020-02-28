@@ -2,12 +2,12 @@ declare var Java: any;
 import BlockFace from '../../../org/bukkit/block/BlockFace.js'
 import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
 import Material from '../../../org/bukkit/Material.js'
-import MaterialData from '../../../org/bukkit/material/MaterialData.js'
+import MaterialData from './MaterialData.js'
 
 export default interface Vine extends MaterialData {
-	clone(): MaterialData;
 	clone(): any;
 	clone(): Vine;
+	clone(): MaterialData;
 	getData(): number;
 	getItemType(): Material;
 	isOnFace(face: BlockFace): boolean;
@@ -25,8 +25,8 @@ export default class Vine {
 
 	constructor();
 	constructor(faces: Array<BlockFace>);
-	constructor(faces: any);
 	constructor(data: number);
+	constructor(faces: any);
 	constructor(type: Material, data: number);
 	constructor(...args: any[]) {
 		return new Vine.$javaClass(...args);

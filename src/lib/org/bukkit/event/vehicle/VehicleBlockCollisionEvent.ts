@@ -2,7 +2,7 @@ declare var Java: any;
 import Block from '../../../../org/bukkit/block/Block.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import Vehicle from '../../../../org/bukkit/entity/Vehicle.js'
-import VehicleCollisionEvent from '../../../../org/bukkit/event/vehicle/VehicleCollisionEvent.js'
+import VehicleCollisionEvent from './VehicleCollisionEvent.js'
 
 export default interface VehicleBlockCollisionEvent extends VehicleCollisionEvent {
 	getBlock(): Block;

@@ -1,5 +1,5 @@
 declare var Java: any;
-import Conversable from '../../../org/bukkit/conversations/Conversable.js'
+import Conversable from './Conversable.js'
 import Plugin from '../../../org/bukkit/plugin/Plugin.js'
 
 export default interface ConversationContext {

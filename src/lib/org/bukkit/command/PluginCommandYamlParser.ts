@@ -1,5 +1,5 @@
 declare var Java: any;
-import Command from '../../../org/bukkit/command/Command.js'
+import Command from './Command.js'
 import Plugin from '../../../org/bukkit/plugin/Plugin.js'
 
 export default class PluginCommandYamlParser {

@@ -1,9 +1,9 @@
 declare var Java: any;
 import Charset from '../../java/nio/charset/Charset.js'
-import Closeable from '../../java/io/Closeable.js'
-import File from '../../java/io/File.js'
-import FilterOutputStream from '../../java/io/FilterOutputStream.js'
-import OutputStream from '../../java/io/OutputStream.js'
+import Closeable from './Closeable.js'
+import File from './File.js'
+import FilterOutputStream from './FilterOutputStream.js'
+import OutputStream from './OutputStream.js'
 
 export default interface PrintStream extends FilterOutputStream {
 	append(csq: any): any;

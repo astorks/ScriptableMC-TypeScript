@@ -1,5 +1,5 @@
 declare var Java: any;
-import Location from '../../org/bukkit/Location.js'
+import Location from './Location.js'
 
 export default interface WorldBorder {
 	getCenter(): Location;

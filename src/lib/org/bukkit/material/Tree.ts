@@ -2,9 +2,9 @@ declare var Java: any;
 import BlockFace from '../../../org/bukkit/block/BlockFace.js'
 import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
 import Material from '../../../org/bukkit/Material.js'
-import MaterialData from '../../../org/bukkit/material/MaterialData.js'
+import MaterialData from './MaterialData.js'
 import TreeSpecies from '../../../org/bukkit/TreeSpecies.js'
-import Wood from '../../../org/bukkit/material/Wood.js'
+import Wood from './Wood.js'
 
 export default interface Tree extends Wood {
 	clone(): Wood;

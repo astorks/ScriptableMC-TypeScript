@@ -2,8 +2,8 @@ declare var Java: any;
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import Location from '../../../../org/bukkit/Location.js'
 import Player from '../../../../org/bukkit/entity/Player.js'
-import PlayerTeleportEvent from '../../../../org/bukkit/event/player/PlayerTeleportEvent.js'
-import PlayerTeleportEvent$TeleportCause from '../../../../org/bukkit/event/player/PlayerTeleportEvent$TeleportCause.js'
+import PlayerTeleportEvent from './PlayerTeleportEvent.js'
+import PlayerTeleportEvent$TeleportCause from './PlayerTeleportEvent$TeleportCause.js'
 
 export default interface PlayerPortalEvent extends PlayerTeleportEvent {
 	getCanCreatePortal(): boolean;

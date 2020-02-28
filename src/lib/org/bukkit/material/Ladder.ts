@@ -2,13 +2,13 @@ declare var Java: any;
 import BlockFace from '../../../org/bukkit/block/BlockFace.js'
 import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
 import Material from '../../../org/bukkit/Material.js'
-import MaterialData from '../../../org/bukkit/material/MaterialData.js'
-import SimpleAttachableMaterialData from '../../../org/bukkit/material/SimpleAttachableMaterialData.js'
+import MaterialData from './MaterialData.js'
+import SimpleAttachableMaterialData from './SimpleAttachableMaterialData.js'
 
 export default interface Ladder extends SimpleAttachableMaterialData {
+	clone(): SimpleAttachableMaterialData;
 	clone(): any;
 	clone(): MaterialData;
-	clone(): SimpleAttachableMaterialData;
 	clone(): Ladder;
 	getAttachedFace(): BlockFace;
 	getData(): number;

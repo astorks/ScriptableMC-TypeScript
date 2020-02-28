@@ -21,8 +21,8 @@ export default class ItemBuilder {
 		return Java.type('com.smc.utils.ItemBuilder');
 	}
 
-	constructor(itemStack: ItemStack);
 	constructor(material: Material);
+	constructor(itemStack: ItemStack);
 	constructor(...args: any[]) {
 		return new ItemBuilder.$javaClass(...args);
 	}

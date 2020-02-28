@@ -1,6 +1,6 @@
 declare var Java: any;
-import CopyOption from '../../../java/nio/file/CopyOption.js'
-import OpenOption from '../../../java/nio/file/OpenOption.js'
+import CopyOption from './CopyOption.js'
+import OpenOption from './OpenOption.js'
 
 export default interface LinkOption {
 	compareTo(arg0: any): number;

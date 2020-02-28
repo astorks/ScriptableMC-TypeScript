@@ -6,8 +6,8 @@ export default interface LineIterator {
 	close(): void;
 	forEachRemaining(action: any): void;
 	hasNext(): boolean;
-	next(): any;
 	next(): string;
+	next(): any;
 	nextLine(): string;
 	remove(): void;
 }

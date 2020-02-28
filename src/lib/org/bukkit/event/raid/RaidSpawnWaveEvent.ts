@@ -1,7 +1,7 @@
 declare var Java: any;
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import Raid from '../../../../org/bukkit/Raid.js'
-import RaidEvent from '../../../../org/bukkit/event/raid/RaidEvent.js'
+import RaidEvent from './RaidEvent.js'
 import Raider from '../../../../org/bukkit/entity/Raider.js'
 import World from '../../../../org/bukkit/World.js'
 

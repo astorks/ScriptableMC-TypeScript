@@ -1,5 +1,5 @@
 declare var Java: any;
-import LazyMetadataValue from '../../../org/bukkit/metadata/LazyMetadataValue.js'
+import LazyMetadataValue from './LazyMetadataValue.js'
 import Plugin from '../../../org/bukkit/plugin/Plugin.js'
 
 export default interface FixedMetadataValue extends LazyMetadataValue {

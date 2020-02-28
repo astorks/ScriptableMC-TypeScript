@@ -1,5 +1,5 @@
 declare var Java: any;
-import Enchantment from '../../../org/bukkit/enchantments/Enchantment.js'
+import Enchantment from './Enchantment.js'
 
 export default interface EnchantmentOffer {
 	getCost(): number;

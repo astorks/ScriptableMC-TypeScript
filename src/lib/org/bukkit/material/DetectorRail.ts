@@ -1,17 +1,17 @@
 declare var Java: any;
 import BlockFace from '../../../org/bukkit/block/BlockFace.js'
-import ExtendedRails from '../../../org/bukkit/material/ExtendedRails.js'
+import ExtendedRails from './ExtendedRails.js'
 import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
 import Material from '../../../org/bukkit/Material.js'
-import MaterialData from '../../../org/bukkit/material/MaterialData.js'
-import PressureSensor from '../../../org/bukkit/material/PressureSensor.js'
-import Rails from '../../../org/bukkit/material/Rails.js'
+import MaterialData from './MaterialData.js'
+import PressureSensor from './PressureSensor.js'
+import Rails from './Rails.js'
 
 export default interface DetectorRail extends ExtendedRails, PressureSensor {
-	clone(): MaterialData;
-	clone(): any;
-	clone(): Rails;
 	clone(): ExtendedRails;
+	clone(): any;
+	clone(): MaterialData;
+	clone(): Rails;
 	clone(): DetectorRail;
 	getData(): number;
 	getDirection(): BlockFace;

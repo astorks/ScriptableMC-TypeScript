@@ -1,5 +1,5 @@
 declare var Java: any;
-import Bed$Part from '../../../../../org/bukkit/block/data/type/Bed$Part.js'
+import Bed$Part from './Bed$Part.js'
 import BlockData from '../../../../../org/bukkit/block/data/BlockData.js'
 import BlockFace from '../../../../../org/bukkit/block/BlockFace.js'
 import Directional from '../../../../../org/bukkit/block/data/Directional.js'

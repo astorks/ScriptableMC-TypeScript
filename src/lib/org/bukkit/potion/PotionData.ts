@@ -1,5 +1,5 @@
 declare var Java: any;
-import PotionType from '../../../org/bukkit/potion/PotionType.js'
+import PotionType from './PotionType.js'
 
 export default interface PotionData {
 	getType(): PotionType;

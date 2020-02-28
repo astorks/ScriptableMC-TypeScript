@@ -1,5 +1,5 @@
 declare var Java: any;
-import MapCursor$Type from '../../../org/bukkit/map/MapCursor$Type.js'
+import MapCursor$Type from './MapCursor$Type.js'
 
 export default interface MapCursor {
 	getCaption(): string;

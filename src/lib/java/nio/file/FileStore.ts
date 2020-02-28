@@ -1,5 +1,5 @@
 declare var Java: any;
-import FileStoreAttributeView from '../../../java/nio/file/attribute/FileStoreAttributeView.js'
+import FileStoreAttributeView from './attribute/FileStoreAttributeView.js'
 
 export default interface FileStore {
 	getAttribute(arg0: string): any;

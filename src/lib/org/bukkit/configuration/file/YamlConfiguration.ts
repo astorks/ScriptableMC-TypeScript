@@ -5,15 +5,15 @@ import ConfigurationOptions from '../../../../org/bukkit/configuration/Configura
 import ConfigurationSection from '../../../../org/bukkit/configuration/ConfigurationSection.js'
 import ConfigurationSerializable from '../../../../org/bukkit/configuration/serialization/ConfigurationSerializable.js'
 import File from '../../../../java/io/File.js'
-import FileConfiguration from '../../../../org/bukkit/configuration/file/FileConfiguration.js'
-import FileConfigurationOptions from '../../../../org/bukkit/configuration/file/FileConfigurationOptions.js'
+import FileConfiguration from './FileConfiguration.js'
+import FileConfigurationOptions from './FileConfigurationOptions.js'
 import ItemStack from '../../../../org/bukkit/inventory/ItemStack.js'
 import Location from '../../../../org/bukkit/Location.js'
 import MemoryConfigurationOptions from '../../../../org/bukkit/configuration/MemoryConfigurationOptions.js'
 import OfflinePlayer from '../../../../org/bukkit/OfflinePlayer.js'
 import Reader from '../../../../java/io/Reader.js'
 import Vector from '../../../../org/bukkit/util/Vector.js'
-import YamlConfigurationOptions from '../../../../org/bukkit/configuration/file/YamlConfigurationOptions.js'
+import YamlConfigurationOptions from './YamlConfigurationOptions.js'
 
 export default interface YamlConfiguration extends FileConfiguration {
 	addDefault(path: string, value: any): void;

@@ -1,9 +1,9 @@
 declare var Java: any;
-import AnimalTamer from '../../org/bukkit/entity/AnimalTamer.js'
-import ConfigurationSerializable from '../../org/bukkit/configuration/serialization/ConfigurationSerializable.js'
-import Location from '../../org/bukkit/Location.js'
-import Player from '../../org/bukkit/entity/Player.js'
-import ServerOperator from '../../org/bukkit/permissions/ServerOperator.js'
+import AnimalTamer from './entity/AnimalTamer.js'
+import ConfigurationSerializable from './configuration/serialization/ConfigurationSerializable.js'
+import Location from './Location.js'
+import Player from './entity/Player.js'
+import ServerOperator from './permissions/ServerOperator.js'
 
 export default interface OfflinePlayer extends ServerOperator, AnimalTamer, ConfigurationSerializable {
 	getBedSpawnLocation(): Location;

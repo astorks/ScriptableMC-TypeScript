@@ -4,7 +4,7 @@ import BlockFace from '../../../../org/bukkit/block/BlockFace.js'
 import Cancellable from '../../../../org/bukkit/event/Cancellable.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import Hanging from '../../../../org/bukkit/entity/Hanging.js'
-import HangingEvent from '../../../../org/bukkit/event/hanging/HangingEvent.js'
+import HangingEvent from './HangingEvent.js'
 import Player from '../../../../org/bukkit/entity/Player.js'
 
 export default interface HangingPlaceEvent extends HangingEvent, Cancellable {

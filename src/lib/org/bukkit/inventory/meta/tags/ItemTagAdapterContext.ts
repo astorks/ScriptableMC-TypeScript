@@ -1,5 +1,5 @@
 declare var Java: any;
-import CustomItemTagContainer from '../../../../../org/bukkit/inventory/meta/tags/CustomItemTagContainer.js'
+import CustomItemTagContainer from './CustomItemTagContainer.js'
 
 export default interface ItemTagAdapterContext {
 	newTagContainer(): CustomItemTagContainer;

@@ -3,7 +3,7 @@ import BlockData from '../../../../../org/bukkit/block/data/BlockData.js'
 import BlockFace from '../../../../../org/bukkit/block/BlockFace.js'
 import Directional from '../../../../../org/bukkit/block/data/Directional.js'
 import Material from '../../../../../org/bukkit/Material.js'
-import TechnicalPiston$Type from '../../../../../org/bukkit/block/data/type/TechnicalPiston$Type.js'
+import TechnicalPiston$Type from './TechnicalPiston$Type.js'
 
 export default interface TechnicalPiston extends Directional {
 	clone(): any;

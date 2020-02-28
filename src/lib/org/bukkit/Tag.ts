@@ -1,6 +1,6 @@
 declare var Java: any;
-import Keyed from '../../org/bukkit/Keyed.js'
-import NamespacedKey from '../../org/bukkit/NamespacedKey.js'
+import Keyed from './Keyed.js'
+import NamespacedKey from './NamespacedKey.js'
 
 export default interface Tag extends Keyed {
 	getKey(): NamespacedKey;

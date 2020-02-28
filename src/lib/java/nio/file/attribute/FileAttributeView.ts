@@ -1,5 +1,5 @@
 declare var Java: any;
-import AttributeView from '../../../../java/nio/file/attribute/AttributeView.js'
+import AttributeView from './AttributeView.js'
 
 export default interface FileAttributeView {
 	name(): string;

@@ -1,16 +1,16 @@
 declare var Java: any;
-import DisplaySlot from '../../../org/bukkit/scoreboard/DisplaySlot.js'
-import Objective from '../../../org/bukkit/scoreboard/Objective.js'
+import DisplaySlot from './DisplaySlot.js'
+import Objective from './Objective.js'
 import OfflinePlayer from '../../../org/bukkit/OfflinePlayer.js'
-import RenderType from '../../../org/bukkit/scoreboard/RenderType.js'
-import Team from '../../../org/bukkit/scoreboard/Team.js'
+import RenderType from './RenderType.js'
+import Team from './Team.js'
 
 export default interface Scoreboard {
 	clearSlot(arg0: DisplaySlot): void;
 	getEntries(): any;
 	getEntryTeam(arg0: string): Team;
-	getObjective(arg0: string): Objective;
 	getObjective(arg0: DisplaySlot): Objective;
+	getObjective(arg0: string): Objective;
 	getObjectives(): any;
 	getObjectivesByCriteria(arg0: string): any;
 	getPlayerTeam(arg0: OfflinePlayer): Team;

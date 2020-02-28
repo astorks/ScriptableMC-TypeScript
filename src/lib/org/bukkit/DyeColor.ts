@@ -1,5 +1,5 @@
 declare var Java: any;
-import Color from '../../org/bukkit/Color.js'
+import Color from './Color.js'
 
 export default interface DyeColor {
 	compareTo(arg0: any): number;

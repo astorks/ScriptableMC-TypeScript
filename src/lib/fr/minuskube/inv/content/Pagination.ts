@@ -1,6 +1,6 @@
 declare var Java: any;
 import ClickableItem from '../../../../fr/minuskube/inv/ClickableItem.js'
-import SlotIterator from '../../../../fr/minuskube/inv/content/SlotIterator.js'
+import SlotIterator from './SlotIterator.js'
 
 export default interface Pagination {
 	addToIterator(arg0: SlotIterator): Pagination;

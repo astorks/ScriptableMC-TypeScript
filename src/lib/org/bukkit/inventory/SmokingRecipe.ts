@@ -1,9 +1,9 @@
 declare var Java: any;
-import CookingRecipe from '../../../org/bukkit/inventory/CookingRecipe.js'
-import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
+import CookingRecipe from './CookingRecipe.js'
+import ItemStack from './ItemStack.js'
 import Material from '../../../org/bukkit/Material.js'
 import NamespacedKey from '../../../org/bukkit/NamespacedKey.js'
-import RecipeChoice from '../../../org/bukkit/inventory/RecipeChoice.js'
+import RecipeChoice from './RecipeChoice.js'
 
 export default interface SmokingRecipe extends CookingRecipe {
 	getCookingTime(): number;

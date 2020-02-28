@@ -2,12 +2,12 @@ declare var Java: any;
 import EntityType from '../../../org/bukkit/entity/EntityType.js'
 import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
 import Material from '../../../org/bukkit/Material.js'
-import MaterialData from '../../../org/bukkit/material/MaterialData.js'
+import MaterialData from './MaterialData.js'
 
 export default interface SpawnEgg extends MaterialData {
-	clone(): any;
-	clone(): MaterialData;
 	clone(): SpawnEgg;
+	clone(): MaterialData;
+	clone(): any;
 	getData(): number;
 	getItemType(): Material;
 	getSpawnedType(): EntityType;

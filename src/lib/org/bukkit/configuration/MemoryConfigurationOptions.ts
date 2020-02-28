@@ -1,7 +1,7 @@
 declare var Java: any;
-import Configuration from '../../../org/bukkit/configuration/Configuration.js'
-import ConfigurationOptions from '../../../org/bukkit/configuration/ConfigurationOptions.js'
-import MemoryConfiguration from '../../../org/bukkit/configuration/MemoryConfiguration.js'
+import Configuration from './Configuration.js'
+import ConfigurationOptions from './ConfigurationOptions.js'
+import MemoryConfiguration from './MemoryConfiguration.js'
 
 export default interface MemoryConfigurationOptions extends ConfigurationOptions {
 	configuration(): Configuration;

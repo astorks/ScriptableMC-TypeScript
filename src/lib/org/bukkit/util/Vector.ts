@@ -1,5 +1,5 @@
 declare var Java: any;
-import BlockVector from '../../../org/bukkit/util/BlockVector.js'
+import BlockVector from './BlockVector.js'
 import ConfigurationSerializable from '../../../org/bukkit/configuration/serialization/ConfigurationSerializable.js'
 import Location from '../../../org/bukkit/Location.js'
 import World from '../../../org/bukkit/World.js'
@@ -30,8 +30,8 @@ export default interface Vector extends ConfigurationSerializable {
 	length(): number;
 	lengthSquared(): number;
 	midpoint(other: Vector): Vector;
-	multiply(m: number): Vector;
 	multiply(vec: Vector): Vector;
+	multiply(m: number): Vector;
 	multiply(m: number): Vector;
 	multiply(m: number): Vector;
 	normalize(): Vector;

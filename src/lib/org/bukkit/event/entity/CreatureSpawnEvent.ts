@@ -1,15 +1,15 @@
 declare var Java: any;
-import CreatureSpawnEvent$SpawnReason from '../../../../org/bukkit/event/entity/CreatureSpawnEvent$SpawnReason.js'
+import CreatureSpawnEvent$SpawnReason from './CreatureSpawnEvent$SpawnReason.js'
 import Entity from '../../../../org/bukkit/entity/Entity.js'
-import EntitySpawnEvent from '../../../../org/bukkit/event/entity/EntitySpawnEvent.js'
+import EntitySpawnEvent from './EntitySpawnEvent.js'
 import EntityType from '../../../../org/bukkit/entity/EntityType.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import LivingEntity from '../../../../org/bukkit/entity/LivingEntity.js'
 import Location from '../../../../org/bukkit/Location.js'
 
 export default interface CreatureSpawnEvent extends EntitySpawnEvent {
-	getEntity(): LivingEntity;
 	getEntity(): Entity;
+	getEntity(): LivingEntity;
 	getEntityType(): EntityType;
 	getEventName(): string;
 	getHandlers(): HandlerList;

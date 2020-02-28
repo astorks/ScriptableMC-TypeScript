@@ -1,6 +1,6 @@
 declare var Java: any;
-import Bisected$Half from '../../../../org/bukkit/block/data/Bisected$Half.js'
-import BlockData from '../../../../org/bukkit/block/data/BlockData.js'
+import Bisected$Half from './Bisected$Half.js'
+import BlockData from './BlockData.js'
 import Material from '../../../../org/bukkit/Material.js'
 
 export default interface Bisected extends BlockData {

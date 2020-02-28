@@ -1,7 +1,7 @@
 declare var Java: any;
 import Block from '../../../../org/bukkit/block/Block.js'
 import BlockFace from '../../../../org/bukkit/block/BlockFace.js'
-import BlockPistonEvent from '../../../../org/bukkit/event/block/BlockPistonEvent.js'
+import BlockPistonEvent from './BlockPistonEvent.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import Location from '../../../../org/bukkit/Location.js'
 

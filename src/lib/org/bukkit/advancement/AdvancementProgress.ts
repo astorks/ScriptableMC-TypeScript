@@ -1,12 +1,12 @@
 declare var Java: any;
-import Advancement from '../../../org/bukkit/advancement/Advancement.js'
+import Advancement from './Advancement.js'
 
 export default interface AdvancementProgress {
 	awardCriteria(arg0: string): boolean;
 	getAdvancement(): Advancement;
-	getAwardedCriteria(): any;
+	getAwardedCriteria(): Array<string>;
 	getDateAwarded(arg0: string): any;
-	getRemainingCriteria(): any;
+	getRemainingCriteria(): Array<string>;
 	isDone(): boolean;
 	revokeCriteria(arg0: string): boolean;
 }

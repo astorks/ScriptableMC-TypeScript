@@ -1,5 +1,5 @@
 declare var Java: any;
-import BanEntry from '../../org/bukkit/BanEntry.js'
+import BanEntry from './BanEntry.js'
 
 export default interface BanList {
 	addBan(arg0: string, arg1: string, arg2: any, arg3: string): BanEntry;

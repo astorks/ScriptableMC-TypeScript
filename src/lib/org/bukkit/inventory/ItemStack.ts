@@ -1,7 +1,7 @@
 declare var Java: any;
 import ConfigurationSerializable from '../../../org/bukkit/configuration/serialization/ConfigurationSerializable.js'
 import Enchantment from '../../../org/bukkit/enchantments/Enchantment.js'
-import ItemMeta from '../../../org/bukkit/inventory/meta/ItemMeta.js'
+import ItemMeta from './meta/ItemMeta.js'
 import Material from '../../../org/bukkit/Material.js'
 import MaterialData from '../../../org/bukkit/material/MaterialData.js'
 

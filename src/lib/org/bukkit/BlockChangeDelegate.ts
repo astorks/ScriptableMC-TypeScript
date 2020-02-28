@@ -1,5 +1,5 @@
 declare var Java: any;
-import BlockData from '../../org/bukkit/block/data/BlockData.js'
+import BlockData from './block/data/BlockData.js'
 
 export default interface BlockChangeDelegate {
 	getBlockData(arg0: number, arg1: number, arg2: number): BlockData;

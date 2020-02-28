@@ -1,6 +1,6 @@
 declare var Java: any;
 import BlockFace from '../../../org/bukkit/block/BlockFace.js'
-import Directional from '../../../org/bukkit/material/Directional.js'
+import Directional from './Directional.js'
 
 export default interface Attachable extends Directional {
 	getAttachedFace(): BlockFace;

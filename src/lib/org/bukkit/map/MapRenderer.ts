@@ -1,6 +1,6 @@
 declare var Java: any;
-import MapCanvas from '../../../org/bukkit/map/MapCanvas.js'
-import MapView from '../../../org/bukkit/map/MapView.js'
+import MapCanvas from './MapCanvas.js'
+import MapView from './MapView.js'
 import Player from '../../../org/bukkit/entity/Player.js'
 
 export default interface MapRenderer {

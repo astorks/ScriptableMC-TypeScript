@@ -3,7 +3,7 @@ import Cancellable from '../../../../org/bukkit/event/Cancellable.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import NamespacedKey from '../../../../org/bukkit/NamespacedKey.js'
 import Player from '../../../../org/bukkit/entity/Player.js'
-import PlayerEvent from '../../../../org/bukkit/event/player/PlayerEvent.js'
+import PlayerEvent from './PlayerEvent.js'
 
 export default interface PlayerRecipeDiscoverEvent extends PlayerEvent, Cancellable {
 	getEventName(): string;

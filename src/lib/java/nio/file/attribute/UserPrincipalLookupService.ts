@@ -1,6 +1,6 @@
 declare var Java: any;
-import GroupPrincipal from '../../../../java/nio/file/attribute/GroupPrincipal.js'
-import UserPrincipal from '../../../../java/nio/file/attribute/UserPrincipal.js'
+import GroupPrincipal from './GroupPrincipal.js'
+import UserPrincipal from './UserPrincipal.js'
 
 export default interface UserPrincipalLookupService {
 	lookupPrincipalByGroupName(arg0: string): GroupPrincipal;

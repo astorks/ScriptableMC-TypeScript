@@ -1,9 +1,9 @@
 declare var Java: any;
-import Block from '../../org/bukkit/block/Block.js'
-import Chunk from '../../org/bukkit/Chunk.js'
-import ConfigurationSerializable from '../../org/bukkit/configuration/serialization/ConfigurationSerializable.js'
-import Vector from '../../org/bukkit/util/Vector.js'
-import World from '../../org/bukkit/World.js'
+import Block from './block/Block.js'
+import Chunk from './Chunk.js'
+import ConfigurationSerializable from './configuration/serialization/ConfigurationSerializable.js'
+import Vector from './util/Vector.js'
+import World from './World.js'
 
 export default interface Location extends ConfigurationSerializable {
 	add(vec: Vector): Location;

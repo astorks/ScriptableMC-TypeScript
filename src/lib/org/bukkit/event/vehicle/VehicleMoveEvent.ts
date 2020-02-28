@@ -2,7 +2,7 @@ declare var Java: any;
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import Location from '../../../../org/bukkit/Location.js'
 import Vehicle from '../../../../org/bukkit/entity/Vehicle.js'
-import VehicleEvent from '../../../../org/bukkit/event/vehicle/VehicleEvent.js'
+import VehicleEvent from './VehicleEvent.js'
 
 export default interface VehicleMoveEvent extends VehicleEvent {
 	getEventName(): string;

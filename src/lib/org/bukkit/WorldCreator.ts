@@ -1,9 +1,9 @@
 declare var Java: any;
-import ChunkGenerator from '../../org/bukkit/generator/ChunkGenerator.js'
-import CommandSender from '../../org/bukkit/command/CommandSender.js'
-import World from '../../org/bukkit/World.js'
-import World$Environment from '../../org/bukkit/World$Environment.js'
-import WorldType from '../../org/bukkit/WorldType.js'
+import ChunkGenerator from './generator/ChunkGenerator.js'
+import CommandSender from './command/CommandSender.js'
+import World from './World.js'
+import World$Environment from './World$Environment.js'
+import WorldType from './WorldType.js'
 
 export default interface WorldCreator {
 	copy(creator: WorldCreator): WorldCreator;

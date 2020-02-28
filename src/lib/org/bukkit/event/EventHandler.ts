@@ -1,5 +1,5 @@
 declare var Java: any;
-import EventPriority from '../../../org/bukkit/event/EventPriority.js'
+import EventPriority from './EventPriority.js'
 
 export default interface EventHandler {
 	annotationType(): any;

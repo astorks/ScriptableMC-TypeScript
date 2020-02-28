@@ -1,5 +1,5 @@
 declare var Java: any;
-import Effect$Type from '../../org/bukkit/Effect$Type.js'
+import Effect$Type from './Effect$Type.js'
 
 export default interface Effect {
 	compareTo(arg0: any): number;

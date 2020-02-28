@@ -3,7 +3,7 @@ import AnaloguePowerable from '../../../../../org/bukkit/block/data/AnaloguePowe
 import BlockData from '../../../../../org/bukkit/block/data/BlockData.js'
 import BlockFace from '../../../../../org/bukkit/block/BlockFace.js'
 import Material from '../../../../../org/bukkit/Material.js'
-import RedstoneWire$Connection from '../../../../../org/bukkit/block/data/type/RedstoneWire$Connection.js'
+import RedstoneWire$Connection from './RedstoneWire$Connection.js'
 
 export default interface RedstoneWire extends AnaloguePowerable {
 	clone(): any;

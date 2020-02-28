@@ -2,7 +2,7 @@ declare var Java: any;
 import Block from '../../../../org/bukkit/block/Block.js'
 import BlockData from '../../../../org/bukkit/block/data/BlockData.js'
 import Entity from '../../../../org/bukkit/entity/Entity.js'
-import EntityChangeBlockEvent from '../../../../org/bukkit/event/entity/EntityChangeBlockEvent.js'
+import EntityChangeBlockEvent from './EntityChangeBlockEvent.js'
 import EntityType from '../../../../org/bukkit/entity/EntityType.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import LivingEntity from '../../../../org/bukkit/entity/LivingEntity.js'

@@ -14,18 +14,16 @@ import PlayerInteractAtEntityEvent from '../../lib/org/bukkit/event/player/Playe
 import PlayerInteractEntityEvent from '../../lib/org/bukkit/event/player/PlayerInteractEntityEvent.js';
 import InventoryInteractEvent from '../../lib/org/bukkit/event/inventory/InventoryInteractEvent.js';
 import CraftItemEvent from '../../lib/org/bukkit/event/inventory/CraftItemEvent.js';
-import EntityDamageByEntityEvent from '../../lib/org/bukkit/event/entity/EntityDamageByEntityEvent.js';
 import EntityDamageEvent from '../../lib/org/bukkit/event/entity/EntityDamageEvent.js';
 import ItemBuilder from '../../lib/com/smc/utils/ItemBuilder.js';
-import Vector from '../../lib/org/bukkit/util/Vector.js';
 import PlayerCommandPreprocessEvent from '../../lib/org/bukkit/event/player/PlayerCommandPreprocessEvent.js';
 import ChatColor from '../../lib/org/bukkit/ChatColor.js';
 
 const mainWorld = Bukkit.getServer().getWorld("world");
-const spawnPoint = new Location(mainWorld, 360, 226, -220);
+const spawnPoint = new Location(mainWorld, 358.5, 226, -219.5, 90, 0);
 const commandBlacklist = ["/fly", "/tp", "/warp"]
 
-export default class ElytraMinigame extends JsPlugin {
+export default class ElytraCourse extends JsPlugin {
     private players: {} = {};
     private playerData: {} = {};
 
@@ -48,7 +46,7 @@ export default class ElytraMinigame extends JsPlugin {
         this.registerEvent(EntityDamageEvent, this.onEntityDamage)
         this.registerEvent(CraftItemEvent, this.onCraftItem)
 
-        let command = this.newCommand("elytraminigame");
+        let command = this.newCommand("elytra_course");
         command.setExecutor(this.onCmdExecute.bind(this));
         this.registerCommand(command);
     }
@@ -134,7 +132,7 @@ export default class ElytraMinigame extends JsPlugin {
             for(let i = 0; i < commandBlacklist.length; i++) {
                 if(commandMessage.startsWith(commandBlacklist[i])) {
                     cancelled = true;
-                    player.sendMessage(ChatColor.RED + "Please leave the elytra minigame before using this command.");
+                    player.sendMessage(ChatColor.RED + "Please leave the elytra course before using this command.");
                     break;
                 }
             }
@@ -169,12 +167,10 @@ export default class ElytraMinigame extends JsPlugin {
 
     onCmdExecute(sender: Player, command: Command, label: string, args: Array<string>) {
         if(this.isPlayerHere(sender)) {
-            let result = this.leave(sender);
-            sender.sendMessage("Left elytra minigame: " + result.toString());
+            this.leave(sender);
         }
         else {
-            let result = this.join(sender);
-            sender.sendMessage("Joined elytra minigame: " + result.toString());
+            this.join(sender);
         }
 
         return false;

@@ -1,7 +1,7 @@
 declare var Java: any;
-import ConversationContext from '../../../org/bukkit/conversations/ConversationContext.js'
-import Prompt from '../../../org/bukkit/conversations/Prompt.js'
-import ValidatingPrompt from '../../../org/bukkit/conversations/ValidatingPrompt.js'
+import ConversationContext from './ConversationContext.js'
+import Prompt from './Prompt.js'
+import ValidatingPrompt from './ValidatingPrompt.js'
 
 export default interface NumericPrompt extends ValidatingPrompt {
 	acceptInput(context: ConversationContext, input: string): Prompt;

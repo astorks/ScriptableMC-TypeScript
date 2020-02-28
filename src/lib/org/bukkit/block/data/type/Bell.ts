@@ -1,5 +1,5 @@
 declare var Java: any;
-import Bell$Attachment from '../../../../../org/bukkit/block/data/type/Bell$Attachment.js'
+import Bell$Attachment from './Bell$Attachment.js'
 import BlockData from '../../../../../org/bukkit/block/data/BlockData.js'
 import BlockFace from '../../../../../org/bukkit/block/BlockFace.js'
 import Directional from '../../../../../org/bukkit/block/data/Directional.js'

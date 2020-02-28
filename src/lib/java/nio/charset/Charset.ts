@@ -1,8 +1,8 @@
 declare var Java: any;
 import ByteBuffer from '../../../java/nio/ByteBuffer.js'
 import CharBuffer from '../../../java/nio/CharBuffer.js'
-import CharsetDecoder from '../../../java/nio/charset/CharsetDecoder.js'
-import CharsetEncoder from '../../../java/nio/charset/CharsetEncoder.js'
+import CharsetDecoder from './CharsetDecoder.js'
+import CharsetEncoder from './CharsetEncoder.js'
 
 export default interface Charset {
 	aliases(): any;

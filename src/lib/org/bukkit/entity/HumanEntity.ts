@@ -1,15 +1,15 @@
 declare var Java: any;
-import AnimalTamer from '../../../org/bukkit/entity/AnimalTamer.js'
+import AnimalTamer from './AnimalTamer.js'
 import Attribute from '../../../org/bukkit/attribute/Attribute.js'
 import AttributeInstance from '../../../org/bukkit/attribute/AttributeInstance.js'
 import Block from '../../../org/bukkit/block/Block.js'
 import BlockFace from '../../../org/bukkit/block/BlockFace.js'
 import BoundingBox from '../../../org/bukkit/util/BoundingBox.js'
-import Entity from '../../../org/bukkit/entity/Entity.js'
+import Entity from './Entity.js'
 import EntityDamageEvent from '../../../org/bukkit/event/entity/EntityDamageEvent.js'
 import EntityEffect from '../../../org/bukkit/EntityEffect.js'
 import EntityEquipment from '../../../org/bukkit/inventory/EntityEquipment.js'
-import EntityType from '../../../org/bukkit/entity/EntityType.js'
+import EntityType from './EntityType.js'
 import FluidCollisionMode from '../../../org/bukkit/FluidCollisionMode.js'
 import GameMode from '../../../org/bukkit/GameMode.js'
 import Inventory from '../../../org/bukkit/inventory/Inventory.js'
@@ -17,11 +17,11 @@ import InventoryHolder from '../../../org/bukkit/inventory/InventoryHolder.js'
 import InventoryView from '../../../org/bukkit/inventory/InventoryView.js'
 import InventoryView$Property from '../../../org/bukkit/inventory/InventoryView$Property.js'
 import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
-import LivingEntity from '../../../org/bukkit/entity/LivingEntity.js'
+import LivingEntity from './LivingEntity.js'
 import Location from '../../../org/bukkit/Location.js'
 import MainHand from '../../../org/bukkit/inventory/MainHand.js'
 import Material from '../../../org/bukkit/Material.js'
-import MemoryKey from '../../../org/bukkit/entity/memory/MemoryKey.js'
+import MemoryKey from './memory/MemoryKey.js'
 import Merchant from '../../../org/bukkit/inventory/Merchant.js'
 import MetadataValue from '../../../org/bukkit/metadata/MetadataValue.js'
 import NamespacedKey from '../../../org/bukkit/NamespacedKey.js'
@@ -29,18 +29,18 @@ import Permission from '../../../org/bukkit/permissions/Permission.js'
 import PermissionAttachment from '../../../org/bukkit/permissions/PermissionAttachment.js'
 import PersistentDataContainer from '../../../org/bukkit/persistence/PersistentDataContainer.js'
 import PistonMoveReaction from '../../../org/bukkit/block/PistonMoveReaction.js'
-import Player from '../../../org/bukkit/entity/Player.js'
+import Player from './Player.js'
 import PlayerInventory from '../../../org/bukkit/inventory/PlayerInventory.js'
 import PlayerTeleportEvent$TeleportCause from '../../../org/bukkit/event/player/PlayerTeleportEvent$TeleportCause.js'
 import Plugin from '../../../org/bukkit/plugin/Plugin.js'
-import Pose from '../../../org/bukkit/entity/Pose.js'
+import Pose from './Pose.js'
 import PotionEffect from '../../../org/bukkit/potion/PotionEffect.js'
 import PotionEffectType from '../../../org/bukkit/potion/PotionEffectType.js'
-import Projectile from '../../../org/bukkit/entity/Projectile.js'
+import Projectile from './Projectile.js'
 import RayTraceResult from '../../../org/bukkit/util/RayTraceResult.js'
 import Server from '../../../org/bukkit/Server.js'
 import Vector from '../../../org/bukkit/util/Vector.js'
-import Villager from '../../../org/bukkit/entity/Villager.js'
+import Villager from './Villager.js'
 import World from '../../../org/bukkit/World.js'
 
 export default interface HumanEntity extends LivingEntity, AnimalTamer, InventoryHolder {
@@ -51,17 +51,17 @@ export default interface HumanEntity extends LivingEntity, AnimalTamer, Inventor
 	addPassenger(arg0: Entity): boolean;
 	addPotionEffect(arg0: PotionEffect): boolean;
 	addPotionEffect(arg0: PotionEffect, arg1: boolean): boolean;
-	addPotionEffects(arg0: any): boolean;
+	addPotionEffects(arg0: Array<any>): boolean;
 	addScoreboardTag(arg0: string): boolean;
 	attack(arg0: Entity): void;
 	closeInventory(): void;
 	damage(arg0: number): void;
 	damage(arg0: number, arg1: Entity): void;
 	discoverRecipe(arg0: NamespacedKey): boolean;
-	discoverRecipes(arg0: any): number;
+	discoverRecipes(arg0: Array<any>): number;
 	eject(): boolean;
 	getAbsorptionAmount(): number;
-	getActivePotionEffects(): any;
+	getActivePotionEffects(): Array<PotionEffect>;
 	getAttribute(arg0: Attribute): AttributeInstance;
 	getBedLocation(): Location;
 	getBedSpawnLocation(): Location;
@@ -136,8 +136,8 @@ export default interface HumanEntity extends LivingEntity, AnimalTamer, Inventor
 	hasGravity(): boolean;
 	hasLineOfSight(arg0: Entity): boolean;
 	hasMetadata(arg0: string): boolean;
-	hasPermission(arg0: string): boolean;
 	hasPermission(arg0: Permission): boolean;
+	hasPermission(arg0: string): boolean;
 	hasPotionEffect(arg0: PotionEffectType): boolean;
 	isBlocking(): boolean;
 	isCollidable(): boolean;
@@ -152,8 +152,8 @@ export default interface HumanEntity extends LivingEntity, AnimalTamer, Inventor
 	isLeashed(): boolean;
 	isOnGround(): boolean;
 	isOp(): boolean;
-	isPermissionSet(arg0: string): boolean;
 	isPermissionSet(arg0: Permission): boolean;
+	isPermissionSet(arg0: string): boolean;
 	isPersistent(): boolean;
 	isRiptiding(): boolean;
 	isSilent(): boolean;
@@ -164,10 +164,10 @@ export default interface HumanEntity extends LivingEntity, AnimalTamer, Inventor
 	launchProjectile(arg0: any, arg1: Vector): Projectile;
 	leaveVehicle(): boolean;
 	openEnchanting(arg0: Location, arg1: boolean): InventoryView;
-	openInventory(arg0: Inventory): InventoryView;
 	openInventory(arg0: InventoryView): void;
-	openMerchant(arg0: Merchant, arg1: boolean): InventoryView;
+	openInventory(arg0: Inventory): InventoryView;
 	openMerchant(arg0: Villager, arg1: boolean): InventoryView;
+	openMerchant(arg0: Merchant, arg1: boolean): InventoryView;
 	openWorkbench(arg0: Location, arg1: boolean): InventoryView;
 	playEffect(arg0: EntityEffect): void;
 	rayTraceBlocks(arg0: number): RayTraceResult;
@@ -227,12 +227,12 @@ export default interface HumanEntity extends LivingEntity, AnimalTamer, Inventor
 	sleep(arg0: Location, arg1: boolean): boolean;
 	swingMainHand(): void;
 	swingOffHand(): void;
-	teleport(arg0: Entity): boolean;
 	teleport(arg0: Location): boolean;
+	teleport(arg0: Entity): boolean;
 	teleport(arg0: Location, arg1: PlayerTeleportEvent$TeleportCause): boolean;
 	teleport(arg0: Entity, arg1: PlayerTeleportEvent$TeleportCause): boolean;
 	undiscoverRecipe(arg0: NamespacedKey): boolean;
-	undiscoverRecipes(arg0: any): number;
+	undiscoverRecipes(arg0: Array<any>): number;
 	wakeup(arg0: boolean): void;
 }
 

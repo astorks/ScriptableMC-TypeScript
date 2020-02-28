@@ -1,9 +1,9 @@
 declare var Java: any;
-import InventoryOpener from '../../../fr/minuskube/inv/opener/InventoryOpener.js'
+import InventoryOpener from './opener/InventoryOpener.js'
 import InventoryType from '../../../org/bukkit/event/inventory/InventoryType.js'
 import JavaPlugin from '../../../org/bukkit/plugin/java/JavaPlugin.js'
 import Player from '../../../org/bukkit/entity/Player.js'
-import SmartInventory from '../../../fr/minuskube/inv/SmartInventory.js'
+import SmartInventory from './SmartInventory.js'
 
 export default interface InventoryManager {
 	findOpener(type: InventoryType): any;

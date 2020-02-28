@@ -1,6 +1,6 @@
 declare var Java: any;
-import ConfigurationSerializable from '../../org/bukkit/configuration/serialization/ConfigurationSerializable.js'
-import DyeColor from '../../org/bukkit/DyeColor.js'
+import ConfigurationSerializable from './configuration/serialization/ConfigurationSerializable.js'
+import DyeColor from './DyeColor.js'
 
 export default interface Color extends ConfigurationSerializable {
 	asBGR(): number;

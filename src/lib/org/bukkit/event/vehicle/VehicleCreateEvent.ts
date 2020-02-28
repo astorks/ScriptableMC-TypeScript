@@ -2,7 +2,7 @@ declare var Java: any;
 import Cancellable from '../../../../org/bukkit/event/Cancellable.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import Vehicle from '../../../../org/bukkit/entity/Vehicle.js'
-import VehicleEvent from '../../../../org/bukkit/event/vehicle/VehicleEvent.js'
+import VehicleEvent from './VehicleEvent.js'
 
 export default interface VehicleCreateEvent extends VehicleEvent, Cancellable {
 	getEventName(): string;

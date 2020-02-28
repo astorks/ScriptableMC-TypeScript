@@ -1,12 +1,12 @@
 declare var Java: any;
-import ClickType from '../../../../org/bukkit/event/inventory/ClickType.js'
+import ClickType from './ClickType.js'
 import Event$Result from '../../../../org/bukkit/event/Event$Result.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import HumanEntity from '../../../../org/bukkit/entity/HumanEntity.js'
 import Inventory from '../../../../org/bukkit/inventory/Inventory.js'
-import InventoryAction from '../../../../org/bukkit/event/inventory/InventoryAction.js'
-import InventoryClickEvent from '../../../../org/bukkit/event/inventory/InventoryClickEvent.js'
-import InventoryType$SlotType from '../../../../org/bukkit/event/inventory/InventoryType$SlotType.js'
+import InventoryAction from './InventoryAction.js'
+import InventoryClickEvent from './InventoryClickEvent.js'
+import InventoryType$SlotType from './InventoryType$SlotType.js'
 import InventoryView from '../../../../org/bukkit/inventory/InventoryView.js'
 import ItemStack from '../../../../org/bukkit/inventory/ItemStack.js'
 

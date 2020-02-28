@@ -1,5 +1,5 @@
 declare var Java: any;
-import ScriptEngineConfig from '../../../com/pixlfox/scriptablemc/ScriptEngineConfig.js'
+import ScriptEngineConfig from './ScriptEngineConfig.js'
 
 export default interface ScriptEngineDebuggerConfig {
 	getAddress(): string;

@@ -3,7 +3,7 @@ import ClickableItem from '../../../fr/minuskube/inv/ClickableItem.js'
 import InventoryManager from '../../../fr/minuskube/inv/InventoryManager.js'
 import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
 import SmartInventory$Builder from '../../../fr/minuskube/inv/SmartInventory$Builder.js'
-import SmartInventoryProvider from '../../../com/smc/smartinvs/SmartInventoryProvider.js'
+import SmartInventoryProvider from './SmartInventoryProvider.js'
 
 export default class SmartInventory {
 	public static get $javaClass(): any {

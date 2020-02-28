@@ -1,6 +1,6 @@
 declare var Java: any;
-import Permissible from '../../../org/bukkit/permissions/Permissible.js'
-import PermissionAttachment from '../../../org/bukkit/permissions/PermissionAttachment.js'
+import Permissible from './Permissible.js'
+import PermissionAttachment from './PermissionAttachment.js'
 
 export default interface PermissionAttachmentInfo {
 	getAttachment(): PermissionAttachment;

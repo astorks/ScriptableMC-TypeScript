@@ -5,7 +5,7 @@ import ConfigurationOptions from '../../../../org/bukkit/configuration/Configura
 import ConfigurationSection from '../../../../org/bukkit/configuration/ConfigurationSection.js'
 import ConfigurationSerializable from '../../../../org/bukkit/configuration/serialization/ConfigurationSerializable.js'
 import File from '../../../../java/io/File.js'
-import FileConfigurationOptions from '../../../../org/bukkit/configuration/file/FileConfigurationOptions.js'
+import FileConfigurationOptions from './FileConfigurationOptions.js'
 import ItemStack from '../../../../org/bukkit/inventory/ItemStack.js'
 import Location from '../../../../org/bukkit/Location.js'
 import MemoryConfiguration from '../../../../org/bukkit/configuration/MemoryConfiguration.js'

@@ -1,14 +1,14 @@
 declare var Java: any;
 import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
 import Material from '../../../org/bukkit/Material.js'
-import MaterialData from '../../../org/bukkit/material/MaterialData.js'
+import MaterialData from './MaterialData.js'
 import TreeSpecies from '../../../org/bukkit/TreeSpecies.js'
-import Wood from '../../../org/bukkit/material/Wood.js'
+import Wood from './Wood.js'
 
 export default interface Sapling extends Wood {
+	clone(): Sapling;
 	clone(): Wood;
 	clone(): any;
-	clone(): Sapling;
 	clone(): MaterialData;
 	getData(): number;
 	getItemType(): Material;
@@ -27,8 +27,8 @@ export default class Sapling {
 	}
 
 	constructor();
-	constructor(species: TreeSpecies);
 	constructor(type: Material);
+	constructor(species: TreeSpecies);
 	constructor(type: Material, species: TreeSpecies);
 	constructor(type: Material, data: number);
 	constructor(species: TreeSpecies, isInstantGrowable: boolean);

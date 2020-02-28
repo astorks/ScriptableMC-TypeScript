@@ -1,7 +1,7 @@
 declare var Java: any;
 import Configuration from '../../../../org/bukkit/configuration/Configuration.js'
 import ConfigurationOptions from '../../../../org/bukkit/configuration/ConfigurationOptions.js'
-import FileConfiguration from '../../../../org/bukkit/configuration/file/FileConfiguration.js'
+import FileConfiguration from './FileConfiguration.js'
 import MemoryConfiguration from '../../../../org/bukkit/configuration/MemoryConfiguration.js'
 import MemoryConfigurationOptions from '../../../../org/bukkit/configuration/MemoryConfigurationOptions.js'
 

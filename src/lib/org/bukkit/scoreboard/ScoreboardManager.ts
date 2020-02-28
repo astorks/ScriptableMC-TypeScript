@@ -1,5 +1,5 @@
 declare var Java: any;
-import Scoreboard from '../../../org/bukkit/scoreboard/Scoreboard.js'
+import Scoreboard from './Scoreboard.js'
 
 export default interface ScoreboardManager {
 	getMainScoreboard(): Scoreboard;

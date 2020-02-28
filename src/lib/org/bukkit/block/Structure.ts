@@ -1,6 +1,6 @@
 declare var Java: any;
-import Block from '../../../org/bukkit/block/Block.js'
-import BlockData from '../../../org/bukkit/block/data/BlockData.js'
+import Block from './Block.js'
+import BlockData from './data/BlockData.js'
 import BlockVector from '../../../org/bukkit/util/BlockVector.js'
 import Chunk from '../../../org/bukkit/Chunk.js'
 import LivingEntity from '../../../org/bukkit/entity/LivingEntity.js'
@@ -8,12 +8,12 @@ import Location from '../../../org/bukkit/Location.js'
 import Material from '../../../org/bukkit/Material.js'
 import MaterialData from '../../../org/bukkit/material/MaterialData.js'
 import MetadataValue from '../../../org/bukkit/metadata/MetadataValue.js'
-import Mirror from '../../../org/bukkit/block/structure/Mirror.js'
+import Mirror from './structure/Mirror.js'
 import PersistentDataContainer from '../../../org/bukkit/persistence/PersistentDataContainer.js'
 import Plugin from '../../../org/bukkit/plugin/Plugin.js'
-import StructureRotation from '../../../org/bukkit/block/structure/StructureRotation.js'
-import TileState from '../../../org/bukkit/block/TileState.js'
-import UsageMode from '../../../org/bukkit/block/structure/UsageMode.js'
+import StructureRotation from './structure/StructureRotation.js'
+import TileState from './TileState.js'
+import UsageMode from './structure/UsageMode.js'
 import World from '../../../org/bukkit/World.js'
 
 export default interface Structure extends TileState {
@@ -48,8 +48,8 @@ export default interface Structure extends TileState {
 	isPlaced(): boolean;
 	isShowAir(): boolean;
 	removeMetadata(arg0: string, arg1: Plugin): void;
-	setAuthor(arg0: string): void;
 	setAuthor(arg0: LivingEntity): void;
+	setAuthor(arg0: string): void;
 	setBlockData(arg0: BlockData): void;
 	setBoundingBoxVisible(arg0: boolean): void;
 	setData(arg0: MaterialData): void;

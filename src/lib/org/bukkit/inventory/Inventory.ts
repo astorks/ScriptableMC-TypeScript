@@ -1,8 +1,8 @@
 declare var Java: any;
 import HumanEntity from '../../../org/bukkit/entity/HumanEntity.js'
-import InventoryHolder from '../../../org/bukkit/inventory/InventoryHolder.js'
+import InventoryHolder from './InventoryHolder.js'
 import InventoryType from '../../../org/bukkit/event/inventory/InventoryType.js'
-import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
+import ItemStack from './ItemStack.js'
 import Location from '../../../org/bukkit/Location.js'
 import Material from '../../../org/bukkit/Material.js'
 

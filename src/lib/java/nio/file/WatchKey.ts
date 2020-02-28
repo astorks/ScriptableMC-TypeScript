@@ -1,5 +1,5 @@
 declare var Java: any;
-import Watchable from '../../../java/nio/file/Watchable.js'
+import Watchable from './Watchable.js'
 
 export default interface WatchKey {
 	cancel(): void;

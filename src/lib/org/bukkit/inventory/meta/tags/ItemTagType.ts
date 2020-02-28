@@ -1,5 +1,5 @@
 declare var Java: any;
-import ItemTagAdapterContext from '../../../../../org/bukkit/inventory/meta/tags/ItemTagAdapterContext.js'
+import ItemTagAdapterContext from './ItemTagAdapterContext.js'
 
 export default interface ItemTagType {
 	fromPrimitive(arg0: any, arg1: ItemTagAdapterContext): any;

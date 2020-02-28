@@ -2,12 +2,12 @@ declare var Java: any;
 import CropState from '../../../org/bukkit/CropState.js'
 import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
 import Material from '../../../org/bukkit/Material.js'
-import MaterialData from '../../../org/bukkit/material/MaterialData.js'
+import MaterialData from './MaterialData.js'
 
 export default interface Crops extends MaterialData {
 	clone(): Crops;
-	clone(): MaterialData;
 	clone(): any;
+	clone(): MaterialData;
 	getData(): number;
 	getItemType(): Material;
 	getState(): CropState;

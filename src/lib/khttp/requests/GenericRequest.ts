@@ -1,7 +1,7 @@
 declare var Java: any;
 import Authorization from '../../khttp/structures/authorization/Authorization.js'
 import FileLike from '../../khttp/structures/files/FileLike.js'
-import Request from '../../khttp/requests/Request.js'
+import Request from './Request.js'
 
 export default interface GenericRequest {
 	getAllowRedirects(): boolean;

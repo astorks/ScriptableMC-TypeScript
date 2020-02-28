@@ -4,7 +4,7 @@ import BlockFace from '../../../../../org/bukkit/block/BlockFace.js'
 import Directional from '../../../../../org/bukkit/block/data/Directional.js'
 import Material from '../../../../../org/bukkit/Material.js'
 import Powerable from '../../../../../org/bukkit/block/data/Powerable.js'
-import Switch$Face from '../../../../../org/bukkit/block/data/type/Switch$Face.js'
+import Switch$Face from './Switch$Face.js'
 
 export default interface Switch extends Directional, Powerable {
 	clone(): any;

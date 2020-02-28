@@ -1,6 +1,6 @@
 declare var Java: any;
-import Enchantment from '../../../org/bukkit/enchantments/Enchantment.js'
-import EnchantmentTarget from '../../../org/bukkit/enchantments/EnchantmentTarget.js'
+import Enchantment from './Enchantment.js'
+import EnchantmentTarget from './EnchantmentTarget.js'
 import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
 import NamespacedKey from '../../../org/bukkit/NamespacedKey.js'
 

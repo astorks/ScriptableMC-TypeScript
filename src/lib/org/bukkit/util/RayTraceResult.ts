@@ -2,7 +2,7 @@ declare var Java: any;
 import Block from '../../../org/bukkit/block/Block.js'
 import BlockFace from '../../../org/bukkit/block/BlockFace.js'
 import Entity from '../../../org/bukkit/entity/Entity.js'
-import Vector from '../../../org/bukkit/util/Vector.js'
+import Vector from './Vector.js'
 
 export default interface RayTraceResult {
 	getHitBlock(): Block;

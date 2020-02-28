@@ -3,9 +3,9 @@ import BlockState from '../../../../org/bukkit/block/BlockState.js'
 import Cancellable from '../../../../org/bukkit/event/Cancellable.js'
 import Entity from '../../../../org/bukkit/entity/Entity.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
-import PortalCreateEvent$CreateReason from '../../../../org/bukkit/event/world/PortalCreateEvent$CreateReason.js'
+import PortalCreateEvent$CreateReason from './PortalCreateEvent$CreateReason.js'
 import World from '../../../../org/bukkit/World.js'
-import WorldEvent from '../../../../org/bukkit/event/world/WorldEvent.js'
+import WorldEvent from './WorldEvent.js'
 
 export default interface PortalCreateEvent extends WorldEvent, Cancellable {
 	getBlocks(): Array<BlockState>;

@@ -3,7 +3,7 @@ import Cancellable from '../../../../org/bukkit/event/Cancellable.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import HumanEntity from '../../../../org/bukkit/entity/HumanEntity.js'
 import Inventory from '../../../../org/bukkit/inventory/Inventory.js'
-import InventoryEvent from '../../../../org/bukkit/event/inventory/InventoryEvent.js'
+import InventoryEvent from './InventoryEvent.js'
 import InventoryView from '../../../../org/bukkit/inventory/InventoryView.js'
 
 export default interface InventoryOpenEvent extends InventoryEvent, Cancellable {
