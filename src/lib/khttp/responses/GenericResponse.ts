@@ -5,7 +5,7 @@ import InputStream from '../../java/io/InputStream.js'
 import Request from '../../khttp/requests/Request.js'
 import Response from './Response.js'
 
-export default interface GenericResponse {
+export default interface GenericResponse extends Response {
 	contentIterator(chunkSize: number): any;
 	getConnection(): any;
 	getContent(): Array<number>;

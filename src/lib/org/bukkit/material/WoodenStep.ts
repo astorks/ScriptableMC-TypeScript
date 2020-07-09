@@ -6,10 +6,10 @@ import TreeSpecies from '../../../org/bukkit/TreeSpecies.js'
 import Wood from './Wood.js'
 
 export default interface WoodenStep extends Wood {
-	clone(): Wood;
-	clone(): any;
-	clone(): WoodenStep;
 	clone(): MaterialData;
+	clone(): any;
+	clone(): Wood;
+	clone(): WoodenStep;
 	getData(): number;
 	getItemType(): Material;
 	getSpecies(): TreeSpecies;

@@ -7,10 +7,10 @@ import TreeSpecies from '../../../org/bukkit/TreeSpecies.js'
 import Wood from './Wood.js'
 
 export default interface Tree extends Wood {
-	clone(): Wood;
 	clone(): Tree;
-	clone(): MaterialData;
 	clone(): any;
+	clone(): Wood;
+	clone(): MaterialData;
 	getData(): number;
 	getDirection(): BlockFace;
 	getItemType(): Material;

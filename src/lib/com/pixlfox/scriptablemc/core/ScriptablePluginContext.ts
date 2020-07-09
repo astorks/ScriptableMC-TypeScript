@@ -3,6 +3,7 @@ import EventExecutor from '../../../../org/bukkit/plugin/EventExecutor.js'
 import InventoryManager from '../../../../fr/minuskube/inv/InventoryManager.js'
 import JavaPlugin from '../../../../org/bukkit/plugin/java/JavaPlugin.js'
 import Listener from '../../../../org/bukkit/event/Listener.js'
+import Material from '../../../../org/bukkit/Material.js'
 import OfflinePlayer from '../../../../org/bukkit/OfflinePlayer.js'
 import Player from '../../../../org/bukkit/entity/Player.js'
 import PluginCommand from '../../../../org/bukkit/command/PluginCommand.js'
@@ -22,6 +23,7 @@ export default interface ScriptablePluginContext extends Listener {
 	getEngine(): ScriptablePluginEngine;
 	getInventoryManager(): InventoryManager;
 	getJavaPlugin(): JavaPlugin;
+	getPluginIcon(): Material;
 	getPluginInstance(): any;
 	getPluginName(): string;
 	getPluginVersion(): Version;
@@ -34,8 +36,8 @@ export default interface ScriptablePluginContext extends Listener {
 	registerEvent(eventClass: any, executor: EventExecutor): void;
 	registerIncomingPluginChannel(channelName: string, listener: PluginMessageListener): PluginMessageListenerRegistration;
 	registerOutgoingPluginChannel(channel: string): void;
-	setPlaceholders(player: Player, placeholderText: string): string;
 	setPlaceholders(player: OfflinePlayer, placeholderText: string): string;
+	setPlaceholders(player: Player, placeholderText: string): string;
 	unregisterCommand(command: PluginCommand): void;
 	unregisterIncomingPluginChannel(channel: string): void;
 	unregisterOutgoingPluginChannel(channel: string): void;

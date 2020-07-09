@@ -8,10 +8,10 @@ import PressureSensor from './PressureSensor.js'
 import Rails from './Rails.js'
 
 export default interface DetectorRail extends ExtendedRails, PressureSensor {
-	clone(): ExtendedRails;
-	clone(): any;
 	clone(): MaterialData;
+	clone(): any;
 	clone(): Rails;
+	clone(): ExtendedRails;
 	clone(): DetectorRail;
 	getData(): number;
 	getDirection(): BlockFace;

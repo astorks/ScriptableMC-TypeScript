@@ -7,9 +7,9 @@ import Wood from './Wood.js'
 
 export default interface Leaves extends Wood {
 	clone(): any;
-	clone(): Leaves;
-	clone(): Wood;
 	clone(): MaterialData;
+	clone(): Wood;
+	clone(): Leaves;
 	getData(): number;
 	getItemType(): Material;
 	getSpecies(): TreeSpecies;
@@ -29,11 +29,11 @@ export default class Leaves {
 	}
 
 	constructor();
-	constructor(type: Material);
 	constructor(species: TreeSpecies);
-	constructor(species: TreeSpecies, isDecayable: boolean);
-	constructor(type: Material, species: TreeSpecies);
+	constructor(type: Material);
 	constructor(type: Material, data: number);
+	constructor(type: Material, species: TreeSpecies);
+	constructor(species: TreeSpecies, isDecayable: boolean);
 	constructor(type: Material, species: TreeSpecies, isDecayable: boolean);
 	constructor(...args: any[]) {
 		return new Leaves.$javaClass(...args);

@@ -5,7 +5,7 @@ import ObjectStreamConstants from './ObjectStreamConstants.js'
 import OutputStream from './OutputStream.js'
 import SerializablePermission from './SerializablePermission.js'
 
-export default interface ObjectOutputStream extends OutputStream {
+export default interface ObjectOutputStream extends OutputStream, ObjectOutput, ObjectStreamConstants {
 	close(): void;
 	defaultWriteObject(): void;
 	flush(): void;

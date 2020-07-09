@@ -4,7 +4,9 @@ import AttributeInstance from '../../../org/bukkit/attribute/AttributeInstance.j
 import Block from '../../../org/bukkit/block/Block.js'
 import BlockFace from '../../../org/bukkit/block/BlockFace.js'
 import BoundingBox from '../../../org/bukkit/util/BoundingBox.js'
+import CommandSender$Spigot from '../../../org/bukkit/command/CommandSender$Spigot.js'
 import Entity from './Entity.js'
+import Entity$Spigot from './Entity$Spigot.js'
 import EntityDamageEvent from '../../../org/bukkit/event/entity/EntityDamageEvent.js'
 import EntityEffect from '../../../org/bukkit/EntityEffect.js'
 import EntityEquipment from '../../../org/bukkit/inventory/EntityEquipment.js'
@@ -31,6 +33,7 @@ import RayTraceResult from '../../../org/bukkit/util/RayTraceResult.js'
 import Server from '../../../org/bukkit/Server.js'
 import Vector from '../../../org/bukkit/util/Vector.js'
 import Villager$Profession from './Villager$Profession.js'
+import Villager$Type from './Villager$Type.js'
 import World from '../../../org/bukkit/World.js'
 import Zombie from './Zombie.js'
 
@@ -53,6 +56,7 @@ export default interface ZombieVillager extends Zombie {
 	getAttribute(arg0: Attribute): AttributeInstance;
 	getBoundingBox(): BoundingBox;
 	getCanPickupItems(): boolean;
+	getCollidableExemptions(): any;
 	getConversionPlayer(): OfflinePlayer;
 	getConversionTime(): number;
 	getCustomName(): string;
@@ -107,14 +111,15 @@ export default interface ZombieVillager extends Zombie {
 	getVehicle(): Entity;
 	getVelocity(): Vector;
 	getVillagerProfession(): Villager$Profession;
+	getVillagerType(): Villager$Type;
 	getWidth(): number;
 	getWorld(): World;
 	hasAI(): boolean;
 	hasGravity(): boolean;
 	hasLineOfSight(arg0: Entity): boolean;
 	hasMetadata(arg0: string): boolean;
-	hasPermission(arg0: Permission): boolean;
 	hasPermission(arg0: string): boolean;
+	hasPermission(arg0: Permission): boolean;
 	hasPotionEffect(arg0: PotionEffectType): boolean;
 	isAware(): boolean;
 	isBaby(): boolean;
@@ -130,8 +135,8 @@ export default interface ZombieVillager extends Zombie {
 	isLeashed(): boolean;
 	isOnGround(): boolean;
 	isOp(): boolean;
-	isPermissionSet(arg0: Permission): boolean;
 	isPermissionSet(arg0: string): boolean;
+	isPermissionSet(arg0: Permission): boolean;
 	isPersistent(): boolean;
 	isRiptiding(): boolean;
 	isSilent(): boolean;
@@ -197,6 +202,9 @@ export default interface ZombieVillager extends Zombie {
 	setVelocity(arg0: Vector): void;
 	setVillager(arg0: boolean): void;
 	setVillagerProfession(arg0: Villager$Profession): void;
+	setVillagerType(arg0: Villager$Type): void;
+	spigot(): Entity$Spigot;
+	spigot(): CommandSender$Spigot;
 	swingMainHand(): void;
 	swingOffHand(): void;
 	teleport(arg0: Location): boolean;

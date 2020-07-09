@@ -7,9 +7,9 @@ import MaterialData from './MaterialData.js'
 import Redstone from './Redstone.js'
 
 export default interface Hopper extends MaterialData, Directional, Redstone {
-	clone(): Hopper;
-	clone(): MaterialData;
 	clone(): any;
+	clone(): MaterialData;
+	clone(): Hopper;
 	getData(): number;
 	getFacing(): BlockFace;
 	getItemType(): Material;
@@ -28,8 +28,8 @@ export default class Hopper {
 	}
 
 	constructor();
-	constructor(facingDirection: BlockFace);
 	constructor(type: Material);
+	constructor(facingDirection: BlockFace);
 	constructor(type: Material, data: number);
 	constructor(facingDirection: BlockFace, isActive: boolean);
 	constructor(...args: any[]) {

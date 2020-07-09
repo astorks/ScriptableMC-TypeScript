@@ -86,6 +86,10 @@ export default class GameRule {
 		return GameRule.$javaClass.FIRE_DAMAGE;
 	}
 
+	public static get FORGIVE_DEAD_PLAYERS(): GameRule {
+		return GameRule.$javaClass.FORGIVE_DEAD_PLAYERS;
+	}
+
 	public static get KEEP_INVENTORY(): GameRule {
 		return GameRule.$javaClass.KEEP_INVENTORY;
 	}
@@ -132,6 +136,10 @@ export default class GameRule {
 
 	public static get SPECTATORS_GENERATE_CHUNKS(): GameRule {
 		return GameRule.$javaClass.SPECTATORS_GENERATE_CHUNKS;
+	}
+
+	public static get UNIVERSAL_ANGER(): GameRule {
+		return GameRule.$javaClass.UNIVERSAL_ANGER;
 	}
 
 	public static getByName(rule: string): GameRule;

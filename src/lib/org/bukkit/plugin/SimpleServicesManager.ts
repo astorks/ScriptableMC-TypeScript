@@ -5,8 +5,8 @@ import ServicePriority from './ServicePriority.js'
 import ServicesManager from './ServicesManager.js'
 
 export default interface SimpleServicesManager extends ServicesManager {
-	getKnownServices(): any;
 	getKnownServices(): Array<any>;
+	getKnownServices(): any;
 	getRegistration(service: any): RegisteredServiceProvider;
 	getRegistrations(service: any): Array<any>;
 	getRegistrations(service: any): Array<any>;

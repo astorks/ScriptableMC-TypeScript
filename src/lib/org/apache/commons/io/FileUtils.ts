@@ -79,8 +79,8 @@ export default class FileUtils {
 		return FileUtils.$javaClass.ONE_ZB;
 	}
 
-	public static byteCountToDisplaySize(size: number): string;
 	public static byteCountToDisplaySize(size: any): string;
+	public static byteCountToDisplaySize(size: number): string;
 	public static byteCountToDisplaySize(...args: any[]): any {
 		return FileUtils.$javaClass.byteCountToDisplaySize(...args);
 	}
@@ -146,8 +146,8 @@ export default class FileUtils {
 		return FileUtils.$javaClass.copyInputStreamToFile(...args);
 	}
 
-	public static copyToDirectory(src: File, destDir: File): void;
 	public static copyToDirectory(srcs: any, destDir: File): void;
+	public static copyToDirectory(src: File, destDir: File): void;
 	public static copyToDirectory(...args: any[]): any {
 		return FileUtils.$javaClass.copyToDirectory(...args);
 	}
@@ -225,15 +225,15 @@ export default class FileUtils {
 	}
 
 	public static isFileNewer(file: File, timeMillis: number): boolean;
-	public static isFileNewer(file: File, date: any): boolean;
 	public static isFileNewer(file: File, reference: File): boolean;
+	public static isFileNewer(file: File, date: any): boolean;
 	public static isFileNewer(...args: any[]): any {
 		return FileUtils.$javaClass.isFileNewer(...args);
 	}
 
-	public static isFileOlder(file: File, reference: File): boolean;
-	public static isFileOlder(file: File, date: any): boolean;
 	public static isFileOlder(file: File, timeMillis: number): boolean;
+	public static isFileOlder(file: File, date: any): boolean;
+	public static isFileOlder(file: File, reference: File): boolean;
 	public static isFileOlder(...args: any[]): any {
 		return FileUtils.$javaClass.isFileOlder(...args);
 	}
@@ -260,8 +260,8 @@ export default class FileUtils {
 		return FileUtils.$javaClass.lineIterator(...args);
 	}
 
-	public static listFiles(directory: File, fileFilter: IOFileFilter, dirFilter: IOFileFilter): Array<File>;
 	public static listFiles(directory: File, extensions: Array<string>, recursive: boolean): Array<File>;
+	public static listFiles(directory: File, fileFilter: IOFileFilter, dirFilter: IOFileFilter): Array<File>;
 	public static listFiles(...args: any[]): any {
 		return FileUtils.$javaClass.listFiles(...args);
 	}
@@ -320,8 +320,8 @@ export default class FileUtils {
 	}
 
 	public static readLines(file: File): Array<string>;
-	public static readLines(file: File, encoding: string): Array<string>;
 	public static readLines(file: File, encoding: Charset): Array<string>;
+	public static readLines(file: File, encoding: string): Array<string>;
 	public static readLines(...args: any[]): any {
 		return FileUtils.$javaClass.readLines(...args);
 	}
@@ -373,10 +373,10 @@ export default class FileUtils {
 
 	public static write(file: File, data: any): void;
 	public static write(file: File, data: any, encoding: string): void;
-	public static write(file: File, data: any, encoding: Charset): void;
 	public static write(file: File, data: any, append: boolean): void;
-	public static write(file: File, data: any, encoding: string, append: boolean): void;
+	public static write(file: File, data: any, encoding: Charset): void;
 	public static write(file: File, data: any, encoding: Charset, append: boolean): void;
+	public static write(file: File, data: any, encoding: string, append: boolean): void;
 	public static write(...args: any[]): any {
 		return FileUtils.$javaClass.write(...args);
 	}
@@ -390,21 +390,21 @@ export default class FileUtils {
 	}
 
 	public static writeLines(file: File, lines: Array<any>): void;
-	public static writeLines(file: File, lines: Array<any>, lineEnding: string): void;
 	public static writeLines(file: File, encoding: string, lines: Array<any>): void;
+	public static writeLines(file: File, lines: Array<any>, lineEnding: string): void;
 	public static writeLines(file: File, lines: Array<any>, append: boolean): void;
+	public static writeLines(file: File, lines: Array<any>, lineEnding: string, append: boolean): void;
 	public static writeLines(file: File, encoding: string, lines: Array<any>, lineEnding: string): void;
 	public static writeLines(file: File, encoding: string, lines: Array<any>, append: boolean): void;
-	public static writeLines(file: File, lines: Array<any>, lineEnding: string, append: boolean): void;
 	public static writeLines(file: File, encoding: string, lines: Array<any>, lineEnding: string, append: boolean): void;
 	public static writeLines(...args: any[]): any {
 		return FileUtils.$javaClass.writeLines(...args);
 	}
 
 	public static writeStringToFile(file: File, data: string): void;
-	public static writeStringToFile(file: File, data: string, append: boolean): void;
 	public static writeStringToFile(file: File, data: string, encoding: string): void;
 	public static writeStringToFile(file: File, data: string, encoding: Charset): void;
+	public static writeStringToFile(file: File, data: string, append: boolean): void;
 	public static writeStringToFile(file: File, data: string, encoding: Charset, append: boolean): void;
 	public static writeStringToFile(file: File, data: string, encoding: string, append: boolean): void;
 	public static writeStringToFile(...args: any[]): any {

@@ -15,8 +15,8 @@ export default interface PermissibleBase extends Permissible {
 	hasPermission(inName: string): boolean;
 	hasPermission(perm: Permission): boolean;
 	isOp(): boolean;
-	isPermissionSet(_name: string): boolean;
 	isPermissionSet(perm: Permission): boolean;
+	isPermissionSet(_name: string): boolean;
 	recalculatePermissions(): void;
 	removeAttachment(attachment: PermissionAttachment): void;
 	setOp(value: boolean): void;

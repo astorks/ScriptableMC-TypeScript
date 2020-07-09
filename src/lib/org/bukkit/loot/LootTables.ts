@@ -27,6 +27,18 @@ export default class LootTables {
 	public static get ARMOR_STAND(): LootTables {
 		return this.$javaClass.ARMOR_STAND;
 	}
+	public static get BASTION_BRIDGE(): LootTables {
+		return this.$javaClass.BASTION_BRIDGE;
+	}
+	public static get BASTION_HOGLIN_STABLE(): LootTables {
+		return this.$javaClass.BASTION_HOGLIN_STABLE;
+	}
+	public static get BASTION_OTHER(): LootTables {
+		return this.$javaClass.BASTION_OTHER;
+	}
+	public static get BASTION_TREASURE(): LootTables {
+		return this.$javaClass.BASTION_TREASURE;
+	}
 	public static get BAT(): LootTables {
 		return this.$javaClass.BAT;
 	}
@@ -192,6 +204,9 @@ export default class LootTables {
 	public static get PIG(): LootTables {
 		return this.$javaClass.PIG;
 	}
+	public static get PIGLIN_BARTERING(): LootTables {
+		return this.$javaClass.PIGLIN_BARTERING;
+	}
 	public static get PILLAGER(): LootTables {
 		return this.$javaClass.PILLAGER;
 	}
@@ -209,6 +224,9 @@ export default class LootTables {
 	}
 	public static get RAVAGER(): LootTables {
 		return this.$javaClass.RAVAGER;
+	}
+	public static get RUINED_PORTAL(): LootTables {
+		return this.$javaClass.RUINED_PORTAL;
 	}
 	public static get SALMON(): LootTables {
 		return this.$javaClass.SALMON;

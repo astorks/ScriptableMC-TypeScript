@@ -14,12 +14,12 @@ export default interface FireworkEffectMeta extends ItemMeta {
 	addAttributeModifier(arg0: Attribute, arg1: AttributeModifier): boolean;
 	addEnchant(arg0: Enchantment, arg1: number, arg2: boolean): boolean;
 	addItemFlags(arg0: Array<ItemFlag>): void;
-	clone(): ItemMeta;
 	clone(): any;
+	clone(): ItemMeta;
 	clone(): FireworkEffectMeta;
 	getAttributeModifiers(): Multimap;
-	getAttributeModifiers(arg0: EquipmentSlot): Multimap;
 	getAttributeModifiers(arg0: Attribute): Array<AttributeModifier>;
+	getAttributeModifiers(arg0: EquipmentSlot): Multimap;
 	getCustomModelData(): number;
 	getCustomTagContainer(): CustomItemTagContainer;
 	getDisplayName(): string;
@@ -41,8 +41,8 @@ export default interface FireworkEffectMeta extends ItemMeta {
 	hasLocalizedName(): boolean;
 	hasLore(): boolean;
 	isUnbreakable(): boolean;
-	removeAttributeModifier(arg0: EquipmentSlot): boolean;
 	removeAttributeModifier(arg0: Attribute): boolean;
+	removeAttributeModifier(arg0: EquipmentSlot): boolean;
 	removeAttributeModifier(arg0: Attribute, arg1: AttributeModifier): boolean;
 	removeEnchant(arg0: Enchantment): boolean;
 	removeItemFlags(arg0: Array<ItemFlag>): void;

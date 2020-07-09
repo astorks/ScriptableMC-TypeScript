@@ -158,6 +158,9 @@ export default class Statistic {
 	public static get INTERACT_WITH_LOOM(): Statistic {
 		return this.$javaClass.INTERACT_WITH_LOOM;
 	}
+	public static get INTERACT_WITH_SMITHING_TABLE(): Statistic {
+		return this.$javaClass.INTERACT_WITH_SMITHING_TABLE;
+	}
 	public static get INTERACT_WITH_SMOKER(): Statistic {
 		return this.$javaClass.INTERACT_WITH_SMOKER;
 	}
@@ -227,11 +230,17 @@ export default class Statistic {
 	public static get SPRINT_ONE_CM(): Statistic {
 		return this.$javaClass.SPRINT_ONE_CM;
 	}
+	public static get STRIDER_ONE_CM(): Statistic {
+		return this.$javaClass.STRIDER_ONE_CM;
+	}
 	public static get SWIM_ONE_CM(): Statistic {
 		return this.$javaClass.SWIM_ONE_CM;
 	}
 	public static get TALKED_TO_VILLAGER(): Statistic {
 		return this.$javaClass.TALKED_TO_VILLAGER;
+	}
+	public static get TARGET_HIT(): Statistic {
+		return this.$javaClass.TARGET_HIT;
 	}
 	public static get TIME_SINCE_DEATH(): Statistic {
 		return this.$javaClass.TIME_SINCE_DEATH;

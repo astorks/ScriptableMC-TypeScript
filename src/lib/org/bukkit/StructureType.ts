@@ -11,6 +11,10 @@ export default class StructureType {
 		return Java.type('org.bukkit.StructureType');
 	}
 
+	public static get BASTION_REMNANT(): StructureType {
+		return StructureType.$javaClass.BASTION_REMNANT;
+	}
+
 	public static get BURIED_TREASURE(): StructureType {
 		return StructureType.$javaClass.BURIED_TREASURE;
 	}
@@ -39,6 +43,10 @@ export default class StructureType {
 		return StructureType.$javaClass.NETHER_FORTRESS;
 	}
 
+	public static get NETHER_FOSSIL(): StructureType {
+		return StructureType.$javaClass.NETHER_FOSSIL;
+	}
+
 	public static get OCEAN_MONUMENT(): StructureType {
 		return StructureType.$javaClass.OCEAN_MONUMENT;
 	}
@@ -49,6 +57,10 @@ export default class StructureType {
 
 	public static get PILLAGER_OUTPOST(): StructureType {
 		return StructureType.$javaClass.PILLAGER_OUTPOST;
+	}
+
+	public static get RUINED_PORTAL(): StructureType {
+		return StructureType.$javaClass.RUINED_PORTAL;
 	}
 
 	public static get SHIPWRECK(): StructureType {

@@ -13,8 +13,44 @@ export default class Sound {
 		return Java.type('org.bukkit.Sound');
 	}
 
+	public static get AMBIENT_BASALT_DELTAS_ADDITIONS(): Sound {
+		return this.$javaClass.AMBIENT_BASALT_DELTAS_ADDITIONS;
+	}
+	public static get AMBIENT_BASALT_DELTAS_LOOP(): Sound {
+		return this.$javaClass.AMBIENT_BASALT_DELTAS_LOOP;
+	}
+	public static get AMBIENT_BASALT_DELTAS_MOOD(): Sound {
+		return this.$javaClass.AMBIENT_BASALT_DELTAS_MOOD;
+	}
 	public static get AMBIENT_CAVE(): Sound {
 		return this.$javaClass.AMBIENT_CAVE;
+	}
+	public static get AMBIENT_CRIMSON_FOREST_ADDITIONS(): Sound {
+		return this.$javaClass.AMBIENT_CRIMSON_FOREST_ADDITIONS;
+	}
+	public static get AMBIENT_CRIMSON_FOREST_LOOP(): Sound {
+		return this.$javaClass.AMBIENT_CRIMSON_FOREST_LOOP;
+	}
+	public static get AMBIENT_CRIMSON_FOREST_MOOD(): Sound {
+		return this.$javaClass.AMBIENT_CRIMSON_FOREST_MOOD;
+	}
+	public static get AMBIENT_NETHER_WASTES_ADDITIONS(): Sound {
+		return this.$javaClass.AMBIENT_NETHER_WASTES_ADDITIONS;
+	}
+	public static get AMBIENT_NETHER_WASTES_LOOP(): Sound {
+		return this.$javaClass.AMBIENT_NETHER_WASTES_LOOP;
+	}
+	public static get AMBIENT_NETHER_WASTES_MOOD(): Sound {
+		return this.$javaClass.AMBIENT_NETHER_WASTES_MOOD;
+	}
+	public static get AMBIENT_SOUL_SAND_VALLEY_ADDITIONS(): Sound {
+		return this.$javaClass.AMBIENT_SOUL_SAND_VALLEY_ADDITIONS;
+	}
+	public static get AMBIENT_SOUL_SAND_VALLEY_LOOP(): Sound {
+		return this.$javaClass.AMBIENT_SOUL_SAND_VALLEY_LOOP;
+	}
+	public static get AMBIENT_SOUL_SAND_VALLEY_MOOD(): Sound {
+		return this.$javaClass.AMBIENT_SOUL_SAND_VALLEY_MOOD;
 	}
 	public static get AMBIENT_UNDERWATER_ENTER(): Sound {
 		return this.$javaClass.AMBIENT_UNDERWATER_ENTER;
@@ -33,6 +69,30 @@ export default class Sound {
 	}
 	public static get AMBIENT_UNDERWATER_LOOP_ADDITIONS_ULTRA_RARE(): Sound {
 		return this.$javaClass.AMBIENT_UNDERWATER_LOOP_ADDITIONS_ULTRA_RARE;
+	}
+	public static get AMBIENT_WARPED_FOREST_ADDITIONS(): Sound {
+		return this.$javaClass.AMBIENT_WARPED_FOREST_ADDITIONS;
+	}
+	public static get AMBIENT_WARPED_FOREST_LOOP(): Sound {
+		return this.$javaClass.AMBIENT_WARPED_FOREST_LOOP;
+	}
+	public static get AMBIENT_WARPED_FOREST_MOOD(): Sound {
+		return this.$javaClass.AMBIENT_WARPED_FOREST_MOOD;
+	}
+	public static get BLOCK_ANCIENT_DEBRIS_BREAK(): Sound {
+		return this.$javaClass.BLOCK_ANCIENT_DEBRIS_BREAK;
+	}
+	public static get BLOCK_ANCIENT_DEBRIS_FALL(): Sound {
+		return this.$javaClass.BLOCK_ANCIENT_DEBRIS_FALL;
+	}
+	public static get BLOCK_ANCIENT_DEBRIS_HIT(): Sound {
+		return this.$javaClass.BLOCK_ANCIENT_DEBRIS_HIT;
+	}
+	public static get BLOCK_ANCIENT_DEBRIS_PLACE(): Sound {
+		return this.$javaClass.BLOCK_ANCIENT_DEBRIS_PLACE;
+	}
+	public static get BLOCK_ANCIENT_DEBRIS_STEP(): Sound {
+		return this.$javaClass.BLOCK_ANCIENT_DEBRIS_STEP;
 	}
 	public static get BLOCK_ANVIL_BREAK(): Sound {
 		return this.$javaClass.BLOCK_ANVIL_BREAK;
@@ -88,6 +148,21 @@ export default class Sound {
 	public static get BLOCK_BARREL_OPEN(): Sound {
 		return this.$javaClass.BLOCK_BARREL_OPEN;
 	}
+	public static get BLOCK_BASALT_BREAK(): Sound {
+		return this.$javaClass.BLOCK_BASALT_BREAK;
+	}
+	public static get BLOCK_BASALT_FALL(): Sound {
+		return this.$javaClass.BLOCK_BASALT_FALL;
+	}
+	public static get BLOCK_BASALT_HIT(): Sound {
+		return this.$javaClass.BLOCK_BASALT_HIT;
+	}
+	public static get BLOCK_BASALT_PLACE(): Sound {
+		return this.$javaClass.BLOCK_BASALT_PLACE;
+	}
+	public static get BLOCK_BASALT_STEP(): Sound {
+		return this.$javaClass.BLOCK_BASALT_STEP;
+	}
 	public static get BLOCK_BEACON_ACTIVATE(): Sound {
 		return this.$javaClass.BLOCK_BEACON_ACTIVATE;
 	}
@@ -124,6 +199,21 @@ export default class Sound {
 	public static get BLOCK_BLASTFURNACE_FIRE_CRACKLE(): Sound {
 		return this.$javaClass.BLOCK_BLASTFURNACE_FIRE_CRACKLE;
 	}
+	public static get BLOCK_BONE_BLOCK_BREAK(): Sound {
+		return this.$javaClass.BLOCK_BONE_BLOCK_BREAK;
+	}
+	public static get BLOCK_BONE_BLOCK_FALL(): Sound {
+		return this.$javaClass.BLOCK_BONE_BLOCK_FALL;
+	}
+	public static get BLOCK_BONE_BLOCK_HIT(): Sound {
+		return this.$javaClass.BLOCK_BONE_BLOCK_HIT;
+	}
+	public static get BLOCK_BONE_BLOCK_PLACE(): Sound {
+		return this.$javaClass.BLOCK_BONE_BLOCK_PLACE;
+	}
+	public static get BLOCK_BONE_BLOCK_STEP(): Sound {
+		return this.$javaClass.BLOCK_BONE_BLOCK_STEP;
+	}
 	public static get BLOCK_BREWING_STAND_BREW(): Sound {
 		return this.$javaClass.BLOCK_BREWING_STAND_BREW;
 	}
@@ -144,6 +234,21 @@ export default class Sound {
 	}
 	public static get BLOCK_CAMPFIRE_CRACKLE(): Sound {
 		return this.$javaClass.BLOCK_CAMPFIRE_CRACKLE;
+	}
+	public static get BLOCK_CHAIN_BREAK(): Sound {
+		return this.$javaClass.BLOCK_CHAIN_BREAK;
+	}
+	public static get BLOCK_CHAIN_FALL(): Sound {
+		return this.$javaClass.BLOCK_CHAIN_FALL;
+	}
+	public static get BLOCK_CHAIN_HIT(): Sound {
+		return this.$javaClass.BLOCK_CHAIN_HIT;
+	}
+	public static get BLOCK_CHAIN_PLACE(): Sound {
+		return this.$javaClass.BLOCK_CHAIN_PLACE;
+	}
+	public static get BLOCK_CHAIN_STEP(): Sound {
+		return this.$javaClass.BLOCK_CHAIN_STEP;
 	}
 	public static get BLOCK_CHEST_CLOSE(): Sound {
 		return this.$javaClass.BLOCK_CHEST_CLOSE;
@@ -247,8 +352,38 @@ export default class Sound {
 	public static get BLOCK_FIRE_EXTINGUISH(): Sound {
 		return this.$javaClass.BLOCK_FIRE_EXTINGUISH;
 	}
+	public static get BLOCK_FUNGUS_BREAK(): Sound {
+		return this.$javaClass.BLOCK_FUNGUS_BREAK;
+	}
+	public static get BLOCK_FUNGUS_FALL(): Sound {
+		return this.$javaClass.BLOCK_FUNGUS_FALL;
+	}
+	public static get BLOCK_FUNGUS_HIT(): Sound {
+		return this.$javaClass.BLOCK_FUNGUS_HIT;
+	}
+	public static get BLOCK_FUNGUS_PLACE(): Sound {
+		return this.$javaClass.BLOCK_FUNGUS_PLACE;
+	}
+	public static get BLOCK_FUNGUS_STEP(): Sound {
+		return this.$javaClass.BLOCK_FUNGUS_STEP;
+	}
 	public static get BLOCK_FURNACE_FIRE_CRACKLE(): Sound {
 		return this.$javaClass.BLOCK_FURNACE_FIRE_CRACKLE;
+	}
+	public static get BLOCK_GILDED_BLACKSTONE_BREAK(): Sound {
+		return this.$javaClass.BLOCK_GILDED_BLACKSTONE_BREAK;
+	}
+	public static get BLOCK_GILDED_BLACKSTONE_FALL(): Sound {
+		return this.$javaClass.BLOCK_GILDED_BLACKSTONE_FALL;
+	}
+	public static get BLOCK_GILDED_BLACKSTONE_HIT(): Sound {
+		return this.$javaClass.BLOCK_GILDED_BLACKSTONE_HIT;
+	}
+	public static get BLOCK_GILDED_BLACKSTONE_PLACE(): Sound {
+		return this.$javaClass.BLOCK_GILDED_BLACKSTONE_PLACE;
+	}
+	public static get BLOCK_GILDED_BLACKSTONE_STEP(): Sound {
+		return this.$javaClass.BLOCK_GILDED_BLACKSTONE_STEP;
 	}
 	public static get BLOCK_GLASS_BREAK(): Sound {
 		return this.$javaClass.BLOCK_GLASS_BREAK;
@@ -373,6 +508,21 @@ export default class Sound {
 	public static get BLOCK_LILY_PAD_PLACE(): Sound {
 		return this.$javaClass.BLOCK_LILY_PAD_PLACE;
 	}
+	public static get BLOCK_LODESTONE_BREAK(): Sound {
+		return this.$javaClass.BLOCK_LODESTONE_BREAK;
+	}
+	public static get BLOCK_LODESTONE_FALL(): Sound {
+		return this.$javaClass.BLOCK_LODESTONE_FALL;
+	}
+	public static get BLOCK_LODESTONE_HIT(): Sound {
+		return this.$javaClass.BLOCK_LODESTONE_HIT;
+	}
+	public static get BLOCK_LODESTONE_PLACE(): Sound {
+		return this.$javaClass.BLOCK_LODESTONE_PLACE;
+	}
+	public static get BLOCK_LODESTONE_STEP(): Sound {
+		return this.$javaClass.BLOCK_LODESTONE_STEP;
+	}
 	public static get BLOCK_METAL_BREAK(): Sound {
 		return this.$javaClass.BLOCK_METAL_BREAK;
 	}
@@ -393,6 +543,96 @@ export default class Sound {
 	}
 	public static get BLOCK_METAL_STEP(): Sound {
 		return this.$javaClass.BLOCK_METAL_STEP;
+	}
+	public static get BLOCK_NETHERITE_BLOCK_BREAK(): Sound {
+		return this.$javaClass.BLOCK_NETHERITE_BLOCK_BREAK;
+	}
+	public static get BLOCK_NETHERITE_BLOCK_FALL(): Sound {
+		return this.$javaClass.BLOCK_NETHERITE_BLOCK_FALL;
+	}
+	public static get BLOCK_NETHERITE_BLOCK_HIT(): Sound {
+		return this.$javaClass.BLOCK_NETHERITE_BLOCK_HIT;
+	}
+	public static get BLOCK_NETHERITE_BLOCK_PLACE(): Sound {
+		return this.$javaClass.BLOCK_NETHERITE_BLOCK_PLACE;
+	}
+	public static get BLOCK_NETHERITE_BLOCK_STEP(): Sound {
+		return this.$javaClass.BLOCK_NETHERITE_BLOCK_STEP;
+	}
+	public static get BLOCK_NETHERRACK_BREAK(): Sound {
+		return this.$javaClass.BLOCK_NETHERRACK_BREAK;
+	}
+	public static get BLOCK_NETHERRACK_FALL(): Sound {
+		return this.$javaClass.BLOCK_NETHERRACK_FALL;
+	}
+	public static get BLOCK_NETHERRACK_HIT(): Sound {
+		return this.$javaClass.BLOCK_NETHERRACK_HIT;
+	}
+	public static get BLOCK_NETHERRACK_PLACE(): Sound {
+		return this.$javaClass.BLOCK_NETHERRACK_PLACE;
+	}
+	public static get BLOCK_NETHERRACK_STEP(): Sound {
+		return this.$javaClass.BLOCK_NETHERRACK_STEP;
+	}
+	public static get BLOCK_NETHER_BRICKS_BREAK(): Sound {
+		return this.$javaClass.BLOCK_NETHER_BRICKS_BREAK;
+	}
+	public static get BLOCK_NETHER_BRICKS_FALL(): Sound {
+		return this.$javaClass.BLOCK_NETHER_BRICKS_FALL;
+	}
+	public static get BLOCK_NETHER_BRICKS_HIT(): Sound {
+		return this.$javaClass.BLOCK_NETHER_BRICKS_HIT;
+	}
+	public static get BLOCK_NETHER_BRICKS_PLACE(): Sound {
+		return this.$javaClass.BLOCK_NETHER_BRICKS_PLACE;
+	}
+	public static get BLOCK_NETHER_BRICKS_STEP(): Sound {
+		return this.$javaClass.BLOCK_NETHER_BRICKS_STEP;
+	}
+	public static get BLOCK_NETHER_GOLD_ORE_BREAK(): Sound {
+		return this.$javaClass.BLOCK_NETHER_GOLD_ORE_BREAK;
+	}
+	public static get BLOCK_NETHER_GOLD_ORE_FALL(): Sound {
+		return this.$javaClass.BLOCK_NETHER_GOLD_ORE_FALL;
+	}
+	public static get BLOCK_NETHER_GOLD_ORE_HIT(): Sound {
+		return this.$javaClass.BLOCK_NETHER_GOLD_ORE_HIT;
+	}
+	public static get BLOCK_NETHER_GOLD_ORE_PLACE(): Sound {
+		return this.$javaClass.BLOCK_NETHER_GOLD_ORE_PLACE;
+	}
+	public static get BLOCK_NETHER_GOLD_ORE_STEP(): Sound {
+		return this.$javaClass.BLOCK_NETHER_GOLD_ORE_STEP;
+	}
+	public static get BLOCK_NETHER_ORE_BREAK(): Sound {
+		return this.$javaClass.BLOCK_NETHER_ORE_BREAK;
+	}
+	public static get BLOCK_NETHER_ORE_FALL(): Sound {
+		return this.$javaClass.BLOCK_NETHER_ORE_FALL;
+	}
+	public static get BLOCK_NETHER_ORE_HIT(): Sound {
+		return this.$javaClass.BLOCK_NETHER_ORE_HIT;
+	}
+	public static get BLOCK_NETHER_ORE_PLACE(): Sound {
+		return this.$javaClass.BLOCK_NETHER_ORE_PLACE;
+	}
+	public static get BLOCK_NETHER_ORE_STEP(): Sound {
+		return this.$javaClass.BLOCK_NETHER_ORE_STEP;
+	}
+	public static get BLOCK_NETHER_SPROUTS_BREAK(): Sound {
+		return this.$javaClass.BLOCK_NETHER_SPROUTS_BREAK;
+	}
+	public static get BLOCK_NETHER_SPROUTS_FALL(): Sound {
+		return this.$javaClass.BLOCK_NETHER_SPROUTS_FALL;
+	}
+	public static get BLOCK_NETHER_SPROUTS_HIT(): Sound {
+		return this.$javaClass.BLOCK_NETHER_SPROUTS_HIT;
+	}
+	public static get BLOCK_NETHER_SPROUTS_PLACE(): Sound {
+		return this.$javaClass.BLOCK_NETHER_SPROUTS_PLACE;
+	}
+	public static get BLOCK_NETHER_SPROUTS_STEP(): Sound {
+		return this.$javaClass.BLOCK_NETHER_SPROUTS_STEP;
 	}
 	public static get BLOCK_NETHER_WART_BREAK(): Sound {
 		return this.$javaClass.BLOCK_NETHER_WART_BREAK;
@@ -445,6 +685,21 @@ export default class Sound {
 	public static get BLOCK_NOTE_BLOCK_XYLOPHONE(): Sound {
 		return this.$javaClass.BLOCK_NOTE_BLOCK_XYLOPHONE;
 	}
+	public static get BLOCK_NYLIUM_BREAK(): Sound {
+		return this.$javaClass.BLOCK_NYLIUM_BREAK;
+	}
+	public static get BLOCK_NYLIUM_FALL(): Sound {
+		return this.$javaClass.BLOCK_NYLIUM_FALL;
+	}
+	public static get BLOCK_NYLIUM_HIT(): Sound {
+		return this.$javaClass.BLOCK_NYLIUM_HIT;
+	}
+	public static get BLOCK_NYLIUM_PLACE(): Sound {
+		return this.$javaClass.BLOCK_NYLIUM_PLACE;
+	}
+	public static get BLOCK_NYLIUM_STEP(): Sound {
+		return this.$javaClass.BLOCK_NYLIUM_STEP;
+	}
 	public static get BLOCK_PISTON_CONTRACT(): Sound {
 		return this.$javaClass.BLOCK_PISTON_CONTRACT;
 	}
@@ -465,6 +720,33 @@ export default class Sound {
 	}
 	public static get BLOCK_REDSTONE_TORCH_BURNOUT(): Sound {
 		return this.$javaClass.BLOCK_REDSTONE_TORCH_BURNOUT;
+	}
+	public static get BLOCK_RESPAWN_ANCHOR_AMBIENT(): Sound {
+		return this.$javaClass.BLOCK_RESPAWN_ANCHOR_AMBIENT;
+	}
+	public static get BLOCK_RESPAWN_ANCHOR_CHARGE(): Sound {
+		return this.$javaClass.BLOCK_RESPAWN_ANCHOR_CHARGE;
+	}
+	public static get BLOCK_RESPAWN_ANCHOR_DEPLETE(): Sound {
+		return this.$javaClass.BLOCK_RESPAWN_ANCHOR_DEPLETE;
+	}
+	public static get BLOCK_RESPAWN_ANCHOR_SET_SPAWN(): Sound {
+		return this.$javaClass.BLOCK_RESPAWN_ANCHOR_SET_SPAWN;
+	}
+	public static get BLOCK_ROOTS_BREAK(): Sound {
+		return this.$javaClass.BLOCK_ROOTS_BREAK;
+	}
+	public static get BLOCK_ROOTS_FALL(): Sound {
+		return this.$javaClass.BLOCK_ROOTS_FALL;
+	}
+	public static get BLOCK_ROOTS_HIT(): Sound {
+		return this.$javaClass.BLOCK_ROOTS_HIT;
+	}
+	public static get BLOCK_ROOTS_PLACE(): Sound {
+		return this.$javaClass.BLOCK_ROOTS_PLACE;
+	}
+	public static get BLOCK_ROOTS_STEP(): Sound {
+		return this.$javaClass.BLOCK_ROOTS_STEP;
 	}
 	public static get BLOCK_SAND_BREAK(): Sound {
 		return this.$javaClass.BLOCK_SAND_BREAK;
@@ -496,6 +778,21 @@ export default class Sound {
 	public static get BLOCK_SCAFFOLDING_STEP(): Sound {
 		return this.$javaClass.BLOCK_SCAFFOLDING_STEP;
 	}
+	public static get BLOCK_SHROOMLIGHT_BREAK(): Sound {
+		return this.$javaClass.BLOCK_SHROOMLIGHT_BREAK;
+	}
+	public static get BLOCK_SHROOMLIGHT_FALL(): Sound {
+		return this.$javaClass.BLOCK_SHROOMLIGHT_FALL;
+	}
+	public static get BLOCK_SHROOMLIGHT_HIT(): Sound {
+		return this.$javaClass.BLOCK_SHROOMLIGHT_HIT;
+	}
+	public static get BLOCK_SHROOMLIGHT_PLACE(): Sound {
+		return this.$javaClass.BLOCK_SHROOMLIGHT_PLACE;
+	}
+	public static get BLOCK_SHROOMLIGHT_STEP(): Sound {
+		return this.$javaClass.BLOCK_SHROOMLIGHT_STEP;
+	}
 	public static get BLOCK_SHULKER_BOX_CLOSE(): Sound {
 		return this.$javaClass.BLOCK_SHULKER_BOX_CLOSE;
 	}
@@ -517,6 +814,9 @@ export default class Sound {
 	public static get BLOCK_SLIME_BLOCK_STEP(): Sound {
 		return this.$javaClass.BLOCK_SLIME_BLOCK_STEP;
 	}
+	public static get BLOCK_SMITHING_TABLE_USE(): Sound {
+		return this.$javaClass.BLOCK_SMITHING_TABLE_USE;
+	}
 	public static get BLOCK_SMOKER_SMOKE(): Sound {
 		return this.$javaClass.BLOCK_SMOKER_SMOKE;
 	}
@@ -534,6 +834,51 @@ export default class Sound {
 	}
 	public static get BLOCK_SNOW_STEP(): Sound {
 		return this.$javaClass.BLOCK_SNOW_STEP;
+	}
+	public static get BLOCK_SOUL_SAND_BREAK(): Sound {
+		return this.$javaClass.BLOCK_SOUL_SAND_BREAK;
+	}
+	public static get BLOCK_SOUL_SAND_FALL(): Sound {
+		return this.$javaClass.BLOCK_SOUL_SAND_FALL;
+	}
+	public static get BLOCK_SOUL_SAND_HIT(): Sound {
+		return this.$javaClass.BLOCK_SOUL_SAND_HIT;
+	}
+	public static get BLOCK_SOUL_SAND_PLACE(): Sound {
+		return this.$javaClass.BLOCK_SOUL_SAND_PLACE;
+	}
+	public static get BLOCK_SOUL_SAND_STEP(): Sound {
+		return this.$javaClass.BLOCK_SOUL_SAND_STEP;
+	}
+	public static get BLOCK_SOUL_SOIL_BREAK(): Sound {
+		return this.$javaClass.BLOCK_SOUL_SOIL_BREAK;
+	}
+	public static get BLOCK_SOUL_SOIL_FALL(): Sound {
+		return this.$javaClass.BLOCK_SOUL_SOIL_FALL;
+	}
+	public static get BLOCK_SOUL_SOIL_HIT(): Sound {
+		return this.$javaClass.BLOCK_SOUL_SOIL_HIT;
+	}
+	public static get BLOCK_SOUL_SOIL_PLACE(): Sound {
+		return this.$javaClass.BLOCK_SOUL_SOIL_PLACE;
+	}
+	public static get BLOCK_SOUL_SOIL_STEP(): Sound {
+		return this.$javaClass.BLOCK_SOUL_SOIL_STEP;
+	}
+	public static get BLOCK_STEM_BREAK(): Sound {
+		return this.$javaClass.BLOCK_STEM_BREAK;
+	}
+	public static get BLOCK_STEM_FALL(): Sound {
+		return this.$javaClass.BLOCK_STEM_FALL;
+	}
+	public static get BLOCK_STEM_HIT(): Sound {
+		return this.$javaClass.BLOCK_STEM_HIT;
+	}
+	public static get BLOCK_STEM_PLACE(): Sound {
+		return this.$javaClass.BLOCK_STEM_PLACE;
+	}
+	public static get BLOCK_STEM_STEP(): Sound {
+		return this.$javaClass.BLOCK_STEM_STEP;
 	}
 	public static get BLOCK_STONE_BREAK(): Sound {
 		return this.$javaClass.BLOCK_STONE_BREAK;
@@ -580,8 +925,41 @@ export default class Sound {
 	public static get BLOCK_TRIPWIRE_DETACH(): Sound {
 		return this.$javaClass.BLOCK_TRIPWIRE_DETACH;
 	}
+	public static get BLOCK_VINE_STEP(): Sound {
+		return this.$javaClass.BLOCK_VINE_STEP;
+	}
+	public static get BLOCK_WART_BLOCK_BREAK(): Sound {
+		return this.$javaClass.BLOCK_WART_BLOCK_BREAK;
+	}
+	public static get BLOCK_WART_BLOCK_FALL(): Sound {
+		return this.$javaClass.BLOCK_WART_BLOCK_FALL;
+	}
+	public static get BLOCK_WART_BLOCK_HIT(): Sound {
+		return this.$javaClass.BLOCK_WART_BLOCK_HIT;
+	}
+	public static get BLOCK_WART_BLOCK_PLACE(): Sound {
+		return this.$javaClass.BLOCK_WART_BLOCK_PLACE;
+	}
+	public static get BLOCK_WART_BLOCK_STEP(): Sound {
+		return this.$javaClass.BLOCK_WART_BLOCK_STEP;
+	}
 	public static get BLOCK_WATER_AMBIENT(): Sound {
 		return this.$javaClass.BLOCK_WATER_AMBIENT;
+	}
+	public static get BLOCK_WEEPING_VINES_BREAK(): Sound {
+		return this.$javaClass.BLOCK_WEEPING_VINES_BREAK;
+	}
+	public static get BLOCK_WEEPING_VINES_FALL(): Sound {
+		return this.$javaClass.BLOCK_WEEPING_VINES_FALL;
+	}
+	public static get BLOCK_WEEPING_VINES_HIT(): Sound {
+		return this.$javaClass.BLOCK_WEEPING_VINES_HIT;
+	}
+	public static get BLOCK_WEEPING_VINES_PLACE(): Sound {
+		return this.$javaClass.BLOCK_WEEPING_VINES_PLACE;
+	}
+	public static get BLOCK_WEEPING_VINES_STEP(): Sound {
+		return this.$javaClass.BLOCK_WEEPING_VINES_STEP;
 	}
 	public static get BLOCK_WET_GRASS_BREAK(): Sound {
 		return this.$javaClass.BLOCK_WET_GRASS_BREAK;
@@ -850,6 +1228,9 @@ export default class Sound {
 	public static get ENTITY_DONKEY_DEATH(): Sound {
 		return this.$javaClass.ENTITY_DONKEY_DEATH;
 	}
+	public static get ENTITY_DONKEY_EAT(): Sound {
+		return this.$javaClass.ENTITY_DONKEY_EAT;
+	}
 	public static get ENTITY_DONKEY_HURT(): Sound {
 		return this.$javaClass.ENTITY_DONKEY_HURT;
 	}
@@ -1066,6 +1447,9 @@ export default class Sound {
 	public static get ENTITY_FOX_SPIT(): Sound {
 		return this.$javaClass.ENTITY_FOX_SPIT;
 	}
+	public static get ENTITY_FOX_TELEPORT(): Sound {
+		return this.$javaClass.ENTITY_FOX_TELEPORT;
+	}
 	public static get ENTITY_GENERIC_BIG_FALL(): Sound {
 		return this.$javaClass.ENTITY_GENERIC_BIG_FALL;
 	}
@@ -1140,6 +1524,30 @@ export default class Sound {
 	}
 	public static get ENTITY_GUARDIAN_HURT_LAND(): Sound {
 		return this.$javaClass.ENTITY_GUARDIAN_HURT_LAND;
+	}
+	public static get ENTITY_HOGLIN_AMBIENT(): Sound {
+		return this.$javaClass.ENTITY_HOGLIN_AMBIENT;
+	}
+	public static get ENTITY_HOGLIN_ANGRY(): Sound {
+		return this.$javaClass.ENTITY_HOGLIN_ANGRY;
+	}
+	public static get ENTITY_HOGLIN_ATTACK(): Sound {
+		return this.$javaClass.ENTITY_HOGLIN_ATTACK;
+	}
+	public static get ENTITY_HOGLIN_CONVERTED_TO_ZOMBIFIED(): Sound {
+		return this.$javaClass.ENTITY_HOGLIN_CONVERTED_TO_ZOMBIFIED;
+	}
+	public static get ENTITY_HOGLIN_DEATH(): Sound {
+		return this.$javaClass.ENTITY_HOGLIN_DEATH;
+	}
+	public static get ENTITY_HOGLIN_HURT(): Sound {
+		return this.$javaClass.ENTITY_HOGLIN_HURT;
+	}
+	public static get ENTITY_HOGLIN_RETREAT(): Sound {
+		return this.$javaClass.ENTITY_HOGLIN_RETREAT;
+	}
+	public static get ENTITY_HOGLIN_STEP(): Sound {
+		return this.$javaClass.ENTITY_HOGLIN_STEP;
 	}
 	public static get ENTITY_HORSE_AMBIENT(): Sound {
 		return this.$javaClass.ENTITY_HORSE_AMBIENT;
@@ -1360,11 +1768,17 @@ export default class Sound {
 	public static get ENTITY_MULE_AMBIENT(): Sound {
 		return this.$javaClass.ENTITY_MULE_AMBIENT;
 	}
+	public static get ENTITY_MULE_ANGRY(): Sound {
+		return this.$javaClass.ENTITY_MULE_ANGRY;
+	}
 	public static get ENTITY_MULE_CHEST(): Sound {
 		return this.$javaClass.ENTITY_MULE_CHEST;
 	}
 	public static get ENTITY_MULE_DEATH(): Sound {
 		return this.$javaClass.ENTITY_MULE_DEATH;
+	}
+	public static get ENTITY_MULE_EAT(): Sound {
+		return this.$javaClass.ENTITY_MULE_EAT;
 	}
 	public static get ENTITY_MULE_HURT(): Sound {
 		return this.$javaClass.ENTITY_MULE_HURT;
@@ -1459,6 +1873,9 @@ export default class Sound {
 	public static get ENTITY_PARROT_IMITATE_GUARDIAN(): Sound {
 		return this.$javaClass.ENTITY_PARROT_IMITATE_GUARDIAN;
 	}
+	public static get ENTITY_PARROT_IMITATE_HOGLIN(): Sound {
+		return this.$javaClass.ENTITY_PARROT_IMITATE_HOGLIN;
+	}
 	public static get ENTITY_PARROT_IMITATE_HUSK(): Sound {
 		return this.$javaClass.ENTITY_PARROT_IMITATE_HUSK;
 	}
@@ -1470,6 +1887,9 @@ export default class Sound {
 	}
 	public static get ENTITY_PARROT_IMITATE_PHANTOM(): Sound {
 		return this.$javaClass.ENTITY_PARROT_IMITATE_PHANTOM;
+	}
+	public static get ENTITY_PARROT_IMITATE_PIGLIN(): Sound {
+		return this.$javaClass.ENTITY_PARROT_IMITATE_PIGLIN;
 	}
 	public static get ENTITY_PARROT_IMITATE_PILLAGER(): Sound {
 		return this.$javaClass.ENTITY_PARROT_IMITATE_PILLAGER;
@@ -1510,6 +1930,9 @@ export default class Sound {
 	public static get ENTITY_PARROT_IMITATE_WITHER_SKELETON(): Sound {
 		return this.$javaClass.ENTITY_PARROT_IMITATE_WITHER_SKELETON;
 	}
+	public static get ENTITY_PARROT_IMITATE_ZOGLIN(): Sound {
+		return this.$javaClass.ENTITY_PARROT_IMITATE_ZOGLIN;
+	}
 	public static get ENTITY_PARROT_IMITATE_ZOMBIE(): Sound {
 		return this.$javaClass.ENTITY_PARROT_IMITATE_ZOMBIE;
 	}
@@ -1536,6 +1959,36 @@ export default class Sound {
 	}
 	public static get ENTITY_PHANTOM_SWOOP(): Sound {
 		return this.$javaClass.ENTITY_PHANTOM_SWOOP;
+	}
+	public static get ENTITY_PIGLIN_ADMIRING_ITEM(): Sound {
+		return this.$javaClass.ENTITY_PIGLIN_ADMIRING_ITEM;
+	}
+	public static get ENTITY_PIGLIN_AMBIENT(): Sound {
+		return this.$javaClass.ENTITY_PIGLIN_AMBIENT;
+	}
+	public static get ENTITY_PIGLIN_ANGRY(): Sound {
+		return this.$javaClass.ENTITY_PIGLIN_ANGRY;
+	}
+	public static get ENTITY_PIGLIN_CELEBRATE(): Sound {
+		return this.$javaClass.ENTITY_PIGLIN_CELEBRATE;
+	}
+	public static get ENTITY_PIGLIN_CONVERTED_TO_ZOMBIFIED(): Sound {
+		return this.$javaClass.ENTITY_PIGLIN_CONVERTED_TO_ZOMBIFIED;
+	}
+	public static get ENTITY_PIGLIN_DEATH(): Sound {
+		return this.$javaClass.ENTITY_PIGLIN_DEATH;
+	}
+	public static get ENTITY_PIGLIN_HURT(): Sound {
+		return this.$javaClass.ENTITY_PIGLIN_HURT;
+	}
+	public static get ENTITY_PIGLIN_JEALOUS(): Sound {
+		return this.$javaClass.ENTITY_PIGLIN_JEALOUS;
+	}
+	public static get ENTITY_PIGLIN_RETREAT(): Sound {
+		return this.$javaClass.ENTITY_PIGLIN_RETREAT;
+	}
+	public static get ENTITY_PIGLIN_STEP(): Sound {
+		return this.$javaClass.ENTITY_PIGLIN_STEP;
 	}
 	public static get ENTITY_PIG_AMBIENT(): Sound {
 		return this.$javaClass.ENTITY_PIG_AMBIENT;
@@ -1846,6 +2299,9 @@ export default class Sound {
 	public static get ENTITY_SNOW_GOLEM_HURT(): Sound {
 		return this.$javaClass.ENTITY_SNOW_GOLEM_HURT;
 	}
+	public static get ENTITY_SNOW_GOLEM_SHEAR(): Sound {
+		return this.$javaClass.ENTITY_SNOW_GOLEM_SHEAR;
+	}
 	public static get ENTITY_SNOW_GOLEM_SHOOT(): Sound {
 		return this.$javaClass.ENTITY_SNOW_GOLEM_SHOOT;
 	}
@@ -1890,6 +2346,33 @@ export default class Sound {
 	}
 	public static get ENTITY_STRAY_STEP(): Sound {
 		return this.$javaClass.ENTITY_STRAY_STEP;
+	}
+	public static get ENTITY_STRIDER_AMBIENT(): Sound {
+		return this.$javaClass.ENTITY_STRIDER_AMBIENT;
+	}
+	public static get ENTITY_STRIDER_DEATH(): Sound {
+		return this.$javaClass.ENTITY_STRIDER_DEATH;
+	}
+	public static get ENTITY_STRIDER_EAT(): Sound {
+		return this.$javaClass.ENTITY_STRIDER_EAT;
+	}
+	public static get ENTITY_STRIDER_HAPPY(): Sound {
+		return this.$javaClass.ENTITY_STRIDER_HAPPY;
+	}
+	public static get ENTITY_STRIDER_HURT(): Sound {
+		return this.$javaClass.ENTITY_STRIDER_HURT;
+	}
+	public static get ENTITY_STRIDER_RETREAT(): Sound {
+		return this.$javaClass.ENTITY_STRIDER_RETREAT;
+	}
+	public static get ENTITY_STRIDER_SADDLE(): Sound {
+		return this.$javaClass.ENTITY_STRIDER_SADDLE;
+	}
+	public static get ENTITY_STRIDER_STEP(): Sound {
+		return this.$javaClass.ENTITY_STRIDER_STEP;
+	}
+	public static get ENTITY_STRIDER_STEP_LAVA(): Sound {
+		return this.$javaClass.ENTITY_STRIDER_STEP_LAVA;
 	}
 	public static get ENTITY_TNT_PRIMED(): Sound {
 		return this.$javaClass.ENTITY_TNT_PRIMED;
@@ -2131,6 +2614,24 @@ export default class Sound {
 	public static get ENTITY_WOLF_WHINE(): Sound {
 		return this.$javaClass.ENTITY_WOLF_WHINE;
 	}
+	public static get ENTITY_ZOGLIN_AMBIENT(): Sound {
+		return this.$javaClass.ENTITY_ZOGLIN_AMBIENT;
+	}
+	public static get ENTITY_ZOGLIN_ANGRY(): Sound {
+		return this.$javaClass.ENTITY_ZOGLIN_ANGRY;
+	}
+	public static get ENTITY_ZOGLIN_ATTACK(): Sound {
+		return this.$javaClass.ENTITY_ZOGLIN_ATTACK;
+	}
+	public static get ENTITY_ZOGLIN_DEATH(): Sound {
+		return this.$javaClass.ENTITY_ZOGLIN_DEATH;
+	}
+	public static get ENTITY_ZOGLIN_HURT(): Sound {
+		return this.$javaClass.ENTITY_ZOGLIN_HURT;
+	}
+	public static get ENTITY_ZOGLIN_STEP(): Sound {
+		return this.$javaClass.ENTITY_ZOGLIN_STEP;
+	}
 	public static get ENTITY_ZOMBIE_AMBIENT(): Sound {
 		return this.$javaClass.ENTITY_ZOMBIE_AMBIENT;
 	}
@@ -2167,18 +2668,6 @@ export default class Sound {
 	public static get ENTITY_ZOMBIE_INFECT(): Sound {
 		return this.$javaClass.ENTITY_ZOMBIE_INFECT;
 	}
-	public static get ENTITY_ZOMBIE_PIGMAN_AMBIENT(): Sound {
-		return this.$javaClass.ENTITY_ZOMBIE_PIGMAN_AMBIENT;
-	}
-	public static get ENTITY_ZOMBIE_PIGMAN_ANGRY(): Sound {
-		return this.$javaClass.ENTITY_ZOMBIE_PIGMAN_ANGRY;
-	}
-	public static get ENTITY_ZOMBIE_PIGMAN_DEATH(): Sound {
-		return this.$javaClass.ENTITY_ZOMBIE_PIGMAN_DEATH;
-	}
-	public static get ENTITY_ZOMBIE_PIGMAN_HURT(): Sound {
-		return this.$javaClass.ENTITY_ZOMBIE_PIGMAN_HURT;
-	}
 	public static get ENTITY_ZOMBIE_STEP(): Sound {
 		return this.$javaClass.ENTITY_ZOMBIE_STEP;
 	}
@@ -2199,6 +2688,18 @@ export default class Sound {
 	}
 	public static get ENTITY_ZOMBIE_VILLAGER_STEP(): Sound {
 		return this.$javaClass.ENTITY_ZOMBIE_VILLAGER_STEP;
+	}
+	public static get ENTITY_ZOMBIFIED_PIGLIN_AMBIENT(): Sound {
+		return this.$javaClass.ENTITY_ZOMBIFIED_PIGLIN_AMBIENT;
+	}
+	public static get ENTITY_ZOMBIFIED_PIGLIN_ANGRY(): Sound {
+		return this.$javaClass.ENTITY_ZOMBIFIED_PIGLIN_ANGRY;
+	}
+	public static get ENTITY_ZOMBIFIED_PIGLIN_DEATH(): Sound {
+		return this.$javaClass.ENTITY_ZOMBIFIED_PIGLIN_DEATH;
+	}
+	public static get ENTITY_ZOMBIFIED_PIGLIN_HURT(): Sound {
+		return this.$javaClass.ENTITY_ZOMBIFIED_PIGLIN_HURT;
 	}
 	public static get EVENT_RAID_HORN(): Sound {
 		return this.$javaClass.EVENT_RAID_HORN;
@@ -2223,6 +2724,9 @@ export default class Sound {
 	}
 	public static get ITEM_ARMOR_EQUIP_LEATHER(): Sound {
 		return this.$javaClass.ITEM_ARMOR_EQUIP_LEATHER;
+	}
+	public static get ITEM_ARMOR_EQUIP_NETHERITE(): Sound {
+		return this.$javaClass.ITEM_ARMOR_EQUIP_NETHERITE;
 	}
 	public static get ITEM_ARMOR_EQUIP_TURTLE(): Sound {
 		return this.$javaClass.ITEM_ARMOR_EQUIP_TURTLE;
@@ -2308,6 +2812,9 @@ export default class Sound {
 	public static get ITEM_HONEY_BOTTLE_DRINK(): Sound {
 		return this.$javaClass.ITEM_HONEY_BOTTLE_DRINK;
 	}
+	public static get ITEM_LODESTONE_COMPASS_LOCK(): Sound {
+		return this.$javaClass.ITEM_LODESTONE_COMPASS_LOCK;
+	}
 	public static get ITEM_NETHER_WART_PLANT(): Sound {
 		return this.$javaClass.ITEM_NETHER_WART_PLANT;
 	}
@@ -2380,6 +2887,9 @@ export default class Sound {
 	public static get MUSIC_DISC_MELLOHI(): Sound {
 		return this.$javaClass.MUSIC_DISC_MELLOHI;
 	}
+	public static get MUSIC_DISC_PIGSTEP(): Sound {
+		return this.$javaClass.MUSIC_DISC_PIGSTEP;
+	}
 	public static get MUSIC_DISC_STAL(): Sound {
 		return this.$javaClass.MUSIC_DISC_STAL;
 	}
@@ -2404,11 +2914,26 @@ export default class Sound {
 	public static get MUSIC_MENU(): Sound {
 		return this.$javaClass.MUSIC_MENU;
 	}
-	public static get MUSIC_NETHER(): Sound {
-		return this.$javaClass.MUSIC_NETHER;
+	public static get MUSIC_NETHER_BASALT_DELTAS(): Sound {
+		return this.$javaClass.MUSIC_NETHER_BASALT_DELTAS;
+	}
+	public static get MUSIC_NETHER_CRIMSON_FOREST(): Sound {
+		return this.$javaClass.MUSIC_NETHER_CRIMSON_FOREST;
+	}
+	public static get MUSIC_NETHER_NETHER_WASTES(): Sound {
+		return this.$javaClass.MUSIC_NETHER_NETHER_WASTES;
+	}
+	public static get MUSIC_NETHER_SOUL_SAND_VALLEY(): Sound {
+		return this.$javaClass.MUSIC_NETHER_SOUL_SAND_VALLEY;
+	}
+	public static get MUSIC_NETHER_WARPED_FOREST(): Sound {
+		return this.$javaClass.MUSIC_NETHER_WARPED_FOREST;
 	}
 	public static get MUSIC_UNDER_WATER(): Sound {
 		return this.$javaClass.MUSIC_UNDER_WATER;
+	}
+	public static get PARTICLE_SOUL_ESCAPE(): Sound {
+		return this.$javaClass.PARTICLE_SOUL_ESCAPE;
 	}
 	public static get UI_BUTTON_CLICK(): Sound {
 		return this.$javaClass.UI_BUTTON_CLICK;

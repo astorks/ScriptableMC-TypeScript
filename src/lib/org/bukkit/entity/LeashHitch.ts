@@ -1,7 +1,9 @@
 declare var Java: any;
 import BlockFace from '../../../org/bukkit/block/BlockFace.js'
 import BoundingBox from '../../../org/bukkit/util/BoundingBox.js'
+import CommandSender$Spigot from '../../../org/bukkit/command/CommandSender$Spigot.js'
 import Entity from './Entity.js'
+import Entity$Spigot from './Entity$Spigot.js'
 import EntityDamageEvent from '../../../org/bukkit/event/entity/EntityDamageEvent.js'
 import EntityEffect from '../../../org/bukkit/EntityEffect.js'
 import EntityType from './EntityType.js'
@@ -61,8 +63,8 @@ export default interface LeashHitch extends Hanging {
 	getWorld(): World;
 	hasGravity(): boolean;
 	hasMetadata(arg0: string): boolean;
-	hasPermission(arg0: Permission): boolean;
 	hasPermission(arg0: string): boolean;
+	hasPermission(arg0: Permission): boolean;
 	isCustomNameVisible(): boolean;
 	isDead(): boolean;
 	isEmpty(): boolean;
@@ -71,8 +73,8 @@ export default interface LeashHitch extends Hanging {
 	isInvulnerable(): boolean;
 	isOnGround(): boolean;
 	isOp(): boolean;
-	isPermissionSet(arg0: Permission): boolean;
 	isPermissionSet(arg0: string): boolean;
+	isPermissionSet(arg0: Permission): boolean;
 	isPersistent(): boolean;
 	isSilent(): boolean;
 	isValid(): boolean;
@@ -105,6 +107,8 @@ export default interface LeashHitch extends Hanging {
 	setSilent(arg0: boolean): void;
 	setTicksLived(arg0: number): void;
 	setVelocity(arg0: Vector): void;
+	spigot(): Entity$Spigot;
+	spigot(): CommandSender$Spigot;
 	teleport(arg0: Location): boolean;
 	teleport(arg0: Entity): boolean;
 	teleport(arg0: Location, arg1: PlayerTeleportEvent$TeleportCause): boolean;

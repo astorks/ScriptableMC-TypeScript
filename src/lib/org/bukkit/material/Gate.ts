@@ -7,9 +7,9 @@ import MaterialData from './MaterialData.js'
 import Openable from './Openable.js'
 
 export default interface Gate extends MaterialData, Directional, Openable {
-	clone(): MaterialData;
-	clone(): any;
 	clone(): Gate;
+	clone(): any;
+	clone(): MaterialData;
 	getData(): number;
 	getFacing(): BlockFace;
 	getItemType(): Material;

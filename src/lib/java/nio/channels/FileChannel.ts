@@ -13,7 +13,7 @@ import ScatteringByteChannel from './ScatteringByteChannel.js'
 import SeekableByteChannel from './SeekableByteChannel.js'
 import WritableByteChannel from './WritableByteChannel.js'
 
-export default interface FileChannel extends AbstractInterruptibleChannel {
+export default interface FileChannel extends AbstractInterruptibleChannel, SeekableByteChannel, GatheringByteChannel, ScatteringByteChannel {
 	close(): void;
 	force(arg0: boolean): void;
 	isOpen(): boolean;

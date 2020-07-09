@@ -10,9 +10,11 @@ export default interface Request {
 	getData(): any;
 	getFiles(): Array<FileLike>;
 	getHeaders(): any;
+	getHostnameVerifier(): any;
 	getJson(): any;
 	getMethod(): string;
 	getParams(): any;
+	getSslContext(): any;
 	getStream(): boolean;
 	getTimeout(): number;
 	getUrl(): string;

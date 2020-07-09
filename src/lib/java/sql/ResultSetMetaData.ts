@@ -1,7 +1,7 @@
 declare var Java: any;
 import Wrapper from './Wrapper.js'
 
-export default interface ResultSetMetaData {
+export default interface ResultSetMetaData extends Wrapper {
 	getCatalogName(arg0: number): string;
 	getColumnClassName(arg0: number): string;
 	getColumnCount(): number;

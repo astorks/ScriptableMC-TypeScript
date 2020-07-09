@@ -11,8 +11,8 @@ export default interface Objective {
 	getDisplaySlot(): DisplaySlot;
 	getName(): string;
 	getRenderType(): RenderType;
-	getScore(arg0: OfflinePlayer): Score;
 	getScore(arg0: string): Score;
+	getScore(arg0: OfflinePlayer): Score;
 	getScoreboard(): Scoreboard;
 	isModifiable(): boolean;
 	setDisplayName(arg0: string): void;

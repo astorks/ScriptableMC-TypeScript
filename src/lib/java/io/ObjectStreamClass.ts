@@ -2,7 +2,7 @@ declare var Java: any;
 import ObjectStreamField from './ObjectStreamField.js'
 import Serializable from './Serializable.js'
 
-export default interface ObjectStreamClass {
+export default interface ObjectStreamClass extends Serializable {
 	forClass(): any;
 	getField(_name: string): ObjectStreamField;
 	getFields(): Array<ObjectStreamField>;

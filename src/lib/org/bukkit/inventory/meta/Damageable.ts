@@ -1,8 +1,8 @@
 declare var Java: any;
 
 export default interface Damageable {
-	clone(): any;
 	clone(): Damageable;
+	clone(): any;
 	getDamage(): number;
 	hasDamage(): boolean;
 	setDamage(arg0: number): void;

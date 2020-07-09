@@ -4,7 +4,9 @@ import AttributeInstance from '../../../org/bukkit/attribute/AttributeInstance.j
 import Block from '../../../org/bukkit/block/Block.js'
 import BlockFace from '../../../org/bukkit/block/BlockFace.js'
 import BoundingBox from '../../../org/bukkit/util/BoundingBox.js'
+import CommandSender$Spigot from '../../../org/bukkit/command/CommandSender$Spigot.js'
 import Entity from './Entity.js'
+import Entity$Spigot from './Entity$Spigot.js'
 import EntityDamageEvent from '../../../org/bukkit/event/entity/EntityDamageEvent.js'
 import EntityEffect from '../../../org/bukkit/EntityEffect.js'
 import EntityEquipment from '../../../org/bukkit/inventory/EntityEquipment.js'
@@ -54,6 +56,7 @@ export default interface ArmorStand extends LivingEntity {
 	getBoundingBox(): BoundingBox;
 	getCanPickupItems(): boolean;
 	getChestplate(): ItemStack;
+	getCollidableExemptions(): any;
 	getCustomName(): string;
 	getEffectivePermissions(): any;
 	getEntityId(): number;
@@ -118,8 +121,8 @@ export default interface ArmorStand extends LivingEntity {
 	hasGravity(): boolean;
 	hasLineOfSight(arg0: Entity): boolean;
 	hasMetadata(arg0: string): boolean;
-	hasPermission(arg0: Permission): boolean;
 	hasPermission(arg0: string): boolean;
+	hasPermission(arg0: Permission): boolean;
 	hasPotionEffect(arg0: PotionEffectType): boolean;
 	isCollidable(): boolean;
 	isCustomNameVisible(): boolean;
@@ -133,8 +136,8 @@ export default interface ArmorStand extends LivingEntity {
 	isMarker(): boolean;
 	isOnGround(): boolean;
 	isOp(): boolean;
-	isPermissionSet(arg0: Permission): boolean;
 	isPermissionSet(arg0: string): boolean;
+	isPermissionSet(arg0: Permission): boolean;
 	isPersistent(): boolean;
 	isRiptiding(): boolean;
 	isSilent(): boolean;
@@ -208,6 +211,8 @@ export default interface ArmorStand extends LivingEntity {
 	setTicksLived(arg0: number): void;
 	setVelocity(arg0: Vector): void;
 	setVisible(arg0: boolean): void;
+	spigot(): Entity$Spigot;
+	spigot(): CommandSender$Spigot;
 	swingMainHand(): void;
 	swingOffHand(): void;
 	teleport(arg0: Location): boolean;

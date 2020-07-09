@@ -1,4 +1,5 @@
 declare var Java: any;
+import CommandSender$Spigot from './CommandSender$Spigot.js'
 import Permissible from '../../../org/bukkit/permissions/Permissible.js'
 import Permission from '../../../org/bukkit/permissions/Permission.js'
 import PermissionAttachment from '../../../org/bukkit/permissions/PermissionAttachment.js'
@@ -13,16 +14,17 @@ export default interface CommandSender extends Permissible {
 	getEffectivePermissions(): any;
 	getName(): string;
 	getServer(): Server;
-	hasPermission(arg0: Permission): boolean;
 	hasPermission(arg0: string): boolean;
+	hasPermission(arg0: Permission): boolean;
 	isOp(): boolean;
-	isPermissionSet(arg0: Permission): boolean;
 	isPermissionSet(arg0: string): boolean;
+	isPermissionSet(arg0: Permission): boolean;
 	recalculatePermissions(): void;
 	removeAttachment(arg0: PermissionAttachment): void;
 	sendMessage(arg0: Array<string>): void;
 	sendMessage(arg0: string): void;
 	setOp(arg0: boolean): void;
+	spigot(): CommandSender$Spigot;
 }
 
 export default class CommandSender {

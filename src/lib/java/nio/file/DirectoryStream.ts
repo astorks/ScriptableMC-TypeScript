@@ -1,7 +1,7 @@
 declare var Java: any;
 import Closeable from '../../../java/io/Closeable.js'
 
-export default interface DirectoryStream {
+export default interface DirectoryStream extends Closeable {
 	close(): void;
 	forEach(action: any): void;
 	iterator(): any;

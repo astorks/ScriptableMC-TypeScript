@@ -1,7 +1,7 @@
 declare var Java: any;
 import UserPrincipal from './UserPrincipal.js'
 
-export default interface GroupPrincipal {
+export default interface GroupPrincipal extends UserPrincipal {
 	getName(): string;
 	implies(subject: any): boolean;
 }

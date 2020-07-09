@@ -48,6 +48,9 @@ export default class ClickType {
 	public static get SHIFT_RIGHT(): ClickType {
 		return this.$javaClass.SHIFT_RIGHT;
 	}
+	public static get SWAP_OFFHAND(): ClickType {
+		return this.$javaClass.SWAP_OFFHAND;
+	}
 	public static get UNKNOWN(): ClickType {
 		return this.$javaClass.UNKNOWN;
 	}

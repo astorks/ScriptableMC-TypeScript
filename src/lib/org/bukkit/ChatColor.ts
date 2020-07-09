@@ -1,7 +1,7 @@
 declare var Java: any;
 
 export default interface ChatColor {
-	asBungee(): any;
+	asBungee(): ChatColor;
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
 	getChar(): string;

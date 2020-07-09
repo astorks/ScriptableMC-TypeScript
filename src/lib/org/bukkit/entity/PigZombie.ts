@@ -4,7 +4,9 @@ import AttributeInstance from '../../../org/bukkit/attribute/AttributeInstance.j
 import Block from '../../../org/bukkit/block/Block.js'
 import BlockFace from '../../../org/bukkit/block/BlockFace.js'
 import BoundingBox from '../../../org/bukkit/util/BoundingBox.js'
+import CommandSender$Spigot from '../../../org/bukkit/command/CommandSender$Spigot.js'
 import Entity from './Entity.js'
+import Entity$Spigot from './Entity$Spigot.js'
 import EntityDamageEvent from '../../../org/bukkit/event/entity/EntityDamageEvent.js'
 import EntityEffect from '../../../org/bukkit/EntityEffect.js'
 import EntityEquipment from '../../../org/bukkit/inventory/EntityEquipment.js'
@@ -53,6 +55,7 @@ export default interface PigZombie extends Zombie {
 	getAttribute(arg0: Attribute): AttributeInstance;
 	getBoundingBox(): BoundingBox;
 	getCanPickupItems(): boolean;
+	getCollidableExemptions(): any;
 	getConversionTime(): number;
 	getCustomName(): string;
 	getEffectivePermissions(): any;
@@ -112,8 +115,8 @@ export default interface PigZombie extends Zombie {
 	hasGravity(): boolean;
 	hasLineOfSight(arg0: Entity): boolean;
 	hasMetadata(arg0: string): boolean;
-	hasPermission(arg0: Permission): boolean;
 	hasPermission(arg0: string): boolean;
+	hasPermission(arg0: Permission): boolean;
 	hasPotionEffect(arg0: PotionEffectType): boolean;
 	isAngry(): boolean;
 	isAware(): boolean;
@@ -130,8 +133,8 @@ export default interface PigZombie extends Zombie {
 	isLeashed(): boolean;
 	isOnGround(): boolean;
 	isOp(): boolean;
-	isPermissionSet(arg0: Permission): boolean;
 	isPermissionSet(arg0: string): boolean;
+	isPermissionSet(arg0: Permission): boolean;
 	isPersistent(): boolean;
 	isRiptiding(): boolean;
 	isSilent(): boolean;
@@ -198,6 +201,8 @@ export default interface PigZombie extends Zombie {
 	setVelocity(arg0: Vector): void;
 	setVillager(arg0: boolean): void;
 	setVillagerProfession(arg0: Villager$Profession): void;
+	spigot(): Entity$Spigot;
+	spigot(): CommandSender$Spigot;
 	swingMainHand(): void;
 	swingOffHand(): void;
 	teleport(arg0: Location): boolean;

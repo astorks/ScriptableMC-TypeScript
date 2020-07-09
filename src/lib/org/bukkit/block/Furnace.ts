@@ -23,8 +23,8 @@ export default interface Furnace extends Container {
 	getCookTimeTotal(): number;
 	getCustomName(): string;
 	getData(): MaterialData;
-	getInventory(): Inventory;
 	getInventory(): FurnaceInventory;
+	getInventory(): Inventory;
 	getLightLevel(): number;
 	getLocation(): Location;
 	getLocation(arg0: Location): Location;
@@ -32,8 +32,8 @@ export default interface Furnace extends Container {
 	getMetadata(arg0: string): Array<MetadataValue>;
 	getPersistentDataContainer(): PersistentDataContainer;
 	getRawData(): number;
-	getSnapshotInventory(): Inventory;
 	getSnapshotInventory(): FurnaceInventory;
+	getSnapshotInventory(): Inventory;
 	getType(): Material;
 	getWorld(): World;
 	getX(): number;

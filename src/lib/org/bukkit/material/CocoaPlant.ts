@@ -8,9 +8,9 @@ import Material from '../../../org/bukkit/Material.js'
 import MaterialData from './MaterialData.js'
 
 export default interface CocoaPlant extends MaterialData, Directional, Attachable {
-	clone(): CocoaPlant;
 	clone(): any;
 	clone(): MaterialData;
+	clone(): CocoaPlant;
 	getAttachedFace(): BlockFace;
 	getData(): number;
 	getFacing(): BlockFace;

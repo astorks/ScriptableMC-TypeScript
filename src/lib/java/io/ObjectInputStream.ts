@@ -8,7 +8,7 @@ import ObjectStreamConstants from './ObjectStreamConstants.js'
 import OutputStream from './OutputStream.js'
 import SerializablePermission from './SerializablePermission.js'
 
-export default interface ObjectInputStream extends InputStream {
+export default interface ObjectInputStream extends InputStream, ObjectInput, ObjectStreamConstants {
 	available(): number;
 	close(): void;
 	defaultReadObject(): void;

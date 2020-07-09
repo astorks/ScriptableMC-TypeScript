@@ -9,8 +9,8 @@ import ProjectileHitEvent from './ProjectileHitEvent.js'
 import ThrownExpBottle from '../../../../org/bukkit/entity/ThrownExpBottle.js'
 
 export default interface ExpBottleEvent extends ProjectileHitEvent {
-	getEntity(): Entity;
 	getEntity(): Projectile;
+	getEntity(): Entity;
 	getEntity(): ThrownExpBottle;
 	getEntityType(): EntityType;
 	getEventName(): string;

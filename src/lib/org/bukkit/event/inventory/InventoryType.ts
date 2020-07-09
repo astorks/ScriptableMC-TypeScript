@@ -79,6 +79,9 @@ export default class InventoryType {
 	public static get SHULKER_BOX(): InventoryType {
 		return this.$javaClass.SHULKER_BOX;
 	}
+	public static get SMITHING(): InventoryType {
+		return this.$javaClass.SMITHING;
+	}
 	public static get SMOKER(): InventoryType {
 		return this.$javaClass.SMOKER;
 	}

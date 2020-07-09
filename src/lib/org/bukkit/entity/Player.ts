@@ -7,12 +7,14 @@ import Block from '../../../org/bukkit/block/Block.js'
 import BlockData from '../../../org/bukkit/block/data/BlockData.js'
 import BlockFace from '../../../org/bukkit/block/BlockFace.js'
 import BoundingBox from '../../../org/bukkit/util/BoundingBox.js'
+import CommandSender$Spigot from '../../../org/bukkit/command/CommandSender$Spigot.js'
 import Conversable from '../../../org/bukkit/conversations/Conversable.js'
 import Conversation from '../../../org/bukkit/conversations/Conversation.js'
 import ConversationAbandonedEvent from '../../../org/bukkit/conversations/ConversationAbandonedEvent.js'
 import DyeColor from '../../../org/bukkit/DyeColor.js'
 import Effect from '../../../org/bukkit/Effect.js'
 import Entity from './Entity.js'
+import Entity$Spigot from './Entity$Spigot.js'
 import EntityDamageEvent from '../../../org/bukkit/event/entity/EntityDamageEvent.js'
 import EntityEffect from '../../../org/bukkit/EntityEffect.js'
 import EntityEquipment from '../../../org/bukkit/inventory/EntityEquipment.js'
@@ -40,6 +42,7 @@ import Permission from '../../../org/bukkit/permissions/Permission.js'
 import PermissionAttachment from '../../../org/bukkit/permissions/PermissionAttachment.js'
 import PersistentDataContainer from '../../../org/bukkit/persistence/PersistentDataContainer.js'
 import PistonMoveReaction from '../../../org/bukkit/block/PistonMoveReaction.js'
+import Player$Spigot from './Player$Spigot.js'
 import PlayerInventory from '../../../org/bukkit/inventory/PlayerInventory.js'
 import PlayerTeleportEvent$TeleportCause from '../../../org/bukkit/event/player/PlayerTeleportEvent$TeleportCause.js'
 import Plugin from '../../../org/bukkit/plugin/Plugin.js'
@@ -80,9 +83,9 @@ export default interface Player extends HumanEntity, Conversable, OfflinePlayer,
 	damage(arg0: number): void;
 	damage(arg0: number, arg1: Entity): void;
 	decrementStatistic(arg0: Statistic): void;
+	decrementStatistic(arg0: Statistic, arg1: EntityType): void;
 	decrementStatistic(arg0: Statistic, arg1: Material): void;
 	decrementStatistic(arg0: Statistic, arg1: number): void;
-	decrementStatistic(arg0: Statistic, arg1: EntityType): void;
 	decrementStatistic(arg0: Statistic, arg1: Material, arg2: number): void;
 	decrementStatistic(arg0: Statistic, arg1: EntityType, arg2: number): void;
 	discoverRecipe(arg0: NamespacedKey): boolean;
@@ -93,16 +96,18 @@ export default interface Player extends HumanEntity, Conversable, OfflinePlayer,
 	getAddress(): any;
 	getAdvancementProgress(arg0: Advancement): AdvancementProgress;
 	getAllowFlight(): boolean;
+	getAttackCooldown(): number;
 	getAttribute(arg0: Attribute): AttributeInstance;
 	getBedLocation(): Location;
-	getBedSpawnLocation(): Location;
 	getBedSpawnLocation(): Location;
 	getBoundingBox(): BoundingBox;
 	getCanPickupItems(): boolean;
 	getClientViewDistance(): number;
+	getCollidableExemptions(): any;
 	getCompassTarget(): Location;
 	getCooldown(arg0: Material): number;
 	getCustomName(): string;
+	getDiscoveredRecipes(): any;
 	getDisplayName(): string;
 	getEffectivePermissions(): any;
 	getEnderChest(): Inventory;
@@ -196,18 +201,19 @@ export default interface Player extends HumanEntity, Conversable, OfflinePlayer,
 	giveExpLevels(arg0: number): void;
 	hasAI(): boolean;
 	hasCooldown(arg0: Material): boolean;
+	hasDiscoveredRecipe(arg0: NamespacedKey): boolean;
 	hasGravity(): boolean;
 	hasLineOfSight(arg0: Entity): boolean;
 	hasMetadata(arg0: string): boolean;
-	hasPermission(arg0: Permission): boolean;
 	hasPermission(arg0: string): boolean;
+	hasPermission(arg0: Permission): boolean;
 	hasPlayedBefore(): boolean;
 	hasPotionEffect(arg0: PotionEffectType): boolean;
 	hidePlayer(arg0: Player): void;
 	hidePlayer(arg0: Plugin, arg1: Player): void;
 	incrementStatistic(arg0: Statistic): void;
-	incrementStatistic(arg0: Statistic, arg1: EntityType): void;
 	incrementStatistic(arg0: Statistic, arg1: Material): void;
+	incrementStatistic(arg0: Statistic, arg1: EntityType): void;
 	incrementStatistic(arg0: Statistic, arg1: number): void;
 	incrementStatistic(arg0: Statistic, arg1: EntityType, arg2: number): void;
 	incrementStatistic(arg0: Statistic, arg1: Material, arg2: number): void;
@@ -229,8 +235,8 @@ export default interface Player extends HumanEntity, Conversable, OfflinePlayer,
 	isOnGround(): boolean;
 	isOnline(): boolean;
 	isOp(): boolean;
-	isPermissionSet(arg0: Permission): boolean;
 	isPermissionSet(arg0: string): boolean;
+	isPermissionSet(arg0: Permission): boolean;
 	isPersistent(): boolean;
 	isPlayerTimeRelative(): boolean;
 	isRiptiding(): boolean;
@@ -249,21 +255,21 @@ export default interface Player extends HumanEntity, Conversable, OfflinePlayer,
 	loadData(): void;
 	openBook(arg0: ItemStack): void;
 	openEnchanting(arg0: Location, arg1: boolean): InventoryView;
-	openInventory(arg0: InventoryView): void;
 	openInventory(arg0: Inventory): InventoryView;
+	openInventory(arg0: InventoryView): void;
 	openMerchant(arg0: Villager, arg1: boolean): InventoryView;
 	openMerchant(arg0: Merchant, arg1: boolean): InventoryView;
 	openWorkbench(arg0: Location, arg1: boolean): InventoryView;
 	performCommand(arg0: string): boolean;
 	playEffect(arg0: EntityEffect): void;
-	playEffect(arg0: Location, arg1: Effect, arg2: any): void;
 	playEffect(arg0: Location, arg1: Effect, arg2: number): void;
+	playEffect(arg0: Location, arg1: Effect, arg2: any): void;
 	playNote(arg0: Location, arg1: Instrument, arg2: Note): void;
 	playNote(arg0: Location, arg1: number, arg2: number): void;
 	playSound(arg0: Location, arg1: string, arg2: number, arg3: number): void;
 	playSound(arg0: Location, arg1: Sound, arg2: number, arg3: number): void;
-	playSound(arg0: Location, arg1: Sound, arg2: SoundCategory, arg3: number, arg4: number): void;
 	playSound(arg0: Location, arg1: string, arg2: SoundCategory, arg3: number, arg4: number): void;
+	playSound(arg0: Location, arg1: Sound, arg2: SoundCategory, arg3: number, arg4: number): void;
 	rayTraceBlocks(arg0: number): RayTraceResult;
 	rayTraceBlocks(arg0: number, arg1: FluidCollisionMode): RayTraceResult;
 	recalculatePermissions(): void;
@@ -357,8 +363,8 @@ export default interface Player extends HumanEntity, Conversable, OfflinePlayer,
 	setSpectatorTarget(arg0: Entity): void;
 	setSprinting(arg0: boolean): void;
 	setStatistic(arg0: Statistic, arg1: number): void;
-	setStatistic(arg0: Statistic, arg1: EntityType, arg2: number): void;
 	setStatistic(arg0: Statistic, arg1: Material, arg2: number): void;
+	setStatistic(arg0: Statistic, arg1: EntityType, arg2: number): void;
 	setSwimming(arg0: boolean): void;
 	setTexturePack(arg0: string): void;
 	setTicksLived(arg0: number): void;
@@ -382,8 +388,11 @@ export default interface Player extends HumanEntity, Conversable, OfflinePlayer,
 	spawnParticle(arg0: Particle, arg1: number, arg2: number, arg3: number, arg4: number, arg5: number, arg6: number, arg7: number, arg8: any): void;
 	spawnParticle(arg0: Particle, arg1: number, arg2: number, arg3: number, arg4: number, arg5: number, arg6: number, arg7: number, arg8: number): void;
 	spawnParticle(arg0: Particle, arg1: number, arg2: number, arg3: number, arg4: number, arg5: number, arg6: number, arg7: number, arg8: number, arg9: any): void;
-	stopSound(arg0: string): void;
+	spigot(): Player$Spigot;
+	spigot(): Entity$Spigot;
+	spigot(): CommandSender$Spigot;
 	stopSound(arg0: Sound): void;
+	stopSound(arg0: string): void;
 	stopSound(arg0: string, arg1: SoundCategory): void;
 	stopSound(arg0: Sound, arg1: SoundCategory): void;
 	swingMainHand(): void;

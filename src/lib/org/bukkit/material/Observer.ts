@@ -7,9 +7,9 @@ import MaterialData from './MaterialData.js'
 import Redstone from './Redstone.js'
 
 export default interface Observer extends MaterialData, Directional, Redstone {
-	clone(): MaterialData;
-	clone(): Observer;
 	clone(): any;
+	clone(): Observer;
+	clone(): MaterialData;
 	getData(): number;
 	getFacing(): BlockFace;
 	getItemType(): Material;

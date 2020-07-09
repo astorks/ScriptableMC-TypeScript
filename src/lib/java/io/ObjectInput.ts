@@ -1,7 +1,7 @@
 declare var Java: any;
 import DataInput from './DataInput.js'
 
-export default interface ObjectInput {
+export default interface ObjectInput extends DataInput {
 	available(): number;
 	close(): void;
 	read(): number;

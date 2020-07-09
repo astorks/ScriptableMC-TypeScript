@@ -3,7 +3,7 @@ import InventoryContents from '../../../fr/minuskube/inv/content/InventoryConten
 import InventoryProvider from '../../../fr/minuskube/inv/content/InventoryProvider.js'
 import Player from '../../../org/bukkit/entity/Player.js'
 
-export default interface SmartInventoryProvider {
+export default interface SmartInventoryProvider extends InventoryProvider {
 	init(player: Player, contents: InventoryContents): void;
 	update(player: Player, contents: InventoryContents): void;
 }

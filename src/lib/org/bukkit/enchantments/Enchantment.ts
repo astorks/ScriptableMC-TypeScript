@@ -158,6 +158,10 @@ export default class Enchantment {
 		return Enchantment.$javaClass.SILK_TOUCH;
 	}
 
+	public static get SOUL_SPEED(): Enchantment {
+		return Enchantment.$javaClass.SOUL_SPEED;
+	}
+
 	public static get SWEEPING_EDGE(): Enchantment {
 		return Enchantment.$javaClass.SWEEPING_EDGE;
 	}

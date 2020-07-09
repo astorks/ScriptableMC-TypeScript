@@ -36,6 +36,7 @@ import PluginManager from './plugin/PluginManager.js'
 import Recipe from './inventory/Recipe.js'
 import ScoreboardManager from './scoreboard/ScoreboardManager.js'
 import Server from './Server.js'
+import Server$Spigot from './Server$Spigot.js'
 import ServicesManager from './plugin/ServicesManager.js'
 import StructureType from './StructureType.js'
 import Tag from './Tag.js'
@@ -81,8 +82,8 @@ export default class Bukkit {
 
 	public static createBlockData(data: string): BlockData;
 	public static createBlockData(material: Material): BlockData;
-	public static createBlockData(material: Material, consumer: any): BlockData;
 	public static createBlockData(material: Material, data: string): BlockData;
+	public static createBlockData(material: Material, consumer: any): BlockData;
 	public static createBlockData(...args: any[]): any {
 		return Bukkit.$javaClass.createBlockData(...args);
 	}
@@ -104,10 +105,10 @@ export default class Bukkit {
 		return Bukkit.$javaClass.createExplorerMap(...args);
 	}
 
-	public static createInventory(owner: InventoryHolder, size: number): Inventory;
 	public static createInventory(owner: InventoryHolder, type: InventoryType): Inventory;
-	public static createInventory(owner: InventoryHolder, size: number, title: string): Inventory;
+	public static createInventory(owner: InventoryHolder, size: number): Inventory;
 	public static createInventory(owner: InventoryHolder, type: InventoryType, title: string): Inventory;
+	public static createInventory(owner: InventoryHolder, size: number, title: string): Inventory;
 	public static createInventory(...args: any[]): any {
 		return Bukkit.$javaClass.createInventory(...args);
 	}
@@ -282,8 +283,8 @@ export default class Bukkit {
 		return Bukkit.$javaClass.getName(...args);
 	}
 
-	public static getOfflinePlayer(_name: string): OfflinePlayer;
 	public static getOfflinePlayer(id: string): OfflinePlayer;
+	public static getOfflinePlayer(_name: string): OfflinePlayer;
 	public static getOfflinePlayer(...args: any[]): any {
 		return Bukkit.$javaClass.getOfflinePlayer(...args);
 	}
@@ -308,8 +309,8 @@ export default class Bukkit {
 		return Bukkit.$javaClass.getOperators(...args);
 	}
 
-	public static getPlayer(id: string): Player;
 	public static getPlayer(_name: string): Player;
+	public static getPlayer(id: string): Player;
 	public static getPlayer(...args: any[]): any {
 		return Bukkit.$javaClass.getPlayer(...args);
 	}
@@ -384,6 +385,11 @@ export default class Bukkit {
 		return Bukkit.$javaClass.getTags(...args);
 	}
 
+	public static getTicksPerAmbientSpawns(): number;
+	public static getTicksPerAmbientSpawns(...args: any[]): any {
+		return Bukkit.$javaClass.getTicksPerAmbientSpawns(...args);
+	}
+
 	public static getTicksPerAnimalSpawns(): number;
 	public static getTicksPerAnimalSpawns(...args: any[]): any {
 		return Bukkit.$javaClass.getTicksPerAnimalSpawns(...args);
@@ -392,6 +398,16 @@ export default class Bukkit {
 	public static getTicksPerMonsterSpawns(): number;
 	public static getTicksPerMonsterSpawns(...args: any[]): any {
 		return Bukkit.$javaClass.getTicksPerMonsterSpawns(...args);
+	}
+
+	public static getTicksPerWaterAmbientSpawns(): number;
+	public static getTicksPerWaterAmbientSpawns(...args: any[]): any {
+		return Bukkit.$javaClass.getTicksPerWaterAmbientSpawns(...args);
+	}
+
+	public static getTicksPerWaterSpawns(): number;
+	public static getTicksPerWaterSpawns(...args: any[]): any {
+		return Bukkit.$javaClass.getTicksPerWaterSpawns(...args);
 	}
 
 	public static getUnsafe(): UnsafeValues;
@@ -424,6 +440,11 @@ export default class Bukkit {
 		return Bukkit.$javaClass.getWarningState(...args);
 	}
 
+	public static getWaterAmbientSpawnLimit(): number;
+	public static getWaterAmbientSpawnLimit(...args: any[]): any {
+		return Bukkit.$javaClass.getWaterAmbientSpawnLimit(...args);
+	}
+
 	public static getWaterAnimalSpawnLimit(): number;
 	public static getWaterAnimalSpawnLimit(...args: any[]): any {
 		return Bukkit.$javaClass.getWaterAnimalSpawnLimit(...args);
@@ -434,8 +455,8 @@ export default class Bukkit {
 		return Bukkit.$javaClass.getWhitelistedPlayers(...args);
 	}
 
-	public static getWorld(_name: string): World;
 	public static getWorld(uid: string): World;
+	public static getWorld(_name: string): World;
 	public static getWorld(...args: any[]): any {
 		return Bukkit.$javaClass.getWorld(...args);
 	}
@@ -556,13 +577,18 @@ export default class Bukkit {
 		return Bukkit.$javaClass.shutdown(...args);
 	}
 
+	public static spigot(): Server$Spigot;
+	public static spigot(...args: any[]): any {
+		return Bukkit.$javaClass.spigot(...args);
+	}
+
 	public static unbanIP(address: string): void;
 	public static unbanIP(...args: any[]): any {
 		return Bukkit.$javaClass.unbanIP(...args);
 	}
 
-	public static unloadWorld(_name: string, save: boolean): boolean;
 	public static unloadWorld(world: World, save: boolean): boolean;
+	public static unloadWorld(_name: string, save: boolean): boolean;
 	public static unloadWorld(...args: any[]): any {
 		return Bukkit.$javaClass.unloadWorld(...args);
 	}

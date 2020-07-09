@@ -7,7 +7,7 @@ import FileLock from './FileLock.js'
 import OpenOption from '../../../java/nio/file/OpenOption.js'
 import Path from '../../../java/nio/file/Path.js'
 
-export default interface AsynchronousFileChannel {
+export default interface AsynchronousFileChannel extends AsynchronousChannel {
 	close(): void;
 	force(arg0: boolean): void;
 	isOpen(): boolean;

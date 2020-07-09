@@ -1,7 +1,7 @@
 declare var Java: any;
 import Authorization from './Authorization.js'
 
-export default interface BasicAuthorization {
+export default interface BasicAuthorization extends Authorization {
 	component1(): string;
 	component2(): string;
 	copy(user: string, password: string): BasicAuthorization;

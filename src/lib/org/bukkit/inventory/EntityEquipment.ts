@@ -1,5 +1,6 @@
 declare var Java: any;
 import Entity from '../../../org/bukkit/entity/Entity.js'
+import EquipmentSlot from './EquipmentSlot.js'
 import ItemStack from './ItemStack.js'
 
 export default interface EntityEquipment {
@@ -12,6 +13,7 @@ export default interface EntityEquipment {
 	getHelmet(): ItemStack;
 	getHelmetDropChance(): number;
 	getHolder(): Entity;
+	getItem(arg0: EquipmentSlot): ItemStack;
 	getItemInHand(): ItemStack;
 	getItemInHandDropChance(): number;
 	getItemInMainHand(): ItemStack;
@@ -27,6 +29,7 @@ export default interface EntityEquipment {
 	setChestplateDropChance(arg0: number): void;
 	setHelmet(arg0: ItemStack): void;
 	setHelmetDropChance(arg0: number): void;
+	setItem(arg0: EquipmentSlot, arg1: ItemStack): void;
 	setItemInHand(arg0: ItemStack): void;
 	setItemInHandDropChance(arg0: number): void;
 	setItemInMainHand(arg0: ItemStack): void;

@@ -1,7 +1,9 @@
 declare var Java: any;
 import BlockFace from '../../../org/bukkit/block/BlockFace.js'
 import BoundingBox from '../../../org/bukkit/util/BoundingBox.js'
+import CommandSender$Spigot from '../../../org/bukkit/command/CommandSender$Spigot.js'
 import Entity from './Entity.js'
+import Entity$Spigot from './Entity$Spigot.js'
 import EntityDamageEvent from '../../../org/bukkit/event/entity/EntityDamageEvent.js'
 import EntityEffect from '../../../org/bukkit/EntityEffect.js'
 import EntityType from './EntityType.js'
@@ -15,11 +17,13 @@ import PistonMoveReaction from '../../../org/bukkit/block/PistonMoveReaction.js'
 import PlayerTeleportEvent$TeleportCause from '../../../org/bukkit/event/player/PlayerTeleportEvent$TeleportCause.js'
 import Plugin from '../../../org/bukkit/plugin/Plugin.js'
 import Pose from './Pose.js'
+import Projectile from './Projectile.js'
+import ProjectileSource from '../../../org/bukkit/projectiles/ProjectileSource.js'
 import Server from '../../../org/bukkit/Server.js'
 import Vector from '../../../org/bukkit/util/Vector.js'
 import World from '../../../org/bukkit/World.js'
 
-export default interface Firework extends Entity {
+export default interface Firework extends Projectile {
 	addAttachment(arg0: Plugin): PermissionAttachment;
 	addAttachment(arg0: Plugin, arg1: number): PermissionAttachment;
 	addAttachment(arg0: Plugin, arg1: string, arg2: boolean): PermissionAttachment;
@@ -27,6 +31,7 @@ export default interface Firework extends Entity {
 	addPassenger(arg0: Entity): boolean;
 	addScoreboardTag(arg0: string): boolean;
 	detonate(): void;
+	doesBounce(): boolean;
 	eject(): boolean;
 	getBoundingBox(): BoundingBox;
 	getCustomName(): string;
@@ -52,6 +57,7 @@ export default interface Firework extends Entity {
 	getPose(): Pose;
 	getScoreboardTags(): any;
 	getServer(): Server;
+	getShooter(): ProjectileSource;
 	getTicksLived(): number;
 	getType(): EntityType;
 	getUniqueId(): string;
@@ -61,8 +67,8 @@ export default interface Firework extends Entity {
 	getWorld(): World;
 	hasGravity(): boolean;
 	hasMetadata(arg0: string): boolean;
-	hasPermission(arg0: Permission): boolean;
 	hasPermission(arg0: string): boolean;
+	hasPermission(arg0: Permission): boolean;
 	isCustomNameVisible(): boolean;
 	isDead(): boolean;
 	isEmpty(): boolean;
@@ -71,8 +77,8 @@ export default interface Firework extends Entity {
 	isInvulnerable(): boolean;
 	isOnGround(): boolean;
 	isOp(): boolean;
-	isPermissionSet(arg0: Permission): boolean;
 	isPermissionSet(arg0: string): boolean;
+	isPermissionSet(arg0: Permission): boolean;
 	isPersistent(): boolean;
 	isShotAtAngle(): boolean;
 	isSilent(): boolean;
@@ -87,6 +93,7 @@ export default interface Firework extends Entity {
 	removeScoreboardTag(arg0: string): boolean;
 	sendMessage(arg0: Array<string>): void;
 	sendMessage(arg0: string): void;
+	setBounce(arg0: boolean): void;
 	setCustomName(arg0: string): void;
 	setCustomNameVisible(arg0: boolean): void;
 	setFallDistance(arg0: number): void;
@@ -102,10 +109,13 @@ export default interface Firework extends Entity {
 	setPersistent(arg0: boolean): void;
 	setPortalCooldown(arg0: number): void;
 	setRotation(arg0: number, arg1: number): void;
+	setShooter(arg0: ProjectileSource): void;
 	setShotAtAngle(arg0: boolean): void;
 	setSilent(arg0: boolean): void;
 	setTicksLived(arg0: number): void;
 	setVelocity(arg0: Vector): void;
+	spigot(): Entity$Spigot;
+	spigot(): CommandSender$Spigot;
 	teleport(arg0: Location): boolean;
 	teleport(arg0: Entity): boolean;
 	teleport(arg0: Location, arg1: PlayerTeleportEvent$TeleportCause): boolean;

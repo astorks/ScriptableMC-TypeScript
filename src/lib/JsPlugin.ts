@@ -9,14 +9,12 @@ import MysqlWrapper from "./com/smc/utils/MysqlWrapper.js";
 import File from "./java/io/File.js";
 import ScriptablePluginEngine from "./com/pixlfox/scriptablemc/core/ScriptablePluginEngine.js";
 import ScriptEngineConfig from "./com/pixlfox/scriptablemc/ScriptEngineConfig.js";
-import Material from "./org/bukkit/Material.js";
 
 declare type Type<T> = { new (...args: any[]): T; };
 declare const engine: ScriptablePluginEngine;
 
 export default class JsPlugin {
     public context: ScriptablePluginContext;
-    public pluginIcon: Material = Material.STONE;
 
     get pluginName(): string {
         return this.constructor.name;

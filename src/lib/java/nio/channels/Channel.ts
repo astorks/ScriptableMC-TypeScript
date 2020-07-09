@@ -1,7 +1,7 @@
 declare var Java: any;
 import Closeable from '../../../java/io/Closeable.js'
 
-export default interface Channel {
+export default interface Channel extends Closeable {
 	close(): void;
 	isOpen(): boolean;
 }

@@ -28,6 +28,9 @@ export default class Biome {
 	public static get BAMBOO_JUNGLE_HILLS(): Biome {
 		return this.$javaClass.BAMBOO_JUNGLE_HILLS;
 	}
+	public static get BASALT_DELTAS(): Biome {
+		return this.$javaClass.BASALT_DELTAS;
+	}
 	public static get BEACH(): Biome {
 		return this.$javaClass.BEACH;
 	}
@@ -39,6 +42,9 @@ export default class Biome {
 	}
 	public static get COLD_OCEAN(): Biome {
 		return this.$javaClass.COLD_OCEAN;
+	}
+	public static get CRIMSON_FOREST(): Biome {
+		return this.$javaClass.CRIMSON_FOREST;
 	}
 	public static get DARK_FOREST(): Biome {
 		return this.$javaClass.DARK_FOREST;
@@ -151,8 +157,8 @@ export default class Biome {
 	public static get MUSHROOM_FIELD_SHORE(): Biome {
 		return this.$javaClass.MUSHROOM_FIELD_SHORE;
 	}
-	public static get NETHER(): Biome {
-		return this.$javaClass.NETHER;
+	public static get NETHER_WASTES(): Biome {
+		return this.$javaClass.NETHER_WASTES;
 	}
 	public static get OCEAN(): Biome {
 		return this.$javaClass.OCEAN;
@@ -196,6 +202,9 @@ export default class Biome {
 	public static get SNOWY_TUNDRA(): Biome {
 		return this.$javaClass.SNOWY_TUNDRA;
 	}
+	public static get SOUL_SAND_VALLEY(): Biome {
+		return this.$javaClass.SOUL_SAND_VALLEY;
+	}
 	public static get STONE_SHORE(): Biome {
 		return this.$javaClass.STONE_SHORE;
 	}
@@ -231,6 +240,9 @@ export default class Biome {
 	}
 	public static get WARM_OCEAN(): Biome {
 		return this.$javaClass.WARM_OCEAN;
+	}
+	public static get WARPED_FOREST(): Biome {
+		return this.$javaClass.WARPED_FOREST;
 	}
 	public static get WOODED_BADLANDS_PLATEAU(): Biome {
 		return this.$javaClass.WOODED_BADLANDS_PLATEAU;

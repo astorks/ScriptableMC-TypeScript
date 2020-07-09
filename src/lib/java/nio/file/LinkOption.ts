@@ -2,7 +2,7 @@ declare var Java: any;
 import CopyOption from './CopyOption.js'
 import OpenOption from './OpenOption.js'
 
-export default interface LinkOption {
+export default interface LinkOption extends OpenOption, CopyOption {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
 	getDeclaringClass(): any;

@@ -17,12 +17,6 @@ export default class WorldType {
 	public static get AMPLIFIED(): WorldType {
 		return this.$javaClass.AMPLIFIED;
 	}
-	public static get BUFFET(): WorldType {
-		return this.$javaClass.BUFFET;
-	}
-	public static get CUSTOMIZED(): WorldType {
-		return this.$javaClass.CUSTOMIZED;
-	}
 	public static get FLAT(): WorldType {
 		return this.$javaClass.FLAT;
 	}
@@ -31,9 +25,6 @@ export default class WorldType {
 	}
 	public static get NORMAL(): WorldType {
 		return this.$javaClass.NORMAL;
-	}
-	public static get VERSION_1_1(): WorldType {
-		return this.$javaClass.VERSION_1_1;
 	}
 }
 

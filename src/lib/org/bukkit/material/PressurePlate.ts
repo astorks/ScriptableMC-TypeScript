@@ -5,9 +5,9 @@ import MaterialData from './MaterialData.js'
 import PressureSensor from './PressureSensor.js'
 
 export default interface PressurePlate extends MaterialData, PressureSensor {
-	clone(): any;
 	clone(): PressurePlate;
 	clone(): MaterialData;
+	clone(): any;
 	getData(): number;
 	getItemType(): Material;
 	isPressed(): boolean;

@@ -53,6 +53,9 @@ export default class EnchantmentTarget {
 	public static get TRIDENT(): EnchantmentTarget {
 		return this.$javaClass.TRIDENT;
 	}
+	public static get VANISHABLE(): EnchantmentTarget {
+		return this.$javaClass.VANISHABLE;
+	}
 	public static get WEAPON(): EnchantmentTarget {
 		return this.$javaClass.WEAPON;
 	}

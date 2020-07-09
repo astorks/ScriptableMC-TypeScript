@@ -2,7 +2,7 @@ declare var Java: any;
 import ByteBuffer from '../../../java/nio/ByteBuffer.js'
 import ReadableByteChannel from './ReadableByteChannel.js'
 
-export default interface ScatteringByteChannel {
+export default interface ScatteringByteChannel extends ReadableByteChannel {
 	close(): void;
 	isOpen(): boolean;
 	read(arg0: Array<ByteBuffer>): number;

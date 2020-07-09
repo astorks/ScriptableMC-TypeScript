@@ -8,10 +8,10 @@ export default interface SimplexNoiseGenerator extends PerlinNoiseGenerator {
 	noise(xin: number, yin: number, zin: number): number;
 	noise(x: number, y: number, z: number, w: number): number;
 	noise(x: number, octaves: number, frequency: number, amplitude: number): number;
-	noise(x: number, y: number, octaves: number, frequency: number, amplitude: number): number;
 	noise(x: number, octaves: number, frequency: number, amplitude: number, normalized: boolean): number;
-	noise(x: number, y: number, octaves: number, frequency: number, amplitude: number, normalized: boolean): number;
+	noise(x: number, y: number, octaves: number, frequency: number, amplitude: number): number;
 	noise(x: number, y: number, z: number, octaves: number, frequency: number, amplitude: number): number;
+	noise(x: number, y: number, octaves: number, frequency: number, amplitude: number, normalized: boolean): number;
 	noise(x: number, y: number, z: number, octaves: number, frequency: number, amplitude: number, normalized: boolean): number;
 }
 
@@ -20,8 +20,8 @@ export default class SimplexNoiseGenerator {
 		return Java.type('org.bukkit.util.noise.SimplexNoiseGenerator');
 	}
 
-	constructor(seed: number);
 	constructor(world: World);
+	constructor(seed: number);
 	constructor(rand: any);
 	constructor(...args: any[]) {
 		return new SimplexNoiseGenerator.$javaClass(...args);

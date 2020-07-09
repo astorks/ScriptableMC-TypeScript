@@ -36,7 +36,7 @@ export default interface CookieJar {
 	replaceAll(_function: any): void;
 	setCookie(cookie: Cookie): void;
 	size(): number;
-	values(): Array<any>;
+	values(): Array<string>;
 }
 
 export default class CookieJar {
@@ -47,7 +47,7 @@ export default class CookieJar {
 	constructor();
 	constructor(cookies: Array<Cookie>);
 	constructor(cookies: any);
-	constructor(elements$iv: Array<Cookie>, arg1: number, arg2: any);
+	constructor(arg0: Array<Cookie>, arg1: number, arg2: any);
 	constructor(...args: any[]) {
 		return new CookieJar.$javaClass(...args);
 	}

@@ -2,7 +2,7 @@ declare var Java: any;
 import Closeable from './Closeable.js'
 import Flushable from './Flushable.js'
 
-export default interface Writer {
+export default interface Writer extends Closeable, Flushable {
 	append(c: string): Writer;
 	append(c: string): any;
 	append(csq: any): any;

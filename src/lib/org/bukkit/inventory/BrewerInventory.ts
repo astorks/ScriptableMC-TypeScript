@@ -25,8 +25,8 @@ export default interface BrewerInventory extends Inventory {
 	forEach(action: any): void;
 	getContents(): Array<ItemStack>;
 	getFuel(): ItemStack;
-	getHolder(): InventoryHolder;
 	getHolder(): BrewingStand;
+	getHolder(): InventoryHolder;
 	getIngredient(): ItemStack;
 	getItem(arg0: number): ItemStack;
 	getLocation(): Location;

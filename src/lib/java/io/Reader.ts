@@ -3,7 +3,7 @@ import CharBuffer from '../../java/nio/CharBuffer.js'
 import Closeable from './Closeable.js'
 import Writer from './Writer.js'
 
-export default interface Reader {
+export default interface Reader extends Closeable {
 	close(): void;
 	mark(readAheadLimit: number): void;
 	markSupported(): boolean;

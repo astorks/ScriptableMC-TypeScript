@@ -5,7 +5,7 @@ import OutputStream from '../../java/io/OutputStream.js'
 import Reader from '../../java/io/Reader.js'
 import Writer from '../../java/io/Writer.js'
 
-export default interface NClob {
+export default interface NClob extends Clob {
 	free(): void;
 	getAsciiStream(): InputStream;
 	getCharacterStream(): Reader;

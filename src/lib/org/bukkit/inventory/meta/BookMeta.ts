@@ -2,6 +2,7 @@ declare var Java: any;
 import Attribute from '../../../../org/bukkit/attribute/Attribute.js'
 import AttributeModifier from '../../../../org/bukkit/attribute/AttributeModifier.js'
 import BookMeta$Generation from './BookMeta$Generation.js'
+import BookMeta$Spigot from './BookMeta$Spigot.js'
 import CustomItemTagContainer from './tags/CustomItemTagContainer.js'
 import Enchantment from '../../../../org/bukkit/enchantments/Enchantment.js'
 import EquipmentSlot from '../../../../org/bukkit/inventory/EquipmentSlot.js'
@@ -19,8 +20,8 @@ export default interface BookMeta extends ItemMeta {
 	clone(): BookMeta;
 	clone(): any;
 	getAttributeModifiers(): Multimap;
-	getAttributeModifiers(arg0: EquipmentSlot): Multimap;
 	getAttributeModifiers(arg0: Attribute): Array<AttributeModifier>;
+	getAttributeModifiers(arg0: EquipmentSlot): Multimap;
 	getAuthor(): string;
 	getCustomModelData(): number;
 	getCustomTagContainer(): CustomItemTagContainer;
@@ -50,8 +51,8 @@ export default interface BookMeta extends ItemMeta {
 	hasPages(): boolean;
 	hasTitle(): boolean;
 	isUnbreakable(): boolean;
-	removeAttributeModifier(arg0: EquipmentSlot): boolean;
 	removeAttributeModifier(arg0: Attribute): boolean;
+	removeAttributeModifier(arg0: EquipmentSlot): boolean;
 	removeAttributeModifier(arg0: Attribute, arg1: AttributeModifier): boolean;
 	removeEnchant(arg0: Enchantment): boolean;
 	removeItemFlags(arg0: Array<ItemFlag>): void;
@@ -69,6 +70,7 @@ export default interface BookMeta extends ItemMeta {
 	setTitle(arg0: string): boolean;
 	setUnbreakable(arg0: boolean): void;
 	setVersion(arg0: number): void;
+	spigot(): BookMeta$Spigot;
 }
 
 export default class BookMeta {

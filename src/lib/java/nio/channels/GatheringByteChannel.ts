@@ -2,7 +2,7 @@ declare var Java: any;
 import ByteBuffer from '../../../java/nio/ByteBuffer.js'
 import WritableByteChannel from './WritableByteChannel.js'
 
-export default interface GatheringByteChannel {
+export default interface GatheringByteChannel extends WritableByteChannel {
 	close(): void;
 	isOpen(): boolean;
 	write(arg0: Array<ByteBuffer>): number;

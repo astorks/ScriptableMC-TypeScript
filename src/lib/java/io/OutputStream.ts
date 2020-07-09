@@ -2,7 +2,7 @@ declare var Java: any;
 import Closeable from './Closeable.js'
 import Flushable from './Flushable.js'
 
-export default interface OutputStream {
+export default interface OutputStream extends Closeable, Flushable {
 	close(): void;
 	flush(): void;
 	write(b: Array<number>): void;

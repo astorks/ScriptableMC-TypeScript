@@ -31,6 +31,9 @@ export default class TreeType {
 	public static get COCOA_TREE(): TreeType {
 		return this.$javaClass.COCOA_TREE;
 	}
+	public static get CRIMSON_FUNGUS(): TreeType {
+		return this.$javaClass.CRIMSON_FUNGUS;
+	}
 	public static get DARK_OAK(): TreeType {
 		return this.$javaClass.DARK_OAK;
 	}
@@ -63,6 +66,9 @@ export default class TreeType {
 	}
 	public static get TREE(): TreeType {
 		return this.$javaClass.TREE;
+	}
+	public static get WARPED_FUNGUS(): TreeType {
+		return this.$javaClass.WARPED_FUNGUS;
 	}
 }
 

@@ -6,7 +6,7 @@ import PathMatcher from './PathMatcher.js'
 import UserPrincipalLookupService from './attribute/UserPrincipalLookupService.js'
 import WatchService from './WatchService.js'
 
-export default interface FileSystem {
+export default interface FileSystem extends Closeable {
 	close(): void;
 	getFileStores(): any;
 	getPath(arg0: string, arg1: Array<string>): Path;

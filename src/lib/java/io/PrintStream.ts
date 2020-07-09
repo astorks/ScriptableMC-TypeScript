@@ -5,7 +5,7 @@ import File from './File.js'
 import FilterOutputStream from './FilterOutputStream.js'
 import OutputStream from './OutputStream.js'
 
-export default interface PrintStream extends FilterOutputStream {
+export default interface PrintStream extends FilterOutputStream, Closeable {
 	append(csq: any): any;
 	append(csq: any): PrintStream;
 	append(c: string): any;

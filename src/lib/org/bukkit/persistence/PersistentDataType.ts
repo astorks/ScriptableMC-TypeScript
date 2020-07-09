@@ -57,5 +57,9 @@ export default class PersistentDataType {
 		return PersistentDataType.$javaClass.TAG_CONTAINER;
 	}
 
+	public static get TAG_CONTAINER_ARRAY(): PersistentDataType {
+		return PersistentDataType.$javaClass.TAG_CONTAINER_ARRAY;
+	}
+
 }
 

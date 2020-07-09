@@ -1,4 +1,5 @@
 declare var Java: any;
+import EquipmentSlot from './EquipmentSlot.js'
 import HumanEntity from '../../../org/bukkit/entity/HumanEntity.js'
 import Inventory from './Inventory.js'
 import InventoryHolder from './InventoryHolder.js'
@@ -31,6 +32,7 @@ export default interface PlayerInventory extends Inventory {
 	getHelmet(): ItemStack;
 	getHolder(): HumanEntity;
 	getHolder(): InventoryHolder;
+	getItem(arg0: EquipmentSlot): ItemStack;
 	getItem(arg0: number): ItemStack;
 	getItemInHand(): ItemStack;
 	getItemInMainHand(): ItemStack;
@@ -55,6 +57,7 @@ export default interface PlayerInventory extends Inventory {
 	setExtraContents(arg0: Array<ItemStack>): void;
 	setHeldItemSlot(arg0: number): void;
 	setHelmet(arg0: ItemStack): void;
+	setItem(arg0: EquipmentSlot, arg1: ItemStack): void;
 	setItem(arg0: number, arg1: ItemStack): void;
 	setItemInHand(arg0: ItemStack): void;
 	setItemInMainHand(arg0: ItemStack): void;

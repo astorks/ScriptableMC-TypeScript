@@ -12,6 +12,7 @@ import ChunkGenerator from './generator/ChunkGenerator.js'
 import ChunkSnapshot from './ChunkSnapshot.js'
 import Consumer from './util/Consumer.js'
 import Difficulty from './Difficulty.js'
+import DragonBattle from './boss/DragonBattle.js'
 import Effect from './Effect.js'
 import Entity from './entity/Entity.js'
 import EntityType from './entity/EntityType.js'
@@ -41,6 +42,7 @@ import StructureType from './StructureType.js'
 import TreeType from './TreeType.js'
 import Vector from './util/Vector.js'
 import World$Environment from './World$Environment.js'
+import World$Spigot from './World$Spigot.js'
 import WorldBorder from './WorldBorder.js'
 import WorldType from './WorldType.js'
 
@@ -72,6 +74,7 @@ export default interface World extends PluginMessageRecipient, Metadatable {
 	getChunkAt(arg0: number, arg1: number): Chunk;
 	getDifficulty(): Difficulty;
 	getEmptyChunkSnapshot(arg0: number, arg1: number, arg2: boolean, arg3: boolean): ChunkSnapshot;
+	getEnderDragonBattle(): DragonBattle;
 	getEntities(): Array<Entity>;
 	getEntitiesByClass(arg0: any): Array<any>;
 	getEntitiesByClass(arg0: Array<any>): Array<any>;
@@ -118,11 +121,15 @@ export default interface World extends PluginMessageRecipient, Metadatable {
 	getTemperature(arg0: number, arg1: number): number;
 	getTemperature(arg0: number, arg1: number, arg2: number): number;
 	getThunderDuration(): number;
+	getTicksPerAmbientSpawns(): number;
 	getTicksPerAnimalSpawns(): number;
 	getTicksPerMonsterSpawns(): number;
+	getTicksPerWaterAmbientSpawns(): number;
+	getTicksPerWaterSpawns(): number;
 	getTime(): number;
 	getUID(): string;
 	getViewDistance(): number;
+	getWaterAmbientSpawnLimit(): number;
 	getWaterAnimalSpawnLimit(): number;
 	getWeatherDuration(): number;
 	getWorldBorder(): WorldBorder;
@@ -144,14 +151,14 @@ export default interface World extends PluginMessageRecipient, Metadatable {
 	loadChunk(arg0: number, arg1: number, arg2: boolean): boolean;
 	locateNearestRaid(arg0: Location, arg1: number): Raid;
 	locateNearestStructure(arg0: Location, arg1: StructureType, arg2: number, arg3: boolean): Location;
-	playEffect(arg0: Location, arg1: Effect, arg2: number): void;
 	playEffect(arg0: Location, arg1: Effect, arg2: any): void;
+	playEffect(arg0: Location, arg1: Effect, arg2: number): void;
 	playEffect(arg0: Location, arg1: Effect, arg2: any, arg3: number): void;
 	playEffect(arg0: Location, arg1: Effect, arg2: number, arg3: number): void;
-	playSound(arg0: Location, arg1: string, arg2: number, arg3: number): void;
 	playSound(arg0: Location, arg1: Sound, arg2: number, arg3: number): void;
-	playSound(arg0: Location, arg1: string, arg2: SoundCategory, arg3: number, arg4: number): void;
+	playSound(arg0: Location, arg1: string, arg2: number, arg3: number): void;
 	playSound(arg0: Location, arg1: Sound, arg2: SoundCategory, arg3: number, arg4: number): void;
+	playSound(arg0: Location, arg1: string, arg2: SoundCategory, arg3: number, arg4: number): void;
 	rayTrace(arg0: Location, arg1: Vector, arg2: number, arg3: FluidCollisionMode, arg4: boolean, arg5: number, arg6: any): RayTraceResult;
 	rayTraceBlocks(arg0: Location, arg1: Vector, arg2: number): RayTraceResult;
 	rayTraceBlocks(arg0: Location, arg1: Vector, arg2: number, arg3: FluidCollisionMode): RayTraceResult;
@@ -188,9 +195,13 @@ export default interface World extends PluginMessageRecipient, Metadatable {
 	setStorm(arg0: boolean): void;
 	setThunderDuration(arg0: number): void;
 	setThundering(arg0: boolean): void;
+	setTicksPerAmbientSpawns(arg0: number): void;
 	setTicksPerAnimalSpawns(arg0: number): void;
 	setTicksPerMonsterSpawns(arg0: number): void;
+	setTicksPerWaterAmbientSpawns(arg0: number): void;
+	setTicksPerWaterSpawns(arg0: number): void;
 	setTime(arg0: number): void;
+	setWaterAmbientSpawnLimit(arg0: number): void;
 	setWaterAnimalSpawnLimit(arg0: number): void;
 	setWeatherDuration(arg0: number): void;
 	spawn(arg0: Location, arg1: any): Entity;
@@ -204,17 +215,18 @@ export default interface World extends PluginMessageRecipient, Metadatable {
 	spawnParticle(arg0: Particle, arg1: Location, arg2: number): void;
 	spawnParticle(arg0: Particle, arg1: Location, arg2: number, arg3: any): void;
 	spawnParticle(arg0: Particle, arg1: number, arg2: number, arg3: number, arg4: number): void;
-	spawnParticle(arg0: Particle, arg1: number, arg2: number, arg3: number, arg4: number, arg5: any): void;
 	spawnParticle(arg0: Particle, arg1: Location, arg2: number, arg3: number, arg4: number, arg5: number): void;
-	spawnParticle(arg0: Particle, arg1: Location, arg2: number, arg3: number, arg4: number, arg5: number, arg6: any): void;
+	spawnParticle(arg0: Particle, arg1: number, arg2: number, arg3: number, arg4: number, arg5: any): void;
 	spawnParticle(arg0: Particle, arg1: Location, arg2: number, arg3: number, arg4: number, arg5: number, arg6: number): void;
+	spawnParticle(arg0: Particle, arg1: Location, arg2: number, arg3: number, arg4: number, arg5: number, arg6: any): void;
 	spawnParticle(arg0: Particle, arg1: number, arg2: number, arg3: number, arg4: number, arg5: number, arg6: number, arg7: number): void;
 	spawnParticle(arg0: Particle, arg1: Location, arg2: number, arg3: number, arg4: number, arg5: number, arg6: number, arg7: any): void;
+	spawnParticle(arg0: Particle, arg1: Location, arg2: number, arg3: number, arg4: number, arg5: number, arg6: number, arg7: any, arg8: boolean): void;
 	spawnParticle(arg0: Particle, arg1: number, arg2: number, arg3: number, arg4: number, arg5: number, arg6: number, arg7: number, arg8: any): void;
 	spawnParticle(arg0: Particle, arg1: number, arg2: number, arg3: number, arg4: number, arg5: number, arg6: number, arg7: number, arg8: number): void;
-	spawnParticle(arg0: Particle, arg1: Location, arg2: number, arg3: number, arg4: number, arg5: number, arg6: number, arg7: any, arg8: boolean): void;
 	spawnParticle(arg0: Particle, arg1: number, arg2: number, arg3: number, arg4: number, arg5: number, arg6: number, arg7: number, arg8: number, arg9: any): void;
 	spawnParticle(arg0: Particle, arg1: number, arg2: number, arg3: number, arg4: number, arg5: number, arg6: number, arg7: number, arg8: number, arg9: any, arg10: boolean): void;
+	spigot(): World$Spigot;
 	strikeLightning(arg0: Location): LightningStrike;
 	strikeLightningEffect(arg0: Location): LightningStrike;
 	unloadChunk(arg0: Chunk): boolean;

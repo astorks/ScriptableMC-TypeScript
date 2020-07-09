@@ -6,9 +6,9 @@ import Material from '../../../org/bukkit/Material.js'
 import MaterialData from './MaterialData.js'
 
 export default interface Bed extends MaterialData, Directional {
+	clone(): MaterialData;
 	clone(): any;
 	clone(): Bed;
-	clone(): MaterialData;
 	getData(): number;
 	getFacing(): BlockFace;
 	getItemType(): Material;

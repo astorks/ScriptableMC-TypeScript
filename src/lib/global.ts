@@ -48,6 +48,7 @@ import org_bukkit_boss_BarColor from './org/bukkit/boss/BarColor.js'
 import org_bukkit_boss_BarFlag from './org/bukkit/boss/BarFlag.js'
 import org_bukkit_boss_BarStyle from './org/bukkit/boss/BarStyle.js'
 import org_bukkit_block_Barrel from './org/bukkit/block/Barrel.js'
+import net_md_5_bungee_api_chat_BaseComponent from './net/md_5/bungee/api/chat/BaseComponent.js'
 import khttp_structures_authorization_BasicAuthorization from './khttp/structures/authorization/BasicAuthorization.js'
 import java_nio_file_attribute_BasicFileAttributes from './java/nio/file/attribute/BasicFileAttributes.js'
 import org_bukkit_entity_Bat from './org/bukkit/entity/Bat.js'
@@ -114,6 +115,7 @@ import org_bukkit_util_BlockVector from './org/bukkit/util/BlockVector.js'
 import org_bukkit_entity_Boat from './org/bukkit/entity/Boat.js'
 import org_bukkit_inventory_meta_BookMeta from './org/bukkit/inventory/meta/BookMeta.js'
 import org_bukkit_inventory_meta_BookMeta$Generation from './org/bukkit/inventory/meta/BookMeta$Generation.js'
+import org_bukkit_inventory_meta_BookMeta$Spigot from './org/bukkit/inventory/meta/BookMeta$Spigot.js'
 import org_bukkit_conversations_BooleanPrompt from './org/bukkit/conversations/BooleanPrompt.js'
 import org_bukkit_entity_Boss from './org/bukkit/entity/Boss.js'
 import org_bukkit_boss_BossBar from './org/bukkit/boss/BossBar.js'
@@ -168,7 +170,9 @@ import java_nio_CharBuffer from './java/nio/CharBuffer.js'
 import java_nio_charset_Charset from './java/nio/charset/Charset.js'
 import java_nio_charset_CharsetDecoder from './java/nio/charset/CharsetDecoder.js'
 import java_nio_charset_CharsetEncoder from './java/nio/charset/CharsetEncoder.js'
+import net_md_5_bungee_api_ChatColor from './net/md_5/bungee/api/ChatColor.js'
 import org_bukkit_ChatColor from './org/bukkit/ChatColor.js'
+import net_md_5_bungee_api_ChatMessageType from './net/md_5/bungee/api/ChatMessageType.js'
 import org_bukkit_util_ChatPaginator from './org/bukkit/util/ChatPaginator.js'
 import org_bukkit_util_ChatPaginator$ChatPage from './org/bukkit/util/ChatPaginator$ChatPage.js'
 import org_bukkit_material_Chest from './org/bukkit/material/Chest.js'
@@ -186,6 +190,8 @@ import org_bukkit_event_world_ChunkLoadEvent from './org/bukkit/event/world/Chun
 import org_bukkit_event_world_ChunkPopulateEvent from './org/bukkit/event/world/ChunkPopulateEvent.js'
 import org_bukkit_ChunkSnapshot from './org/bukkit/ChunkSnapshot.js'
 import org_bukkit_event_world_ChunkUnloadEvent from './org/bukkit/event/world/ChunkUnloadEvent.js'
+import net_md_5_bungee_api_chat_ClickEvent from './net/md_5/bungee/api/chat/ClickEvent.js'
+import net_md_5_bungee_api_chat_ClickEvent$Action from './net/md_5/bungee/api/chat/ClickEvent$Action.js'
 import org_bukkit_event_inventory_ClickType from './org/bukkit/event/inventory/ClickType.js'
 import fr_minuskube_inv_ClickableItem from './fr/minuskube/inv/ClickableItem.js'
 import java_sql_Clob from './java/sql/Clob.js'
@@ -210,6 +216,7 @@ import org_bukkit_command_CommandMap from './org/bukkit/command/CommandMap.js'
 import org_bukkit_entity_minecart_CommandMinecart from './org/bukkit/entity/minecart/CommandMinecart.js'
 import org_bukkit_util_permissions_CommandPermissions from './org/bukkit/util/permissions/CommandPermissions.js'
 import org_bukkit_command_CommandSender from './org/bukkit/command/CommandSender.js'
+import org_bukkit_command_CommandSender$Spigot from './org/bukkit/command/CommandSender$Spigot.js'
 import org_bukkit_material_Comparator from './org/bukkit/material/Comparator.js'
 import org_bukkit_block_Comparator from './org/bukkit/block/Comparator.js'
 import org_bukkit_block_data_type_Comparator from './org/bukkit/block/data/type/Comparator.js'
@@ -218,6 +225,9 @@ import java_nio_channels_CompletionHandler from './java/nio/channels/CompletionH
 import org_bukkit_entity_ComplexEntityPart from './org/bukkit/entity/ComplexEntityPart.js'
 import org_bukkit_entity_ComplexLivingEntity from './org/bukkit/entity/ComplexLivingEntity.js'
 import org_bukkit_inventory_ComplexRecipe from './org/bukkit/inventory/ComplexRecipe.js'
+import net_md_5_bungee_api_chat_ComponentBuilder from './net/md_5/bungee/api/chat/ComponentBuilder.js'
+import net_md_5_bungee_api_chat_ComponentBuilder$FormatRetention from './net/md_5/bungee/api/chat/ComponentBuilder$FormatRetention.js'
+import net_md_5_bungee_api_chat_ComponentBuilder$Joiner from './net/md_5/bungee/api/chat/ComponentBuilder$Joiner.js'
 import org_bukkit_block_Conduit from './org/bukkit/block/Conduit.js'
 import org_bukkit_configuration_Configuration from './org/bukkit/configuration/Configuration.js'
 import org_bukkit_configuration_ConfigurationOptions from './org/bukkit/configuration/ConfigurationOptions.js'
@@ -288,6 +298,8 @@ import java_nio_DoubleBuffer from './java/nio/DoubleBuffer.js'
 import org_bukkit_block_DoubleChest from './org/bukkit/block/DoubleChest.js'
 import org_bukkit_inventory_DoubleChestInventory from './org/bukkit/inventory/DoubleChestInventory.js'
 import org_bukkit_event_inventory_DragType from './org/bukkit/event/inventory/DragType.js'
+import org_bukkit_boss_DragonBattle from './org/bukkit/boss/DragonBattle.js'
+import org_bukkit_boss_DragonBattle$RespawnPhase from './org/bukkit/boss/DragonBattle$RespawnPhase.js'
 import org_bukkit_entity_DragonFireball from './org/bukkit/entity/DragonFireball.js'
 import org_bukkit_block_Dropper from './org/bukkit/block/Dropper.js'
 import org_bukkit_entity_Drowned from './org/bukkit/entity/Drowned.js'
@@ -320,6 +332,7 @@ import org_bukkit_entity_EnderSignal from './org/bukkit/entity/EnderSignal.js'
 import org_bukkit_entity_Enderman from './org/bukkit/entity/Enderman.js'
 import org_bukkit_entity_Endermite from './org/bukkit/entity/Endermite.js'
 import org_bukkit_entity_Entity from './org/bukkit/entity/Entity.js'
+import org_bukkit_entity_Entity$Spigot from './org/bukkit/entity/Entity$Spigot.js'
 import org_bukkit_event_entity_EntityAirChangeEvent from './org/bukkit/event/entity/EntityAirChangeEvent.js'
 import org_bukkit_event_block_EntityBlockFormEvent from './org/bukkit/event/block/EntityBlockFormEvent.js'
 import org_bukkit_block_EntityBlockStorage from './org/bukkit/block/EntityBlockStorage.js'
@@ -387,6 +400,8 @@ import org_bukkit_event_entity_ExplosionPrimeEvent from './org/bukkit/event/enti
 import org_bukkit_entity_Explosive from './org/bukkit/entity/Explosive.js'
 import org_bukkit_entity_minecart_ExplosiveMinecart from './org/bukkit/entity/minecart/ExplosiveMinecart.js'
 import org_bukkit_material_ExtendedRails from './org/bukkit/material/ExtendedRails.js'
+import org_bukkit_block_data_FaceAttachable from './org/bukkit/block/data/FaceAttachable.js'
+import org_bukkit_block_data_FaceAttachable$AttachedFace from './org/bukkit/block/data/FaceAttachable$AttachedFace.js'
 import org_bukkit_entity_FallingBlock from './org/bukkit/entity/FallingBlock.js'
 import org_bukkit_block_data_type_Farmland from './org/bukkit/block/data/type/Farmland.js'
 import org_bukkit_block_data_type_Fence from './org/bukkit/block/data/type/Fence.js'
@@ -484,6 +499,8 @@ import org_bukkit_entity_Horse$Style from './org/bukkit/entity/Horse$Style.js'
 import org_bukkit_entity_Horse$Variant from './org/bukkit/entity/Horse$Variant.js'
 import org_bukkit_inventory_HorseInventory from './org/bukkit/inventory/HorseInventory.js'
 import org_bukkit_event_entity_HorseJumpEvent from './org/bukkit/event/entity/HorseJumpEvent.js'
+import net_md_5_bungee_api_chat_HoverEvent from './net/md_5/bungee/api/chat/HoverEvent.js'
+import net_md_5_bungee_api_chat_HoverEvent$Action from './net/md_5/bungee/api/chat/HoverEvent$Action.js'
 import com_smc_utils_Http from './com/smc/utils/Http.js'
 import org_bukkit_entity_HumanEntity from './org/bukkit/entity/HumanEntity.js'
 import org_bukkit_entity_Husk from './org/bukkit/entity/Husk.js'
@@ -539,6 +556,8 @@ import org_bukkit_plugin_java_JavaPluginLoader from './org/bukkit/plugin/java/Ja
 import org_bukkit_block_Jigsaw from './org/bukkit/block/Jigsaw.js'
 import org_bukkit_block_data_type_Jukebox from './org/bukkit/block/data/type/Jukebox.js'
 import org_bukkit_block_Jukebox from './org/bukkit/block/Jukebox.js'
+import net_md_5_bungee_api_chat_KeybindComponent from './net/md_5/bungee/api/chat/KeybindComponent.js'
+import net_md_5_bungee_api_chat_Keybinds from './net/md_5/bungee/api/chat/Keybinds.js'
 import org_bukkit_Keyed from './org/bukkit/Keyed.js'
 import org_bukkit_boss_KeyedBossBar from './org/bukkit/boss/KeyedBossBar.js'
 import org_bukkit_inventory_meta_KnowledgeBookMeta from './org/bukkit/inventory/meta/KnowledgeBookMeta.js'
@@ -560,6 +579,7 @@ import org_bukkit_block_data_Levelled from './org/bukkit/block/data/Levelled.js'
 import org_bukkit_material_Lever from './org/bukkit/material/Lever.js'
 import org_bukkit_block_data_Lightable from './org/bukkit/block/data/Lightable.js'
 import org_bukkit_entity_LightningStrike from './org/bukkit/entity/LightningStrike.js'
+import org_bukkit_entity_LightningStrike$Spigot from './org/bukkit/entity/LightningStrike$Spigot.js'
 import org_bukkit_event_weather_LightningStrikeEvent from './org/bukkit/event/weather/LightningStrikeEvent.js'
 import org_bukkit_event_weather_LightningStrikeEvent$Cause from './org/bukkit/event/weather/LightningStrikeEvent$Cause.js'
 import org_apache_commons_io_LineIterator from './org/apache/commons/io/LineIterator.js'
@@ -721,6 +741,7 @@ import org_bukkit_material_PistonExtensionMaterial from './org/bukkit/material/P
 import org_bukkit_block_data_type_PistonHead from './org/bukkit/block/data/type/PistonHead.js'
 import org_bukkit_block_PistonMoveReaction from './org/bukkit/block/PistonMoveReaction.js'
 import org_bukkit_entity_Player from './org/bukkit/entity/Player.js'
+import org_bukkit_entity_Player$Spigot from './org/bukkit/entity/Player$Spigot.js'
 import org_bukkit_event_player_PlayerAdvancementDoneEvent from './org/bukkit/event/player/PlayerAdvancementDoneEvent.js'
 import org_bukkit_event_player_PlayerAnimationEvent from './org/bukkit/event/player/PlayerAnimationEvent.js'
 import org_bukkit_event_player_PlayerAnimationType from './org/bukkit/event/player/PlayerAnimationType.js'
@@ -903,6 +924,7 @@ import java_sql_Savepoint from './java/sql/Savepoint.js'
 import org_bukkit_block_data_type_Scaffolding from './org/bukkit/block/data/type/Scaffolding.js'
 import java_nio_channels_ScatteringByteChannel from './java/nio/channels/ScatteringByteChannel.js'
 import org_bukkit_scoreboard_Score from './org/bukkit/scoreboard/Score.js'
+import net_md_5_bungee_api_chat_ScoreComponent from './net/md_5/bungee/api/chat/ScoreComponent.js'
 import org_bukkit_scoreboard_Scoreboard from './org/bukkit/scoreboard/Scoreboard.js'
 import org_bukkit_scoreboard_ScoreboardManager from './org/bukkit/scoreboard/ScoreboardManager.js'
 import com_pixlfox_scriptablemc_ScriptEngineConfig from './com/pixlfox/scriptablemc/ScriptEngineConfig.js'
@@ -912,10 +934,12 @@ import com_pixlfox_scriptablemc_core_ScriptablePluginContext from './com/pixlfox
 import com_pixlfox_scriptablemc_core_ScriptablePluginEngine from './com/pixlfox/scriptablemc/core/ScriptablePluginEngine.js'
 import org_bukkit_block_data_type_SeaPickle from './org/bukkit/block/data/type/SeaPickle.js'
 import java_nio_channels_SeekableByteChannel from './java/nio/channels/SeekableByteChannel.js'
+import net_md_5_bungee_api_chat_SelectorComponent from './net/md_5/bungee/api/chat/SelectorComponent.js'
 import java_io_Serializable from './java/io/Serializable.js'
 import org_bukkit_configuration_serialization_SerializableAs from './org/bukkit/configuration/serialization/SerializableAs.js'
 import java_io_SerializablePermission from './java/io/SerializablePermission.js'
 import org_bukkit_Server from './org/bukkit/Server.js'
+import org_bukkit_Server$Spigot from './org/bukkit/Server$Spigot.js'
 import org_bukkit_event_server_ServerCommandEvent from './org/bukkit/event/server/ServerCommandEvent.js'
 import org_bukkit_event_server_ServerEvent from './org/bukkit/event/server/ServerEvent.js'
 import org_bukkit_event_server_ServerListPingEvent from './org/bukkit/event/server/ServerListPingEvent.js'
@@ -997,6 +1021,7 @@ import org_bukkit_plugin_messaging_StandardMessenger from './org/bukkit/plugin/m
 import java_sql_Statement from './java/sql/Statement.js'
 import org_bukkit_Statistic from './org/bukkit/Statistic.js'
 import org_bukkit_Statistic$Type from './org/bukkit/Statistic$Type.js'
+import org_bukkit_entity_Steerable from './org/bukkit/entity/Steerable.js'
 import org_bukkit_material_Step from './org/bukkit/material/Step.js'
 import org_bukkit_inventory_StonecutterInventory from './org/bukkit/inventory/StonecutterInventory.js'
 import org_bukkit_inventory_StonecuttingRecipe from './org/bukkit/inventory/StonecuttingRecipe.js'
@@ -1026,6 +1051,7 @@ import org_bukkit_scoreboard_Team$Option from './org/bukkit/scoreboard/Team$Opti
 import org_bukkit_scoreboard_Team$OptionStatus from './org/bukkit/scoreboard/Team$OptionStatus.js'
 import org_bukkit_block_data_type_TechnicalPiston from './org/bukkit/block/data/type/TechnicalPiston.js'
 import org_bukkit_block_data_type_TechnicalPiston$Type from './org/bukkit/block/data/type/TechnicalPiston$Type.js'
+import net_md_5_bungee_api_chat_TextComponent from './net/md_5/bungee/api/chat/TextComponent.js'
 import org_bukkit_material_TexturedMaterial from './org/bukkit/material/TexturedMaterial.js'
 import org_bukkit_entity_ThrowableProjectile from './org/bukkit/entity/ThrowableProjectile.js'
 import org_bukkit_entity_ThrownExpBottle from './org/bukkit/entity/ThrownExpBottle.js'
@@ -1042,6 +1068,7 @@ import org_bukkit_entity_TippedArrow from './org/bukkit/entity/TippedArrow.js'
 import org_bukkit_material_Torch from './org/bukkit/material/Torch.js'
 import org_bukkit_event_inventory_TradeSelectEvent from './org/bukkit/event/inventory/TradeSelectEvent.js'
 import org_bukkit_entity_TraderLlama from './org/bukkit/entity/TraderLlama.js'
+import net_md_5_bungee_api_chat_TranslatableComponent from './net/md_5/bungee/api/chat/TranslatableComponent.js'
 import org_bukkit_material_TrapDoor from './org/bukkit/material/TrapDoor.js'
 import org_bukkit_block_data_type_TrapDoor from './org/bukkit/block/data/type/TrapDoor.js'
 import org_bukkit_material_Tree from './org/bukkit/material/Tree.js'
@@ -1114,6 +1141,7 @@ import org_bukkit_material_WoodenStep from './org/bukkit/material/WoodenStep.js'
 import org_bukkit_material_Wool from './org/bukkit/material/Wool.js'
 import org_bukkit_World from './org/bukkit/World.js'
 import org_bukkit_World$Environment from './org/bukkit/World$Environment.js'
+import org_bukkit_World$Spigot from './org/bukkit/World$Spigot.js'
 import org_bukkit_WorldBorder from './org/bukkit/WorldBorder.js'
 import org_bukkit_WorldCreator from './org/bukkit/WorldCreator.js'
 import org_bukkit_event_world_WorldEvent from './org/bukkit/event/world/WorldEvent.js'
@@ -1177,6 +1205,7 @@ export namespace org.bukkit.entity {
 	export const Enderman = org_bukkit_entity_Enderman;
 	export const Endermite = org_bukkit_entity_Endermite;
 	export const Entity = org_bukkit_entity_Entity;
+	export const Entity$Spigot = org_bukkit_entity_Entity$Spigot;
 	export const EntityType = org_bukkit_entity_EntityType;
 	export const Evoker = org_bukkit_entity_Evoker;
 	export const Evoker$Spell = org_bukkit_entity_Evoker$Spell;
@@ -1210,6 +1239,7 @@ export namespace org.bukkit.entity {
 	export const LargeFireball = org_bukkit_entity_LargeFireball;
 	export const LeashHitch = org_bukkit_entity_LeashHitch;
 	export const LightningStrike = org_bukkit_entity_LightningStrike;
+	export const LightningStrike$Spigot = org_bukkit_entity_LightningStrike$Spigot;
 	export const LingeringPotion = org_bukkit_entity_LingeringPotion;
 	export const LivingEntity = org_bukkit_entity_LivingEntity;
 	export const Llama = org_bukkit_entity_Llama;
@@ -1235,6 +1265,7 @@ export namespace org.bukkit.entity {
 	export const PigZombie = org_bukkit_entity_PigZombie;
 	export const Pillager = org_bukkit_entity_Pillager;
 	export const Player = org_bukkit_entity_Player;
+	export const Player$Spigot = org_bukkit_entity_Player$Spigot;
 	export const PolarBear = org_bukkit_entity_PolarBear;
 	export const Pose = org_bukkit_entity_Pose;
 	export const Projectile = org_bukkit_entity_Projectile;
@@ -1263,6 +1294,7 @@ export namespace org.bukkit.entity {
 	export const Spider = org_bukkit_entity_Spider;
 	export const SplashPotion = org_bukkit_entity_SplashPotion;
 	export const Squid = org_bukkit_entity_Squid;
+	export const Steerable = org_bukkit_entity_Steerable;
 	export const Stray = org_bukkit_entity_Stray;
 	export const TNTPrimed = org_bukkit_entity_TNTPrimed;
 	export const Tameable = org_bukkit_entity_Tameable;
@@ -1406,6 +1438,8 @@ export namespace org.bukkit.block.data {
 	export const Bisected$Half = org_bukkit_block_data_Bisected$Half;
 	export const BlockData = org_bukkit_block_data_BlockData;
 	export const Directional = org_bukkit_block_data_Directional;
+	export const FaceAttachable = org_bukkit_block_data_FaceAttachable;
+	export const FaceAttachable$AttachedFace = org_bukkit_block_data_FaceAttachable$AttachedFace;
 	export const Levelled = org_bukkit_block_data_Levelled;
 	export const Lightable = org_bukkit_block_data_Lightable;
 	export const MultipleFacing = org_bukkit_block_data_MultipleFacing;
@@ -1540,6 +1574,7 @@ export namespace org.bukkit {
 	export const Rotation = org_bukkit_Rotation;
 	export const SandstoneType = org_bukkit_SandstoneType;
 	export const Server = org_bukkit_Server;
+	export const Server$Spigot = org_bukkit_Server$Spigot;
 	export const SkullType = org_bukkit_SkullType;
 	export const Sound = org_bukkit_Sound;
 	export const SoundCategory = org_bukkit_SoundCategory;
@@ -1557,6 +1592,7 @@ export namespace org.bukkit {
 	export const WeatherType = org_bukkit_WeatherType;
 	export const World = org_bukkit_World;
 	export const World$Environment = org_bukkit_World$Environment;
+	export const World$Spigot = org_bukkit_World$Spigot;
 	export const WorldBorder = org_bukkit_WorldBorder;
 	export const WorldCreator = org_bukkit_WorldCreator;
 	export const WorldType = org_bukkit_WorldType;
@@ -1876,6 +1912,7 @@ export namespace org.bukkit.inventory.meta {
 	export const BlockStateMeta = org_bukkit_inventory_meta_BlockStateMeta;
 	export const BookMeta = org_bukkit_inventory_meta_BookMeta;
 	export const BookMeta$Generation = org_bukkit_inventory_meta_BookMeta$Generation;
+	export const BookMeta$Spigot = org_bukkit_inventory_meta_BookMeta$Spigot;
 	export const CrossbowMeta = org_bukkit_inventory_meta_CrossbowMeta;
 	export const Damageable = org_bukkit_inventory_meta_Damageable;
 	export const EnchantmentStorageMeta = org_bukkit_inventory_meta_EnchantmentStorageMeta;
@@ -1897,7 +1934,25 @@ export namespace org.bukkit.boss {
 	export const BarFlag = org_bukkit_boss_BarFlag;
 	export const BarStyle = org_bukkit_boss_BarStyle;
 	export const BossBar = org_bukkit_boss_BossBar;
+	export const DragonBattle = org_bukkit_boss_DragonBattle;
+	export const DragonBattle$RespawnPhase = org_bukkit_boss_DragonBattle$RespawnPhase;
 	export const KeyedBossBar = org_bukkit_boss_KeyedBossBar;
+}
+export namespace net.md_5.bungee.api.chat {
+	export const BaseComponent = net_md_5_bungee_api_chat_BaseComponent;
+	export const ClickEvent = net_md_5_bungee_api_chat_ClickEvent;
+	export const ClickEvent$Action = net_md_5_bungee_api_chat_ClickEvent$Action;
+	export const ComponentBuilder = net_md_5_bungee_api_chat_ComponentBuilder;
+	export const ComponentBuilder$FormatRetention = net_md_5_bungee_api_chat_ComponentBuilder$FormatRetention;
+	export const ComponentBuilder$Joiner = net_md_5_bungee_api_chat_ComponentBuilder$Joiner;
+	export const HoverEvent = net_md_5_bungee_api_chat_HoverEvent;
+	export const HoverEvent$Action = net_md_5_bungee_api_chat_HoverEvent$Action;
+	export const KeybindComponent = net_md_5_bungee_api_chat_KeybindComponent;
+	export const Keybinds = net_md_5_bungee_api_chat_Keybinds;
+	export const ScoreComponent = net_md_5_bungee_api_chat_ScoreComponent;
+	export const SelectorComponent = net_md_5_bungee_api_chat_SelectorComponent;
+	export const TextComponent = net_md_5_bungee_api_chat_TextComponent;
+	export const TranslatableComponent = net_md_5_bungee_api_chat_TranslatableComponent;
 }
 export namespace java.sql {
 	export const Blob = java_sql_Blob;
@@ -1934,6 +1989,7 @@ export namespace org.bukkit.command {
 	export const CommandExecutor = org_bukkit_command_CommandExecutor;
 	export const CommandMap = org_bukkit_command_CommandMap;
 	export const CommandSender = org_bukkit_command_CommandSender;
+	export const CommandSender$Spigot = org_bukkit_command_CommandSender$Spigot;
 	export const ConsoleCommandSender = org_bukkit_command_ConsoleCommandSender;
 	export const FormattedCommandAlias = org_bukkit_command_FormattedCommandAlias;
 	export const MultipleCommandAlias = org_bukkit_command_MultipleCommandAlias;
@@ -2146,6 +2202,10 @@ export namespace java.nio.charset {
 	export const CharsetEncoder = java_nio_charset_CharsetEncoder;
 	export const CoderResult = java_nio_charset_CoderResult;
 	export const CodingErrorAction = java_nio_charset_CodingErrorAction;
+}
+export namespace net.md_5.bungee.api {
+	export const ChatColor = net_md_5_bungee_api_ChatColor;
+	export const ChatMessageType = net_md_5_bungee_api_ChatMessageType;
 }
 export namespace org.bukkit.event.world {
 	export const ChunkEvent = org_bukkit_event_world_ChunkEvent;

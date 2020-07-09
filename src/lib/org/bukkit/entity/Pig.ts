@@ -1,11 +1,12 @@
 declare var Java: any;
-import Animals from './Animals.js'
 import Attribute from '../../../org/bukkit/attribute/Attribute.js'
 import AttributeInstance from '../../../org/bukkit/attribute/AttributeInstance.js'
 import Block from '../../../org/bukkit/block/Block.js'
 import BlockFace from '../../../org/bukkit/block/BlockFace.js'
 import BoundingBox from '../../../org/bukkit/util/BoundingBox.js'
+import CommandSender$Spigot from '../../../org/bukkit/command/CommandSender$Spigot.js'
 import Entity from './Entity.js'
+import Entity$Spigot from './Entity$Spigot.js'
 import EntityDamageEvent from '../../../org/bukkit/event/entity/EntityDamageEvent.js'
 import EntityEffect from '../../../org/bukkit/EntityEffect.js'
 import EntityEquipment from '../../../org/bukkit/inventory/EntityEquipment.js'
@@ -14,6 +15,7 @@ import FluidCollisionMode from '../../../org/bukkit/FluidCollisionMode.js'
 import LivingEntity from './LivingEntity.js'
 import Location from '../../../org/bukkit/Location.js'
 import LootTable from '../../../org/bukkit/loot/LootTable.js'
+import Material from '../../../org/bukkit/Material.js'
 import MemoryKey from './memory/MemoryKey.js'
 import MetadataValue from '../../../org/bukkit/metadata/MetadataValue.js'
 import Permission from '../../../org/bukkit/permissions/Permission.js'
@@ -29,11 +31,12 @@ import PotionEffectType from '../../../org/bukkit/potion/PotionEffectType.js'
 import Projectile from './Projectile.js'
 import RayTraceResult from '../../../org/bukkit/util/RayTraceResult.js'
 import Server from '../../../org/bukkit/Server.js'
+import Steerable from './Steerable.js'
 import Vector from '../../../org/bukkit/util/Vector.js'
 import Vehicle from './Vehicle.js'
 import World from '../../../org/bukkit/World.js'
 
-export default interface Pig extends Animals, Vehicle {
+export default interface Pig extends Steerable, Vehicle {
 	addAttachment(arg0: Plugin): PermissionAttachment;
 	addAttachment(arg0: Plugin, arg1: number): PermissionAttachment;
 	addAttachment(arg0: Plugin, arg1: string, arg2: boolean): PermissionAttachment;
@@ -53,9 +56,12 @@ export default interface Pig extends Animals, Vehicle {
 	getAge(): number;
 	getAgeLock(): boolean;
 	getAttribute(arg0: Attribute): AttributeInstance;
+	getBoostTicks(): number;
 	getBoundingBox(): BoundingBox;
 	getBreedCause(): string;
 	getCanPickupItems(): boolean;
+	getCollidableExemptions(): any;
+	getCurrentBoostTicks(): number;
 	getCustomName(): string;
 	getEffectivePermissions(): any;
 	getEntityId(): number;
@@ -99,6 +105,7 @@ export default interface Pig extends Animals, Vehicle {
 	getScoreboardTags(): any;
 	getSeed(): number;
 	getServer(): Server;
+	getSteerMaterial(): Material;
 	getTarget(): LivingEntity;
 	getTargetBlock(arg0: any, arg1: number): Block;
 	getTargetBlockExact(arg0: number): Block;
@@ -114,8 +121,8 @@ export default interface Pig extends Animals, Vehicle {
 	hasGravity(): boolean;
 	hasLineOfSight(arg0: Entity): boolean;
 	hasMetadata(arg0: string): boolean;
-	hasPermission(arg0: Permission): boolean;
 	hasPermission(arg0: string): boolean;
+	hasPermission(arg0: Permission): boolean;
 	hasPotionEffect(arg0: PotionEffectType): boolean;
 	hasSaddle(): boolean;
 	isAdult(): boolean;
@@ -132,8 +139,8 @@ export default interface Pig extends Animals, Vehicle {
 	isLoveMode(): boolean;
 	isOnGround(): boolean;
 	isOp(): boolean;
-	isPermissionSet(arg0: Permission): boolean;
 	isPermissionSet(arg0: string): boolean;
+	isPermissionSet(arg0: Permission): boolean;
 	isPersistent(): boolean;
 	isRiptiding(): boolean;
 	isSilent(): boolean;
@@ -163,10 +170,12 @@ export default interface Pig extends Animals, Vehicle {
 	setAgeLock(arg0: boolean): void;
 	setAware(arg0: boolean): void;
 	setBaby(): void;
+	setBoostTicks(arg0: number): void;
 	setBreed(arg0: boolean): void;
 	setBreedCause(arg0: string): void;
 	setCanPickupItems(arg0: boolean): void;
 	setCollidable(arg0: boolean): void;
+	setCurrentBoostTicks(arg0: number): void;
 	setCustomName(arg0: string): void;
 	setCustomNameVisible(arg0: boolean): void;
 	setFallDistance(arg0: number): void;
@@ -201,6 +210,8 @@ export default interface Pig extends Animals, Vehicle {
 	setTarget(arg0: LivingEntity): void;
 	setTicksLived(arg0: number): void;
 	setVelocity(arg0: Vector): void;
+	spigot(): Entity$Spigot;
+	spigot(): CommandSender$Spigot;
 	swingMainHand(): void;
 	swingOffHand(): void;
 	teleport(arg0: Location): boolean;

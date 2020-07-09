@@ -1,7 +1,7 @@
 declare var Java: any;
 import DataOutput from './DataOutput.js'
 
-export default interface ObjectOutput {
+export default interface ObjectOutput extends DataOutput {
 	close(): void;
 	flush(): void;
 	write(arg0: Array<number>): void;

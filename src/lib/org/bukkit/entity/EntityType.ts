@@ -132,6 +132,9 @@ export default class EntityType {
 	public static get GUARDIAN(): EntityType {
 		return this.$javaClass.GUARDIAN;
 	}
+	public static get HOGLIN(): EntityType {
+		return this.$javaClass.HOGLIN;
+	}
 	public static get HORSE(): EntityType {
 		return this.$javaClass.HORSE;
 	}
@@ -207,8 +210,8 @@ export default class EntityType {
 	public static get PIG(): EntityType {
 		return this.$javaClass.PIG;
 	}
-	public static get PIG_ZOMBIE(): EntityType {
-		return this.$javaClass.PIG_ZOMBIE;
+	public static get PIGLIN(): EntityType {
+		return this.$javaClass.PIGLIN;
 	}
 	public static get PILLAGER(): EntityType {
 		return this.$javaClass.PILLAGER;
@@ -279,6 +282,9 @@ export default class EntityType {
 	public static get STRAY(): EntityType {
 		return this.$javaClass.STRAY;
 	}
+	public static get STRIDER(): EntityType {
+		return this.$javaClass.STRIDER;
+	}
 	public static get THROWN_EXP_BOTTLE(): EntityType {
 		return this.$javaClass.THROWN_EXP_BOTTLE;
 	}
@@ -324,6 +330,9 @@ export default class EntityType {
 	public static get WOLF(): EntityType {
 		return this.$javaClass.WOLF;
 	}
+	public static get ZOGLIN(): EntityType {
+		return this.$javaClass.ZOGLIN;
+	}
 	public static get ZOMBIE(): EntityType {
 		return this.$javaClass.ZOMBIE;
 	}
@@ -332,6 +341,9 @@ export default class EntityType {
 	}
 	public static get ZOMBIE_VILLAGER(): EntityType {
 		return this.$javaClass.ZOMBIE_VILLAGER;
+	}
+	public static get ZOMBIFIED_PIGLIN(): EntityType {
+		return this.$javaClass.ZOMBIFIED_PIGLIN;
 	}
 }
 

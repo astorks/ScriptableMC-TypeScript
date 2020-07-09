@@ -18,8 +18,8 @@ export default interface EnchantmentStorageMeta extends ItemMeta {
 	clone(): ItemMeta;
 	clone(): EnchantmentStorageMeta;
 	getAttributeModifiers(): Multimap;
-	getAttributeModifiers(arg0: EquipmentSlot): Multimap;
 	getAttributeModifiers(arg0: Attribute): Array<AttributeModifier>;
+	getAttributeModifiers(arg0: EquipmentSlot): Multimap;
 	getCustomModelData(): number;
 	getCustomTagContainer(): CustomItemTagContainer;
 	getDisplayName(): string;
@@ -44,8 +44,8 @@ export default interface EnchantmentStorageMeta extends ItemMeta {
 	hasStoredEnchant(arg0: Enchantment): boolean;
 	hasStoredEnchants(): boolean;
 	isUnbreakable(): boolean;
-	removeAttributeModifier(arg0: EquipmentSlot): boolean;
 	removeAttributeModifier(arg0: Attribute): boolean;
+	removeAttributeModifier(arg0: EquipmentSlot): boolean;
 	removeAttributeModifier(arg0: Attribute, arg1: AttributeModifier): boolean;
 	removeEnchant(arg0: Enchantment): boolean;
 	removeItemFlags(arg0: Array<ItemFlag>): void;

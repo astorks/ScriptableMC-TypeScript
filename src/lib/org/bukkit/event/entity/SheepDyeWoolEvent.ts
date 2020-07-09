@@ -9,8 +9,8 @@ import Sheep from '../../../../org/bukkit/entity/Sheep.js'
 
 export default interface SheepDyeWoolEvent extends EntityEvent, Cancellable {
 	getColor(): DyeColor;
-	getEntity(): Sheep;
 	getEntity(): Entity;
+	getEntity(): Sheep;
 	getEntityType(): EntityType;
 	getEventName(): string;
 	getHandlers(): HandlerList;

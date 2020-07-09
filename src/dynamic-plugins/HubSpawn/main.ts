@@ -28,6 +28,9 @@ import File from '../../lib/java/io/File.js';
 import FileUtils from '../../lib/org/apache/commons/io/FileUtils.js';
 import Charset from '../../lib/java/nio/charset/Charset.js';
 import Command from '../../lib/org/bukkit/command/Command.js';
+import InventoryContents from '../../lib/fr/minuskube/inv/content/InventoryContents.js';
+import SmartInventory from '../../lib/com/smc/smartinvs/SmartInventory.js';
+import ItemStack from '../../lib/org/bukkit/inventory/ItemStack.js';
 
 declare const __dirname: string;
 const mainWorld = Bukkit.getServer().getWorld("world");
@@ -364,5 +367,19 @@ export default class HubSpawn extends JsPlugin {
         this.playerDataCache[uuid] = data;
         let configFile = new File(playerDataFolder, uuid.toString().replace(/-/g, "") + ".json");
         FileUtils.writeStringToFile(configFile, JSON.stringify(data), Charset.defaultCharset());
+    }
+}
+
+class HubSettingsInventoryProvider {
+    constructor(private plugin: HubSpawn) {
+
+    }
+
+    public init(player: Player, contents: InventoryContents) {
+        contents.set(1, 1, SmartInventory.clickableItem(
+            new ItemBuilder(new ItemStack(Material.GOLD_NUGGET)).setDisplayName(ChatColor.DARK_AQUA + "Hello World").build(), () => {
+                
+            }
+        ));
     }
 }

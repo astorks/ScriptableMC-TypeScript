@@ -6,9 +6,9 @@ import Material from '../../../org/bukkit/Material.js'
 import MaterialData from './MaterialData.js'
 
 export default interface Banner extends MaterialData, Attachable {
+	clone(): any;
 	clone(): MaterialData;
 	clone(): Banner;
-	clone(): any;
 	getAttachedFace(): BlockFace;
 	getData(): number;
 	getFacing(): BlockFace;

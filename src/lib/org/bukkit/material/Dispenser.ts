@@ -7,10 +7,10 @@ import Material from '../../../org/bukkit/Material.js'
 import MaterialData from './MaterialData.js'
 
 export default interface Dispenser extends FurnaceAndDispenser {
-	clone(): any;
-	clone(): FurnaceAndDispenser;
 	clone(): MaterialData;
+	clone(): any;
 	clone(): DirectionalContainer;
+	clone(): FurnaceAndDispenser;
 	clone(): Dispenser;
 	getData(): number;
 	getFacing(): BlockFace;

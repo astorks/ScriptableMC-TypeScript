@@ -37,8 +37,8 @@ export default interface FileSystemProvider {
 	newByteChannel(arg0: Path, arg1: any, arg2: Array<FileAttribute>): SeekableByteChannel;
 	newDirectoryStream(arg0: Path, arg1: DirectoryStream$Filter): DirectoryStream;
 	newFileChannel(path: Path, options: any, attrs: Array<FileAttribute>): FileChannel;
-	newFileSystem(path: Path, env: any): FileSystem;
 	newFileSystem(arg0: any, arg1: any): FileSystem;
+	newFileSystem(path: Path, env: any): FileSystem;
 	newInputStream(path: Path, options: Array<OpenOption>): InputStream;
 	newOutputStream(path: Path, options: Array<OpenOption>): OutputStream;
 	readAttributes(arg0: Path, arg1: any, arg2: Array<LinkOption>): BasicFileAttributes;

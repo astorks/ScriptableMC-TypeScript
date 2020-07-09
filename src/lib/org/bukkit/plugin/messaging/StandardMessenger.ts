@@ -7,8 +7,8 @@ import PluginMessageListenerRegistration from './PluginMessageListenerRegistrati
 
 export default interface StandardMessenger extends Messenger {
 	dispatchIncomingMessage(source: Player, channel: string, message: Array<number>): void;
-	getIncomingChannelRegistrations(channel: string): any;
 	getIncomingChannelRegistrations(plugin: Plugin): any;
+	getIncomingChannelRegistrations(channel: string): any;
 	getIncomingChannelRegistrations(plugin: Plugin, channel: string): any;
 	getIncomingChannels(): any;
 	getIncomingChannels(plugin: Plugin): any;

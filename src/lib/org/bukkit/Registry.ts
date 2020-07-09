@@ -22,6 +22,10 @@ export default class Registry {
 		return Registry.$javaClass.ART;
 	}
 
+	public static get ATTRIBUTE(): Registry {
+		return Registry.$javaClass.ATTRIBUTE;
+	}
+
 	public static get BIOME(): Registry {
 		return Registry.$javaClass.BIOME;
 	}

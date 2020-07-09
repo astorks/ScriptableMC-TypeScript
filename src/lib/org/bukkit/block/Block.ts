@@ -5,6 +5,7 @@ import BlockFace from './BlockFace.js'
 import BlockState from './BlockState.js'
 import BoundingBox from '../../../org/bukkit/util/BoundingBox.js'
 import Chunk from '../../../org/bukkit/Chunk.js'
+import Entity from '../../../org/bukkit/entity/Entity.js'
 import FluidCollisionMode from '../../../org/bukkit/FluidCollisionMode.js'
 import ItemStack from '../../../org/bukkit/inventory/ItemStack.js'
 import Location from '../../../org/bukkit/Location.js'
@@ -29,6 +30,7 @@ export default interface Block extends Metadatable {
 	getData(): number;
 	getDrops(): Array<ItemStack>;
 	getDrops(arg0: ItemStack): Array<ItemStack>;
+	getDrops(arg0: ItemStack, arg1: Entity): Array<ItemStack>;
 	getFace(arg0: Block): BlockFace;
 	getHumidity(): number;
 	getLightFromBlocks(): number;

@@ -1,7 +1,7 @@
 declare var Java: any;
 import Wrapper from './Wrapper.js'
 
-export default interface ParameterMetaData {
+export default interface ParameterMetaData extends Wrapper {
 	getParameterClassName(arg0: number): string;
 	getParameterCount(): number;
 	getParameterMode(arg0: number): number;

@@ -6,6 +6,7 @@ import PersistentDataType from './PersistentDataType.js'
 export default interface PersistentDataContainer {
 	get(arg0: NamespacedKey, arg1: PersistentDataType): any;
 	getAdapterContext(): PersistentDataAdapterContext;
+	getKeys(): any;
 	getOrDefault(arg0: NamespacedKey, arg1: PersistentDataType, arg2: any): any;
 	has(arg0: NamespacedKey, arg1: PersistentDataType): boolean;
 	isEmpty(): boolean;

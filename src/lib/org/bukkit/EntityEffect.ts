@@ -21,8 +21,35 @@ export default class EntityEffect {
 	public static get ARROW_PARTICLES(): EntityEffect {
 		return this.$javaClass.ARROW_PARTICLES;
 	}
+	public static get BREAK_EQUIPMENT_BOOTS(): EntityEffect {
+		return this.$javaClass.BREAK_EQUIPMENT_BOOTS;
+	}
+	public static get BREAK_EQUIPMENT_CHESTPLATE(): EntityEffect {
+		return this.$javaClass.BREAK_EQUIPMENT_CHESTPLATE;
+	}
+	public static get BREAK_EQUIPMENT_HELMET(): EntityEffect {
+		return this.$javaClass.BREAK_EQUIPMENT_HELMET;
+	}
+	public static get BREAK_EQUIPMENT_LEGGINGS(): EntityEffect {
+		return this.$javaClass.BREAK_EQUIPMENT_LEGGINGS;
+	}
+	public static get BREAK_EQUIPMENT_MAIN_HAND(): EntityEffect {
+		return this.$javaClass.BREAK_EQUIPMENT_MAIN_HAND;
+	}
+	public static get BREAK_EQUIPMENT_OFF_HAND(): EntityEffect {
+		return this.$javaClass.BREAK_EQUIPMENT_OFF_HAND;
+	}
+	public static get CAT_TAME_FAIL(): EntityEffect {
+		return this.$javaClass.CAT_TAME_FAIL;
+	}
+	public static get CAT_TAME_SUCCESS(): EntityEffect {
+		return this.$javaClass.CAT_TAME_SUCCESS;
+	}
 	public static get DEATH(): EntityEffect {
 		return this.$javaClass.DEATH;
+	}
+	public static get DOLPHIN_FED(): EntityEffect {
+		return this.$javaClass.DOLPHIN_FED;
 	}
 	public static get ENTITY_POOF(): EntityEffect {
 		return this.$javaClass.ENTITY_POOF;
@@ -30,11 +57,17 @@ export default class EntityEffect {
 	public static get FIREWORK_EXPLODE(): EntityEffect {
 		return this.$javaClass.FIREWORK_EXPLODE;
 	}
+	public static get FOX_CHEW(): EntityEffect {
+		return this.$javaClass.FOX_CHEW;
+	}
 	public static get GUARDIAN_TARGET(): EntityEffect {
 		return this.$javaClass.GUARDIAN_TARGET;
 	}
 	public static get HURT(): EntityEffect {
 		return this.$javaClass.HURT;
+	}
+	public static get HURT_BERRY_BUSH(): EntityEffect {
+		return this.$javaClass.HURT_BERRY_BUSH;
 	}
 	public static get HURT_DROWN(): EntityEffect {
 		return this.$javaClass.HURT_DROWN;
@@ -51,8 +84,14 @@ export default class EntityEffect {
 	public static get LOVE_HEARTS(): EntityEffect {
 		return this.$javaClass.LOVE_HEARTS;
 	}
+	public static get PLAYER_BAD_OMEN_RAID(): EntityEffect {
+		return this.$javaClass.PLAYER_BAD_OMEN_RAID;
+	}
 	public static get RABBIT_JUMP(): EntityEffect {
 		return this.$javaClass.RABBIT_JUMP;
+	}
+	public static get RAVAGER_STUNNED(): EntityEffect {
+		return this.$javaClass.RAVAGER_STUNNED;
 	}
 	public static get SHEEP_EAT(): EntityEffect {
 		return this.$javaClass.SHEEP_EAT;
@@ -65,6 +104,9 @@ export default class EntityEffect {
 	}
 	public static get SQUID_ROTATE(): EntityEffect {
 		return this.$javaClass.SQUID_ROTATE;
+	}
+	public static get TELEPORT_ENDER(): EntityEffect {
+		return this.$javaClass.TELEPORT_ENDER;
 	}
 	public static get THORNS_HURT(): EntityEffect {
 		return this.$javaClass.THORNS_HURT;
@@ -80,6 +122,9 @@ export default class EntityEffect {
 	}
 	public static get VILLAGER_HEART(): EntityEffect {
 		return this.$javaClass.VILLAGER_HEART;
+	}
+	public static get VILLAGER_SPLASH(): EntityEffect {
+		return this.$javaClass.VILLAGER_SPLASH;
 	}
 	public static get WITCH_MAGIC(): EntityEffect {
 		return this.$javaClass.WITCH_MAGIC;

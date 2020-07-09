@@ -2,7 +2,7 @@ declare var Java: any;
 import ByteBuffer from '../../../java/nio/ByteBuffer.js'
 import ByteChannel from './ByteChannel.js'
 
-export default interface SeekableByteChannel {
+export default interface SeekableByteChannel extends ByteChannel {
 	close(): void;
 	isOpen(): boolean;
 	position(): number;

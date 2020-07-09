@@ -22,6 +22,7 @@ export default interface PluginDescriptionFile {
 	getPermissionDefault(): PermissionDefault;
 	getPermissions(): Array<Permission>;
 	getPrefix(): string;
+	getProvides(): Array<string>;
 	getRawName(): string;
 	getSoftDepend(): Array<string>;
 	getVersion(): string;

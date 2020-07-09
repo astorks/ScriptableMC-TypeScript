@@ -14,6 +14,9 @@ export default class Particle {
 		return Java.type('org.bukkit.Particle');
 	}
 
+	public static get ASH(): Particle {
+		return this.$javaClass.ASH;
+	}
 	public static get BARRIER(): Particle {
 		return this.$javaClass.BARRIER;
 	}
@@ -41,6 +44,9 @@ export default class Particle {
 	public static get COMPOSTER(): Particle {
 		return this.$javaClass.COMPOSTER;
 	}
+	public static get CRIMSON_SPORE(): Particle {
+		return this.$javaClass.CRIMSON_SPORE;
+	}
 	public static get CRIT(): Particle {
 		return this.$javaClass.CRIT;
 	}
@@ -61,6 +67,9 @@ export default class Particle {
 	}
 	public static get DRIPPING_HONEY(): Particle {
 		return this.$javaClass.DRIPPING_HONEY;
+	}
+	public static get DRIPPING_OBSIDIAN_TEAR(): Particle {
+		return this.$javaClass.DRIPPING_OBSIDIAN_TEAR;
 	}
 	public static get DRIP_LAVA(): Particle {
 		return this.$javaClass.DRIP_LAVA;
@@ -95,6 +104,9 @@ export default class Particle {
 	public static get FALLING_NECTAR(): Particle {
 		return this.$javaClass.FALLING_NECTAR;
 	}
+	public static get FALLING_OBSIDIAN_TEAR(): Particle {
+		return this.$javaClass.FALLING_OBSIDIAN_TEAR;
+	}
 	public static get FALLING_WATER(): Particle {
 		return this.$javaClass.FALLING_WATER;
 	}
@@ -118,6 +130,9 @@ export default class Particle {
 	}
 	public static get LANDING_LAVA(): Particle {
 		return this.$javaClass.LANDING_LAVA;
+	}
+	public static get LANDING_OBSIDIAN_TEAR(): Particle {
+		return this.$javaClass.LANDING_OBSIDIAN_TEAR;
 	}
 	public static get LAVA(): Particle {
 		return this.$javaClass.LAVA;
@@ -146,6 +161,9 @@ export default class Particle {
 	public static get REDSTONE(): Particle {
 		return this.$javaClass.REDSTONE;
 	}
+	public static get REVERSE_PORTAL(): Particle {
+		return this.$javaClass.REVERSE_PORTAL;
+	}
 	public static get SLIME(): Particle {
 		return this.$javaClass.SLIME;
 	}
@@ -163,6 +181,12 @@ export default class Particle {
 	}
 	public static get SNOW_SHOVEL(): Particle {
 		return this.$javaClass.SNOW_SHOVEL;
+	}
+	public static get SOUL(): Particle {
+		return this.$javaClass.SOUL;
+	}
+	public static get SOUL_FIRE_FLAME(): Particle {
+		return this.$javaClass.SOUL_FIRE_FLAME;
 	}
 	public static get SPELL(): Particle {
 		return this.$javaClass.SPELL;
@@ -206,6 +230,9 @@ export default class Particle {
 	public static get VILLAGER_HAPPY(): Particle {
 		return this.$javaClass.VILLAGER_HAPPY;
 	}
+	public static get WARPED_SPORE(): Particle {
+		return this.$javaClass.WARPED_SPORE;
+	}
 	public static get WATER_BUBBLE(): Particle {
 		return this.$javaClass.WATER_BUBBLE;
 	}
@@ -217,6 +244,9 @@ export default class Particle {
 	}
 	public static get WATER_WAKE(): Particle {
 		return this.$javaClass.WATER_WAKE;
+	}
+	public static get WHITE_ASH(): Particle {
+		return this.$javaClass.WHITE_ASH;
 	}
 }
 

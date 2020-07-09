@@ -6,9 +6,9 @@ import MaterialData from './MaterialData.js'
 import SimpleAttachableMaterialData from './SimpleAttachableMaterialData.js'
 
 export default interface Torch extends SimpleAttachableMaterialData {
-	clone(): SimpleAttachableMaterialData;
 	clone(): any;
 	clone(): MaterialData;
+	clone(): SimpleAttachableMaterialData;
 	clone(): Torch;
 	getAttachedFace(): BlockFace;
 	getData(): number;

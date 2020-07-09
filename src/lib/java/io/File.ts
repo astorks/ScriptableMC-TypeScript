@@ -4,7 +4,7 @@ import FilenameFilter from './FilenameFilter.js'
 import Path from '../../java/nio/file/Path.js'
 import Serializable from './Serializable.js'
 
-export default interface File {
+export default interface File extends Serializable {
 	canExecute(): boolean;
 	canRead(): boolean;
 	canWrite(): boolean;

@@ -20,6 +20,11 @@ import MinecraftVersions from '../lib/com/smc/version/MinecraftVersions.js';
 import SmartInventory from '../lib/com/smc/smartinvs/SmartInventory.js';
 import ItemBuilder from '../lib/com/smc/utils/ItemBuilder.js';
 import SmartInventoryProvider from '../lib/com/smc/smartinvs/SmartInventoryProvider.js';
+import Player$Spigot from '../lib/org/bukkit/entity/Player$Spigot.js';
+import ChatMessageType from '../lib/net/md_5/bungee/api/ChatMessageType.js';
+import BaseComponent from '../lib/net/md_5/bungee/api/chat/BaseComponent.js';
+import ComponentBuilder from '../lib/net/md_5/bungee/api/chat/ComponentBuilder.js';
+import SpigotChatColor from '../lib/net/md_5/bungee/api/ChatColor.js';
 
 export default class TestPlugin extends JsPlugin {
 
@@ -92,6 +97,8 @@ export default class TestPlugin extends JsPlugin {
 
     onPlayerJoin(listener: any, event: PlayerJoinEvent) {
         let player = event.getPlayer();
+
+        player.spigot().sendMessage(ChatMessageType.ACTION_BAR, new ComponentBuilder("Hello World!!").color(SpigotChatColor.AQUA).getParts());
 
         if(CONFIG.fireworkOnJoin.enabled && player.hasPermission(CONFIG.fireworkOnJoin.requiredPermission)) {
             let fw = player.getWorld().spawnEntity(player.getLocation().add(0, 10, 0), EntityType.FIREWORK) as Firework;

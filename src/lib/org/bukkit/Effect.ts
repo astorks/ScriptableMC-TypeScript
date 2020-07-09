@@ -92,6 +92,9 @@ export default class Effect {
 	public static get GHAST_SHRIEK(): Effect {
 		return this.$javaClass.GHAST_SHRIEK;
 	}
+	public static get INSTANT_POTION_BREAK(): Effect {
+		return this.$javaClass.INSTANT_POTION_BREAK;
+	}
 	public static get IRON_DOOR_CLOSE(): Effect {
 		return this.$javaClass.IRON_DOOR_CLOSE;
 	}

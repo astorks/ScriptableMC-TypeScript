@@ -5,9 +5,9 @@ import MaterialData from './MaterialData.js'
 import NetherWartsState from '../../../org/bukkit/NetherWartsState.js'
 
 export default interface NetherWarts extends MaterialData {
-	clone(): NetherWarts;
 	clone(): any;
 	clone(): MaterialData;
+	clone(): NetherWarts;
 	getData(): number;
 	getItemType(): Material;
 	getState(): NetherWartsState;
@@ -23,8 +23,8 @@ export default class NetherWarts {
 	}
 
 	constructor();
-	constructor(type: Material);
 	constructor(state: NetherWartsState);
+	constructor(type: Material);
 	constructor(type: Material, data: number);
 	constructor(...args: any[]) {
 		return new NetherWarts.$javaClass(...args);

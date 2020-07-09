@@ -4,7 +4,7 @@ import ResultSet from './ResultSet.js'
 import RowIdLifetime from './RowIdLifetime.js'
 import Wrapper from './Wrapper.js'
 
-export default interface DatabaseMetaData {
+export default interface DatabaseMetaData extends Wrapper {
 	allProceduresAreCallable(): boolean;
 	allTablesAreSelectable(): boolean;
 	autoCommitFailureClosesAllResultSets(): boolean;

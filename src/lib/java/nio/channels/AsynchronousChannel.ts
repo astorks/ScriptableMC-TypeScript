@@ -1,7 +1,7 @@
 declare var Java: any;
 import Channel from './Channel.js'
 
-export default interface AsynchronousChannel {
+export default interface AsynchronousChannel extends Channel {
 	close(): void;
 	isOpen(): boolean;
 }

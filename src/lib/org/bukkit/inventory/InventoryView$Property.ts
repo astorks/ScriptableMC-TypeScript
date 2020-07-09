@@ -58,6 +58,9 @@ export default class InventoryView$Property {
 	public static get ENCHANT_XP_SEED(): InventoryView$Property {
 		return this.$javaClass.ENCHANT_XP_SEED;
 	}
+	public static get FUEL_TIME(): InventoryView$Property {
+		return this.$javaClass.FUEL_TIME;
+	}
 	public static get LEVELS(): InventoryView$Property {
 		return this.$javaClass.LEVELS;
 	}

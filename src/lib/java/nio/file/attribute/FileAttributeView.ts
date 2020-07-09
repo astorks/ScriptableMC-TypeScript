@@ -1,7 +1,7 @@
 declare var Java: any;
 import AttributeView from './AttributeView.js'
 
-export default interface FileAttributeView {
+export default interface FileAttributeView extends AttributeView {
 	name(): string;
 }
 

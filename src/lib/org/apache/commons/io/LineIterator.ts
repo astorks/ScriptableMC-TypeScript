@@ -2,7 +2,7 @@ declare var Java: any;
 import Closeable from '../../../../java/io/Closeable.js'
 import Reader from '../../../../java/io/Reader.js'
 
-export default interface LineIterator {
+export default interface LineIterator extends Closeable {
 	close(): void;
 	forEachRemaining(action: any): void;
 	hasNext(): boolean;

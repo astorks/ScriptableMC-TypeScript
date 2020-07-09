@@ -23,8 +23,8 @@ export default interface Scoreboard {
 	registerNewObjective(arg0: string, arg1: string, arg2: string): Objective;
 	registerNewObjective(arg0: string, arg1: string, arg2: string, arg3: RenderType): Objective;
 	registerNewTeam(arg0: string): Team;
-	resetScores(arg0: OfflinePlayer): void;
 	resetScores(arg0: string): void;
+	resetScores(arg0: OfflinePlayer): void;
 }
 
 export default class Scoreboard {

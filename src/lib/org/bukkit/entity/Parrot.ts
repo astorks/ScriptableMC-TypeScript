@@ -1,12 +1,13 @@
 declare var Java: any;
 import AnimalTamer from './AnimalTamer.js'
-import Animals from './Animals.js'
 import Attribute from '../../../org/bukkit/attribute/Attribute.js'
 import AttributeInstance from '../../../org/bukkit/attribute/AttributeInstance.js'
 import Block from '../../../org/bukkit/block/Block.js'
 import BlockFace from '../../../org/bukkit/block/BlockFace.js'
 import BoundingBox from '../../../org/bukkit/util/BoundingBox.js'
+import CommandSender$Spigot from '../../../org/bukkit/command/CommandSender$Spigot.js'
 import Entity from './Entity.js'
+import Entity$Spigot from './Entity$Spigot.js'
 import EntityDamageEvent from '../../../org/bukkit/event/entity/EntityDamageEvent.js'
 import EntityEffect from '../../../org/bukkit/EntityEffect.js'
 import EntityEquipment from '../../../org/bukkit/inventory/EntityEquipment.js'
@@ -36,7 +37,7 @@ import Tameable from './Tameable.js'
 import Vector from '../../../org/bukkit/util/Vector.js'
 import World from '../../../org/bukkit/World.js'
 
-export default interface Parrot extends Animals, Tameable, Sittable {
+export default interface Parrot extends Tameable, Sittable {
 	addAttachment(arg0: Plugin): PermissionAttachment;
 	addAttachment(arg0: Plugin, arg1: number): PermissionAttachment;
 	addAttachment(arg0: Plugin, arg1: string, arg2: boolean): PermissionAttachment;
@@ -59,6 +60,7 @@ export default interface Parrot extends Animals, Tameable, Sittable {
 	getBoundingBox(): BoundingBox;
 	getBreedCause(): string;
 	getCanPickupItems(): boolean;
+	getCollidableExemptions(): any;
 	getCustomName(): string;
 	getEffectivePermissions(): any;
 	getEntityId(): number;
@@ -119,8 +121,8 @@ export default interface Parrot extends Animals, Tameable, Sittable {
 	hasGravity(): boolean;
 	hasLineOfSight(arg0: Entity): boolean;
 	hasMetadata(arg0: string): boolean;
-	hasPermission(arg0: Permission): boolean;
 	hasPermission(arg0: string): boolean;
+	hasPermission(arg0: Permission): boolean;
 	hasPotionEffect(arg0: PotionEffectType): boolean;
 	isAdult(): boolean;
 	isAware(): boolean;
@@ -136,8 +138,8 @@ export default interface Parrot extends Animals, Tameable, Sittable {
 	isLoveMode(): boolean;
 	isOnGround(): boolean;
 	isOp(): boolean;
-	isPermissionSet(arg0: Permission): boolean;
 	isPermissionSet(arg0: string): boolean;
+	isPermissionSet(arg0: Permission): boolean;
 	isPersistent(): boolean;
 	isRiptiding(): boolean;
 	isSilent(): boolean;
@@ -210,6 +212,8 @@ export default interface Parrot extends Animals, Tameable, Sittable {
 	setTicksLived(arg0: number): void;
 	setVariant(arg0: Parrot$Variant): void;
 	setVelocity(arg0: Vector): void;
+	spigot(): Entity$Spigot;
+	spigot(): CommandSender$Spigot;
 	swingMainHand(): void;
 	swingOffHand(): void;
 	teleport(arg0: Location): boolean;

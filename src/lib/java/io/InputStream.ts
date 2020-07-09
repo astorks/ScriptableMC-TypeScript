@@ -2,7 +2,7 @@ declare var Java: any;
 import Closeable from './Closeable.js'
 import OutputStream from './OutputStream.js'
 
-export default interface InputStream {
+export default interface InputStream extends Closeable {
 	available(): number;
 	close(): void;
 	mark(readlimit: number): void;

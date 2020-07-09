@@ -12,8 +12,24 @@ export default class MemoryKey {
 		return Java.type('org.bukkit.entity.memory.MemoryKey');
 	}
 
+	public static get ADMIRING_DISABLED(): MemoryKey {
+		return MemoryKey.$javaClass.ADMIRING_DISABLED;
+	}
+
+	public static get ADMIRING_ITEM(): MemoryKey {
+		return MemoryKey.$javaClass.ADMIRING_ITEM;
+	}
+
+	public static get ANGRY_AT(): MemoryKey {
+		return MemoryKey.$javaClass.ANGRY_AT;
+	}
+
 	public static get HOME(): MemoryKey {
 		return MemoryKey.$javaClass.HOME;
+	}
+
+	public static get HUNTED_RECENTLY(): MemoryKey {
+		return MemoryKey.$javaClass.HUNTED_RECENTLY;
 	}
 
 	public static get JOB_SITE(): MemoryKey {
@@ -34,6 +50,14 @@ export default class MemoryKey {
 
 	public static get MEETING_POINT(): MemoryKey {
 		return MemoryKey.$javaClass.MEETING_POINT;
+	}
+
+	public static get POTENTIAL_JOB_SITE(): MemoryKey {
+		return MemoryKey.$javaClass.POTENTIAL_JOB_SITE;
+	}
+
+	public static get UNIVERSAL_ANGER(): MemoryKey {
+		return MemoryKey.$javaClass.UNIVERSAL_ANGER;
 	}
 
 	public static getByKey(namespacedKey: NamespacedKey): MemoryKey;

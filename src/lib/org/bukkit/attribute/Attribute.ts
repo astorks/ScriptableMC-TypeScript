@@ -1,9 +1,12 @@
 declare var Java: any;
+import Keyed from '../../../org/bukkit/Keyed.js'
+import NamespacedKey from '../../../org/bukkit/NamespacedKey.js'
 
-export default interface Attribute {
+export default interface Attribute extends Keyed {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
 	getDeclaringClass(): any;
+	getKey(): NamespacedKey;
 	name(): string;
 	ordinal(): number;
 }
@@ -21,6 +24,9 @@ export default class Attribute {
 	}
 	public static get GENERIC_ATTACK_DAMAGE(): Attribute {
 		return this.$javaClass.GENERIC_ATTACK_DAMAGE;
+	}
+	public static get GENERIC_ATTACK_KNOCKBACK(): Attribute {
+		return this.$javaClass.GENERIC_ATTACK_KNOCKBACK;
 	}
 	public static get GENERIC_ATTACK_SPEED(): Attribute {
 		return this.$javaClass.GENERIC_ATTACK_SPEED;

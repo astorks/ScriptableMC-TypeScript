@@ -27,8 +27,8 @@ export default interface ScriptablePluginEngine {
 	getInventoryManager(): InventoryManager;
 	getLanguageFileExtension(): string;
 	getLanguageName(): string;
-	getPluginInstance(_name: string): any;
 	getPluginInstance(pluginContext: ScriptablePluginContext): any;
+	getPluginInstance(_name: string): any;
 	getPluginVersion(): Version;
 	getScriptablePlugins(): Array<ScriptablePluginContext>;
 	getStartupErrors(): Array<any>;

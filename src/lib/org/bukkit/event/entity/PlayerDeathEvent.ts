@@ -11,8 +11,8 @@ export default interface PlayerDeathEvent extends EntityDeathEvent {
 	getDeathMessage(): string;
 	getDroppedExp(): number;
 	getDrops(): Array<ItemStack>;
-	getEntity(): LivingEntity;
 	getEntity(): Entity;
+	getEntity(): LivingEntity;
 	getEntity(): Player;
 	getEntityType(): EntityType;
 	getEventName(): string;

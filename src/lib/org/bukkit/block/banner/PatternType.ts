@@ -74,6 +74,9 @@ export default class PatternType {
 	public static get MOJANG(): PatternType {
 		return this.$javaClass.MOJANG;
 	}
+	public static get PIGLIN(): PatternType {
+		return this.$javaClass.PIGLIN;
+	}
 	public static get RHOMBUS_MIDDLE(): PatternType {
 		return this.$javaClass.RHOMBUS_MIDDLE;
 	}
