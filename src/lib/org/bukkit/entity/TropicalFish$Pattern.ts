@@ -3,6 +3,7 @@ declare var Java: any;
 export default interface TropicalFish$Pattern {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	name(): string;
 	ordinal(): number;
@@ -49,5 +50,16 @@ export default class TropicalFish$Pattern {
 	public static get SUNSTREAK(): TropicalFish$Pattern {
 		return this.$javaClass.SUNSTREAK;
 	}
+	public static valueOf(arg0: string): TropicalFish$Pattern;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return TropicalFish$Pattern.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<TropicalFish$Pattern>;
+	public static values(...args: any[]): any {
+		return TropicalFish$Pattern.$javaClass.values(...args);
+	}
+
 }
 

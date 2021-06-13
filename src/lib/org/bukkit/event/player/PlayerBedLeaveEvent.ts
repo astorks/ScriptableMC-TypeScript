@@ -1,15 +1,18 @@
 declare var Java: any;
 import Block from '../../../../org/bukkit/block/Block.js'
+import Cancellable from '../../../../org/bukkit/event/Cancellable.js'
 import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import Player from '../../../../org/bukkit/entity/Player.js'
 import PlayerEvent from './PlayerEvent.js'
 
-export default interface PlayerBedLeaveEvent extends PlayerEvent {
+export default interface PlayerBedLeaveEvent extends PlayerEvent, Cancellable {
 	getBed(): Block;
 	getEventName(): string;
 	getHandlers(): HandlerList;
 	getPlayer(): Player;
 	isAsynchronous(): boolean;
+	isCancelled(): boolean;
+	setCancelled(cancelled: boolean): void;
 	setSpawnLocation(setBedSpawn: boolean): void;
 	shouldSetSpawnLocation(): boolean;
 }

@@ -23,8 +23,8 @@ export default interface Smoker extends Furnace {
 	getCookTimeTotal(): number;
 	getCustomName(): string;
 	getData(): MaterialData;
-	getInventory(): FurnaceInventory;
 	getInventory(): Inventory;
+	getInventory(): FurnaceInventory;
 	getLightLevel(): number;
 	getLocation(): Location;
 	getLocation(arg0: Location): Location;
@@ -32,8 +32,8 @@ export default interface Smoker extends Furnace {
 	getMetadata(arg0: string): Array<MetadataValue>;
 	getPersistentDataContainer(): PersistentDataContainer;
 	getRawData(): number;
-	getSnapshotInventory(): FurnaceInventory;
 	getSnapshotInventory(): Inventory;
+	getSnapshotInventory(): FurnaceInventory;
 	getType(): Material;
 	getWorld(): World;
 	getX(): number;

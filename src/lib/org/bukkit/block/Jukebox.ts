@@ -42,6 +42,7 @@ export default interface Jukebox extends TileState {
 	setRawData(arg0: number): void;
 	setRecord(arg0: ItemStack): void;
 	setType(arg0: Material): void;
+	stopPlaying(): void;
 	update(): boolean;
 	update(arg0: boolean): boolean;
 	update(arg0: boolean, arg1: boolean): boolean;

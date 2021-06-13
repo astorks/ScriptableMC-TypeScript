@@ -1,6 +1,7 @@
 declare var Java: any;
 import Block from '../../../../org/bukkit/block/Block.js'
 import BlockEvent from './BlockEvent.js'
+import BlockState from '../../../../org/bukkit/block/BlockState.js'
 import Cancellable from '../../../../org/bukkit/event/Cancellable.js'
 import CauldronLevelChangeEvent$ChangeReason from './CauldronLevelChangeEvent$ChangeReason.js'
 import Entity from '../../../../org/bukkit/entity/Entity.js'
@@ -12,6 +13,7 @@ export default interface CauldronLevelChangeEvent extends BlockEvent, Cancellabl
 	getEventName(): string;
 	getHandlers(): HandlerList;
 	getNewLevel(): number;
+	getNewState(): BlockState;
 	getOldLevel(): number;
 	getReason(): CauldronLevelChangeEvent$ChangeReason;
 	isAsynchronous(): boolean;
@@ -25,7 +27,7 @@ export default class CauldronLevelChangeEvent {
 		return Java.type('org.bukkit.event.block.CauldronLevelChangeEvent');
 	}
 
-	constructor(block: Block, entity: Entity, reason: CauldronLevelChangeEvent$ChangeReason, oldLevel: number, newLevel: number);
+	constructor(block: Block, entity: Entity, reason: CauldronLevelChangeEvent$ChangeReason, newBlock: BlockState);
 	constructor(...args: any[]) {
 		return new CauldronLevelChangeEvent.$javaClass(...args);
 	}

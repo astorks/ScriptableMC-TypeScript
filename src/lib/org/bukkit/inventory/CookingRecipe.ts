@@ -26,8 +26,8 @@ export default class CookingRecipe {
 		return Java.type('org.bukkit.inventory.CookingRecipe');
 	}
 
-	constructor(key: NamespacedKey, result: ItemStack, input: RecipeChoice, experience: number, cookingTime: number);
 	constructor(key: NamespacedKey, result: ItemStack, source: Material, experience: number, cookingTime: number);
+	constructor(key: NamespacedKey, result: ItemStack, input: RecipeChoice, experience: number, cookingTime: number);
 	constructor(...args: any[]) {
 		return new CookingRecipe.$javaClass(...args);
 	}

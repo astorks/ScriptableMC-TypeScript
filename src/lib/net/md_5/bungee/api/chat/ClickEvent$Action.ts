@@ -3,6 +3,7 @@ declare var Java: any;
 export default interface ClickEvent$Action {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	name(): string;
 	ordinal(): number;
@@ -31,5 +32,16 @@ export default class ClickEvent$Action {
 	public static get SUGGEST_COMMAND(): ClickEvent$Action {
 		return this.$javaClass.SUGGEST_COMMAND;
 	}
+	public static valueOf(_name: string): ClickEvent$Action;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return ClickEvent$Action.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<ClickEvent$Action>;
+	public static values(...args: any[]): any {
+		return ClickEvent$Action.$javaClass.values(...args);
+	}
+
 }
 

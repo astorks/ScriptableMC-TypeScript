@@ -1,6 +1,7 @@
 declare var Java: any;
 import BlockData from '../../../../../org/bukkit/block/data/BlockData.js'
 import Material from '../../../../../org/bukkit/Material.js'
+import SoundGroup from '../../../../../org/bukkit/SoundGroup.js'
 
 export default interface Snow extends BlockData {
 	clone(): any;
@@ -11,6 +12,7 @@ export default interface Snow extends BlockData {
 	getMaterial(): Material;
 	getMaximumLayers(): number;
 	getMinimumLayers(): number;
+	getSoundGroup(): SoundGroup;
 	matches(arg0: BlockData): boolean;
 	merge(arg0: BlockData): BlockData;
 	setLayers(arg0: number): void;

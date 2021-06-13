@@ -17,30 +17,31 @@ export default interface PrintStream extends FilterOutputStream, Closeable {
 	flush(): void;
 	format(format: string, args: Array<any>): PrintStream;
 	format(l: any, format: string, args: Array<any>): PrintStream;
+	print(obj: any): void;
 	print(b: boolean): void;
-	print(i: number): void;
 	print(d: number): void;
 	print(f: number): void;
-	print(obj: any): void;
-	print(s: string): void;
-	print(s: Array<string>): void;
 	print(c: string): void;
+	print(i: number): void;
 	print(l: number): void;
+	print(s: Array<string>): void;
+	print(s: string): void;
 	printf(format: string, args: Array<any>): PrintStream;
 	printf(l: any, format: string, args: Array<any>): PrintStream;
 	println(): void;
-	println(x: number): void;
-	println(x: number): void;
-	println(x: number): void;
-	println(x: any): void;
-	println(x: Array<string>): void;
 	println(x: string): void;
+	println(x: any): void;
+	println(x: number): void;
+	println(x: number): void;
+	println(x: Array<string>): void;
 	println(x: boolean): void;
 	println(x: string): void;
 	println(x: number): void;
+	println(x: number): void;
+	write(buf: Array<number>): void;
 	write(b: number): void;
-	write(b: Array<number>): void;
 	write(buf: Array<number>, off: number, len: number): void;
+	writeBytes(buf: Array<number>): void;
 }
 
 export default class PrintStream {

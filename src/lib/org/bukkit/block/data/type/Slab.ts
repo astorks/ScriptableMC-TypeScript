@@ -2,6 +2,7 @@ declare var Java: any;
 import BlockData from '../../../../../org/bukkit/block/data/BlockData.js'
 import Material from '../../../../../org/bukkit/Material.js'
 import Slab$Type from './Slab$Type.js'
+import SoundGroup from '../../../../../org/bukkit/SoundGroup.js'
 import Waterlogged from '../../../../../org/bukkit/block/data/Waterlogged.js'
 
 export default interface Slab extends Waterlogged {
@@ -10,6 +11,7 @@ export default interface Slab extends Waterlogged {
 	getAsString(): string;
 	getAsString(arg0: boolean): string;
 	getMaterial(): Material;
+	getSoundGroup(): SoundGroup;
 	getType(): Slab$Type;
 	isWaterlogged(): boolean;
 	matches(arg0: BlockData): boolean;

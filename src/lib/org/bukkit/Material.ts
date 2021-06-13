@@ -1,5 +1,6 @@
 declare var Java: any;
 import BlockData from './block/data/BlockData.js'
+import EquipmentSlot from './inventory/EquipmentSlot.js'
 import Keyed from './Keyed.js'
 import MaterialData from './material/MaterialData.js'
 import NamespacedKey from './NamespacedKey.js'
@@ -8,12 +9,14 @@ export default interface Material extends Keyed {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
 	createBlockData(): BlockData;
-	createBlockData(consumer: any): BlockData;
 	createBlockData(data: string): BlockData;
+	createBlockData(consumer: any): BlockData;
+	describeConstable(): any;
 	getBlastResistance(): number;
 	getCraftingRemainingItem(): Material;
 	getData(): any;
 	getDeclaringClass(): any;
+	getEquipmentSlot(): EquipmentSlot;
 	getHardness(): number;
 	getId(): number;
 	getKey(): NamespacedKey;
@@ -100,6 +103,15 @@ export default class Material {
 	public static get ALLIUM(): Material {
 		return this.$javaClass.ALLIUM;
 	}
+	public static get AMETHYST_BLOCK(): Material {
+		return this.$javaClass.AMETHYST_BLOCK;
+	}
+	public static get AMETHYST_CLUSTER(): Material {
+		return this.$javaClass.AMETHYST_CLUSTER;
+	}
+	public static get AMETHYST_SHARD(): Material {
+		return this.$javaClass.AMETHYST_SHARD;
+	}
 	public static get ANCIENT_DEBRIS(): Material {
 		return this.$javaClass.ANCIENT_DEBRIS;
 	}
@@ -132,6 +144,18 @@ export default class Material {
 	}
 	public static get ATTACHED_PUMPKIN_STEM(): Material {
 		return this.$javaClass.ATTACHED_PUMPKIN_STEM;
+	}
+	public static get AXOLOTL_BUCKET(): Material {
+		return this.$javaClass.AXOLOTL_BUCKET;
+	}
+	public static get AXOLOTL_SPAWN_EGG(): Material {
+		return this.$javaClass.AXOLOTL_SPAWN_EGG;
+	}
+	public static get AZALEA(): Material {
+		return this.$javaClass.AZALEA;
+	}
+	public static get AZALEA_LEAVES(): Material {
+		return this.$javaClass.AZALEA_LEAVES;
 	}
 	public static get AZURE_BLUET(): Material {
 		return this.$javaClass.AZURE_BLUET;
@@ -189,6 +213,12 @@ export default class Material {
 	}
 	public static get BELL(): Material {
 		return this.$javaClass.BELL;
+	}
+	public static get BIG_DRIPLEAF(): Material {
+		return this.$javaClass.BIG_DRIPLEAF;
+	}
+	public static get BIG_DRIPLEAF_STEM(): Material {
+		return this.$javaClass.BIG_DRIPLEAF_STEM;
 	}
 	public static get BIRCH_BOAT(): Material {
 		return this.$javaClass.BIRCH_BOAT;
@@ -256,6 +286,12 @@ export default class Material {
 	public static get BLACK_BED(): Material {
 		return this.$javaClass.BLACK_BED;
 	}
+	public static get BLACK_CANDLE(): Material {
+		return this.$javaClass.BLACK_CANDLE;
+	}
+	public static get BLACK_CANDLE_CAKE(): Material {
+		return this.$javaClass.BLACK_CANDLE_CAKE;
+	}
 	public static get BLACK_CARPET(): Material {
 		return this.$javaClass.BLACK_CARPET;
 	}
@@ -306,6 +342,12 @@ export default class Material {
 	}
 	public static get BLUE_BED(): Material {
 		return this.$javaClass.BLUE_BED;
+	}
+	public static get BLUE_CANDLE(): Material {
+		return this.$javaClass.BLUE_CANDLE;
+	}
+	public static get BLUE_CANDLE_CAKE(): Material {
+		return this.$javaClass.BLUE_CANDLE_CAKE;
 	}
 	public static get BLUE_CARPET(): Material {
 		return this.$javaClass.BLUE_CARPET;
@@ -406,6 +448,12 @@ export default class Material {
 	public static get BROWN_BED(): Material {
 		return this.$javaClass.BROWN_BED;
 	}
+	public static get BROWN_CANDLE(): Material {
+		return this.$javaClass.BROWN_CANDLE;
+	}
+	public static get BROWN_CANDLE_CAKE(): Material {
+		return this.$javaClass.BROWN_CANDLE_CAKE;
+	}
 	public static get BROWN_CARPET(): Material {
 		return this.$javaClass.BROWN_CARPET;
 	}
@@ -463,14 +511,29 @@ export default class Material {
 	public static get BUCKET(): Material {
 		return this.$javaClass.BUCKET;
 	}
+	public static get BUDDING_AMETHYST(): Material {
+		return this.$javaClass.BUDDING_AMETHYST;
+	}
+	public static get BUNDLE(): Material {
+		return this.$javaClass.BUNDLE;
+	}
 	public static get CACTUS(): Material {
 		return this.$javaClass.CACTUS;
 	}
 	public static get CAKE(): Material {
 		return this.$javaClass.CAKE;
 	}
+	public static get CALCITE(): Material {
+		return this.$javaClass.CALCITE;
+	}
 	public static get CAMPFIRE(): Material {
 		return this.$javaClass.CAMPFIRE;
+	}
+	public static get CANDLE(): Material {
+		return this.$javaClass.CANDLE;
+	}
+	public static get CANDLE_CAKE(): Material {
+		return this.$javaClass.CANDLE_CAKE;
 	}
 	public static get CARROT(): Material {
 		return this.$javaClass.CARROT;
@@ -498,6 +561,12 @@ export default class Material {
 	}
 	public static get CAVE_SPIDER_SPAWN_EGG(): Material {
 		return this.$javaClass.CAVE_SPIDER_SPAWN_EGG;
+	}
+	public static get CAVE_VINES(): Material {
+		return this.$javaClass.CAVE_VINES;
+	}
+	public static get CAVE_VINES_PLANT(): Material {
+		return this.$javaClass.CAVE_VINES_PLANT;
 	}
 	public static get CHAIN(): Material {
 		return this.$javaClass.CHAIN;
@@ -534,6 +603,9 @@ export default class Material {
 	}
 	public static get CHIPPED_ANVIL(): Material {
 		return this.$javaClass.CHIPPED_ANVIL;
+	}
+	public static get CHISELED_DEEPSLATE(): Material {
+		return this.$javaClass.CHISELED_DEEPSLATE;
 	}
 	public static get CHISELED_NETHER_BRICKS(): Material {
 		return this.$javaClass.CHISELED_NETHER_BRICKS;
@@ -582,6 +654,18 @@ export default class Material {
 	}
 	public static get COARSE_DIRT(): Material {
 		return this.$javaClass.COARSE_DIRT;
+	}
+	public static get COBBLED_DEEPSLATE(): Material {
+		return this.$javaClass.COBBLED_DEEPSLATE;
+	}
+	public static get COBBLED_DEEPSLATE_SLAB(): Material {
+		return this.$javaClass.COBBLED_DEEPSLATE_SLAB;
+	}
+	public static get COBBLED_DEEPSLATE_STAIRS(): Material {
+		return this.$javaClass.COBBLED_DEEPSLATE_STAIRS;
+	}
+	public static get COBBLED_DEEPSLATE_WALL(): Material {
+		return this.$javaClass.COBBLED_DEEPSLATE_WALL;
 	}
 	public static get COBBLESTONE(): Material {
 		return this.$javaClass.COBBLESTONE;
@@ -655,11 +739,26 @@ export default class Material {
 	public static get COOKIE(): Material {
 		return this.$javaClass.COOKIE;
 	}
+	public static get COPPER_BLOCK(): Material {
+		return this.$javaClass.COPPER_BLOCK;
+	}
+	public static get COPPER_INGOT(): Material {
+		return this.$javaClass.COPPER_INGOT;
+	}
+	public static get COPPER_ORE(): Material {
+		return this.$javaClass.COPPER_ORE;
+	}
 	public static get CORNFLOWER(): Material {
 		return this.$javaClass.CORNFLOWER;
 	}
 	public static get COW_SPAWN_EGG(): Material {
 		return this.$javaClass.COW_SPAWN_EGG;
+	}
+	public static get CRACKED_DEEPSLATE_BRICKS(): Material {
+		return this.$javaClass.CRACKED_DEEPSLATE_BRICKS;
+	}
+	public static get CRACKED_DEEPSLATE_TILES(): Material {
+		return this.$javaClass.CRACKED_DEEPSLATE_TILES;
 	}
 	public static get CRACKED_NETHER_BRICKS(): Material {
 		return this.$javaClass.CRACKED_NETHER_BRICKS;
@@ -739,6 +838,15 @@ export default class Material {
 	public static get CRYING_OBSIDIAN(): Material {
 		return this.$javaClass.CRYING_OBSIDIAN;
 	}
+	public static get CUT_COPPER(): Material {
+		return this.$javaClass.CUT_COPPER;
+	}
+	public static get CUT_COPPER_SLAB(): Material {
+		return this.$javaClass.CUT_COPPER_SLAB;
+	}
+	public static get CUT_COPPER_STAIRS(): Material {
+		return this.$javaClass.CUT_COPPER_STAIRS;
+	}
 	public static get CUT_RED_SANDSTONE(): Material {
 		return this.$javaClass.CUT_RED_SANDSTONE;
 	}
@@ -756,6 +864,12 @@ export default class Material {
 	}
 	public static get CYAN_BED(): Material {
 		return this.$javaClass.CYAN_BED;
+	}
+	public static get CYAN_CANDLE(): Material {
+		return this.$javaClass.CYAN_CANDLE;
+	}
+	public static get CYAN_CANDLE_CAKE(): Material {
+		return this.$javaClass.CYAN_CANDLE_CAKE;
 	}
 	public static get CYAN_CARPET(): Material {
 		return this.$javaClass.CYAN_CARPET;
@@ -922,6 +1036,57 @@ export default class Material {
 	public static get DEBUG_STICK(): Material {
 		return this.$javaClass.DEBUG_STICK;
 	}
+	public static get DEEPSLATE(): Material {
+		return this.$javaClass.DEEPSLATE;
+	}
+	public static get DEEPSLATE_BRICKS(): Material {
+		return this.$javaClass.DEEPSLATE_BRICKS;
+	}
+	public static get DEEPSLATE_BRICK_SLAB(): Material {
+		return this.$javaClass.DEEPSLATE_BRICK_SLAB;
+	}
+	public static get DEEPSLATE_BRICK_STAIRS(): Material {
+		return this.$javaClass.DEEPSLATE_BRICK_STAIRS;
+	}
+	public static get DEEPSLATE_BRICK_WALL(): Material {
+		return this.$javaClass.DEEPSLATE_BRICK_WALL;
+	}
+	public static get DEEPSLATE_COAL_ORE(): Material {
+		return this.$javaClass.DEEPSLATE_COAL_ORE;
+	}
+	public static get DEEPSLATE_COPPER_ORE(): Material {
+		return this.$javaClass.DEEPSLATE_COPPER_ORE;
+	}
+	public static get DEEPSLATE_DIAMOND_ORE(): Material {
+		return this.$javaClass.DEEPSLATE_DIAMOND_ORE;
+	}
+	public static get DEEPSLATE_EMERALD_ORE(): Material {
+		return this.$javaClass.DEEPSLATE_EMERALD_ORE;
+	}
+	public static get DEEPSLATE_GOLD_ORE(): Material {
+		return this.$javaClass.DEEPSLATE_GOLD_ORE;
+	}
+	public static get DEEPSLATE_IRON_ORE(): Material {
+		return this.$javaClass.DEEPSLATE_IRON_ORE;
+	}
+	public static get DEEPSLATE_LAPIS_ORE(): Material {
+		return this.$javaClass.DEEPSLATE_LAPIS_ORE;
+	}
+	public static get DEEPSLATE_REDSTONE_ORE(): Material {
+		return this.$javaClass.DEEPSLATE_REDSTONE_ORE;
+	}
+	public static get DEEPSLATE_TILES(): Material {
+		return this.$javaClass.DEEPSLATE_TILES;
+	}
+	public static get DEEPSLATE_TILE_SLAB(): Material {
+		return this.$javaClass.DEEPSLATE_TILE_SLAB;
+	}
+	public static get DEEPSLATE_TILE_STAIRS(): Material {
+		return this.$javaClass.DEEPSLATE_TILE_STAIRS;
+	}
+	public static get DEEPSLATE_TILE_WALL(): Material {
+		return this.$javaClass.DEEPSLATE_TILE_WALL;
+	}
 	public static get DETECTOR_RAIL(): Material {
 		return this.$javaClass.DETECTOR_RAIL;
 	}
@@ -979,6 +1144,9 @@ export default class Material {
 	public static get DIRT(): Material {
 		return this.$javaClass.DIRT;
 	}
+	public static get DIRT_PATH(): Material {
+		return this.$javaClass.DIRT_PATH;
+	}
 	public static get DISPENSER(): Material {
 		return this.$javaClass.DISPENSER;
 	}
@@ -1005,6 +1173,9 @@ export default class Material {
 	}
 	public static get DRIED_KELP_BLOCK(): Material {
 		return this.$javaClass.DRIED_KELP_BLOCK;
+	}
+	public static get DRIPSTONE_BLOCK(): Material {
+		return this.$javaClass.DRIPSTONE_BLOCK;
 	}
 	public static get DROPPER(): Material {
 		return this.$javaClass.DROPPER;
@@ -1090,6 +1261,18 @@ export default class Material {
 	public static get EXPERIENCE_BOTTLE(): Material {
 		return this.$javaClass.EXPERIENCE_BOTTLE;
 	}
+	public static get EXPOSED_COPPER(): Material {
+		return this.$javaClass.EXPOSED_COPPER;
+	}
+	public static get EXPOSED_CUT_COPPER(): Material {
+		return this.$javaClass.EXPOSED_CUT_COPPER;
+	}
+	public static get EXPOSED_CUT_COPPER_SLAB(): Material {
+		return this.$javaClass.EXPOSED_CUT_COPPER_SLAB;
+	}
+	public static get EXPOSED_CUT_COPPER_STAIRS(): Material {
+		return this.$javaClass.EXPOSED_CUT_COPPER_STAIRS;
+	}
 	public static get FARMLAND(): Material {
 		return this.$javaClass.FARMLAND;
 	}
@@ -1141,6 +1324,12 @@ export default class Material {
 	public static get FLINT_AND_STEEL(): Material {
 		return this.$javaClass.FLINT_AND_STEEL;
 	}
+	public static get FLOWERING_AZALEA(): Material {
+		return this.$javaClass.FLOWERING_AZALEA;
+	}
+	public static get FLOWERING_AZALEA_LEAVES(): Material {
+		return this.$javaClass.FLOWERING_AZALEA_LEAVES;
+	}
 	public static get FLOWER_BANNER_PATTERN(): Material {
 		return this.$javaClass.FLOWER_BANNER_PATTERN;
 	}
@@ -1188,6 +1377,24 @@ export default class Material {
 	}
 	public static get GLOWSTONE_DUST(): Material {
 		return this.$javaClass.GLOWSTONE_DUST;
+	}
+	public static get GLOW_BERRIES(): Material {
+		return this.$javaClass.GLOW_BERRIES;
+	}
+	public static get GLOW_INK_SAC(): Material {
+		return this.$javaClass.GLOW_INK_SAC;
+	}
+	public static get GLOW_ITEM_FRAME(): Material {
+		return this.$javaClass.GLOW_ITEM_FRAME;
+	}
+	public static get GLOW_LICHEN(): Material {
+		return this.$javaClass.GLOW_LICHEN;
+	}
+	public static get GLOW_SQUID_SPAWN_EGG(): Material {
+		return this.$javaClass.GLOW_SQUID_SPAWN_EGG;
+	}
+	public static get GOAT_SPAWN_EGG(): Material {
+		return this.$javaClass.GOAT_SPAWN_EGG;
 	}
 	public static get GOLDEN_APPLE(): Material {
 		return this.$javaClass.GOLDEN_APPLE;
@@ -1255,9 +1462,6 @@ export default class Material {
 	public static get GRASS_BLOCK(): Material {
 		return this.$javaClass.GRASS_BLOCK;
 	}
-	public static get GRASS_PATH(): Material {
-		return this.$javaClass.GRASS_PATH;
-	}
 	public static get GRAVEL(): Material {
 		return this.$javaClass.GRAVEL;
 	}
@@ -1266,6 +1470,12 @@ export default class Material {
 	}
 	public static get GRAY_BED(): Material {
 		return this.$javaClass.GRAY_BED;
+	}
+	public static get GRAY_CANDLE(): Material {
+		return this.$javaClass.GRAY_CANDLE;
+	}
+	public static get GRAY_CANDLE_CAKE(): Material {
+		return this.$javaClass.GRAY_CANDLE_CAKE;
 	}
 	public static get GRAY_CARPET(): Material {
 		return this.$javaClass.GRAY_CARPET;
@@ -1305,6 +1515,12 @@ export default class Material {
 	}
 	public static get GREEN_BED(): Material {
 		return this.$javaClass.GREEN_BED;
+	}
+	public static get GREEN_CANDLE(): Material {
+		return this.$javaClass.GREEN_CANDLE;
+	}
+	public static get GREEN_CANDLE_CAKE(): Material {
+		return this.$javaClass.GREEN_CANDLE_CAKE;
 	}
 	public static get GREEN_CARPET(): Material {
 		return this.$javaClass.GREEN_CARPET;
@@ -1347,6 +1563,9 @@ export default class Material {
 	}
 	public static get GUNPOWDER(): Material {
 		return this.$javaClass.GUNPOWDER;
+	}
+	public static get HANGING_ROOTS(): Material {
+		return this.$javaClass.HANGING_ROOTS;
 	}
 	public static get HAY_BLOCK(): Material {
 		return this.$javaClass.HAY_BLOCK;
@@ -1407,6 +1626,9 @@ export default class Material {
 	}
 	public static get INFESTED_CRACKED_STONE_BRICKS(): Material {
 		return this.$javaClass.INFESTED_CRACKED_STONE_BRICKS;
+	}
+	public static get INFESTED_DEEPSLATE(): Material {
+		return this.$javaClass.INFESTED_DEEPSLATE;
 	}
 	public static get INFESTED_MOSSY_STONE_BRICKS(): Material {
 		return this.$javaClass.INFESTED_MOSSY_STONE_BRICKS;
@@ -1555,6 +1777,9 @@ export default class Material {
 	public static get LAPIS_ORE(): Material {
 		return this.$javaClass.LAPIS_ORE;
 	}
+	public static get LARGE_AMETHYST_BUD(): Material {
+		return this.$javaClass.LARGE_AMETHYST_BUD;
+	}
 	public static get LARGE_FERN(): Material {
 		return this.$javaClass.LARGE_FERN;
 	}
@@ -1563,6 +1788,9 @@ export default class Material {
 	}
 	public static get LAVA_BUCKET(): Material {
 		return this.$javaClass.LAVA_BUCKET;
+	}
+	public static get LAVA_CAULDRON(): Material {
+		return this.$javaClass.LAVA_CAULDRON;
 	}
 	public static get LEAD(): Material {
 		return this.$javaClass.LEAD;
@@ -2980,11 +3208,23 @@ export default class Material {
 	public static get LEVER(): Material {
 		return this.$javaClass.LEVER;
 	}
+	public static get LIGHT(): Material {
+		return this.$javaClass.LIGHT;
+	}
+	public static get LIGHTNING_ROD(): Material {
+		return this.$javaClass.LIGHTNING_ROD;
+	}
 	public static get LIGHT_BLUE_BANNER(): Material {
 		return this.$javaClass.LIGHT_BLUE_BANNER;
 	}
 	public static get LIGHT_BLUE_BED(): Material {
 		return this.$javaClass.LIGHT_BLUE_BED;
+	}
+	public static get LIGHT_BLUE_CANDLE(): Material {
+		return this.$javaClass.LIGHT_BLUE_CANDLE;
+	}
+	public static get LIGHT_BLUE_CANDLE_CAKE(): Material {
+		return this.$javaClass.LIGHT_BLUE_CANDLE_CAKE;
 	}
 	public static get LIGHT_BLUE_CARPET(): Material {
 		return this.$javaClass.LIGHT_BLUE_CARPET;
@@ -3024,6 +3264,12 @@ export default class Material {
 	}
 	public static get LIGHT_GRAY_BED(): Material {
 		return this.$javaClass.LIGHT_GRAY_BED;
+	}
+	public static get LIGHT_GRAY_CANDLE(): Material {
+		return this.$javaClass.LIGHT_GRAY_CANDLE;
+	}
+	public static get LIGHT_GRAY_CANDLE_CAKE(): Material {
+		return this.$javaClass.LIGHT_GRAY_CANDLE_CAKE;
 	}
 	public static get LIGHT_GRAY_CARPET(): Material {
 		return this.$javaClass.LIGHT_GRAY_CARPET;
@@ -3076,6 +3322,12 @@ export default class Material {
 	public static get LIME_BED(): Material {
 		return this.$javaClass.LIME_BED;
 	}
+	public static get LIME_CANDLE(): Material {
+		return this.$javaClass.LIME_CANDLE;
+	}
+	public static get LIME_CANDLE_CAKE(): Material {
+		return this.$javaClass.LIME_CANDLE_CAKE;
+	}
 	public static get LIME_CARPET(): Material {
 		return this.$javaClass.LIME_CARPET;
 	}
@@ -3127,6 +3379,12 @@ export default class Material {
 	public static get MAGENTA_BED(): Material {
 		return this.$javaClass.MAGENTA_BED;
 	}
+	public static get MAGENTA_CANDLE(): Material {
+		return this.$javaClass.MAGENTA_CANDLE;
+	}
+	public static get MAGENTA_CANDLE_CAKE(): Material {
+		return this.$javaClass.MAGENTA_CANDLE_CAKE;
+	}
 	public static get MAGENTA_CARPET(): Material {
 		return this.$javaClass.MAGENTA_CARPET;
 	}
@@ -3171,6 +3429,9 @@ export default class Material {
 	}
 	public static get MAP(): Material {
 		return this.$javaClass.MAP;
+	}
+	public static get MEDIUM_AMETHYST_BUD(): Material {
+		return this.$javaClass.MEDIUM_AMETHYST_BUD;
 	}
 	public static get MELON(): Material {
 		return this.$javaClass.MELON;
@@ -3219,6 +3480,12 @@ export default class Material {
 	}
 	public static get MOSSY_STONE_BRICK_WALL(): Material {
 		return this.$javaClass.MOSSY_STONE_BRICK_WALL;
+	}
+	public static get MOSS_BLOCK(): Material {
+		return this.$javaClass.MOSS_BLOCK;
+	}
+	public static get MOSS_CARPET(): Material {
+		return this.$javaClass.MOSS_CARPET;
 	}
 	public static get MOVING_PISTON(): Material {
 		return this.$javaClass.MOVING_PISTON;
@@ -3427,6 +3694,12 @@ export default class Material {
 	public static get ORANGE_BED(): Material {
 		return this.$javaClass.ORANGE_BED;
 	}
+	public static get ORANGE_CANDLE(): Material {
+		return this.$javaClass.ORANGE_CANDLE;
+	}
+	public static get ORANGE_CANDLE_CAKE(): Material {
+		return this.$javaClass.ORANGE_CANDLE_CAKE;
+	}
 	public static get ORANGE_CARPET(): Material {
 		return this.$javaClass.ORANGE_CARPET;
 	}
@@ -3466,6 +3739,18 @@ export default class Material {
 	public static get OXEYE_DAISY(): Material {
 		return this.$javaClass.OXEYE_DAISY;
 	}
+	public static get OXIDIZED_COPPER(): Material {
+		return this.$javaClass.OXIDIZED_COPPER;
+	}
+	public static get OXIDIZED_CUT_COPPER(): Material {
+		return this.$javaClass.OXIDIZED_CUT_COPPER;
+	}
+	public static get OXIDIZED_CUT_COPPER_SLAB(): Material {
+		return this.$javaClass.OXIDIZED_CUT_COPPER_SLAB;
+	}
+	public static get OXIDIZED_CUT_COPPER_STAIRS(): Material {
+		return this.$javaClass.OXIDIZED_CUT_COPPER_STAIRS;
+	}
 	public static get PACKED_ICE(): Material {
 		return this.$javaClass.PACKED_ICE;
 	}
@@ -3496,6 +3781,9 @@ export default class Material {
 	public static get PIGLIN_BANNER_PATTERN(): Material {
 		return this.$javaClass.PIGLIN_BANNER_PATTERN;
 	}
+	public static get PIGLIN_BRUTE_SPAWN_EGG(): Material {
+		return this.$javaClass.PIGLIN_BRUTE_SPAWN_EGG;
+	}
 	public static get PIGLIN_SPAWN_EGG(): Material {
 		return this.$javaClass.PIGLIN_SPAWN_EGG;
 	}
@@ -3510,6 +3798,12 @@ export default class Material {
 	}
 	public static get PINK_BED(): Material {
 		return this.$javaClass.PINK_BED;
+	}
+	public static get PINK_CANDLE(): Material {
+		return this.$javaClass.PINK_CANDLE;
+	}
+	public static get PINK_CANDLE_CAKE(): Material {
+		return this.$javaClass.PINK_CANDLE_CAKE;
 	}
 	public static get PINK_CARPET(): Material {
 		return this.$javaClass.PINK_CARPET;
@@ -3562,6 +3856,9 @@ export default class Material {
 	public static get PODZOL(): Material {
 		return this.$javaClass.PODZOL;
 	}
+	public static get POINTED_DRIPSTONE(): Material {
+		return this.$javaClass.POINTED_DRIPSTONE;
+	}
 	public static get POISONOUS_POTATO(): Material {
 		return this.$javaClass.POISONOUS_POTATO;
 	}
@@ -3610,6 +3907,18 @@ export default class Material {
 	public static get POLISHED_BLACKSTONE_WALL(): Material {
 		return this.$javaClass.POLISHED_BLACKSTONE_WALL;
 	}
+	public static get POLISHED_DEEPSLATE(): Material {
+		return this.$javaClass.POLISHED_DEEPSLATE;
+	}
+	public static get POLISHED_DEEPSLATE_SLAB(): Material {
+		return this.$javaClass.POLISHED_DEEPSLATE_SLAB;
+	}
+	public static get POLISHED_DEEPSLATE_STAIRS(): Material {
+		return this.$javaClass.POLISHED_DEEPSLATE_STAIRS;
+	}
+	public static get POLISHED_DEEPSLATE_WALL(): Material {
+		return this.$javaClass.POLISHED_DEEPSLATE_WALL;
+	}
 	public static get POLISHED_DIORITE(): Material {
 		return this.$javaClass.POLISHED_DIORITE;
 	}
@@ -3652,6 +3961,9 @@ export default class Material {
 	public static get POTTED_ALLIUM(): Material {
 		return this.$javaClass.POTTED_ALLIUM;
 	}
+	public static get POTTED_AZALEA_BUSH(): Material {
+		return this.$javaClass.POTTED_AZALEA_BUSH;
+	}
 	public static get POTTED_AZURE_BLUET(): Material {
 		return this.$javaClass.POTTED_AZURE_BLUET;
 	}
@@ -3690,6 +4002,9 @@ export default class Material {
 	}
 	public static get POTTED_FERN(): Material {
 		return this.$javaClass.POTTED_FERN;
+	}
+	public static get POTTED_FLOWERING_AZALEA_BUSH(): Material {
+		return this.$javaClass.POTTED_FLOWERING_AZALEA_BUSH;
 	}
 	public static get POTTED_JUNGLE_SAPLING(): Material {
 		return this.$javaClass.POTTED_JUNGLE_SAPLING;
@@ -3732,6 +4047,15 @@ export default class Material {
 	}
 	public static get POTTED_WITHER_ROSE(): Material {
 		return this.$javaClass.POTTED_WITHER_ROSE;
+	}
+	public static get POWDER_SNOW(): Material {
+		return this.$javaClass.POWDER_SNOW;
+	}
+	public static get POWDER_SNOW_BUCKET(): Material {
+		return this.$javaClass.POWDER_SNOW_BUCKET;
+	}
+	public static get POWDER_SNOW_CAULDRON(): Material {
+		return this.$javaClass.POWDER_SNOW_CAULDRON;
 	}
 	public static get POWERED_RAIL(): Material {
 		return this.$javaClass.POWERED_RAIL;
@@ -3789,6 +4113,12 @@ export default class Material {
 	}
 	public static get PURPLE_BED(): Material {
 		return this.$javaClass.PURPLE_BED;
+	}
+	public static get PURPLE_CANDLE(): Material {
+		return this.$javaClass.PURPLE_CANDLE;
+	}
+	public static get PURPLE_CANDLE_CAKE(): Material {
+		return this.$javaClass.PURPLE_CANDLE_CAKE;
 	}
 	public static get PURPLE_CARPET(): Material {
 		return this.$javaClass.PURPLE_CARPET;
@@ -3874,6 +4204,24 @@ export default class Material {
 	public static get RAVAGER_SPAWN_EGG(): Material {
 		return this.$javaClass.RAVAGER_SPAWN_EGG;
 	}
+	public static get RAW_COPPER(): Material {
+		return this.$javaClass.RAW_COPPER;
+	}
+	public static get RAW_COPPER_BLOCK(): Material {
+		return this.$javaClass.RAW_COPPER_BLOCK;
+	}
+	public static get RAW_GOLD(): Material {
+		return this.$javaClass.RAW_GOLD;
+	}
+	public static get RAW_GOLD_BLOCK(): Material {
+		return this.$javaClass.RAW_GOLD_BLOCK;
+	}
+	public static get RAW_IRON(): Material {
+		return this.$javaClass.RAW_IRON;
+	}
+	public static get RAW_IRON_BLOCK(): Material {
+		return this.$javaClass.RAW_IRON_BLOCK;
+	}
 	public static get REDSTONE(): Material {
 		return this.$javaClass.REDSTONE;
 	}
@@ -3900,6 +4248,12 @@ export default class Material {
 	}
 	public static get RED_BED(): Material {
 		return this.$javaClass.RED_BED;
+	}
+	public static get RED_CANDLE(): Material {
+		return this.$javaClass.RED_CANDLE;
+	}
+	public static get RED_CANDLE_CAKE(): Material {
+		return this.$javaClass.RED_CANDLE_CAKE;
 	}
 	public static get RED_CARPET(): Material {
 		return this.$javaClass.RED_CARPET;
@@ -3979,6 +4333,9 @@ export default class Material {
 	public static get RESPAWN_ANCHOR(): Material {
 		return this.$javaClass.RESPAWN_ANCHOR;
 	}
+	public static get ROOTED_DIRT(): Material {
+		return this.$javaClass.ROOTED_DIRT;
+	}
 	public static get ROSE_BUSH(): Material {
 		return this.$javaClass.ROSE_BUSH;
 	}
@@ -4014,6 +4371,9 @@ export default class Material {
 	}
 	public static get SCAFFOLDING(): Material {
 		return this.$javaClass.SCAFFOLDING;
+	}
+	public static get SCULK_SENSOR(): Material {
+		return this.$javaClass.SCULK_SENSOR;
 	}
 	public static get SCUTE(): Material {
 		return this.$javaClass.SCUTE;
@@ -4075,11 +4435,20 @@ export default class Material {
 	public static get SLIME_SPAWN_EGG(): Material {
 		return this.$javaClass.SLIME_SPAWN_EGG;
 	}
+	public static get SMALL_AMETHYST_BUD(): Material {
+		return this.$javaClass.SMALL_AMETHYST_BUD;
+	}
+	public static get SMALL_DRIPLEAF(): Material {
+		return this.$javaClass.SMALL_DRIPLEAF;
+	}
 	public static get SMITHING_TABLE(): Material {
 		return this.$javaClass.SMITHING_TABLE;
 	}
 	public static get SMOKER(): Material {
 		return this.$javaClass.SMOKER;
+	}
+	public static get SMOOTH_BASALT(): Material {
+		return this.$javaClass.SMOOTH_BASALT;
 	}
 	public static get SMOOTH_QUARTZ(): Material {
 		return this.$javaClass.SMOOTH_QUARTZ;
@@ -4162,6 +4531,9 @@ export default class Material {
 	public static get SPONGE(): Material {
 		return this.$javaClass.SPONGE;
 	}
+	public static get SPORE_BLOSSOM(): Material {
+		return this.$javaClass.SPORE_BLOSSOM;
+	}
 	public static get SPRUCE_BOAT(): Material {
 		return this.$javaClass.SPRUCE_BOAT;
 	}
@@ -4209,6 +4581,9 @@ export default class Material {
 	}
 	public static get SPRUCE_WOOD(): Material {
 		return this.$javaClass.SPRUCE_WOOD;
+	}
+	public static get SPYGLASS(): Material {
+		return this.$javaClass.SPYGLASS;
 	}
 	public static get SQUID_SPAWN_EGG(): Material {
 		return this.$javaClass.SQUID_SPAWN_EGG;
@@ -4357,6 +4732,9 @@ export default class Material {
 	public static get TERRACOTTA(): Material {
 		return this.$javaClass.TERRACOTTA;
 	}
+	public static get TINTED_GLASS(): Material {
+		return this.$javaClass.TINTED_GLASS;
+	}
 	public static get TIPPED_ARROW(): Material {
 		return this.$javaClass.TIPPED_ARROW;
 	}
@@ -4407,6 +4785,9 @@ export default class Material {
 	}
 	public static get TUBE_CORAL_WALL_FAN(): Material {
 		return this.$javaClass.TUBE_CORAL_WALL_FAN;
+	}
+	public static get TUFF(): Material {
+		return this.$javaClass.TUFF;
 	}
 	public static get TURTLE_EGG(): Material {
 		return this.$javaClass.TURTLE_EGG;
@@ -4504,6 +4885,69 @@ export default class Material {
 	public static get WATER_BUCKET(): Material {
 		return this.$javaClass.WATER_BUCKET;
 	}
+	public static get WATER_CAULDRON(): Material {
+		return this.$javaClass.WATER_CAULDRON;
+	}
+	public static get WAXED_COPPER_BLOCK(): Material {
+		return this.$javaClass.WAXED_COPPER_BLOCK;
+	}
+	public static get WAXED_CUT_COPPER(): Material {
+		return this.$javaClass.WAXED_CUT_COPPER;
+	}
+	public static get WAXED_CUT_COPPER_SLAB(): Material {
+		return this.$javaClass.WAXED_CUT_COPPER_SLAB;
+	}
+	public static get WAXED_CUT_COPPER_STAIRS(): Material {
+		return this.$javaClass.WAXED_CUT_COPPER_STAIRS;
+	}
+	public static get WAXED_EXPOSED_COPPER(): Material {
+		return this.$javaClass.WAXED_EXPOSED_COPPER;
+	}
+	public static get WAXED_EXPOSED_CUT_COPPER(): Material {
+		return this.$javaClass.WAXED_EXPOSED_CUT_COPPER;
+	}
+	public static get WAXED_EXPOSED_CUT_COPPER_SLAB(): Material {
+		return this.$javaClass.WAXED_EXPOSED_CUT_COPPER_SLAB;
+	}
+	public static get WAXED_EXPOSED_CUT_COPPER_STAIRS(): Material {
+		return this.$javaClass.WAXED_EXPOSED_CUT_COPPER_STAIRS;
+	}
+	public static get WAXED_OXIDIZED_COPPER(): Material {
+		return this.$javaClass.WAXED_OXIDIZED_COPPER;
+	}
+	public static get WAXED_OXIDIZED_CUT_COPPER(): Material {
+		return this.$javaClass.WAXED_OXIDIZED_CUT_COPPER;
+	}
+	public static get WAXED_OXIDIZED_CUT_COPPER_SLAB(): Material {
+		return this.$javaClass.WAXED_OXIDIZED_CUT_COPPER_SLAB;
+	}
+	public static get WAXED_OXIDIZED_CUT_COPPER_STAIRS(): Material {
+		return this.$javaClass.WAXED_OXIDIZED_CUT_COPPER_STAIRS;
+	}
+	public static get WAXED_WEATHERED_COPPER(): Material {
+		return this.$javaClass.WAXED_WEATHERED_COPPER;
+	}
+	public static get WAXED_WEATHERED_CUT_COPPER(): Material {
+		return this.$javaClass.WAXED_WEATHERED_CUT_COPPER;
+	}
+	public static get WAXED_WEATHERED_CUT_COPPER_SLAB(): Material {
+		return this.$javaClass.WAXED_WEATHERED_CUT_COPPER_SLAB;
+	}
+	public static get WAXED_WEATHERED_CUT_COPPER_STAIRS(): Material {
+		return this.$javaClass.WAXED_WEATHERED_CUT_COPPER_STAIRS;
+	}
+	public static get WEATHERED_COPPER(): Material {
+		return this.$javaClass.WEATHERED_COPPER;
+	}
+	public static get WEATHERED_CUT_COPPER(): Material {
+		return this.$javaClass.WEATHERED_CUT_COPPER;
+	}
+	public static get WEATHERED_CUT_COPPER_SLAB(): Material {
+		return this.$javaClass.WEATHERED_CUT_COPPER_SLAB;
+	}
+	public static get WEATHERED_CUT_COPPER_STAIRS(): Material {
+		return this.$javaClass.WEATHERED_CUT_COPPER_STAIRS;
+	}
 	public static get WEEPING_VINES(): Material {
 		return this.$javaClass.WEEPING_VINES;
 	}
@@ -4524,6 +4968,12 @@ export default class Material {
 	}
 	public static get WHITE_BED(): Material {
 		return this.$javaClass.WHITE_BED;
+	}
+	public static get WHITE_CANDLE(): Material {
+		return this.$javaClass.WHITE_CANDLE;
+	}
+	public static get WHITE_CANDLE_CAKE(): Material {
+		return this.$javaClass.WHITE_CANDLE_CAKE;
 	}
 	public static get WHITE_CARPET(): Material {
 		return this.$javaClass.WHITE_CARPET;
@@ -4606,6 +5056,12 @@ export default class Material {
 	public static get YELLOW_BED(): Material {
 		return this.$javaClass.YELLOW_BED;
 	}
+	public static get YELLOW_CANDLE(): Material {
+		return this.$javaClass.YELLOW_CANDLE;
+	}
+	public static get YELLOW_CANDLE_CAKE(): Material {
+		return this.$javaClass.YELLOW_CANDLE_CAKE;
+	}
 	public static get YELLOW_CARPET(): Material {
 		return this.$javaClass.YELLOW_CARPET;
 	}
@@ -4660,5 +5116,28 @@ export default class Material {
 	public static get ZOMBIFIED_PIGLIN_SPAWN_EGG(): Material {
 		return this.$javaClass.ZOMBIFIED_PIGLIN_SPAWN_EGG;
 	}
+	public static getMaterial(_name: string): Material;
+	public static getMaterial(_name: string, legacyName: boolean): Material;
+	public static getMaterial(...args: any[]): any {
+		return Material.$javaClass.getMaterial(...args);
+	}
+
+	public static matchMaterial(_name: string): Material;
+	public static matchMaterial(_name: string, legacyName: boolean): Material;
+	public static matchMaterial(...args: any[]): any {
+		return Material.$javaClass.matchMaterial(...args);
+	}
+
+	public static valueOf(arg0: string): Material;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return Material.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<Material>;
+	public static values(...args: any[]): any {
+		return Material.$javaClass.values(...args);
+	}
+
 }
 

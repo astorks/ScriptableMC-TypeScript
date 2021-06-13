@@ -3,6 +3,7 @@ declare var Java: any;
 export default interface InventoryAction {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	name(): string;
 	ordinal(): number;
@@ -70,5 +71,16 @@ export default class InventoryAction {
 	public static get UNKNOWN(): InventoryAction {
 		return this.$javaClass.UNKNOWN;
 	}
+	public static valueOf(arg0: string): InventoryAction;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return InventoryAction.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<InventoryAction>;
+	public static values(...args: any[]): any {
+		return InventoryAction.$javaClass.values(...args);
+	}
+
 }
 

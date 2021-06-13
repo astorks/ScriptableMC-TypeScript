@@ -4,6 +4,7 @@ import BlockFace from '../../../../org/bukkit/block/BlockFace.js'
 export default interface MushroomBlockTexture {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getCapFace(): BlockFace;
 	getData(): number;
 	getDeclaringClass(): any;
@@ -55,5 +56,26 @@ export default class MushroomBlockTexture {
 	public static get STEM_SIDES(): MushroomBlockTexture {
 		return this.$javaClass.STEM_SIDES;
 	}
+	public static getByData(data: number): MushroomBlockTexture;
+	public static getByData(...args: any[]): any {
+		return MushroomBlockTexture.$javaClass.getByData(...args);
+	}
+
+	public static getCapByFace(face: BlockFace): MushroomBlockTexture;
+	public static getCapByFace(...args: any[]): any {
+		return MushroomBlockTexture.$javaClass.getCapByFace(...args);
+	}
+
+	public static valueOf(arg0: string): MushroomBlockTexture;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return MushroomBlockTexture.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<MushroomBlockTexture>;
+	public static values(...args: any[]): any {
+		return MushroomBlockTexture.$javaClass.values(...args);
+	}
+
 }
 

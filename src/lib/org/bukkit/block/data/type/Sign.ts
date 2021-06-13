@@ -3,6 +3,7 @@ import BlockData from '../../../../../org/bukkit/block/data/BlockData.js'
 import BlockFace from '../../../../../org/bukkit/block/BlockFace.js'
 import Material from '../../../../../org/bukkit/Material.js'
 import Rotatable from '../../../../../org/bukkit/block/data/Rotatable.js'
+import SoundGroup from '../../../../../org/bukkit/SoundGroup.js'
 import Waterlogged from '../../../../../org/bukkit/block/data/Waterlogged.js'
 
 export default interface Sign extends Rotatable, Waterlogged {
@@ -12,6 +13,7 @@ export default interface Sign extends Rotatable, Waterlogged {
 	getAsString(arg0: boolean): string;
 	getMaterial(): Material;
 	getRotation(): BlockFace;
+	getSoundGroup(): SoundGroup;
 	isWaterlogged(): boolean;
 	matches(arg0: BlockData): boolean;
 	merge(arg0: BlockData): BlockData;

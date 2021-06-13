@@ -8,8 +8,8 @@ import Slime from '../../../../org/bukkit/entity/Slime.js'
 
 export default interface SlimeSplitEvent extends EntityEvent, Cancellable {
 	getCount(): number;
-	getEntity(): Entity;
 	getEntity(): Slime;
+	getEntity(): Entity;
 	getEntityType(): EntityType;
 	getEventName(): string;
 	getHandlers(): HandlerList;

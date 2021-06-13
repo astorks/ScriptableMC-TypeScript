@@ -9,8 +9,8 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 
 export default interface EnderDragonChangePhaseEvent extends EntityEvent, Cancellable {
 	getCurrentPhase(): EnderDragon$Phase;
-	getEntity(): Entity;
 	getEntity(): EnderDragon;
+	getEntity(): Entity;
 	getEntityType(): EntityType;
 	getEventName(): string;
 	getHandlers(): HandlerList;

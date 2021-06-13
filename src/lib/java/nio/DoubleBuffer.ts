@@ -3,8 +3,8 @@ import Buffer from './Buffer.js'
 import ByteOrder from './ByteOrder.js'
 
 export default interface DoubleBuffer extends Buffer {
-	array(): any;
 	array(): Array<number>;
+	array(): any;
 	arrayOffset(): number;
 	asReadOnlyBuffer(): DoubleBuffer;
 	capacity(): number;
@@ -13,40 +13,47 @@ export default interface DoubleBuffer extends Buffer {
 	compact(): DoubleBuffer;
 	compareTo(arg0: any): number;
 	compareTo(that: DoubleBuffer): number;
-	duplicate(): Buffer;
 	duplicate(): DoubleBuffer;
+	duplicate(): Buffer;
 	flip(): DoubleBuffer;
 	flip(): Buffer;
 	get(): number;
-	get(dst: Array<number>): DoubleBuffer;
 	get(arg0: number): number;
+	get(dst: Array<number>): DoubleBuffer;
+	get(index: number, dst: Array<number>): DoubleBuffer;
 	get(dst: Array<number>, offset: number, length: number): DoubleBuffer;
+	get(index: number, dst: Array<number>, offset: number, length: number): DoubleBuffer;
 	hasArray(): boolean;
 	hasRemaining(): boolean;
 	isDirect(): boolean;
 	isReadOnly(): boolean;
 	limit(): number;
-	limit(newLimit: number): Buffer;
 	limit(newLimit: number): DoubleBuffer;
+	limit(newLimit: number): Buffer;
 	mark(): Buffer;
 	mark(): DoubleBuffer;
 	mismatch(that: DoubleBuffer): number;
 	order(): ByteOrder;
 	position(): number;
-	position(newPosition: number): DoubleBuffer;
 	position(newPosition: number): Buffer;
-	put(src: Array<number>): DoubleBuffer;
+	position(newPosition: number): DoubleBuffer;
 	put(src: DoubleBuffer): DoubleBuffer;
+	put(src: Array<number>): DoubleBuffer;
 	put(arg0: number): DoubleBuffer;
+	put(index: number, src: Array<number>): DoubleBuffer;
 	put(arg0: number, arg1: number): DoubleBuffer;
 	put(src: Array<number>, offset: number, length: number): DoubleBuffer;
+	put(index: number, src: DoubleBuffer, offset: number, length: number): DoubleBuffer;
+	put(index: number, src: Array<number>, offset: number, length: number): DoubleBuffer;
 	remaining(): number;
 	reset(): Buffer;
 	reset(): DoubleBuffer;
-	rewind(): Buffer;
 	rewind(): DoubleBuffer;
+	rewind(): Buffer;
 	slice(): DoubleBuffer;
 	slice(): Buffer;
+	slice(arg0: number, arg1: number): DoubleBuffer;
+	slice(arg0: number, arg1: number): Buffer;
 }
 
 export default class DoubleBuffer {

@@ -5,6 +5,7 @@ import NamespacedKey from '../../../org/bukkit/NamespacedKey.js'
 export default interface EntityType extends Keyed {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	getEntityClass(): any;
 	getKey(): NamespacedKey;
@@ -29,6 +30,9 @@ export default class EntityType {
 	}
 	public static get ARROW(): EntityType {
 		return this.$javaClass.ARROW;
+	}
+	public static get AXOLOTL(): EntityType {
+		return this.$javaClass.AXOLOTL;
 	}
 	public static get BAT(): EntityType {
 		return this.$javaClass.BAT;
@@ -129,6 +133,15 @@ export default class EntityType {
 	public static get GIANT(): EntityType {
 		return this.$javaClass.GIANT;
 	}
+	public static get GLOW_ITEM_FRAME(): EntityType {
+		return this.$javaClass.GLOW_ITEM_FRAME;
+	}
+	public static get GLOW_SQUID(): EntityType {
+		return this.$javaClass.GLOW_SQUID;
+	}
+	public static get GOAT(): EntityType {
+		return this.$javaClass.GOAT;
+	}
 	public static get GUARDIAN(): EntityType {
 		return this.$javaClass.GUARDIAN;
 	}
@@ -164,6 +177,9 @@ export default class EntityType {
 	}
 	public static get MAGMA_CUBE(): EntityType {
 		return this.$javaClass.MAGMA_CUBE;
+	}
+	public static get MARKER(): EntityType {
+		return this.$javaClass.MARKER;
 	}
 	public static get MINECART(): EntityType {
 		return this.$javaClass.MINECART;
@@ -212,6 +228,9 @@ export default class EntityType {
 	}
 	public static get PIGLIN(): EntityType {
 		return this.$javaClass.PIGLIN;
+	}
+	public static get PIGLIN_BRUTE(): EntityType {
+		return this.$javaClass.PIGLIN_BRUTE;
 	}
 	public static get PILLAGER(): EntityType {
 		return this.$javaClass.PILLAGER;
@@ -345,5 +364,26 @@ export default class EntityType {
 	public static get ZOMBIFIED_PIGLIN(): EntityType {
 		return this.$javaClass.ZOMBIFIED_PIGLIN;
 	}
+	public static fromId(id: number): EntityType;
+	public static fromId(...args: any[]): any {
+		return EntityType.$javaClass.fromId(...args);
+	}
+
+	public static fromName(_name: string): EntityType;
+	public static fromName(...args: any[]): any {
+		return EntityType.$javaClass.fromName(...args);
+	}
+
+	public static valueOf(arg0: string): EntityType;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return EntityType.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<EntityType>;
+	public static values(...args: any[]): any {
+		return EntityType.$javaClass.values(...args);
+	}
+
 }
 

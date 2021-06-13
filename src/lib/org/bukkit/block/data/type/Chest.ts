@@ -4,6 +4,7 @@ import BlockFace from '../../../../../org/bukkit/block/BlockFace.js'
 import Chest$Type from './Chest$Type.js'
 import Directional from '../../../../../org/bukkit/block/data/Directional.js'
 import Material from '../../../../../org/bukkit/Material.js'
+import SoundGroup from '../../../../../org/bukkit/SoundGroup.js'
 import Waterlogged from '../../../../../org/bukkit/block/data/Waterlogged.js'
 
 export default interface Chest extends Directional, Waterlogged {
@@ -14,6 +15,7 @@ export default interface Chest extends Directional, Waterlogged {
 	getFaces(): any;
 	getFacing(): BlockFace;
 	getMaterial(): Material;
+	getSoundGroup(): SoundGroup;
 	getType(): Chest$Type;
 	isWaterlogged(): boolean;
 	matches(arg0: BlockData): boolean;

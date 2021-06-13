@@ -4,6 +4,7 @@ import BlockFace from '../../../../../org/bukkit/block/BlockFace.js'
 import Directional from '../../../../../org/bukkit/block/data/Directional.js'
 import Lightable from '../../../../../org/bukkit/block/data/Lightable.js'
 import Material from '../../../../../org/bukkit/Material.js'
+import SoundGroup from '../../../../../org/bukkit/SoundGroup.js'
 
 export default interface Furnace extends Directional, Lightable {
 	clone(): any;
@@ -13,6 +14,7 @@ export default interface Furnace extends Directional, Lightable {
 	getFaces(): any;
 	getFacing(): BlockFace;
 	getMaterial(): Material;
+	getSoundGroup(): SoundGroup;
 	isLit(): boolean;
 	matches(arg0: BlockData): boolean;
 	merge(arg0: BlockData): BlockData;

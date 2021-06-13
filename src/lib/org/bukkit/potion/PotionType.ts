@@ -4,6 +4,7 @@ import PotionEffectType from './PotionEffectType.js'
 export default interface PotionType {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	getEffectType(): PotionEffectType;
 	getMaxLevel(): number;
@@ -82,5 +83,21 @@ export default class PotionType {
 	public static get WEAKNESS(): PotionType {
 		return this.$javaClass.WEAKNESS;
 	}
+	public static getByEffect(effectType: PotionEffectType): PotionType;
+	public static getByEffect(...args: any[]): any {
+		return PotionType.$javaClass.getByEffect(...args);
+	}
+
+	public static valueOf(arg0: string): PotionType;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return PotionType.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<PotionType>;
+	public static values(...args: any[]): any {
+		return PotionType.$javaClass.values(...args);
+	}
+
 }
 

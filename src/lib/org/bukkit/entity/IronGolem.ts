@@ -7,6 +7,7 @@ import BoundingBox from '../../../org/bukkit/util/BoundingBox.js'
 import CommandSender$Spigot from '../../../org/bukkit/command/CommandSender$Spigot.js'
 import Entity from './Entity.js'
 import Entity$Spigot from './Entity$Spigot.js'
+import EntityCategory from './EntityCategory.js'
 import EntityDamageEvent from '../../../org/bukkit/event/entity/EntityDamageEvent.js'
 import EntityEffect from '../../../org/bukkit/EntityEffect.js'
 import EntityEquipment from '../../../org/bukkit/inventory/EntityEquipment.js'
@@ -50,9 +51,12 @@ export default interface IronGolem extends Golem {
 	eject(): boolean;
 	getAbsorptionAmount(): number;
 	getActivePotionEffects(): Array<PotionEffect>;
+	getArrowCooldown(): number;
+	getArrowsInBody(): number;
 	getAttribute(arg0: Attribute): AttributeInstance;
 	getBoundingBox(): BoundingBox;
 	getCanPickupItems(): boolean;
+	getCategory(): EntityCategory;
 	getCollidableExemptions(): any;
 	getCustomName(): string;
 	getEffectivePermissions(): any;
@@ -64,6 +68,7 @@ export default interface IronGolem extends Golem {
 	getFacing(): BlockFace;
 	getFallDistance(): number;
 	getFireTicks(): number;
+	getFreezeTicks(): number;
 	getHealth(): number;
 	getHeight(): number;
 	getKiller(): Player;
@@ -76,6 +81,7 @@ export default interface IronGolem extends Golem {
 	getLocation(arg0: Location): Location;
 	getLootTable(): LootTable;
 	getMaxFireTicks(): number;
+	getMaxFreezeTicks(): number;
 	getMaxHealth(): number;
 	getMaximumAir(): number;
 	getMaximumNoDamageTicks(): number;
@@ -111,23 +117,26 @@ export default interface IronGolem extends Golem {
 	hasGravity(): boolean;
 	hasLineOfSight(arg0: Entity): boolean;
 	hasMetadata(arg0: string): boolean;
-	hasPermission(arg0: string): boolean;
 	hasPermission(arg0: Permission): boolean;
+	hasPermission(arg0: string): boolean;
 	hasPotionEffect(arg0: PotionEffectType): boolean;
 	isAware(): boolean;
 	isCollidable(): boolean;
 	isCustomNameVisible(): boolean;
 	isDead(): boolean;
 	isEmpty(): boolean;
+	isFrozen(): boolean;
 	isGliding(): boolean;
 	isGlowing(): boolean;
+	isInWater(): boolean;
 	isInsideVehicle(): boolean;
+	isInvisible(): boolean;
 	isInvulnerable(): boolean;
 	isLeashed(): boolean;
 	isOnGround(): boolean;
 	isOp(): boolean;
-	isPermissionSet(arg0: string): boolean;
 	isPermissionSet(arg0: Permission): boolean;
+	isPermissionSet(arg0: string): boolean;
 	isPersistent(): boolean;
 	isPlayerCreated(): boolean;
 	isRiptiding(): boolean;
@@ -135,6 +144,7 @@ export default interface IronGolem extends Golem {
 	isSleeping(): boolean;
 	isSwimming(): boolean;
 	isValid(): boolean;
+	isVisualFire(): boolean;
 	launchProjectile(arg0: any): Projectile;
 	launchProjectile(arg0: any, arg1: Vector): Projectile;
 	leaveVehicle(): boolean;
@@ -149,10 +159,14 @@ export default interface IronGolem extends Golem {
 	removePotionEffect(arg0: PotionEffectType): void;
 	removeScoreboardTag(arg0: string): boolean;
 	resetMaxHealth(): void;
-	sendMessage(arg0: Array<string>): void;
 	sendMessage(arg0: string): void;
+	sendMessage(arg0: Array<string>): void;
+	sendMessage(arg0: string, arg1: Array<string>): void;
+	sendMessage(arg0: string, arg1: string): void;
 	setAI(arg0: boolean): void;
 	setAbsorptionAmount(arg0: number): void;
+	setArrowCooldown(arg0: number): void;
+	setArrowsInBody(arg0: number): void;
 	setAware(arg0: boolean): void;
 	setCanPickupItems(arg0: boolean): void;
 	setCollidable(arg0: boolean): void;
@@ -160,10 +174,12 @@ export default interface IronGolem extends Golem {
 	setCustomNameVisible(arg0: boolean): void;
 	setFallDistance(arg0: number): void;
 	setFireTicks(arg0: number): void;
+	setFreezeTicks(arg0: number): void;
 	setGliding(arg0: boolean): void;
 	setGlowing(arg0: boolean): void;
 	setGravity(arg0: boolean): void;
 	setHealth(arg0: number): void;
+	setInvisible(arg0: boolean): void;
 	setInvulnerable(arg0: boolean): void;
 	setLastDamage(arg0: number): void;
 	setLastDamageCause(arg0: EntityDamageEvent): void;
@@ -189,14 +205,15 @@ export default interface IronGolem extends Golem {
 	setTarget(arg0: LivingEntity): void;
 	setTicksLived(arg0: number): void;
 	setVelocity(arg0: Vector): void;
-	spigot(): Entity$Spigot;
+	setVisualFire(arg0: boolean): void;
 	spigot(): CommandSender$Spigot;
+	spigot(): Entity$Spigot;
 	swingMainHand(): void;
 	swingOffHand(): void;
-	teleport(arg0: Location): boolean;
 	teleport(arg0: Entity): boolean;
-	teleport(arg0: Location, arg1: PlayerTeleportEvent$TeleportCause): boolean;
+	teleport(arg0: Location): boolean;
 	teleport(arg0: Entity, arg1: PlayerTeleportEvent$TeleportCause): boolean;
+	teleport(arg0: Location, arg1: PlayerTeleportEvent$TeleportCause): boolean;
 }
 
 export default class IronGolem {

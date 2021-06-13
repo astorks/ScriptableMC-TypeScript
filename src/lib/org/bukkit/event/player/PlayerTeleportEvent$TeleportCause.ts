@@ -3,6 +3,7 @@ declare var Java: any;
 export default interface PlayerTeleportEvent$TeleportCause {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	name(): string;
 	ordinal(): number;
@@ -40,5 +41,16 @@ export default class PlayerTeleportEvent$TeleportCause {
 	public static get UNKNOWN(): PlayerTeleportEvent$TeleportCause {
 		return this.$javaClass.UNKNOWN;
 	}
+	public static valueOf(arg0: string): PlayerTeleportEvent$TeleportCause;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return PlayerTeleportEvent$TeleportCause.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<PlayerTeleportEvent$TeleportCause>;
+	public static values(...args: any[]): any {
+		return PlayerTeleportEvent$TeleportCause.$javaClass.values(...args);
+	}
+
 }
 

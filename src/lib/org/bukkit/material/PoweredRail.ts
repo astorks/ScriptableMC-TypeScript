@@ -8,10 +8,10 @@ import Rails from './Rails.js'
 import Redstone from './Redstone.js'
 
 export default interface PoweredRail extends ExtendedRails, Redstone {
-	clone(): MaterialData;
-	clone(): any;
-	clone(): Rails;
 	clone(): ExtendedRails;
+	clone(): any;
+	clone(): MaterialData;
+	clone(): Rails;
 	clone(): PoweredRail;
 	getData(): number;
 	getDirection(): BlockFace;

@@ -6,8 +6,8 @@ import TexturedMaterial from './TexturedMaterial.js'
 
 export default interface Step extends TexturedMaterial {
 	clone(): Step;
-	clone(): any;
 	clone(): TexturedMaterial;
+	clone(): any;
 	clone(): MaterialData;
 	getData(): number;
 	getItemType(): Material;

@@ -3,6 +3,7 @@ declare var Java: any;
 export default interface CreatureSpawnEvent$SpawnReason {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	name(): string;
 	ordinal(): number;
@@ -30,6 +31,9 @@ export default class CreatureSpawnEvent$SpawnReason {
 	}
 	public static get CHUNK_GEN(): CreatureSpawnEvent$SpawnReason {
 		return this.$javaClass.CHUNK_GEN;
+	}
+	public static get COMMAND(): CreatureSpawnEvent$SpawnReason {
+		return this.$javaClass.COMMAND;
 	}
 	public static get CURED(): CreatureSpawnEvent$SpawnReason {
 		return this.$javaClass.CURED;
@@ -79,6 +83,9 @@ export default class CreatureSpawnEvent$SpawnReason {
 	public static get PATROL(): CreatureSpawnEvent$SpawnReason {
 		return this.$javaClass.PATROL;
 	}
+	public static get PIGLIN_ZOMBIFIED(): CreatureSpawnEvent$SpawnReason {
+		return this.$javaClass.PIGLIN_ZOMBIFIED;
+	}
 	public static get RAID(): CreatureSpawnEvent$SpawnReason {
 		return this.$javaClass.RAID;
 	}
@@ -112,5 +119,16 @@ export default class CreatureSpawnEvent$SpawnReason {
 	public static get VILLAGE_INVASION(): CreatureSpawnEvent$SpawnReason {
 		return this.$javaClass.VILLAGE_INVASION;
 	}
+	public static valueOf(arg0: string): CreatureSpawnEvent$SpawnReason;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return CreatureSpawnEvent$SpawnReason.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<CreatureSpawnEvent$SpawnReason>;
+	public static values(...args: any[]): any {
+		return CreatureSpawnEvent$SpawnReason.$javaClass.values(...args);
+	}
+
 }
 

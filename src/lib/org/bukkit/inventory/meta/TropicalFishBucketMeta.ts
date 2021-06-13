@@ -19,8 +19,8 @@ export default interface TropicalFishBucketMeta extends ItemMeta {
 	clone(): ItemMeta;
 	clone(): any;
 	getAttributeModifiers(): Multimap;
-	getAttributeModifiers(arg0: Attribute): Array<AttributeModifier>;
 	getAttributeModifiers(arg0: EquipmentSlot): Multimap;
+	getAttributeModifiers(arg0: Attribute): Array<AttributeModifier>;
 	getBodyColor(): DyeColor;
 	getCustomModelData(): number;
 	getCustomTagContainer(): CustomItemTagContainer;

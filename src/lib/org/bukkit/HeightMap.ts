@@ -3,6 +3,7 @@ declare var Java: any;
 export default interface HeightMap {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	name(): string;
 	ordinal(): number;
@@ -31,5 +32,16 @@ export default class HeightMap {
 	public static get WORLD_SURFACE_WG(): HeightMap {
 		return this.$javaClass.WORLD_SURFACE_WG;
 	}
+	public static valueOf(arg0: string): HeightMap;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return HeightMap.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<HeightMap>;
+	public static values(...args: any[]): any {
+		return HeightMap.$javaClass.values(...args);
+	}
+
 }
 

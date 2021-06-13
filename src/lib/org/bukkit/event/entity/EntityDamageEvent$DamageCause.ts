@@ -3,6 +3,7 @@ declare var Java: any;
 export default interface EntityDamageEvent$DamageCause {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	name(): string;
 	ordinal(): number;
@@ -58,6 +59,9 @@ export default class EntityDamageEvent$DamageCause {
 	public static get FLY_INTO_WALL(): EntityDamageEvent$DamageCause {
 		return this.$javaClass.FLY_INTO_WALL;
 	}
+	public static get FREEZE(): EntityDamageEvent$DamageCause {
+		return this.$javaClass.FREEZE;
+	}
 	public static get HOT_FLOOR(): EntityDamageEvent$DamageCause {
 		return this.$javaClass.HOT_FLOOR;
 	}
@@ -97,5 +101,16 @@ export default class EntityDamageEvent$DamageCause {
 	public static get WITHER(): EntityDamageEvent$DamageCause {
 		return this.$javaClass.WITHER;
 	}
+	public static valueOf(arg0: string): EntityDamageEvent$DamageCause;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return EntityDamageEvent$DamageCause.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<EntityDamageEvent$DamageCause>;
+	public static values(...args: any[]): any {
+		return EntityDamageEvent$DamageCause.$javaClass.values(...args);
+	}
+
 }
 

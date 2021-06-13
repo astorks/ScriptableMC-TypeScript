@@ -4,6 +4,7 @@ import BlockFace from '../../../../../org/bukkit/block/BlockFace.js'
 import Directional from '../../../../../org/bukkit/block/data/Directional.js'
 import Lightable from '../../../../../org/bukkit/block/data/Lightable.js'
 import Material from '../../../../../org/bukkit/Material.js'
+import SoundGroup from '../../../../../org/bukkit/SoundGroup.js'
 import Waterlogged from '../../../../../org/bukkit/block/data/Waterlogged.js'
 
 export default interface Campfire extends Directional, Lightable, Waterlogged {
@@ -14,6 +15,7 @@ export default interface Campfire extends Directional, Lightable, Waterlogged {
 	getFaces(): any;
 	getFacing(): BlockFace;
 	getMaterial(): Material;
+	getSoundGroup(): SoundGroup;
 	isLit(): boolean;
 	isSignalFire(): boolean;
 	isWaterlogged(): boolean;

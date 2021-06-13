@@ -7,10 +7,12 @@ export default interface YamlConstructor {
 	getPropertyUtils(): any;
 	getSingleData(type: any): any;
 	isAllowDuplicateKeys(): boolean;
+	isEnumCaseSensitive(): boolean;
 	isExplicitPropertyUtils(): boolean;
 	isWrappedToRootException(): boolean;
 	setAllowDuplicateKeys(allowDuplicateKeys: boolean): void;
 	setComposer(composer: any): void;
+	setEnumCaseSensitive(enumCaseSensitive: boolean): void;
 	setPropertyUtils(propertyUtils: any): void;
 	setWrappedToRootException(wrappedToRootException: boolean): void;
 }

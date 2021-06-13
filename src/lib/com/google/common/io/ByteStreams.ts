@@ -30,16 +30,16 @@ export default class ByteStreams {
 		return ByteStreams.$javaClass.limit(...args);
 	}
 
-	public static newDataInput(bytes: Array<number>): ByteArrayDataInput;
 	public static newDataInput(byteArrayInputStream: ByteArrayInputStream): ByteArrayDataInput;
+	public static newDataInput(bytes: Array<number>): ByteArrayDataInput;
 	public static newDataInput(bytes: Array<number>, start: number): ByteArrayDataInput;
 	public static newDataInput(...args: any[]): any {
 		return ByteStreams.$javaClass.newDataInput(...args);
 	}
 
 	public static newDataOutput(): ByteArrayDataOutput;
-	public static newDataOutput(byteArrayOutputSteam: ByteArrayOutputStream): ByteArrayDataOutput;
 	public static newDataOutput(size: number): ByteArrayDataOutput;
+	public static newDataOutput(byteArrayOutputSteam: ByteArrayOutputStream): ByteArrayDataOutput;
 	public static newDataOutput(...args: any[]): any {
 		return ByteStreams.$javaClass.newDataOutput(...args);
 	}

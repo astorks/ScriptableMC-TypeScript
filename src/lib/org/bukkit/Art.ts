@@ -5,6 +5,7 @@ import NamespacedKey from './NamespacedKey.js'
 export default interface Art extends Keyed {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getBlockHeight(): number;
 	getBlockWidth(): number;
 	getDeclaringClass(): any;
@@ -97,5 +98,26 @@ export default class Art {
 	public static get WITHER(): Art {
 		return this.$javaClass.WITHER;
 	}
+	public static getById(id: number): Art;
+	public static getById(...args: any[]): any {
+		return Art.$javaClass.getById(...args);
+	}
+
+	public static getByName(_name: string): Art;
+	public static getByName(...args: any[]): any {
+		return Art.$javaClass.getByName(...args);
+	}
+
+	public static valueOf(arg0: string): Art;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return Art.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<Art>;
+	public static values(...args: any[]): any {
+		return Art.$javaClass.values(...args);
+	}
+
 }
 

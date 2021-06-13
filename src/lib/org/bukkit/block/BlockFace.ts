@@ -4,12 +4,14 @@ import Vector from '../../../org/bukkit/util/Vector.js'
 export default interface BlockFace {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	getDirection(): Vector;
 	getModX(): number;
 	getModY(): number;
 	getModZ(): number;
 	getOppositeFace(): BlockFace;
+	isCartesian(): boolean;
 	name(): string;
 	ordinal(): number;
 }
@@ -76,5 +78,16 @@ export default class BlockFace {
 	public static get WEST_SOUTH_WEST(): BlockFace {
 		return this.$javaClass.WEST_SOUTH_WEST;
 	}
+	public static valueOf(arg0: string): BlockFace;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return BlockFace.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<BlockFace>;
+	public static values(...args: any[]): any {
+		return BlockFace.$javaClass.values(...args);
+	}
+
 }
 

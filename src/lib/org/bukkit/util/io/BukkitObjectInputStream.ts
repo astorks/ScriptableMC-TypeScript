@@ -42,6 +42,7 @@ export default interface BukkitObjectInputStream extends ObjectInputStream {
 	setObjectInputFilter(filter: ObjectInputFilter): void;
 	skip(n: number): number;
 	skipBytes(len: number): number;
+	skipNBytes(n: number): void;
 	transferTo(out: OutputStream): number;
 }
 

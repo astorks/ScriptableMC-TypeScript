@@ -22,8 +22,8 @@ export default interface NBTList {
 	listIterator(): any;
 	listIterator(startIndex: number): any;
 	parallelStream(): any;
-	remove(o: any): boolean;
 	remove(i: number): any;
+	remove(o: any): boolean;
 	removeAll(c: Array<any>): boolean;
 	removeIf(filter: any): boolean;
 	replaceAll(operator: any): void;

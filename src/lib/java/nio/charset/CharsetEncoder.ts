@@ -7,8 +7,8 @@ import CodingErrorAction from './CodingErrorAction.js'
 
 export default interface CharsetEncoder {
 	averageBytesPerChar(): number;
-	canEncode(c: string): boolean;
 	canEncode(cs: any): boolean;
+	canEncode(c: string): boolean;
 	charset(): Charset;
 	encode(_in: CharBuffer): ByteBuffer;
 	encode(_in: CharBuffer, out: ByteBuffer, endOfInput: boolean): CoderResult;

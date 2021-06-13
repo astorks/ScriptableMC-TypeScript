@@ -4,6 +4,7 @@ export default interface ChatColor {
 	asBungee(): ChatColor;
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getChar(): string;
 	getDeclaringClass(): any;
 	isColor(): boolean;
@@ -83,5 +84,37 @@ export default class ChatColor {
 	public static get YELLOW(): ChatColor {
 		return this.$javaClass.YELLOW;
 	}
+	public static getByChar(code: string): ChatColor;
+	public static getByChar(code: string): ChatColor;
+	public static getByChar(...args: any[]): any {
+		return ChatColor.$javaClass.getByChar(...args);
+	}
+
+	public static getLastColors(input: string): string;
+	public static getLastColors(...args: any[]): any {
+		return ChatColor.$javaClass.getLastColors(...args);
+	}
+
+	public static stripColor(input: string): string;
+	public static stripColor(...args: any[]): any {
+		return ChatColor.$javaClass.stripColor(...args);
+	}
+
+	public static translateAlternateColorCodes(altColorChar: string, textToTranslate: string): string;
+	public static translateAlternateColorCodes(...args: any[]): any {
+		return ChatColor.$javaClass.translateAlternateColorCodes(...args);
+	}
+
+	public static valueOf(arg0: string): ChatColor;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return ChatColor.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<ChatColor>;
+	public static values(...args: any[]): any {
+		return ChatColor.$javaClass.values(...args);
+	}
+
 }
 

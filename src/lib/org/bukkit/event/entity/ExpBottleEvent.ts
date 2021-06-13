@@ -21,6 +21,8 @@ export default interface ExpBottleEvent extends ProjectileHitEvent {
 	getHitEntity(): Entity;
 	getShowEffect(): boolean;
 	isAsynchronous(): boolean;
+	isCancelled(): boolean;
+	setCancelled(cancel: boolean): void;
 	setExperience(exp: number): void;
 	setShowEffect(showEffect: boolean): void;
 }

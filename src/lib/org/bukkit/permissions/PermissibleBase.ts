@@ -12,8 +12,8 @@ export default interface PermissibleBase extends Permissible {
 	addAttachment(plugin: Plugin, _name: string, value: boolean, ticks: number): PermissionAttachment;
 	clearPermissions(): void;
 	getEffectivePermissions(): any;
-	hasPermission(inName: string): boolean;
 	hasPermission(perm: Permission): boolean;
+	hasPermission(inName: string): boolean;
 	isOp(): boolean;
 	isPermissionSet(perm: Permission): boolean;
 	isPermissionSet(_name: string): boolean;

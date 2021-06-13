@@ -1,6 +1,7 @@
 declare var Java: any;
 import BlockData from '../../../../../org/bukkit/block/data/BlockData.js'
 import Material from '../../../../../org/bukkit/Material.js'
+import SoundGroup from '../../../../../org/bukkit/SoundGroup.js'
 
 export default interface Farmland extends BlockData {
 	clone(): any;
@@ -10,6 +11,7 @@ export default interface Farmland extends BlockData {
 	getMaterial(): Material;
 	getMaximumMoisture(): number;
 	getMoisture(): number;
+	getSoundGroup(): SoundGroup;
 	matches(arg0: BlockData): boolean;
 	merge(arg0: BlockData): BlockData;
 	setMoisture(arg0: number): void;

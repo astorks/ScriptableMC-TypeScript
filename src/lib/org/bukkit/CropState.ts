@@ -3,6 +3,7 @@ declare var Java: any;
 export default interface CropState {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getData(): number;
 	getDeclaringClass(): any;
 	name(): string;
@@ -38,5 +39,21 @@ export default class CropState {
 	public static get VERY_TALL(): CropState {
 		return this.$javaClass.VERY_TALL;
 	}
+	public static getByData(data: number): CropState;
+	public static getByData(...args: any[]): any {
+		return CropState.$javaClass.getByData(...args);
+	}
+
+	public static valueOf(arg0: string): CropState;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return CropState.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<CropState>;
+	public static values(...args: any[]): any {
+		return CropState.$javaClass.values(...args);
+	}
+
 }
 

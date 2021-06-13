@@ -8,10 +8,14 @@ export default interface Player$Spigot extends Entity$Spigot {
 	getHiddenPlayers(): any;
 	getRawAddress(): any;
 	respawn(): void;
-	sendMessage(component: BaseComponent): void;
 	sendMessage(components: Array<BaseComponent>): void;
+	sendMessage(component: BaseComponent): void;
 	sendMessage(position: ChatMessageType, component: BaseComponent): void;
 	sendMessage(position: ChatMessageType, components: Array<BaseComponent>): void;
+	sendMessage(sender: string, components: Array<BaseComponent>): void;
+	sendMessage(sender: string, component: BaseComponent): void;
+	sendMessage(position: ChatMessageType, sender: string, component: BaseComponent): void;
+	sendMessage(position: ChatMessageType, sender: string, components: Array<BaseComponent>): void;
 	setCollidesWithEntities(collides: boolean): void;
 }
 

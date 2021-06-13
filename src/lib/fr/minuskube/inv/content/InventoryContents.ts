@@ -21,8 +21,8 @@ export default interface InventoryContents {
 	inventory(): SmartInventory;
 	iterator(arg0: string): any;
 	newIterator(arg0: SlotIterator$Type, arg1: SlotPos): SlotIterator;
-	newIterator(arg0: SlotIterator$Type, arg1: number, arg2: number): SlotIterator;
 	newIterator(arg0: string, arg1: SlotIterator$Type, arg2: SlotPos): SlotIterator;
+	newIterator(arg0: SlotIterator$Type, arg1: number, arg2: number): SlotIterator;
 	newIterator(arg0: string, arg1: SlotIterator$Type, arg2: number, arg3: number): SlotIterator;
 	pagination(): Pagination;
 	property(arg0: string): any;

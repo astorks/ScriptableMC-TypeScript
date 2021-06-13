@@ -86,8 +86,8 @@ export default interface FileConfiguration extends MemoryConfiguration {
 	load(file: File): void;
 	load(file: string): void;
 	loadFromString(arg0: string): void;
-	options(): FileConfigurationOptions;
 	options(): MemoryConfigurationOptions;
+	options(): FileConfigurationOptions;
 	options(): ConfigurationOptions;
 	save(file: File): void;
 	save(file: string): void;

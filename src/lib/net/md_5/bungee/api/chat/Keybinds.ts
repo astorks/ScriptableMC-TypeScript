@@ -117,6 +117,10 @@ export default class Keybinds {
 		return Keybinds.$javaClass.SNEAK;
 	}
 
+	public static get SOCIAL_INTERACTIONS(): string {
+		return Keybinds.$javaClass.SOCIAL_INTERACTIONS;
+	}
+
 	public static get SPECTATOR_OUTLINES(): string {
 		return Keybinds.$javaClass.SPECTATOR_OUTLINES;
 	}

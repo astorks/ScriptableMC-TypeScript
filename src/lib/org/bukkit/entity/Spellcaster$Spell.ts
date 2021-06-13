@@ -3,6 +3,7 @@ declare var Java: any;
 export default interface Spellcaster$Spell {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	name(): string;
 	ordinal(): number;
@@ -31,5 +32,16 @@ export default class Spellcaster$Spell {
 	public static get WOLOLO(): Spellcaster$Spell {
 		return this.$javaClass.WOLOLO;
 	}
+	public static valueOf(arg0: string): Spellcaster$Spell;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return Spellcaster$Spell.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<Spellcaster$Spell>;
+	public static values(...args: any[]): any {
+		return Spellcaster$Spell.$javaClass.values(...args);
+	}
+
 }
 

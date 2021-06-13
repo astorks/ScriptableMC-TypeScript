@@ -6,6 +6,7 @@ import NamespacedKey from '../../../org/bukkit/NamespacedKey.js'
 export default interface LootTables extends Keyed {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	getKey(): NamespacedKey;
 	getLootTable(): LootTable;
@@ -27,6 +28,9 @@ export default class LootTables {
 	public static get ARMOR_STAND(): LootTables {
 		return this.$javaClass.ARMOR_STAND;
 	}
+	public static get AXOLOTL(): LootTables {
+		return this.$javaClass.AXOLOTL;
+	}
 	public static get BASTION_BRIDGE(): LootTables {
 		return this.$javaClass.BASTION_BRIDGE;
 	}
@@ -41,6 +45,9 @@ export default class LootTables {
 	}
 	public static get BAT(): LootTables {
 		return this.$javaClass.BAT;
+	}
+	public static get BEE(): LootTables {
+		return this.$javaClass.BEE;
 	}
 	public static get BLAZE(): LootTables {
 		return this.$javaClass.BLAZE;
@@ -141,8 +148,17 @@ export default class LootTables {
 	public static get GIANT(): LootTables {
 		return this.$javaClass.GIANT;
 	}
+	public static get GLOW_SQUID(): LootTables {
+		return this.$javaClass.GLOW_SQUID;
+	}
+	public static get GOAT(): LootTables {
+		return this.$javaClass.GOAT;
+	}
 	public static get GUARDIAN(): LootTables {
 		return this.$javaClass.GUARDIAN;
+	}
+	public static get HOGLIN(): LootTables {
+		return this.$javaClass.HOGLIN;
 	}
 	public static get HORSE(): LootTables {
 		return this.$javaClass.HORSE;
@@ -204,14 +220,23 @@ export default class LootTables {
 	public static get PIG(): LootTables {
 		return this.$javaClass.PIG;
 	}
+	public static get PIGLIN(): LootTables {
+		return this.$javaClass.PIGLIN;
+	}
 	public static get PIGLIN_BARTERING(): LootTables {
 		return this.$javaClass.PIGLIN_BARTERING;
+	}
+	public static get PIGLIN_BRUTE(): LootTables {
+		return this.$javaClass.PIGLIN_BRUTE;
 	}
 	public static get PILLAGER(): LootTables {
 		return this.$javaClass.PILLAGER;
 	}
 	public static get PILLAGER_OUTPOST(): LootTables {
 		return this.$javaClass.PILLAGER_OUTPOST;
+	}
+	public static get PLAYER(): LootTables {
+		return this.$javaClass.PLAYER;
 	}
 	public static get POLAR_BEAR(): LootTables {
 		return this.$javaClass.POLAR_BEAR;
@@ -327,6 +352,9 @@ export default class LootTables {
 	public static get STRAY(): LootTables {
 		return this.$javaClass.STRAY;
 	}
+	public static get STRIDER(): LootTables {
+		return this.$javaClass.STRIDER;
+	}
 	public static get STRONGHOLD_CORRIDOR(): LootTables {
 		return this.$javaClass.STRONGHOLD_CORRIDOR;
 	}
@@ -432,17 +460,31 @@ export default class LootTables {
 	public static get WOODLAND_MANSION(): LootTables {
 		return this.$javaClass.WOODLAND_MANSION;
 	}
+	public static get ZOGLIN(): LootTables {
+		return this.$javaClass.ZOGLIN;
+	}
 	public static get ZOMBIE(): LootTables {
 		return this.$javaClass.ZOMBIE;
 	}
 	public static get ZOMBIE_HORSE(): LootTables {
 		return this.$javaClass.ZOMBIE_HORSE;
 	}
-	public static get ZOMBIE_PIGMAN(): LootTables {
-		return this.$javaClass.ZOMBIE_PIGMAN;
-	}
 	public static get ZOMBIE_VILLAGER(): LootTables {
 		return this.$javaClass.ZOMBIE_VILLAGER;
 	}
+	public static get ZOMBIFIED_PIGLIN(): LootTables {
+		return this.$javaClass.ZOMBIFIED_PIGLIN;
+	}
+	public static valueOf(arg0: string): LootTables;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return LootTables.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<LootTables>;
+	public static values(...args: any[]): any {
+		return LootTables.$javaClass.values(...args);
+	}
+
 }
 

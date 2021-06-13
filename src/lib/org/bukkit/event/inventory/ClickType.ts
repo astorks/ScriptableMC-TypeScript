@@ -3,6 +3,7 @@ declare var Java: any;
 export default interface ClickType {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	isCreativeAction(): boolean;
 	isKeyboardClick(): boolean;
@@ -60,5 +61,16 @@ export default class ClickType {
 	public static get WINDOW_BORDER_RIGHT(): ClickType {
 		return this.$javaClass.WINDOW_BORDER_RIGHT;
 	}
+	public static valueOf(arg0: string): ClickType;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return ClickType.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<ClickType>;
+	public static values(...args: any[]): any {
+		return ClickType.$javaClass.values(...args);
+	}
+
 }
 

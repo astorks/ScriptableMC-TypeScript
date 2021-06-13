@@ -4,10 +4,12 @@ import BlockData from './block/data/BlockData.js'
 import BlockState from './block/BlockState.js'
 import ChunkSnapshot from './ChunkSnapshot.js'
 import Entity from './entity/Entity.js'
+import PersistentDataContainer from './persistence/PersistentDataContainer.js'
+import PersistentDataHolder from './persistence/PersistentDataHolder.js'
 import Plugin from './plugin/Plugin.js'
 import World from './World.js'
 
-export default interface Chunk {
+export default interface Chunk extends PersistentDataHolder {
 	addPluginChunkTicket(arg0: Plugin): boolean;
 	contains(arg0: BlockData): boolean;
 	getBlock(arg0: number, arg1: number, arg2: number): Block;
@@ -15,6 +17,7 @@ export default interface Chunk {
 	getChunkSnapshot(arg0: boolean, arg1: boolean, arg2: boolean): ChunkSnapshot;
 	getEntities(): Array<Entity>;
 	getInhabitedTime(): number;
+	getPersistentDataContainer(): PersistentDataContainer;
 	getPluginChunkTickets(): Array<Plugin>;
 	getTileEntities(): Array<BlockState>;
 	getWorld(): World;

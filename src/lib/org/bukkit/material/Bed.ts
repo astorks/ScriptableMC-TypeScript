@@ -7,8 +7,8 @@ import MaterialData from './MaterialData.js'
 
 export default interface Bed extends MaterialData, Directional {
 	clone(): MaterialData;
-	clone(): any;
 	clone(): Bed;
+	clone(): any;
 	getData(): number;
 	getFacing(): BlockFace;
 	getItemType(): Material;

@@ -3,6 +3,7 @@ declare var Java: any;
 export default interface BarColor {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	name(): string;
 	ordinal(): number;
@@ -34,5 +35,16 @@ export default class BarColor {
 	public static get YELLOW(): BarColor {
 		return this.$javaClass.YELLOW;
 	}
+	public static valueOf(arg0: string): BarColor;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return BarColor.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<BarColor>;
+	public static values(...args: any[]): any {
+		return BarColor.$javaClass.values(...args);
+	}
+
 }
 

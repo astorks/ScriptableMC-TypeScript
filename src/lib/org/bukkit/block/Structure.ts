@@ -48,8 +48,8 @@ export default interface Structure extends TileState {
 	isPlaced(): boolean;
 	isShowAir(): boolean;
 	removeMetadata(arg0: string, arg1: Plugin): void;
-	setAuthor(arg0: LivingEntity): void;
 	setAuthor(arg0: string): void;
+	setAuthor(arg0: LivingEntity): void;
 	setBlockData(arg0: BlockData): void;
 	setBoundingBoxVisible(arg0: boolean): void;
 	setData(arg0: MaterialData): void;

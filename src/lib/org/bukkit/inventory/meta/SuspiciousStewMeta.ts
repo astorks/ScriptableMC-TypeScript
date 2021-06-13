@@ -18,11 +18,11 @@ export default interface SuspiciousStewMeta extends ItemMeta {
 	addItemFlags(arg0: Array<ItemFlag>): void;
 	clearCustomEffects(): boolean;
 	clone(): ItemMeta;
-	clone(): any;
 	clone(): SuspiciousStewMeta;
+	clone(): any;
 	getAttributeModifiers(): Multimap;
-	getAttributeModifiers(arg0: Attribute): Array<AttributeModifier>;
 	getAttributeModifiers(arg0: EquipmentSlot): Multimap;
+	getAttributeModifiers(arg0: Attribute): Array<AttributeModifier>;
 	getCustomEffects(): Array<PotionEffect>;
 	getCustomModelData(): number;
 	getCustomTagContainer(): CustomItemTagContainer;

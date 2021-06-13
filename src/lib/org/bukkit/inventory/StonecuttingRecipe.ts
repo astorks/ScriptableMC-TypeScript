@@ -22,8 +22,8 @@ export default class StonecuttingRecipe {
 		return Java.type('org.bukkit.inventory.StonecuttingRecipe');
 	}
 
-	constructor(key: NamespacedKey, result: ItemStack, input: RecipeChoice);
 	constructor(key: NamespacedKey, result: ItemStack, source: Material);
+	constructor(key: NamespacedKey, result: ItemStack, input: RecipeChoice);
 	constructor(...args: any[]) {
 		return new StonecuttingRecipe.$javaClass(...args);
 	}

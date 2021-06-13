@@ -15,6 +15,7 @@ export default interface ByteArrayInputStream extends InputStream {
 	readNBytes(b: Array<number>, off: number, len: number): number;
 	reset(): void;
 	skip(n: number): number;
+	skipNBytes(n: number): void;
 	transferTo(out: OutputStream): number;
 }
 

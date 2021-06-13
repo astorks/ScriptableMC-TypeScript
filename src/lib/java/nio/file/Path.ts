@@ -11,8 +11,8 @@ import Watchable from './Watchable.js'
 export default interface Path extends Watchable {
 	compareTo(arg0: Path): number;
 	compareTo(arg0: any): number;
-	endsWith(other: string): boolean;
 	endsWith(arg0: Path): boolean;
+	endsWith(other: string): boolean;
 	forEach(action: any): void;
 	getFileName(): Path;
 	getFileSystem(): FileSystem;
@@ -28,8 +28,8 @@ export default interface Path extends Watchable {
 	relativize(arg0: Path): Path;
 	resolve(other: string): Path;
 	resolve(arg0: Path): Path;
-	resolveSibling(other: string): Path;
 	resolveSibling(other: Path): Path;
+	resolveSibling(other: string): Path;
 	spliterator(): any;
 	startsWith(other: string): boolean;
 	startsWith(arg0: Path): boolean;

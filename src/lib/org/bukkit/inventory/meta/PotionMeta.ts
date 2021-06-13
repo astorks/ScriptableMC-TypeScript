@@ -19,12 +19,12 @@ export default interface PotionMeta extends ItemMeta {
 	addEnchant(arg0: Enchantment, arg1: number, arg2: boolean): boolean;
 	addItemFlags(arg0: Array<ItemFlag>): void;
 	clearCustomEffects(): boolean;
-	clone(): any;
 	clone(): PotionMeta;
 	clone(): ItemMeta;
+	clone(): any;
 	getAttributeModifiers(): Multimap;
-	getAttributeModifiers(arg0: Attribute): Array<AttributeModifier>;
 	getAttributeModifiers(arg0: EquipmentSlot): Multimap;
+	getAttributeModifiers(arg0: Attribute): Array<AttributeModifier>;
 	getBasePotionData(): PotionData;
 	getColor(): Color;
 	getCustomEffects(): Array<PotionEffect>;

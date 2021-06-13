@@ -19,6 +19,7 @@ import Vector from '../../../org/bukkit/util/Vector.js'
 import World from '../../../org/bukkit/World.js'
 
 export default interface Block extends Metadatable {
+	applyBoneMeal(arg0: BlockFace): boolean;
 	breakNaturally(): boolean;
 	breakNaturally(arg0: ItemStack): boolean;
 	getBiome(): Biome;
@@ -58,6 +59,7 @@ export default interface Block extends Metadatable {
 	isEmpty(): boolean;
 	isLiquid(): boolean;
 	isPassable(): boolean;
+	isPreferredTool(arg0: ItemStack): boolean;
 	rayTrace(arg0: Location, arg1: Vector, arg2: number, arg3: FluidCollisionMode): RayTraceResult;
 	removeMetadata(arg0: string, arg1: Plugin): void;
 	setBiome(arg0: Biome): void;

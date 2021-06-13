@@ -5,6 +5,7 @@ import NamespacedKey from '../../../org/bukkit/NamespacedKey.js'
 export default interface Biome extends Keyed {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	getKey(): NamespacedKey;
 	name(): string;
@@ -46,6 +47,9 @@ export default class Biome {
 	public static get CRIMSON_FOREST(): Biome {
 		return this.$javaClass.CRIMSON_FOREST;
 	}
+	public static get CUSTOM(): Biome {
+		return this.$javaClass.CUSTOM;
+	}
 	public static get DARK_FOREST(): Biome {
 		return this.$javaClass.DARK_FOREST;
 	}
@@ -75,6 +79,9 @@ export default class Biome {
 	}
 	public static get DESERT_LAKES(): Biome {
 		return this.$javaClass.DESERT_LAKES;
+	}
+	public static get DRIPSTONE_CAVES(): Biome {
+		return this.$javaClass.DRIPSTONE_CAVES;
 	}
 	public static get END_BARRENS(): Biome {
 		return this.$javaClass.END_BARRENS;
@@ -129,6 +136,9 @@ export default class Biome {
 	}
 	public static get LUKEWARM_OCEAN(): Biome {
 		return this.$javaClass.LUKEWARM_OCEAN;
+	}
+	public static get LUSH_CAVES(): Biome {
+		return this.$javaClass.LUSH_CAVES;
 	}
 	public static get MODIFIED_BADLANDS_PLATEAU(): Biome {
 		return this.$javaClass.MODIFIED_BADLANDS_PLATEAU;
@@ -253,5 +263,16 @@ export default class Biome {
 	public static get WOODED_MOUNTAINS(): Biome {
 		return this.$javaClass.WOODED_MOUNTAINS;
 	}
+	public static valueOf(arg0: string): Biome;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return Biome.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<Biome>;
+	public static values(...args: any[]): any {
+		return Biome.$javaClass.values(...args);
+	}
+
 }
 

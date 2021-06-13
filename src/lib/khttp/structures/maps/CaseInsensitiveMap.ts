@@ -4,8 +4,8 @@ export default interface CaseInsensitiveMap {
 	clear(): void;
 	compute(arg0: any, arg1: any): any;
 	compute(arg0: string, arg1: any): any;
-	computeIfAbsent(arg0: any, arg1: any): any;
 	computeIfAbsent(arg0: string, arg1: any): any;
+	computeIfAbsent(arg0: any, arg1: any): any;
 	computeIfPresent(arg0: string, arg1: any): any;
 	computeIfPresent(arg0: any, arg1: any): any;
 	containsKey(arg0: any): boolean;

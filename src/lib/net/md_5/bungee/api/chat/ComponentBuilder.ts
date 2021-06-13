@@ -11,8 +11,8 @@ export default interface ComponentBuilder {
 	append(joiner: ComponentBuilder$Joiner): ComponentBuilder;
 	append(component: BaseComponent): ComponentBuilder;
 	append(components: Array<BaseComponent>): ComponentBuilder;
-	append(text: string, retention: ComponentBuilder$FormatRetention): ComponentBuilder;
 	append(components: Array<BaseComponent>, retention: ComponentBuilder$FormatRetention): ComponentBuilder;
+	append(text: string, retention: ComponentBuilder$FormatRetention): ComponentBuilder;
 	append(joiner: ComponentBuilder$Joiner, retention: ComponentBuilder$FormatRetention): ComponentBuilder;
 	append(component: BaseComponent, retention: ComponentBuilder$FormatRetention): ComponentBuilder;
 	appendLegacy(text: string): ComponentBuilder;
@@ -21,6 +21,7 @@ export default interface ComponentBuilder {
 	create(): Array<BaseComponent>;
 	event(hoverEvent: HoverEvent): ComponentBuilder;
 	event(clickEvent: ClickEvent): ComponentBuilder;
+	font(font: string): ComponentBuilder;
 	getComponent(pos: number): BaseComponent;
 	getCurrentComponent(): BaseComponent;
 	getCursor(): number;

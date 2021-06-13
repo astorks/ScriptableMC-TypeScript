@@ -3,6 +3,7 @@ declare var Java: any;
 export default interface PlayerBedEnterEvent$BedEnterResult {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	name(): string;
 	ordinal(): number;
@@ -31,5 +32,16 @@ export default class PlayerBedEnterEvent$BedEnterResult {
 	public static get TOO_FAR_AWAY(): PlayerBedEnterEvent$BedEnterResult {
 		return this.$javaClass.TOO_FAR_AWAY;
 	}
+	public static valueOf(arg0: string): PlayerBedEnterEvent$BedEnterResult;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return PlayerBedEnterEvent$BedEnterResult.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<PlayerBedEnterEvent$BedEnterResult>;
+	public static values(...args: any[]): any {
+		return PlayerBedEnterEvent$BedEnterResult.$javaClass.values(...args);
+	}
+
 }
 

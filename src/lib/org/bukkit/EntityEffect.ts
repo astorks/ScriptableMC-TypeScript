@@ -3,6 +3,7 @@ declare var Java: any;
 export default interface EntityEffect {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getApplicable(): any;
 	getData(): number;
 	getDeclaringClass(): any;
@@ -141,5 +142,16 @@ export default class EntityEffect {
 	public static get ZOMBIE_TRANSFORM(): EntityEffect {
 		return this.$javaClass.ZOMBIE_TRANSFORM;
 	}
+	public static valueOf(arg0: string): EntityEffect;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return EntityEffect.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<EntityEffect>;
+	public static values(...args: any[]): any {
+		return EntityEffect.$javaClass.values(...args);
+	}
+
 }
 

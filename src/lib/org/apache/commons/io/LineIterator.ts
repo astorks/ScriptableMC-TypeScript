@@ -6,8 +6,8 @@ export default interface LineIterator extends Closeable {
 	close(): void;
 	forEachRemaining(action: any): void;
 	hasNext(): boolean;
-	next(): string;
 	next(): any;
+	next(): string;
 	nextLine(): string;
 	remove(): void;
 }

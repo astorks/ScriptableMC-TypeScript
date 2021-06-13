@@ -6,8 +6,8 @@ export default interface BookMeta$Spigot {
 	getPage(page: number): Array<BaseComponent>;
 	getPages(): Array<Array<BaseComponent>>;
 	setPage(page: number, data: Array<BaseComponent>): void;
-	setPages(pages: Array<Array<BaseComponent>>): void;
 	setPages(pages: Array<any>): void;
+	setPages(pages: Array<Array<BaseComponent>>): void;
 }
 
 export default class BookMeta$Spigot {

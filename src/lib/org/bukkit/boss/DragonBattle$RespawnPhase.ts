@@ -3,6 +3,7 @@ declare var Java: any;
 export default interface DragonBattle$RespawnPhase {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	name(): string;
 	ordinal(): number;
@@ -31,5 +32,16 @@ export default class DragonBattle$RespawnPhase {
 	public static get SUMMONING_PILLARS(): DragonBattle$RespawnPhase {
 		return this.$javaClass.SUMMONING_PILLARS;
 	}
+	public static valueOf(arg0: string): DragonBattle$RespawnPhase;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return DragonBattle$RespawnPhase.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<DragonBattle$RespawnPhase>;
+	public static values(...args: any[]): any {
+		return DragonBattle$RespawnPhase.$javaClass.values(...args);
+	}
+
 }
 

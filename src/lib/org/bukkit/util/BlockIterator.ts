@@ -8,8 +8,8 @@ import World from '../../../org/bukkit/World.js'
 export default interface BlockIterator {
 	forEachRemaining(action: any): void;
 	hasNext(): boolean;
-	next(): any;
 	next(): Block;
+	next(): any;
 	remove(): void;
 }
 
@@ -18,8 +18,8 @@ export default class BlockIterator {
 		return Java.type('org.bukkit.util.BlockIterator');
 	}
 
-	constructor(loc: Location);
 	constructor(entity: LivingEntity);
+	constructor(loc: Location);
 	constructor(entity: LivingEntity, maxDistance: number);
 	constructor(loc: Location, yOffset: number);
 	constructor(loc: Location, yOffset: number, maxDistance: number);

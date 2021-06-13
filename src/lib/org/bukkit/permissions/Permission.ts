@@ -2,8 +2,8 @@ declare var Java: any;
 import PermissionDefault from './PermissionDefault.js'
 
 export default interface Permission {
-	addParent(perm: Permission, value: boolean): void;
 	addParent(_name: string, value: boolean): Permission;
+	addParent(perm: Permission, value: boolean): void;
 	getChildren(): any;
 	getDefault(): PermissionDefault;
 	getDescription(): string;

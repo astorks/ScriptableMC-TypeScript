@@ -114,8 +114,8 @@ export default class YamlConfiguration {
 		return YamlConfiguration.$javaClass.createPath(...args);
 	}
 
-	public static loadConfiguration(file: File): YamlConfiguration;
 	public static loadConfiguration(reader: Reader): YamlConfiguration;
+	public static loadConfiguration(file: File): YamlConfiguration;
 	public static loadConfiguration(...args: any[]): any {
 		return YamlConfiguration.$javaClass.loadConfiguration(...args);
 	}

@@ -18,8 +18,8 @@ export default interface LeatherArmorMeta extends ItemMeta {
 	clone(): any;
 	clone(): LeatherArmorMeta;
 	getAttributeModifiers(): Multimap;
-	getAttributeModifiers(arg0: Attribute): Array<AttributeModifier>;
 	getAttributeModifiers(arg0: EquipmentSlot): Multimap;
+	getAttributeModifiers(arg0: Attribute): Array<AttributeModifier>;
 	getColor(): Color;
 	getCustomModelData(): number;
 	getCustomTagContainer(): CustomItemTagContainer;

@@ -24,19 +24,26 @@ export default interface EntityEquipment {
 	getLeggingsDropChance(): number;
 	setArmorContents(arg0: Array<ItemStack>): void;
 	setBoots(arg0: ItemStack): void;
+	setBoots(arg0: ItemStack, arg1: boolean): void;
 	setBootsDropChance(arg0: number): void;
 	setChestplate(arg0: ItemStack): void;
+	setChestplate(arg0: ItemStack, arg1: boolean): void;
 	setChestplateDropChance(arg0: number): void;
 	setHelmet(arg0: ItemStack): void;
+	setHelmet(arg0: ItemStack, arg1: boolean): void;
 	setHelmetDropChance(arg0: number): void;
 	setItem(arg0: EquipmentSlot, arg1: ItemStack): void;
+	setItem(arg0: EquipmentSlot, arg1: ItemStack, arg2: boolean): void;
 	setItemInHand(arg0: ItemStack): void;
 	setItemInHandDropChance(arg0: number): void;
 	setItemInMainHand(arg0: ItemStack): void;
+	setItemInMainHand(arg0: ItemStack, arg1: boolean): void;
 	setItemInMainHandDropChance(arg0: number): void;
 	setItemInOffHand(arg0: ItemStack): void;
+	setItemInOffHand(arg0: ItemStack, arg1: boolean): void;
 	setItemInOffHandDropChance(arg0: number): void;
 	setLeggings(arg0: ItemStack): void;
+	setLeggings(arg0: ItemStack, arg1: boolean): void;
 	setLeggingsDropChance(arg0: number): void;
 }
 

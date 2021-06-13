@@ -16,12 +16,12 @@ export default interface BookMeta extends ItemMeta {
 	addEnchant(arg0: Enchantment, arg1: number, arg2: boolean): boolean;
 	addItemFlags(arg0: Array<ItemFlag>): void;
 	addPage(arg0: Array<string>): void;
-	clone(): ItemMeta;
 	clone(): BookMeta;
+	clone(): ItemMeta;
 	clone(): any;
 	getAttributeModifiers(): Multimap;
-	getAttributeModifiers(arg0: Attribute): Array<AttributeModifier>;
 	getAttributeModifiers(arg0: EquipmentSlot): Multimap;
+	getAttributeModifiers(arg0: Attribute): Array<AttributeModifier>;
 	getAuthor(): string;
 	getCustomModelData(): number;
 	getCustomTagContainer(): CustomItemTagContainer;
@@ -65,8 +65,8 @@ export default interface BookMeta extends ItemMeta {
 	setLocalizedName(arg0: string): void;
 	setLore(arg0: Array<any>): void;
 	setPage(arg0: number, arg1: string): void;
-	setPages(arg0: Array<any>): void;
 	setPages(arg0: Array<string>): void;
+	setPages(arg0: Array<any>): void;
 	setTitle(arg0: string): boolean;
 	setUnbreakable(arg0: boolean): void;
 	setVersion(arg0: number): void;

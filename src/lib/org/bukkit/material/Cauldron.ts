@@ -4,8 +4,8 @@ import Material from '../../../org/bukkit/Material.js'
 import MaterialData from './MaterialData.js'
 
 export default interface Cauldron extends MaterialData {
-	clone(): MaterialData;
 	clone(): Cauldron;
+	clone(): MaterialData;
 	clone(): any;
 	getData(): number;
 	getItemType(): Material;

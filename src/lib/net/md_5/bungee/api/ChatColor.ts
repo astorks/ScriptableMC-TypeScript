@@ -1,6 +1,7 @@
 declare var Java: any;
 
 export default interface ChatColor {
+	getColor(): any;
 	getName(): string;
 	name(): string;
 	ordinal(): number;

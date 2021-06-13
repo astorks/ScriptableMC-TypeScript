@@ -5,8 +5,8 @@ import MaterialData from './MaterialData.js'
 
 export default interface Tripwire extends MaterialData {
 	clone(): MaterialData;
-	clone(): any;
 	clone(): Tripwire;
+	clone(): any;
 	getData(): number;
 	getItemType(): Material;
 	isActivated(): boolean;

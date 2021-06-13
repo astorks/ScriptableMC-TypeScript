@@ -2,6 +2,7 @@ declare var Java: any;
 import AnaloguePowerable from '../../../../../org/bukkit/block/data/AnaloguePowerable.js'
 import BlockData from '../../../../../org/bukkit/block/data/BlockData.js'
 import Material from '../../../../../org/bukkit/Material.js'
+import SoundGroup from '../../../../../org/bukkit/SoundGroup.js'
 
 export default interface DaylightDetector extends AnaloguePowerable {
 	clone(): any;
@@ -11,6 +12,7 @@ export default interface DaylightDetector extends AnaloguePowerable {
 	getMaterial(): Material;
 	getMaximumPower(): number;
 	getPower(): number;
+	getSoundGroup(): SoundGroup;
 	isInverted(): boolean;
 	matches(arg0: BlockData): boolean;
 	merge(arg0: BlockData): BlockData;

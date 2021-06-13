@@ -3,6 +3,7 @@ declare var Java: any;
 export default interface Difficulty {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	getValue(): number;
 	name(): string;
@@ -26,5 +27,21 @@ export default class Difficulty {
 	public static get PEACEFUL(): Difficulty {
 		return this.$javaClass.PEACEFUL;
 	}
+	public static getByValue(value: number): Difficulty;
+	public static getByValue(...args: any[]): any {
+		return Difficulty.$javaClass.getByValue(...args);
+	}
+
+	public static valueOf(arg0: string): Difficulty;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return Difficulty.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<Difficulty>;
+	public static values(...args: any[]): any {
+		return Difficulty.$javaClass.values(...args);
+	}
+
 }
 

@@ -3,6 +3,7 @@ declare var Java: any;
 export default interface MapCursor$Type {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	getValue(): number;
 	name(): string;
@@ -95,5 +96,21 @@ export default class MapCursor$Type {
 	public static get WHITE_POINTER(): MapCursor$Type {
 		return this.$javaClass.WHITE_POINTER;
 	}
+	public static byValue(value: number): MapCursor$Type;
+	public static byValue(...args: any[]): any {
+		return MapCursor$Type.$javaClass.byValue(...args);
+	}
+
+	public static valueOf(arg0: string): MapCursor$Type;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return MapCursor$Type.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<MapCursor$Type>;
+	public static values(...args: any[]): any {
+		return MapCursor$Type.$javaClass.values(...args);
+	}
+
 }
 

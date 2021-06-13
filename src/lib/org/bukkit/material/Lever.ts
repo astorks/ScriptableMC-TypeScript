@@ -7,10 +7,10 @@ import Redstone from './Redstone.js'
 import SimpleAttachableMaterialData from './SimpleAttachableMaterialData.js'
 
 export default interface Lever extends SimpleAttachableMaterialData, Redstone {
-	clone(): MaterialData;
-	clone(): any;
 	clone(): SimpleAttachableMaterialData;
 	clone(): Lever;
+	clone(): any;
+	clone(): MaterialData;
 	getAttachedFace(): BlockFace;
 	getData(): number;
 	getFacing(): BlockFace;

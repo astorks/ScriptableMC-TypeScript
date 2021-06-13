@@ -8,8 +8,8 @@ import HoverEvent from './HoverEvent.js'
 export default interface TranslatableComponent extends BaseComponent {
 	addExtra(component: BaseComponent): void;
 	addExtra(text: string): void;
-	addWith(text: string): void;
 	addWith(component: BaseComponent): void;
+	addWith(text: string): void;
 	copyFormatting(component: BaseComponent): void;
 	copyFormatting(component: BaseComponent, replace: boolean): void;
 	copyFormatting(component: BaseComponent, retention: ComponentBuilder$FormatRetention, replace: boolean): void;

@@ -6,6 +6,7 @@ import Statistic$Type from './Statistic$Type.js'
 export default interface Statistic extends Keyed {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	getKey(): NamespacedKey;
 	getType(): Statistic$Type;
@@ -248,6 +249,9 @@ export default class Statistic {
 	public static get TIME_SINCE_REST(): Statistic {
 		return this.$javaClass.TIME_SINCE_REST;
 	}
+	public static get TOTAL_WORLD_TIME(): Statistic {
+		return this.$javaClass.TOTAL_WORLD_TIME;
+	}
 	public static get TRADED_WITH_VILLAGER(): Statistic {
 		return this.$javaClass.TRADED_WITH_VILLAGER;
 	}
@@ -266,5 +270,16 @@ export default class Statistic {
 	public static get WALK_UNDER_WATER_ONE_CM(): Statistic {
 		return this.$javaClass.WALK_UNDER_WATER_ONE_CM;
 	}
+	public static valueOf(arg0: string): Statistic;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return Statistic.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<Statistic>;
+	public static values(...args: any[]): any {
+		return Statistic.$javaClass.values(...args);
+	}
+
 }
 

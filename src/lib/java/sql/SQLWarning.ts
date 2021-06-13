@@ -33,8 +33,8 @@ export default class SQLWarning {
 	}
 
 	constructor();
-	constructor(reason: string);
 	constructor(cause: any);
+	constructor(reason: string);
 	constructor(reason: string, cause: any);
 	constructor(reason: string, SQLState: string);
 	constructor(reason: string, SQLState: string, cause: any);

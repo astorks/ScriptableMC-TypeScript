@@ -3,6 +3,7 @@ declare var Java: any;
 export default interface InventoryType {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	getDefaultSize(): number;
 	getDefaultTitle(): string;
@@ -91,5 +92,16 @@ export default class InventoryType {
 	public static get WORKBENCH(): InventoryType {
 		return this.$javaClass.WORKBENCH;
 	}
+	public static valueOf(arg0: string): InventoryType;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return InventoryType.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<InventoryType>;
+	public static values(...args: any[]): any {
+		return InventoryType.$javaClass.values(...args);
+	}
+
 }
 

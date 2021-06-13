@@ -6,8 +6,8 @@ import PotionEffect from './PotionEffect.js'
 import PotionType from './PotionType.js'
 
 export default interface Potion {
-	apply(to: LivingEntity): void;
 	apply(to: ItemStack): void;
+	apply(to: LivingEntity): void;
 	extend(): Potion;
 	getEffects(): Array<PotionEffect>;
 	getLevel(): number;

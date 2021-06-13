@@ -3,6 +3,7 @@ declare var Java: any;
 export default interface SoundCategory {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	name(): string;
 	ordinal(): number;
@@ -43,5 +44,16 @@ export default class SoundCategory {
 	public static get WEATHER(): SoundCategory {
 		return this.$javaClass.WEATHER;
 	}
+	public static valueOf(arg0: string): SoundCategory;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return SoundCategory.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<SoundCategory>;
+	public static values(...args: any[]): any {
+		return SoundCategory.$javaClass.values(...args);
+	}
+
 }
 

@@ -21,12 +21,24 @@ export default class Tag {
 		return Tag.$javaClass.ANVIL;
 	}
 
+	public static get AXOLOTL_TEMPT_ITEMS(): Tag {
+		return Tag.$javaClass.AXOLOTL_TEMPT_ITEMS;
+	}
+
 	public static get BAMBOO_PLANTABLE_ON(): Tag {
 		return Tag.$javaClass.BAMBOO_PLANTABLE_ON;
 	}
 
 	public static get BANNERS(): Tag {
 		return Tag.$javaClass.BANNERS;
+	}
+
+	public static get BASE_STONE_NETHER(): Tag {
+		return Tag.$javaClass.BASE_STONE_NETHER;
+	}
+
+	public static get BASE_STONE_OVERWORLD(): Tag {
+		return Tag.$javaClass.BASE_STONE_OVERWORLD;
 	}
 
 	public static get BEACON_BASE_BLOCKS(): Tag {
@@ -57,12 +69,40 @@ export default class Tag {
 		return Tag.$javaClass.CAMPFIRES;
 	}
 
+	public static get CANDLES(): Tag {
+		return Tag.$javaClass.CANDLES;
+	}
+
+	public static get CANDLE_CAKES(): Tag {
+		return Tag.$javaClass.CANDLE_CAKES;
+	}
+
 	public static get CARPETS(): Tag {
 		return Tag.$javaClass.CARPETS;
 	}
 
+	public static get CAULDRONS(): Tag {
+		return Tag.$javaClass.CAULDRONS;
+	}
+
+	public static get CAVE_VINES(): Tag {
+		return Tag.$javaClass.CAVE_VINES;
+	}
+
 	public static get CLIMBABLE(): Tag {
 		return Tag.$javaClass.CLIMBABLE;
+	}
+
+	public static get CLUSTER_MAX_HARVESTABLES(): Tag {
+		return Tag.$javaClass.CLUSTER_MAX_HARVESTABLES;
+	}
+
+	public static get COAL_ORES(): Tag {
+		return Tag.$javaClass.COAL_ORES;
+	}
+
+	public static get COPPER_ORES(): Tag {
+		return Tag.$javaClass.COPPER_ORES;
 	}
 
 	public static get CORALS(): Tag {
@@ -85,8 +125,24 @@ export default class Tag {
 		return Tag.$javaClass.CROPS;
 	}
 
+	public static get CRYSTAL_SOUND_BLOCKS(): Tag {
+		return Tag.$javaClass.CRYSTAL_SOUND_BLOCKS;
+	}
+
 	public static get DARK_OAK_LOGS(): Tag {
 		return Tag.$javaClass.DARK_OAK_LOGS;
+	}
+
+	public static get DEEPSLATE_ORE_REPLACEABLES(): Tag {
+		return Tag.$javaClass.DEEPSLATE_ORE_REPLACEABLES;
+	}
+
+	public static get DIAMOND_ORES(): Tag {
+		return Tag.$javaClass.DIAMOND_ORES;
+	}
+
+	public static get DIRT(): Tag {
+		return Tag.$javaClass.DIRT;
 	}
 
 	public static get DOORS(): Tag {
@@ -97,8 +153,20 @@ export default class Tag {
 		return Tag.$javaClass.DRAGON_IMMUNE;
 	}
 
+	public static get DRIPSTONE_REPLACEABLE(): Tag {
+		return Tag.$javaClass.DRIPSTONE_REPLACEABLE;
+	}
+
+	public static get EMERALD_ORES(): Tag {
+		return Tag.$javaClass.EMERALD_ORES;
+	}
+
 	public static get ENDERMAN_HOLDABLE(): Tag {
 		return Tag.$javaClass.ENDERMAN_HOLDABLE;
+	}
+
+	public static get FEATURES_CANNOT_REPLACE(): Tag {
+		return Tag.$javaClass.FEATURES_CANNOT_REPLACE;
 	}
 
 	public static get FENCES(): Tag {
@@ -121,6 +189,26 @@ export default class Tag {
 		return Tag.$javaClass.FLOWER_POTS;
 	}
 
+	public static get FLUIDS_LAVA(): Tag {
+		return Tag.$javaClass.FLUIDS_LAVA;
+	}
+
+	public static get FLUIDS_WATER(): Tag {
+		return Tag.$javaClass.FLUIDS_WATER;
+	}
+
+	public static get FOX_FOOD(): Tag {
+		return Tag.$javaClass.FOX_FOOD;
+	}
+
+	public static get FREEZE_IMMUNE_WEARABLES(): Tag {
+		return Tag.$javaClass.FREEZE_IMMUNE_WEARABLES;
+	}
+
+	public static get GEODE_INVALID_BLOCKS(): Tag {
+		return Tag.$javaClass.GEODE_INVALID_BLOCKS;
+	}
+
 	public static get GOLD_ORES(): Tag {
 		return Tag.$javaClass.GOLD_ORES;
 	}
@@ -137,6 +225,10 @@ export default class Tag {
 		return Tag.$javaClass.ICE;
 	}
 
+	public static get IGNORED_BY_PIGLIN_BABIES(): Tag {
+		return Tag.$javaClass.IGNORED_BY_PIGLIN_BABIES;
+	}
+
 	public static get IMPERMEABLE(): Tag {
 		return Tag.$javaClass.IMPERMEABLE;
 	}
@@ -151,6 +243,14 @@ export default class Tag {
 
 	public static get INFINIBURN_OVERWORLD(): Tag {
 		return Tag.$javaClass.INFINIBURN_OVERWORLD;
+	}
+
+	public static get INSIDE_STEP_SOUND_BLOCKS(): Tag {
+		return Tag.$javaClass.INSIDE_STEP_SOUND_BLOCKS;
+	}
+
+	public static get IRON_ORES(): Tag {
+		return Tag.$javaClass.IRON_ORES;
 	}
 
 	public static get ITEMS_ARROWS(): Tag {
@@ -205,6 +305,14 @@ export default class Tag {
 		return Tag.$javaClass.JUNGLE_LOGS;
 	}
 
+	public static get LAPIS_ORES(): Tag {
+		return Tag.$javaClass.LAPIS_ORES;
+	}
+
+	public static get LAVA_POOL_STONE_CANNOT_REPLACE(): Tag {
+		return Tag.$javaClass.LAVA_POOL_STONE_CANNOT_REPLACE;
+	}
+
 	public static get LEAVES(): Tag {
 		return Tag.$javaClass.LEAVES;
 	}
@@ -217,6 +325,46 @@ export default class Tag {
 		return Tag.$javaClass.LOGS_THAT_BURN;
 	}
 
+	public static get LUSH_GROUND_REPLACEABLE(): Tag {
+		return Tag.$javaClass.LUSH_GROUND_REPLACEABLE;
+	}
+
+	public static get MINEABLE_AXE(): Tag {
+		return Tag.$javaClass.MINEABLE_AXE;
+	}
+
+	public static get MINEABLE_HOE(): Tag {
+		return Tag.$javaClass.MINEABLE_HOE;
+	}
+
+	public static get MINEABLE_PICKAXE(): Tag {
+		return Tag.$javaClass.MINEABLE_PICKAXE;
+	}
+
+	public static get MINEABLE_SHOVEL(): Tag {
+		return Tag.$javaClass.MINEABLE_SHOVEL;
+	}
+
+	public static get MOSS_REPLACEABLE(): Tag {
+		return Tag.$javaClass.MOSS_REPLACEABLE;
+	}
+
+	public static get MUSHROOM_GROW_BLOCK(): Tag {
+		return Tag.$javaClass.MUSHROOM_GROW_BLOCK;
+	}
+
+	public static get NEEDS_DIAMOND_TOOL(): Tag {
+		return Tag.$javaClass.NEEDS_DIAMOND_TOOL;
+	}
+
+	public static get NEEDS_IRON_TOOL(): Tag {
+		return Tag.$javaClass.NEEDS_IRON_TOOL;
+	}
+
+	public static get NEEDS_STONE_TOOL(): Tag {
+		return Tag.$javaClass.NEEDS_STONE_TOOL;
+	}
+
 	public static get NON_FLAMMABLE_WOOD(): Tag {
 		return Tag.$javaClass.NON_FLAMMABLE_WOOD;
 	}
@@ -227,6 +375,14 @@ export default class Tag {
 
 	public static get OAK_LOGS(): Tag {
 		return Tag.$javaClass.OAK_LOGS;
+	}
+
+	public static get OCCLUDES_VIBRATION_SIGNALS(): Tag {
+		return Tag.$javaClass.OCCLUDES_VIBRATION_SIGNALS;
+	}
+
+	public static get PIGLIN_FOOD(): Tag {
+		return Tag.$javaClass.PIGLIN_FOOD;
 	}
 
 	public static get PIGLIN_REPELLENTS(): Tag {
@@ -253,8 +409,16 @@ export default class Tag {
 		return Tag.$javaClass.RAILS;
 	}
 
+	public static get REDSTONE_ORES(): Tag {
+		return Tag.$javaClass.REDSTONE_ORES;
+	}
+
 	public static get REGISTRY_BLOCKS(): string {
 		return Tag.$javaClass.REGISTRY_BLOCKS;
+	}
+
+	public static get REGISTRY_FLUIDS(): string {
+		return Tag.$javaClass.REGISTRY_FLUIDS;
 	}
 
 	public static get REGISTRY_ITEMS(): string {
@@ -281,8 +445,16 @@ export default class Tag {
 		return Tag.$javaClass.SLABS;
 	}
 
+	public static get SMALL_DRIPLEAF_PLACEABLE(): Tag {
+		return Tag.$javaClass.SMALL_DRIPLEAF_PLACEABLE;
+	}
+
 	public static get SMALL_FLOWERS(): Tag {
 		return Tag.$javaClass.SMALL_FLOWERS;
+	}
+
+	public static get SNOW(): Tag {
+		return Tag.$javaClass.SNOW;
 	}
 
 	public static get SOUL_FIRE_BASE_BLOCKS(): Tag {
@@ -307,6 +479,10 @@ export default class Tag {
 
 	public static get STONE_BRICKS(): Tag {
 		return Tag.$javaClass.STONE_BRICKS;
+	}
+
+	public static get STONE_ORE_REPLACEABLES(): Tag {
+		return Tag.$javaClass.STONE_ORE_REPLACEABLES;
 	}
 
 	public static get STONE_PRESSURE_PLATES(): Tag {

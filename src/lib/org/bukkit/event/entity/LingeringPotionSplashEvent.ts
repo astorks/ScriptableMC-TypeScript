@@ -12,9 +12,9 @@ import ThrownPotion from '../../../../org/bukkit/entity/ThrownPotion.js'
 
 export default interface LingeringPotionSplashEvent extends ProjectileHitEvent, Cancellable {
 	getAreaEffectCloud(): AreaEffectCloud;
-	getEntity(): Entity;
 	getEntity(): Projectile;
 	getEntity(): ThrownPotion;
+	getEntity(): Entity;
 	getEntityType(): EntityType;
 	getEventName(): string;
 	getHandlers(): HandlerList;

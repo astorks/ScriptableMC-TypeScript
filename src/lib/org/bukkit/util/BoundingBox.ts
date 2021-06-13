@@ -7,8 +7,8 @@ import RayTraceResult from './RayTraceResult.js'
 import Vector from './Vector.js'
 
 export default interface BoundingBox extends ConfigurationSerializable {
-	clone(): any;
 	clone(): BoundingBox;
+	clone(): any;
 	contains(position: Vector): boolean;
 	contains(other: BoundingBox): boolean;
 	contains(min: Vector, max: Vector): boolean;
@@ -16,8 +16,8 @@ export default interface BoundingBox extends ConfigurationSerializable {
 	copy(other: BoundingBox): BoundingBox;
 	expand(expansion: Vector): BoundingBox;
 	expand(expansion: number): BoundingBox;
-	expand(blockFace: BlockFace, expansion: number): BoundingBox;
 	expand(direction: Vector, expansion: number): BoundingBox;
+	expand(blockFace: BlockFace, expansion: number): BoundingBox;
 	expand(x: number, y: number, z: number): BoundingBox;
 	expand(dirX: number, dirY: number, dirZ: number, expansion: number): BoundingBox;
 	expand(negativeX: number, negativeY: number, negativeZ: number, positiveX: number, positiveY: number, positiveZ: number): BoundingBox;

@@ -8,8 +8,8 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import MerchantRecipe from '../../../../org/bukkit/inventory/MerchantRecipe.js'
 
 export default interface VillagerAcquireTradeEvent extends EntityEvent, Cancellable {
-	getEntity(): Entity;
 	getEntity(): AbstractVillager;
+	getEntity(): Entity;
 	getEntityType(): EntityType;
 	getEventName(): string;
 	getHandlers(): HandlerList;

@@ -3,11 +3,11 @@ import HelpTopic from './HelpTopic.js'
 import HelpTopicComparator$TopicNameComparator from './HelpTopicComparator$TopicNameComparator.js'
 
 export default interface HelpTopicComparator {
-	compare(lhs: HelpTopic, rhs: HelpTopic): number;
 	compare(arg0: any, arg1: any): number;
+	compare(lhs: HelpTopic, rhs: HelpTopic): number;
 	reversed(): any;
-	thenComparing(keyExtractor: any): any;
 	thenComparing(other: any): any;
+	thenComparing(keyExtractor: any): any;
 	thenComparing(keyExtractor: any, keyComparator: any): any;
 	thenComparingDouble(keyExtractor: any): any;
 	thenComparingInt(keyExtractor: any): any;

@@ -9,8 +9,8 @@ export default interface Scoreboard {
 	clearSlot(arg0: DisplaySlot): void;
 	getEntries(): any;
 	getEntryTeam(arg0: string): Team;
-	getObjective(arg0: DisplaySlot): Objective;
 	getObjective(arg0: string): Objective;
+	getObjective(arg0: DisplaySlot): Objective;
 	getObjectives(): any;
 	getObjectivesByCriteria(arg0: string): any;
 	getPlayerTeam(arg0: OfflinePlayer): Team;

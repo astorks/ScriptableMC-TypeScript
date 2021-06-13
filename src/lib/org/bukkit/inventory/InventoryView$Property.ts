@@ -4,6 +4,7 @@ import InventoryType from '../../../org/bukkit/event/inventory/InventoryType.js'
 export default interface InventoryView$Property {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	getId(): number;
 	getType(): InventoryType;
@@ -79,5 +80,16 @@ export default class InventoryView$Property {
 	public static get TICKS_FOR_CURRENT_SMELTING(): InventoryView$Property {
 		return this.$javaClass.TICKS_FOR_CURRENT_SMELTING;
 	}
+	public static valueOf(arg0: string): InventoryView$Property;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return InventoryView$Property.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<InventoryView$Property>;
+	public static values(...args: any[]): any {
+		return InventoryView$Property.$javaClass.values(...args);
+	}
+
 }
 

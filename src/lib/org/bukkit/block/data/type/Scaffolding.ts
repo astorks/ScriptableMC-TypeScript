@@ -1,6 +1,7 @@
 declare var Java: any;
 import BlockData from '../../../../../org/bukkit/block/data/BlockData.js'
 import Material from '../../../../../org/bukkit/Material.js'
+import SoundGroup from '../../../../../org/bukkit/SoundGroup.js'
 import Waterlogged from '../../../../../org/bukkit/block/data/Waterlogged.js'
 
 export default interface Scaffolding extends Waterlogged {
@@ -11,6 +12,7 @@ export default interface Scaffolding extends Waterlogged {
 	getDistance(): number;
 	getMaterial(): Material;
 	getMaximumDistance(): number;
+	getSoundGroup(): SoundGroup;
 	isBottom(): boolean;
 	isWaterlogged(): boolean;
 	matches(arg0: BlockData): boolean;

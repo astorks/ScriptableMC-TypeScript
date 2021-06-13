@@ -13,8 +13,8 @@ export default interface PermissionAttachment {
 	setPermission(perm: Permission, value: boolean): void;
 	setPermission(_name: string, value: boolean): void;
 	setRemovalCallback(ex: PermissionRemovedExecutor): void;
-	unsetPermission(perm: Permission): void;
 	unsetPermission(_name: string): void;
+	unsetPermission(perm: Permission): void;
 }
 
 export default class PermissionAttachment {

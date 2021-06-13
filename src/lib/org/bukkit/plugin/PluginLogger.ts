@@ -12,10 +12,10 @@ export default interface PluginLogger {
 	exiting(sourceClass: string, sourceMethod: string, result: any): void;
 	fine(msgSupplier: any): void;
 	fine(msg: string): void;
-	finer(msgSupplier: any): void;
 	finer(msg: string): void;
-	finest(msgSupplier: any): void;
+	finer(msgSupplier: any): void;
 	finest(msg: string): void;
+	finest(msgSupplier: any): void;
 	getFilter(): any;
 	getHandlers(): Array<any>;
 	getLevel(): any;
@@ -24,29 +24,29 @@ export default interface PluginLogger {
 	getResourceBundle(): any;
 	getResourceBundleName(): string;
 	getUseParentHandlers(): boolean;
-	info(msg: string): void;
 	info(msgSupplier: any): void;
+	info(msg: string): void;
 	isLoggable(level: any): boolean;
 	log(logRecord: any): void;
-	log(level: any, msg: string): void;
 	log(level: any, msgSupplier: any): void;
-	log(level: any, thrown: any, msgSupplier: any): void;
+	log(level: any, msg: string): void;
 	log(level: any, msg: string, thrown: any): void;
+	log(level: any, thrown: any, msgSupplier: any): void;
 	log(level: any, msg: string, param1: any): void;
 	log(level: any, msg: string, params: Array<any>): void;
-	logp(level: any, sourceClass: string, sourceMethod: string, msg: string): void;
 	logp(level: any, sourceClass: string, sourceMethod: string, msgSupplier: any): void;
+	logp(level: any, sourceClass: string, sourceMethod: string, msg: string): void;
 	logp(level: any, sourceClass: string, sourceMethod: string, msg: string, param1: any): void;
-	logp(level: any, sourceClass: string, sourceMethod: string, thrown: any, msgSupplier: any): void;
-	logp(level: any, sourceClass: string, sourceMethod: string, msg: string, thrown: any): void;
 	logp(level: any, sourceClass: string, sourceMethod: string, msg: string, params: Array<any>): void;
-	logrb(level: any, bundle: any, msg: string, thrown: any): void;
+	logp(level: any, sourceClass: string, sourceMethod: string, msg: string, thrown: any): void;
+	logp(level: any, sourceClass: string, sourceMethod: string, thrown: any, msgSupplier: any): void;
 	logrb(level: any, bundle: any, msg: string, params: Array<any>): void;
+	logrb(level: any, bundle: any, msg: string, thrown: any): void;
 	logrb(level: any, sourceClass: string, sourceMethod: string, bundleName: string, msg: string): void;
+	logrb(level: any, sourceClass: string, sourceMethod: string, bundle: any, msg: string, params: Array<any>): void;
 	logrb(level: any, sourceClass: string, sourceMethod: string, bundleName: string, msg: string, thrown: any): void;
 	logrb(level: any, sourceClass: string, sourceMethod: string, bundle: any, msg: string, thrown: any): void;
 	logrb(level: any, sourceClass: string, sourceMethod: string, bundleName: string, msg: string, param1: any): void;
-	logrb(level: any, sourceClass: string, sourceMethod: string, bundle: any, msg: string, params: Array<any>): void;
 	logrb(level: any, sourceClass: string, sourceMethod: string, bundleName: string, msg: string, params: Array<any>): void;
 	removeHandler(handler: any): void;
 	setFilter(newFilter: any): void;
@@ -57,8 +57,8 @@ export default interface PluginLogger {
 	severe(msgSupplier: any): void;
 	severe(msg: string): void;
 	throwing(sourceClass: string, sourceMethod: string, thrown: any): void;
-	warning(msg: string): void;
 	warning(msgSupplier: any): void;
+	warning(msg: string): void;
 }
 
 export default class PluginLogger {

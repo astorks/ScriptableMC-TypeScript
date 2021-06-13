@@ -3,6 +3,7 @@ declare var Java: any;
 export default interface PermissionDefault {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	getValue(op: boolean): boolean;
 	name(): string;
@@ -26,5 +27,21 @@ export default class PermissionDefault {
 	public static get TRUE(): PermissionDefault {
 		return this.$javaClass.TRUE;
 	}
+	public static getByName(_name: string): PermissionDefault;
+	public static getByName(...args: any[]): any {
+		return PermissionDefault.$javaClass.getByName(...args);
+	}
+
+	public static valueOf(arg0: string): PermissionDefault;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return PermissionDefault.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<PermissionDefault>;
+	public static values(...args: any[]): any {
+		return PermissionDefault.$javaClass.values(...args);
+	}
+
 }
 

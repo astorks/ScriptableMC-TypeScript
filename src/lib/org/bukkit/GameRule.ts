@@ -90,6 +90,10 @@ export default class GameRule {
 		return GameRule.$javaClass.FORGIVE_DEAD_PLAYERS;
 	}
 
+	public static get FREEZE_DAMAGE(): GameRule {
+		return GameRule.$javaClass.FREEZE_DAMAGE;
+	}
+
 	public static get KEEP_INVENTORY(): GameRule {
 		return GameRule.$javaClass.KEEP_INVENTORY;
 	}
@@ -112,6 +116,10 @@ export default class GameRule {
 
 	public static get NATURAL_REGENERATION(): GameRule {
 		return GameRule.$javaClass.NATURAL_REGENERATION;
+	}
+
+	public static get PLAYERS_SLEEPING_PERCENTAGE(): GameRule {
+		return GameRule.$javaClass.PLAYERS_SLEEPING_PERCENTAGE;
 	}
 
 	public static get RANDOM_TICK_SPEED(): GameRule {

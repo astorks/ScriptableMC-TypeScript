@@ -19,8 +19,8 @@ export default interface BannerMeta extends ItemMeta {
 	clone(): ItemMeta;
 	clone(): any;
 	getAttributeModifiers(): Multimap;
-	getAttributeModifiers(arg0: Attribute): Array<AttributeModifier>;
 	getAttributeModifiers(arg0: EquipmentSlot): Multimap;
+	getAttributeModifiers(arg0: Attribute): Array<AttributeModifier>;
 	getBaseColor(): DyeColor;
 	getCustomModelData(): number;
 	getCustomTagContainer(): CustomItemTagContainer;

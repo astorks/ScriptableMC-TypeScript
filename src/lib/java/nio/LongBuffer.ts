@@ -3,8 +3,8 @@ import Buffer from './Buffer.js'
 import ByteOrder from './ByteOrder.js'
 
 export default interface LongBuffer extends Buffer {
-	array(): any;
 	array(): Array<number>;
+	array(): any;
 	arrayOffset(): number;
 	asReadOnlyBuffer(): LongBuffer;
 	capacity(): number;
@@ -13,40 +13,47 @@ export default interface LongBuffer extends Buffer {
 	compact(): LongBuffer;
 	compareTo(arg0: any): number;
 	compareTo(that: LongBuffer): number;
-	duplicate(): Buffer;
 	duplicate(): LongBuffer;
+	duplicate(): Buffer;
 	flip(): LongBuffer;
 	flip(): Buffer;
 	get(): number;
-	get(dst: Array<number>): LongBuffer;
 	get(arg0: number): number;
+	get(dst: Array<number>): LongBuffer;
+	get(index: number, dst: Array<number>): LongBuffer;
 	get(dst: Array<number>, offset: number, length: number): LongBuffer;
+	get(index: number, dst: Array<number>, offset: number, length: number): LongBuffer;
 	hasArray(): boolean;
 	hasRemaining(): boolean;
 	isDirect(): boolean;
 	isReadOnly(): boolean;
 	limit(): number;
-	limit(newLimit: number): Buffer;
 	limit(newLimit: number): LongBuffer;
+	limit(newLimit: number): Buffer;
 	mark(): Buffer;
 	mark(): LongBuffer;
 	mismatch(that: LongBuffer): number;
 	order(): ByteOrder;
 	position(): number;
-	position(newPosition: number): LongBuffer;
 	position(newPosition: number): Buffer;
-	put(src: Array<number>): LongBuffer;
+	position(newPosition: number): LongBuffer;
 	put(src: LongBuffer): LongBuffer;
+	put(src: Array<number>): LongBuffer;
 	put(arg0: number): LongBuffer;
+	put(index: number, src: Array<number>): LongBuffer;
 	put(arg0: number, arg1: number): LongBuffer;
 	put(src: Array<number>, offset: number, length: number): LongBuffer;
+	put(index: number, src: LongBuffer, offset: number, length: number): LongBuffer;
+	put(index: number, src: Array<number>, offset: number, length: number): LongBuffer;
 	remaining(): number;
 	reset(): Buffer;
 	reset(): LongBuffer;
-	rewind(): Buffer;
 	rewind(): LongBuffer;
+	rewind(): Buffer;
 	slice(): LongBuffer;
 	slice(): Buffer;
+	slice(arg0: number, arg1: number): LongBuffer;
+	slice(arg0: number, arg1: number): Buffer;
 }
 
 export default class LongBuffer {

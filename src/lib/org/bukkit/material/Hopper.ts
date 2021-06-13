@@ -8,8 +8,8 @@ import Redstone from './Redstone.js'
 
 export default interface Hopper extends MaterialData, Directional, Redstone {
 	clone(): any;
-	clone(): MaterialData;
 	clone(): Hopper;
+	clone(): MaterialData;
 	getData(): number;
 	getFacing(): BlockFace;
 	getItemType(): Material;
@@ -30,8 +30,8 @@ export default class Hopper {
 	constructor();
 	constructor(type: Material);
 	constructor(facingDirection: BlockFace);
-	constructor(type: Material, data: number);
 	constructor(facingDirection: BlockFace, isActive: boolean);
+	constructor(type: Material, data: number);
 	constructor(...args: any[]) {
 		return new Hopper.$javaClass(...args);
 	}

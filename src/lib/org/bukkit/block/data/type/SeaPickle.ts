@@ -1,6 +1,7 @@
 declare var Java: any;
 import BlockData from '../../../../../org/bukkit/block/data/BlockData.js'
 import Material from '../../../../../org/bukkit/Material.js'
+import SoundGroup from '../../../../../org/bukkit/SoundGroup.js'
 import Waterlogged from '../../../../../org/bukkit/block/data/Waterlogged.js'
 
 export default interface SeaPickle extends Waterlogged {
@@ -12,6 +13,7 @@ export default interface SeaPickle extends Waterlogged {
 	getMaximumPickles(): number;
 	getMinimumPickles(): number;
 	getPickles(): number;
+	getSoundGroup(): SoundGroup;
 	isWaterlogged(): boolean;
 	matches(arg0: BlockData): boolean;
 	merge(arg0: BlockData): BlockData;

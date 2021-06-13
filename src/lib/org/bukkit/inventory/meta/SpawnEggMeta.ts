@@ -18,8 +18,8 @@ export default interface SpawnEggMeta extends ItemMeta {
 	clone(): any;
 	clone(): SpawnEggMeta;
 	getAttributeModifiers(): Multimap;
-	getAttributeModifiers(arg0: Attribute): Array<AttributeModifier>;
 	getAttributeModifiers(arg0: EquipmentSlot): Multimap;
+	getAttributeModifiers(arg0: Attribute): Array<AttributeModifier>;
 	getCustomModelData(): number;
 	getCustomTagContainer(): CustomItemTagContainer;
 	getDisplayName(): string;

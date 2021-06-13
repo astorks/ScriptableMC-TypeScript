@@ -9,8 +9,8 @@ import MaterialData from './MaterialData.js'
 
 export default interface CocoaPlant extends MaterialData, Directional, Attachable {
 	clone(): any;
-	clone(): MaterialData;
 	clone(): CocoaPlant;
+	clone(): MaterialData;
 	getAttachedFace(): BlockFace;
 	getData(): number;
 	getFacing(): BlockFace;

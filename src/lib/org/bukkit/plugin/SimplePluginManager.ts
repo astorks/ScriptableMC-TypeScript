@@ -28,8 +28,8 @@ export default interface SimplePluginManager extends PluginManager {
 	getPermissions(): any;
 	getPlugin(_name: string): Plugin;
 	getPlugins(): Array<Plugin>;
-	isPluginEnabled(plugin: Plugin): boolean;
 	isPluginEnabled(_name: string): boolean;
+	isPluginEnabled(plugin: Plugin): boolean;
 	isTransitiveDepend(plugin: PluginDescriptionFile, depend: PluginDescriptionFile): boolean;
 	loadPlugin(file: File): Plugin;
 	loadPlugins(directory: File): Array<Plugin>;

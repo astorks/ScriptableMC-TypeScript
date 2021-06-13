@@ -7,6 +7,7 @@ import Directional from '../../../../../org/bukkit/block/data/Directional.js'
 import Material from '../../../../../org/bukkit/Material.js'
 import Openable from '../../../../../org/bukkit/block/data/Openable.js'
 import Powerable from '../../../../../org/bukkit/block/data/Powerable.js'
+import SoundGroup from '../../../../../org/bukkit/SoundGroup.js'
 import Waterlogged from '../../../../../org/bukkit/block/data/Waterlogged.js'
 
 export default interface TrapDoor extends Bisected, Directional, Openable, Powerable, Waterlogged {
@@ -18,6 +19,7 @@ export default interface TrapDoor extends Bisected, Directional, Openable, Power
 	getFacing(): BlockFace;
 	getHalf(): Bisected$Half;
 	getMaterial(): Material;
+	getSoundGroup(): SoundGroup;
 	isOpen(): boolean;
 	isPowered(): boolean;
 	isWaterlogged(): boolean;

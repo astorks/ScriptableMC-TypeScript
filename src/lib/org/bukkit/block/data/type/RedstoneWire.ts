@@ -4,6 +4,7 @@ import BlockData from '../../../../../org/bukkit/block/data/BlockData.js'
 import BlockFace from '../../../../../org/bukkit/block/BlockFace.js'
 import Material from '../../../../../org/bukkit/Material.js'
 import RedstoneWire$Connection from './RedstoneWire$Connection.js'
+import SoundGroup from '../../../../../org/bukkit/SoundGroup.js'
 
 export default interface RedstoneWire extends AnaloguePowerable {
 	clone(): any;
@@ -15,6 +16,7 @@ export default interface RedstoneWire extends AnaloguePowerable {
 	getMaterial(): Material;
 	getMaximumPower(): number;
 	getPower(): number;
+	getSoundGroup(): SoundGroup;
 	matches(arg0: BlockData): boolean;
 	merge(arg0: BlockData): BlockData;
 	setFace(arg0: BlockFace, arg1: RedstoneWire$Connection): void;

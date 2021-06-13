@@ -6,8 +6,8 @@ import Plugin from '../../../org/bukkit/plugin/Plugin.js'
 
 export default interface InactivityConversationCanceller extends ConversationCanceller {
 	cancelBasedOnInput(context: ConversationContext, input: string): boolean;
-	clone(): ConversationCanceller;
 	clone(): any;
+	clone(): ConversationCanceller;
 	setConversation(conversation: Conversation): void;
 }
 

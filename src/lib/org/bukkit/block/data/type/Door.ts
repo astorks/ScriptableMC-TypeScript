@@ -8,6 +8,7 @@ import Door$Hinge from './Door$Hinge.js'
 import Material from '../../../../../org/bukkit/Material.js'
 import Openable from '../../../../../org/bukkit/block/data/Openable.js'
 import Powerable from '../../../../../org/bukkit/block/data/Powerable.js'
+import SoundGroup from '../../../../../org/bukkit/SoundGroup.js'
 
 export default interface Door extends Bisected, Directional, Openable, Powerable {
 	clone(): any;
@@ -19,6 +20,7 @@ export default interface Door extends Bisected, Directional, Openable, Powerable
 	getHalf(): Bisected$Half;
 	getHinge(): Door$Hinge;
 	getMaterial(): Material;
+	getSoundGroup(): SoundGroup;
 	isOpen(): boolean;
 	isPowered(): boolean;
 	matches(arg0: BlockData): boolean;

@@ -5,9 +5,9 @@ import MaterialData from './MaterialData.js'
 import Redstone from './Redstone.js'
 
 export default interface Command extends MaterialData, Redstone {
-	clone(): any;
-	clone(): MaterialData;
 	clone(): Command;
+	clone(): MaterialData;
+	clone(): any;
 	getData(): number;
 	getItemType(): Material;
 	isPowered(): boolean;

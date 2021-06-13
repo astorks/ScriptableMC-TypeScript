@@ -55,15 +55,15 @@ export default interface Server extends PluginMessageRecipient {
 	clearRecipes(): void;
 	createBlockData(arg0: Material): BlockData;
 	createBlockData(arg0: string): BlockData;
-	createBlockData(arg0: Material, arg1: string): BlockData;
 	createBlockData(arg0: Material, arg1: any): BlockData;
+	createBlockData(arg0: Material, arg1: string): BlockData;
 	createBossBar(arg0: string, arg1: BarColor, arg2: BarStyle, arg3: Array<BarFlag>): BossBar;
 	createBossBar(arg0: NamespacedKey, arg1: string, arg2: BarColor, arg3: BarStyle, arg4: Array<BarFlag>): KeyedBossBar;
 	createChunkData(arg0: World): ChunkGenerator$ChunkData;
 	createExplorerMap(arg0: World, arg1: Location, arg2: StructureType): ItemStack;
 	createExplorerMap(arg0: World, arg1: Location, arg2: StructureType, arg3: number, arg4: boolean): ItemStack;
-	createInventory(arg0: InventoryHolder, arg1: number): Inventory;
 	createInventory(arg0: InventoryHolder, arg1: InventoryType): Inventory;
+	createInventory(arg0: InventoryHolder, arg1: number): Inventory;
 	createInventory(arg0: InventoryHolder, arg1: number, arg2: string): Inventory;
 	createInventory(arg0: InventoryHolder, arg1: InventoryType, arg2: string): Inventory;
 	createMap(arg0: World): MapView;
@@ -97,6 +97,7 @@ export default interface Server extends PluginMessageRecipient {
 	getLootTable(arg0: NamespacedKey): LootTable;
 	getMap(arg0: number): MapView;
 	getMaxPlayers(): number;
+	getMaxWorldSize(): number;
 	getMessenger(): Messenger;
 	getMonsterSpawnLimit(): number;
 	getMotd(): string;
@@ -113,6 +114,7 @@ export default interface Server extends PluginMessageRecipient {
 	getPluginCommand(arg0: string): PluginCommand;
 	getPluginManager(): PluginManager;
 	getPort(): number;
+	getRecipe(arg0: NamespacedKey): Recipe;
 	getRecipesFor(arg0: ItemStack): Array<Recipe>;
 	getScheduler(): BukkitScheduler;
 	getScoreboardManager(): ScoreboardManager;
@@ -144,8 +146,8 @@ export default interface Server extends PluginMessageRecipient {
 	hasWhitelist(): boolean;
 	isHardcore(): boolean;
 	isPrimaryThread(): boolean;
-	loadServerIcon(arg0: File): CachedServerIcon;
 	loadServerIcon(arg0: any): CachedServerIcon;
+	loadServerIcon(arg0: File): CachedServerIcon;
 	matchPlayer(arg0: string): Array<Player>;
 	recipeIterator(): any;
 	reload(): void;

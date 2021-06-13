@@ -3,6 +3,7 @@ import BlockData from '../../../../../org/bukkit/block/data/BlockData.js'
 import BlockFace from '../../../../../org/bukkit/block/BlockFace.js'
 import Material from '../../../../../org/bukkit/Material.js'
 import MultipleFacing from '../../../../../org/bukkit/block/data/MultipleFacing.js'
+import SoundGroup from '../../../../../org/bukkit/SoundGroup.js'
 import Waterlogged from '../../../../../org/bukkit/block/data/Waterlogged.js'
 
 export default interface Fence extends MultipleFacing, Waterlogged {
@@ -13,6 +14,7 @@ export default interface Fence extends MultipleFacing, Waterlogged {
 	getAsString(arg0: boolean): string;
 	getFaces(): any;
 	getMaterial(): Material;
+	getSoundGroup(): SoundGroup;
 	hasFace(arg0: BlockFace): boolean;
 	isWaterlogged(): boolean;
 	matches(arg0: BlockData): boolean;

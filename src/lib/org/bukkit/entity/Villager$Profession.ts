@@ -5,6 +5,7 @@ import NamespacedKey from '../../../org/bukkit/NamespacedKey.js'
 export default interface Villager$Profession extends Keyed {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	getKey(): NamespacedKey;
 	name(): string;
@@ -61,5 +62,16 @@ export default class Villager$Profession {
 	public static get WEAPONSMITH(): Villager$Profession {
 		return this.$javaClass.WEAPONSMITH;
 	}
+	public static valueOf(arg0: string): Villager$Profession;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return Villager$Profession.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<Villager$Profession>;
+	public static values(...args: any[]): any {
+		return Villager$Profession.$javaClass.values(...args);
+	}
+
 }
 

@@ -14,8 +14,8 @@ export default class RegexPrompt {
 		return Java.type('org.bukkit.conversations.RegexPrompt');
 	}
 
-	constructor(regex: string);
 	constructor(pattern: any);
+	constructor(regex: string);
 	constructor(...args: any[]) {
 		return new RegexPrompt.$javaClass(...args);
 	}

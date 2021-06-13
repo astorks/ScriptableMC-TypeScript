@@ -3,6 +3,7 @@ declare var Java: any;
 export default interface BlockIgniteEvent$IgniteCause {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	name(): string;
 	ordinal(): number;
@@ -37,5 +38,16 @@ export default class BlockIgniteEvent$IgniteCause {
 	public static get SPREAD(): BlockIgniteEvent$IgniteCause {
 		return this.$javaClass.SPREAD;
 	}
+	public static valueOf(arg0: string): BlockIgniteEvent$IgniteCause;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return BlockIgniteEvent$IgniteCause.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<BlockIgniteEvent$IgniteCause>;
+	public static values(...args: any[]): any {
+		return BlockIgniteEvent$IgniteCause.$javaClass.values(...args);
+	}
+
 }
 

@@ -23,10 +23,10 @@ export default class Wood {
 	}
 
 	constructor();
-	constructor(species: TreeSpecies);
 	constructor(type: Material);
-	constructor(type: Material, data: number);
+	constructor(species: TreeSpecies);
 	constructor(type: Material, species: TreeSpecies);
+	constructor(type: Material, data: number);
 	constructor(...args: any[]) {
 		return new Wood.$javaClass(...args);
 	}

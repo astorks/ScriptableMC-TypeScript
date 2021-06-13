@@ -5,6 +5,7 @@ import NBTCompound from './NBTCompound.js'
 import NBTCompoundList from './NBTCompoundList.js'
 import NBTList from './NBTList.js'
 import NBTType from './NBTType.js'
+import OutputStream from '../../../java/io/OutputStream.js'
 
 export default interface NBTFile extends NBTCompound {
 	addCompound(_name: string): NBTCompound;
@@ -16,21 +17,27 @@ export default interface NBTFile extends NBTCompound {
 	getCompound(_name: string): NBTCompound;
 	getCompoundList(_name: string): NBTCompoundList;
 	getDouble(key: string): number;
+	getDoubleList(_name: string): NBTList;
 	getFile(): File;
 	getFloat(key: string): number;
+	getFloatList(_name: string): NBTList;
 	getIntArray(key: string): Array<number>;
 	getInteger(key: string): any;
 	getIntegerList(_name: string): NBTList;
 	getItemStack(key: string): ItemStack;
 	getKeys(): any;
+	getListType(_name: string): NBTType;
 	getLong(key: string): number;
+	getLongList(_name: string): NBTList;
 	getName(): string;
 	getObject(key: string, type: any): any;
+	getOrCreateCompound(_name: string): NBTCompound;
 	getParent(): NBTCompound;
 	getShort(key: string): number;
 	getString(key: string): string;
 	getStringList(_name: string): NBTList;
 	getType(_name: string): NBTType;
+	getUUID(key: string): string;
 	hasKey(key: string): boolean;
 	mergeCompound(comp: NBTCompound): void;
 	removeKey(key: string): void;
@@ -47,6 +54,8 @@ export default interface NBTFile extends NBTCompound {
 	setObject(key: string, value: any): void;
 	setShort(key: string, value: number): void;
 	setString(key: string, value: string): void;
+	setUUID(key: string, value: string): void;
+	writeCompound(stream: OutputStream): void;
 }
 
 export default class NBTFile {

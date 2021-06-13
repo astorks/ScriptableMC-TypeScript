@@ -14,8 +14,8 @@ export default interface BrewerInventory extends Inventory {
 	all(arg0: ItemStack): any;
 	clear(): void;
 	clear(arg0: number): void;
-	contains(arg0: Material): boolean;
 	contains(arg0: ItemStack): boolean;
+	contains(arg0: Material): boolean;
 	contains(arg0: ItemStack, arg1: number): boolean;
 	contains(arg0: Material, arg1: number): boolean;
 	containsAtLeast(arg0: ItemStack, arg1: number): boolean;
@@ -35,11 +35,12 @@ export default interface BrewerInventory extends Inventory {
 	getStorageContents(): Array<ItemStack>;
 	getType(): InventoryType;
 	getViewers(): Array<HumanEntity>;
+	isEmpty(): boolean;
 	iterator(): any;
 	iterator(): any;
 	iterator(arg0: number): any;
-	remove(arg0: Material): void;
 	remove(arg0: ItemStack): void;
+	remove(arg0: Material): void;
 	removeItem(arg0: Array<ItemStack>): any;
 	setContents(arg0: Array<ItemStack>): void;
 	setFuel(arg0: ItemStack): void;

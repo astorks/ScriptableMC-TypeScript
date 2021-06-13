@@ -3,6 +3,7 @@ declare var Java: any;
 export default interface Horse$Style {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	name(): string;
 	ordinal(): number;
@@ -28,5 +29,16 @@ export default class Horse$Style {
 	public static get WHITE_DOTS(): Horse$Style {
 		return this.$javaClass.WHITE_DOTS;
 	}
+	public static valueOf(arg0: string): Horse$Style;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return Horse$Style.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<Horse$Style>;
+	public static values(...args: any[]): any {
+		return Horse$Style.$javaClass.values(...args);
+	}
+
 }
 

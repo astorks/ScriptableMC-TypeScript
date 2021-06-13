@@ -9,8 +9,8 @@ export default interface FileOutputStream extends OutputStream {
 	flush(): void;
 	getChannel(): FileChannel;
 	getFD(): FileDescriptor;
-	write(b: Array<number>): void;
 	write(b: number): void;
+	write(b: Array<number>): void;
 	write(b: Array<number>, off: number, len: number): void;
 }
 

@@ -12,8 +12,8 @@ export default interface TradeSelectEvent extends InventoryInteractEvent {
 	getEventName(): string;
 	getHandlers(): HandlerList;
 	getIndex(): number;
-	getInventory(): Inventory;
 	getInventory(): MerchantInventory;
+	getInventory(): Inventory;
 	getMerchant(): Merchant;
 	getResult(): Event$Result;
 	getView(): InventoryView;

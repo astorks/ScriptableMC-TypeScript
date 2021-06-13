@@ -7,8 +7,8 @@ import HandlerList from '../../../../org/bukkit/event/HandlerList.js'
 import Sheep from '../../../../org/bukkit/entity/Sheep.js'
 
 export default interface SheepRegrowWoolEvent extends EntityEvent, Cancellable {
-	getEntity(): Sheep;
 	getEntity(): Entity;
+	getEntity(): Sheep;
 	getEntityType(): EntityType;
 	getEventName(): string;
 	getHandlers(): HandlerList;

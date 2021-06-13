@@ -5,6 +5,7 @@ import NamespacedKey from '../../../org/bukkit/NamespacedKey.js'
 export default interface Attribute extends Keyed {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	getKey(): NamespacedKey;
 	name(): string;
@@ -55,5 +56,16 @@ export default class Attribute {
 	public static get ZOMBIE_SPAWN_REINFORCEMENTS(): Attribute {
 		return this.$javaClass.ZOMBIE_SPAWN_REINFORCEMENTS;
 	}
+	public static valueOf(arg0: string): Attribute;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return Attribute.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<Attribute>;
+	public static values(...args: any[]): any {
+		return Attribute.$javaClass.values(...args);
+	}
+
 }
 

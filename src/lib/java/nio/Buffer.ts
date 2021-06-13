@@ -20,6 +20,7 @@ export default interface Buffer {
 	reset(): Buffer;
 	rewind(): Buffer;
 	slice(): Buffer;
+	slice(arg0: number, arg1: number): Buffer;
 }
 
 export default class Buffer {

@@ -3,6 +3,7 @@ declare var Java: any;
 export default interface PatternType {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	getIdentifier(): string;
 	name(): string;
@@ -137,5 +138,21 @@ export default class PatternType {
 	public static get TRIANGLE_TOP(): PatternType {
 		return this.$javaClass.TRIANGLE_TOP;
 	}
+	public static getByIdentifier(identifier: string): PatternType;
+	public static getByIdentifier(...args: any[]): any {
+		return PatternType.$javaClass.getByIdentifier(...args);
+	}
+
+	public static valueOf(arg0: string): PatternType;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return PatternType.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<PatternType>;
+	public static values(...args: any[]): any {
+		return PatternType.$javaClass.values(...args);
+	}
+
 }
 

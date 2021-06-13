@@ -3,6 +3,7 @@ declare var Java: any;
 export default interface Horse$Variant {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	name(): string;
 	ordinal(): number;
@@ -31,5 +32,16 @@ export default class Horse$Variant {
 	public static get UNDEAD_HORSE(): Horse$Variant {
 		return this.$javaClass.UNDEAD_HORSE;
 	}
+	public static valueOf(arg0: string): Horse$Variant;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return Horse$Variant.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<Horse$Variant>;
+	public static values(...args: any[]): any {
+		return Horse$Variant.$javaClass.values(...args);
+	}
+
 }
 

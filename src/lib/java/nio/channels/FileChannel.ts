@@ -30,8 +30,8 @@ export default interface FileChannel extends AbstractInterruptibleChannel, Seeka
 	size(): number;
 	transferFrom(arg0: ReadableByteChannel, arg1: number, arg2: number): number;
 	transferTo(arg0: number, arg1: number, arg2: WritableByteChannel): number;
-	truncate(arg0: number): FileChannel;
 	truncate(arg0: number): SeekableByteChannel;
+	truncate(arg0: number): FileChannel;
 	tryLock(): FileLock;
 	tryLock(arg0: number, arg1: number, arg2: boolean): FileLock;
 	write(arg0: ByteBuffer): number;

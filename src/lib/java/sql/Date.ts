@@ -4,8 +4,8 @@ export default interface Date {
 	after(when: any): boolean;
 	before(when: any): boolean;
 	clone(): any;
-	compareTo(anotherDate: any): number;
 	compareTo(arg0: any): number;
+	compareTo(anotherDate: any): number;
 	getDate(): number;
 	getDay(): number;
 	getHours(): number;
@@ -54,8 +54,8 @@ export default class Date {
 		return Date.$javaClass.parse(...args);
 	}
 
-	public static valueOf(date: any): Date;
 	public static valueOf(s: string): Date;
+	public static valueOf(date: any): Date;
 	public static valueOf(...args: any[]): any {
 		return Date.$javaClass.valueOf(...args);
 	}

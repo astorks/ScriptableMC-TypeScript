@@ -6,6 +6,7 @@ import FaceAttachable from '../../../../../org/bukkit/block/data/FaceAttachable.
 import FaceAttachable$AttachedFace from '../../../../../org/bukkit/block/data/FaceAttachable$AttachedFace.js'
 import Material from '../../../../../org/bukkit/Material.js'
 import Powerable from '../../../../../org/bukkit/block/data/Powerable.js'
+import SoundGroup from '../../../../../org/bukkit/SoundGroup.js'
 import Switch$Face from './Switch$Face.js'
 
 export default interface Switch extends Directional, FaceAttachable, Powerable {
@@ -18,6 +19,7 @@ export default interface Switch extends Directional, FaceAttachable, Powerable {
 	getFaces(): any;
 	getFacing(): BlockFace;
 	getMaterial(): Material;
+	getSoundGroup(): SoundGroup;
 	isPowered(): boolean;
 	matches(arg0: BlockData): boolean;
 	merge(arg0: BlockData): BlockData;

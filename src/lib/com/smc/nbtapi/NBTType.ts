@@ -3,6 +3,7 @@ declare var Java: any;
 export default interface NBTType {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	getId(): number;
 	name(): string;
@@ -50,5 +51,17 @@ export default class NBTType {
 	public static get NBTTagString(): NBTType {
 		return this.$javaClass.NBTTagString;
 	}
+	public static valueOf(_name: string): NBTType;
+	public static valueOf(id: number): NBTType;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return NBTType.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<NBTType>;
+	public static values(...args: any[]): any {
+		return NBTType.$javaClass.values(...args);
+	}
+
 }
 

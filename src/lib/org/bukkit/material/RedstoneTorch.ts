@@ -8,9 +8,9 @@ import SimpleAttachableMaterialData from './SimpleAttachableMaterialData.js'
 import Torch from './Torch.js'
 
 export default interface RedstoneTorch extends Torch, Redstone {
-	clone(): SimpleAttachableMaterialData;
 	clone(): MaterialData;
 	clone(): any;
+	clone(): SimpleAttachableMaterialData;
 	clone(): Torch;
 	clone(): RedstoneTorch;
 	getAttachedFace(): BlockFace;

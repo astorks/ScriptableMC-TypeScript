@@ -44,11 +44,13 @@ export default interface Minecart extends Vehicle {
 	getFallDistance(): number;
 	getFireTicks(): number;
 	getFlyingVelocityMod(): Vector;
+	getFreezeTicks(): number;
 	getHeight(): number;
 	getLastDamageCause(): EntityDamageEvent;
 	getLocation(): Location;
 	getLocation(arg0: Location): Location;
 	getMaxFireTicks(): number;
+	getMaxFreezeTicks(): number;
 	getMaxSpeed(): number;
 	getMetadata(arg0: string): Array<MetadataValue>;
 	getName(): string;
@@ -70,22 +72,25 @@ export default interface Minecart extends Vehicle {
 	getWorld(): World;
 	hasGravity(): boolean;
 	hasMetadata(arg0: string): boolean;
-	hasPermission(arg0: string): boolean;
 	hasPermission(arg0: Permission): boolean;
+	hasPermission(arg0: string): boolean;
 	isCustomNameVisible(): boolean;
 	isDead(): boolean;
 	isEmpty(): boolean;
+	isFrozen(): boolean;
 	isGlowing(): boolean;
+	isInWater(): boolean;
 	isInsideVehicle(): boolean;
 	isInvulnerable(): boolean;
 	isOnGround(): boolean;
 	isOp(): boolean;
-	isPermissionSet(arg0: string): boolean;
 	isPermissionSet(arg0: Permission): boolean;
+	isPermissionSet(arg0: string): boolean;
 	isPersistent(): boolean;
 	isSilent(): boolean;
 	isSlowWhenEmpty(): boolean;
 	isValid(): boolean;
+	isVisualFire(): boolean;
 	leaveVehicle(): boolean;
 	playEffect(arg0: EntityEffect): void;
 	recalculatePermissions(): void;
@@ -94,8 +99,10 @@ export default interface Minecart extends Vehicle {
 	removeMetadata(arg0: string, arg1: Plugin): void;
 	removePassenger(arg0: Entity): boolean;
 	removeScoreboardTag(arg0: string): boolean;
-	sendMessage(arg0: Array<string>): void;
 	sendMessage(arg0: string): void;
+	sendMessage(arg0: Array<string>): void;
+	sendMessage(arg0: string, arg1: Array<string>): void;
+	sendMessage(arg0: string, arg1: string): void;
 	setCustomName(arg0: string): void;
 	setCustomNameVisible(arg0: boolean): void;
 	setDamage(arg0: number): void;
@@ -106,6 +113,7 @@ export default interface Minecart extends Vehicle {
 	setFallDistance(arg0: number): void;
 	setFireTicks(arg0: number): void;
 	setFlyingVelocityMod(arg0: Vector): void;
+	setFreezeTicks(arg0: number): void;
 	setGlowing(arg0: boolean): void;
 	setGravity(arg0: boolean): void;
 	setInvulnerable(arg0: boolean): void;
@@ -121,12 +129,13 @@ export default interface Minecart extends Vehicle {
 	setSlowWhenEmpty(arg0: boolean): void;
 	setTicksLived(arg0: number): void;
 	setVelocity(arg0: Vector): void;
-	spigot(): Entity$Spigot;
+	setVisualFire(arg0: boolean): void;
 	spigot(): CommandSender$Spigot;
-	teleport(arg0: Location): boolean;
+	spigot(): Entity$Spigot;
 	teleport(arg0: Entity): boolean;
-	teleport(arg0: Location, arg1: PlayerTeleportEvent$TeleportCause): boolean;
+	teleport(arg0: Location): boolean;
 	teleport(arg0: Entity, arg1: PlayerTeleportEvent$TeleportCause): boolean;
+	teleport(arg0: Location, arg1: PlayerTeleportEvent$TeleportCause): boolean;
 }
 
 export default class Minecart {

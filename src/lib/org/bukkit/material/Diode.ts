@@ -7,9 +7,9 @@ import MaterialData from './MaterialData.js'
 import Redstone from './Redstone.js'
 
 export default interface Diode extends MaterialData, Directional, Redstone {
-	clone(): any;
 	clone(): MaterialData;
 	clone(): Diode;
+	clone(): any;
 	getData(): number;
 	getDelay(): number;
 	getFacing(): BlockFace;
@@ -30,8 +30,8 @@ export default class Diode {
 	constructor();
 	constructor(type: Material);
 	constructor(facingDirection: BlockFace);
-	constructor(type: Material, data: number);
 	constructor(facingDirection: BlockFace, delay: number);
+	constructor(type: Material, data: number);
 	constructor(facingDirection: BlockFace, delay: number, state: boolean);
 	constructor(...args: any[]) {
 		return new Diode.$javaClass(...args);

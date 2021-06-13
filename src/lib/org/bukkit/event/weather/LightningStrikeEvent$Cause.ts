@@ -3,6 +3,7 @@ declare var Java: any;
 export default interface LightningStrikeEvent$Cause {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	name(): string;
 	ordinal(): number;
@@ -28,5 +29,16 @@ export default class LightningStrikeEvent$Cause {
 	public static get WEATHER(): LightningStrikeEvent$Cause {
 		return this.$javaClass.WEATHER;
 	}
+	public static valueOf(arg0: string): LightningStrikeEvent$Cause;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return LightningStrikeEvent$Cause.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<LightningStrikeEvent$Cause>;
+	public static values(...args: any[]): any {
+		return LightningStrikeEvent$Cause.$javaClass.values(...args);
+	}
+
 }
 

@@ -25,6 +25,12 @@ export default class NamespacedKey {
 		return NamespacedKey.$javaClass.MINECRAFT;
 	}
 
+	public static fromString(key: string): NamespacedKey;
+	public static fromString(string: string, defaultNamespace: Plugin): NamespacedKey;
+	public static fromString(...args: any[]): any {
+		return NamespacedKey.$javaClass.fromString(...args);
+	}
+
 	public static minecraft(key: string): NamespacedKey;
 	public static minecraft(...args: any[]): any {
 		return NamespacedKey.$javaClass.minecraft(...args);

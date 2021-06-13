@@ -18,8 +18,8 @@ export default interface BlockDataMeta extends ItemMeta {
 	clone(): ItemMeta;
 	clone(): any;
 	getAttributeModifiers(): Multimap;
-	getAttributeModifiers(arg0: Attribute): Array<AttributeModifier>;
 	getAttributeModifiers(arg0: EquipmentSlot): Multimap;
+	getAttributeModifiers(arg0: Attribute): Array<AttributeModifier>;
 	getBlockData(arg0: Material): BlockData;
 	getCustomModelData(): number;
 	getCustomTagContainer(): CustomItemTagContainer;

@@ -3,6 +3,7 @@ declare var Java: any;
 export default interface Note$Tone {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	getId(): number;
 	getId(sharped: boolean): number;
@@ -38,5 +39,21 @@ export default class Note$Tone {
 	public static get G(): Note$Tone {
 		return this.$javaClass.G;
 	}
+	public static getById(id: number): Note$Tone;
+	public static getById(...args: any[]): any {
+		return Note$Tone.$javaClass.getById(...args);
+	}
+
+	public static valueOf(arg0: string): Note$Tone;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return Note$Tone.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<Note$Tone>;
+	public static values(...args: any[]): any {
+		return Note$Tone.$javaClass.values(...args);
+	}
+
 }
 

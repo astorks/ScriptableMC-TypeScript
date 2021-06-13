@@ -34,12 +34,14 @@ export default interface Sign extends TileState, Colorable {
 	getZ(): number;
 	hasMetadata(arg0: string): boolean;
 	isEditable(): boolean;
+	isGlowingText(): boolean;
 	isPlaced(): boolean;
 	removeMetadata(arg0: string, arg1: Plugin): void;
 	setBlockData(arg0: BlockData): void;
 	setColor(arg0: DyeColor): void;
 	setData(arg0: MaterialData): void;
 	setEditable(arg0: boolean): void;
+	setGlowingText(arg0: boolean): void;
 	setLine(arg0: number, arg1: string): void;
 	setMetadata(arg0: string, arg1: MetadataValue): void;
 	setRawData(arg0: number): void;

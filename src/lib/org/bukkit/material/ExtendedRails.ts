@@ -6,9 +6,9 @@ import MaterialData from './MaterialData.js'
 import Rails from './Rails.js'
 
 export default interface ExtendedRails extends Rails {
-	clone(): any;
 	clone(): Rails;
 	clone(): ExtendedRails;
+	clone(): any;
 	clone(): MaterialData;
 	getData(): number;
 	getDirection(): BlockFace;

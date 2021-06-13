@@ -3,6 +3,7 @@ declare var Java: any;
 export default interface EntityPotionEffectEvent$Action {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	name(): string;
 	ordinal(): number;
@@ -25,5 +26,16 @@ export default class EntityPotionEffectEvent$Action {
 	public static get REMOVED(): EntityPotionEffectEvent$Action {
 		return this.$javaClass.REMOVED;
 	}
+	public static valueOf(arg0: string): EntityPotionEffectEvent$Action;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return EntityPotionEffectEvent$Action.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<EntityPotionEffectEvent$Action>;
+	public static values(...args: any[]): any {
+		return EntityPotionEffectEvent$Action.$javaClass.values(...args);
+	}
+
 }
 

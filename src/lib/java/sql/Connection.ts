@@ -51,8 +51,8 @@ export default interface Connection extends Wrapper {
 	prepareCall(arg0: string, arg1: number, arg2: number, arg3: number): CallableStatement;
 	prepareStatement(arg0: string): PreparedStatement;
 	prepareStatement(arg0: string, arg1: Array<string>): PreparedStatement;
-	prepareStatement(arg0: string, arg1: number): PreparedStatement;
 	prepareStatement(arg0: string, arg1: Array<number>): PreparedStatement;
+	prepareStatement(arg0: string, arg1: number): PreparedStatement;
 	prepareStatement(arg0: string, arg1: number, arg2: number): PreparedStatement;
 	prepareStatement(arg0: string, arg1: number, arg2: number, arg3: number): PreparedStatement;
 	releaseSavepoint(arg0: Savepoint): void;

@@ -4,6 +4,7 @@ import BlockData from '../../../../../org/bukkit/block/data/BlockData.js'
 import BlockFace from '../../../../../org/bukkit/block/BlockFace.js'
 import Material from '../../../../../org/bukkit/Material.js'
 import MultipleFacing from '../../../../../org/bukkit/block/data/MultipleFacing.js'
+import SoundGroup from '../../../../../org/bukkit/SoundGroup.js'
 
 export default interface Fire extends Ageable, MultipleFacing {
 	clone(): any;
@@ -15,6 +16,7 @@ export default interface Fire extends Ageable, MultipleFacing {
 	getFaces(): any;
 	getMaterial(): Material;
 	getMaximumAge(): number;
+	getSoundGroup(): SoundGroup;
 	hasFace(arg0: BlockFace): boolean;
 	matches(arg0: BlockData): boolean;
 	merge(arg0: BlockData): BlockData;

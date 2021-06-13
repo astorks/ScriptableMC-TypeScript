@@ -80,8 +80,8 @@ export default class Bukkit {
 		return Bukkit.$javaClass.clearRecipes(...args);
 	}
 
-	public static createBlockData(data: string): BlockData;
 	public static createBlockData(material: Material): BlockData;
+	public static createBlockData(data: string): BlockData;
 	public static createBlockData(material: Material, data: string): BlockData;
 	public static createBlockData(material: Material, consumer: any): BlockData;
 	public static createBlockData(...args: any[]): any {
@@ -263,6 +263,11 @@ export default class Bukkit {
 		return Bukkit.$javaClass.getMaxPlayers(...args);
 	}
 
+	public static getMaxWorldSize(): number;
+	public static getMaxWorldSize(...args: any[]): any {
+		return Bukkit.$javaClass.getMaxWorldSize(...args);
+	}
+
 	public static getMessenger(): Messenger;
 	public static getMessenger(...args: any[]): any {
 		return Bukkit.$javaClass.getMessenger(...args);
@@ -283,8 +288,8 @@ export default class Bukkit {
 		return Bukkit.$javaClass.getName(...args);
 	}
 
-	public static getOfflinePlayer(id: string): OfflinePlayer;
 	public static getOfflinePlayer(_name: string): OfflinePlayer;
+	public static getOfflinePlayer(id: string): OfflinePlayer;
 	public static getOfflinePlayer(...args: any[]): any {
 		return Bukkit.$javaClass.getOfflinePlayer(...args);
 	}
@@ -333,6 +338,11 @@ export default class Bukkit {
 	public static getPort(): number;
 	public static getPort(...args: any[]): any {
 		return Bukkit.$javaClass.getPort(...args);
+	}
+
+	public static getRecipe(recipeKey: NamespacedKey): Recipe;
+	public static getRecipe(...args: any[]): any {
+		return Bukkit.$javaClass.getRecipe(...args);
 	}
 
 	public static getRecipesFor(result: ItemStack): Array<Recipe>;
@@ -491,8 +501,8 @@ export default class Bukkit {
 		return Bukkit.$javaClass.isPrimaryThread(...args);
 	}
 
-	public static loadServerIcon(image: any): CachedServerIcon;
 	public static loadServerIcon(file: File): CachedServerIcon;
+	public static loadServerIcon(image: any): CachedServerIcon;
 	public static loadServerIcon(...args: any[]): any {
 		return Bukkit.$javaClass.loadServerIcon(...args);
 	}
@@ -587,8 +597,8 @@ export default class Bukkit {
 		return Bukkit.$javaClass.unbanIP(...args);
 	}
 
-	public static unloadWorld(world: World, save: boolean): boolean;
 	public static unloadWorld(_name: string, save: boolean): boolean;
+	public static unloadWorld(world: World, save: boolean): boolean;
 	public static unloadWorld(...args: any[]): any {
 		return Bukkit.$javaClass.unloadWorld(...args);
 	}

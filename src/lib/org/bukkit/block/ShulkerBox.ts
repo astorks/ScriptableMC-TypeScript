@@ -5,6 +5,7 @@ import Chunk from '../../../org/bukkit/Chunk.js'
 import Container from './Container.js'
 import DyeColor from '../../../org/bukkit/DyeColor.js'
 import Inventory from '../../../org/bukkit/inventory/Inventory.js'
+import Lidded from './Lidded.js'
 import Location from '../../../org/bukkit/Location.js'
 import LootTable from '../../../org/bukkit/loot/LootTable.js'
 import Lootable from '../../../org/bukkit/loot/Lootable.js'
@@ -15,7 +16,8 @@ import PersistentDataContainer from '../../../org/bukkit/persistence/PersistentD
 import Plugin from '../../../org/bukkit/plugin/Plugin.js'
 import World from '../../../org/bukkit/World.js'
 
-export default interface ShulkerBox extends Container, Lootable {
+export default interface ShulkerBox extends Container, Lootable, Lidded {
+	close(): void;
 	getBlock(): Block;
 	getBlock(): Block;
 	getBlockData(): BlockData;
@@ -42,6 +44,7 @@ export default interface ShulkerBox extends Container, Lootable {
 	hasMetadata(arg0: string): boolean;
 	isLocked(): boolean;
 	isPlaced(): boolean;
+	open(): void;
 	removeMetadata(arg0: string, arg1: Plugin): void;
 	setBlockData(arg0: BlockData): void;
 	setCustomName(arg0: string): void;

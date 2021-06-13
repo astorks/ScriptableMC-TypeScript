@@ -7,9 +7,9 @@ import MaterialData from './MaterialData.js'
 import Redstone from './Redstone.js'
 
 export default interface PistonBaseMaterial extends MaterialData, Directional, Redstone {
-	clone(): any;
 	clone(): PistonBaseMaterial;
 	clone(): MaterialData;
+	clone(): any;
 	getData(): number;
 	getFacing(): BlockFace;
 	getItemType(): Material;

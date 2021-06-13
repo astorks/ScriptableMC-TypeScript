@@ -3,6 +3,7 @@ declare var Java: any;
 export default interface EntityPotionEffectEvent$Cause {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	name(): string;
 	ordinal(): number;
@@ -21,6 +22,9 @@ export default class EntityPotionEffectEvent$Cause {
 	}
 	public static get ATTACK(): EntityPotionEffectEvent$Cause {
 		return this.$javaClass.ATTACK;
+	}
+	public static get AXOLOTL(): EntityPotionEffectEvent$Cause {
+		return this.$javaClass.AXOLOTL;
 	}
 	public static get BEACON(): EntityPotionEffectEvent$Cause {
 		return this.$javaClass.BEACON;
@@ -82,5 +86,16 @@ export default class EntityPotionEffectEvent$Cause {
 	public static get WITHER_ROSE(): EntityPotionEffectEvent$Cause {
 		return this.$javaClass.WITHER_ROSE;
 	}
+	public static valueOf(arg0: string): EntityPotionEffectEvent$Cause;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return EntityPotionEffectEvent$Cause.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<EntityPotionEffectEvent$Cause>;
+	public static values(...args: any[]): any {
+		return EntityPotionEffectEvent$Cause.$javaClass.values(...args);
+	}
+
 }
 

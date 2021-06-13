@@ -98,7 +98,7 @@ export default class TestPlugin extends JsPlugin {
     onPlayerJoin(listener: any, event: PlayerJoinEvent) {
         let player = event.getPlayer();
 
-        player.spigot().sendMessage(ChatMessageType.ACTION_BAR, new ComponentBuilder("Hello World!!").color(SpigotChatColor.AQUA).getParts());
+        //player.spigot().sendMessage(new ComponentBuilder("Hello World!!").color(SpigotChatColor.AQUA).getParts());
 
         if(CONFIG.fireworkOnJoin.enabled && player.hasPermission(CONFIG.fireworkOnJoin.requiredPermission)) {
             let fw = player.getWorld().spawnEntity(player.getLocation().add(0, 10, 0), EntityType.FIREWORK) as Firework;

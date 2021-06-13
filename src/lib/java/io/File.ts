@@ -34,8 +34,8 @@ export default interface File extends Serializable {
 	list(): Array<string>;
 	list(filter: FilenameFilter): Array<string>;
 	listFiles(): Array<File>;
-	listFiles(filter: FileFilter): Array<File>;
 	listFiles(filter: FilenameFilter): Array<File>;
+	listFiles(filter: FileFilter): Array<File>;
 	mkdir(): boolean;
 	mkdirs(): boolean;
 	renameTo(dest: File): boolean;
@@ -57,10 +57,10 @@ export default class File {
 		return Java.type('java.io.File');
 	}
 
-	constructor(uri: any);
 	constructor(pathname: string);
-	constructor(parent: string, child: string);
+	constructor(uri: any);
 	constructor(parent: File, child: string);
+	constructor(parent: string, child: string);
 	constructor(...args: any[]) {
 		return new File.$javaClass(...args);
 	}

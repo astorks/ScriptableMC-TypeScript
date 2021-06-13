@@ -6,8 +6,8 @@ import MaterialData from './MaterialData.js'
 
 export default interface Crops extends MaterialData {
 	clone(): Crops;
-	clone(): MaterialData;
 	clone(): any;
+	clone(): MaterialData;
 	getData(): number;
 	getItemType(): Material;
 	getState(): CropState;

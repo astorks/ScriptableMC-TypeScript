@@ -29,9 +29,9 @@ export default class SimplexOctaveGenerator {
 		return Java.type('org.bukkit.util.noise.SimplexOctaveGenerator');
 	}
 
-	constructor(world: World, octaves: number);
 	constructor(rand: any, octaves: number);
 	constructor(seed: number, octaves: number);
+	constructor(world: World, octaves: number);
 	constructor(...args: any[]) {
 		return new SimplexOctaveGenerator.$javaClass(...args);
 	}

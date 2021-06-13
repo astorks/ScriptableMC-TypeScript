@@ -9,6 +9,7 @@ export default interface Conversable {
 	beginConversation(arg0: Conversation): boolean;
 	isConversing(): boolean;
 	sendRawMessage(arg0: string): void;
+	sendRawMessage(arg0: string, arg1: string): void;
 }
 
 export default class Conversable {

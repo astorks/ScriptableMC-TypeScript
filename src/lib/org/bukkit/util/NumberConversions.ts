@@ -21,8 +21,8 @@ export default class NumberConversions {
 		return NumberConversions.$javaClass.floor(...args);
 	}
 
-	public static isFinite(f: number): boolean;
 	public static isFinite(d: number): boolean;
+	public static isFinite(f: number): boolean;
 	public static isFinite(...args: any[]): any {
 		return NumberConversions.$javaClass.isFinite(...args);
 	}

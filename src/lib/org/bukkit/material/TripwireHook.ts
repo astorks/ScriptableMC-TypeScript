@@ -7,8 +7,8 @@ import Redstone from './Redstone.js'
 import SimpleAttachableMaterialData from './SimpleAttachableMaterialData.js'
 
 export default interface TripwireHook extends SimpleAttachableMaterialData, Redstone {
-	clone(): TripwireHook;
 	clone(): SimpleAttachableMaterialData;
+	clone(): TripwireHook;
 	clone(): any;
 	clone(): MaterialData;
 	getAttachedFace(): BlockFace;

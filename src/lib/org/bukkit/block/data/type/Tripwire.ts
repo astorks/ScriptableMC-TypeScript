@@ -5,6 +5,7 @@ import BlockFace from '../../../../../org/bukkit/block/BlockFace.js'
 import Material from '../../../../../org/bukkit/Material.js'
 import MultipleFacing from '../../../../../org/bukkit/block/data/MultipleFacing.js'
 import Powerable from '../../../../../org/bukkit/block/data/Powerable.js'
+import SoundGroup from '../../../../../org/bukkit/SoundGroup.js'
 
 export default interface Tripwire extends Attachable, MultipleFacing, Powerable {
 	clone(): any;
@@ -14,6 +15,7 @@ export default interface Tripwire extends Attachable, MultipleFacing, Powerable 
 	getAsString(arg0: boolean): string;
 	getFaces(): any;
 	getMaterial(): Material;
+	getSoundGroup(): SoundGroup;
 	hasFace(arg0: BlockFace): boolean;
 	isAttached(): boolean;
 	isDisarmed(): boolean;

@@ -3,6 +3,7 @@ declare var Java: any;
 export default interface EnderDragon$Phase {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	name(): string;
 	ordinal(): number;
@@ -46,5 +47,16 @@ export default class EnderDragon$Phase {
 	public static get STRAFING(): EnderDragon$Phase {
 		return this.$javaClass.STRAFING;
 	}
+	public static valueOf(arg0: string): EnderDragon$Phase;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return EnderDragon$Phase.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<EnderDragon$Phase>;
+	public static values(...args: any[]): any {
+		return EnderDragon$Phase.$javaClass.values(...args);
+	}
+
 }
 

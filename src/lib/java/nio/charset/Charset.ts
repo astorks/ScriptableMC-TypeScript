@@ -7,8 +7,8 @@ import CharsetEncoder from './CharsetEncoder.js'
 export default interface Charset {
 	aliases(): any;
 	canEncode(): boolean;
-	compareTo(that: Charset): number;
 	compareTo(arg0: any): number;
+	compareTo(that: Charset): number;
 	contains(arg0: Charset): boolean;
 	decode(bb: ByteBuffer): CharBuffer;
 	displayName(): string;

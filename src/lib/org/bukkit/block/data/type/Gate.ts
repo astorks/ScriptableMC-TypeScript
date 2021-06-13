@@ -5,6 +5,7 @@ import Directional from '../../../../../org/bukkit/block/data/Directional.js'
 import Material from '../../../../../org/bukkit/Material.js'
 import Openable from '../../../../../org/bukkit/block/data/Openable.js'
 import Powerable from '../../../../../org/bukkit/block/data/Powerable.js'
+import SoundGroup from '../../../../../org/bukkit/SoundGroup.js'
 
 export default interface Gate extends Directional, Openable, Powerable {
 	clone(): any;
@@ -14,6 +15,7 @@ export default interface Gate extends Directional, Openable, Powerable {
 	getFaces(): any;
 	getFacing(): BlockFace;
 	getMaterial(): Material;
+	getSoundGroup(): SoundGroup;
 	isInWall(): boolean;
 	isOpen(): boolean;
 	isPowered(): boolean;

@@ -4,6 +4,7 @@ import BlockData from '../../../../../org/bukkit/block/data/BlockData.js'
 import BlockFace from '../../../../../org/bukkit/block/BlockFace.js'
 import Directional from '../../../../../org/bukkit/block/data/Directional.js'
 import Material from '../../../../../org/bukkit/Material.js'
+import SoundGroup from '../../../../../org/bukkit/SoundGroup.js'
 
 export default interface Bed extends Directional {
 	clone(): any;
@@ -14,6 +15,7 @@ export default interface Bed extends Directional {
 	getFacing(): BlockFace;
 	getMaterial(): Material;
 	getPart(): Bed$Part;
+	getSoundGroup(): SoundGroup;
 	isOccupied(): boolean;
 	matches(arg0: BlockData): boolean;
 	merge(arg0: BlockData): BlockData;

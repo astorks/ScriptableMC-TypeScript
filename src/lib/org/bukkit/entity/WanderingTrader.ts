@@ -8,6 +8,7 @@ import BoundingBox from '../../../org/bukkit/util/BoundingBox.js'
 import CommandSender$Spigot from '../../../org/bukkit/command/CommandSender$Spigot.js'
 import Entity from './Entity.js'
 import Entity$Spigot from './Entity$Spigot.js'
+import EntityCategory from './EntityCategory.js'
 import EntityDamageEvent from '../../../org/bukkit/event/entity/EntityDamageEvent.js'
 import EntityEffect from '../../../org/bukkit/EntityEffect.js'
 import EntityEquipment from '../../../org/bukkit/inventory/EntityEquipment.js'
@@ -56,11 +57,15 @@ export default interface WanderingTrader extends AbstractVillager {
 	getActivePotionEffects(): Array<PotionEffect>;
 	getAge(): number;
 	getAgeLock(): boolean;
+	getArrowCooldown(): number;
+	getArrowsInBody(): number;
 	getAttribute(arg0: Attribute): AttributeInstance;
 	getBoundingBox(): BoundingBox;
 	getCanPickupItems(): boolean;
+	getCategory(): EntityCategory;
 	getCollidableExemptions(): any;
 	getCustomName(): string;
+	getDespawnDelay(): number;
 	getEffectivePermissions(): any;
 	getEntityId(): number;
 	getEquipment(): EntityEquipment;
@@ -70,6 +75,7 @@ export default interface WanderingTrader extends AbstractVillager {
 	getFacing(): BlockFace;
 	getFallDistance(): number;
 	getFireTicks(): number;
+	getFreezeTicks(): number;
 	getHealth(): number;
 	getHeight(): number;
 	getInventory(): Inventory;
@@ -83,6 +89,7 @@ export default interface WanderingTrader extends AbstractVillager {
 	getLocation(arg0: Location): Location;
 	getLootTable(): LootTable;
 	getMaxFireTicks(): number;
+	getMaxFreezeTicks(): number;
 	getMaxHealth(): number;
 	getMaximumAir(): number;
 	getMaximumNoDamageTicks(): number;
@@ -122,8 +129,8 @@ export default interface WanderingTrader extends AbstractVillager {
 	hasGravity(): boolean;
 	hasLineOfSight(arg0: Entity): boolean;
 	hasMetadata(arg0: string): boolean;
-	hasPermission(arg0: string): boolean;
 	hasPermission(arg0: Permission): boolean;
+	hasPermission(arg0: string): boolean;
 	hasPotionEffect(arg0: PotionEffectType): boolean;
 	isAdult(): boolean;
 	isAware(): boolean;
@@ -131,15 +138,18 @@ export default interface WanderingTrader extends AbstractVillager {
 	isCustomNameVisible(): boolean;
 	isDead(): boolean;
 	isEmpty(): boolean;
+	isFrozen(): boolean;
 	isGliding(): boolean;
 	isGlowing(): boolean;
+	isInWater(): boolean;
 	isInsideVehicle(): boolean;
+	isInvisible(): boolean;
 	isInvulnerable(): boolean;
 	isLeashed(): boolean;
 	isOnGround(): boolean;
 	isOp(): boolean;
-	isPermissionSet(arg0: string): boolean;
 	isPermissionSet(arg0: Permission): boolean;
+	isPermissionSet(arg0: string): boolean;
 	isPersistent(): boolean;
 	isRiptiding(): boolean;
 	isSilent(): boolean;
@@ -147,6 +157,7 @@ export default interface WanderingTrader extends AbstractVillager {
 	isSwimming(): boolean;
 	isTrading(): boolean;
 	isValid(): boolean;
+	isVisualFire(): boolean;
 	launchProjectile(arg0: any): Projectile;
 	launchProjectile(arg0: any, arg1: Vector): Projectile;
 	leaveVehicle(): boolean;
@@ -161,13 +172,17 @@ export default interface WanderingTrader extends AbstractVillager {
 	removePotionEffect(arg0: PotionEffectType): void;
 	removeScoreboardTag(arg0: string): boolean;
 	resetMaxHealth(): void;
-	sendMessage(arg0: Array<string>): void;
 	sendMessage(arg0: string): void;
+	sendMessage(arg0: Array<string>): void;
+	sendMessage(arg0: string, arg1: Array<string>): void;
+	sendMessage(arg0: string, arg1: string): void;
 	setAI(arg0: boolean): void;
 	setAbsorptionAmount(arg0: number): void;
 	setAdult(): void;
 	setAge(arg0: number): void;
 	setAgeLock(arg0: boolean): void;
+	setArrowCooldown(arg0: number): void;
+	setArrowsInBody(arg0: number): void;
 	setAware(arg0: boolean): void;
 	setBaby(): void;
 	setBreed(arg0: boolean): void;
@@ -175,12 +190,15 @@ export default interface WanderingTrader extends AbstractVillager {
 	setCollidable(arg0: boolean): void;
 	setCustomName(arg0: string): void;
 	setCustomNameVisible(arg0: boolean): void;
+	setDespawnDelay(arg0: number): void;
 	setFallDistance(arg0: number): void;
 	setFireTicks(arg0: number): void;
+	setFreezeTicks(arg0: number): void;
 	setGliding(arg0: boolean): void;
 	setGlowing(arg0: boolean): void;
 	setGravity(arg0: boolean): void;
 	setHealth(arg0: number): void;
+	setInvisible(arg0: boolean): void;
 	setInvulnerable(arg0: boolean): void;
 	setLastDamage(arg0: number): void;
 	setLastDamageCause(arg0: EntityDamageEvent): void;
@@ -207,14 +225,15 @@ export default interface WanderingTrader extends AbstractVillager {
 	setTarget(arg0: LivingEntity): void;
 	setTicksLived(arg0: number): void;
 	setVelocity(arg0: Vector): void;
-	spigot(): Entity$Spigot;
+	setVisualFire(arg0: boolean): void;
 	spigot(): CommandSender$Spigot;
+	spigot(): Entity$Spigot;
 	swingMainHand(): void;
 	swingOffHand(): void;
-	teleport(arg0: Location): boolean;
 	teleport(arg0: Entity): boolean;
-	teleport(arg0: Location, arg1: PlayerTeleportEvent$TeleportCause): boolean;
+	teleport(arg0: Location): boolean;
 	teleport(arg0: Entity, arg1: PlayerTeleportEvent$TeleportCause): boolean;
+	teleport(arg0: Location, arg1: PlayerTeleportEvent$TeleportCause): boolean;
 }
 
 export default class WanderingTrader {

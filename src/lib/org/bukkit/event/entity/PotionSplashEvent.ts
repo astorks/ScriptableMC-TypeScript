@@ -12,9 +12,9 @@ import ThrownPotion from '../../../../org/bukkit/entity/ThrownPotion.js'
 
 export default interface PotionSplashEvent extends ProjectileHitEvent, Cancellable {
 	getAffectedEntities(): Array<LivingEntity>;
+	getEntity(): ThrownPotion;
 	getEntity(): Projectile;
 	getEntity(): Entity;
-	getEntity(): ThrownPotion;
 	getEntityType(): EntityType;
 	getEventName(): string;
 	getHandlers(): HandlerList;

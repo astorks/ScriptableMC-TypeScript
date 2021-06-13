@@ -3,6 +3,7 @@ declare var Java: any;
 export default interface Particle {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDataType(): any;
 	getDeclaringClass(): any;
 	name(): string;
@@ -65,6 +66,12 @@ export default class Particle {
 	public static get DRAGON_BREATH(): Particle {
 		return this.$javaClass.DRAGON_BREATH;
 	}
+	public static get DRIPPING_DRIPSTONE_LAVA(): Particle {
+		return this.$javaClass.DRIPPING_DRIPSTONE_LAVA;
+	}
+	public static get DRIPPING_DRIPSTONE_WATER(): Particle {
+		return this.$javaClass.DRIPPING_DRIPSTONE_WATER;
+	}
 	public static get DRIPPING_HONEY(): Particle {
 		return this.$javaClass.DRIPPING_HONEY;
 	}
@@ -76,6 +83,12 @@ export default class Particle {
 	}
 	public static get DRIP_WATER(): Particle {
 		return this.$javaClass.DRIP_WATER;
+	}
+	public static get DUST_COLOR_TRANSITION(): Particle {
+		return this.$javaClass.DUST_COLOR_TRANSITION;
+	}
+	public static get ELECTRIC_SPARK(): Particle {
+		return this.$javaClass.ELECTRIC_SPARK;
 	}
 	public static get ENCHANTMENT_TABLE(): Particle {
 		return this.$javaClass.ENCHANTMENT_TABLE;
@@ -92,6 +105,12 @@ export default class Particle {
 	public static get EXPLOSION_NORMAL(): Particle {
 		return this.$javaClass.EXPLOSION_NORMAL;
 	}
+	public static get FALLING_DRIPSTONE_LAVA(): Particle {
+		return this.$javaClass.FALLING_DRIPSTONE_LAVA;
+	}
+	public static get FALLING_DRIPSTONE_WATER(): Particle {
+		return this.$javaClass.FALLING_DRIPSTONE_WATER;
+	}
 	public static get FALLING_DUST(): Particle {
 		return this.$javaClass.FALLING_DUST;
 	}
@@ -107,6 +126,9 @@ export default class Particle {
 	public static get FALLING_OBSIDIAN_TEAR(): Particle {
 		return this.$javaClass.FALLING_OBSIDIAN_TEAR;
 	}
+	public static get FALLING_SPORE_BLOSSOM(): Particle {
+		return this.$javaClass.FALLING_SPORE_BLOSSOM;
+	}
 	public static get FALLING_WATER(): Particle {
 		return this.$javaClass.FALLING_WATER;
 	}
@@ -118,6 +140,12 @@ export default class Particle {
 	}
 	public static get FLASH(): Particle {
 		return this.$javaClass.FLASH;
+	}
+	public static get GLOW(): Particle {
+		return this.$javaClass.GLOW;
+	}
+	public static get GLOW_SQUID_INK(): Particle {
+		return this.$javaClass.GLOW_SQUID_INK;
 	}
 	public static get HEART(): Particle {
 		return this.$javaClass.HEART;
@@ -146,6 +174,9 @@ export default class Particle {
 	public static get LEGACY_FALLING_DUST(): Particle {
 		return this.$javaClass.LEGACY_FALLING_DUST;
 	}
+	public static get LIGHT(): Particle {
+		return this.$javaClass.LIGHT;
+	}
 	public static get MOB_APPEARANCE(): Particle {
 		return this.$javaClass.MOB_APPEARANCE;
 	}
@@ -164,8 +195,14 @@ export default class Particle {
 	public static get REVERSE_PORTAL(): Particle {
 		return this.$javaClass.REVERSE_PORTAL;
 	}
+	public static get SCRAPE(): Particle {
+		return this.$javaClass.SCRAPE;
+	}
 	public static get SLIME(): Particle {
 		return this.$javaClass.SLIME;
+	}
+	public static get SMALL_FLAME(): Particle {
+		return this.$javaClass.SMALL_FLAME;
 	}
 	public static get SMOKE_LARGE(): Particle {
 		return this.$javaClass.SMOKE_LARGE;
@@ -178,6 +215,9 @@ export default class Particle {
 	}
 	public static get SNOWBALL(): Particle {
 		return this.$javaClass.SNOWBALL;
+	}
+	public static get SNOWFLAKE(): Particle {
+		return this.$javaClass.SNOWFLAKE;
 	}
 	public static get SNOW_SHOVEL(): Particle {
 		return this.$javaClass.SNOW_SHOVEL;
@@ -206,6 +246,9 @@ export default class Particle {
 	public static get SPIT(): Particle {
 		return this.$javaClass.SPIT;
 	}
+	public static get SPORE_BLOSSOM_AIR(): Particle {
+		return this.$javaClass.SPORE_BLOSSOM_AIR;
+	}
 	public static get SQUID_INK(): Particle {
 		return this.$javaClass.SQUID_INK;
 	}
@@ -223,6 +266,9 @@ export default class Particle {
 	}
 	public static get TOWN_AURA(): Particle {
 		return this.$javaClass.TOWN_AURA;
+	}
+	public static get VIBRATION(): Particle {
+		return this.$javaClass.VIBRATION;
 	}
 	public static get VILLAGER_ANGRY(): Particle {
 		return this.$javaClass.VILLAGER_ANGRY;
@@ -245,8 +291,25 @@ export default class Particle {
 	public static get WATER_WAKE(): Particle {
 		return this.$javaClass.WATER_WAKE;
 	}
+	public static get WAX_OFF(): Particle {
+		return this.$javaClass.WAX_OFF;
+	}
+	public static get WAX_ON(): Particle {
+		return this.$javaClass.WAX_ON;
+	}
 	public static get WHITE_ASH(): Particle {
 		return this.$javaClass.WHITE_ASH;
 	}
+	public static valueOf(arg0: string): Particle;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return Particle.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<Particle>;
+	public static values(...args: any[]): any {
+		return Particle.$javaClass.values(...args);
+	}
+
 }
 

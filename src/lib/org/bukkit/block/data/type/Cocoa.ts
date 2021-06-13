@@ -4,6 +4,7 @@ import BlockData from '../../../../../org/bukkit/block/data/BlockData.js'
 import BlockFace from '../../../../../org/bukkit/block/BlockFace.js'
 import Directional from '../../../../../org/bukkit/block/data/Directional.js'
 import Material from '../../../../../org/bukkit/Material.js'
+import SoundGroup from '../../../../../org/bukkit/SoundGroup.js'
 
 export default interface Cocoa extends Ageable, Directional {
 	clone(): any;
@@ -15,6 +16,7 @@ export default interface Cocoa extends Ageable, Directional {
 	getFacing(): BlockFace;
 	getMaterial(): Material;
 	getMaximumAge(): number;
+	getSoundGroup(): SoundGroup;
 	matches(arg0: BlockData): boolean;
 	merge(arg0: BlockData): BlockData;
 	setAge(arg0: number): void;

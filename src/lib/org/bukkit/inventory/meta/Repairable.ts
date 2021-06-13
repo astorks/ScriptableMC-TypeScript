@@ -1,8 +1,8 @@
 declare var Java: any;
 
 export default interface Repairable {
-	clone(): Repairable;
 	clone(): any;
+	clone(): Repairable;
 	getRepairCost(): number;
 	hasRepairCost(): boolean;
 	setRepairCost(arg0: number): void;

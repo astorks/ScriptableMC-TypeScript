@@ -3,6 +3,7 @@ declare var Java: any;
 export default interface Instrument {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	getType(): number;
 	name(): string;
@@ -62,5 +63,21 @@ export default class Instrument {
 	public static get XYLOPHONE(): Instrument {
 		return this.$javaClass.XYLOPHONE;
 	}
+	public static getByType(type: number): Instrument;
+	public static getByType(...args: any[]): any {
+		return Instrument.$javaClass.getByType(...args);
+	}
+
+	public static valueOf(arg0: string): Instrument;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return Instrument.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<Instrument>;
+	public static values(...args: any[]): any {
+		return Instrument.$javaClass.values(...args);
+	}
+
 }
 

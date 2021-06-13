@@ -3,6 +3,7 @@ declare var Java: any;
 export default interface PistonMoveReaction {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	getId(): number;
 	name(): string;
@@ -29,5 +30,21 @@ export default class PistonMoveReaction {
 	public static get PUSH_ONLY(): PistonMoveReaction {
 		return this.$javaClass.PUSH_ONLY;
 	}
+	public static getById(id: number): PistonMoveReaction;
+	public static getById(...args: any[]): any {
+		return PistonMoveReaction.$javaClass.getById(...args);
+	}
+
+	public static valueOf(arg0: string): PistonMoveReaction;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return PistonMoveReaction.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<PistonMoveReaction>;
+	public static values(...args: any[]): any {
+		return PistonMoveReaction.$javaClass.values(...args);
+	}
+
 }
 

@@ -1,8 +1,8 @@
 declare var Java: any;
 
 export default interface Version {
+	compareTo(other: any): number;
 	compareTo(other: Version): number;
-	compareTo(arg0: any): number;
 	getBuild(): number;
 	getMajor(): number;
 	getMinor(): number;

@@ -12,9 +12,11 @@ export default interface PluginDescriptionFile {
 	getAwareness(): any;
 	getClassLoaderOf(): string;
 	getCommands(): any;
+	getContributors(): Array<string>;
 	getDepend(): Array<string>;
 	getDescription(): string;
 	getFullName(): string;
+	getLibraries(): Array<string>;
 	getLoad(): PluginLoadOrder;
 	getLoadBefore(): Array<string>;
 	getMain(): string;

@@ -18,8 +18,8 @@ export default interface CrossbowMeta extends ItemMeta {
 	clone(): ItemMeta;
 	clone(): any;
 	getAttributeModifiers(): Multimap;
-	getAttributeModifiers(arg0: Attribute): Array<AttributeModifier>;
 	getAttributeModifiers(arg0: EquipmentSlot): Multimap;
+	getAttributeModifiers(arg0: Attribute): Array<AttributeModifier>;
 	getChargedProjectiles(): Array<ItemStack>;
 	getCustomModelData(): number;
 	getCustomTagContainer(): CustomItemTagContainer;

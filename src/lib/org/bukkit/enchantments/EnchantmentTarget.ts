@@ -5,6 +5,7 @@ import Material from '../../../org/bukkit/Material.js'
 export default interface EnchantmentTarget {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	includes(item: ItemStack): boolean;
 	includes(arg0: Material): boolean;
@@ -62,5 +63,16 @@ export default class EnchantmentTarget {
 	public static get WEARABLE(): EnchantmentTarget {
 		return this.$javaClass.WEARABLE;
 	}
+	public static valueOf(arg0: string): EnchantmentTarget;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return EnchantmentTarget.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<EnchantmentTarget>;
+	public static values(...args: any[]): any {
+		return EnchantmentTarget.$javaClass.values(...args);
+	}
+
 }
 

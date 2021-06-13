@@ -7,9 +7,9 @@ import MaterialData from './MaterialData.js'
 import Redstone from './Redstone.js'
 
 export default interface Comparator extends MaterialData, Directional, Redstone {
-	clone(): MaterialData;
-	clone(): Comparator;
 	clone(): any;
+	clone(): Comparator;
+	clone(): MaterialData;
 	getData(): number;
 	getFacing(): BlockFace;
 	getItemType(): Material;
@@ -29,8 +29,8 @@ export default class Comparator {
 	}
 
 	constructor();
-	constructor(type: Material);
 	constructor(facingDirection: BlockFace);
+	constructor(type: Material);
 	constructor(type: Material, data: number);
 	constructor(facingDirection: BlockFace, isSubtraction: boolean);
 	constructor(facingDirection: BlockFace, isSubtraction: boolean, state: boolean);

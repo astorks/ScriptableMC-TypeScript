@@ -5,9 +5,9 @@ import Material from '../../../org/bukkit/Material.js'
 import MaterialData from './MaterialData.js'
 
 export default interface Vine extends MaterialData {
-	clone(): any;
 	clone(): Vine;
 	clone(): MaterialData;
+	clone(): any;
 	getData(): number;
 	getItemType(): Material;
 	isOnFace(face: BlockFace): boolean;
@@ -24,9 +24,9 @@ export default class Vine {
 	}
 
 	constructor();
-	constructor(faces: Array<BlockFace>);
-	constructor(data: number);
 	constructor(faces: any);
+	constructor(data: number);
+	constructor(faces: Array<BlockFace>);
 	constructor(type: Material, data: number);
 	constructor(...args: any[]) {
 		return new Vine.$javaClass(...args);

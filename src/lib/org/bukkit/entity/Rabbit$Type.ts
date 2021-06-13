@@ -3,6 +3,7 @@ declare var Java: any;
 export default interface Rabbit$Type {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	name(): string;
 	ordinal(): number;
@@ -34,5 +35,16 @@ export default class Rabbit$Type {
 	public static get WHITE(): Rabbit$Type {
 		return this.$javaClass.WHITE;
 	}
+	public static valueOf(arg0: string): Rabbit$Type;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return Rabbit$Type.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<Rabbit$Type>;
+	public static values(...args: any[]): any {
+		return Rabbit$Type.$javaClass.values(...args);
+	}
+
 }
 

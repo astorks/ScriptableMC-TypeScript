@@ -4,6 +4,7 @@ import Effect$Type from './Effect$Type.js'
 export default interface Effect {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getData(): any;
 	getDeclaringClass(): any;
 	getId(): number;
@@ -155,5 +156,21 @@ export default class Effect {
 	public static get ZOMBIE_INFECT(): Effect {
 		return this.$javaClass.ZOMBIE_INFECT;
 	}
+	public static getById(id: number): Effect;
+	public static getById(...args: any[]): any {
+		return Effect.$javaClass.getById(...args);
+	}
+
+	public static valueOf(arg0: string): Effect;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return Effect.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<Effect>;
+	public static values(...args: any[]): any {
+		return Effect.$javaClass.values(...args);
+	}
+
 }
 

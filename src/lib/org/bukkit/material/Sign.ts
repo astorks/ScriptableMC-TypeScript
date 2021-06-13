@@ -6,9 +6,9 @@ import Material from '../../../org/bukkit/Material.js'
 import MaterialData from './MaterialData.js'
 
 export default interface Sign extends MaterialData, Attachable {
+	clone(): Sign;
 	clone(): MaterialData;
 	clone(): any;
-	clone(): Sign;
 	getAttachedFace(): BlockFace;
 	getData(): number;
 	getFacing(): BlockFace;

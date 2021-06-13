@@ -51,12 +51,14 @@ export default interface TippedArrow extends Arrow {
 	getFacing(): BlockFace;
 	getFallDistance(): number;
 	getFireTicks(): number;
+	getFreezeTicks(): number;
 	getHeight(): number;
 	getKnockbackStrength(): number;
 	getLastDamageCause(): EntityDamageEvent;
 	getLocation(): Location;
 	getLocation(arg0: Location): Location;
 	getMaxFireTicks(): number;
+	getMaxFreezeTicks(): number;
 	getMetadata(arg0: string): Array<MetadataValue>;
 	getName(): string;
 	getNearbyEntities(arg0: number, arg1: number, arg2: number): Array<Entity>;
@@ -82,24 +84,27 @@ export default interface TippedArrow extends Arrow {
 	hasCustomEffects(): boolean;
 	hasGravity(): boolean;
 	hasMetadata(arg0: string): boolean;
-	hasPermission(arg0: string): boolean;
 	hasPermission(arg0: Permission): boolean;
+	hasPermission(arg0: string): boolean;
 	isCritical(): boolean;
 	isCustomNameVisible(): boolean;
 	isDead(): boolean;
 	isEmpty(): boolean;
+	isFrozen(): boolean;
 	isGlowing(): boolean;
 	isInBlock(): boolean;
+	isInWater(): boolean;
 	isInsideVehicle(): boolean;
 	isInvulnerable(): boolean;
 	isOnGround(): boolean;
 	isOp(): boolean;
-	isPermissionSet(arg0: string): boolean;
 	isPermissionSet(arg0: Permission): boolean;
+	isPermissionSet(arg0: string): boolean;
 	isPersistent(): boolean;
 	isShotFromCrossbow(): boolean;
 	isSilent(): boolean;
 	isValid(): boolean;
+	isVisualFire(): boolean;
 	leaveVehicle(): boolean;
 	playEffect(arg0: EntityEffect): void;
 	recalculatePermissions(): void;
@@ -109,8 +114,10 @@ export default interface TippedArrow extends Arrow {
 	removeMetadata(arg0: string, arg1: Plugin): void;
 	removePassenger(arg0: Entity): boolean;
 	removeScoreboardTag(arg0: string): boolean;
-	sendMessage(arg0: Array<string>): void;
 	sendMessage(arg0: string): void;
+	sendMessage(arg0: Array<string>): void;
+	sendMessage(arg0: string, arg1: Array<string>): void;
+	sendMessage(arg0: string, arg1: string): void;
 	setBasePotionData(arg0: PotionData): void;
 	setBounce(arg0: boolean): void;
 	setColor(arg0: Color): void;
@@ -120,6 +127,7 @@ export default interface TippedArrow extends Arrow {
 	setDamage(arg0: number): void;
 	setFallDistance(arg0: number): void;
 	setFireTicks(arg0: number): void;
+	setFreezeTicks(arg0: number): void;
 	setGlowing(arg0: boolean): void;
 	setGravity(arg0: boolean): void;
 	setInvulnerable(arg0: boolean): void;
@@ -138,12 +146,13 @@ export default interface TippedArrow extends Arrow {
 	setSilent(arg0: boolean): void;
 	setTicksLived(arg0: number): void;
 	setVelocity(arg0: Vector): void;
-	spigot(): Entity$Spigot;
+	setVisualFire(arg0: boolean): void;
 	spigot(): CommandSender$Spigot;
-	teleport(arg0: Location): boolean;
+	spigot(): Entity$Spigot;
 	teleport(arg0: Entity): boolean;
-	teleport(arg0: Location, arg1: PlayerTeleportEvent$TeleportCause): boolean;
+	teleport(arg0: Location): boolean;
 	teleport(arg0: Entity, arg1: PlayerTeleportEvent$TeleportCause): boolean;
+	teleport(arg0: Location, arg1: PlayerTeleportEvent$TeleportCause): boolean;
 }
 
 export default class TippedArrow {

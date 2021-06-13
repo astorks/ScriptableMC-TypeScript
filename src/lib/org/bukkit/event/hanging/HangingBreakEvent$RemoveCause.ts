@@ -3,6 +3,7 @@ declare var Java: any;
 export default interface HangingBreakEvent$RemoveCause {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	name(): string;
 	ordinal(): number;
@@ -28,5 +29,16 @@ export default class HangingBreakEvent$RemoveCause {
 	public static get PHYSICS(): HangingBreakEvent$RemoveCause {
 		return this.$javaClass.PHYSICS;
 	}
+	public static valueOf(arg0: string): HangingBreakEvent$RemoveCause;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return HangingBreakEvent$RemoveCause.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<HangingBreakEvent$RemoveCause>;
+	public static values(...args: any[]): any {
+		return HangingBreakEvent$RemoveCause.$javaClass.values(...args);
+	}
+
 }
 

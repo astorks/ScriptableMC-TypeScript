@@ -27,14 +27,16 @@ export default interface ByteBuffer extends Buffer {
 	compact(): ByteBuffer;
 	compareTo(that: ByteBuffer): number;
 	compareTo(arg0: any): number;
-	duplicate(): ByteBuffer;
 	duplicate(): Buffer;
-	flip(): ByteBuffer;
+	duplicate(): ByteBuffer;
 	flip(): Buffer;
+	flip(): ByteBuffer;
 	get(): number;
 	get(dst: Array<number>): ByteBuffer;
 	get(arg0: number): number;
+	get(index: number, dst: Array<number>): ByteBuffer;
 	get(dst: Array<number>, offset: number, length: number): ByteBuffer;
+	get(index: number, dst: Array<number>, offset: number, length: number): ByteBuffer;
 	getChar(): string;
 	getChar(arg0: number): string;
 	getDouble(): number;
@@ -54,19 +56,22 @@ export default interface ByteBuffer extends Buffer {
 	limit(): number;
 	limit(newLimit: number): ByteBuffer;
 	limit(newLimit: number): Buffer;
-	mark(): ByteBuffer;
 	mark(): Buffer;
+	mark(): ByteBuffer;
 	mismatch(that: ByteBuffer): number;
 	order(): ByteOrder;
 	order(bo: ByteOrder): ByteBuffer;
 	position(): number;
-	position(newPosition: number): ByteBuffer;
 	position(newPosition: number): Buffer;
-	put(arg0: number): ByteBuffer;
-	put(src: Array<number>): ByteBuffer;
+	position(newPosition: number): ByteBuffer;
 	put(src: ByteBuffer): ByteBuffer;
+	put(src: Array<number>): ByteBuffer;
+	put(arg0: number): ByteBuffer;
 	put(arg0: number, arg1: number): ByteBuffer;
+	put(index: number, src: Array<number>): ByteBuffer;
 	put(src: Array<number>, offset: number, length: number): ByteBuffer;
+	put(index: number, src: ByteBuffer, offset: number, length: number): ByteBuffer;
+	put(index: number, src: Array<number>, offset: number, length: number): ByteBuffer;
 	putChar(arg0: string): ByteBuffer;
 	putChar(arg0: number, arg1: string): ByteBuffer;
 	putDouble(arg0: number): ByteBuffer;
@@ -80,12 +85,14 @@ export default interface ByteBuffer extends Buffer {
 	putShort(arg0: number): ByteBuffer;
 	putShort(arg0: number, arg1: number): ByteBuffer;
 	remaining(): number;
-	reset(): Buffer;
 	reset(): ByteBuffer;
+	reset(): Buffer;
 	rewind(): Buffer;
 	rewind(): ByteBuffer;
-	slice(): ByteBuffer;
 	slice(): Buffer;
+	slice(): ByteBuffer;
+	slice(arg0: number, arg1: number): ByteBuffer;
+	slice(arg0: number, arg1: number): Buffer;
 }
 
 export default class ByteBuffer {

@@ -3,6 +3,7 @@ declare var Java: any;
 export default interface Panda$Gene {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	isRecessive(): boolean;
 	name(): string;
@@ -35,5 +36,16 @@ export default class Panda$Gene {
 	public static get WORRIED(): Panda$Gene {
 		return this.$javaClass.WORRIED;
 	}
+	public static valueOf(arg0: string): Panda$Gene;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return Panda$Gene.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<Panda$Gene>;
+	public static values(...args: any[]): any {
+		return Panda$Gene.$javaClass.values(...args);
+	}
+
 }
 

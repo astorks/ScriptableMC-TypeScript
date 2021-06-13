@@ -8,12 +8,12 @@ import Recipe from './Recipe.js'
 import RecipeChoice from './RecipeChoice.js'
 
 export default interface ShapelessRecipe extends Recipe, Keyed {
-	addIngredient(ingredient: MaterialData): ShapelessRecipe;
 	addIngredient(ingredient: Material): ShapelessRecipe;
 	addIngredient(ingredient: RecipeChoice): ShapelessRecipe;
-	addIngredient(count: number, ingredient: Material): ShapelessRecipe;
-	addIngredient(count: number, ingredient: MaterialData): ShapelessRecipe;
+	addIngredient(ingredient: MaterialData): ShapelessRecipe;
 	addIngredient(ingredient: Material, rawdata: number): ShapelessRecipe;
+	addIngredient(count: number, ingredient: MaterialData): ShapelessRecipe;
+	addIngredient(count: number, ingredient: Material): ShapelessRecipe;
 	addIngredient(count: number, ingredient: Material, rawdata: number): ShapelessRecipe;
 	getChoiceList(): Array<RecipeChoice>;
 	getGroup(): string;

@@ -3,6 +3,7 @@ declare var Java: any;
 export default interface MapView$Scale {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	getValue(): number;
 	name(): string;
@@ -29,5 +30,17 @@ export default class MapView$Scale {
 	public static get NORMAL(): MapView$Scale {
 		return this.$javaClass.NORMAL;
 	}
+	public static valueOf(arg0: string): MapView$Scale;
+	public static valueOf(value: number): MapView$Scale;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return MapView$Scale.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<MapView$Scale>;
+	public static values(...args: any[]): any {
+		return MapView$Scale.$javaClass.values(...args);
+	}
+
 }
 

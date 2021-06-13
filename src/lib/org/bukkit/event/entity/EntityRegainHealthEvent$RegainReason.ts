@@ -3,6 +3,7 @@ declare var Java: any;
 export default interface EntityRegainHealthEvent$RegainReason {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	name(): string;
 	ordinal(): number;
@@ -40,5 +41,16 @@ export default class EntityRegainHealthEvent$RegainReason {
 	public static get WITHER_SPAWN(): EntityRegainHealthEvent$RegainReason {
 		return this.$javaClass.WITHER_SPAWN;
 	}
+	public static valueOf(arg0: string): EntityRegainHealthEvent$RegainReason;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return EntityRegainHealthEvent$RegainReason.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<EntityRegainHealthEvent$RegainReason>;
+	public static values(...args: any[]): any {
+		return EntityRegainHealthEvent$RegainReason.$javaClass.values(...args);
+	}
+
 }
 

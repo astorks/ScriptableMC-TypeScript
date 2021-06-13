@@ -26,8 +26,8 @@ export default interface Multiset {
 	spliterator(): any;
 	stream(): any;
 	toArray(): Array<any>;
-	toArray(generator: any): Array<any>;
 	toArray(arg0: Array<any>): Array<any>;
+	toArray(generator: any): Array<any>;
 }
 
 export default class Multiset {

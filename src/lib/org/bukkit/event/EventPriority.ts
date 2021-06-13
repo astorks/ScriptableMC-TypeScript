@@ -3,6 +3,7 @@ declare var Java: any;
 export default interface EventPriority {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	getSlot(): number;
 	name(): string;
@@ -32,5 +33,16 @@ export default class EventPriority {
 	public static get NORMAL(): EventPriority {
 		return this.$javaClass.NORMAL;
 	}
+	public static valueOf(arg0: string): EventPriority;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return EventPriority.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<EventPriority>;
+	public static values(...args: any[]): any {
+		return EventPriority.$javaClass.values(...args);
+	}
+
 }
 

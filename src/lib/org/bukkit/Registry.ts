@@ -42,6 +42,14 @@ export default class Registry {
 		return Registry.$javaClass.ENTITY_TYPE;
 	}
 
+	public static get FLUID(): Registry {
+		return Registry.$javaClass.FLUID;
+	}
+
+	public static get GAME_EVENT(): Registry {
+		return Registry.$javaClass.GAME_EVENT;
+	}
+
 	public static get LOOT_TABLES(): Registry {
 		return Registry.$javaClass.LOOT_TABLES;
 	}
@@ -52,6 +60,10 @@ export default class Registry {
 
 	public static get MEMORY_MODULE_TYPE(): Registry {
 		return Registry.$javaClass.MEMORY_MODULE_TYPE;
+	}
+
+	public static get SOUNDS(): Registry {
+		return Registry.$javaClass.SOUNDS;
 	}
 
 	public static get STATISTIC(): Registry {

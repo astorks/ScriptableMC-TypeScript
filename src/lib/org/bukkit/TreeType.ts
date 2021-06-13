@@ -3,6 +3,7 @@ declare var Java: any;
 export default interface TreeType {
 	compareTo(arg0: any): number;
 	compareTo(o: any): number;
+	describeConstable(): any;
 	getDeclaringClass(): any;
 	name(): string;
 	ordinal(): number;
@@ -15,6 +16,9 @@ export default class TreeType {
 
 	public static get ACACIA(): TreeType {
 		return this.$javaClass.ACACIA;
+	}
+	public static get AZALEA(): TreeType {
+		return this.$javaClass.AZALEA;
 	}
 	public static get BIG_TREE(): TreeType {
 		return this.$javaClass.BIG_TREE;
@@ -70,5 +74,16 @@ export default class TreeType {
 	public static get WARPED_FUNGUS(): TreeType {
 		return this.$javaClass.WARPED_FUNGUS;
 	}
+	public static valueOf(arg0: string): TreeType;
+	public static valueOf(enumClass: any, _name: string): any;
+	public static valueOf(...args: any[]): any {
+		return TreeType.$javaClass.valueOf(...args);
+	}
+
+	public static values(): Array<TreeType>;
+	public static values(...args: any[]): any {
+		return TreeType.$javaClass.values(...args);
+	}
+
 }
 
